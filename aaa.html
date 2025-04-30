@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>手机照片上传</title>
+    <title>手机照片/视频上传</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +28,7 @@
         .preview {
             margin-top: 20px;
         }
-        .preview img {
+        .preview img, .preview video {
             max-width: 100%;
             max-height: 300px;
             border: 1px solid #ddd;
@@ -42,22 +42,29 @@
             padding: 8px 15px;
             margin: 0 5px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="upload-container">
-        <h2>上传照片</h2>
+        <h2>上传照片/视频</h2>
         
         <div>
-            <button class="upload-btn" id="chooseFileBtn">选择照片</button>
+            <button class="upload-btn" id="chooseFileBtn">选择文件</button>
             <button class="upload-btn" id="takePhotoBtn">拍照</button>
+            <button class="upload-btn" id="recordVideoBtn">录像</button>
         </div>
         
-        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        <!-- 隐藏的input元素 -->
+        <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;">
         <input type="file" id="cameraInput" accept="image/*" capture="camera" style="display: none;">
+        <input type="file" id="videoInput" accept="video/*" capture="camcorder" style="display: none;">
         
         <div class="preview">
-            <img id="previewImage" style="display: none;">
+            <img id="previewImage" class="hidden">
+            <video id="previewVideo" class="hidden" controls></video>
         </div>
         
         <div class="action-btns">
@@ -72,14 +79,18 @@
         // 获取DOM元素
         const chooseFileBtn = document.getElementById('chooseFileBtn');
         const takePhotoBtn = document.getElementById('takePhotoBtn');
+        const recordVideoBtn = document.getElementById('recordVideoBtn');
         const fileInput = document.getElementById('fileInput');
         const cameraInput = document.getElementById('cameraInput');
+        const videoInput = document.getElementById('videoInput');
         const previewImage = document.getElementById('previewImage');
+        const previewVideo = document.getElementById('previewVideo');
         const uploadBtn = document.getElementById('uploadBtn');
         const cancelBtn = document.getElementById('cancelBtn');
         const statusDiv = document.getElementById('status');
         
         let selectedFile = null;
+        let isVideo = false;
         
         // 选择文件按钮点击事件
         chooseFileBtn.addEventListener('click', function() {
@@ -91,24 +102,50 @@
             cameraInput.click();
         });
         
-        // 文件选择变化事件（用于普通文件选择）
-        fileInput.addEventListener('change', handleFileSelect);
+        // 录像按钮点击事件
+        recordVideoBtn.addEventListener('click', function() {
+            videoInput.click();
+        });
         
-        // 文件选择变化事件（用于摄像头拍照）
-        cameraInput.addEventListener('change', handleFileSelect);
+        // 文件选择变化事件（用于普通文件选择）
+        fileInput.addEventListener('change', function(e) {
+            handleFileSelect(e, false);
+        });
+        
+        // 拍照文件选择变化事件
+        cameraInput.addEventListener('change', function(e) {
+            handleFileSelect(e, false);
+        });
+        
+        // 录像文件选择变化事件
+        videoInput.addEventListener('change', function(e) {
+            handleFileSelect(e, true);
+        });
         
         // 处理选择的文件
-        function handleFileSelect(event) {
+        function handleFileSelect(event, videoType) {
             const file = event.target.files[0];
             if (!file) return;
             
             selectedFile = file;
+            isVideo = videoType;
+            
+            // 清除之前的预览
+            previewImage.classList.add('hidden');
+            previewVideo.classList.add('hidden');
+            previewVideo.pause();
+            previewVideo.src = '';
             
             // 显示预览
             const reader = new FileReader();
             reader.onload = function(e) {
-                previewImage.src = e.target.result;
-                previewImage.style.display = 'block';
+                if (videoType) {
+                    previewVideo.src = e.target.result;
+                    previewVideo.classList.remove('hidden');
+                } else {
+                    previewImage.src = e.target.result;
+                    previewImage.classList.remove('hidden');
+                }
                 uploadBtn.disabled = false;
                 cancelBtn.disabled = false;
             };
@@ -119,32 +156,44 @@
         uploadBtn.addEventListener('click', function() {
             if (!selectedFile) return;
             
-            uploadFile(selectedFile);
+            uploadFile(selectedFile, isVideo);
         });
         
         // 取消按钮点击事件
         cancelBtn.addEventListener('click', function() {
+            cancelUpload();
+        });
+        
+        // 取消上传
+        function cancelUpload() {
             selectedFile = null;
+            isVideo = false;
             previewImage.src = '';
-            previewImage.style.display = 'none';
+            previewImage.classList.add('hidden');
+            previewVideo.src = '';
+            previewVideo.classList.add('hidden');
             uploadBtn.disabled = true;
             cancelBtn.disabled = true;
             fileInput.value = '';
             cameraInput.value = '';
+            videoInput.value = '';
             statusDiv.textContent = '';
-        });
+        }
         
         // 上传文件函数
-        function uploadFile(file) {
+        function uploadFile(file, isVideo) {
             statusDiv.textContent = '上传中...';
             statusDiv.style.color = '#333';
             
             // 这里使用FormData模拟上传
             const formData = new FormData();
-            formData.append('photo', file);
+            formData.append('file', file);
+            formData.append('type', isVideo ? 'video' : 'image');
             
             // 实际项目中替换为你的上传接口
-            fetch('https://your-upload-api.com/upload', {
+            const uploadUrl = isVideo ? 'https://your-api.com/upload-video' : 'https://your-api.com/upload-image';
+            
+            fetch(uploadUrl, {
                 method: 'POST',
                 body: formData
             })
@@ -156,14 +205,7 @@
                 
                 // 上传成功后重置
                 setTimeout(() => {
-                    selectedFile = null;
-                    previewImage.src = '';
-                    previewImage.style.display = 'none';
-                    uploadBtn.disabled = true;
-                    cancelBtn.disabled = true;
-                    fileInput.value = '';
-                    cameraInput.value = '';
-                    statusDiv.textContent = '';
+                    cancelUpload();
                 }, 2000);
             })
             .catch(error => {
