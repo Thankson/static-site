@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>拍照/录像上传</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .camera-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #f44336;
+            border: 4px solid white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            position: relative;
+            margin: 30px auto;
+            cursor: pointer;
+            outline: none;
+        }
+        .camera-btn:active, .camera-btn.recording {
+            background-color: #d32f2f;
+            transform: scale(0.95);
+        }
+        .recording-indicator {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            display: none;
+        }
+        .recording .recording-indicator {
+            display: block;
+            animation: pulse 1.5s infinite;
+        }
+        .preview-container {
+            margin: 20px 0;
+        }
+        .preview-container img, .preview-container video {
+            max-width: 100%;
+            max-height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .action-btns {
+            margin: 20px 0;
+        }
+        .action-btns button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .action-btns button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .timer {
+            font-size: 24px;
+            margin: 10px 0;
+            display: none;
+        }
+        .recording .timer {
+            display: block;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .mode-selector {
+            margin: 20px 0;
+        }
+        .mode-selector button {
+            padding: 8px 15px;
+            margin: 0 5px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .mode-selector button.active {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>拍照/录像上传</h2>
+    
+    <div class="mode-selector">
+        <button id="photoModeBtn" class="active">拍照模式</button>
+        <button id="videoModeBtn">录像模式</button>
+    </div>
+    
+    <div class="preview-container">
+        <img id="previewImage" style="display: none;">
+        <video id="previewVideo" style="display: none;" controls></video>
+    </div>
+    
+    <div class="timer" id="timer">00:00</div>
+    
+    <div class="camera-btn-container">
+        <div class="recording-indicator">录制中</div>
+        <button class="camera-btn" id="cameraBtn"></button>
+    </div>
+    
+    <div class="action-btns">
+        <button id="uploadBtn" disabled>上传</button>
+        <button id="cancelBtn" disabled>取消</button>
+    </div>
+    
+    <div id="status"></div>
+    
+    <!-- 隐藏的input元素 -->
+    <input type="file" id="cameraInput" accept="image/*" capture="camera" style="display: none;">
+    <input type="file" id="videoInput" accept="video/*" capture="camcorder" style="display: none;">
+
+    <script>
+        // 获取DOM元素
+        const cameraBtn = document.getElementById('cameraBtn');
+        const photoModeBtn = document.getElementById('photoModeBtn');
+        const videoModeBtn = document.getElementById('videoModeBtn');
+        const cameraInput = document.getElementById('cameraInput');
+        const videoInput = document.getElementById('videoInput');
+        const previewImage = document.getElementById('previewImage');
+        const previewVideo = document.getElementById('previewVideo');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const statusDiv = document.getElementById('status');
+        const timer = document.getElementById('timer');
+        const recordingIndicator = document.querySelector('.recording-indicator');
+        const cameraBtnContainer = document.querySelector('.camera-btn-container');
+        
+        let selectedFile = null;
+        let isVideoMode = false;
+        let recordingStartTime = 0;
+        let timerInterval = null;
+        
+        // 初始化模式选择
+        photoModeBtn.addEventListener('click', function() {
+            isVideoMode = false;
+            photoModeBtn.classList.add('active');
+            videoModeBtn.classList.remove('active');
+            resetUI();
+        });
+        
+        videoModeBtn.addEventListener('click', function() {
+            isVideoMode = true;
+            videoModeBtn.classList.add('active');
+            photoModeBtn.classList.remove('active');
+            resetUI();
+        });
+        
+        // 相机按钮事件
+        cameraBtn.addEventListener('click', function() {
+            if (!isVideoMode) {
+                // 拍照模式 - 点击触发
+                cameraInput.click();
+            }
+            // 录像模式由touch事件处理
+        });
+        
+        // 触摸事件处理（用于区分点击和长按）
+        let pressTimer;
+        
+        cameraBtn.addEventListener('touchstart', function(e) {
+            if (!isVideoMode) return;
+            
+            e.preventDefault();
+            pressTimer = setTimeout(function() {
+                startRecording();
+            }, 500); // 长按500ms触发录像
+        });
+        
+        cameraBtn.addEventListener('touchend', function(e) {
+            if (!isVideoMode) return;
+            
+            e.preventDefault();
+            clearTimeout(pressTimer);
+        });
+        
+        cameraBtn.addEventListener('mousedown', function(e) {
+            if (!isVideoMode) return;
+            
+            pressTimer = setTimeout(function() {
+                startRecording();
+            }, 500);
+        });
+        
+        cameraBtn.addEventListener('mouseup', function(e) {
+            if (!isVideoMode) return;
+            
+            clearTimeout(pressTimer);
+        });
+        
+        cameraBtn.addEventListener('mouseleave', function(e) {
+            if (!isVideoMode) return;
+            
+            clearTimeout(pressTimer);
+        });
+        
+        // 文件选择变化事件
+        cameraInput.addEventListener('change', function(e) {
+            handleFileSelect(e, false);
+        });
+        
+        videoInput.addEventListener('change', function(e) {
+            handleFileSelect(e, true);
+        });
+        
+        // 处理选择的文件
+        function handleFileSelect(event, isVideo) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            selectedFile = file;
+            
+            // 清除之前的预览
+            previewImage.style.display = 'none';
+            previewVideo.style.display = 'none';
+            previewVideo.pause();
+            previewVideo.src = '';
+            
+            // 显示预览
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                if (isVideo) {
+                    previewVideo.src = e.target.result;
+                    previewVideo.style.display = 'block';
+                } else {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                }
+                uploadBtn.disabled = false;
+                cancelBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // 开始录像
+        function startRecording() {
+            cameraBtnContainer.classList.add('recording');
+            videoInput.click();
+            recordingStartTime = Date.now();
+            updateTimer();
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+        
+        // 更新计时器
+        function updateTimer() {
+            const seconds = Math.floor((Date.now() - recordingStartTime) / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            timer.textContent = `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+        }
+        
+        // 上传按钮点击事件
+        uploadBtn.addEventListener('click', function() {
+            if (!selectedFile) return;
+            
+            uploadFile(selectedFile, previewVideo.style.display === 'block');
+        });
+        
+        // 取消按钮点击事件
+        cancelBtn.addEventListener('click', function() {
+            resetUI();
+        });
+        
+        // 上传文件函数
+        function uploadFile(file, isVideo) {
+            statusDiv.textContent = '上传中...';
+            statusDiv.style.color = '#333';
+            
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('type', isVideo ? 'video' : 'image');
+            
+            // 实际项目中替换为你的上传接口
+            const uploadUrl = isVideo ? 'https://your-api.com/upload-video' : 'https://your-api.com/upload-image';
+            
+            fetch(uploadUrl, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                statusDiv.textContent = '上传成功！';
+                statusDiv.style.color = 'green';
+                console.log('上传成功:', data);
+                
+                // 上传成功后重置
+                setTimeout(resetUI, 2000);
+            })
+            .catch(error => {
+                statusDiv.textContent = '上传失败: ' + error.message;
+                statusDiv.style.color = 'red';
+                console.error('上传失败:', error);
+            });
+        }
+        
+        // 重置UI状态
+        function resetUI() {
+            selectedFile = null;
+            previewImage.src = '';
+            previewImage.style.display = 'none';
+            previewVideo.src = '';
+            previewVideo.style.display = 'none';
+            uploadBtn.disabled = true;
+            cancelBtn.disabled = true;
+            cameraInput.value = '';
+            videoInput.value = '';
+            statusDiv.textContent = '';
+            cameraBtnContainer.classList.remove('recording');
+            clearInterval(timerInterval);
+            timer.style.display = 'none';
+            timer.textContent = '00:00';
+        }
+    </script>
+</body>
+</html>
