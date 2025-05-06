@@ -64,7 +64,7 @@
 
 -------
     <div class="upload-container">
-        <h2>上传照片/视频 - 2</h2>
+        <h2>上传照片/视频 - 3</h2>
         
         <div>
             <button class="upload-btn" id="chooseFileBtn">选择文件</button>
@@ -73,7 +73,8 @@
         </div>
         
         <!-- 隐藏的input元素 -->
-        <input type="file" id="fileInput" accept="image/*,video/*" multiple style="display: none;">
+        <!-- <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;"> -->
+        <input type="file" id="fileInput" accept="video/*" style="display: none;">
         <input type="file" id="cameraInput" accept="image/*" capture="camera" style="display: none;">
         <input type="file" id="videoInput" accept="video/*" capture="camcorder" style="display: none;">
         
@@ -109,25 +110,25 @@
         
         // 选择文件按钮点击事件
         chooseFileBtn.addEventListener('click', function() {
-            // fileInput.click();
-            function openNativeAlbum() {
-              if (window.AndroidInterface) {
-                // Android调用
-                AndroidInterface.openAlbum('image/*,video/*', 9); // 类型和最大数量
-              } else if (window.webkit && window.webkit.messageHandlers.iOSHandler) {
-                // iOS调用
-                window.webkit.messageHandlers.iOSHandler.postMessage({
-                  action: 'openAlbum',
-                  types: ['public.image', 'public.movie'],
-                  max: 9
-                });
-              } else {
-                // 降级处理
-                alert('请在App内使用此功能');
-                document.getElementById('fallbackInput').click();
-              }
-            }
-            openNativeAlbum();
+            fileInput.click();
+            // function openNativeAlbum() {
+            //   if (window.AndroidInterface) {
+            //     // Android调用
+            //     AndroidInterface.openAlbum('image/*,video/*', 9); // 类型和最大数量
+            //   } else if (window.webkit && window.webkit.messageHandlers.iOSHandler) {
+            //     // iOS调用
+            //     window.webkit.messageHandlers.iOSHandler.postMessage({
+            //       action: 'openAlbum',
+            //       types: ['public.image', 'public.movie'],
+            //       max: 9
+            //     });
+            //   } else {
+            //     // 降级处理
+            //     alert('请在App内使用此功能');
+            //     document.getElementById('fallbackInput').click();
+            //   }
+            // }
+            // openNativeAlbum();
         });
         
         // 拍照按钮点击事件
