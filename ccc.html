@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>自定义上传组件</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .upload-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .upload-header {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .upload-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .upload-btn {
+            flex: 1;
+            padding: 12px 0;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .upload-btn:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .upload-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .upload-btn i {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #2196F3;
+        }
+        
+        .preview-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .preview-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+        
+        .preview-item img,
+        .preview-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .preview-item .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        .progress-container {
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0d8bf2;
+        }
+        
+        .submit-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        /* 隐藏原生input */
+        .hidden-input {
+            display: none;
+        }
+        
+        /* 相机预览样式 */
+        #cameraPreview {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1000;
+            display: none;
+        }
+        
+        #videoElement {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .camera-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1001;
+        }
+        
+        .camera-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .close-camera {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            z-index: 1001;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2 class="upload-header">上传照片/视频</h2>
+        
+        <div class="upload-options">
+            <div class="upload-btn" id="albumBtn">
+                <i>📁</i>
+                <span>相册</span>
+            </div>
+            <div class="upload-btn" id="cameraBtn">
+                <i>📷</i>
+                <span>拍照</span>
+            </div>
+            <div class="upload-btn" id="videoBtn">
+                <i>🎥</i>
+                <span>录像</span>
+            </div>
+        </div>
+        
+        <!-- 隐藏的原生input -->
+        <input type="file" id="fileInput" class="hidden-input" accept="image/*,video/*" multiple>
+        <input type="file" id="cameraInput" class="hidden-input" accept="image/*" capture="camera">
+        <input type="file" id="videoInput" class="hidden-input" accept="video/*" capture="camcorder">
+        
+        <!-- 预览区域 -->
+        <div class="preview-container" id="previewContainer"></div>
+        
+        <!-- 上传进度 -->
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div style="text-align: center; margin-top: 5px; font-size: 14px;">
+                <span id="progressText">0%</span>
+            </div>
+        </div>
+        
+        <!-- 提交按钮 -->
+        <button class="submit-btn" id="submitBtn" disabled>上传文件</button>
+    </div>
+    
+    <!-- 相机预览 -->
+    <div id="cameraPreview">
+        <span class="close-camera" id="closeCamera">×</span>
+        <video id="videoElement" autoplay playsinline></video>
+        <div class="camera-controls">
+            <div class="camera-btn" id="takePhotoBtn">
+                <span style="font-size: 24px;">📷</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // DOM元素
+        const albumBtn = document.getElementById('albumBtn');
+        const cameraBtn = document.getElementById('cameraBtn');
+        const videoBtn = document.getElementById('videoBtn');
+        const fileInput = document.getElementById('fileInput');
+        const cameraInput = document.getElementById('cameraInput');
+        const videoInput = document.getElementById('videoInput');
+        const previewContainer = document.getElementById('previewContainer');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const cameraPreview = document.getElementById('cameraPreview');
+        const videoElement = document.getElementById('videoElement');
+        const takePhotoBtn = document.getElementById('takePhotoBtn');
+        const closeCamera = document.getElementById('closeCamera');
+        
+        // 存储选择的文件
+        let selectedFiles = [];
+        
+        // 初始化事件监听
+        function init() {
+            // 相册选择
+            albumBtn.addEventListener('click', () => {
+                fileInput.click();
+            });
+            
+            // 拍照
+            cameraBtn.addEventListener('click', () => {
+                // 使用高级API实现相机预览
+                if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                    startCamera();
+                } else {
+                    // 降级方案
+                    cameraInput.click();
+                }
+            });
+            
+            // 录像
+            videoBtn.addEventListener('click', () => {
+                videoInput.click();
+            });
+            
+            // 文件选择处理
+            fileInput.addEventListener('change', handleFileSelect);
+            cameraInput.addEventListener('change', handleFileSelect);
+            videoInput.addEventListener('change', handleFileSelect);
+            
+            // 提交按钮
+            submitBtn.addEventListener('click', uploadFiles);
+            
+            // 相机控制
+            takePhotoBtn.addEventListener('click', capturePhoto);
+            closeCamera.addEventListener('click', stopCamera);
+        }
+        
+        // 处理选择的文件
+        function handleFileSelect(e) {
+            const files = e.target.files;
+            if (files.length === 0) return;
+            
+            // 添加到选择文件列表
+            for (let i = 0; i < files.length; i++) {
+                selectedFiles.push(files[i]);
+            }
+            
+            // 更新预览
+            updatePreview();
+            
+            // 重置input值，允许重复选择相同文件
+            e.target.value = '';
+        }
+        
+        // 更新预览区域
+        function updatePreview() {
+            previewContainer.innerHTML = '';
+            
+            if (selectedFiles.length === 0) {
+                submitBtn.disabled = true;
+                return;
+            }
+            
+            submitBtn.disabled = false;
+            
+            selectedFiles.forEach((file, index) => {
+                const previewItem = document.createElement('div');
+                previewItem.className = 'preview-item';
+                
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                    previewItem.appendChild(img);
+                } else if (file.type.startsWith('video/')) {
+                    const video = document.createElement('video');
+                    video.src = URL.createObjectURL(file);
+                    video.controls = true;
+                    previewItem.appendChild(video);
+                } else {
+                    previewItem.textContent = file.name;
+                }
+                
+                // 删除按钮
+                const removeBtn = document.createElement('div');
+                removeBtn.className = 'remove-btn';
+                removeBtn.innerHTML = '×';
+                removeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectedFiles.splice(index, 1);
+                    updatePreview();
+                });
+                
+                previewItem.appendChild(removeBtn);
+                previewContainer.appendChild(previewItem);
+            });
+        }
+        
+        // 启动相机
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(stream => {
+                    cameraPreview.style.display = 'block';
+                    videoElement.srcObject = stream;
+                    window.cameraStream = stream;
+                })
+                .catch(err => {
+                    console.error('无法访问相机:', err);
+                    // 降级方案
+                    cameraInput.click();
+                });
+        }
+        
+        // 停止相机
+        function stopCamera() {
+            if (window.cameraStream) {
+                window.cameraStream.getTracks().forEach(track => track.stop());
+            }
+            cameraPreview.style.display = 'none';
+            videoElement.srcObject = null;
+        }
+        
+        // 拍照
+        function capturePhoto() {
+            const canvas = document.createElement('canvas');
+            canvas.width = videoElement.videoWidth;
+            canvas.height = videoElement.videoHeight;
+            canvas.getContext('2d').drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+            
+            canvas.toBlob(blob => {
+                const file = new File([blob], `photo_${Date.now()}.jpg`, { type: 'image/jpeg' });
+                selectedFiles.push(file);
+                updatePreview();
+                stopCamera();
+            }, 'image/jpeg', 0.9);
+        }
+        
+        // 上传文件
+        function uploadFiles() {
+            if (selectedFiles.length === 0) return;
+            
+            progressContainer.style.display = 'block';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData();
+            selectedFiles.forEach(file => {
+                formData.append('files[]', file);
+            });
+            
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '你的上传接口地址', true);
+            
+            // 上传进度
+            xhr.upload.onprogress = function(e) {
+                if (e.lengthComputable) {
+                    const percent = Math.round((e.loaded / e.total) * 100);
+                    progressFill.style.width = percent + '%';
+                    progressText.textContent = percent + '%';
+                }
+            };
+            
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert('上传成功');
+                    selectedFiles = [];
+                    updatePreview();
+                    progressContainer.style.display = 'none';
+                } else {
+                    alert('上传失败');
+                    submitBtn.disabled = false;
+                }
+            };
+            
+            xhr.onerror = function() {
+                alert('上传出错');
+                submitBtn.disabled = false;
+            };
+            
+            xhr.send(formData);
+        }
+        
+        // 初始化
+        init();
+    </script>
+</body>
+</html>
