@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信上传组件</title>
+    <style>
+        .upload-container {
+            padding: 15px;
+        }
+        .upload-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background: #07C160;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .preview-area {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .preview-item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            position: relative;
+        }
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .preview-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 20px;
+            height: 20px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <div class="upload-btn" onclick="chooseWxImage()">选择图片</div>
+        <div class="upload-btn" onclick="chooseWxVideo()">选择视频</div>
+        
+        <div class="preview-area" id="previewArea"></div>
+    </div>
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+        // 存储已上传的媒体文件
+        let uploadedMedias = [];
+        
+        // 初始化微信配置
+        async function initWxConfig() {
+            try {
+                const config = await fetch('/api/wechat-js-config').then(res => res.json());
+                
+                wx.config({
+                    debug: false,
+                    appId: config.appId,
+                    timestamp: config.timestamp,
+                    nonceStr: config.nonceStr,
+                    signature: config.signature,
+                    jsApiList: [
+                        'chooseImage',
+                        'chooseVideo',
+                        'uploadImage',
+                        'uploadVideo',
+                        'previewImage'
+                    ]
+                });
+
+                wx.ready(() => {
+                    console.log('微信JS-SDK 初始化完成');
+                });
+
+                wx.error(res => {
+                    console.error('微信JS-SDK 初始化失败', res);
+                    alert('微信功能初始化失败，请刷新重试');
+                });
+            } catch (error) {
+                console.error('获取配置失败:', error);
+            }
+        }
+
+        // 选择图片
+        function chooseWxImage() {
+            wx.chooseImage({
+                count: 9,
+                sizeType: ['original', 'compressed'],
+                sourceType: ['album', 'camera'],
+                success: function(res) {
+                    const localIds = res.localIds;
+                    document.getElementById('previewArea').innerHTML = '';
+                    
+                    localIds.forEach(localId => {
+                        // 先显示本地预览
+                        addPreviewItem(localId, 'image');
+                        
+                        // 上传到微信服务器
+                        wx.uploadImage({
+                            localId: localId,
+                            isShowProgressTips: 1,
+                            success: function(uploadRes) {
+                                // 上传到自己的服务器
+                                saveToOurServer(uploadRes.serverId, 'image', localId);
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+        // 选择视频
+        function chooseWxVideo() {
+            wx.chooseVideo({
+                sourceType: ['album', 'camera'],
+                maxDuration: 60,
+                success: function(res) {
+                    const localId = res.localId;
+                    
+                    // 显示预览
+                    addPreviewItem(localId, 'video');
+                    
+                    // 上传视频
+                    wx.uploadVideo({
+                        localId: localId,
+                        isShowProgressTips: 1,
+                        success: function(uploadRes) {
+                            saveToOurServer(uploadRes.serverId, 'video', localId);
+                        }
+                    });
+                }
+            });
+        }
+
+        // 添加预览项
+        function addPreviewItem(localId, type) {
+            const previewArea = document.getElementById('previewArea');
+            const item = document.createElement('div');
+            item.className = 'preview-item';
+            item.dataset.localId = localId;
+            
+            if (type === 'image') {
+                item.innerHTML = `
+                    <img src="${localId}">
+                    <div class="delete-btn" onclick="removeItem('${localId}')">×</div>
+                `;
+            } else {
+                item.innerHTML = `
+                    <video src="${localId}" controls></video>
+                    <div class="delete-btn" onclick="removeItem('${localId}')">×</div>
+                `;
+            }
+            
+            previewArea.appendChild(item);
+        }
+
+        // 删除项目
+        function removeItem(localId) {
+            const item = document.querySelector(`[data-local-id="${localId}"]`);
+            if (item) item.remove();
+            
+            // 从上传列表中移除
+            uploadedMedias = uploadedMedias.filter(m => m.localId !== localId);
+        }
+
+        // 保存到自己的服务器
+        async function saveToOurServer(serverId, type, localId) {
+            try {
+                const response = await fetch('/api/save-wechat-media', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ serverId, type })
+                });
+                
+                if (response.ok) {
+                    uploadedMedias.push({ serverId, type, localId });
+                    console.log('上传成功', serverId);
+                } else {
+                    console.error('上传失败');
+                    // 可以标记上传失败的项目
+                }
+            } catch (error) {
+                console.error('保存失败:', error);
+            }
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', initWxConfig);
+    </script>
+</body>
+</html>
