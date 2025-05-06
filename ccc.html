@@ -197,6 +197,22 @@
             cursor: pointer;
         }
     </style>
+
+    <style>
+      .fake-album {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 15px;
+      }
+    </style>
 </head>
 <body>
     <div class="upload-container">
@@ -452,6 +468,27 @@
         
         // 初始化
         init();
+    </script>
+
+    <!-- 自定义UI -->
+    <div id="customAlbum" class="fake-album" style="display:none">
+      <div class="album-item" onclick="triggerFileInput()">
+        <img src="placeholder.jpg">
+      </div>
+      <!-- 更多预览项 -->
+    </div>
+
+    <input type="file" id="realInput" style="display:none">
+
+    <script>
+      function showCustomAlbum() {
+        document.getElementById('customAlbum').style.display = 'grid';
+      }
+      
+      function triggerFileInput() {
+        document.getElementById('realInput').click();
+        document.getElementById('customAlbum').style.display = 'none';
+      }
     </script>
 </body>
 </html>
