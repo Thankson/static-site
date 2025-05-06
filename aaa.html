@@ -46,8 +46,23 @@
             display: none;
         }
     </style>
+
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 </head>
 <body>
+
+  <input type="file" class="filepond">
+
+<script>
+  FilePond.create(document.querySelector('.filepond'), {
+    acceptedFileTypes: ['image/*', 'video/*'],
+    allowMultiple: true,
+    labelIdle: '拖放文件或<span class="filepond--label-action">浏览相册</span>'
+  });
+</script>
+
+-------
     <div class="upload-container">
         <h2>上传照片/视频 - 2</h2>
         
