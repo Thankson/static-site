@@ -1,0 +1,15 @@
+<m-media-uploader application="DS" :video="false" script-id="mediaUploader">
+  <template v-slot:default="{ ready, uploading, chooseType, remoteSrc, file, reset, handleTrigger }">
+    <m-media-upload :ready="ready" :uploading="uploading" :choose-type="chooseType" :remote-src="remoteSrc" :file="file" :reset="reset" :handle-trigger="handleTrigger"></m-media-upload>
+  </template>
+  {{!-- <template v-slot:trigger="{ slotProps }">
+    </template>
+    <template v-slot:preview="{ slotProps }">
+    </template>
+    <template v-slot:spinner>
+    </template> --}}
+</m-media-uploader>
+
+<script type="application/json" id="mediaUploader">
+{{toJson Localization}}
+</script>

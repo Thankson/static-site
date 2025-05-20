@@ -1,0 +1,13 @@
+<m-media-uploader application="DS" :video="false" script-id="mediaUploader">
+  <template v-slot:default="{ ready, uploading, chooseType, remoteSrc, file, reset, handleTrigger }">
+    <m-media-upload :ready="ready" :uploading="uploading" :choose-type="chooseType" :remote-src="remoteSrc" :file="file" :reset="reset" :handle-trigger="handleTrigger"></m-media-upload>
+  </template>
+</m-media-uploader>
+
+<script type="application/json" id="mediaUploader">
+  {
+    "Data": {
+      "Text": "vue compoent m-media-uploader"
+    }
+  }
+</script>
