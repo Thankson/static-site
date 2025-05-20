@@ -1,0 +1,23 @@
+<div class="p-formIbo">
+  <o-ibo-application-form script-id="iboApplicationForm">
+    <template v-slot:ibo-process>
+      <o-ibo-face-verify script-id="iboFaceVerify"></o-ibo-face-verify>
+      <script type="application/json" id="iboFaceVerify">
+      {{toJson iboFaceVerifyLocalization}}
+      </script>
+
+      <o-ibo-enter-info script-id="iboEnterInfo"></o-ibo-enter-info>
+      <script type="application/json" id="iboEnterInfo">
+      {{toJson iboEnterInfoLocalization}}
+      </script>
+
+      <o-ibo-sign-up script-id="iboSignUp"></o-ibo-sign-up>
+      <script type="application/json" id="iboSignUp">
+      {{toJson iboSignUpLocalization}}
+      </script>
+    </template>
+  </o-ibo-application-form>
+  <script type="application/json" id="iboApplicationForm">
+  {{toJson iboApplicationFormLocalization}}
+  </script>
+</div>

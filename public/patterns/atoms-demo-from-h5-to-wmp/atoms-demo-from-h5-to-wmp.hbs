@@ -1,0 +1,30 @@
+<div class="a-fromH5ToWmp">
+  {{Text}}
+</div>
+
+<button onclick="goto()">goto wmp page</button>
+<br />
+<button onclick="postMsg()">post message</button>
+<br />
+<a href="https://www.baidu.com">goto baidu web page</a>
+
+<script type="application/javascript">
+  function postMsg() {
+    wx.miniProgram.postMessage({
+      data: 'yourdata'
+    });
+  }
+
+  function goto() {
+    wx.miniProgram.navigateTo({
+      url: '/pages/native/native'
+    });
+  }
+
+  // 判断是否在微信H5环境中
+  function isInWechatH5() {
+    return typeof WeixinJSBridge !== 'undefined' || /MicroMessenger/i.test(navigator.userAgent);
+  }
+
+  console.log('🔥isInWechatH5()💥 ', isInWechatH5());
+</script>

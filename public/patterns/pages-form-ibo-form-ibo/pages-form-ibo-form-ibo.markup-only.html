@@ -1,0 +1,212 @@
+<div class="p-formIbo">
+  <o-ibo-application-form script-id="iboApplicationForm">
+    <template v-slot:ibo-process>
+      <o-ibo-face-verify script-id="iboFaceVerify"></o-ibo-face-verify>
+      <script type="application/json" id="iboFaceVerify">
+        {
+          "Labels": {
+            "FaceIDTitle": "Face ID Verification",
+            "TermReadAndAgree": "I have read and agreed to the above terms, and voluntarily proceed with personal identity verification.",
+            "StartFaceVerification": "Start Face ID Verification",
+            "ErrorTermUnchecked": "Please agree the above term.",
+            "Modal": {
+              "Title": "Melaleuca requests to use your camera.",
+              "Content": "Melaleuca requests to use your camera. Your photo and video will be uploaded. ",
+              "Continue": "Continue",
+              "Reject": "Reject"
+            }
+          },
+          "Data": {
+            "ProcessID": "1",
+            "Description": "To ensure safety and convenience, Melaleuca will use face recognition technology for identity verification, continue to use means that you have understood and agreed to Melaleuca's collection, use and protection measures for face recognition data. In case you do NOT want to be identified through the face recognition, please contact (021) 26074009 to extension 6810 for offline identity.\n",
+            "VerificationSuccessDescription": "<div style=\"text-align: center;\">\n<img style=\"width: 50px; height:50px; display:block;margin: 0px auto; \" src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/about-us/Member-benefit-5.png\">\nFace ID Verification Pass!\n</div>",
+            "VerificationFailDescription": "\n<div style=\"text-align: center;\">\n<img style=\"width: 50px; height:50px; display:block;margin: 0px auto; \" src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/about-us/Member-benefit-5.png\">\nFace ID Verification Fail!\n</div>",
+            "VerificationDarkDescription": "<div style=\"text-align: center;\">\n<img style=\"width: 50px; height:50px; display:block;margin: 0px auto; \" src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/about-us/Member-benefit-5.png\">\nYour background is too dark.\n</div>",
+            "ImageSampleFace": "https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/about-us/memb-benefits-services-mobile-2x.png",
+            "IconLeftTop": "https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/R3LOGO140.png",
+            "IconRightBottom": "https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/about-us/Member-benefit-5.png",
+            "CTA": {
+              "Url": "https://dsibo-localcn.melaleuca.com.cn/",
+              "Text": "Back to Landing page",
+              "Target": ""
+            }
+          },
+          "IgnoreComponent": false,
+          "Id": "264f0f63-e16d-4ce9-a21e-f3e3de0ecc3c"
+        }
+      </script>
+
+      <o-ibo-enter-info script-id="iboEnterInfo"></o-ibo-enter-info>
+      <script type="application/json" id="iboEnterInfo">
+        {
+          "Labels": {
+            "AddressPlaceholder": "To be added later",
+            "AgreeAndSubmit": "Agree And Submit",
+            "BankCard": "Bank Card",
+            "BusinessLicense": "Business License",
+            "BusinessLicenseNo": "Business License No.",
+            "BusinessLicensePlaceHolder": "Select license type",
+            "CompanyAddress": "Company Address",
+            "CompanyName": "Company Name",
+            "ConfirmAgreement": "I confirm the upload materials are geniune and valid.",
+            "Continue": "Continue",
+            "EDRecommendationGuaranteeLetter": "ED+ Recommendation Guarantee Letter*",
+            "FrontOfIDCard": "Front Of ID Card",
+            "HandwriteCommitmentLetter": "Handwrite Commitment Letter*",
+            "Here": "here",
+            "NotMatchError": "The name and ID in your ID card don't match your account information, please change.",
+            "BankCardFormatError": "Wrong ID card format, please modify.",
+            "OperatorLegalRepInvestor": "Operator/LegalRep/Invester",
+            "ReverseOfIDCard": "Reverse Of ID Card",
+            "UploadMaterialsTip": "Click {0} to see exmples.",
+            "UploadPhotosTip": "Click {0} to see exmples.",
+            "WorkCertificate": "Work Certificate*"
+          },
+          "Data": {
+            "ProcessID": "2",
+            "UploadPhotosTitle": "Upload photos",
+            "UploadPhotosDemo": "<span style=\"background-color: rgb(240, 240, 240);\">Upload photos Demo</span>",
+            "BusinessLicenseOptions": [{
+              "TypeID": "1",
+              "TypeName": "Individual"
+            }, {
+              "TypeID": "2",
+              "TypeName": "IndividualCorporate"
+            }],
+            "PersonalInfoTitle": "Personal Info",
+            "PersonalInfo": [{
+              "FieldLabel": "Name",
+              "PropertyName": "CustomerName",
+              "PropertyValue": "stevenqa test"
+            }, {
+              "FieldLabel": "Gender",
+              "PropertyName": "Gender",
+              "PropertyValue": "Unknown"
+            }, {
+              "FieldLabel": "Customer ID",
+              "PropertyName": "CustomerId",
+              "PropertyValue": 610191991
+            }, {
+              "FieldLabel": "ID",
+              "PropertyName": "GovernmentId",
+              "PropertyValue": "340310470254822473"
+            }, {
+              "FieldLabel": "Mobile",
+              "PropertyName": "PhoneNumber",
+              "PropertyValue": "13205096893"
+            }],
+            "PersonalInfoTips": "<span style=\"background-color: rgb(240, 240, 240);\">Personal Info Tips</span>",
+            "CompanyInfoTitle": "Company Info Title",
+            "AgeIsUnderThreshold": true,
+            "UploadMaterialsTitle": "Upload Materials Title",
+            "UploadMaterialsDemo": "<span style=\"background-color: rgb(240, 240, 240);\">Upload Materials Demo</span>",
+            "UploadMaterialsNotice": "Please upload files in JPG, JPEG, or PNG formats;<br>\nFile size must be no less than 500KB and no more than 5MB.",
+            "IdentityInformationTitle": "Which option that best describe the identity you prefer in Melaleuca?",
+            "IdentityOptions": [{
+              "OptionName": "a",
+              "Description": "aaaaaa"
+            }, {
+              "OptionName": "b",
+              "Description": "bbbbbbb"
+            }],
+            "EditIcon": {
+              "Url": "",
+              "Alt": ""
+            }
+          },
+          "IgnoreComponent": false,
+          "Id": "66d63026-8b83-4ce8-b119-a2955de390e9"
+        }
+      </script>
+
+      <o-ibo-sign-up script-id="iboSignUp"></o-ibo-sign-up>
+      <script type="application/json" id="iboSignUp">
+        {
+          "Labels": {
+            "Agree": "Agree",
+            "ErrorCodeEmpty": "Please Enter your code.",
+            "ErrorCodeIncorrect": "Incorrect code, please modify.",
+            "ErrorTermUnchecked": "Please agree the above term.",
+            "PlaceholderCode": "Code",
+            "Resend": "Resend",
+            "SignUp": "Sign Up",
+            "Submit": "Submit",
+            "TermReadAndAgree": "I have read and agree to above terms."
+          },
+          "Data": {
+            "ProcessID": "3",
+            "SigningConfirmTitle": "Signing Willing Confirm",
+            "VerifyDescription": "Verification Code has been sent to 139****2222. Entering the code means your confirmation about the IBO application.",
+            "ContractSignUpTitle": "Contract Sign Up",
+            "ContractTerms": "<h2>推广服务商协议</h2>\n<p>本推广服务协议（“本协议”）由下列两方于2022年2月21日在上海市奉贤区签署：</p>\n<p>美乐家（中国）日用品有限公司（“甲方”），其主营业地位于上海市静安区广中西路355号宝华中心12层，代表其自身及其全球各地的子公司、关联方及关联公司的利益；与\n（“乙方”），其主营业地位于\n鉴于乙方有意成为甲方的独立推广服务商（以下简称“推广服务商”），并按甲方的邀请为甲方提供营销推广服务（以下简称“推广服务”），作为本协议所载相互承诺的对价，双方协议如下：</p>\n<p>1.定义</p>\n<p/>1.1 美乐家，是指甲方，以及甲方在全球范围内的母公司、子公司、分支机构和关联公司，以及上述主体所拥有的品牌。</br>\n1.2美乐家经营制度，是指美乐家公布及不定期修订的，涉及乙方从事美乐家产品推广服务所应当遵守之各项管理文件、业务须知、政策声明、纪律规范等制度的总称。</br>\n1.3营销推广服务或推广服务，是指乙方依据本协议为甲方提供并向甲方获取相应对价的产品推广、管理咨询、信息及资讯等服务，包括但不限于：</br>\n1）包括日用品、化妆品、健康用品、保健食品和普通食品在内的产品及业务推广服务、产品咨询服务和产品信息咨询服务；</br>\n2）与包括日用品、化妆品、健康用品、保健食品和普通食品在内的产品及业务相关的管理咨询服务、商务及商务信息咨询服务、市场推广及推广咨询服务和健康及健康信息咨询服务；</br>\n3）与包括日用品、化妆品、健康用品、保健食品和普通食品在内的产品及业务相关的信息服务、资讯服务、信息咨询及推广服务。</br>\n4）包括本协议第3条约定的推广服务内容。</br></p>\n",
+            "ContractDoubleConfirmTerms": "<h2>Please double confirm below terms:</h2>\n<p>I fully recognize and adhere to the business principle of \"bringing real products to real customers because they really need them\" at Melaleuca. Real needs are for customers to use themselves, not for resale or gifting to others, not for sale through third-party e-commerce platforms, nor for supplying or providing other assistance to third-party e-commerce platform stores. During the agreement period, Melaleuca has the right to verify my performance and determine the verification results, and I am willing to bear any adverse consequences arising therefrom.</p>"
+          },
+          "IgnoreComponent": false,
+          "Id": "b3c9b255-a654-45ce-a5dd-470e86f76683"
+        }
+      </script>
+    </template>
+  </o-ibo-application-form>
+  <script type="application/json" id="iboApplicationForm">
+    {
+      "Labels": {
+        "Cancel": "Cancel",
+        "Confirm": "Confirm",
+        "No": "No",
+        "Yes": "Yes"
+      },
+      "Data": {
+        "Title": "IBO Application Form",
+        "StartupApplyNotice": "<span style=\"background-color: rgb(240, 240, 240);\">Startup Apply Notice</span>",
+        "OverwriteIBONotice": "<span style=\"background-color: rgb(240, 240, 240);\">Overwrite IBO Notice</span>",
+        "SubmitSuccess": "<span style=\"background-color: rgb(240, 240, 240);\">Submit Success</span>",
+        "ProgressBar": [{
+          "ProcessID": "1",
+          "ProcessName": "Face Verify",
+          "UndoIcon": {
+            "Url": "https://placehold.co/70x70.png",
+            "Alt": "step 1 - UndoIcon"
+          },
+          "DoingIcon": {
+            "Url": "https://placehold.co/80x80.png",
+            "Alt": "step 1 - DoingIcon"
+          },
+          "CompleteIcon": {
+            "Url": "https://placehold.co/90x90.png",
+            "Alt": "step 1 - CompleteIcon"
+          }
+        }, {
+          "ProcessID": "2",
+          "ProcessName": "IBO Enter Info",
+          "UndoIcon": {
+            "Url": "https://placehold.co/70x70.png",
+            "Alt": "step 2 - UndoIcon"
+          },
+          "DoingIcon": {
+            "Url": "https://placehold.co/80x80.png",
+            "Alt": "step 2 - DoingIcon"
+          },
+          "CompleteIcon": {
+            "Url": "https://placehold.co/90x90.png",
+            "Alt": "step 2 - CompleteIcon"
+          }
+        }, {
+          "ProcessID": "3",
+          "ProcessName": "Sign Up",
+          "UndoIcon": {
+            "Url": "https://placehold.co/70x70.png",
+            "Alt": "step 3 - UndoIcon"
+          },
+          "DoingIcon": {
+            "Url": "https://placehold.co/80x80.png",
+            "Alt": "step 3 - DoingIcon"
+          },
+          "CompleteIcon": {
+            "Url": "https://placehold.co/90x90.png",
+            "Alt": "step 3 - CompleteIcon"
+          }
+        }]
+      }
+    }
+  </script>
+</div>

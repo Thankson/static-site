@@ -1,0 +1,18 @@
+<div class="p-formDs">
+  <o-ds-application-form script-id="dsApplicationForm">
+    <template v-slot:ds-process>
+      <o-ds-enter-info script-id="dsEnterInfo"></o-ds-enter-info>
+      <script type="application/json" id="dsEnterInfo">
+      {{toJson dsEnterInfoLocalization}}
+      </script>
+      <o-ds-exam script-id="dsExam"></o-ds-exam>
+      <script type="application/json" id="dsExam">
+      {{toJson dsExamLocalization}}
+      </script>
+    </template>
+  </o-ds-application-form>
+
+  <script type="application/json" id="dsApplicationForm">
+  {{toJson dsApplicationFormLocalization}}
+  </script>
+</div>
