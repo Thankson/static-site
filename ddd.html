@@ -73,6 +73,52 @@
 
     <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
     <script>
+        wx.config({
+            debug: false,
+            appId: 'wxf8b4f85f3a794e77',
+            timestamp: 1748331688,
+            nonceStr: '9mHtT8ACZy1xCg43',
+            signature: '15d4eeddd6d7ba8e56529d50fe18fbe42e1477aa',
+            jsApiList: [
+              'checkJsApi',
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage',
+              'onMenuShareQQ',
+              'onMenuShareWeibo',
+              'onMenuShareQZone',
+              'hideMenuItems',
+              'showMenuItems',
+              'hideAllNonBaseMenuItem',
+              'showAllNonBaseMenuItem',
+              'translateVoice',
+              'startRecord',
+              'stopRecord',
+              'onVoiceRecordEnd',
+              'playVoice',
+              'onVoicePlayEnd',
+              'pauseVoice',
+              'stopVoice',
+              'uploadVoice',
+              'downloadVoice',
+              'chooseImage',
+                        'chooseVideo',
+              'previewImage',
+              'uploadImage',
+              'downloadImage',
+              'getNetworkType',
+              'openLocation',
+              'getLocation',
+              'hideOptionMenu',
+              'showOptionMenu',
+              'closeWindow',
+              'scanQRCode',
+              'chooseWXPay',
+              'openProductSpecificView',
+              'addCard',
+              'chooseCard',
+              'openCard'
+            ]
+        });
         // 存储已上传的媒体文件
         let uploadedMedias = [];
         
@@ -135,24 +181,25 @@
                     });
                 }
             });
-            console.log('uploading...')
-            wx.chooseImage({
-              count: 1, // 可选数量
-              sizeType: ['original', 'compressed'], // 图片类型
-              sourceType: ['album', 'camera'], // 来源（相册或相机）
-              success: (res) => {
-                console.log('图片临时路径:', res.tempFilePaths);
-              },
-              fail: (err) => {
-                console.log('失败1:', err);
-                console.error('失败:', err);
-                // wx.showToast({ title: '获取图片失败', icon: 'none' });
-              }
-            });
+            // console.log('uploading...')
+            // wx.chooseImage({
+            //   count: 1, // 可选数量
+            //   sizeType: ['original', 'compressed'], // 图片类型
+            //   sourceType: ['album', 'camera'], // 来源（相册或相机）
+            //   success: (res) => {
+            //     console.log('图片临时路径:', res.tempFilePaths);
+            //   },
+            //   fail: (err) => {
+            //     console.log('失败1:', err);
+            //     console.error('失败:', err);
+            //     // wx.showToast({ title: '获取图片失败', icon: 'none' });
+            //   }
+            // });
         }
 
         // 选择视频
         function chooseWxVideo() {
+          console.log(wx)
             wx.chooseVideo({
                 sourceType: ['album', 'camera'],
                 maxDuration: 60,
