@@ -51,10 +51,21 @@
             line-height: 20px;
         }
     </style>
+
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      // VConsole 默认会挂载到 `window.VConsole` 上
+      var vConsole = new window.VConsole();
+      // 接下来即可照常使用 `console` 等方法
+        console.log('Hello world');
+        
+        // 结束调试后，可移除掉
+        vConsole.destroy();
+    </script>
 </head>
 <body>
     <div class="upload-container">
-        <div class="upload-btn" onclick="chooseWxImage()">选择图片</div>
+        <div class="upload-btn" onclick="chooseWxImage()">选择图片 ste</div>
         <div class="upload-btn" onclick="chooseWxVideo()">选择视频</div>
         
         <div class="preview-area" id="previewArea"></div>
@@ -123,6 +134,20 @@
                         });
                     });
                 }
+            });
+            console.log('uploading...')
+            wx.chooseImage({
+              count: 1, // 可选数量
+              sizeType: ['original', 'compressed'], // 图片类型
+              sourceType: ['album', 'camera'], // 来源（相册或相机）
+              success: (res) => {
+                console.log('图片临时路径:', res.tempFilePaths);
+              },
+              fail: (err) => {
+                console.log('失败1:', err);
+                console.error('失败:', err);
+                // wx.showToast({ title: '获取图片失败', icon: 'none' });
+              }
             });
         }
 
@@ -204,7 +229,7 @@
         }
 
         // 初始化
-        document.addEventListener('DOMContentLoaded', initWxConfig);
+        // document.addEventListener('DOMContentLoaded', initWxConfig);
     </script>
 </body>
 </html>
