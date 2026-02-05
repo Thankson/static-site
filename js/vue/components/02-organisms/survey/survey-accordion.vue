@@ -35,7 +35,7 @@
                             <!-- Item -->
                             <div class="flex">
                                 <!-- Points -->
-                                <span v-if="!useProductsCommitment" class="o-surveyAccordion__points" :class="{'-fitSpace': isCn}">
+                                <span v-if="!useProductsCommitment" class="o-surveyAccordion__points">
                                     {{
                                         getPoints(getPointsTobePassed(item))
                                     }}
