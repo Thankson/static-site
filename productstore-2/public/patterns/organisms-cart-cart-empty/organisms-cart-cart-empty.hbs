@@ -1,0 +1,13 @@
+<div class="o-cartEmpty">
+  <h2 class="o-cartEmpty__heading">{{Heading}}</h2>
+
+  {{#if Description}}
+    <div class="o-cartEmpty__desc">
+      {{{Description}}}
+    </div>
+  {{/if}}
+
+  {{#if Cta}}
+    {{> atoms-button Cta}}
+  {{/if}}
+</div>

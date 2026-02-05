@@ -1,0 +1,31 @@
+<section class="o-videoLanding bg-gray-25">
+  <div class="o-videoLanding__wrapper">
+    {{#unless IsInformationOnTop }}
+      {{> molecules-cmn-inline-player }}
+    {{/unless }}
+
+    <div class="o-videoLanding__info {{#if IsInformationOnTop}}-top{{/if}}">
+      {{#with VideoLandingInfo }}
+        {{#if Title }}
+          <h2 class="o-videoLanding__title">{{ Title }}</h2>
+        {{/if }}
+
+        {{#if Description }}
+          <!-- Start: RTE -->
+          <div class="o-videoLanding__rte m-rte">
+            {{{ Description }}}
+          </div>
+          <!-- End: RTE -->
+        {{/if }}
+      {{/with }}
+
+      {{#if AuthorBtn }}
+        {{> atoms-cmn-author-btn-small }}
+      {{/if}}
+    </div>
+
+    {{#if IsInformationOnTop }}
+      {{> molecules-cmn-inline-player }}
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,90 @@
+<form class="o-masterForm max-w-contain mx-10 xl:mx-auto my-15" id="master-form" name="master-form" action="" method="post">
+  <h1 class="text-3xl pb-10">Master Form</h1>
+  <div class="flex flex-wrap justify-between">
+    <div class="w-full sm:w-2_5">
+      {{#Field.FirstName}}
+        {{> molecules-form-field-basic}}
+      {{/Field.FirstName}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.LastName}}
+        {{> molecules-form-field-basic}}
+      {{/Field.LastName}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.AddressLine1}}
+        {{> molecules-form-field-basic}}
+      {{/Field.AddressLine1}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.AddressLine2}}
+        {{> molecules-form-field-basic}}
+      {{/Field.AddressLine2}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.City}}
+        {{> molecules-form-field-basic}}
+      {{/Field.City}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.State}}
+        {{> molecules-form-field-select}}
+      {{/Field.State}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.Zipcode}}
+        {{> molecules-form-field-basic}}
+      {{/Field.Zipcode}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.Email}}
+        {{> molecules-form-field-basic}}
+      {{/Field.Email}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.Telephone}}
+        {{> molecules-form-field-basic}}
+      {{/Field.Telephone}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.Date}}
+        {{> molecules-form-field-date}}
+      {{/Field.Date}}
+    </div>
+    <div class="w-full sm:w-2_5 pb-20">
+      <p class="text-sm uppercase font-bold pb-5 text-gray-120">{{Field.RadioListTitle}}</p>
+      {{#Field.RadioList}}
+        {{> molecules-form-field-radio}}
+      {{/Field.RadioList}}
+    </div>
+    <div class="w-full sm:w-2_5 pb-20">
+      <p class="text-sm uppercase font-bold pb-5 text-gray-120">{{Field.CheckboxListTitle}}</p>
+      {{#Field.CheckboxList}}
+        {{> molecules-form-field-checkbox}}
+      {{/Field.CheckboxList}}
+    </div>
+  </div>
+  <div class="block sm:flex sm:justify-between">
+    <div class="w-full sm:w-2_5">
+      {{#Field.Password}}
+        {{> molecules-form-field-pwd}}
+      {{/Field.Password}}
+    </div>
+    <div class="w-full sm:w-2_5">
+      {{#Field.ConfirmPassword}}
+        {{> molecules-form-field-pwd}}
+      {{/Field.ConfirmPassword}}
+    </div>
+  </div>
+  <div class="w-full md:w-2_5">
+    {{#Field.TextArea}}
+      {{> molecules-form-field-textarea}}
+    {{/Field.TextArea}}
+  </div>
+  <div>
+    {{#Field.Submit}}
+      {{> atoms-button}}
+    {{/Field.Submit}}
+  </div>
+
+</form>

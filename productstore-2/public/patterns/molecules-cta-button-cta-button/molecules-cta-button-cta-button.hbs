@@ -1,0 +1,51 @@
+{{#SpacingContainer}}
+  {{> organisms-cmn-spacing-container}}
+{{/SpacingContainer}}
+
+{{!
+
+    Use the `DynamicPartial` property in the JSON file to reference the inline partial below
+
+}}
+
+{{#*inline "CtaButton"}}
+  {{#CtaButton}}
+    <div class="m-ctaButton flex">
+      <a-badge aria-label="{{Badge.Data.AriaLabel}}" background-color="{{Badge.Data.BackgroundColor}}" badge-position="{{Badge.Data.BadgePosition}}" tailwind-classes="{{Badge.Data.TailwindClasses}}" text-color="{{Badge.Data.TextColor}}" title="{{Badge.Data.Title}}" is-grow-premium-popup="{{Badge.Data.IsGrowPremiumPopup}}">
+        <div class="mx-auto max-w-contain px-10 lg:px-20 xl:px-0 {{#if IsTextWidth}}flex-grow-0 w-auto{{else}}w-full flex-grow{{/if}}">
+          <a class="text-center cursor-pointer {{#if RoundedClass}}{{RoundedClass}}{{else}}rounded-full{{/if}} bg-cover bg-center bg-no-repeat block overflow-hidden py-10 {{#if Badge.Data}} pl-18 pr-100 {{else}} px-44 md:py-20 md:px-15 {{/if}}relative w-full z-1 {{#if ForeColorClass}}{{ForeColorClass}}{{else}}text-black{{/if}}  {{#if BorderColorClass}}border {{BorderColorClass}}{{/if}} " href="{{Link}}" data-js="hoverBg" data-bg-overlay="{{> SetOverlayStyles}}" style="{{> SetInitialBgStyles}}" {{#if HoverTextColor}}data-hover-text="{{HoverTextColor}}" {{/if}}>
+            <div class="z-1">
+              {{#if RTE}}
+                {{{RTE}}}
+              {{else}}
+                {{>CtaButtonRTE}}
+              {{/if}}
+            </div>
+          </a>
+        </div>
+      </a-badge>
+    </div>
+  {{/CtaButton}}
+{{/inline}}
+
+{{#*inline "SetOverlayStyles"}}
+  {{#if Background.Overlay}}
+    {{Background.Overlay}}
+  {{else}}
+    rgba(255,255,255,.25)
+  {{/if}}
+{{/inline}}
+
+{{#*inline "SetInitialBgStyles"}}
+  {{#Background}}
+    {{#if Image}}
+      background-image: url('{{Image}}');
+    {{else}}
+      background: {{Primary}};
+    {{/if}}
+  {{/Background}}
+{{/inline}}
+
+{{#*inline "CtaButtonRTE"}}
+  <p class='text-center'>Learn more about the Sei Bella brand.</p>
+{{/inline}}

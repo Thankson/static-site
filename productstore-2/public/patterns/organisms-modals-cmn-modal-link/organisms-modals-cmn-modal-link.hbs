@@ -1,0 +1,25 @@
+<modal :visible="true">
+  {{#if ModalHeading}}
+    <template v-slot:heading>
+      {{ModalHeading}}
+    </template>
+  {{/if}}
+
+  {{#if ModalBody}}
+    <template v-slot:body>
+      {{ModalBody}}
+    </template>
+  {{/if}}
+
+  {{#if ModalFooter}}
+    <template v-slot:footer>
+      <a href="" class="a-button -medium" {{#with Gtm}} {{> gtmTrack}} {{/with}}>
+        {{ModalFooter.LinkLabel}}
+      </a>
+    </template>
+  {{/if}}
+</modal>
+
+{{#*inline "gtmTrack"}}
+  v-on:click="gtmTrackAction({ id:'{{Id}}'{{#if Text}}, text:'{{Text}}'{{/if}} }, $event)"
+{{/inline}}

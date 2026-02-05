@@ -1,0 +1,24 @@
+<article class="m-colShowcase">
+  <header class="m-colShowcase__header">
+    {{{HeaderText}}}
+  </header>
+  <ul class="m-colShowcase__list">
+    {{#each Items}}
+      <li class="m-colShowcase__item">
+        <strong class="m-colShowcase__subtitle">{{Subtitle}}</strong>
+        <div class="m-colShowcase__row">
+          <a class="m-colShowcase__product" href="{{Sku.Link}}">
+            <img src="{{Sku.Image}}" class="m-colShowcase__img" alt="{{Sku.Alt}}">
+            <p class="m-colShowcase__skuTitle">{{Sku.Title}}</p>
+          </a>
+          {{#with SecondSku}}
+            <a class="m-colShowcase__product" href="{{Sku.Link}}">
+              <img src="{{Sku.Image}}" class="m-colShowcase__img" alt="{{Sku.Alt}}">
+              <p class="m-colShowcase__skuTitle">{{Sku.Title}}</p>
+            </a>
+          {{/with}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</article>

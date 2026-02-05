@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770272894619" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-ingredients" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-ingredients\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-ingredients">Ingredients</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-ingredient-accordion" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredient-accordion\organisms-ingredients-ingredient-accordion.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredient-accordion" title="Link to Pattern">
+						Ingredient Accordion
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredient-accordion" data-patternpartial="organisms-ingredient-accordion" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredient-accordion">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			
+<div class="o-accordion -ingredients">
+        <h2
+            class="o-accordion__title "
+            style="background-color:#F4FAF6;"
+        >
+            <button class="o-accordion__toggler py-24 px-30 text-xl text-gray-150 font-bold" id="ID1" aria-controls="SID1"                         
+            v-on:click='gtmTrackAction({"id": "458", "text": "Examples of Smarter Choice Ingredients"}, $event)'
+            aria-expanded="false">
+            Examples of Smarter Choice Ingredients    <span class="a-arrow -lg -down mt-6 md:right-0" aria-hidden="true">
+        <span class="a-arrow__icon border-gray-120 text-gray-120 " style="border-color:"></span>
+    </span>
+
+            </button>
+        </h2>
+
+        <div
+            class="o-accordion__content hidden "
+            style="background-color:#fff;"
+            id="SID1"
+            aria-labelledby="ID1"
+            role="region"
+        >
+                    <div class="bg-gray bg-cover bg-no-repeat bg-center p-40 flex items-center justify-center  " style=" height:400px; width:w-auto;">
+                        <h2 class="text-white text-center text-2xl">Demo Content Block - default</h2>
+                    </div>
+        </div>
+        <h2
+            class="o-accordion__title "
+            style="background-color:#F4FAF6;"
+        >
+            <button class="o-accordion__toggler py-24 px-30 text-xl text-gray-150 font-bold" id="ID2" aria-controls="SID2"                         
+            v-on:click='gtmTrackAction({"id": "458", "text": "Proven Experience Leads to Smarter Choices"}, $event)'
+            aria-expanded="false">
+            Proven Experience Leads to Smarter Choices    <span class="a-arrow -lg -down mt-6 md:right-0" aria-hidden="true">
+        <span class="a-arrow__icon border-gray-120 text-gray-120 " style="border-color:"></span>
+    </span>
+
+            </button>
+        </h2>
+
+        <div
+            class="o-accordion__content hidden "
+            style="background-color:#fff;"
+            id="SID2"
+            aria-labelledby="ID2"
+            role="region"
+        >
+                Normal <strong class="text-green">RTE Content</strong> example
+        </div>
+        <h2
+            class="o-accordion__title "
+            style="background-color:#F4FAF6;"
+        >
+            <button class="o-accordion__toggler py-24 px-30 text-xl text-gray-150 font-bold" id="ID1" aria-controls="SID1"                         
+            v-on:click='gtmTrackAction({"id": "458", "text": "Ingredients We Don’t Use"}, $event)'
+            aria-expanded="false">
+            Ingredients We Don’t Use    <span class="a-arrow -lg -down mt-6 md:right-0" aria-hidden="true">
+        <span class="a-arrow__icon border-gray-120 text-gray-120 " style="border-color:"></span>
+    </span>
+
+            </button>
+        </h2>
+
+        <div
+            class="o-accordion__content hidden "
+            style="background-color:#fff;"
+            id="SID1"
+            aria-labelledby="ID1"
+            role="region"
+        >
+                    <div class="bg-gray bg-cover bg-no-repeat bg-center p-40 flex items-center justify-center  " style=" height:400px; width:w-auto;">
+                        <h2 class="text-white text-center text-2xl">Demo Content Block - default</h2>
+                    </div>
+        </div>
+        <h2
+            class="o-accordion__title "
+            style="background-color:#F4FAF6;"
+        >
+            <button class="o-accordion__toggler py-24 px-30 text-xl text-gray-150 font-bold" id="ID1" aria-controls="SID1"                         
+            v-on:click='gtmTrackAction({"id": "458", "text": "Ingredients You Can Love"}, $event)'
+            aria-expanded="false">
+            Ingredients You Can Love    <span class="a-arrow -lg -down mt-6 md:right-0" aria-hidden="true">
+        <span class="a-arrow__icon border-gray-120 text-gray-120 " style="border-color:"></span>
+    </span>
+
+            </button>
+        </h2>
+
+        <div
+            class="o-accordion__content hidden "
+            style="background-color:#fff;"
+            id="SID1"
+            aria-labelledby="ID1"
+            role="region"
+        >
+                    <div class="bg-gray bg-cover bg-no-repeat bg-center p-40 flex items-center justify-center  " style=" height:400px; width:w-auto;">
+                        <h2 class="text-white text-center text-2xl">Demo Content Block - default</h2>
+                    </div>
+        </div>
+        <h2
+            class="o-accordion__title "
+            style="background-color:#F4FAF6;"
+        >
+            <button class="o-accordion__toggler py-24 px-30 text-xl text-gray-150 font-bold" id="ID1" aria-controls="SID1"                         
+            v-on:click='gtmTrackAction({"id": "458", "text": "Sources of Ingredients We Use"}, $event)'
+            aria-expanded="false">
+            Sources of Ingredients We Use    <span class="a-arrow -lg -down mt-6 md:right-0" aria-hidden="true">
+        <span class="a-arrow__icon border-gray-120 text-gray-120 " style="border-color:"></span>
+    </span>
+
+            </button>
+        </h2>
+
+        <div
+            class="o-accordion__content hidden "
+            style="background-color:#fff;"
+            id="SID1"
+            aria-labelledby="ID1"
+            role="region"
+        >
+                    <div class="bg-gray bg-cover bg-no-repeat bg-center p-40 flex items-center justify-center  " style=" height:400px; width:w-auto;">
+                        <h2 class="text-white text-center text-2xl">Demo Content Block - default</h2>
+                    </div>
+        </div>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredient-accordion" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"organisms-cmn-accordion","lineagePath":"../../patterns/organisms-accordion-cmn-accordion\\organisms-accordion-cmn-accordion.rendered.html"}],"lineage":[{"lineagePattern":"organisms-cmn-accordion","lineagePath":"../../patterns/organisms-accordion-cmn-accordion\\organisms-accordion-cmn-accordion.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredient Accordion","patternPartial":"organisms-ingredient-accordion","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-ingredient-glossary" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredient-glossary\organisms-ingredients-ingredient-glossary.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredient-glossary" title="Link to Pattern">
+						Ingredient Glossary
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredient-glossary" data-patternpartial="organisms-ingredient-glossary" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredient-glossary">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- Start: Glossary List Organism-->
+<!-- End: Ingredient Glossary Organism-->
+<article class="o-ingredGloss">
+    <header class="o-ingredGloss__header">
+            <p class="o-ingredGloss__legend">
+                <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="o-ingredGloss__icon">
+                 &#x3D; biodegradable or already exists in its final natural state
+            </p>
+            <p class="o-ingredGloss__legend">
+                <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="o-ingredGloss__icon">
+                 &#x3D; Some text about the meaning of the icon
+            </p>
+    </header>
+
+    <div class="o-ingredGloss__list">
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Cleaners
+                                    <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                    <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Stabilizers
+                                    <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Enzymes
+                                    <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Soil-releasing and soil-dispersing aids
+                                    <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Sodium borate
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="o-ingredGloss__item">
+                <div class="m-ingredGloss">
+                    <h3 data-accord="title" class="m-ingredGloss__title">
+                        <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                            aria-controls="" aria-expanded="false">
+                            <span class="m-ingredGloss__text -title">
+                                Calcium chloride
+                            </span>
+                            
+                            <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                
+                    <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                        role="region">
+                        <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</article>
+<!-- End: Ingredient Glossary Organism-->
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredient-glossary" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-ingredient-glossary","lineagePath":"../../patterns/molecules-ingredients-ingredient-glossary\\molecules-ingredients-ingredient-glossary.rendered.html"}],"lineage":[{"lineagePattern":"molecules-ingredient-glossary","lineagePath":"../../patterns/molecules-ingredients-ingredient-glossary\\molecules-ingredients-ingredient-glossary.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-pdp-ingredients-section","lineagePath":"../../patterns/organisms-ingredients-pdp-ingredients-section\\organisms-ingredients-pdp-ingredients-section.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-pdp-ingredients-section","lineagePath":"../../patterns/organisms-ingredients-pdp-ingredients-section\\organisms-ingredients-pdp-ingredients-section.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<h2>Markup Structure</h2>\n<p>1.The <code>FooterText</code> variable should be a Rich Text field.</p>\n<h2>ADA</h2>\n<ol>\n<li>The component is ADA-compatible by default, no changes needed.</li>\n</ol>\n<h2>Other Notes</h2>\n<ol>\n<li>For reference on the use, check the molecule ingredient-card.</li>\n</ol>\n","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredient Glossary","patternPartial":"organisms-ingredient-glossary","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-ingredient-philosophy" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredient-philosophy\organisms-ingredients-ingredient-philosophy.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredient-philosophy" title="Link to Pattern">
+						Ingredient Philosophy
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredient-philosophy" data-patternpartial="organisms-ingredient-philosophy" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredient-philosophy">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-ingred-philosophy
+	script-id="IngredientPhilosophy">	
+</o-ingred-philosophy>
+
+<script type="application/json" id="IngredientPhilosophy">
+    {"Data":{"Title":"Our <span class=\"uppercase font-bold\">Smarter Choice</span> Philosophy","BgColor":"#002E1C","Columns":[{"Heading":"Safe","SubHeading":"We only use the safest, most dependable ingredients available.","Image":{"Url":"https://placehold.it/770x390","Alt":"Image description"},"RTE":"<div class=\"m-rte\"><div class=\"mx-auto w-full\" style=\"max-width:870px\"><h3 class=\"block leading-tight text-gray-150 text-xl w-full\">Naturally safe ingredients are our priority. The best naturally <span class=\"lg:block lg:mb-0\">derived and plant-derived ingredients may cost a little more, but </span><span class=\"lg:block lg:mb-0\">we take pride in investing in what matters most.</span></h3><ul class=\"mt-40 lg:flex lg:justify-between\"><li class=\"list-none my-20 pt-20 lg:even:px-30 lg:w-1_3 lg:my-0\"> <span role=\"text\" class=\"block border-t border-gray-150 pt-20 w-full\"><p class=\"leading-tight text-gray-150 text-sm w-full\"><span class=\"font-bold uppercase\">Fragrance</span> A properly selected, safe fragrance brings a sense of clean to bathrooms and laundry and a sense of enjoyment to lotions and shampoos. We only select high-quality essential and fragrance oils that are guaranteed to meet our Safe Scent® standard, and meet the International Fragrance Association (IFRA) standards that protect against levels of irritation and sensitivity and must be free from contaminants. They undergo stringent testing for purity, quality, and all leave-on products undergo third-party sensitivity testing with a certified dermatologist. If it’s not safe, we won’t use it.</p> </span></li><li class=\"list-none my-20 pt-20 lg:even:px-30 lg:w-1_3 lg:my-0\"> <span role=\"text\" class=\"block border-t border-gray-150 pt-20 w-full\"><p class=\"leading-tight text-gray-150 text-sm w-full\"><span class=\"font-bold uppercase\">Colorants</span> Color makes life better, enhances emotional mood, and makes our world more appealing. Color and safety go hand-in-hand. We use only safe colorants that are non-toxic and won’t accumulate in the environment. We select colors with the highest safety profiles for our home and personal care products. All are batch certified, have been thoroughly tested to be free of impurities and contaminants, and are Food, Drug & Cosmetic (FD&C) certified by the US Food & Drug Administration (FDA).</p> </span></li><li class=\"list-none my-20 pt-20 lg:w-1_3 lg:my-0\"> <span role=\"text\" class=\"block border-t border-gray-150 pt-20 w-full\"><p class=\"leading-tight text-gray-150 text-sm w-full\"><span class=\"font-bold uppercase\">Preservatives</span> Without proper preservatives, many natural products degrade quickly and can easily become home to mold and bacteria. The solution to keeping natural products fresh and safe is to add proven, safe, and effective preservatives. As of today, there are no effective plant-derived preservatives. If one were available, we would use it. In the meantime, we select the safest, most effective preservatives that allow us to use the tiniest amounts possible. We never use cheaper preservatives known to cause health issues such as formaldehyde or parabens.</p> </span></li></ul></div></div>","ExpandAction":"More","CollapseAction":"Less","ButtonAriaLabel":"Learn {0} about {1}"},{"Heading":"Effective Effective Effective Effective","SubHeading":"We all want, expect, and need products that work as they should.","Image":{"Url":"https://placehold.it/770x390","Alt":"Image description"},"RTE":"<div class=\"m-rte\"><div class=\"mx-auto w-full\" style=\"max-width:970px\"><h3 class=\"block leading-tight text-gray-150 text-xl w-full\" style=\"max-width:570px\">Proof matters. We rigorously test our formulas to prove they work and work better than other brands. Here’s one example:</h3><div class=\"mt-40 lg:flex\"><div class=\"border-t border-gray-150 pt-20 md:pr-30\"><p class=\"leading-tight text-gray-150 text-sm w-full\"><span class=\"font-bold uppercase\">Laundry Detergent</span> These fabric swatches are stained with starch-based food soils that are nearly impossible to remove. Each fabric swatch is washed one complete washing machine cycle in cold water. The results are dramatic when compared to other “green” detergents. Only MelaPower 9x® is able to remove the starch stains</p></div> <img src=\"//cdnsc1.melaleuca.com/na/images/product-store/melapower-stains-desktop.png\" alt=\"Melapower Stains\" class=\"hidden ml-30 md:block md:mt-20 lg:mt-0\"> <img src=\"//cdnsc1.melaleuca.com/na/images/product-store/melapower-stains-mobile.png\" alt=\"Melapower Stains\" class=\"mt-40 md:hidden\"></div></div></div>","ExpandAction":"More","CollapseAction":"Less","ButtonAriaLabel":"Learn {0} about {1}"},{"Heading":"Eco-Friendly Eco-Friendly","SubHeading":"Making a difference with concentrated products that reduce waste. Making a difference with concentrated products that reduce waste. Making a difference with concentrated products that reduce waste.","Image":{"Url":"https://placehold.it/770x390","Alt":"Image description"},"RTE":"<div class=\"m-rte\"><div class=\"mx-auto w-full\" style=\"max-width:930px\"><h3 class=\"block leading-tight text-gray-150 text-xl w-full\">When we say “eco-friendly” we are referring to the difference we <span class=\"lg:block lg:mb-0\">make reducing waste with highly concentrated products. It’s a</span><span class=\"lg:block lg:mb-0\"> way we can make an impact that really matters.</span></h3><div class=\"mt-40 lg:flex\"><div class=\"border-t border-gray-150 pt-20 md:pr-30 lg:w-250\"><p class=\"leading-tight text-gray-150 text-sm w-full\"><span class=\"font-bold uppercase\">a concentrated effort</span> By concentrating products, we reduce the size of everything in the supply chain. Less storage, fewer storage tanks, smaller warehouses, a smaller footprint, fewer trucks, fewer trips, less cardboard used in shipping boxes, less fuel, dramatically less greenhouse emissions, and, most of all, less virgin plastic is used in the first place.</p></div><div class=\"flex flex-col items-center justify-center mt-30 w-full lg:justify-between lg:ml-50 lg:mt-0 lg:w-auto\"><h3 class=\"leading-tight mb-40 text-gray-150 text-center text-xl md:mb-0\" role=\"text\">By switching to concentrated products, <span class=\"font-bold uppercase md:block\">MELALEUCA CUSTOMERS HAVE SAVED</span></h3><ul class=\"flex flex-col items-center w-full md:flex md:flex-row md:justify-between md:mt-15\"><li class=\"flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\"> <img src=\"//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-bottle.png\" alt=\"\"><p class=\"font-medium leading-tight text-center text-gray-150 text-sm\">260 million pounds <span class=\"block\">of plastic</span></p></li><li class=\"flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\"> <img src=\"//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-gas-pump.png\" alt=\"\"><p class=\"font-medium leading-tight text-center text-gray-150 text-sm\">45 million gallons <span class=\"block\">of fuel</span></p></li><li class=\"flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\"> <img src=\"//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-truck.png\" alt=\"\"><p class=\"font-medium leading-tight text-center text-gray-150 text-sm\">1. 4 billion pounds <span class=\"block\">of harmful gas emissions</span></p></li></ul></div></div></div></div>","ExpandAction":"More","CollapseAction":"Less","ButtonAriaLabel":"Learn {0} about {1}"},{"Heading":"Affordable","SubHeading":"We not only save plastic and the environment, we save you money.","Image":{"Url":"https://placehold.it/770x390","Alt":"Image description"},"RTE":"<div class=\"m-rte\"><div class=\"mx-auto w-full\" style=\"max-width:930px\"><h3 class=\"block leading-tight text-gray-150 text-xl w-full\">Concentrated is a better value.</h3><div class=\"mt-40 lg:flex\"><div class=\"border-t border-gray-150 pt-20 w-full lg:max-w-260\"><p class=\"leading-tight text-gray-120 text-sm w-full\">We take out unnecessary fillers (mostly water), leaving nothing that doesn’t absolutely need to be in our products. The end result? You save time, money, extra plastic, and the energy needed to ship all that water.</p></div><div class=\"flex flex-col items-center justify-center mt-30 w-full md:justify-between md:ml-50 lg:mt-0\" style=\"max-width: 595px;\"><table class=\"max-w-full mb-20 text-center w-full md:mx-auto md:w-auto\" aria-describedby=\"melapowerComparisonChartSummary\" cellspacing=\"0\" style=\"border-spacing: 0;border-collapse: separate;\"><caption class=\"sr-only\">MelaPower Comparison Chart</caption><thead><tr><th class=\"sr-only\"></th><th class=\"font-medium pb-15 text-sm\" scope=\"col\" style=\"color:#002883;\"> <img class=\"mx-auto\" src=\"//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/melapower-bottle--2x.png\" alt=\"Melapower\" /> Melapower</th><th class=\"font-medium pb-15 text-sm\" scope=\"col\" style=\"color:#002883;\"> <img class=\"mx-auto\" src=\"//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/tide-bottle--2x.png\" alt=\"Tide&reg;\" /> Tide&reg;</th><th class=\"font-medium pb-15 text-sm\" scope=\"col\" style=\"color:#002883;\"> <img class=\"mx-auto\" src=\"//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/method-bottle--2x.png\" alt=\"Method&reg;\" /> Method&reg;</th><th class=\"font-medium pb-15 text-sm\" scope=\"col\" style=\"color:#002883;\"> <img class=\"mx-auto\" src=\"//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/grove-bottle--2x.png\" alt=\"Grove&reg;\" /> Grove&reg;</th></tr></thead><tbody><tr class=\"mb-0\"><th class=\"sr-only\" scope=\"row\">Price Per Load</th><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\"> <span class=\"font-bold italic text-2xl\" style=\"color:#0DBBF0;\">18&cent;</span><br />per load</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\"> <span class=\"font-bold italic text-2xl\" style=\"color:#0DBBF0;\">43&cent;</span><br />per load</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\"> <span class=\"font-bold italic text-2xl\" style=\"color:#0DBBF0;\">36&cent;</span><br />per load</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\"> <span class=\"font-bold italic text-2xl\" style=\"color:#0DBBF0;\">30&cent;</span><br />per load</div></td></tr><tr class=\"mb-0\"><th class=\"sr-only\" scope=\"row\">Total Loads</th><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">96 loads</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">16 loads</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">50 loads</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">33 loads</div></td></tr><tr class=\"mb-0\"><th class=\"sr-only\" scope=\"row\">Total Price</th><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">$17.49</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">$6.99</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">$17.99</div></td><td class=\"italic leading-base mb-0 p-0 relative text-sm\" style=\"color:#777777;\"><div class=\"border mb-0 mx-5 px-10 py-15 sm:mx-15\" style=\"border-color:#707070;\">$9.99</div></td></tr></tbody></table><p id=\"melapowerComparisonChartSummary\" class=\"italic text-center text-gray-120 text-xs md:font-light md:text-sm md:not-italic\">* Product names are registered trademarks of their respective<br class=\"hidden sm:block\" /> owners. As compared to prices from walgreens.com, March 8, 2019.</p></div></div></div></div>","ExpandAction":"More","CollapseAction":"Less","ButtonAriaLabel":"Learn {0} about {1}"}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredient-philosophy" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>General</h2>\n<p>Ingredient Philosophy component. This is a Vue component width 1 - 4 columns.</p>\n<h2>Data</h2>\n<p>This component uses the data-driven standard to receive the data. This is the expected data object:</p>\n<pre><code class=\"language-json\">{\n    &quot;Data&quot;: {\n        &quot;Title&quot;: &quot;Our &lt;span class=\\&quot;uppercase font-bold\\&quot;&gt;Smarter Choice&lt;/span&gt; Philosophy&quot;,\n        &quot;BgColor&quot;: &quot;#002E1C&quot;,\n        &quot;Columns&quot;: [\n            {\n                &quot;Heading&quot;: &quot;Safe&quot;,\n                &quot;SubHeading&quot;: &quot;We only use the safest, most dependable ingredients available.&quot;,\n                &quot;Image&quot;: {\n                    &quot;Url&quot;: &quot;https://placehold.it/770x390&quot;,\n                    &quot;Alt&quot;: &quot;Image description&quot;\n                },\n                &quot;RTE&quot;: &quot;&lt;div class=\\&quot;m-rte\\&quot;&gt;&lt;div class=\\&quot;mx-auto w-full\\&quot; style=\\&quot;max-width:870px\\&quot;&gt;&lt;h3 class=\\&quot;block leading-tight text-gray-150 text-xl w-full\\&quot;&gt;Naturally safe ingredients are our priority. The best naturally &lt;span class=\\&quot;lg:block lg:mb-0\\&quot;&gt;derived and plant-derived ingredients may cost a little more, but &lt;/span&gt;&lt;span class=\\&quot;lg:block lg:mb-0\\&quot;&gt;we take pride in investing in what matters most.&lt;/span&gt;&lt;/h3&gt;&lt;ul class=\\&quot;mt-40 lg:flex lg:justify-between\\&quot;&gt;&lt;li class=\\&quot;list-none my-20 pt-20 lg:even:px-30 lg:w-1_3 lg:my-0\\&quot;&gt; &lt;span role=\\&quot;text\\&quot; class=\\&quot;block border-t border-gray-150 pt-20 w-full\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-150 text-sm w-full\\&quot;&gt;&lt;span class=\\&quot;font-bold uppercase\\&quot;&gt;Fragrance&lt;/span&gt; A properly selected, safe fragrance brings a sense of clean to bathrooms and laundry and a sense of enjoyment to lotions and shampoos. We only select high-quality essential and fragrance oils that are guaranteed to meet our Safe Scent® standard, and meet the International Fragrance Association (IFRA) standards that protect against levels of irritation and sensitivity and must be free from contaminants. They undergo stringent testing for purity, quality, and all leave-on products undergo third-party sensitivity testing with a certified dermatologist. If it’s not safe, we won’t use it.&lt;/p&gt; &lt;/span&gt;&lt;/li&gt;&lt;li class=\\&quot;list-none my-20 pt-20 lg:even:px-30 lg:w-1_3 lg:my-0\\&quot;&gt; &lt;span role=\\&quot;text\\&quot; class=\\&quot;block border-t border-gray-150 pt-20 w-full\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-150 text-sm w-full\\&quot;&gt;&lt;span class=\\&quot;font-bold uppercase\\&quot;&gt;Colorants&lt;/span&gt; Color makes life better, enhances emotional mood, and makes our world more appealing. Color and safety go hand-in-hand. We use only safe colorants that are non-toxic and won’t accumulate in the environment. We select colors with the highest safety profiles for our home and personal care products. All are batch certified, have been thoroughly tested to be free of impurities and contaminants, and are Food, Drug &amp; Cosmetic (FD&amp;C) certified by the US Food &amp; Drug Administration (FDA).&lt;/p&gt; &lt;/span&gt;&lt;/li&gt;&lt;li class=\\&quot;list-none my-20 pt-20 lg:w-1_3 lg:my-0\\&quot;&gt; &lt;span role=\\&quot;text\\&quot; class=\\&quot;block border-t border-gray-150 pt-20 w-full\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-150 text-sm w-full\\&quot;&gt;&lt;span class=\\&quot;font-bold uppercase\\&quot;&gt;Preservatives&lt;/span&gt; Without proper preservatives, many natural products degrade quickly and can easily become home to mold and bacteria. The solution to keeping natural products fresh and safe is to add proven, safe, and effective preservatives. As of today, there are no effective plant-derived preservatives. If one were available, we would use it. In the meantime, we select the safest, most effective preservatives that allow us to use the tiniest amounts possible. We never use cheaper preservatives known to cause health issues such as formaldehyde or parabens.&lt;/p&gt; &lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&quot;,\n                &quot;ExpandAction&quot;: &quot;More&quot;,\n                &quot;CollapseAction&quot;: &quot;Less&quot;\n            },\n            {\n                &quot;Heading&quot;: &quot;Effective Effective Effective Effective&quot;,\n                &quot;SubHeading&quot;: &quot;We all want, expect, and need products that work as they should.&quot;,\n                &quot;Image&quot;: {\n                    &quot;Url&quot;: &quot;https://placehold.it/770x390&quot;,\n                    &quot;Alt&quot;: &quot;Image description&quot;\n                },\n                &quot;RTE&quot;: &quot;&lt;div class=\\&quot;m-rte\\&quot;&gt;&lt;div class=\\&quot;mx-auto w-full\\&quot; style=\\&quot;max-width:970px\\&quot;&gt;&lt;h3 class=\\&quot;block leading-tight text-gray-150 text-xl w-full\\&quot; style=\\&quot;max-width:570px\\&quot;&gt;Proof matters. We rigorously test our formulas to prove they work and work better than other brands. Here’s one example:&lt;/h3&gt;&lt;div class=\\&quot;mt-40 lg:flex\\&quot;&gt;&lt;div class=\\&quot;border-t border-gray-150 pt-20 md:pr-30\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-150 text-sm w-full\\&quot;&gt;&lt;span class=\\&quot;font-bold uppercase\\&quot;&gt;Laundry Detergent&lt;/span&gt; These fabric swatches are stained with starch-based food soils that are nearly impossible to remove. Each fabric swatch is washed one complete washing machine cycle in cold water. The results are dramatic when compared to other “green” detergents. Only MelaPower 9x® is able to remove the starch stains&lt;/p&gt;&lt;/div&gt; &lt;img src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-store/melapower-stains-desktop.png\\&quot; alt=\\&quot;Melapower Stains\\&quot; class=\\&quot;hidden ml-30 md:block md:mt-20 lg:mt-0\\&quot;&gt; &lt;img src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-store/melapower-stains-mobile.png\\&quot; alt=\\&quot;Melapower Stains\\&quot; class=\\&quot;mt-40 md:hidden\\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;,\n                &quot;ExpandAction&quot;: &quot;More&quot;,\n                &quot;CollapseAction&quot;: &quot;Less&quot;\n            },\n            {\n                &quot;Heading&quot;: &quot;Eco-Friendly Eco-Friendly&quot;,\n                &quot;SubHeading&quot;: &quot;Making a difference with concentrated products that reduce waste. Making a difference with concentrated products that reduce waste. Making a difference with concentrated products that reduce waste.&quot;,\n                &quot;Image&quot;: {\n                    &quot;Url&quot;: &quot;https://placehold.it/770x390&quot;,\n                    &quot;Alt&quot;: &quot;Image description&quot;\n                },\n                &quot;RTE&quot;: &quot;&lt;div class=\\&quot;m-rte\\&quot;&gt;&lt;div class=\\&quot;mx-auto w-full\\&quot; style=\\&quot;max-width:930px\\&quot;&gt;&lt;h3 class=\\&quot;block leading-tight text-gray-150 text-xl w-full\\&quot;&gt;When we say “eco-friendly” we are referring to the difference we &lt;span class=\\&quot;lg:block lg:mb-0\\&quot;&gt;make reducing waste with highly concentrated products. It’s a&lt;/span&gt;&lt;span class=\\&quot;lg:block lg:mb-0\\&quot;&gt; way we can make an impact that really matters.&lt;/span&gt;&lt;/h3&gt;&lt;div class=\\&quot;mt-40 lg:flex\\&quot;&gt;&lt;div class=\\&quot;border-t border-gray-150 pt-20 md:pr-30 lg:w-250\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-150 text-sm w-full\\&quot;&gt;&lt;span class=\\&quot;font-bold uppercase\\&quot;&gt;a concentrated effort&lt;/span&gt; By concentrating products, we reduce the size of everything in the supply chain. Less storage, fewer storage tanks, smaller warehouses, a smaller footprint, fewer trucks, fewer trips, less cardboard used in shipping boxes, less fuel, dramatically less greenhouse emissions, and, most of all, less virgin plastic is used in the first place.&lt;/p&gt;&lt;/div&gt;&lt;div class=\\&quot;flex flex-col items-center justify-center mt-30 w-full lg:justify-between lg:ml-50 lg:mt-0 lg:w-auto\\&quot;&gt;&lt;h3 class=\\&quot;leading-tight mb-40 text-gray-150 text-center text-xl md:mb-0\\&quot; role=\\&quot;text\\&quot;&gt;By switching to concentrated products, &lt;span class=\\&quot;font-bold uppercase md:block\\&quot;&gt;MELALEUCA CUSTOMERS HAVE SAVED&lt;/span&gt;&lt;/h3&gt;&lt;ul class=\\&quot;flex flex-col items-center w-full md:flex md:flex-row md:justify-between md:mt-15\\&quot;&gt;&lt;li class=\\&quot;flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\\&quot;&gt; &lt;img src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-bottle.png\\&quot; alt=\\&quot;\\&quot;&gt;&lt;p class=\\&quot;font-medium leading-tight text-center text-gray-150 text-sm\\&quot;&gt;260 million pounds &lt;span class=\\&quot;block\\&quot;&gt;of plastic&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class=\\&quot;flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\\&quot;&gt; &lt;img src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-gas-pump.png\\&quot; alt=\\&quot;\\&quot;&gt;&lt;p class=\\&quot;font-medium leading-tight text-center text-gray-150 text-sm\\&quot;&gt;45 million gallons &lt;span class=\\&quot;block\\&quot;&gt;of fuel&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class=\\&quot;flex flex-col items-center my-15 md:my-0 lg:mr-50 last:mr-0\\&quot;&gt; &lt;img src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-store/eco-friendly-truck.png\\&quot; alt=\\&quot;\\&quot;&gt;&lt;p class=\\&quot;font-medium leading-tight text-center text-gray-150 text-sm\\&quot;&gt;1. 4 billion pounds &lt;span class=\\&quot;block\\&quot;&gt;of harmful gas emissions&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;,\n                &quot;ExpandAction&quot;: &quot;More&quot;,\n                &quot;CollapseAction&quot;: &quot;Less&quot;\n            },\n            {\n                &quot;Heading&quot;: &quot;Affordable&quot;,\n                &quot;SubHeading&quot;: &quot;We not only save plastic and the environment, we save you money.&quot;,\n                &quot;Image&quot;: {\n                    &quot;Url&quot;: &quot;https://placehold.it/770x390&quot;,\n                    &quot;Alt&quot;: &quot;Image description&quot;\n                },\n                &quot;RTE&quot;: &quot;&lt;div class=\\&quot;m-rte\\&quot;&gt;&lt;div class=\\&quot;mx-auto w-full\\&quot; style=\\&quot;max-width:930px\\&quot;&gt;&lt;h3 class=\\&quot;block leading-tight text-gray-150 text-xl w-full\\&quot;&gt;Concentrated is a better value.&lt;/h3&gt;&lt;div class=\\&quot;mt-40 lg:flex\\&quot;&gt;&lt;div class=\\&quot;border-t border-gray-150 pt-20 w-full lg:max-w-260\\&quot;&gt;&lt;p class=\\&quot;leading-tight text-gray-120 text-sm w-full\\&quot;&gt;We take out unnecessary fillers (mostly water), leaving nothing that doesn’t absolutely need to be in our products. The end result? You save time, money, extra plastic, and the energy needed to ship all that water.&lt;/p&gt;&lt;/div&gt;&lt;div class=\\&quot;flex flex-col items-center justify-center mt-30 w-full md:justify-between md:ml-50 lg:mt-0\\&quot; style=\\&quot;max-width: 595px;\\&quot;&gt;&lt;table class=\\&quot;max-w-full mb-20 text-center w-full md:mx-auto md:w-auto\\&quot; aria-describedby=\\&quot;melapowerComparisonChartSummary\\&quot; cellspacing=\\&quot;0\\&quot; style=\\&quot;border-spacing: 0;border-collapse: separate;\\&quot;&gt;&lt;caption class=\\&quot;sr-only\\&quot;&gt;MelaPower Comparison Chart&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=\\&quot;sr-only\\&quot;&gt;&lt;/th&gt;&lt;th class=\\&quot;font-medium pb-15 text-sm\\&quot; scope=\\&quot;col\\&quot; style=\\&quot;color:#002883;\\&quot;&gt; &lt;img class=\\&quot;mx-auto\\&quot; src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/melapower-bottle--2x.png\\&quot; alt=\\&quot;Melapower\\&quot; /&gt; Melapower&lt;/th&gt;&lt;th class=\\&quot;font-medium pb-15 text-sm\\&quot; scope=\\&quot;col\\&quot; style=\\&quot;color:#002883;\\&quot;&gt; &lt;img class=\\&quot;mx-auto\\&quot; src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/tide-bottle--2x.png\\&quot; alt=\\&quot;Tide&amp;reg;\\&quot; /&gt; Tide&amp;reg;&lt;/th&gt;&lt;th class=\\&quot;font-medium pb-15 text-sm\\&quot; scope=\\&quot;col\\&quot; style=\\&quot;color:#002883;\\&quot;&gt; &lt;img class=\\&quot;mx-auto\\&quot; src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/method-bottle--2x.png\\&quot; alt=\\&quot;Method&amp;reg;\\&quot; /&gt; Method&amp;reg;&lt;/th&gt;&lt;th class=\\&quot;font-medium pb-15 text-sm\\&quot; scope=\\&quot;col\\&quot; style=\\&quot;color:#002883;\\&quot;&gt; &lt;img class=\\&quot;mx-auto\\&quot; src=\\&quot;//cdnsc1.melaleuca.com/na/images/product-detail-pages/melapower/grove-bottle--2x.png\\&quot; alt=\\&quot;Grove&amp;reg;\\&quot; /&gt; Grove&amp;reg;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr class=\\&quot;mb-0\\&quot;&gt;&lt;th class=\\&quot;sr-only\\&quot; scope=\\&quot;row\\&quot;&gt;Price Per Load&lt;/th&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt; &lt;span class=\\&quot;font-bold italic text-2xl\\&quot; style=\\&quot;color:#0DBBF0;\\&quot;&gt;18&amp;cent;&lt;/span&gt;&lt;br /&gt;per load&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt; &lt;span class=\\&quot;font-bold italic text-2xl\\&quot; style=\\&quot;color:#0DBBF0;\\&quot;&gt;43&amp;cent;&lt;/span&gt;&lt;br /&gt;per load&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt; &lt;span class=\\&quot;font-bold italic text-2xl\\&quot; style=\\&quot;color:#0DBBF0;\\&quot;&gt;36&amp;cent;&lt;/span&gt;&lt;br /&gt;per load&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt; &lt;span class=\\&quot;font-bold italic text-2xl\\&quot; style=\\&quot;color:#0DBBF0;\\&quot;&gt;30&amp;cent;&lt;/span&gt;&lt;br /&gt;per load&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=\\&quot;mb-0\\&quot;&gt;&lt;th class=\\&quot;sr-only\\&quot; scope=\\&quot;row\\&quot;&gt;Total Loads&lt;/th&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;96 loads&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;16 loads&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;50 loads&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;33 loads&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=\\&quot;mb-0\\&quot;&gt;&lt;th class=\\&quot;sr-only\\&quot; scope=\\&quot;row\\&quot;&gt;Total Price&lt;/th&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;$17.49&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;$6.99&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;$17.99&lt;/div&gt;&lt;/td&gt;&lt;td class=\\&quot;italic leading-base mb-0 p-0 relative text-sm\\&quot; style=\\&quot;color:#777777;\\&quot;&gt;&lt;div class=\\&quot;border mb-0 mx-5 px-10 py-15 sm:mx-15\\&quot; style=\\&quot;border-color:#707070;\\&quot;&gt;$9.99&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p id=\\&quot;melapowerComparisonChartSummary\\&quot; class=\\&quot;italic text-center text-gray-120 text-xs md:font-light md:text-sm md:not-italic\\&quot;&gt;* Product names are registered trademarks of their respective&lt;br class=\\&quot;hidden sm:block\\&quot; /&gt; owners. As compared to prices from walgreens.com, March 8, 2019.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;,\n                &quot;ExpandAction&quot;: &quot;More&quot;,\n                &quot;CollapseAction&quot;: &quot;Less&quot;\n            }\n        ]\n    }\n}\n</code></pre>\n","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredient Philosophy","patternPartial":"organisms-ingredient-philosophy","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-ingredient-philosophy-accordion" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredient-philosophy-accordion\organisms-ingredients-ingredient-philosophy-accordion.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredient-philosophy-accordion" title="Link to Pattern">
+						Ingredient Philosophy Accordion
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredient-philosophy-accordion" data-patternpartial="organisms-ingredient-philosophy-accordion" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredient-philosophy-accordion">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-ingredient-philosophy-accordion script-id="ingredientPhilosophyAccordionLocalization"></o-ingredient-philosophy-accordion>
+
+<script type="application/json" id="ingredientPhilosophyAccordionLocalization">
+    {"Labels":{"MoreInformation":"More Information","ShowingResults":"Showing {0} results"},"Data":{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":"biodegradable or already exists in its final natural state"}],"Tabs":[{"AdditionalProductInformationLink":{"Target":"_blank","Text":"Additional Product Information","Url":"#"},"Title":"Clean & Gleam™ 12x Floor Cleaner","Ingredients":[{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Aqua","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Solvent </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span>7732-18-5 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Cocoeth-9","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Plant Derived Cleaner </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 68551-12-2 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Propylene Glycol Propyl Ether","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Plant Derived Surfactant, Promots Foaming Action </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 1569-01-3 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Glycolic Acid","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Removes Hard Water and Soap Scum </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 79-14-1 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Citric Acid","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Removes Hard Water and Soap Scum </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 77-92-9 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Benzyle Alcohol","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'> <span class='text-green-150 font-bold uppercase'> Details: </span> Plant Derived Preservative</p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'> <span class='text-green-150 font-bold uppercase'> CAS#: </span> 100-51-6</p><div class='flex text-sm text-gray-150 leading-tight mb-15 md:mb-20'> <p class='text-green-150 font-bold uppercase mr-5'> Designated Lists: </p><ul> <li class='inline'> <a href='#' target='_blank' class='text-green underline'>7</a><span aria-hidden='true'>,</span> </li><li class='inline'> <a href='#' target='_blank' class='text-green underline'>23</a> </li></ul></div>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Fragrance","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Fragrance </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> Not Available </p><div class='flex text-sm text-gray-150 leading-tight mb-15 md:mb-20'><p class='text-green-150 font-bold uppercase mr-5'> Designated Lists: </p><ul><li class='inline'><a href='#' target='_blank' class='text-green underline'>23</a></li></ul></div>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Cationic Hydrophilic Copolymer","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Scatters Droplets and Prevents Hard Water Spots </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 53694-17-0 </p>"},{"Icons":[{"Url":"-/media/feature/productstore/ingredients/leaf-icon.jpg","AltText":"","Definition":null}],"Title":"Trisodium Dicarboxymethyl Alaninate","RTE":"<p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> Details: </span> Removes Hard Water and Soap Scum </p><p class='text-sm text-gray-150 leading-tight mb-15 md:mb-20'><span class='text-green-150 font-bold uppercase'> CAS#: </span> 164462-16-2 </p>"}],"SafetyDataSheetLink":{"Target":"_blank","Text":"View Safety Data Sheet","Url":"#"},"SafetyDataSheetLinkVisible":false},{"AdditionalProductInformationLink":{"Target":"_blank","Text":"Additional Product Information","Url":"#"},"Title":"Clean & Gleam™ Floor Polish","Ingredients":[],"SafetyDataSheetLink":{"Target":"_blank","Text":"View Safety Data Sheet","Url":"#"},"SafetyDataSheetLinkVisible":true},{"AdditionalProductInformationLink":{"Target":"_blank","Text":"Additional Product Information","Url":"#"},"Title":"Clear Power® Glass Cleaner","Ingredients":[],"SafetyDataSheetLink":{"Target":"_blank","Text":"View Safety Data Sheet","Url":"#"},"SafetyDataSheetLinkVisible":true},{"AdditionalProductInformationLink":{"Target":"_blank","Text":"Additional Product Information","Url":"#"},"Title":"Tub & Tile™ 12x Bathroom Cleaner","Ingredients":[],"SafetyDataSheetLink":{"Target":"_blank","Text":"View Safety Data Sheet","Url":"#"},"SafetyDataSheetLinkVisible":true}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredient-philosophy-accordion" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredient Philosophy Accordion","patternPartial":"organisms-ingredient-philosophy-accordion","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-ingredients-glossary-tabs" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredients-glossary-tabs\organisms-ingredients-ingredients-glossary-tabs.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredients-glossary-tabs" title="Link to Pattern">
+						Ingredients Glossary Tabs
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredients-glossary-tabs" data-patternpartial="organisms-ingredients-glossary-tabs" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredients-glossary-tabs">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-ingred-gloss-tabs
+    script-id="IngredientsGlossaryTabs">
+</o-ingred-gloss-tabs>
+
+<script type="application/json" id="IngredientsGlossaryTabs">
+    {"Labels":{"Legend":"biodegradable or already exists in its final natural state","ShowingResults":"Showing {0} results"},"Data":{"Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"},{"Url":"/images/icons/health-icon.jpg","AltText":"Some Alt text 2","Definition":"Health icon test"}],"Tabs":[{"Title":"Home Care","Ingredients":[{"Title":"Amylase","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable natural enzyme</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Nature’s powerhouse, these tiny enzymes naturally target specific types of food (starch) to tackle the toughest stains but won’t damage clothing fibers like harsh chemicals. We choose enzymes because they are very effective and reduce the reliance on surfactants.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}]},{"Title":"C10-16 alkyl glycosides","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Derived from coconut and palm, this biodegradable ingredient is proven to be effective in removing uncommon dirt and grime from common household surfaces.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Aqua","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Purified water</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally occurring</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>We only use the highest quality water that is free of toxins, pollutants, and microbes.</p>","Icons":""},{"Title":"Calcium chloride","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Calcium salt</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Mineral</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Natural salt keeps the product free flowing and easy to use.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}]},{"Title":"Cellulase","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Naturally derived</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Mineral</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Natural enzyme provides a safer solution than harsh alkaline chemicals and reduces the amount of surfactants necessary to keep your clothes from fraying and becoming dull and dingy.</p>","Icons":null},{"Title":"Cetyl phosphate, hydrogenated palm glycerides","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable conditioning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This biodegradable ingredient was chosen because it is gentle on the environment and is naturally derived from sustainable palm.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Citric acid","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable pH adjuster</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally occurring</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This diverse and effective ingredient helps power through hard water stains, keeps enzymes active, and so much more. We use this ingredient instead of sulfuric acid, and it has a significantly better safety profile than harsh chemicals like chlorine bleach or ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cocoeth-5","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Plant derived from coconut and biodegradable, this is a highly effective alternative to using alkaline cleaning agents like chlorine bleach and ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cocoeth-7","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This highly effective dirt and stain buster is plant derived from coconut, biodegradable, and a great alternative to using alkaline cleaning agents like chlorine bleach and ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cocoeth-9","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Colorants","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Zzzzzz","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}]},{"Title":"Pppppp","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Mmmmmm","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]}]},{"Title":"Personal Care","Ingredients":[{"Title":"Bbbbbbbb","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Vvvvvv","RTE":"asdasd","Icons":""},{"Title":"C10-16 alkyl glycosides","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Dddddd","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Calcium chloride","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cellulase","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cetyl phosphate, hydrogenated palm glycerides","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Citric acid","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Cocoeth-5","RTE":"asdasd","Icons":""},{"Title":"Cocoeth-7","RTE":"asdasd","Icons":""},{"Title":"Cocoeth-9","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Colorants","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Wwwwww","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Ttttttt","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}]},{"Title":"Nnnnnn","RTE":"asdasd","Icons":""}]}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredients-glossary-tabs" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>General</h2>\n<p>Ingredients Glossary Tabs component. This is a Vue component.</p>\n<h2>Data exchange</h2>\n<h3>Labels</h3>\n<p>This component uses the data-driven standard to receive the labels. This is the expected labels object:</p>\n<pre><code class=\"language-json\">{\n    &quot;Labels&quot;: {\n        &quot;Legend&quot;: &quot;biodegradable or already exists in its final natural state&quot;,\n        &quot;ShowingResults&quot;: &quot;Showing {0} results&quot;\n    }\n}\n</code></pre>\n<h3>Data</h3>\n<p>This component uses the data-driven standard to receive the data. This is the expected data object:</p>\n<pre><code class=\"language-json\">{\n    &quot;Data&quot;: {\n        &quot;Tabs&quot;: [\n            {\n                &quot;Title&quot;: &quot;Home Care&quot;,\n                &quot;Ingredients&quot;: [\n                    {\n                        &quot;Title&quot;: &quot;Amylase&quot;,\n                        &quot;RTE&quot;: &quot;&lt;p class=\\&quot;text-gray-150 text-sm italic pb-10\\&quot;&gt;Biodegradable natural enzyme&lt;/p&gt;&lt;p class=\\&quot;text-gray-150 text-sm pb-10\\&quot;&gt;&lt;span class=\\&quot;text-green-150 font-bold uppercase\\&quot;&gt;Source: &lt;/span&gt;Naturally derived&lt;/p&gt;&lt;p class=\\&quot;text-gray-150 text-sm\\&quot;&gt;&lt;span class=\\&quot;text-green-150 font-bold uppercase\\&quot;&gt;Why we choose it: &lt;/span&gt;Nature’s powerhouse, these tiny enzymes naturally target specific types of food (starch) to tackle the toughest stains but won’t damage clothing fibers like harsh chemicals. We choose enzymes because they are very effective and reduce the reliance on surfactants.&lt;/p&gt;&quot;,\n                        &quot;Icons&quot;: [\n                            {\n                                &quot;Url&quot;: &quot;/images/icons/leaf-icon.jpg&quot;,\n                                &quot;AltText&quot;: &quot;image of leaf&quot;,\n                                &quot;Definition&quot;: &quot;biodegradable or already exists in its final natural state&quot;\n                            },\n                            {\n                                &quot;Url&quot;: &quot;/images/icons/mdouble-icon.jpg&quot;,\n                                &quot;AltText&quot;: &quot;Some Alt text 2&quot;,\n                                &quot;Definition&quot;: &quot;Mars double&quot;\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                &quot;Title&quot;: &quot;Personal Care&quot;,\n                &quot;Ingredients&quot;: [\n                    {\n                        &quot;Title&quot;: &quot;Bbbbbbbb&quot;,\n                        &quot;RTE&quot;: &quot;asdasd&quot;,\n                        &quot;Icons&quot;: [\n                            {\n                                &quot;Url&quot;: &quot;/images/icons/leaf-icon.jpg&quot;,\n                                &quot;AltText&quot;: &quot;image of leaf&quot;,\n                                &quot;Definition&quot;: &quot;biodegradable or already exists in its final natural state&quot;\n                            }\n                        ]\n                    },\n                    {\n                        &quot;Title&quot;: &quot;Vvvvvv&quot;,\n                        &quot;RTE&quot;: &quot;asdasd&quot;,\n                        &quot;Icons&quot;: &quot;&quot;\n                    },\n                    {\n                        &quot;Title&quot;: &quot;Dddddd&quot;,\n                        &quot;RTE&quot;: &quot;asdasd&quot;,\n                        &quot;Icons&quot;: &quot;&quot;\n                    }\n                ]\n            }\n        ]\n    }\n}\n</code></pre>\n","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredients Glossary Tabs","patternPartial":"organisms-ingredients-glossary-tabs","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-ingredients-glossary-tabs-cn" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-ingredients-glossary-tabs-cn\organisms-ingredients-ingredients-glossary-tabs-cn.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-ingredients-glossary-tabs-cn" title="Link to Pattern">
+						Ingredients Glossary Tabs Cn
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-ingredients-glossary-tabs-cn" data-patternpartial="organisms-ingredients-glossary-tabs-cn" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-ingredients-glossary-tabs-cn">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-ingred-gloss-tabs
+    script-id="IngredientsGlossaryTabs">
+</o-ingred-gloss-tabs>
+
+<script type="application/json" id="IngredientsGlossaryTabs">
+    {"Labels":{"Legend":"biodegradable or already exists in its final natural state","ShowingResults":"Showing {0} results"},"Data":{"Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"},{"Url":"/images/icons/health-icon.jpg","AltText":"Some Alt text 2","Definition":"Health icon test"}],"Tabs":[{"Title":"Home Care","Ingredients":[{"Title":"Amylase","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable natural enzyme</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Nature’s powerhouse, these tiny enzymes naturally target specific types of food (starch) to tackle the toughest stains but won’t damage clothing fibers like harsh chemicals. We choose enzymes because they are very effective and reduce the reliance on surfactants.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}],"Name":"Amylase"},{"Title":"C10-16 alkyl glycosides","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Derived from coconut and palm, this biodegradable ingredient is proven to be effective in removing uncommon dirt and grime from common household surfaces.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"C10-16 alkyl glycosides"},{"Title":"Aqua","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Purified water</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally occurring</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>We only use the highest quality water that is free of toxins, pollutants, and microbes.</p>","Icons":"","Name":"Aqua"},{"Title":"Calcium chloride","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Calcium salt</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Mineral</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Natural salt keeps the product free flowing and easy to use.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}],"Name":"Calcium chloride"},{"Title":"Cellulase","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Naturally derived</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Mineral</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Natural enzyme provides a safer solution than harsh alkaline chemicals and reduces the amount of surfactants necessary to keep your clothes from fraying and becoming dull and dingy.</p>","Icons":null,"Name":"Cellulase"},{"Title":"Cetyl phosphate, hydrogenated palm glycerides","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable conditioning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This biodegradable ingredient was chosen because it is gentle on the environment and is naturally derived from sustainable palm.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cetyl"},{"Title":"Citric acid","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable pH adjuster</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Naturally occurring</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This diverse and effective ingredient helps power through hard water stains, keeps enzymes active, and so much more. We use this ingredient instead of sulfuric acid, and it has a significantly better safety profile than harsh chemicals like chlorine bleach or ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Citric acid"},{"Title":"Cocoeth-5","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>Plant derived from coconut and biodegradable, this is a highly effective alternative to using alkaline cleaning agents like chlorine bleach and ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cocoeth-5"},{"Title":"Cocoeth-7","RTE":"<p class=\"text-gray-150 text-sm italic pb-10\">Biodegradable cleaning agent</p><p class=\"text-gray-150 text-sm pb-10\"><span class=\"text-green-150 font-bold uppercase\">Source: </span>Plant derived</p><p class=\"text-gray-150 text-sm\"><span class=\"text-green-150 font-bold uppercase\">Why we choose it: </span>This highly effective dirt and stain buster is plant derived from coconut, biodegradable, and a great alternative to using alkaline cleaning agents like chlorine bleach and ammonia.</p>","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cocoeth-7"},{"Title":"Cocoeth-9","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cocoeth-9"},{"Title":"Colorants","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Colorants"},{"Title":"Zzzzzz","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"},{"Url":"/images/icons/mdouble-icon.jpg","AltText":"Some Alt text 2","Definition":"Mars double"}],"Name":"Zzzzzz"},{"Title":"Pppppp","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Pppppp"},{"Title":"Mmmmmm","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Mmmmmm"}]},{"Title":"Personal Care","Ingredients":[{"Title":"Bbbbbbbb","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Bbbbbbbb"},{"Title":"Vvvvvv","RTE":"asdasd","Icons":"","Name":"Vvvvvv"},{"Title":"C10-16 alkyl glycosides","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"C10-16"},{"Title":"Dddddd","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Dddddd"},{"Title":"Calcium chloride","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Calcium chloride"},{"Title":"Cellulase","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cellulase"},{"Title":"Cetyl phosphate, hydrogenated palm glycerides","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cetyl phosphate,"},{"Title":"Citric acid","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Citric"},{"Title":"Cocoeth-5","RTE":"asdasd","Icons":"","Name":"Cocoeth-5"},{"Title":"Cocoeth-7","RTE":"asdasd","Icons":"","Name":"Cocoeth-7"},{"Title":"Cocoeth-9","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Cocoeth-9"},{"Title":"Colorants","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Colorants"},{"Title":"Wwwwww","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Wwwwww"},{"Title":"Ttttttt","RTE":"asdasd","Icons":[{"Url":"/images/icons/leaf-icon.jpg","AltText":"image of leaf","Definition":"biodegradable or already exists in its final natural state"}],"Name":"Ttttttt"},{"Title":"Nnnnnn","RTE":"asdasd","Icons":"","Name":"Nnnnnn"}]}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-ingredients-glossary-tabs-cn" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Ingredients Glossary Tabs Cn","patternPartial":"organisms-ingredients-glossary-tabs-cn","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-pdp-ingredients-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-ingredients-pdp-ingredients-section\organisms-ingredients-pdp-ingredients-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-pdp-ingredients-section" title="Link to Pattern">
+						Pdp Ingredients Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-pdp-ingredients-section" data-patternpartial="organisms-pdp-ingredients-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-pdp-ingredients-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- Start: PDP Ingredients Organism-->
+<div class="w-full mx-auto xl:max-w-xl">
+        <div class="flex flex-wrap justify-start max-w-xl px-8 mb-20 mx-auto lg:justify-between lg:px-20">
+            <!-- Start: ingredients summary cards -->
+                
+                <dl class="w-full sm:w-1_2 max-w-375 pt-30 md:pt-15 sm:pr-10 md:pr-0">
+                    <dt class="text-xl font-medium leading-tight uppercase"></dt>
+                    <dd class="text-base leading-tight mb-25 md:pr-25">Biodegradable cleaner (soil remover), biodegradable cleaner (palm kernel and/or coconut oil derived), biodegradable stabilizer, biodegradable enzymes (natural stain fighters), biodegradable soil-releasing and soil-dispersing aids, sodium borate, calcium chloride (mineral enzyme stabilizer), biodegradable citric acid (naturally processed enzyme stabilizer), brightener, biodegradable preservative, and biodegradable colorants.</dd>
+                </dl>            <!-- End: ingredients summary cards -->
+        </div>
+
+        <!-- Start: Glossary List Organism-->
+        <!-- End: Ingredient Glossary Organism-->
+        <article class="o-ingredGloss">
+            <header class="o-ingredGloss__header">
+                    <p class="o-ingredGloss__legend">
+                        <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="o-ingredGloss__icon">
+                         &#x3D; biodegradable or already exists in its final natural state
+                    </p>
+                    <p class="o-ingredGloss__legend">
+                        <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="o-ingredGloss__icon">
+                         &#x3D; Some text about the meaning of the icon
+                    </p>
+            </header>
+        
+            <div class="o-ingredGloss__list">
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Cleaners
+                                            <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                            <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Stabilizers
+                                            <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Enzymes
+                                            <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Soil-releasing and soil-dispersing aids
+                                            <img src="/images/icons/leaf-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                            <img src="/images/icons/mdouble-icon_16x16.jpg" alt="Green leaf" class="m-ingredGloss__icon">
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Sodium borate
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-ingredGloss__item">
+                        <div class="m-ingredGloss">
+                            <h3 data-accord="title" class="m-ingredGloss__title">
+                                <button data-accord="toggler" class="m-ingredGloss__toggler" id=""
+                                    aria-controls="" aria-expanded="false">
+                                    <span class="m-ingredGloss__text -title">
+                                        Calcium chloride
+                                    </span>
+                                    
+                                    <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+                                </button>
+                            </h3>
+                        
+                            <div data-accord="content" class="m-ingredGloss__content hidden" id="" aria-labelledby=""
+                                role="region">
+                                <ul> <li class="pb-10"><strong class="text-gray-150">Source </strong>Organic compound</li> <li class="pb-10"><strong class="text-gray-150">Why we choose it </strong>Helps stabilize product, improve enzyme performance, and allow for concentration with a proven safety record.</li></ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </article>
+        <!-- End: Ingredient Glossary Organism-->
+        <p class="text-left w-full max-w-xl pt-40 px-8 mb-20 mx-auto lg:px-20">
+            To find out more, visit our <a class="text-green-100" href="#">Ingredient Philosophy</a>
+        </p>
+
+    &lt;p class&#x3D;&quot;text-left w-full max-w-xl pt-40 px-8 mb-20 mx-auto&quot;&gt;To find out more, visit our &lt;a class&#x3D;&quot;text-green-100&quot; href&#x3D;&quot;/our-story/ingredients-philosophy&quot;&gt;ingredient philosophy.&amp;nbsp;&lt;/a&gt;&lt;/p&gt;
+</div>
+<!-- End: PDP Ingredients Organism-->
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-pdp-ingredients-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-ingredient-summary","lineagePath":"../../patterns/molecules-ingredients-ingredient-summary\\molecules-ingredients-ingredient-summary.rendered.html"},{"lineagePattern":"organisms-ingredient-glossary","lineagePath":"../../patterns/organisms-ingredients-ingredient-glossary\\organisms-ingredients-ingredient-glossary.rendered.html"}],"lineage":[{"lineagePattern":"molecules-ingredient-summary","lineagePath":"../../patterns/molecules-ingredients-ingredient-summary\\molecules-ingredients-ingredient-summary.rendered.html"},{"lineagePattern":"organisms-ingredient-glossary","lineagePath":"../../patterns/organisms-ingredients-ingredient-glossary\\organisms-ingredients-ingredient-glossary.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-product-details-configurator-2-selected","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2-selected\\pages-product-details-product-details-configurator-2-selected.rendered.html"},{"lineagePattern":"pages-product-details-configurator-2","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2\\pages-product-details-product-details-configurator-2.rendered.html"},{"lineagePattern":"pages-product-details-configurator-3","lineagePath":"../../patterns/pages-product-details-product-details-configurator-3\\pages-product-details-product-details-configurator-3.rendered.html"},{"lineagePattern":"pages-product-details-configurator-4","lineagePath":"../../patterns/pages-product-details-product-details-configurator-4\\pages-product-details-product-details-configurator-4.rendered.html"},{"lineagePattern":"pages-product-details-configurator-5","lineagePath":"../../patterns/pages-product-details-product-details-configurator-5\\pages-product-details-product-details-configurator-5.rendered.html"},{"lineagePattern":"pages-product-details-configurator-6","lineagePath":"../../patterns/pages-product-details-product-details-configurator-6\\pages-product-details-product-details-configurator-6.rendered.html"},{"lineagePattern":"pages-product-details-configurator-cart-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-cart-service-failure\\pages-product-details-product-details-configurator-cart-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-configurator-pdp-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-pdp-service-failure\\pages-product-details-product-details-configurator-pdp-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-ingredients-error","lineagePath":"../../patterns/pages-product-details-product-details-ingredients-error\\pages-product-details-product-details-ingredients-error.rendered.html"},{"lineagePattern":"pages-product-details-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-ingredients\\pages-product-details-product-details-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-invite-a-friend","lineagePath":"../../patterns/pages-product-details-product-details-invite-a-friend\\pages-product-details-product-details-invite-a-friend.rendered.html"},{"lineagePattern":"pages-product-details-no-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-no-ingredients\\pages-product-details-product-details-no-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-concentrated-and-diluted","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-concentrated-and-diluted\\pages-product-details-product-details-price-per-unit-concentrated-and-diluted.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-original","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-original\\pages-product-details-product-details-price-per-unit-original.rendered.html"},{"lineagePattern":"pages-product-details-restricted-pack","lineagePath":"../../patterns/pages-product-details-product-details-restricted-pack\\pages-product-details-product-details-restricted-pack.rendered.html"},{"lineagePattern":"pages-product-details-signed-out","lineagePath":"../../patterns/pages-product-details-product-details-signed-out\\pages-product-details-product-details-signed-out.rendered.html"},{"lineagePattern":"pages-product-details-unique-price-block","lineagePath":"../../patterns/pages-product-details-product-details-unique-price-block\\pages-product-details-product-details-unique-price-block.rendered.html"},{"lineagePattern":"pages-product-details","lineagePath":"../../patterns/pages-product-details-product-details\\pages-product-details-product-details.rendered.html"}],"lineageR":[{"lineagePattern":"pages-product-details-configurator-2-selected","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2-selected\\pages-product-details-product-details-configurator-2-selected.rendered.html"},{"lineagePattern":"pages-product-details-configurator-2","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2\\pages-product-details-product-details-configurator-2.rendered.html"},{"lineagePattern":"pages-product-details-configurator-3","lineagePath":"../../patterns/pages-product-details-product-details-configurator-3\\pages-product-details-product-details-configurator-3.rendered.html"},{"lineagePattern":"pages-product-details-configurator-4","lineagePath":"../../patterns/pages-product-details-product-details-configurator-4\\pages-product-details-product-details-configurator-4.rendered.html"},{"lineagePattern":"pages-product-details-configurator-5","lineagePath":"../../patterns/pages-product-details-product-details-configurator-5\\pages-product-details-product-details-configurator-5.rendered.html"},{"lineagePattern":"pages-product-details-configurator-6","lineagePath":"../../patterns/pages-product-details-product-details-configurator-6\\pages-product-details-product-details-configurator-6.rendered.html"},{"lineagePattern":"pages-product-details-configurator-cart-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-cart-service-failure\\pages-product-details-product-details-configurator-cart-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-configurator-pdp-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-pdp-service-failure\\pages-product-details-product-details-configurator-pdp-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-ingredients-error","lineagePath":"../../patterns/pages-product-details-product-details-ingredients-error\\pages-product-details-product-details-ingredients-error.rendered.html"},{"lineagePattern":"pages-product-details-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-ingredients\\pages-product-details-product-details-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-invite-a-friend","lineagePath":"../../patterns/pages-product-details-product-details-invite-a-friend\\pages-product-details-product-details-invite-a-friend.rendered.html"},{"lineagePattern":"pages-product-details-no-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-no-ingredients\\pages-product-details-product-details-no-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-concentrated-and-diluted","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-concentrated-and-diluted\\pages-product-details-product-details-price-per-unit-concentrated-and-diluted.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-original","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-original\\pages-product-details-product-details-price-per-unit-original.rendered.html"},{"lineagePattern":"pages-product-details-restricted-pack","lineagePath":"../../patterns/pages-product-details-product-details-restricted-pack\\pages-product-details-product-details-restricted-pack.rendered.html"},{"lineagePattern":"pages-product-details-signed-out","lineagePath":"../../patterns/pages-product-details-product-details-signed-out\\pages-product-details-product-details-signed-out.rendered.html"},{"lineagePattern":"pages-product-details-unique-price-block","lineagePath":"../../patterns/pages-product-details-product-details-unique-price-block\\pages-product-details-product-details-unique-price-block.rendered.html"},{"lineagePattern":"pages-product-details","lineagePath":"../../patterns/pages-product-details-product-details\\pages-product-details-product-details.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<h2>General Notes</h2>\n<p>The PDP Ingredients organism should be flexible to display as many rows as possible.</p>\n<p>In some scenarios, there will be a an ingredients list followed by a glossary list.</p>\n<p>This functionality can be repeated as many times as necessary.</p>\n","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"ingredients"},"patternExtension":"hbs","patternName":"Pdp Ingredients Section","patternPartial":"organisms-pdp-ingredients-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-ingredients"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-ingredients"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770272894619">
+  (function() {
+    if (self != top) {
+      var cb = '1770272894619';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770272894619" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770272894619', function(){
+        loadJS('/js/vue-pci.js?1770272894619', function(){
+          loadJS('/js/vendor-pci.js?1770272894619', function(){
+            loadJS('/js/pci.js?1770272894619', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770272894619', function(){
+        loadJS('/js/vue-main.js?1770272894619', function(){
+          loadJS('/js/vendor.js?1770272894619', function(){
+            loadJS('/js/index.js?1770272894619', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

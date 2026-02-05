@@ -1,0 +1,35 @@
+{{#with BenefitsList}}
+  <article class="m-benefitsList {{ListOrientation}} {{ColsPerRow}} {{#if ShowBgImage}}-bgImage{{/if}} {{#if CenterImages}}-centerImage{{/if}}" {{#if BgColor}}style="background: {{BgColor}};" {{/if}}>
+    {{#if ShowBgImage}}
+      <div class="m-benefitsList__picture">
+        {{#if BgImage.DesktopImage.Src}}
+          <img class="m-benefitsList__bgImage -desktop" src="{{BgImage.DesktopImage.Src}}" alt="{{BgImage.Alt}}">
+        {{/if}}
+        {{#if BgImage.MobileImage.Src}}
+          <img class="m-benefitsList__bgImage -mobile" src="{{BgImage.MobileImage.Src}}" alt="{{BgImage.Alt}}">
+        {{/if}}
+      </div>
+    {{/if}}
+    <header class="m-benefitsList__header">{{{Header}}}</header>
+    <ul class="m-benefitsList__list">
+      {{#each Benefits}}
+        {{#if Image}}
+          <li class="m-benefitsList__item {{#if ../IsImageClickable}}-link {{else if IsDescriptionClickable}}-link{{/if}} {{#if ../AddBorder}}border p-12{{/if}} {{#if ../BorderRoundedCorner}}rounded-md {{/if}}" {{#if ../AddBorder}}style="border-width: {{../BorderWidth}}; border-color: {{../BorderColor}};" {{/if}}>
+            {{#if ../IsImageClickable}}
+              <a class="m-benefitsList__link " href="{{CTA}}">
+                <img class="m-benefitsList__image {{#if ../ImageAlignmentNeeded}} -imageAlignment {{/if}} {{ Image.Mods }}" {{#if Image.ImageBgColor}}style="background-color: {{Image.ImageBgColor}};" {{/if}} src="{{Image.Src}}" alt="{{Image.Alt}}">
+              </a>
+            {{else}}
+              <img class="m-benefitsList__image {{#if ../ImageAlignmentNeeded}} -imageAlignment {{/if}} {{ Image.Mods }}" {{#if Image.ImageBgColor}}style="background-color: {{Image.ImageBgColor}};" {{/if}} src="{{Image.Src}}" alt="{{Image.Alt}}">
+            {{/if}}
+            {{#if ../IsDescriptionClickable}}
+              <div class="m-benefitsList__description"><a class="m-benefitsList__link" href="{{CTA}}">{{{Description}}}</a></div>
+            {{else}}
+              <div class="m-benefitsList__description">{{{Description}}}</div>
+            {{/if}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </article>
+{{/with}}

@@ -1,0 +1,37 @@
+{{#FWBanner}}
+  <article class="m-fwBanner -couponPage -stackMobile h-full" data-testid="article-fullWidthBanner">
+    <div class="m-fwBanner__row -media">
+      <!-- Start: Media block -->
+      {{> BgImages}}
+      <!-- End: Media block -->
+    </div>
+    <div class="m-fwBanner__row -columns -w-sm -top -left">
+      <!-- Start: Content block -->
+      <div class="m-fwBanner__columns">
+        <div class="m-fwBanner__col -content">
+          <div class="m-fwBanner__rte">
+            <div class="m-rte">
+              {{{RTE}}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Content block -->
+    </div>
+  </article>
+{{/FWBanner}}
+
+{{!-- Start: Background Images --}}
+{{#*inline "BgImages"}}
+  {{#with Images.Bg}}
+    {{#unless ../../Has.BgVideo}}
+      {{!-- Only display desktop image if there is no background video to play --}}
+      <div class="m-fwBanner__bgImage -desktop {{DeskPositionX}} {{DeskPositionY}}" style="background-image: url('{{{DeskImg}}}');" role="img" aria-label="{{DeskAriaLabel}}">
+      </div>
+    {{/unless}}
+
+    <div class="m-fwBanner__bgImage -mobile {{MobilePositionX}} {{MobilePositionY}}" style="background-image: url('{{{MobileImg}}}');" role="img" aria-label="{{MobileAriaLabel}}">
+    </div>
+  {{/with}}
+{{/inline}}
+{{!-- End: Background Images --}}

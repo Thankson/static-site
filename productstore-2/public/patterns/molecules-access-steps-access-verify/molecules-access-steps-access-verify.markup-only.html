@@ -1,0 +1,30 @@
+<m-access-verify :handler="() => true">
+  <template v-slot:heading>
+    We have sent a temporary access code to you at:
+  </template>
+
+  <template v-slot:description>
+    <p>Enter the code to continue.<br /> <em>Note: The code will expire 30 minutes after being sent.</em></p>
+  </template>
+
+  <template v-slot:field-label>
+    ENTER CODE
+  </template>
+
+  <template v-slot:field-error>
+    Please enter your temporary access code
+  </template>
+
+  <template v-slot:api-error>
+    The code is not valid, please confirm the code and re-enter, or <a-access-link prev><strong><u>SEND A NEW CODE</u></strong></a-access-link>.
+  </template>
+
+  <template v-slot:button-label>
+    SUBMIT CODE
+  </template>
+
+  <template v-slot:note>
+    <p>If you do not receive a code, make sure you <strong><u>typed in your email or mobile</u></strong><br class="hidden md:block" /> number correctly, or call <a href="tel:1-800-742-2444">Customer Support</a> at 1-800-742-2444.</p>
+  </template>
+
+</m-access-verify>

@@ -1,0 +1,16 @@
+<div class="relative">
+  <h3 class="text-xl font-bold uppercase mr-3 mb-10 mr-15 inline-block">{{Title}}<span class="to-md:hidden">:</span></h3>
+
+  {{#with Manage}}
+    <a href="{{Url}}" class="uppercase text-green-100 text-md inline-block absolute left-0 bottom-0 mb-10 md:relative">
+
+      {{Label}}
+    </a>
+  {{/with}}
+
+  <ul class="pb-40 mb-20 md:mb-10">
+    <li>{{Labels.MobileCarrier}} <span class="font-bold">{{MobileCarrier}}</span></li>
+    <li>{{Labels.CDCCarrier}} <span class="font-bold">{{CDCCarrier}}</span></li>
+    <li>{{Labels.LoveCode}} <span class="font-bold">{{LoveCode}}</span></li>
+  </ul>
+</div>

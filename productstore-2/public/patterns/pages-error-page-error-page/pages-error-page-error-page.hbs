@@ -1,0 +1,13 @@
+{{> organisms-site-header}}
+
+<div class="bg-gray-25 py-50">
+
+  <m-road-block script-id="{{Localization.Id}}"></m-road-block>
+
+  <script type="application/json" id="{{Localization.Id}}">
+  {{toJson Localization}}
+  </script>
+
+</div>
+
+{{> organisms-site-footer}}

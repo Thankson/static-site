@@ -1,0 +1,14 @@
+<div class="m-rte">
+  {{#with EffectiveContent}}
+    <div class="mx-auto w-full" style="max-width:970px">
+      <h3 class="block leading-tight text-gray-150 text-xl w-full" style="max-width:570px">{{Heading}}</h3>
+      <div class="mt-40 lg:flex">
+        <div class="border-t border-gray-150 pt-20 md:pr-30">
+          {{{Text}}}
+        </div>
+        <img src="{{Img.Desktop.Src}}" alt="{{Img.Desktop.Alt}}" class="hidden ml-30 md:block md:mt-20 lg:mt-0">
+        <img src="{{Img.Mobile.Src}}" alt="{{Img.Mobile.Alt}}" class="mt-40 md:hidden">
+      </div>
+    </div>
+  {{/with}}
+</div>

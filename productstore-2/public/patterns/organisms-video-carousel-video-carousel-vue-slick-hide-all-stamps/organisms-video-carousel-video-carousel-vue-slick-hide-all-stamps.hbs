@@ -1,0 +1,23 @@
+{{#VideoCarouselVue}}
+  <o-video-carousel aria-label="{{General.CarouselDescription}}" arrow-color="{{General.ArrowColor}}" bg-color="{{General.BgColor}}" unique-id="{{General.UniqueID}}">
+    {{!-- Header --}}
+    <template v-slot:header>{{{General.Header}}}</template>
+
+    {{!-- Slides --}}
+    <template v-slot:video-card>
+      {{#each Slides}}
+        {{!-- Individual slides --}}
+        <figure class="o-videoCarousel__slide">
+          {{!-- Curate Control --}}
+          <script type="application/json" id="{{CardId}}">
+          {{toJson Localization}}
+          </script>
+          <o-vid-curate-ctrl script-id="{{CardId}}"></o-vid-curate-ctrl>
+
+          {{!-- Thumbtitle --}}
+          <figcaption class="o-videoCarousel__thumbTitle">{{{ThumbTitle}}}</figcaption>
+        </figure>
+      {{/each}}
+    </template>
+  </o-video-carousel>
+{{/VideoCarouselVue}}

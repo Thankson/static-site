@@ -1,0 +1,147 @@
+<article class="m-prodCard {{CardVersion}}">
+  {{#Content}}
+    <a class="m-prodCard__row -content" href="#">
+      {{#Header}}
+        <div class="m-prodCard__header">
+          {{#Tag}}
+            <div class="m-prodCard__tag">
+              {{> atoms-product-tag}}
+            </div>
+          {{/Tag}}
+
+          <div class="m-prodCard__media">
+            <img class="m-prodCard__hero" src="{{HeroImg}}" alt="">
+          </div>
+
+          {{#if Title}}
+            <div class="m-prodCard__heading">
+              <em class="m-prodCard__title {{TitleStyles}}">{{Title}}</em>
+            </div>
+          {{/if}}
+        </div>
+      {{/Header}}
+
+      <div class="m-prodCard__body">
+        {{#if Save.IsGrid}}
+          <div class="m-prodCard__content -top">
+            {{#Save}}
+              <div class="m-prodCard__save">
+                {{#if HasPriceTag}}
+                  {{!-- <img class="m-prodCard__icon -priceTags" src="/images/icons/tags-red.png" aria-hidden="true"> --}}
+                  <div class="a-iconTag" aria-hidden="true"></div>
+                {{/if}}
+
+                <span class="m-prodCard__text -saveAmount">Save {{Amount}}</span>
+                <span class="m-prodCard__text -saveInfo">{{Info}}</span>
+
+                {{#unless IsSignedIn}}
+                  <span class="m-prodCard__text -saveLearn ">{{Learn}}</span>
+                {{/unless}}
+              </div>
+            {{/Save}}
+          </div>
+        {{/if}}
+
+        <div class="m-prodCard__content -bottom">
+          {{!-- Pricing --}}
+          {{#Pricing}}
+            <div class="m-prodCard__pricing {{BlockStyles}}">
+              {{!-- Price Standard and Price rows will never show at the same time --}}
+              {{#with Standard}}
+                {{!-- Pricing --}}
+                <span class="m-prodCard__row -price -standard">
+                  <span class="m-prodCard__text -price -mdBold">{{PriceTotal}}</span>
+
+                  {{#if PriceType}}
+                    <span class="m-prodCard__text -price">{{PriceType}}</span>
+                  {{/if}}
+                </span>
+              {{/with}}
+
+              {{!-- Price Standard and Price rows will never show at the same time --}}
+              {{#with Rows}}
+                {{#with First}}
+                  <span class="m-prodCard__row -price -first {{RowStyles}}">
+                    <span class="m-prodCard__text -price -lgBold">{{PriceTotal}}</span>
+                    <span class="m-prodCard__text -price">{{PriceType}}</span>
+                  </span>
+                {{/with}}
+
+                {{#with Second}}
+                  <span class="m-prodCard__row -price -second {{RowStyles}}">
+                    <span class="m-prodCard__text -price">{{PriceTotal}}</span>
+                    <span class="m-prodCard__text -price">{{PriceType}}</span>
+                  </span>
+                {{/with}}
+              {{/with}}
+            </div>
+          {{/Pricing}}
+
+          {{#Points}}
+            <div class="m-prodCard__points {{BlockStyles}}">
+              {{!-- Points to Earn --}}
+              <span class="sr-only">Earn </span>
+              <span class="m-prodCard__text -points">{{Totals}}</span>
+            </div>
+          {{/Points}}
+
+          {{#unless Save.IsGrid}}
+            {{!-- Savings data for the carousel cards --}}
+            {{#Save}}
+              <div class="m-prodCard__save">
+                {{#if HasPriceTag}}
+                  {{!-- <img class="m-prodCard__icon -priceTags" src="/images/icons/tags-red.png" aria-hidden="true"> --}}
+                  <div class="a-iconTag" aria-hidden="true"></div>
+                {{/if}}
+
+                <span class="m-prodCard__text -saveInfo">{{Info}}</span>
+                <span class="m-prodCard__text -saveAmount">SAVE {{Amount}}</span>
+
+                {{#unless IsSignedIn}}
+                  <span class="m-prodCard__tooltip"><span class="m-prodCard__icon -tooltip material-icons" aria-label="tooltip for more saving info">info</span></span>
+                {{/unless}}
+              </div>
+            {{/Save}}
+          {{/unless}}
+        </div>
+      </div>
+    </a>
+  {{/Content}}
+
+  {{#Actions}}
+    <div class="m-prodCard__row -actions">
+      <div class="m-prodCard__button {{#unless IsSimple}}-shelfToggle{{/unless}}">
+        {{#with CarouselBtn}} {{> atoms-button}} {{/with}}
+
+        {{#with GridBtn}}
+          <o-shelf-configurator aria-label="{{AriaLabel}}" sku="{{Sku}}" cart="{{OrderType}}" family-id="{{FamilyId}}" configurator="{{Configurator}}" class="a-button justify-center w-full" script-id="data-shelf-configurator-localization">
+            <span class="flex justify-center items-center text-white md:hidden" aria-hidden="true">
+              <span class="font-global-sans inline-block text-3xl leading-none mr-4">+</span>
+              <span class="material-icons inline-block">shopping_cart</span>
+            </span>
+            <span class="sr-only md:not-sr-only md:block">{{CTA}}</span>
+          </o-shelf-configurator>
+
+        {{/with}}
+      </div>
+
+      {{#with ActionIcon}}
+        <!-- Display if icon like "add to list" is available -->
+        <div class="m-prodCard__button -addToList">
+          {{> atoms-list-icon}}
+        </div>
+      {{/with}}
+    </div>
+  {{/Actions}}
+</article>
+
+{{!-- 
+
+    Inline Partials 
+
+--}}
+
+{{#*inline "PriceRows"}}
+  {{!-- Pricing --}}
+
+{{/inline}}

@@ -1,0 +1,27 @@
+<modal :visible="true">
+
+  <!-- START: .cshtml rendering starts here -->
+  <o-age-gate script-id="ageGateModalId"></o-age-gate>
+
+  <script type="application/json" id="ageGateModalId">
+    {
+      "Labels": {
+        "Day": "Day",
+        "DayError": "Day is required",
+        "Description": "A birthdate on file is a requirement for customers in the Quebec province. We noticed yours is missing. Please enter your date of birth below. Thank you.",
+        "Month": "Month",
+        "MonthError": "Month is required",
+        "Submit": "Submit",
+        "SubmitAriaLabel": "Submit button",
+        "Title": "Missing Information",
+        "Year": "Year",
+        "YearError": "Year is required"
+      },
+      "Data": {
+        "StartFromYear": 1950
+      }
+    }
+  </script>
+  <!-- END: .cshtml rendering -->
+
+</modal>

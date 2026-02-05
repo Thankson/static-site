@@ -1,0 +1,75 @@
+{{#ContentBlockSlide}}
+  <article class="m-contentBlock -slide">
+    <div class="m-contentBlock__backgrounds" style="background-color: {{Background.Color}}">
+      {{#if Background.Desktop}}
+        <div class="m-contentBlock__bg -desktop" style="background-image: url({{Background.Desktop}});"></div>
+      {{/if}}
+
+      {{#if Background.Mobile}}
+        <div class="m-contentBlock__bg -mobile" style="background-image: url({{Background.Mobile}});"></div>
+      {{/if}}
+    </div>
+
+    <div class="m-contentBlock__columns">
+      <div class="m-contentBlock__col">
+        {{#with ContentLeft}}
+          {{> RTEorImg}}
+        {{/with}}
+
+        {{#if ContentLeft.HasVideo}}
+          <!-- Start: Left Video Content -->
+          <div class="m-contentBlock__video">
+            <o-vid-curate-ctrl script-id="{{UniqueScriptId}}"></o-vid-curate-ctrl>
+          </div>
+          <!-- End: Left Video Content -->
+        {{/if}}
+      </div>
+
+      <div class="m-contentBlock__col">
+        {{#with ContentRight}}
+          {{> RTEorImg}}
+        {{/with}}
+
+        {{#if HasButton}}
+          <div class="m-contentBlock__cta">
+            {{#with RTEButton}}
+              {{>atoms-cmn-author-btn}}
+            {{/with}}
+          </div>
+        {{/if}}
+
+        {{#if ContentRight.HasVideo}}
+          <!-- Start: Right Video Content -->
+          <div class="m-contentBlock__video">
+            <o-vid-curate-ctrl script-id="{{UniqueScriptId}}"></o-vid-curate-ctrl>
+          </div>
+          <!-- End: Right Video Content -->
+        {{/if}}
+
+      </div>
+    </div>
+  </article>
+
+  <script type="application/json" id="{{UniqueScriptId}}">
+  {{toJson Localization}}
+  </script>
+{{/ContentBlockSlide}}
+
+
+{{#*inline "RTEorImg"}}
+  {{#if RTE}}
+    <!-- Start: RTE Content -->
+    <div class="m-contentBlock__rte">
+      {{> molecules-cmn-rte}}
+    </div>
+    <!-- End: RTE Content -->
+  {{/if}}
+
+  {{#if GenericImg}}
+    <!-- Start: Image Content -->
+    <div class="m-contentBlock__media">
+      {{> atoms-cmn-generic-img}}
+    </div>
+    <!-- End: Image Content -->
+  {{/if}}
+{{/inline}}

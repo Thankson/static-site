@@ -1,0 +1,29 @@
+{{> organisms-site-header}}
+
+<div>
+  <section class="mx-auto max-w-contain pt-20 md:pt-80">
+
+    {{!-- Header: Title and Description --}}
+    <header class="pb-40 px-8 md:text-center">
+      <h1>{{{Title}}}</h1>
+      <p class="text-sm text-gray-120">{{{Description}}}</p>
+    </header>
+
+    {{!-- Banner --}}
+    {{> molecules-cmn-full-width-banner }}
+
+    {{!-- Bogo component --}}
+    <div class="mt-40">
+      <o-bogo script-id="{{DynamicScriptId}}"></o-bogo>
+      <script type="application/json" id="{{DynamicScriptId}}">
+      {{toJson Localization}}
+      </script>
+    </div>
+
+  </section>
+</div>
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson Localization}}
+</script>
+
+{{> organisms-site-footer}}

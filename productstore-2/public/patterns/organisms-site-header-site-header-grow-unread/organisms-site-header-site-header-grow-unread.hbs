@@ -1,0 +1,93 @@
+<header class="o-siteHeaderGrow o-siteHeader {{#if IsStopInternetAccess}}-stopInternetAccess{{/if}}" {{#if HeaderBackgroundImage}} style="background-image: url('{{HeaderBackgroundImage.Url}}');" {{/if}}>
+  {{#unless HideEyebrowNav}}
+    <div class="o-siteHeader__row -eyebrow">
+      {{#Eyebrow}}
+        {{> molecules-eyebrow-nav}}
+      {{/Eyebrow}}
+    </div>
+  {{/unless}}
+
+  <div class="o-siteHeader__row -main">
+    {{#unless HideNavMenu}}
+      <div class="o-siteHeader__col -nav">
+        <!--  -->
+      </div>
+      <div class="o-siteHeader__col -nav -growNavMenu">
+        {{#NavMenuGrow}}
+          {{> molecules-nav-menu}}
+        {{/NavMenuGrow}}
+      </div>
+    {{/unless}}
+
+    <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+      {{#Logo}}
+        <a href="{{Link}}" class="block">
+          <img class="lg:hidden" src="{{Img.Mobile}}" alt="{{Alt}}">
+          <img class="max-w-120 hidden lg:block" src="{{Img.Desktop}}" alt="{{Alt}}">
+        </a>
+      {{/Logo}}
+    </div>
+
+    <div class="o-siteHeaderGrow__growLogo o-siteHeader__col" data-testid="container-growLogoWrapper">
+      {{#GrowLogo}}
+        <a href="{{Link}}" class="o-siteHeaderGrow__growLogoLink">
+          <img class="o-siteHeaderGrow__imgMobile" src="{{Img.Mobile}}" alt="{{Alt}}">
+          <img class="o-siteHeaderGrow__imgDesktop" src="{{Img.Desktop}}" alt="{{Alt}}">
+        </a>
+      {{/GrowLogo}}
+    </div>
+
+    <!-- Search bar -->
+    {{#unless HideSearchBar}}
+      <div class="o-siteHeaderGrow__search">
+        {{#with Search}}
+          <script type="application/json" id="searchBarGrow">
+          {{toJson Localization}}
+          </script>
+          <o-search-bar-grow script-id="searchBarGrow" />
+        {{/with}}
+      </div>
+    {{/unless}}
+
+    {{#unless HideActions}}
+      <div class="o-siteHeaderGrow__actions o-siteHeader__col" {{#ifCond SiteTheme '!==' '-riverbend'}} data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" {{/ifCond}} data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+
+        <!-- NOTIFICATIONS -->
+        {{#with ActionsGrow.Actions.NotificationsPopup}}
+          <div class="o-siteHeaderGrow__actions-notifications relative md:flex hidden" data-testid="container-notificationsButton">
+            <script type="application/json" id="growNotificationBellData">
+            {{toJson Localization}}
+            </script>
+            <o-grow-notification-bell script-id="growNotificationBellData" />
+          </div>
+        {{/with}}
+
+        {{#with Actions.SignIn.Desktop}}
+          <div class="relative md:flex hidden">
+            {{>atoms-cmn-author-btn}}
+          </div>
+        {{/with}}
+
+        {{#ActionsGrow}}
+          {{#Actions.MyAccount}}
+            {{> organisms-my-account-popup }}
+          {{/Actions.MyAccount}}
+        {{/ActionsGrow}}
+
+        {{#with EnrollNow}}
+          {{> molecules-enroll-now }}
+        {{/with}}
+      </div>
+    {{/unless}}
+
+  </div>
+
+  {{#with Actions.SignIn.Mobile}}
+    <div class="flex items-start relative md:hidden px-8 py-20 bg-white">
+      {{#with PopupCulture}}
+        {{> molecules-popup-culture }}
+      {{/with}}
+      {{>atoms-cmn-author-btn}}
+    </div>
+  {{/with}}
+</header>

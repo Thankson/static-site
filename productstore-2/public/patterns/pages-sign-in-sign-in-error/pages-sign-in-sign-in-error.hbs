@@ -1,0 +1,37 @@
+{{> organisms-site-header }}
+<div class="bg-gray-25">
+  <section class="max-w-xl px-10 lg:px-20 mx-auto md:py-40 w-full">
+    <h1 class="text-2xl font-medium tracking-tight text-gray-150 font-global-sans md:text-3xl to-md:px-10 to-md:pt-20">{{PageTitle}}</h1>
+    <div class="flex flex-wrap justify-around mt-15 md:mt-20 {{#if IsReferred}}to-lg:flex-col-reverse lg:flex-row-reverse{{/if}}">
+      <div class="bg-white border mb-10 lg:mb-0 px-8 lg:px-40 py-30 lg:w-1_3 lg:max-w-1_2 border-gray-50 lg:rounded lg:flex-grow w-full {{#if IsReferred}}lg:ml-30{{else}}lg:mr-30{{/if}}">
+        {{> organisms-sign-in-card-vue}}
+      </div>
+      {{#if IsGuest}}
+        <div class="mb-10 w-full relative z-0 lg:flex lg:flex-col lg:mb-0 lg:w-1_3 lg:max-w-1_2 lg:flex-grow">
+          <div class="bg-white border border-gray-50 mb-10 px-8 py-20 w-full lg:mb-30 lg:p-40 lg:rounded">
+            {{#with GuestCheckout}}
+              <div class="xl:flex xl:items-center xl:justify-between">
+                <h2 class="font-bold leading-base mb-20 text-2xl xl:mb-0 xl:max-w-144 xl:text-3xl">{{Title}}</h2>
+                {{#Button}}
+                  {{> atoms-button}}
+                {{/Button}}
+              </div>
+            {{/with}}
+          </div>
+          <div class="w-full">
+            <m-guest-shopping-cta mods="-signIn" :localization='{{toJson GuestShoppingCta.Localization}}'></m-guest-shopping-cta>
+          </div>
+        </div>
+      {{else}}
+        <div class="bg-white border mb-10 lg:mb-0 px-8 lg:px-40 py-30 to-lg:pb-150 lg:w-1_3 lg:max-w-1_2 border-gray-50 lg:rounded lg:flex-grow w-full relative z-0">
+          <h2 class="text-dark text-2xl-2 leading-base mb-20">Not a Member Yet?</h2>
+          <p class="text-gray mb-40">Discover all the ways that Melaleuca enhances the lives of thousands of people just like you by helping people reach their goals. Learn how members of Melaleuca are spending less money for safer, more effective products, getting out of debt, and making a difference in the lives of those they touch.</p>
+          <a class="justify-center w-full text-center text-base text-green font-medium leading-base uppercase block bg-white border-green border-1 rounded w-full sm:max-w-260 py-15 mb-20" href="#" data-gtm-track=' { "gtmId": "182", "gtmText": "Get to know melaleuca" }'>Get to know melaleuca</a>
+
+          {{> atoms-corner-imagery}}
+        </div>
+      {{/if}}
+    </div>
+  </section>
+</div>
+{{> organisms-site-footer }}

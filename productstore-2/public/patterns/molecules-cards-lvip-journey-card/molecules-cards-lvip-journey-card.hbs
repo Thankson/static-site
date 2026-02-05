@@ -1,0 +1,28 @@
+{{#with LvipJourneyCardList}}
+  <article class="m-LvipCardList">
+    <ul class="m-LvipCardList__list">
+      {{#each Cards}}
+        <li class="m-LvipCardList__item {{#if IsBirthday}}-birthday{{/if}}">
+          <img class="m-LvipCardList__image" src="{{Image.Src}}" alt="{{Image.Alt}}">
+          <div class="m-LvipCardList__content">
+            <div class="m-LvipCardList__description">
+              {{{Description}}}
+            </div>
+            {{#if IsBirthday}}
+              <ul>
+                {{#each Details}}
+                  <li class="m-LvipCardList__details">
+                    <strong class="m-LvipCardList__price">{{Price}}</strong>
+                    <span class="m-LvipCardList__type">{{Type}}</span>
+                    <span>{{Save}}</span>
+                  </li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="m-LvipCardList__footer">{{{Footer}}}</div>
+  </article>
+{{/with}}

@@ -1,0 +1,14 @@
+{{!-- There will be a  difference in height for tab handle between open and closed states this was done to achieve consistency under <main></main> div block which is present on the site. 
+For updated render please check https://localhost:3030/patterns/pages-my-account-my-account-invite-a-friend/pages-my-account-my-account-invite-a-friend.rendered.html--}}
+
+{{#with InviteAFriend}}
+  <o-invite-a-friend script-id="{{DynamicId}}">
+    <template v-slot:ad>
+      {{{RTE}}}
+    </template>
+  </o-invite-a-friend>
+
+  <script id="{{DynamicId}}" type="application/json">
+  {{toJson Localization}}
+  </script>
+{{/with}}

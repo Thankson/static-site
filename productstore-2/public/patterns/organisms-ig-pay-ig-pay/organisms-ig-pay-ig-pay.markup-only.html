@@ -1,0 +1,61 @@
+<o-ig-payment script-id="scriptIdPaymentForm" script-id-checkbox="scriptIdCheckboxPaymentForm"></o-ig-payment>
+
+<script type="application/json" id="scriptIdPaymentForm">
+  {
+    "Labels": {
+      "ErrorMessages": {
+        "ChangeCardError": "<span>You are changing your Default Method of Payment for <em class=\"uppercase font-bold\">all</em> Marketplace Services including Identity Protection, Health Care Savings, and Melaleuca Deals. <br><br> Your method of payment may be charged for future orders, services, or to settle outstanding debt on this account.</span>",
+        "Required": "{0} field is required"
+      },
+      "Expires": "Expires",
+      "Expired": "Expired",
+      "PayWith": "Pay With",
+      "PlaceOrder": "Place Order",
+      "Required": "Required",
+      "PayCheckboxAriaLabelName": "Payment Checkbox",
+      "TermsCheckboxAriaLabelName": "Policy Checkbox"
+    },
+    "Data": {
+      "AddPaymentLink": {
+        "Url": "http://www.melaleuca.com",
+        "Text": "+ Add New Payment Method",
+        "Target": ""
+      },
+      "EditLink": {
+        "Url": "http://www.melaleuca.com",
+        "Text": "Edit",
+        "Target": "_blank"
+      },
+      "ConfirmPageUrl": "www.google.com",
+      "TermsCheckboxName": "termsCheckbox",
+      "PayCheckbox": "<span class=\"text-sm md:text-base text-gray leading-tight\"><span class=\"uppercase text-gray font-bold text-sm md:text-base md:block\">I WILL BE CHARGED {0} NOW AND {1} EACH MONTH AFTER. </span>By enrolling, I am purchasing a recurring monthly membership. I may cancel this subscription at any time by contacting InfoGuard at 1-877-599-2800.</span>"
+    }
+  }
+</script>
+
+<script type="application/json" id="scriptIdCheckboxPaymentForm">
+  {
+    "Labels": {
+      "Close": "Close"
+    },
+    "Data": {
+      "Name": "termsCheckbox",
+      "CheckedValue": "Unchecked",
+      "Label": {
+        "Text": "<span class=\"text-sm md:text-base text-gray leading-tight\"><span class=\"text-gray font-bold text-sm md:text-base md:block\">I accept the InfoGuard by Ocenture <a class=\"text-blue underline cursor-pointer font-normal\" data-modal-id=\"1\">Terms and Conditions</a> and <a class=\"text-blue underline cursor-pointer font-normal\" data-modal-id=\"2\">Privacy Policy</a>. </span>By enrolling, I provide to InfoGuard my “written instructions” under the Fair Credit Reporting Act authorizing InfoGuard, its successors, and assigns and all other applicable third parties agencies to obtain my credit data from each consumer reporting agency on a recurring basis in order to verify my identity and to provide the products and/or services to me. I understand that InfoGuard or its partners may require an additional credit enrollment process and until it is complete, credit services on my account will not be active.</span>",
+        "Mods": "-blue"
+      },
+      "Modals": [{
+        "Id": "1",
+        "Size": "900px",
+        "Title": "<span class=\"block font-bold pb-20 text-gray-120\" style=\"color:#333333\"><span class=\"hidden md:block\" style=\"font-size: 40px; \">Terms & Conditions</span><span class=\"block md:hidden text-3xl\">Terms & Conditions</span>",
+        "BodyClass": "-mktplace",
+        "Body": "<div class=\"text-sm\" style=\"line-height:1.3;\"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p class=\"pt-8\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p class=\"pt-8\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p class=\"pt-8\">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</p></div>"
+      }, {
+        "Id": "2",
+        "Title": "Privacy Policy",
+        "Body": "Some text here"
+      }]
+    }
+  }
+</script>

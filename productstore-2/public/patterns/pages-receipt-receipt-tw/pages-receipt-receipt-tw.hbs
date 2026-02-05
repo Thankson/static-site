@@ -1,0 +1,45 @@
+{{> organisms-site-header-checkout}}
+
+<div class="bg-gray-25">
+
+  <p-receipt script-id="{{DynamicScriptId}}">
+    {{#if CreditCardBanner }}
+      <template v-slot:credit-ad>
+        <m-credit-card-ads :is-modal="true" background-color="rgb(232, 206, 158)"></m-credit-card-ads>
+      </template>
+    {{/if}}
+    {{!-- Itens --}}
+    <template v-slot:items>
+      {{#with Items}}
+        {{> organisms-checkout-bottom}}
+      {{/with}}
+    </template>
+    <template v-slot:coupon-reminder>
+      {{#with CouponReminder}}
+        <m-receipt-coupon-reminder script-id="receipt-coupon-reminder"></m-receipt-coupon-reminder>
+
+        <script type="application/json" id="receipt-coupon-reminder">
+        {{toJson this}}
+        </script>
+      {{/with}}
+    </template>
+
+    {{#if BannerVariant1}}
+      <sc-placeholder class="hidden" slot-name="banner-variant-1">
+        {{> molecules-adapt-notice-banner BannerVariant1}}
+      </sc-placeholder>
+    {{/if}}
+  </p-receipt>
+
+  <script type="application/json" id="{{DynamicScriptId}}">
+  {{toJson Localization}}
+  </script>
+
+  {{#if ReferAFriendModal}}
+    {{#with ReferAFriendLocalization}}
+      <script type="application/json" id="referAFriendModalId">
+      {{ toJson Localization }}
+      </script>
+    {{/with}}
+  {{/if}}
+</div>

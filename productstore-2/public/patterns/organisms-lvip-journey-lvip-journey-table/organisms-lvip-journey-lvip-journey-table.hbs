@@ -1,0 +1,100 @@
+{{#MemberOffer}}
+  <div class="o-lvipJourneyTable">
+    <ul class="o-lvipJourneyTable__column">
+      <li class="o-lvipJourneyTable__item -item">&nbsp;</li>
+      {{#each MemberOfferName}}
+        <li class="o-lvipJourneyTable__item -item">{{{this}}}</li>
+      {{/each}}
+      <span class="o-lvipJourneyTable__after"></span>
+    </ul>
+    <ul class="o-lvipJourneyTable__row -topRow">
+      {{#each CustomerType}}
+        <li class="o-lvipJourneyTable__item -top">{{Name}}</li>
+      {{/each}}
+    </ul>
+    <div class="o-lvipJourneyTable__content">
+      <div class="o-lvipJourneyTable__inner">
+        <ul class="o-lvipJourneyTable__row -mobileRow">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item">{{Name}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{IsShopping}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{Discount}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{EleMagazine}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{WelcomeGiftFrist}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{WelcomeGiftSecond}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{PointFeedback}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{FullGifts}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{HonorFirstGifts}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{HonorSecondGifts}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{LvipDiscount}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{FreightPoint}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{PriorityCheckout}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{QuarterGift}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{SpecialBirthdayFrist}}</li>
+          {{/each}}
+        </ul>
+        <ul class="o-lvipJourneyTable__row">
+          {{#each CustomerType}}
+            <li class="o-lvipJourneyTable__item {{#ifvalue ../CurrentType equals=@index}}-current{{/ifvalue}}">{{SpecialBirthdaySecond}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+{{/MemberOffer}}

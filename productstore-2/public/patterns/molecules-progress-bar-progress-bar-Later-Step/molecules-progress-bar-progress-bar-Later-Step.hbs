@@ -1,0 +1,45 @@
+<div class="m-progressBar">
+  <ol class="m-progressBar__nav">
+    {{#each Steps}}
+
+      <li class="m-progressBar__item{{#if Active}} -isActive{{/if}}{{#if Complete}} -isComplete{{/if}}" {{#if Active}} aria-current="true" {{/if}}>
+        {{#if Complete}}
+          <a href="#" class="m-progressBar__inner">
+            <span class="m-progressBar__progress">
+              <span class="m-progressBar__line">
+                <span class="m-progressBar__icon">
+                  {{#if Bullet}}
+                    {{> atoms-bullet}}
+                  {{else if Icon}}
+                    {{> atoms-icon-vue Icon}}
+                  {{/if}}
+                </span>
+              </span>
+            </span>
+
+            <span class="sr-only">Completed: </span>
+            <span class="m-progressBar__title">{{Title}}</span>
+          </a>
+        {{else}}
+          <div class="m-progressBar__inner">
+            <span class="m-progressBar__progress">
+              <span class="m-progressBar__line">
+                <span class="m-progressBar__icon">
+                  {{#if Bullet}}
+                    {{> atoms-bullet}}
+                  {{else if Icon}}
+                    {{> atoms-icon-vue Icon}}
+                  {{/if}}
+                </span>
+              </span>
+            </span>
+
+            {{#if Active}}<span class="sr-only">Current: </span>{{/if}}
+            <span class="m-progressBar__title">{{Title}}</span>
+          </div>
+        {{/if}}
+      </li>
+    {{/each}}
+
+  </ol>
+</div>

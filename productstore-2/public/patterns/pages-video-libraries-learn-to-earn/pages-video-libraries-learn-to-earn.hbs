@@ -1,0 +1,19 @@
+{{> organisms-site-header }}
+
+{{#with LearnToEarn}}
+  <div class="bg-gray-25 pb-40">
+    {{> organisms-lte-header}}
+
+    {{> organisms-lte-accordion}}
+
+    {{#with VideoCarousel}}
+      {{> organisms-lte-video-carousel}}
+    {{/with}}
+  </div>
+{{/with}}
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson Localization}}
+</script>
+
+{{> organisms-site-footer }}

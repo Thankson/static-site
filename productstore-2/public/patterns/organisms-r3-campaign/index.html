@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770272894619" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-r3-campaign" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-r3-campaign\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-r3-campaign">R 3 Campaign</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-r3-campaign-clockin" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-campaign-clockin\organisms-r3-campaign-r3-campaign-clockin.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-campaign-clockin" title="Link to Pattern">
+						R 3 Campaign Clockin
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-campaign-clockin" data-patternpartial="organisms-r3-campaign-clockin" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-campaign-clockin">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-campaign-clockin script-id="r3-campaign-clockin"></o-r3-campaign-clockin>
+
+<script type="application/json" id="r3-campaign-clockin">
+    {"Labels":{"Tip":"提示：","FormTip":"请在下面填写正确的信息。","UploadPhotosTip":"请上传完整的正面和侧面照片。","Name":"姓名","NamePlaceholder":"请填写您的姓名","PhoneNumber":"手机","PhoneNumberPlaceholder":"请填写您的常用手机号","Weight":"体重（KG）","WeightPlaceholder":"请保留1位小数","UploadPhotos":"上传图片","Submit":"提交","Privacy":"隐私政策","PersonalInfo":"个人隐私信息授权","PersonalInfoDescription":"我了解并同意美乐家收集以上所提供的信息。","FormatError":"格式错误","NotParticipantError":"没有参加活动","NameRequired":"姓名不可为空","PhoneNumberRequired":"手机不可为空","WeightRequired":"体重不可为空","PersonalInfoRequired":"请勾选个人隐私条款","PhotoCountError":"请上传{0}张图片","UploadError":"图片上传失败","SizeError":"图片尺寸有误"},"Data":{"CampaignId":"1","CampaignName":"20230902","Phase":"1","RequiredPhotos":2,"SuccessMessage":"<div style=\"text-align: center;\"><span style=\"font-size: 16px;\">Phase 1</span></div>\n<div style=\"text-align: center;\"><span style=\"font-size: 24px;\">Successfully upload</span></div>\n<div style=\"text-align: center;\"><span style=\"color: rgb(127, 127, 127);\">If someone doesn't get the \"check in\" message, you can share the same link.</span></div>","Modals":[],"ShowOnDevices":{"WebDesktop":true,"WebMobile":true,"WeChatMiniProgram":true}},"Id":"6126c68a-d069-4662-8f46-098d5e79ed92"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-campaign-clockin" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Campaign Clockin","patternPartial":"organisms-r3-campaign-clockin","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-campaign-signup-leader" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-campaign-signup-leader\organisms-r3-campaign-r3-campaign-signup-leader.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-campaign-signup-leader" title="Link to Pattern">
+						R 3 Campaign Signup Leader
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-campaign-signup-leader" data-patternpartial="organisms-r3-campaign-signup-leader" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-campaign-signup-leader">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-campaign-signup-leader script-id="r3-campaign-signup-leader"></o-r3-campaign-signup-leader>
+
+<script type="application/json" id="r3-campaign-signup-leader">
+    {"Labels":{"ConfirmCreate":"确认创建","JoinedMembers":"已入团人数","Privacy":{"Description":"本人已充分阅读、理解并同意{0}、{1}。","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},"ShareAndInvite":"分享并邀请其他伙伴","TeamLeader":"团长","TeamMember":"团队成员","TeamId":"团队编号","ToBeConfirmed":"等待加入","CreateTip":"团队成功创建后将不可取消","NonMemberTip":"至少需要{0}个团队成员需要是非会员","PrivacyRequired":"请勾选以上条款","PhoneNumberNotExist":"PhoneNumberNotExist"},"Data":{"Agreements":[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[]}],"CampaignId":"1","CampaignName":"20230902","TeamMembers":4,"NeedNonMembers":1,"ShareCardTitle":"{0}邀请您参加本期R3活动。","ShareCardImage":{"Url":"https://cdnsc1.melaleuca.com.cn/cn/images/R3/r3-booklet/R3-paper-m-08.jpg","Alt":""},"SharedCardPath":{"href":"/jss?item=/productstore/r3/r3-campaign/member-info","id":"{5129BC72-5C8F-40DD-96B1-6B769F20B8FE}","querystring":"","text":"","anchor":"","url":"/Melaleuca/ProductStore/China/China/Home/ProductStore/R3/R3 Campaign/Member Info","title":"","class":"","linktype":"internal"},"SuccessMessage":"<div style=\"text-align: center;\"><span style=\"font-size: 13px;\"><strong><span style=\"color: rgb(0, 176, 80);\">恭喜你！</span></strong></span></div>\n<div style=\"text-align: center;\"><span style=\"font-size: 13px;\"><strong><span style=\"color: rgb(0, 176, 80);\">您已创建团队。</span></strong></span></div>","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ShowOnDevices":{"WebDesktop":true,"WebMobile":true,"WeChatMiniProgram":true},"TeamLeaderInfo":{"CustomerName":"stevenuatest","PhoneNumber":"19796021211"}},"Id":"3b6e51ad-e335-4157-a72c-4fc1956c3aa5"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-campaign-signup-leader" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Campaign Signup Leader","patternPartial":"organisms-r3-campaign-signup-leader","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-campaign-signup-member" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-campaign-signup-member\organisms-r3-campaign-r3-campaign-signup-member.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-campaign-signup-member" title="Link to Pattern">
+						R 3 Campaign Signup Member
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-campaign-signup-member" data-patternpartial="organisms-r3-campaign-signup-member" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-campaign-signup-member">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-campaign-signup-member script-id="r3-campaign-signup-member"></o-r3-campaign-signup-member>
+
+<script type="application/json" id="r3-campaign-signup-member">
+    {"Labels":{"Title":"R3活动队长{0}邀请您参加本期R3活动。","Name":"姓名","NamePlaceholder":"请填写您的姓名","PhoneNumber":"手机","PhoneNumberPlaceholder":"允许授权手机号码","Privacy":{"Description":"本人已充分阅读、理解并同意{0}、{1}。","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},"NeedChangePhoneNumber":"已被授权的手机号如需更换，请重新进入本页面。","Submit":"加入团队","TeamId":"团队编号","FormatError":"格式错误","NameRequired":"姓名不可为空","PhoneNumberRequired":"手机不可为空","PrivacyRequired":"请勾选以上条款","NonMemberCountError":"团队内至少需要有{0}位非会员","RepeatJoinedError":"您已加入过团队，不可重复加入。"},"Data":{"Agreements":[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[]}],"CampaignId":"1","CampaignName":"20230902","SuccessMessage":"<div style=\"text-align: center;\"><span style=\"font-size: 16px;\">您已成功加入团队。希望本次R3活动可以给您带来愉快的体验，</span><span style=\"font-size: medium;\">加油</span><span style=\"font-size: medium;\">！</span></div>","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ShowOnDevices":{"WebDesktop":true,"WebMobile":true,"WeChatMiniProgram":true}},"Id":"5cefd8ce-8c88-41e0-a4fa-0534d5b41b6d"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-campaign-signup-member" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Campaign Signup Member","patternPartial":"organisms-r3-campaign-signup-member","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-clockin" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-clockin\organisms-r3-campaign-r3-clockin.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-clockin" title="Link to Pattern">
+						R 3 Clockin
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-clockin" data-patternpartial="organisms-r3-clockin" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-clockin">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-clockin script-id="r3-clockin"></o-r3-clockin>
+
+<script type="application/json" id="r3-clockin">
+    {"Labels":{"Tip":"提示：","FormTip":"请在下面填写正确的信息。","UploadPhotosTip":"请上传完整的正面和侧面照片。","Name":"姓名","NamePlaceholder":"请填写您的姓名","PhoneNumber":"手机","PhoneNumberPlaceholder":"请填写您的常用手机号","Weight":"体重（KG）","WeightPlaceholder":"请保留1位小数","UploadPhotos":"上传图片","Submit":"提交","Privacy":"隐私政策","PersonalInfo":"个人隐私信息授权","PersonalInfoDescription":"我了解并同意美乐家收集以上所提供的信息。","FormatError":"格式错误","NotParticipantError":"没有参加活动","NameRequired":"姓名不可为空","PhoneNumberRequired":"手机不可为空","WeightRequired":"体重不可为空","PersonalInfoRequired":"请勾选个人隐私条款","PhotoCountError":"请上传{0}张图片","UploadError":"图片上传失败","SizeError":"图片尺寸有误"},"Data":{"Agreements":[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[]}],"CampaignId":"4","CampaignName":"R3 二期","Phase":"1","RequiredPhotos":2,"SuccessMessage":"<div style=\"text-align: center;\"><span style=\"font-size: 16px;\">Phase 1</span></div>\n<div style=\"text-align: center;\"><span style=\"font-size: 24px;\">Successfully upload</span></div>\n<div style=\"text-align: center;\"><span style=\"color: rgb(127, 127, 127);\">If someone doesn't get the \"check in\" message, you can share the same link.</span></div>","Modals":[],"ShowOnDevices":{"WebDesktop":true,"WebMobile":false,"WeChatMiniProgram":true}},"IgnoreComponent":false,"Id":"1003ec74-ac63-42ce-b96e-ec3151cc019f"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-clockin" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Clockin","patternPartial":"organisms-r3-clockin","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-member-info" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-member-info\organisms-r3-campaign-r3-member-info.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-member-info" title="Link to Pattern">
+						R 3 Member Info
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-member-info" data-patternpartial="organisms-r3-member-info" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-member-info">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-member-info script-id="r3-member-info"></o-r3-member-info>
+
+<script type="application/json" id="r3-member-info">
+    {"Labels":{"Title":"R3活动队长小李邀请您参加本期R3活动。","FillYourInformation":"请填写您的信息","Name":"姓名","NamePlaceholder":"请填写您的姓名","PhoneNumber":"手机","PhoneNumberPlaceholder":"允许授权手机号码","Privacy":{"Description":"本人已充分阅读、理解并同意{0}、{1}。","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},"NeedChangePhoneNumber":"已被授权的手机号如需更换，请重新进入本页面。","Submit":"加入团队","TeamId":"团队编号","FormatError":"格式错误","NameRequired":"姓名不可为空","PhoneNumberRequired":"手机不可为空","PrivacyRequired":"请勾选以上条款","NonMemberCountError":"团队内至少需要有{0}位非会员","RepeatJoinedError":"您已加入过团队，不可重复加入。"},"Data":{"Agreements":[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[]}],"CampaignId":"4","CampaignName":"R3 二期","CampaignLogo":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/R3LOGO.png","Alt":""},"SuccessMessage":"<div style=\"text-align: center;\"><span style=\"font-size: 16px;\"><img src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-successfully.png\" style=\"width: 112px; height: 83px;\" data-ll-status=\"loading\" class=\"inline-block\"></span></div>\n<div class=\"pt-20\" style=\"text-align: center;\"><span style=\"font-size: 30px; line-height: 48px; color: rgb(85, 85, 85);\"><strong>您已完成报名！</strong></span></div>\n<div class=\"pt-20\" style=\"text-align: center;\"><span style=\"line-height: 24px; color: rgb(85, 85, 85); font-size: 16px;\">*团长及团员每人都限报1组，不可重复报名。</span></div>\n<div class=\"pb-60\" style=\"text-align: center;\"><span style=\"line-height: 24px; font-size: 16px; color: rgb(85, 85, 85);\">*成功报名后将不得更改个人信息及更换团队。</span></div>","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ShowOnDevices":{"WebDesktop":false,"WebMobile":false,"WeChatMiniProgram":false},"MyTeamSectionLabel":{"Image":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-teamed-up.png","Alt":""},"Label":"我的团队"}},"IgnoreComponent":false,"Id":"98817850-48d3-4857-9229-8e25075614eb"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-member-info" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Member Info","patternPartial":"organisms-r3-member-info","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-team-detail" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-team-detail\organisms-r3-campaign-r3-team-detail.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-team-detail" title="Link to Pattern">
+						R 3 Team Detail
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-team-detail" data-patternpartial="organisms-r3-team-detail" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-team-detail">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-team-detail script-id="r3-team-detail"></o-r3-team-detail>
+
+<script type="application/json" id="r3-team-detail">
+    {"Labels":{"TeamLeaderLabel":"团长","TeamNumberLabel":"团号","TeamNameLabel":"团队名称","TeamLeaderPhoneLabel":"团长手机","Graph1stLabel":"1st","Graph2ndLabel":"2nd","Graph3rdLabel":"3rd","Graph4thLabel":"4th","KgLabel":"kg","PercentLable":"%","WeightLosingLabel":"Weight Losing","WeightLosingPercentLabel":"Weight Losing%","TeamMember1stLabel":"1st","TeamMember2ndLabel":"2nd","TeamMember3rdLabel":"3rd","TeamMember4thLabel":"4th","MobilePhoneValidateForm":{"FormTitle":"Please enter your mobile phone.","PhoneNumberPlaceholder":"Phone Number","OKButtonLabel":"OK","CancelButtonLabel":"Cancel","FormateErrorMessage":"FormateErrorMessage","NoDataErrorMessage":"NoDataErrorMessage"}},"Data":{"R3LandingPageUrl":{"href":"/jss?item=/productstore/r3/r3-campaign","text":"","anchor":"","linktype":"internal","class":"","title":"","querystring":"","id":"{14A70740-7D9E-469D-A990-D0F989EA9B20}"},"CampaignId":4,"CampaignItemId":"{6F44EE8B-3C41-4BFD-8C93-57C52E50B748}","CampaignLogo":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/R3LOGO.png","Alt":""},"MyTeamSectionLabel":{"Icon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-teamed-up.png","Alt":""},"Label":"我的团队"},"CheckInSectionLabel":{"Icon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-expired.png","Alt":""},"Label":"体测打卡"},"TeamStatusSectionLabel":{"Icon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-successfully.png","Alt":""},"Label":"团队状态"},"HasCheckInIcon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-successfully.png","Alt":""},"NotCheckInIcon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/right28.png","Alt":""},"ForgetCheckInIcon":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-teamed-up.png","Alt":""},"Activities":[{"ActivityId":1,"ActivityName":"第一次打卡","StartDate":"2024-01-15T08:12:00Z","EndDate":"2024-01-17T08:12:00Z","Current":false},{"ActivityId":2,"ActivityName":"第二次打卡","StartDate":"2024-01-17T08:12:00Z","EndDate":"2024-01-19T08:12:00Z","Current":true},{"ActivityId":3,"ActivityName":"第三次打卡","StartDate":"2024-01-19T08:12:00Z","EndDate":"2024-01-21T08:12:00Z","Current":false},{"ActivityId":4,"ActivityName":"第四次打卡","StartDate":"2024-01-21T08:12:00Z","EndDate":"2024-01-23T08:12:00Z","Current":false}]},"IgnoreComponent":false,"Id":"ad63a1de-626f-4ed9-9185-2e92951d17d2"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-team-detail" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Team Detail","patternPartial":"organisms-r3-team-detail","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-team-info" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-team-info\organisms-r3-campaign-r3-team-info.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-team-info" title="Link to Pattern">
+						R 3 Team Info
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-team-info" data-patternpartial="organisms-r3-team-info" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-team-info">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-team-info script-id="r3-team-info"></o-r3-team-info>
+
+<script type="application/json" id="r3-team-info">
+    {"Labels":{"ConfirmCreate":"确认开团","JoinedMembers":"已入团人数","Privacy":{"Description":"本人已充分阅读、理解并同意{0}、{1}，同意提供姓名、手机号，用于完成活动报名、活动数据上传、信息通知、以及其他与活动相关的服务。","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},"ShareAndInvite":"分享微信好友，并邀请加入","TeamLeader":"团长","TeamMember":"团员","TeamId":"团号","ToBeConfirmed":"未入团","CreateTip":"点击“确认开团”后将不得更换团队，团长及团员每人都限报1组。","PhoneNumberNotExist":"您的手机号不存在，请至我的账户-账户设置中添加。","NonMemberTip":"4名团员需至少有1位需为非美乐家会员；最后一位团员成功递交信息后，即可成团。","PrivacyRequired":"请仔细阅读以上条款，并点击确认。","TeamNameRequired":"团队名称不可为空","FormatError":"格式错误","CompleteTeam":"确认成团","DisbandTeam":"解散团队","TeamLeaderPhone":"团长手机","TeamName":"团队名称","TeamNamePlaceholder":"请输入团队名称","ConfirmModal":{"Title":"您确定吗？","CompleteTeamContent":"确认成团","DisbandTeamContent":"解散团队","RemoveMemberContent":"移除该成员","Disband":"解散","Remove":"移除","Cancel":"取消","Confirm":"确认","DisbandedToast":"团队已被解散。"}},"Data":{"Agreements":[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}]},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[]}],"CampaignId":"4","CampaignName":"R3 二期","CampaignLogo":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/R3LOGO.png","Alt":""},"TeamMembers":4,"NeedNonMembers":1,"ShareCardTitle":"{0}正邀请你一起参加R3团队赛","ShareCardImage":{"Url":"https://cdnsc1.melaleuca.com.cn/cn/images/R3/campaign-share2.jpg","Alt":""},"SharedCardPath":{"href":"/jss?item=/productstore/r3/r3-campaign/member-info","id":"{5129BC72-5C8F-40DD-96B1-6B769F20B8FE}","querystring":"","text":"","anchor":"","url":"/Melaleuca/ProductStore/China/China/Home/ProductStore/R3/R3-campaign/Member-Info","title":"","class":"","linktype":"internal"},"SharedCardUrl":"/productstore/r3/r3-campaign/member-info","SuccessMessage":"<div class=\"pt-20\" style=\"text-align: center;\"><span style=\"font-size: 30px; line-height: 48px; color: rgb(48, 134, 45);\"><strong>恭喜您组团成功</strong></span></div>\n<div class=\"pt-20 pb-10\" style=\"text-align: left;\"><span style=\"line-height: 24px; font-size: 16px; color: rgb(48, 134, 45);\">● 本次R3团队赛将于2023年9月7日正式开启，敬请期待！挑战赛期间请关注您的手机短信及小程序推送。</span></div>\n<div class=\"pt-0 pb-60\" style=\"text-align: left;\"><span style=\"line-height: 24px; font-size: 16px; color: rgb(48, 134, 45);\">● 每日17点前成团的团长，您可在当日18点后扫码获取「R3 42天资料包」（双休日顺延至下周一18点后）。</span></div>\n<div style=\"text-align: center;\"><span style=\"font-size: 16px;\"><wx-image src=\"https://cdnsc1.melaleuca.com.cn/cn/images/R3/campaign/yixiuQR.png\" style=\"width: 168px; height: 169px;\" data-ll-status=\"loading\" class=\"inline-block\" show-menu-by-longpress=\"true\"></span></div>","Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ShowOnDevices":{"WebDesktop":false,"WebMobile":false,"WeChatMiniProgram":false},"LandingPage":{"href":"/jss?item=/productstore/r3/r3-campaign","text":"","anchor":"","linktype":"internal","class":"","title":"","querystring":"","id":"{14A70740-7D9E-469D-A990-D0F989EA9B20}"},"TeamLeaderInfo":{"CustomerName":"Ericuatest","PhoneNumber":"18326479770"},"SloganRichText":"<div class=\"box_3 flex-row justify-between\" style=\"margin-bottom: -30px\">\n<div class=\"text-group_7 flex-col\">\n<span class=\"paragraph_1\">创建属于您的<br>\nR3团队</span>\n<span class=\"text_3\">XXXXXXXXXXXXXX</span>\n</div>\n<div class=\"image-wrapper_1 flex-col\">\n<img class=\"image_7\" referrerpolicy=\"no-referrer\" src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/r3手册-icon.png\">\n</div>\n</div>\n<style>\n    .box_3 {\n    position: relative;\n    width: 375px;\n    background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9c98133206940f49434549600e27bdb91549e7f85a299f95c5f13d4e1447889b)\n    100% no-repeat;\n    background-size: 100% 100%;\n    margin: 0 -1px 0 1px;\n    padding: 33px 38px 540px 17px;\nmargin-bottom:-30px;\n    }\n    .text-group_7 {\n    margin-bottom: 53px;\n    }\n    .paragraph_1 {\n    width: 192px;\n    height: 72px;\n    overflow-wrap: break-word;\n    color: rgba(0, 116, 129, 1);\n    font-size: 30px;\n    letter-spacing: 2px;\n    font-family: FZLANTY_CUJW--GB1-0;\n    text-align: left;\n    line-height: 36px;\n    }\n    .text_3 {\n    overflow-wrap: break-word;\n    color: rgba(133, 133, 133, 1);\n    font-size: 18px;\n    font-family: FZLANTY_CUJW--GB1-0;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 21px;\n    margin: 5px 15px 0 0;\n    }\n    .image-wrapper_1 {\n    background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng7056bf4759e4ef8680a24842b6d5d220ae5a2d4c83ec5b72872e2a69381ec370)\n    100% no-repeat;\n    background-size: 100% 100%;\n    margin-top: 51px;\n    padding: 23px 8px 22px 8px;\n    }\n    .image_7 {\n    width: 84px;\n    height: 84px;\n    }\n    .group_4 {\n    background-color: rgba(255, 255, 255, 1);\n    border-radius: 8px;\n    position: absolute;\n    left: 17px;\n    top: 171px;\n    width: 340px;\n    height: 400px;\n    padding: 56px 18px 37px 21px;\n    }\n    .text_4 {\n    height: 16px;\n    overflow-wrap: break-word;\n    color: rgba(37, 37, 37, 1);\n    font-size: 16px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 24px;\n    margin: 0 198px 0 1px;\n    }\n    .text_5 {\n    height: 16px;\n    overflow-wrap: break-word;\n    color: rgba(37, 37, 37, 1);\n    font-size: 16px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 24px;\n    margin: 29px 252px 0 1px;\n    }\n    .image_3 {\n    width: 300px;\n    height: 1px;\n    margin: 5px 0 0 1px;\n    }\n    .text_6 {\n    height: 16px;\n    overflow-wrap: break-word;\n    color: rgba(37, 37, 37, 1);\n    font-size: 16px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 24px;\n    margin: 25px 205px 0 1px;\n    }\n    .text_7 {\n    height: 16px;\n    overflow-wrap: break-word;\n    color: rgba(217, 217, 217, 1);\n    font-size: 16px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 24px;\n    margin: 29px 188px 0 1px;\n    }\n    .image_4 {\n    width: 300px;\n    height: 1px;\n    margin: 5px 0 0 1px;\n    }\n    -text_8 {\n    width: 102px;\n    margin: 9px 198px 0 1px;\n    }\n    .image-text_8 {\n    width: 102px;\n    margin: 9px 198px 0 1px;\n    }\n    .checkbox_1 {\n    border-radius: 3px;\n    width: 16px;\n    height: 16px;\n    border: 1px solid rgba(217, 217, 217, 1);\n    }\n    .text-group_2 {\n    height: 12px;\n    overflow-wrap: break-word;\n    color: rgba(48, 134, 45, 1);\n    font-size: 12px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 18px;\n    margin-top: 2px;\n    }\n    .text-wrapper_1 {\n    background-color: rgba(0, 116, 129, 1);\n    border-radius: 25px;\n    margin: 20px 0 0 1px;\n    padding: 17px 74px 17px 74px;\n    }\n    .text_17 {\n    height: 16px;\n    overflow-wrap: break-word;\n    color: rgba(255, 255, 255, 1);\n    font-size: 16px;\n    font-family: SourceHanSansCN-Regular;\n    font-weight: normal;\n    text-align: right;\n    white-space: nowrap;\n    line-height: 24px;\n    }\n    .group_11 {\n    background-color: rgba(0, 116, 129, 1);\n    border-radius: 15px;\n    position: absolute;\n    left: 27px;\n    top: 156px;\n    width: 100px;\n    height: 30px;\n    padding: 2px 10px 3px 3px;\n    }\n    .image-text_9 {\n    width: 87px;\n    }\n    .label_2 {\n    width: 25px;\n    height: 25px;\n    }\n    .text-group_8 {\n    overflow-wrap: break-word;\n    color: rgba(255, 255, 255, 1);\n    font-size: 14px;\n    font-family: FZLANTY_CUJW--GB1-0;\n    text-align: left;\n    white-space: nowrap;\n    line-height: 17px;\n    margin-top: 5px;\n    }\n</style>","ConcatRichText":" <div class=\"block_2 flex-row\">\n          <div class=\"image-text_11 flex-row justify-between\">\n            <img\n              class=\"image_4\"\n              referrerpolicy=\"no-referrer\"\n              src=\"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/r3手册-icon.png\"\n            />\n            <span class=\"text-group_2\"\n              >Please&nbsp;scan&nbsp;this&nbsp;QR&nbsp;code&nbsp;to contact&nbsp;Team&nbsp;Leader&nbsp;in&nbsp;WeCom.</span\n            >\n          </div>\n        </div>\n\n<style>\n.page {\n  position: relative;\n  width: 375px;\n  height: 812px;\n  overflow: hidden;\n}\n\n.box_9 {\n  background-color: rgba(0, 50, 82, 1);\n}\n\n.box_10 {\n  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng6babd56e1d0ccaae2fcd381bab2e5764ee4cf028670ba54dc9e3b1d0fa3ba794)\n    100% no-repeat;\n  background-size: 100% 100%;\n}\n\n.box_11 {\n  background-color: rgba(48, 134, 45, 1);\n  border-radius: 1px;\n  width: 375px;\n  padding: 14px 14px 12px 30px;\n}\n\n.text_34 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 15px;\n  letter-spacing: -0.16500000655651093px;\n  font-family: Helvetica, \"Microsoft YaHei\", Arial, sans-serif;\n  font-weight: normal;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 18px;\n}\n\n.image_8 {\n  width: 68px;\n  height: 12px;\n  margin: 3px 0 3px 0;\n}\n\n.nav-bar_4 {\n  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngc2e69463d5c6701a197825a21d3bd22761e83eb7ee3bd5db8a7e9605d195ddb6)\n    100% no-repeat;\n  background-size: 100% 100%;\n  padding: 6px 7px 6px 8px;\n}\n\n.icon_4 {\n  width: 20px;\n  height: 20px;\n  margin: 6px 0 6px 0;\n}\n\n.text_35 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 18px;\n  font-family: Helvetica, \"Microsoft YaHei\", Arial, sans-serif;\n  font-weight: normal;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 26px;\n  margin: 3px 0 0 68px;\n}\n\n.applet-top-bar_4 {\n  width: 87px;\n  height: 32px;\n  margin-left: 2px;\n}\n\n.box_12 {\n  position: relative;\n  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnge4dc9b9ce4301af498aa447b68db010282b179d2364e791ce2f36b5f2ceb34e0)\n    100% no-repeat;\n  background-size: 100% 100%;\n  padding: 20px 17px 17px 18px;\n}\n\n.image-text_10 {\n  width: 188px;\n  align-self: center;\n}\n\n.image_2 {\n  width: 120px;\n  height: 84px;\n  margin: 0 36px 0 32px;\n}\n\n.text-group_1 {\n  width: 188px;\n  height: 48px;\n  overflow-wrap: break-word;\n  color: rgba(37, 37, 37, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: right;\n  line-height: 24px;\n}\n\n.block_3 {\n  background-color: rgba(255, 255, 255, 1);\n  border-radius: 8px;\n  margin-top: 178px;\n  position: relative;\n  padding: 46px 6px 16px 4px;\n}\n\n.grid_4 {\n  width: 330px;\n  height: 168px;\n  flex-wrap: wrap;\n}\n\n.box_13 {\n  background-color: rgba(0, 96, 152, 0.1);\n  border-radius: 8px;\n  width: 160px;\n  height: 80px;\n  margin: 0 10px 8px 0;\n  padding: 0 38px 21px 0;\n}\n\n.tag_16 {\n  background-color: rgba(0, 116, 129, 1);\n  border-radius: 8px 0px 8px 0px;\n  margin-right: 75px;\n  padding: 5px 11px 3px 10px;\n}\n\n.text_36 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 10px;\n  font-family: FZLANTY_CUJW--GB1-0;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 12px;\n}\n\n.text-wrapper_14 {\n  width: 84px;\n  height: 38px;\n  overflow-wrap: break-word;\n  font-size: 0;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: right;\n  line-height: 20px;\n  margin: 1px 0 0 38px;\n}\n\n.text_37 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: left;\n  line-height: 20px;\n}\n\n.paragraph_17 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 20px;\n}\n\n.text_38 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 20px;\n}\n\n.box_14 {\n  background-color: rgba(0, 96, 152, 0.1);\n  border-radius: 8px;\n  width: 160px;\n  height: 80px;\n  margin-bottom: 8px;\n  padding: 0 39px 21px 0;\n}\n\n.tag_17 {\n  background-color: rgba(0, 116, 129, 1);\n  border-radius: 8px 0px 8px 0px;\n  margin-right: 74px;\n  padding: 5px 11px 3px 10px;\n}\n\n.text_39 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 10px;\n  font-family: FZLANTY_CUJW--GB1-0;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 12px;\n}\n\n.text-wrapper_15 {\n  width: 83px;\n  height: 38px;\n  overflow-wrap: break-word;\n  font-size: 0;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: right;\n  line-height: 20px;\n  margin: 1px 0 0 38px;\n}\n\n.paragraph_18 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: left;\n  line-height: 20px;\n}\n\n.text_40 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 20px;\n}\n\n.box_15 {\n  background-color: rgba(0, 96, 152, 0.1);\n  border-radius: 8px;\n  width: 160px;\n  height: 80px;\n  margin: 0 10px 8px 0;\n  padding: 0 39px 21px 0;\n}\n\n.tag_18 {\n  background-color: rgba(0, 116, 129, 1);\n  border-radius: 8px 0px 8px 0px;\n  margin-right: 74px;\n  padding: 5px 11px 3px 10px;\n}\n\n.text_41 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 10px;\n  font-family: FZLANTY_CUJW--GB1-0;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 12px;\n}\n\n.text-wrapper_16 {\n  width: 83px;\n  height: 38px;\n  overflow-wrap: break-word;\n  font-size: 0;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: right;\n  line-height: 20px;\n  margin: 1px 0 0 38px;\n}\n\n.paragraph_19 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: left;\n  line-height: 20px;\n}\n\n.text_42 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 20px;\n}\n\n.box_16 {\n  background-color: rgba(0, 96, 152, 0.1);\n  border-radius: 8px;\n  width: 160px;\n  height: 80px;\n  margin-bottom: 8px;\n  padding: 0 39px 21px 0;\n}\n\n.tag_19 {\n  background-color: rgba(0, 116, 129, 1);\n  border-radius: 8px 0px 8px 0px;\n  margin-right: 74px;\n  padding: 5px 11px 3px 10px;\n}\n\n.text_43 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 10px;\n  font-family: FZLANTY_CUJW--GB1-0;\n  text-align: right;\n  white-space: nowrap;\n  line-height: 12px;\n}\n\n.text-wrapper_17 {\n  width: 83px;\n  height: 38px;\n  overflow-wrap: break-word;\n  font-size: 0;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: right;\n  line-height: 20px;\n  margin: 1px 0 0 38px;\n}\n\n.paragraph_20 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 16px;\n  font-family: SourceHanSansCN-Bold;\n  font-weight: 700;\n  text-align: left;\n  line-height: 20px;\n}\n\n.text_44 {\n  height: 38px;\n  overflow-wrap: break-word;\n  color: rgba(79, 79, 79, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 20px;\n}\n\n.section_9 {\n  background-color: rgba(255, 255, 255, 1);\n  border-radius: 8px;\n  height: 188px;\n  width: 340px;\n  position: absolute;\n  left: 0;\n  top: -143px;\n  padding: 15px 141px 113px 139px;\n}\n\n.image-wrapper_2 {\n  background: url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/484b49a3d8b341638060f5c8c5de2a1c_mergeImage.png)\n    100% no-repeat;\n  background-size: 100% 100%;\n  padding: 16px 8px 14px 6px;\n}\n\n.label_5 {\n  width: 46px;\n  height: 30px;\n}\n\n.text-wrapper_18 {\n  position: absolute;\n  left: 2px;\n  top: 73px;\n  width: 336px;\n  height: 96px;\n  overflow-wrap: break-word;\n  font-size: 0;\n  font-family: SourceHanSansCN-Heavy;\n  font-weight: 900;\n  text-align: right;\n  line-height: 24px;\n}\n\n.paragraph_21 {\n  width: 336px;\n  height: 96px;\n  overflow-wrap: break-word;\n  color: rgba(0, 116, 129, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Heavy;\n  font-weight: 900;\n  text-align: left;\n  line-height: 24px;\n}\n\n.paragraph_22 {\n  width: 336px;\n  height: 96px;\n  overflow-wrap: break-word;\n  color: rgba(37, 37, 37, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: left;\n  line-height: 24px;\n}\n\n.block_2 {\n  background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng3a6b034255a4db4ebbea5467e9f485ddcd96a3a8181f699045e1cf791b82ba2e)\n    100% no-repeat;\n  background-size: 100% 100%;\n  margin-top: 12px;\n  padding: 5px 8px 5px 4px;\n}\n\n.image-text_11 {\n  width: 328px;\n}\n\n.image_4 {\n  width: 130px;\n  height: 125px;\n}\n\n.text-group_2 {\n  width: 198px;\n  height: 42px;\n  overflow-wrap: break-word;\n  color: rgba(37, 37, 37, 1);\n  font-size: 14px;\n  font-family: SourceHanSansCN-Regular;\n  font-weight: normal;\n  text-align: right;\n  line-height: 21px;\n  margin-top: 41px;\n}\n\n.box_17 {\n  background-color: rgba(0, 116, 129, 1);\n  border-radius: 15px;\n  position: absolute;\n  left: 33px;\n  top: 172px;\n  width: 100px;\n  height: 30px;\n  padding: 2px 10px 3px 3px;\n}\n\n.image-text_12 {\n  width: 87px;\n}\n\n.label_6 {\n  width: 25px;\n  height: 25px;\n}\n\n.text-group_6 {\n  overflow-wrap: break-word;\n  color: rgba(255, 255, 255, 1);\n  font-size: 14px;\n  font-family: FZLANTY_CUJW--GB1-0;\n  text-align: left;\n  white-space: nowrap;\n  line-height: 17px;\n  margin-top: 5px;\n}\n\n</style>","MyTeamSectionLabel":{"Image":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-teamed-up.png","Alt":""},"Label":"我的团队"}},"IgnoreComponent":false,"Id":"65b4bab8-5ff6-4ade-bb00-10dc24152784"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-team-info" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Team Info","patternPartial":"organisms-r3-team-info","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-r3-team-status" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-r3-campaign-r3-team-status\organisms-r3-campaign-r3-team-status.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-r3-team-status" title="Link to Pattern">
+						R 3 Team Status
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-r3-team-status" data-patternpartial="organisms-r3-team-status" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-r3-team-status">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-r3-team-status script-id="r3-team-status"></o-r3-team-status>
+
+<script type="application/json" id="r3-team-status">
+    {"Labels":{"JoinedMembers":"已入团人数","TeamLeader":"团长","TeamMember":"团员","TeamId":"团号","ToBeConfirmed":"未入团","TeamLeaderPhone":"团长手机","TeamName":"团队名称","PhoneModal":{"Title":"请输入您的手机号","PhonePlaceholder":"请输入您的手机号","PhoneRequired":"PhoneRequired","FormatError":"FormatError","NotParticipant":"NotParticipant","OK":"确定","Cancel":"取消"}},"Data":{"CampaignId":"4","CampaignName":"R3 二期","CampaignLogo":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/R3LOGO.png","Alt":""},"TeamMembers":4,"NeedNonMembers":1,"ShareCardTitle":"{0}正邀请你一起参加R3团队赛","ShareCardImage":{"Url":"https://cdnsc1.melaleuca.com.cn/cn/images/R3/campaign-share2.jpg","Alt":""},"SharedCardPath":{"href":"/jss?item=/productstore/r3/r3-campaign/member-info","id":"{5129BC72-5C8F-40DD-96B1-6B769F20B8FE}","querystring":"","text":"","anchor":"","url":"/Melaleuca/ProductStore/China/China/Home/ProductStore/R3/R3-campaign/Member-Info","title":"","class":"","linktype":"internal"},"SharedCardUrl":"/productstore/r3/r3-campaign/member-info","ShowOnDevices":{"WebDesktop":false,"WebMobile":false,"WeChatMiniProgram":false},"LandingPage":{"href":"/jss?item=/productstore/r3/r3-campaign","text":"","anchor":"","linktype":"internal","class":"","title":"","querystring":"","id":"{14A70740-7D9E-469D-A990-D0F989EA9B20}"},"MyTeamSectionLabel":{"Image":{"Url":"https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/cn/images/R3/icon-teamed-up.png","Alt":""},"Label":"我的团队"}},"IgnoreComponent":false,"Id":"f085400d-346a-4b3c-b42d-4016d7e3fdf7"}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-r3-team-status" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"r3-campaign"},"patternExtension":"hbs","patternName":"R 3 Team Status","patternPartial":"organisms-r3-team-status","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-r3-campaign"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-r3-campaign"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770272894619">
+  (function() {
+    if (self != top) {
+      var cb = '1770272894619';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770272894619" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770272894619', function(){
+        loadJS('/js/vue-pci.js?1770272894619', function(){
+          loadJS('/js/vendor-pci.js?1770272894619', function(){
+            loadJS('/js/pci.js?1770272894619', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770272894619', function(){
+        loadJS('/js/vue-main.js?1770272894619', function(){
+          loadJS('/js/vendor.js?1770272894619', function(){
+            loadJS('/js/index.js?1770272894619', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

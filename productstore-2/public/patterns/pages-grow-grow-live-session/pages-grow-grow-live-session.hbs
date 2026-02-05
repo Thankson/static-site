@@ -1,0 +1,32 @@
+{{> organisms-site-header-grow }}
+
+<div class="bg-gray-25 pb-60">
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  <div class="mb-10 md:mb-20">
+    {{#with heroCarousel}}
+      {{> organisms-hero-carousel}}
+    {{/with}}
+  </div>
+
+  {{> molecules-tabs-links}}
+
+  <div class="o-widthControl mx-auto w-full max-w-full md:max-w-md to-md:px-10 md:mt-50">
+    {{#with LiveSession}}
+      {{> organisms-grow-live-session }}
+    {{/with}}
+    {{#with LiveSession2}}
+      {{> organisms-grow-live-session }}
+    {{/with}}
+  </div>
+</div>
+
+{{#with BadgeModal}}
+  {{> organisms-badge-modal}}
+{{/with}}
+
+{{> organisms-site-footer }}

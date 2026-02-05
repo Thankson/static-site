@@ -1,0 +1,101 @@
+{{#FWBanner}}
+  <article class="m-fwBanner {{BlockHeight}} {{#if IsSlide}}-slide{{/if}} {{#if StackAtMobile}}-stackMobile{{/if}} {{#if Has.VideoToggle}}-videoToggle -audioVideoSlide{{/if}} {{#if Has.ImageGrid}}-imageGrid{{/if}}" data-testid="article-fullWidthBanner">
+    <div class="m-fwBanner__row -media">
+      <!-- Start: Media block -->
+      <!-- images -->
+      {{#if Has.BgColor}}
+        {{> BgColor}}
+      {{/if}}
+
+      {{#if Has.BgImages}}
+        {{>atoms-cmn-generic-img}}
+      {{/if}}
+
+      <!-- Video -->
+      {{#if Has.BgVideo}}
+        {{> BgVideo}}
+      {{/if}}
+      <!-- End: Media block -->
+    </div>
+    <div class="m-fwBanner__row -columns {{Content.Size}} {{Content.XAlign}} {{Content.YAlign}}">
+      <!-- Start: Content block -->
+      <div class="m-fwBanner__columns">
+        <div class="m-fwBanner__col -content {{InsideContent.YAlign}}">
+          <div class="m-fwBanner__rte">
+            <div class="m-rte">
+              {{{RTE}}}
+            </div>
+          </div>
+
+          {{#if Has.VideoToggle}}
+            {{#if ToggleVideo.PlayButton}}
+              <div class="m-fwBanner__col">
+                <o-vid-curate-ctrl script-id="{{UniqueScriptID}}" :is-video-btn="true" class="m-fwBanner__videoCurateControl  {{Content.XAlign}} {{Content.YAlign}}">
+                  {{#with ToggleVideo.PlayButton}}
+                    {{Text}} {{#with Arrow}} {{>atoms-arrow}} {{/with}}
+                  {{/with}}
+                </o-vid-curate-ctrl>
+              </div>
+            {{/if}}
+          {{/if}}
+
+          {{#if Has.CTAButton}} {{#with CTA}}
+              <div class="m-fwBanner__cta {{ButtonXAlign}}">
+                {{> atoms-cmn-author-btn}}
+              </div>
+            {{/with}} {{/if}}
+        </div>
+
+        {{#if Has.VideoToggle}}
+          <div class="m-fwBanner__col -video">
+            <o-vid-curate-ctrl script-id="{{UniqueScriptID}}" :is-video-btn="true" class="m-fwBanner__videoCurateControl  {{Content.XAlign}} {{Content.YAlign}}">
+              {{#with ToggleVideo.Icon}}
+                <span {{#if HexColor}} style="color: {{HexColor}};" {{/if}} class="a-playCircle {{IconFontSize}} {{IconColor}} material-icons">play_circle_outline</span>
+              {{/with}}
+            </o-vid-curate-ctrl>
+          </div>
+        {{/if}}
+      </div>
+      <!-- End: Content block -->
+    </div>
+
+    <script type="application/json" id="{{UniqueScriptID}}">{{toJson Localization}}</script>
+  </article>
+
+{{/FWBanner}}
+
+{{!-- Start: Background Color --}}
+{{#*inline "BgColor"}}
+  <div class="m-fwBanner__bgColor" style="background: {{{BgColorCode}}};">
+  </div>
+{{/inline}}
+{{!-- End: Background Color --}}
+
+{{!-- Start: Background Images --}}
+{{#*inline "BgImages"}}
+  {{#with Images.Bg}}
+    {{#unless ../../Has.BgVideo}}
+      {{!-- Only display desktop image if there is no background video to play --}}
+      <div class="m-fwBanner__bgImage -desktop {{DeskPositionX}} {{DeskPositionY}}" style="background-image: url('{{{DeskImg}}}');" role="img" aria-label="{{DeskAriaLabel}}">
+      </div>
+    {{/unless}}
+
+    <div class="m-fwBanner__bgImage -mobile {{MobilePositionX}} {{MobilePositionY}}" style="background-image: url('{{{MobileImg}}}');" role="img" aria-label="{{MobileAriaLabel}}">
+    </div>
+  {{/with}}
+{{/inline}}
+{{!-- End: Background Images --}}
+
+{{!-- Start: Background Video --}}
+{{#*inline "BgVideo"}}
+  <div class="m-fwBanner__bgVideo">
+    <video muted autoplay loop poster="{{BgVideo.Poster}}" aria-label="{{BgVideo.Description}}">
+      <source src="{{BgVideo.WebM}}" type="video/webm" />
+      <source src="{{BgVideo.Mp4}}" type="video/mp4" />
+    </video>
+    {{#with PlayPauseButton}}
+      {{> atoms-cmn-play-pause}}
+    {{/with}}
+  </div>
+{{/inline}}
+{{!-- End: Background Video --}}

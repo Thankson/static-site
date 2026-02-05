@@ -1,0 +1,22 @@
+<modal :visible="true" heading-class="o-modalCallCustomerService__heading" class="o-modalCallCustomerService" width="530px" data-testid="modal-accountOnHold">
+  <template v-slot:heading>
+    Account On Hold
+  </template>
+
+  <template v-slot:body>
+    <p class="o-modalCallCustomerService__description">Your <b>account</b> is on hold and cannot proceed to Grow Suit. Please call customer service at ###-###-#### to remove the hold</p>
+  </template>
+
+  <template v-slot:footer>
+    <div class="o-modalCallCustomerService__footer">
+      <v-button v-modal-hide class="o-modalCallCustomerService__backButton" data-testid="button-accountOnHoldBack">
+        Back
+      </v-button>
+
+      <v-button href="tel:###-###-####" target="_blank" :is-anchor="true" class="o-modalCallCustomerService__callCustomerServiceButton">
+        CALL CUSTOMER SERVICE
+      </v-button>
+
+    </div>
+  </template>
+</modal>

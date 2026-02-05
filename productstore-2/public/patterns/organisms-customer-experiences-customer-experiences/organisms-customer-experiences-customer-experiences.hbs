@@ -1,0 +1,33 @@
+{{#CustomerExperience}}
+  <ul class="flex flex-wrap mx-auto pt-30 max-w-contain px-10 to-lg:justify-between xl:px-0">
+    {{#each Review}}
+      <li class="w-full sm:w-1_2 min-w-270 sm:pr-15 md:pr-48 xl:max-w-375 ">
+        {{> molecules-customer-experience-card}}
+      </li>
+    {{/each}}
+  </ul>
+
+  <div class="text-center">
+    {{#with LoadMoreButton}}
+      {{> atoms-button}}
+    {{/with}}
+  </div>
+
+  <div class="mx-auto pt-30 max-w-contain px-10 xl:px-0">
+    <customer-exp-form :form-field-title="{
+                name: 'reviewTitle',
+                label: 'Story Title'
+            }" :form-field-content="{
+                name: 'reviewContent',
+                label: 'Write your Story'
+            }" share-button-title="Share your stories" submit-text="Submit" :success="{
+                title: 'Thank You!',
+                message: 'We’ve received your story and it is currently being reviewed. Watch for your story to be posted once it’s approved.'
+            }" :terms="{
+                content: 'Before submitting your experience you agree and understand that all experiences or other materials (“Content”) submitted to, transmitted through, or linked from www.melaleuca.com, (i) is your sole responsibility, and (2) is truthful, accurate and not misleading. You also agree and acknowledge that Melaleuca shall have the right at its discretion to refuse, edit, delete or move any Content that is submitted for any reason.',
+
+                labelBegin: 'Agree to',
+                labelEnd: 'Terms'
+            }"></customer-exp-form>
+  </div>
+{{/CustomerExperience}}

@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="pageType" content="Home" />
+  <title>Melaleuca Pattern Lab</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+  <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+  <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+  <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all" />
+  <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SG/MY Noto Sans SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+  <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+  <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+  <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+  <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+  <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+  <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+  <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+  <script>
+    dataLayer = [{
+      'userLogged': true,
+      'warehouseGroup': 'IdahoFalls',
+      'uiCulture': 'en-us'
+    }];
+
+    customerData = [{
+      canPurchaseRestrictedPacks: false,
+      isAuthenticated: true,
+      isGuest: false,
+      isGuestShoppingEnabled: false,
+      lvipStatus: "",
+      viewLists: true,
+      viewMemberPricing: true,
+      viewPoints: false,
+      country: "UnitedStates",
+      culture: "en-US",
+      uiCulture: "en-US",
+      customerID: 1016042303,
+      customerName: "Direct Tester",
+      businessName: "Direct Tester",
+      customerFullName: "John Doe",
+      formattedName: "Direct Tester",
+      customerType: "Employee",
+      customerPriceType: "Regular",
+      status: "Customer",
+      hasIMEA: true
+    }];
+  </script>
+  <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+  <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't need conditional in prod
+      if (document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        // Reviews for the PDP
+        pwr("render", {
+          // For performance enhancement
+          enable_content_collection_modal: false,
+          api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+          locale: 'en_US',
+          merchant_group_id: '507179823',
+          merchant_id: '1561128198',
+          // Usually is the sku number
+          page_id: '650',
+          // Page to write reviews
+          review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+          'product': {
+            'name': 'Energy Shot 12–Pack',
+            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+            'description': 'Energy Shot 12–Pack',
+            'category_name': 'Healthy Foods and Drinks',
+            'variants': [{
+              'name': 'Energy Shot 12–Pack',
+              'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+              'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+              'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+              'category_name': 'Healthy Foods and Drinks',
+              'page_id_variant': '5859'
+            }]
+          },
+          on_render: function() {
+            if (window.PDPReviews) {
+              window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+            }
+          },
+          components: {
+            ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+            ReviewDisplay: 'pr-reviewdisplay'
+          }
+        });
+      } else if (document.getElementsByClassName('p-ratingReview').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        pwr("render", {
+          api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+          locale: 'en_us',
+          pr_locale: '.en_us',
+          merchant_group_id: '1968628287',
+          merchant_id: '1683664767',
+          appName: 'ryp',
+          emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+          components: {
+            ReviewYourPurchases: 'pr-write'
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+  </script>
+
+  <!-- Begin convertlab -->
+  <script>
+    enableConvertLabFeatureFlag = false;
+    if (window.enableConvertLabFeatureFlag) {
+      clDataLayer = {
+        'pageType': 'web'
+      };
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || {};
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+      window.addEventListener("load", (event) => {
+        if (window.clab_tracker) {
+          window.clab_tracker.ready(function() {
+            this.push(clDataLayer);
+          });
+          window.clab_tracker.setEnableAutoTrackExitPage(false);
+        }
+      });
+    }
+  </script>
+  <!-- End convertlab -->
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+<!-- n.b. <body> is intentionally not closed: -->
+
+<body class="pl-body relative ">
+  <script>
+    if (typeof _etmc !== 'undefined') {
+      window._etmc = _etmc;
+      _etmc.push(['setOrgId', '1036137']);
+      _etmc.push(['trackPageView']);
+    }
+  </script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+  <!-- n.b. <div> is intentionally not closed: -->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {
+        "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+        "Country": "UnitedStates",
+        "CurrencyCode": "USD",
+        "HidePoints": false,
+        "HideAllPowerReviews": false,
+        "IsCn": false,
+        "ProductPricing": {
+          "HideProductMemberPrice": false,
+          "HideProductNonMemberPrice": false
+        }
+      }
+    </script>
+    <header class="o-siteHeader -checkout">
+      <div class="o-siteHeader__row -main">
+        <div class="o-siteHeader__col -nav">
+          <!-- START 11283, 19631 (refactoring) - Nav-menu -->
+          <nav class="m-navMenu" aria-labelledby="m-navMenu__toggle" data-testid="nav-menu">
+
+            <button id="m-navMenu__toggle" class="m-navMenu__toggle" aria-controls="m-navMenu" aria-expanded="false" aria-label="" data-label-escape-key="" data-testid="button-menu">
+              <span class="m-navMenu__toggleIcon" data-testid="span-iconMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
+                </svg>
+                <span class="m-navMenu__text">Menu</span>
+              </span>
+            </button>
+
+            <div class="m-navMenu__content-wrapper" aria-hidden="true" tabindex="-1">
+              <div class="m-navMenu__content -left" id="m-navMenu">
+                <div class="m-navMenu__inner">
+                  <div class="m-navMenu__scroll">
+
+                    <!-- Header -->
+                    <div class="m-navMenu__header">
+                      <div class="m-navMenu__header-content">
+                      </div>
+                      <span class="divisor" aria-hidden="true"></span>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Mobile Only and Logged -->
+                    <!-- End Mobile Only -->
+
+                    <!-- MENU LEVEL 1 -->
+                    <ul class="m-navMenu__list -lvl1" id="m-navMenu__lvl1" data-testid="unorderedList-menuTopList">
+
+
+                    </ul>
+                    <!-- End Categories (menu level 1) -->
+
+                    <!-- Riverbend Link -->
+                    <!-- End Riverbend Link -->
+
+                    <!-- Footer -->
+                    <span class="divisor -footer" aria-hidden="true"></span>
+                    <div class="m-navMenu__footer" data-testid="container-menuFooter">
+                      <div class="m-navMenu__footer-content">
+                        <ul class="m-navMenu__list -lvl1">
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- End Footer -->
+
+                    <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl1" aria-label="" tabindex="-1">
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Close Button -->
+              <div class="m-navMenu__close -root">
+                <button class="m-navMenu__close-btn" aria-label="" tabindex="-1">
+                  <span aria-hidden="true" class="m-navMenu__close-icon" data-testid="span-navMenuClose">close</span>
+                </button>
+              </div>
+              <!-- End Close Button -->
+
+              <div class="m-navMenu__overlay"></div>
+            </div>
+          </nav>
+          <!-- END 11283, 19631 (refactoring) - Nav-menu -->
+        </div>
+
+        <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+          <a href="https://www.melaleuca.com/" class="block">
+            <img class="o-siteHeader__image" src="//cdnsc1.melaleuca.com/na/images/header/leaf-drop-logo2x.png" alt="Melaleuca Logo">
+          </a>
+        </div>
+
+        <div class="o-siteHeader__col -title">
+          <h1 class="font-bold text-center text-white text-2xl uppercase ">Checkout</h1>
+        </div>
+
+        <div class="o-siteHeader__col -actions" data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+          <m-cart-icon script-id="CartIconId" data-testid="icon-CartIcon"></m-cart-icon>
+          <script type="application/json" id="CartIconId">
+            {
+              "Labels": {
+                "CartLabel": "View My Cart"
+              },
+              "Data": {
+                "CartUrl": "/?p=pages-cart",
+                "CartTotalItems": "14"
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="bg-gray-25">
+
+      <p-receipt script-id="CheckoutPage">
+        <template v-slot:credit-ad>
+          <m-credit-card-ads :is-modal="true" background-color="rgb(232, 206, 158)"></m-credit-card-ads>
+        </template>
+        <template v-slot:items>
+        </template>
+        <template v-slot:coupon-reminder>
+        </template>
+
+      </p-receipt>
+
+      <script type="application/json" id="CheckoutPage">
+        {
+          "Id": "CheckoutPage",
+          "Labels": {
+            "BackupOrder": {
+              "LinkText": "Make it your Customized Backup Order",
+              "PreLinkText": "Love the products in this order?",
+              "ModalHeader": "Some items could not be added to your Backup Order.",
+              "ModalUnavailableProductsFootNotes": "*由于库存不足、产品限时购买、数量限制等原因，无法添加该产品。"
+            },
+            "BecomeMember": {
+              "Link": {
+                "Target": "",
+                "Text": "Get Started",
+                "Url": "#"
+              },
+              "Title": "Become a Member <span class=\"block leading-tight uppercase font-normal text-3xl md:text-4xl\">and sabe 30-50% off this order!</span>",
+              "Text": "Enjoy all the benefits of being a Member including product discounts, exclusive coupons, a loyalty earning program, and much more."
+            },
+            "CartItem": {
+              "Points": "Points",
+              "Remove": "Remove",
+              "Save": "Save for later",
+              "Edit": "Edit",
+              "Preferred": "Preferred",
+              "Regular": "Regular",
+              "Savings": "Savings",
+              "LsdLabel": "Buy with Loyalty Shopping Dollars",
+              "CcLabel": "Use Convenience Certificates",
+              "LsdTooltip": "<p>Looks like you don’t have any Loyalty Shopping Dollars to use.</p><a href=\"#\" class=\"text-green-100 font-bold\">LEARN MORE</a>",
+              "LsdTooltipVariant": "<p>You must have at least one item in your order that does not use Loyalty Shopping Dollars.</p><a href=\"#\" class=\"text-green-100 font-bold\">KEEP SHOPPING</a>",
+              "ItemRemoved": "This item has been removed.",
+              "UndoRemove": "Undo",
+              "ItemSaved": "This item has been moved to",
+              "SavedForLater": "Saved For Later"
+            },
+            "CartSummary": {
+              "Free": "FREE",
+              "CcTotal": "Convenience Certificates<br />used this order",
+              "CoaTotal": "Credit on Account<br /> used this order",
+              "Heading": "ORDER SUMMARY",
+              "ItemTotal": "Item Total",
+              "LsdTotal": "Loyalty Shopping Dollars<br />used this order",
+              "Total": "Total",
+              "PlaceOrder": "Place Order",
+              "Points": "Points",
+              "SalesTax": "Sales Tax",
+              "ShippingTaxes": "Shipping & Handling",
+              "AsPreferred": "As a Preferred Member,",
+              "YouSaved": "You saved {0}",
+              "SubTotal": "Subtotal",
+              "WelcomeFreeProductsUsedInThisOrder": "<span><a class=\"underline\" href=\"/Rewards Page/Free Product\">$25 Free Products</a><br>used this order</span>"
+            },
+            "ConvenienceStore": {
+              "CompanyNumber": "Company Number",
+              "ConvenienceStoreTitle": "Convenience Store",
+              "PaymentMethod": "Payment Method",
+              "PaymentSlipNumber": "Payment Slip Number",
+              "PaymentDeadline": "Payment Deadline",
+              "StoreName": "Store Name"
+            },
+            "Estimated": {
+              "OrderDate": "Order Date:",
+              "OrderNumber": "Order Number:",
+              "Title": "Estimated arrival:",
+              "Backdate": "(This order was applied to {0})"
+            },
+            "GUI": {
+              "CarrierNumber": "Carrier Number:",
+              "CarrierType": "Carrier Type:",
+              "InvoiceInformation": "Invoice Information",
+              "InvoiceIssueDate": "Invoice Issue Date:",
+              "InvoiceReminder": "If it is an electronic invoice, it will not be sent directly. Please contact the business consultation hotline/or the provincial living center to check the content of the invoice or ask for the original. (Approval number of the Fiscal Information Center of the Ministry of Finance: Zidianzi No. 1071005217)",
+              "InvoiceTrackNumber": "Invoice Track Number:",
+              "LoveCode": "Love Code:",
+              "RandomCode": "Random Code:",
+              "Title": "Thank you, the invoice for this order has been issued."
+            },
+            "Items": {
+              "Title": "Your Items",
+              "Points": "Points",
+              "Quantity": "Qty"
+            },
+            "Lsd": {
+              "Balance": "New balance:",
+              "Earned": "Earned this order:",
+              "Title": "Loyalty Shopping Dollars",
+              "AvailableToActivate": "Available to Activate:",
+              "AvailableToSpend": "Available to Spend:",
+              "ToSpend": "To Spend",
+              "EarnedThisOrder": "Earned On This Order",
+              "ExpiringThisMonth": "Expiring This Month",
+              "ReimbursedInLsd": "{0} reimbursed in Loyalty Shopping Dollars"
+            },
+            "PackageInformation": {
+              "NoShipMethod": "No ship method"
+            },
+            "ReadMore": {
+              "AriaLabel": "Read More",
+              "Preview": "How are shipping & handling costs calculated?",
+              "Text": "Standard shipping (UPS) costs are calculated at $3.90 + 5.4% of the order subtotal for shipments in the continental U.S., $4.90 + 5.4% of subtotal for shipments to Canada and Puerto Rico, or $7.90 + 5.4% of subtotal for shipments to Hawaii and Alaska. Orders with Loyalty Shopping Dollar items add an additional $1.00 + 5.4% of your Loyalty Shopping Dollars subtotal. All orders also have a slight fuel surcharge that varies with the price of fuel. Additional charges apply for upgraded packages."
+            },
+            "Shipping": {
+              "Title": "Shipping",
+              "GetBy": "Get it by"
+            },
+            "ShippingOnUs": {
+              "More": "More",
+              "Less": "Less",
+              "ShippingBack": "Shipping back in Loyalty Shopping Dollars",
+              "Variation1": {
+                "Title": "Shipping on us!",
+                "PointsAway": "Shop for {0}+ Product Points on your next order and get"
+              },
+              "Variation2": {
+                "Title": "Congratulations!",
+                "ThresholdMessage": "You You have qualified for {0} Shipping On Us!",
+                "ThresholdMessageNotGround": "You have earned {0} in Loyalty Shopping Dollars through <strong>SHIPPING ON US</strong>."
+              }
+            },
+            "ShipTo": {
+              "Title": "Ship To"
+            },
+            "PayWith": {
+              "Title": "Pay With",
+              "Expire": "Expires",
+              "RapDeposit": {
+                "RapDeposit": "Rap Deposit",
+                "ServiceNumber": "Service Number",
+                "ReferenceNumber": "Reference Number",
+                "Status": "Status"
+              }
+            },
+            "PayMethod": {
+              "CancelOrderLabel": "Online Payment",
+              "COALabel": "Credit on Account",
+              "CashLabel": "Cash",
+              "WireTransferFromCustomerLabel": "Wire Transfer",
+              "LSDUsedLabel": "LSD Used",
+              "VirtualPaymethod": {
+                "VirtualAccountText": "Virtual Account",
+                "NameOfBank": "Name of Bank",
+                "Number": "Number",
+                "DepositDeadline": "Deposit Deadline",
+                "Year": "년",
+                "Month": "월",
+                "Day": "일",
+                "Hour": "시",
+                "Minutes": "분"
+              }
+            },
+            "Payment": "Payment",
+            "Print": "Print my receipt",
+            "Cancel": "Cancel Order",
+            "GSTLabel": "{0}% GST Inclusive",
+            "PendingPaymentModal": {
+              "CongratulationText": "Congratulation",
+              "PendingPaymentModalText": "<div>Payment for Order {0} is pending. </div>\n<div>\nOnce your  payment  is received,your account will officially be reactivated.\n</div>",
+              "CloseButtonText": "Close"
+            }
+          },
+          "Data": {
+            "ShowCfdiProductInvoice": false,
+            "ShowGui": true,
+            "ShippingOnUsTrackerId": "123",
+            "IsShippingCrossCountry": false,
+            "IsOleCheckoutFlow": true,
+            "HideDollarsToActivate": false,
+            "HideBuoLink": true,
+            "HideSalesTax": false,
+            "ShowPayLink": true,
+            "ShowCancelLink": true,
+            "OrderSubType": false,
+            "BackupOrderPageLink": {
+              "Text": "Continue",
+              "Url": "#backorder"
+            },
+            "CartShopping": {
+              "ContinueShoppingLink": {
+                "Text": "Continue Shopping",
+                "Url": "#"
+              },
+              "PageTitle": "Shopping Cart"
+            },
+            "CartSummary": {
+              "CheckoutLink": {
+                "Text": "PROCEED TO CHECKOUT",
+                "Url": "/checkout"
+              }
+            },
+            "CancelModel": {
+              "Title": "Are you sure you want to cancel this order?",
+              "Description": "This order no longer counts towards your reading commitment",
+              "CancelBtn": "Cancel Order",
+              "KeepbBtn": "Keep Order"
+            },
+            "Cfdi": {
+              "ButtonAriaLabel": "Request your CFDI",
+              "ButtonText": "Request your CFDI",
+              "ButtonSaveAsDefault": "Save as default for future orders",
+              "DefaultSaved": "Default Saved",
+              "TaxReceiptEmailMissingText": "In order to receive your certified invoice, please make sure your email address is listed on your account. <br>\nVisit <a href=\"~/link.aspx?_id=3A496633FC0A4AF69736F5FAFD1F8D69&amp;_z=z\"> MyAccount</a> to add your email address yo your file",
+              "TaxReceiptSentText": "Your Digital Tax Receipt has been sent to <a href=\"mailto:\">Mailbox E</a>",
+              "TaxReceiptText": "In order to receive your certified invoice it is necessary that you have created account in <a href=\"mailto:\">Mailbox E</a>. <br>\nThe Digital Tax Receipt can <strong>  only be requested in the first 10 days after paying your order.</strong>",
+              "TaxReceiptTitle": "Digital Tax Receipt",
+              "TaxReceiptUnavailable": "Your Digital Tax Receipt is not available.",
+              "TaxReceiptDuplicate": "A digital tax receipt has already been requested for this order",
+              "SaveDefaultCertificateError": "Error in saving the default option",
+              "ChooseCertificate": "Choose Your CFDI Certificate",
+              "MostCommonRegime": "Most commonly used Regimes: ",
+              "AdditionalRegime": "Additional Regimes: ",
+              "DefaultCertificate": "604",
+              "Certificates": {
+                "Common": {
+                  "601": "<span class=\"font-medium text-black\">601</span><span class=\"mx-4\"> - </span>(Corporation) General de Ley Personas Morales",
+                  "602": "<span class=\"font-medium text-black\">602</span><span class=\"mx-4\"> - </span>General de Ley Personas Morales de Ley Personas Morales de Ley Personas Morales 2",
+                  "603": "<span class=\"font-medium text-black\">603</span><span class=\"mx-4\"> - </span>General de Ley Personas Morales 3",
+                  "604": "<span class=\"font-medium text-black\">604</span><span class=\"mx-4\"> - </span>General de Ley Personas Morales 4"
+                },
+                "Additional": {
+                  "611": "<span class=\"font-medium text-black\">611</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 1",
+                  "612": "<span class=\"font-medium text-black\">612</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 2",
+                  "613": "<span class=\"font-medium text-black\">613</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 3",
+                  "614": "<span class=\"font-medium text-black\">614</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 4",
+                  "615": "<span class=\"font-medium text-black\">615</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 5",
+                  "616": "<span class=\"font-medium text-black\">616</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales 6",
+                  "617": "<span class=\"font-medium text-black\">617</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales de Ley Personas Morales 7",
+                  "618": "<span class=\"font-medium text-black\">618</span><span class=\"mx-4\"> - </span>Additional de Ley Personas Morales de Ley Personas Morales8"
+                }
+              },
+              "ContinueShopping": {
+                "Text": "Keep Shopping",
+                "Url": "#"
+              },
+              "Lsd": {
+                "Balance": "$30.00",
+                "Earned": "$10.00"
+              },
+              "MeleleucaServiceNumber": "8001",
+              "OrderId": "123456",
+              "ReadMore": {
+                "Text": "Read More",
+                "Url": "#"
+              },
+              "ReadLess": {
+                "Text": "Read Less",
+                "Url": "#"
+              },
+              "ShippingOnUsDetailsLink": {
+                "Text": "Details",
+                "Url": "#"
+              }
+            },
+            "ContinueShopping": {
+              "Text": "Keep Shopping",
+              "Url": "#"
+            },
+            "Installments": [{
+              "Text": "Lump Sum",
+              "Value": "0"
+            }, {
+              "Text": "2 months ",
+              "Value": "1"
+            }, {
+              "Text": "3 months",
+              "Value": "2"
+            }, {
+              "Text": "4 months",
+              "Value": "3"
+            }, {
+              "Text": "5 months",
+              "Value": "4"
+            }, {
+              "Text": "6 months",
+              "Value": "5"
+            }],
+            "ShowGSTBelowTotal": true
+          },
+          "Items": {
+            "CheckoutItems": [{
+              "ImgSrc": "https://placehold.co/70x70.jpg",
+              "ImgAlt": "Author Defined",
+              "Product": "Lemon Brite<sup>®</sup> Hand Dishwashing Liquid 3-Pack",
+              "ProductType": "Lemon, Lemon, Apple, Apple, Grapefruit, Lemon",
+              "Price": "$0.00",
+              "Points": "6 Points",
+              "Qty": "Qty 2"
+            }, {
+              "ImgSrc": "https://placehold.co/70x70.jpg",
+              "ImgAlt": "Author Defined",
+              "Product": "Renew<sup>®</sup> Intensive Skin Therapy",
+              "ProductType": "8 fl oz, Original Scent",
+              "Price": "$100.00",
+              "Points": "30 Points",
+              "Qty": "Qty 10"
+            }, {
+              "ImgSrc": "https://placehold.co/70x70.jpg",
+              "ImgAlt": "Author Defined",
+              "Product": "Activate-C™ Raspberry Immune Complex Special",
+              "ProductType": "Raspberry, Raspberry Raspberry, Raspberry",
+              "Price": "$20.00",
+              "Points": "6 Points",
+              "Qty": "Qty 2"
+            }, {
+              "ImgSrc": "https://placehold.co/70x70.jpg",
+              "ImgAlt": "Author Defined",
+              "Product": "Buy one MelaPower Laundry Detergent, get one for $2.99!",
+              "ProductType": "48 Load, Garden Lavender, Garden Lavender",
+              "Price": "$10.00",
+              "Points": "3 Points",
+              "Qty": "Qty 1"
+            }, {
+              "ImgSrc": "https://placehold.co/70x70.jpg",
+              "ImgAlt": "Author Defined",
+              "Product": "Buy one Sun Valley Foaming Hand Soap, get one FREE!",
+              "ProductType": "Mint & Herb, Mint & Herb",
+              "Price": "$10.00",
+              "Points": "3 Points",
+              "Qty": "Qty 1"
+            }],
+            "LSD": {
+              "Title": "Loyalty Shopping Dollars",
+              "Earned": "Earned this order:",
+              "EarnedAmount": "$10.00",
+              "Balance": "New balance:",
+              "BalanceAmount": "$30.00"
+            },
+            "Backup": {
+              "Question": "Love the products in this order?",
+              "Link": "#",
+              "LinkText": "Make it your Customized Backup Order"
+            }
+          }
+        }
+      </script>
+
+    </div>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "organisms-checkout-bottom",
+        "lineagePath": "../../patterns/organisms-checkout-checkout-bottom\\organisms-checkout-checkout-bottom.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "organisms-checkout-bottom",
+        "lineagePath": "../../patterns/organisms-checkout-checkout-bottom\\organisms-checkout-checkout-bottom.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "receipt"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Receipt Credit Card Banner",
+      "patternPartial": "pages-receipt-credit-card-banner",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "organisms-checkout-bottom",
+        "lineagePath": "../../patterns/organisms-checkout-checkout-bottom\\organisms-checkout-checkout-bottom.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "organisms-checkout-bottom",
+        "lineagePath": "../../patterns/organisms-checkout-checkout-bottom\\organisms-checkout-checkout-bottom.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "receipt"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Receipt Credit Card Banner",
+      "patternPartial": "pages-receipt-credit-card-banner",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770272894619">
+    (function() {
+      if (self != top) {
+        var cb = '1770272894619';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770272894619" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    };
+  </script>
+  <!-- Check for PCI components on the page to determine which bundles to load -->
+  <script>
+    (function() {
+      // Detect if this page needs PCI bundles
+      var isPciPage = false;
+
+      // Check for PCI component tags
+      if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+        isPciPage = true;
+      }
+
+      // Check for PCI routes/patterns
+      var path = window.location.pathname.toLowerCase();
+      if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+        isPciPage = true;
+      }
+
+      // Check for explicit PciMode flag (from Pattern Lab JSON)
+      if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+        isPciPage = true;
+      }
+
+      function loadJS(src, cb) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        if (cb) s.onload = cb;
+        document.body.appendChild(s);
+      }
+
+      if (isPciPage) {
+        // PCI path - load CSP-compliant bundles
+        console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+        loadJS('/js/runtime-pci.js?1770272894619', function() {
+          loadJS('/js/vue-pci.js?1770272894619', function() {
+            loadJS('/js/vendor-pci.js?1770272894619', function() {
+              loadJS('/js/pci.js?1770272894619', function() {
+                console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
+              });
+            });
+          });
+        });
+      } else {
+        // Non-PCI path - load full-featured bundles
+        console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+        loadJS('/js/runtime.js?1770272894619', function() {
+          loadJS('/js/vue-main.js?1770272894619', function() {
+            loadJS('/js/vendor.js?1770272894619', function() {
+              loadJS('/js/index.js?1770272894619', function() {
+                console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+              });
+            });
+          });
+        });
+      }
+    }());
+  </script>
+  <script>
+    (function() {
+      var loadProfile = document.getElementsByClassName('o-loadProfile');
+      if (!loadProfile.length) return;
+      var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var r = document.getElementsByClassName('o-loadProfile__retry');
+
+      function show() {
+        f && f.classList.remove('-isHidden');
+      }
+      if (r.length) r[0].addEventListener('click', function() {
+        window.location.reload();
+      });
+      setTimeout(show, 10000);
+    }());
+  </script>
+
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    }
+  </script>
+  <!--For Ralleyware pages and widgets-->
+  <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+  <script>
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+    if (loadProfile.length) {
+      var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+      function showFooter() {
+        loadProfileFooter.classList.remove('-isHidden');
+      };
+
+      if (retryBtn.length) {
+        retryBtn[0].addEventListener('click', function(event) {
+          window.location.reload();
+        });
+      }
+
+      setTimeout(showFooter, 10000);
+    }
+  </script>
+</body>
+
+</html>

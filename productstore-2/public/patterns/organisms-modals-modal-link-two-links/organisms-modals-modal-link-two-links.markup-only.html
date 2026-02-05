@@ -1,0 +1,21 @@
+<modal :visible="true" width="370px">
+  <template v-slot:heading>
+    It looks like you may have an unpaid balance. We're sure it's something simple.
+  </template>
+
+  <template v-slot:body>
+    <div class="flex flex-col"><img width="120" height="120" class="pb-20" src="//cdnsc1test.melaleuca.com/cdn-cgi/image/width=200height=200,quality=85/global/products/6617h-01-enus.png" alt="Renew® Intensive Skin Therapy: Value Size 2-Pack (Pump sold separately)">
+      <h2 class="text-2xl leading-base pb-10"> Welcome Back! </h2>
+      <p>A Free {0} has been added to your shopping cart</p>
+    </div>
+  </template>
+
+  <template v-slot:footer>
+    <a href="/cart" class="a-button -white -small rounded-full py-10 px-16 mr-5">
+      View Cart
+    </a>
+    <a href="/" class="a-button -small rounded-full py-10 px-16 ml-5">
+      Keep Shopping
+    </a>
+  </template>
+</modal>

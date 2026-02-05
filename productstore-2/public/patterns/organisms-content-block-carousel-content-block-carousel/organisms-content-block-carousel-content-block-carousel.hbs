@@ -1,0 +1,19 @@
+<section aria-roledescription="carousel" aria-label="{{CarouselDescription}}" style="background-color: {{BgColor}}">
+  <div class="o-contentBlockCarousel">
+    <div class="o-contentBlockCarousel__actions">
+      <div class="o-contentBlockCarousel__dots">
+        <button class="o-contentBlockCarousel__playPause" type="button" data-play-pause>
+          <span class="sr-only">Stop automatic slide show</span>
+        </button>
+      </div>
+    </div>
+    <div class="o-contentBlockCarousel__slider" id="carousel-{{UniqueID}}" data-speed="{{AutoPlaySpeed}}">
+      {{#each Slides}}
+        <div class="o-contentBlockCarousel__slide">
+          {{> molecules-content-block-slide}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="o-contentBlockCarousel__arrows"></div>
+  </div>
+</section>

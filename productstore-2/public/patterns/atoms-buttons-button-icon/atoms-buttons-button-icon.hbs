@@ -1,0 +1,5 @@
+{{#if Attr.IsButton}}
+  <button class="a-button {{Mods}}" type="{{Attr.Type}}" {{{AriaProps}}}><img src="{{Icon.Src}}" alt="{{Icon.Alt}}" class="md:hidden"> <span class="hidden md:block">{{CTA}}</span></button>
+{{else}}
+  <a class="a-button {{Mods}}" href="{{{Attr.Href}}}" target="{{Target}}" {{{AriaProps}}}>{{CTA}}</a>
+{{/if}}

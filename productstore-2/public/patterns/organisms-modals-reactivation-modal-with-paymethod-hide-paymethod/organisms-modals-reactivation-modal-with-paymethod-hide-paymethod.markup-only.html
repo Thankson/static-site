@@ -1,0 +1,83 @@
+<modal :visible="true">
+  <o-reactivation-modal-with-paymethod script-id="ReactivationModalId"></o-reactivation-modal-with-paymethod>
+
+  <script type="application/json" id="ReactivationModalId">
+    {
+      "Labels": {
+        "DebitCreditCard": "Debit/Credit Card",
+        "Error": "Checkbox required to reactivate your account.",
+        "ReactivateAccountLabel": "Reactivate Account",
+        "NotNowLabel": "Not Now",
+        "AutomatedText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "TermsConditions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "PaymentMethodType": "Payment Method Type",
+        "CardholderName": "Cardholder Name",
+        "CardNumber": "Card Number",
+        "CardNumberError": "Card Number field is required",
+        "Expiration": "Expiration",
+        "ExpirationMonthError": "Expiration Month field is required",
+        "ExpirationYearError": "Expiration Year field is required",
+        "Month": "Month",
+        "Year": "Year",
+        "VirtualAccount": "Virtual Account"
+      },
+      "Data": {
+        "Country": "Korea",
+        "Heading": "We are Glad to See You Again, Jennifer!",
+        "Description": "Reactivate your account to enjoy all the benefits of a Melaleuca Preferred Member by saving a method of payment and consenting to the Customer Agreements.",
+        "ConsentHeading": "Customer Agreements",
+        "ConsentDescription": "<span class=\"font-bold uppercase\">I consent to all</span> the following Personal Use Agreement, E-Commerce Terms and Conditions, and CUstomer Membership Agreement items.",
+        "HidePayMethod": true,
+        "CardNumberMinValue": 15,
+        "CardNumberMaxValue": 16,
+        "Checkboxes": [{
+          "CategoryName": "Personal Use",
+          "Checkboxes": [{
+            "Checked": false,
+            "Name": "PersonalInfoAgreement",
+            "Required": true,
+            "Text": "I consent to the collection, retention, and use of my <span class=\"text-green\">personal information.</span>"
+          }, {
+            "Checked": false,
+            "Name": "ThirdPartyAgreement",
+            "Required": true,
+            "Text": "I agree to provide my personal information to <span class=\"text-green\">third parties</span>."
+          }, {
+            "Checked": false,
+            "Name": "AccessHandlingAgreement",
+            "Required": true,
+            "Text": "I consent to Melaleuca having <span class=\"text-green\">access and handling</span> my personal information."
+          }, {
+            "Checked": false,
+            "Name": "OverseasAgreement",
+            "Required": true,
+            "Text": "I agree to have my personal <span class=\"text-green\">information transferred</span> overseas."
+          }]
+        }, {
+          "CategoryName": "E-Commerce",
+          "Checkboxes": [{
+            "Checked": false,
+            "Name": "EcommAgreement",
+            "Required": true,
+            "Text": "I consent to the E-Commerce <span class=\"text-green\">Terms and Conditions</span>."
+          }]
+        }, {
+          "CategoryName": "Customer Membership Agreement",
+          "Checkboxes": [{
+            "Checked": false,
+            "Name": "MembershipAgreement",
+            "Required": true,
+            "Text": "I consent to the Customer Membership Agreement <span class=\"text-green\">Terms and Conditions</span>."
+          }]
+        }],
+        "CardholderNameValues": ["Sean Park", "Sue Park"],
+        "CustomerFirstName": "Sean",
+        "SpouseFirstName": "Sue",
+        "ReactivateAccountButton": "/Reactivation-Account-Form",
+        "RemoveValidationFromCC": true,
+        "ShowImprovedCTACheckout": true,
+        "DefaultCreditCard": null
+      }
+    }
+  </script>
+</modal>
