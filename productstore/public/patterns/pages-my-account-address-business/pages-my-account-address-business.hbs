@@ -1,0 +1,24 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+  <nav class="top-0 py-0 my-0 bg-white md:hidden">
+    {{#MobileAccordionNav}}
+      {{> organisms-cmn-accordion}}
+    {{/MobileAccordionNav}}
+  </nav>
+
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb}}
+    {{/Breadcrumb}}
+  </div>
+
+  <section class=" md:py-40">
+    <h1 class="w-full mx-auto text-2xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mb-18 md:text-3xl to-md:px-10 to-md:pt-20">{{PageTitle}}</h1>
+
+    {{#Form}}
+      {{> organisms-address-form-business}}
+    {{/Form}}
+  </section>
+
+</div>
+{{> organisms-site-footer}}

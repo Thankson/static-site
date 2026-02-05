@@ -1,0 +1,18 @@
+{{> organisms-site-header }}
+<div class="flex justify-center pb-18 bg-green">
+  <img src="https://placehold.co/144x34" />
+</div>
+<div class="bg-gray-25">
+  <section class="max-w-xl px-10 lg:px-20 mx-auto md:py-40 w-full">
+    <h1 class="text-2xl font-medium tracking-tight text-gray-150 font-global-sans md:text-3xl to-md:px-10 to-md:pt-20">{{PageTitle}}</h1>
+    <div class="flex flex-wrap justify-around mt-15 md:mt-20">
+      {{!-- Change from normal sign-in page: mobile mb-50 --}}
+      <div class="bg-white border mb-50 lg:mb-0 px-8 lg:px-40 py-30 lg:w-1_3 lg:max-w-1_2 border-gray-60 lg:rounded lg:flex-grow w-full lg:mr-30">
+        {{> organisms-sign-in-card-vue}}
+      </div>
+    </div>
+  </section>
+</div>
+<div class="p-signInGrowApp__footer">
+  {{{FooterRte}}}
+</div>

@@ -1,0 +1,22 @@
+<article class="o-videoCarousel" style="background-color: {{VideoCarousel.BgColor}}">
+  <div class="o-videoCarousel__wrapper">
+    <div class="o-videoCarousel__title m-rte">{{{VideoCarousel.Title}}}</div>
+    <div class="o-videoCarousel__carousel" aria-roledescription="carousel" aria-label="{{VideoCarousel.CarouselDescription}}">
+      <div class="o-videoCarousel__slider" id="carousel-count-{{UniqueID}}">
+        {{#with ToggleVideo}}
+          {{#each VideoThumbList}}
+            <figure class="o-videoCarousel__slide">
+              <img class="o-videoCarousel__thumb" src="{{Item.ThumbImage}}" aria-hidden="true">
+              {{> molecules-cmn-video-toggle-button}}
+              <figcaption class="o-videoCarousel__thumbTitle">{{{Item.ThumbTitle}}}</figcaption>
+            </figure>
+          {{/each}}
+        {{/with}}
+      </div>
+      <nav class="o-videoCarousel__actions" style="color: {{VideoCarousel.ArrowColor}}">
+        <div class="o-videoCarousel__arrows"></div>
+        <div class="o-videoCarousel__dots"></div>
+      </nav>
+    </div>
+  </div>
+</article>

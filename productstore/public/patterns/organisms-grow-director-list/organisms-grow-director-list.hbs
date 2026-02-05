@@ -1,0 +1,23 @@
+<div class="o-directorList">
+  <ul class="o-directorList__list" style="--items-per-column: {{ResultPerColumn}};">
+    {{#each People}}
+      {{! Each director is represented as a list item with a card component. }}
+      {{! The card displays the director's image, name, and year enrolled. }}
+      <li class="o-directorList__item {{#ifCond @index '===' ../ResultPerColumnMinusOne}}-firstColEnd{{/ifCond}} {{#ifCond @index '===' ../ResultPerColumn}}-secondColStart{{/ifCond}}">
+        <div class="o-directorList__cardContainer">
+          {{> molecules-director-card EnrolledText=../EnrolledText}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+  <!-- Pagination Section -->
+  {{#if Pagination}}
+    <div class="o-profilelist__pagination mt-30">
+      <m-pagination ref="pagination" :tabs-in-view="{{Pagination.TabsInView}}" :items-per-page="{{Pagination.ItemsPerPage}}" :total-items="{{Pagination.TotalItems}}" script-id="GrowPagination">
+      </m-pagination>
+    </div>
+    <script type="application/json" id="GrowPagination">
+    {{toJson GrowPaginationLocalization}}
+    </script>
+  {{/if}}
+</div>

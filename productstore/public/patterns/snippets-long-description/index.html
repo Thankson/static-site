@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770272894619" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-snippets-long-description" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/snippets-long-description\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-snippets-long-description">Long Description</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="snippets-long-description" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description\snippets-long-description-long-description.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description" title="Link to Pattern">
+						Long Description
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description" data-patternpartial="snippets-long-description" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description","patternPartial":"snippets-long-description","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-1014-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-1014-en-us\snippets-long-description-long-description-1014-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-1014-en-us" title="Link to Pattern">
+						Long Description 1014 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-1014-en-us" data-patternpartial="snippets-long-description-1014-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-1014-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p>Laundry never stops&mdash;but now you can feel good about every load you wash. The EcoSense<sup>&trade;</sup> Laundry 4-Pack gives you everything you need for cleaner, brighter, fresher laundry with MelaPower<sup>&reg;</sup> 6x, MelaBrite<sup>&reg;</sup> 6x, MelaSoft<sup>&reg;</sup>, and your choice of PreSpot<sup>&trade;</sup> 4x or Revive<sup>&trade;</sup>. From start to finish, treat every load with the very best in laundry care&mdash;products with exceptional cleaning power that are safer for your home and environment, and save you money every time you use them.</p><p><strong>To order your EcoSense Laundry 4-Pack:</strong><ul><li> Pick your MelaPower 6x (192 loads or 64 loads, regular) </li> <li> Add your MelaBrite 6x (64 loads)</li> <li> Pick your MelaSoft (liquid or dryer sheets) </li> <li> Select PreSpot 4x or Revive </li><p><strong>Save 15% with the Laundry 4-Pack</strong></p><p>By purchasing your EcoSense Laundry products together as the Laundry 4-Pack, you'll save 15% over buying the products separately. That's a savings of $7.71.</p<p><strong>MelaPower<sup>&reg;</sup> 6x Laundry Detergent</strong><ul><li>Six-times concentrated, non-alkaline, super-effective detergent.</li> <li> Just &#189; fl. oz. cleans a whole load of laundry</li><li> Rinse Guard<sup>&trade;</sup> keeps dirt from redepositing on clothes</li><li> No caustic chemicals or unnecessary fillers</li> <li> pH-neutral, as gentle on clothes as tap water</li><li> Concentrated to save money and reduce plastic waste</li><p><strong>MelaBrite<sup>&reg;</sup> 6x Color-Safe Brightener</strong><ul><li>Keeps clothes looking new.</li><li> Removes soils and brightens clothes</li><li> Won't harm fabrics, even after many washes</li><li> Free of chlorine bleach</li><li> Concentrated to save money and reduce plastic waste</li></ul></p><p><strong>MelaSoft<sup>&reg;</sup> Liquid Fabric Softener and Dryer Sheets</strong><ul><li>Keeps fabrics naturally soft and fresh.</li><li> Uses naturally derived softening agents</li><li> Eliminates static cling</li><li> Freshens clothes with five essential oils</li></ul></p><p><strong>PreSpot<sup>&trade;</sup> 4x Laundry Stain Remover</strong></p><ul><li>Breaks up tough stains without damaging your clothes.</li><li> Three enzymes target stains without damaging fabrics</li> <li> Outperforms leading brands</li><li> No chlorine bleach or harsh fumes</li> <li> Concentrated to save money and reduce plastic waste </li><p><strong>Revive<sup>&trade;</sup> Wrinkle Relaxer</strong></p><ul><li>Reduces wrinkles and freshens clothes in seconds.</li> <li> Quickly eliminates wrinkles with no iron needed</li> <li> Leaves fabrics smelling fresh</li> <li> Protects clothes from stains</li></ul></p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-1014-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 1014 En Us","patternPartial":"snippets-long-description-1014-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-103-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-103-en-us\snippets-long-description-long-description-103-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-103-en-us" title="Link to Pattern">
+						Long Description 103 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-103-en-us" data-patternpartial="snippets-long-description-103-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-103-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p> <ul> <li> Contains melanin, your natural lip protector </li> <li> Natural moisturizers like jojoba oil, cocoa butter, and beeswax </li> <li> Rejuvenates your lips</li> </ul> </p> <div >Beyond Lip Service</div> <p>Often overlooked before it's too late, your lips are defenseless when it comes to the elements. Lips contain very little melanin&mdash;the natural skin pigment that helps screen out the sun's harmful rays. With SPF 15, Sun Shades lip balms pamper and protect your lips with natural moisturizers like jojoba oil, cocoa butter, and beeswax, while antioxidant vitamin E fights free radicals. These lip-smacking balms &ldquo;weatherproof &rdquo; your lips and help keep them soft. </p> <p>You use sunscreen on your arms, legs, and the rest of your body. Remember your lips with Sun Shades lip balms. Available in Mountain Mint, Vanilla Bean, and Pi&ntilde;a Colada flavors. Sun Shades lip balm moisturize and protect your lips for hours. </p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-103-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 103 En Us","patternPartial":"snippets-long-description-103-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-1146-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-1146-en-us\snippets-long-description-long-description-1146-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-1146-en-us" title="Link to Pattern">
+						Long Description 1146 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-1146-en-us" data-patternpartial="snippets-long-description-1146-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-1146-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p>Purchase 2 Sei Bella Lip Products and Get One for $5 – Save $11</p> <div >Sei Bella Lip Liner:  WHY YOU’LL LOVE IT</div>   <p>Precision is everything. Is there anything more satisfying than achieving a perfectly precise line? Each Lip Liner includes a shaping tool to give your lips that flawless edge&mdash;keeping lipstick in line all day. At the same time, vitamin E, ceramides, and hyaluronic acid nourishes and protects the delicate skin around your lips.  </p>   <p>How To Use:<br> Trace your natural lip line by using light, short strokes for a clean line. For a natural look or longer-lasting color, blend the liner into your lips and follow with lipstick or gloss that’s similar to your chosen Lip Liner shade.  </p>     <p><i>If you’re going for a nude look, choose a Lip Liner that’s closest to your natural lip shade. Otherwise, pick a color that matches the lipstick or gloss of your choice&mdash;especially if it’s much darker than your normal lip color! </i> </p>    <p>Three steps to pout perfection!</p>   <p> <ul>  <li><strong>1. Ace the Base</strong>&mdash;Before applying any color, prep your lips with a clear coat of Lip Treatment. </li>  <li><strong>2. Draw the Line</strong>&mdash;Line the outer edge of your lips with Lip Liner (or fill in your entire lip area for longer-lasting color). Choose a liner and lipstick or gloss that corresponds in color.</li>   <li><strong>3. Color it In</strong>&mdash;Finish with a coat of Sei Bella Lipstick, Lip Gloss, or Lip Plump that matches your Lip Liner shade as closely as possible.</li>  </ul> </p>  <div >Sei Bella Lipstick:   WHY YOU’LL LOVE IT</div>  <div >New Formulas. New Shades. Longer Staying Power. </div> <p>Are you feeling warm or cool today? Lipstick is all about self-expression, so stop thinking your skin tone won’t let you get away with certain shades and just have fun with it! </p> <p><i>Shop by mood; Go bold with Powerhouse; Get playful with Tease; Rock chic and sophisticated with Fashionista. </i></p> <p>Most of all, kick outdated beauty rules to the curb. It’s your life (and your lips).</p> <p>Our new creamy lipstick delivers instant color vibrancy and leaves lips blissfully soft. Now in a naturally-powered formula that lasts longer than ever before!</p> <p>Our plush matte formula drenches lips in color with a weightless texture that glides on creamy and dries to a velvety shine-free finish. The best part? It stays put all day—no bleeding, no feathering, no worries.</p> <p><i>Active Natural Ingredients:</i> At Sei Bella, we refuse to sprinkle natural ingredients into our formulas. Instead, our new creamy and matte lipsticks are packed with a powerful array of lip-loving natural actives!   </p> <p> <ul>    <li><i>Dandelion</i>—More than just a weed, this plant contains high levels of the antioxidant beta-carotene, which protects against cell damage and oxidative stress. </li>    <li><i>Jojoba Oil</i>—Naturally anti-inflammatory, this oil moisturizes without leaving a greasy residue on the skin. </li>    <li><i>Meadowfoam Seed Oil</i>—Contains fatty acids that smooth, hydrate, and protect skin.  </li>    <li><i>Coconut Oil</i>—A natural moisturizer that helps smooth the appearance of fine lines. </li>    <li><i>Green Tea Extract</i>—A strong antioxidant that reduces inflammation and protects against skin cell damage.</li>    <li><i>Hyaluronic Filling Spheres<sup>&trade;</sup></i>—Helps smooth the appearance of fine lines and wrinkles while providing intense moisturization. </li> </ul> </p>  <div >Sei Bella Lip Gloss: WHY YOU’LL LOVE IT</div>   <p>Get glossy. Our <i>Lip Gloss</i> deeply hydrates and helps retain natural moisture for a gorgeous shine that leaves lips softer, smoother, and younger looking. Choose glosses that range from crystal clear to semi-sheer color with shimmer or a soft matte sheen.</p>  <p><strong>Pro-tip:</strong> Layer them over our new lipstick shades for a brilliant finish!  </p>   <p>Ingredient Story: </p>    <p> <ul>   <li><i>Antioxidants</i>—Neutralizes free radicals to protect lips. </li>   <li><i>Vitamin E</i>—Soothes dry, irritated lips. </li>   <li><i>Shea Butter</i>—Moisturizes and softens lips.</li>   <li><i>Marine Filling Spheres</i>—Rehydrates lips for a smoother appearance.</li>   <li><i>Jojoba Oil</i>—Hydrates lips and protects from dry, cold, and hot weather conditions.</li>   </ul> </p>  <div >Sei Bella Lip Plump: WHY YOU’LL LOVE IT</div>   <p>Not only does our <i>Plump Lip Gloss</i> make lips appear fuller both now and in the future with regular use, but it also reduces the appearance of fine lines by up to 30%! Experience the full effects for yourself…  </p>   <p>Ingredient Story: </p>    <p> <ul>   <li><i>Vitamin E</i>—Soothes dry, irritated lips. </li>   <li><i>Maxi-Lip</i>—Clinically proven to enhance the shape and size of your lips. When used regularly, MaxiLip<sup>&trade;</sup> makes lips up to 60% more voluminous while reducing the appearance of fine lines by up to 30%.  </li>   <li><i>Peptides</i>—Hydrates and minimizes the appearance of fine lines and wrinkles in the lips.</li>   <li><i>Marine Filling Spheres</i>—Rehydrates lips for a smoother appearance.</li>   <li><i>Sunflower Oil</i>—Hydrates lips and protects from sun damage.</li>   </ul> </p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-1146-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 1146 En Us","patternPartial":"snippets-long-description-1146-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-2442-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-2442-en-us\snippets-long-description-long-description-2442-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-2442-en-us" title="Link to Pattern">
+						Long Description 2442 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-2442-en-us" data-patternpartial="snippets-long-description-2442-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-2442-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <div >Cat purr-ferred Dental Treats</div> <p>    There’s nothing quite like the feeling of your cat purring contentedly on your lap. You give your cat a home and affection and your pet gives you so much more in return. Cats are meant to be pampered. You know it. They know it. ProCare Dental Treats for Cats are a tasty, crunchy treat to show your cat how much you care while helping you care for your cat’s dental health.  </p> <div >A daily treat that helps clean teeth</div> <p> <ul>    <li>Cats love the natural chicken flavor and the crunchy texture helps remove tartar for cleaner teeth and fresher breath. </li>    <li>Use daily for best results. </li> </ul> </p> <div >Wholesome, naturally derived cat-purr-ferred ingredients:</div> <p> <ul>    <li>Chicken meal</li>    <li>Rosemary</li>    <li>Pea protein </li> </ul> </p> <div >What we leave out is just as important as what we include</div> <p>    <u>You’ll never get:</u> </p> <p> <ul>    <li>Grain</li>    <li>Gluten-containing ingredients</li>    <li>Added sugars</li>    <li>Dairy</li>    <li>Artificial flavors</li>    <li>Artificial ingredients </li>    <li>By-products</li>    <li>Fillers </li> </ul> </p> <div >Why chicken meal? </div> <p>    We use nothing less than real chicken—no fillers, by-products, or artificial ingredients. In fact, it’s the first ingredient. You’ll notice the label says “chicken meal” along with chicken.  </p> <div >What is the difference between these ingredients? </div> <p>    In the pet food industry, chicken and chicken meal are both composed of the same thing: chicken meat, skin, and sometimes bone (which might sound unpleasant to you, but there’s no arguing that animals naturally love bones; they are highly nutritious and also support their connective tissues). There are two differences between these two very similar ingredients. The first difference is how they are processed and combined with other ingredients. The second—and more important—difference is the nutritional value.  </p> <table >    <tbody valign='top'>       <tr>          <td>Chicken meal</td>          <td>Chicken</td>       </tr>       <tr>          <td>The ingredient “chicken meal” is ground chicken that has been dehydrated and rendered—a process that separates fat, removes water, kills any bacteria, viruses, parasites, and other organisms—creating a dried ingredient with a high concentration of nutrients.</td>          <td>The ingredient “chicken” is raw, ground chicken that is frozen for shipping and handling to reduce the risk of food-borne illnesses.  </td>       </tr>       <tr>          <td>Water content average: 10%<br><br>             Protein content average: 65% <br><br>             The dehydration process removes water and concentrates key nutrition.           </td>          <td>Water content average: 70% <br><br>             Protein content average: 18%           </td>       </tr>       <tr>          <td>Chicken meal and other desired ingredients are put into a machine that combines the mixture and produces the finished kibble or treat. </td>          <td>Chicken is thawed, then put into a machine that combines it with the other ingredients, removes the excess moisture, renders it, and produces the finished kibble or treat.<br><br>             This process essentially converts raw, ground chicken into chicken meal—but at a different point in the process.          </td>       </tr>       <tr>          <td>Because chicken meal is a dry ingredient used to create a dry kibble or treat, it can be used in greater amounts without negatively affecting the final product. </td>          <td>The high moisture content of chicken limits the total amount that can be used in the final product. </td>       </tr>    </tbody> </table>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-2442-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 2442 En Us","patternPartial":"snippets-long-description-2442-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-441-es-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-441-es-us\snippets-long-description-long-description-441-es-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-441-es-us" title="Link to Pattern">
+						Long Description 441 Es Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-441-es-us" data-patternpartial="snippets-long-description-441-es-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-441-es-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p><strong>&iquest;Qu&eacute; lo hace diferente?</strong><br /> Desde la energ&iacute;a para cada d&iacute;a hasta la salud del coraz&oacute;n y la movilidad mejorada, Vitality Total<sup>&reg;</sup> (Esenciales + coraz&oacute;n + cuerpo) tiene todo lo que usted necesita. Hemos simplificado la manera de tomar los suplementos, separ&aacute;ndolos en paquetes convenientes para la ma&ntilde;ana y la noche, los cuales proporcionan los nutrientes que necesita, justamente cuando m&aacute;s los necesita. Vitality Total<sup>&reg;</sup> le ayuda a sentirse de lo mejor de pies a cabeza, &iexcl;sin importar la edad! Adem&aacute;s, Vitality Total<sup>&reg;</sup> le ahorra un 35% sobre el precio de los suplementos comprados individualmente.</p> <p>Vitality Total<sup>&reg;</sup> incluye todos los suplementos esenciales y para la salud card&iacute;aca que se encuentran en Vitality 6<sup>&reg;</sup> y a&ntilde;ade tres suplementos potentes para mantenerle protegido de pies a cabeza. Nunca ha existido un paquete nutricional m&aacute;s completo que &eacute;ste. Vitality Total<sup>&reg;</sup> incluye: <ol> <li><strong>Vitality Multivitamin & Mineral<sup>&trade;</sup> para hombre:</strong>24 nutrientes esenciales para mejorar el bienestar. Incluye la tecnolog&iacute;a de Oligo<sup>&reg;</sup>, con patente pendiente, que ha sido cient&iacute;ficamente comprobada que aporta la m&aacute;xima disponibilidad y protecci&oacute;n antioxidante. </li> <li><strong>Vitality Calcium Complete<sup>&reg;</sup>: </strong>Ayuda a fortalecer los huesos con una mezcla derivada de cuatro fuentes, a m&aacute;s de magnesio, f&oacute;sforo y vitamina D, con el poder de Oligo<sup>&reg;</sup> para maximizar la absorci&oacute;n mineral.* </li> <li><strong>CellWise<span ><sup>&reg;</sup></span>: </strong> Antioxidantes de amplio espectro con patente pendiente que proveen protecci&oacute;n contra el da&ntilde;o causado por los radicales libres. Propicia una piel saludable con extractos de oliva y semilla de uva, licopeno, tocoferoles y carotenoides mezclados y vitamina C.*</li> <li><strong>Florify<span ><sup>&reg;</sup></span>: </strong>Dos clases de probi&oacute;ticos que ayudan a mejorar la absorci&oacute;n de los nutrientes y mantener la salud del sistema digestivo.* </li> <li><strong>Phytomega<span ><sup>&reg;</sup></span>: </strong> Reduce los niveles de colesterol‡, ayuda a mantener niveles saludables de triglic&eacute;ridos&sect;, y propicia la funci&oacute;n adecuada del coraz&oacute;n utilizando una mezcla de patente pendiente que contiene fitosteroles, omega-3, CoQ10 y &aacute;cido alfa lipoico. </li> <li><strong>ProvexCV<span ><sup>&reg;</sup></span>: </strong>Ayuda a mantener niveles saludables de la presi&oacute;n arterial, reduce la oxidaci&oacute;n LDL y propicia el funcionamiento &oacute;ptimo de las plaquetas utilizando una mezcla patentada de extractos naturales de semilla y piel de uva, resveratrol, quercetina, extracto de t&eacute; verde y bromela&iacute;na.*</li> <li><strong>NutraView<span ><sup>&reg;</sup></span>: </strong>Protecci&oacute;n potente para la vista con lute&iacute;na, ceaxantina y una mezcla exclusiva de antioxidantes para proteger el cristalino, mejorar la visi&oacute;n nocturna y mantener la circulaci&oacute;n sangu&iacute;nea normal en los ojos.* </li> <li><strong>Replenex<span ><sup>&reg;</sup></span>: </strong> Una mezcla patentada de glucosamina HCL, bromela&iacute;na, jengibre y extracto de t&eacute; verde para ayudarle a reconstruir el cart&iacute;lago y propiciar la movilidad y flexibilidad.*</li> <li><strong>ProstAvan<span ><sup>&reg;</sup></span>: </strong> Una mezcla exclusiva de baya de palmito, licopeno, semilla de calabaza, selenio y zinc, con el poder de Oligo<sup>&reg;</sup>, para la buena salud de la pr&oacute;stata y una funci&oacute;n urinaria normal en los hombres.*</li> </ol> </p> <p><strong>&iquest;Por qu&eacute; es eso importante?</strong><br /> Todos los nutrientes del mundo no servir&iacute;an de nada si el cuerpo no los puede utilizar. El Vitality Pack ha sido formulado utilizando las fuentes de nutrientes m&aacute;s disponibles &mdash;que a menudo son varias&mdash; en las cantidades recomendadas por las investigaciones, para ayudarle a obtener los nutrientes que necesita cada d&iacute;a. Tambi&eacute;n ofrece algo que ninguna otra multivitamina en el mundo le puede ofrecer: Oligo<sup>&reg;</sup>. Este descubrimiento sorprendente promueve la m&aacute;xima solubilidad de los minerales y protege la potencia de los antioxidantes. De hecho, ninguna otra forma mineral est&aacute; m&aacute;s disponible para la absorci&oacute;n que Oligo<sup>&reg;</sup> de Melaleuca.&sect;</p> <p><strong>Nutrici&oacute;n completa, ahorros incomparables </strong><br /> Vitality Total<sup>&reg;</sup> facilita el consumo de los nutrientes adecuados y lo hace a un precio asequible, y le ahorra m&aacute;s del 36% sobre el precio de los suplementos comprados individualmente. <p>La diferencia con Oligo<sup>&reg;</sup> <ol> <li><strong>Esencial para una vida activa, mejor salud y m&aacute;s energ&iacute;a</strong><br /> Las vitaminas y los minerales ayudan a prevenir las enfermedades y proveen el apoyo esencial para la mayor&iacute;a de las funciones del cuerpo, incluyendo el crecimiento y la producci&oacute;n de energ&iacute;a. El suplemento de vitaminas y minerales Vitality provee los niveles ideales de los nutrientes necesarios seg&uacute;n la edad y el g&eacute;nero.</li> <li><strong> Suministra los nutrientes Como lo Hace la Naturaleza<sup>&trade;</sup></strong> <br /> Oligo<sup>&reg;</sup> une los minerales a compuestos org&aacute;nicos, de un modo similar a como se encuentran naturalmente en las frutas, las verduras y otros alimentos integrales. </li> <li><strong>Comprobado cient&iacute;ficamente que est&aacute; hasta 10 veces m&aacute;s disponible para la absorci&oacute;n. &sect;</strong><br> Las formas tradicionales de minerales se pueden cristalizar en los intestinos, lo cual dificulta la absorci&oacute;n. Oligo<sup>&reg;</sup> ayuda a mantener la solubilidad de los minerales en los intestinos, en donde ocurre la absorci&oacute;n.</li> <li><strong>Protege a las vitaminas antioxidantes hasta 5 veces m&aacute;s que las marcas m&aacute;s populares. &sect;</strong><br /> Las formas tradicionales de minerales pueden generar un aumento de radicales libres; estos radicales libres reducen la potencia de las multivitaminas (vitaminas A, C y E) antes de que sean absorbidas. Oligo<sup>&reg;</sup> protege a los minerales, reduciendo su capacidad de generar radicales libres en exceso. </li> <li><strong>Desafiamos a nuestros competidores a que presenten evidencia que contradiga estos descubrimientos cient&iacute;ficos.</strong><br /> Oligo<sup>&reg;</sup> fue desarrollado por cient&iacute;ficos de Melaleuca y verificado por investigadores especializados en este campo. Desafiamos a los fabricantes de suplementos de vitaminas y minerales a que realicen sus propios an&aacute;lisis para evaluar sus suplementos contra el Oligo<sup>&reg;</sup>.</li> </ol> </p> <p><strong>Funciona porque… </strong><br /> Los minerales de algunos suplementos se cristalizan durante la digesti&oacute;n, lo cual inhibe la absorci&oacute;n. Adem&aacute;s, los minerales tienden a estimular la generaci&oacute;n de radicales libres durante la digesti&oacute;n. Esta cascada de radicales libres puede 'consumir' los antioxidantes en su multivitamina (vitaminas A, C y E), haciendo que sean casi in&uacute;tiles. </p> <p>Oligo<sup>&reg;</sup> une los minerales a compuestos org&aacute;nicos (Oligofructosa y amino&aacute;cidos) de un modo similar a como se encuentran naturalmente en las frutas, las verduras y otros alimentos integrales. Este proceso de fusi&oacute;n mantiene a los minerales m&aacute;s disponibles para que el cuerpo los absorba y tambi&eacute;n los protege, reduciendo su capacidad de generar grandes cantidades de radicales libres. El resultado es que los nutrientes est&aacute;n m&aacute;s disponibles para ser aprovechados para mantener una buena salud. </p> <div > * Estas declaraciones no han sido evaluadas por la Administraci&oacute;n de Alimentos y Medicamentos (Food and Drug Administration). Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</div> <p>&dagger; Los alimentos y los suplementos que contienen al menos 400 mg por raci&oacute;n de &eacute;ster de esteroles de origen vegetal, ingeridos dos veces al d&iacute;a con las comidas para un consumo diario total de por lo menos 800 mg, como parte de una alimentaci&oacute;n baja en grasas saturadas y colesterol, pueden reducir el riesgo de enfermedades del coraz&oacute;n. Una dosis diaria de Phytomega (4 c&aacute;psulas suaves) aporta por lo menos 2,000 mg de &eacute;ster de esterol de origen vegetal.</p> <p>&Dagger; Investigaciones que respaldan pero que no son concluyentes demuestran que el consumo de &aacute;cidos grasos omega-3 EPA y DHA puede reducir el riesgo de enfermedades coronarias. Una dosis diaria de Phytomega (4 c&aacute;psulas suaves) aporta 550 mg de EPA y DHA. </p> <p>&sect; Al ser comparado con las formas de sulfato, gluconato, &oacute;xido y fumarato de cobre, hierro, manganeso y zinc (las formas usadas m&aacute;s com&uacute;nmente en casi todos los suplementos que se venden a nivel comercial) bajo condiciones intestinales.</p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-441-es-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 441 Es Us","patternPartial":"snippets-long-description-441-es-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-4452-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-4452-en-us\snippets-long-description-long-description-4452-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-4452-en-us" title="Link to Pattern">
+						Long Description 4452 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-4452-en-us" data-patternpartial="snippets-long-description-4452-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-4452-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p><strong>Volume Extreme + Length & Lift Mascara   </strong><br> Take your lashes to a whole new level with this ultra-rich formula infused with peptides and antioxidants to condition lashes, plus the unique brush is specifically designed to lift lashes while providing the ultimate volume and lengthening effect. Available in both regular and waterproof formulas. Ophthalmologist tested, safe for contact lens wearers.  </p>  <p><strong>Defining Lash Mascara</strong><br> Takes your lashes to new lengths with ultimate definition and separation. Hydrolyzed silk smooths and defines lashes while jojoba, vitamin E, and shea butter nourish lashes. The molded, curved brush lifts and defines every lash for precision application. Ophthalmologist-tested. Safe for contact lens wearers. Fragrance-free and paraben-free. Also available in waterproof. </p> <p><strong>Enhance Mechanical Eye Pencils</strong><br> Define your eyes with an eyeliner that glides on easily, never needs to be sharpened, and is full of nurturing botanicals. Ophthalmologist tested; safe for contact lens wearers.  </p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-4452-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 4452 En Us","patternPartial":"snippets-long-description-4452-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-7956-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-7956-en-us\snippets-long-description-long-description-7956-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-7956-en-us" title="Link to Pattern">
+						Long Description 7956 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-7956-en-us" data-patternpartial="snippets-long-description-7956-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-7956-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <ul>   <li>  Size: 8” x 1 3/8” x 4 1/4”   </li>   <li>Leather upper material </li> </ul>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-7956-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 7956 En Us","patternPartial":"snippets-long-description-7956-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-8014-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-8014-en-us\snippets-long-description-long-description-8014-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-8014-en-us" title="Link to Pattern">
+						Long Description 8014 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-8014-en-us" data-patternpartial="snippets-long-description-8014-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-8014-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p>The Melaleuca-branded Nike Dri-FIT Element Half-Zip Men’s Running Shirt is made with sweat-wicking fabric and ergonomic seam placement to help keep you dry, comfortable and moving freely from start to finish. </p> <p>Benefits and Features: </p> <ul> <li>Dri-FIT fabric helps keep you dry and comfortable</li> <li>Half-zip design offers adjustable coverage</li> <li>Thumbholes follow the shape of your hand for a comfortable fit</li> <li>Ergonomic seam placement enhances range of motion</li> <li>Reflective elements stand out in low light</li> <li>Reflective media-cord loop at upper back</li> <li>Fabric: Body: Dri-FIT 88% polyester/12% spandex. Mesh: 89% polyester/11% spandex.</li> <li>Machine wash</li> <li>Imported</li></ul>   <p>Men’s Sizing Chart</p> <table width='450' border='1'>   <tbody>     <tr>       <td width='50'>SIZE</td>       <td width='50'>CHEST (in.)</td>       <td width='50'>WAIST (in.)</td>       <td width='50'>HIPS (in.)</td>     </tr>     <tr>       <td>XS</td>       <td>29.5–32.5</td>       <td>23.5–26</td>       <td>33–35.5</td>     </tr>     <tr>       <td>S</td>       <td>32.5–35.5</td>       <td>26–29</td>       <td>35.5–38.5</td>     </tr>     <tr>       <td>M</td>       <td>35.5–38</td>       <td>29–31.5</td>       <td>38.5–41</td>     </tr>     <tr>       <td>L</td>       <td>38–41</td>       <td>31.5–34.5</td>       <td>41–44</td>     </tr>     <tr>       <td>XL</td>       <td>41–44.5</td>       <td>34.5–38.5</td>       <td>44–47</td>     </tr>     <tr>       <td>XXL</td>       <td>44.5–48.5</td>       <td>38.5–42.5</td>       <td>47–50</td>     </tr>   </tbody> </table>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-8014-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 8014 En Us","patternPartial":"snippets-long-description-8014-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="snippets-long-description-8132-en-us" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/snippets-long-description-long-description-8132-en-us\snippets-long-description-long-description-8132-en-us.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="snippets-long-description-8132-en-us" title="Link to Pattern">
+						Long Description 8132 En Us
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-snippets-long-description-8132-en-us" data-patternpartial="snippets-long-description-8132-en-us" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-snippets-long-description-8132-en-us">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="m-rte">
+    <p>This pack contains :</p> <ul >   <li><a href='/ProductStore/ProductDetail.aspx?sku=4201'>3 boxes of Access Bars<sup>&reg;</sup></a></li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=7077'>12 Energy Shots</a></li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=4866'>2 Sustain<sup>&reg;</sup> Sport</a></li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=860'>1 Peak Performance Pack</a></li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=4862'>2 Vitality Elevate Protein</a> </li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=624'>1 Pure Creatine</a></li>   <li><a href='/ProductStore/ProductDetail.aspx?sku=636'>1 Amino Boost</a></li> </ul> <p>If you’re committed to fitness and working on elevating your performance and reaching new goals, reach for the <span >Ultimate Fitness Pack</span>. We’ve brought together every product you need to support intense activity, improved results, and faster recovery.</p> <p>Inside this pack are <span >Melaleuca’s</span> unique, essential products for helping you get active, get stronger, manage your weight, and improve your overall fitness and wellness. No matter where you are on your journey to fitness, these are the products you need in your daily routine. </p> <ul>   <li><span >Access Bars</span> ignite your body’s fat-burning process during exercise</li>   <li><span >Sustain Sport</span> helps rehydrate your cells and keep you energized</li> </ul> <p><span >And we’ve added each of Melaleuca’s Vitality Elevate products to help you lift your performance to a higher level.</span></p> <div >The Peak Performance Pack</div> <p>Whether you’re a serious athlete or a beginner, the <span >Peak Performance Pack</span> delivers targeted nutritional support to elevate your performance and your life so you get the most from your efforts and achieve your fitness goals.</p> <p>Inside the <span >Peak Performance Pack</span> is a wealth of fitness-centered nutrition, including <span >Vitality Multivitamin &amp; Mineral, Vitality CardiOmega EPA, CellWise, ProvexCV, Recover AI</span>, and <span >Florify.</span></p> <div >Plus, the Ultimate Fitness Pack includes:</div><br> <ul>   <li><span >Vitality Elevate Protein</span> provides 30g of our specialized three-protein blend in a zero-sugar, ultra-lean shake made to support muscle growth and repair, boost muscle nitrogen balance, and optimize recovery after workouts.</li>   <li><span >Melaleuca Energy Shots</span> give you lasting energy plus improved focus and endurance with power-packed antioxidant energy blends and B vitamins inside—but no sugar, no calories, and no sugar crash.</li>   <li><span >Amino Boost</span> helps stimulate protein synthesis, support fat loss, and improve recovery with 6 grams of BCAAs in a supercharged 4:1:1 ratio, plus glutamine to enhance recovery and extend the benefits of the BCAAs.</li>   <li><span >Pure Creatine</span> provides high-quality, micronized creatine to help supercharge any resistance training program, helping you build lean muscle and strength as well as maintain muscle mass and tone as you age.</li> </ul> <p>By getting all of these world-class products together in one convenient 30-day supply, you’ll save big—and have everything you need to support you as you work toward your fitness goals.</p>  <div >This Fitness Pack also includes Melaleuca's exclusive guide,<br> 'Fitness: Take it to the Next Level</div> <p>Get to know Melaleuca's Sports Nutrition Products and what they can do the help you elevate your workout. The Fitness: Take it to the Next Level guide will give you tips on developing a fitness plan, help you find the right foods to fuel optimal results, and guide you in selecting the products you need to increase your capacity and performance. Whether you're a weekend walker or a seasoned triathlete, it's a valuable asset to anyone trying to get more out of their workout. </p> <p>Visit <span ><a href='https://www.melaleuca.com/Vitality'>Melaleuca.com/Vitality</a></span> for articles, expert tips, and success stories about wellness and weight loss.</p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-snippets-long-description-8132-en-us" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"snippets","patternSubgroup":"long-description"},"patternExtension":"hbs","patternName":"Long Description 8132 En Us","patternPartial":"snippets-long-description-8132-en-us","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-snippets-long-description"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-snippets-long-description"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770272894619">
+  (function() {
+    if (self != top) {
+      var cb = '1770272894619';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770272894619" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770272894619', function(){
+        loadJS('/js/vue-pci.js?1770272894619', function(){
+          loadJS('/js/vendor-pci.js?1770272894619', function(){
+            loadJS('/js/pci.js?1770272894619', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770272894619', function(){
+        loadJS('/js/vue-main.js?1770272894619', function(){
+          loadJS('/js/vendor.js?1770272894619', function(){
+            loadJS('/js/index.js?1770272894619', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

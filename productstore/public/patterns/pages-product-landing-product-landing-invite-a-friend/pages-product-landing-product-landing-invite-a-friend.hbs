@@ -1,0 +1,168 @@
+{{> organisms-site-header }}
+
+{{#with TopNavigationCarousel}}
+  <o-top-navigation-carousel script-id="dataTopMenuCarousel">
+  </o-top-navigation-carousel>
+  <script type="application/json" id="dataTopMenuCarousel">
+  {{toJson Localization}}
+  </script>
+{{/with}}
+
+{{#with SpecialBanner}}
+  {{> molecules-special-banner }}
+{{/with}}
+
+<!-- Invite a Friend -->
+{{#if InviteAFriend}}
+  {{> organisms-invite-a-friend}}
+{{/if}}
+
+<div class="o-widthControl mx-auto w-full md:max-w-contain mb-30">
+  {{#with heroCarousel}}
+    {{> organisms-hero-carousel}}
+  {{/with}}
+</div>
+
+{{#with InviteAFriend}}
+  <o-invite-a-friend script-id="{{DynamicId}}">
+    <template slot="ad">
+      {{{RTE}}}
+    </template>
+  </o-invite-a-friend>
+
+  <script id="{{DynamicId}}" type="application/json">
+  {{toJson Localization}}
+  </script>
+{{/with}}
+
+<section class="pb-40">
+  <div class="flex flex-wrap flex-col justify-center items-center relative max-w-contain mx-auto lg:flex-row lg:flex-no-wrap to-lg:px-10">
+    {{#each VariableWindows3Col.Windows}}
+      {{> molecules-variable-windows }}
+    {{/each}}
+
+    {{#with LsdBanners}}
+      {{> organisms-lsd-banners }}
+    {{/with}}
+  </div>
+</section>
+
+<div class="o-widthControl mx-auto w-full md:max-w-contain">
+  <section class="mt-40 pb-2">
+    <div class="preComponentLoader -productCarousel">
+      {{#with ReorderCarousel}}
+        <o-product-carousel :settings={{toJson Settings}} script-id="reorder-carousel-localization">
+          <!-- The title can be passed by slot. If the slot is empty will display the default markup that is inside the component -->
+          <template v-slot:title>
+            <h3 class="text-xl text-gray-150 font-bold uppercase px-0 md:text-2xl">
+              {{Localization.Labels.ProductCarousel.FallbackTitle}}
+            </h3>
+          </template>
+
+          <!-- Optional link -->
+          {{#if Localization.Labels.ProductCarousel.SeeAllLink}}
+            <template v-slot:link>
+              <p class="flex items-center tracking-wider text-green-100 text-md uppercase px-5 md:px-0">
+                <a href="{{Localization.Labels.ProductCarousel.SeeAllLink}}" title="{{Localization.Labels.ProductCarousel.SeeAllText}}">
+                  {{Localization.Labels.ProductCarousel.SeeAllText}}
+                  <span aria-hidden="true" class="a-arrow -sm -right -filled  ml-3">
+                    <span class="a-arrow__icon border-green-100"></span>
+                  </span>
+                </a>
+              </p>
+            </template>
+          {{/if}}
+        </o-product-carousel>
+        <script id="reorder-carousel-localization" type="application/json">
+        {{toJson Localization}}
+        </script>
+      {{/with}}
+    </div>
+  </section>
+</div>
+
+{{#with MSC}}
+  <div class="o-widthControl mx-auto w-full px-10 md:px-0 py-40 md:max-w-contain">
+    <div class="preComponentLoader -monthlySpecial">
+      <monthly-special-carousel active="{{Active}}" button-next-slide="{{ButtonNextSlide}}" button-prev-slide="{{ButtonPrevSlide}}" by="{{By}}" carousel-address="{{Carousel.Address}}" carousel-id="{{Carousel.Id}}" earn="{{Earn}}" for-string="{{ForString}}" loading="{{Loading}}" not-active="{{NotActive}}" of="{{Of}}" purchase="{{Purchase}}" slide="{{Slide}}" cta="{{Cta}}">
+
+      </monthly-special-carousel>
+    </div>
+  </div>
+{{/with}}
+
+<section class="pb-40">
+  {{#with VariableWindows}}
+    {{> organisms-variable-windows }}
+  {{/with}}
+</section>
+
+<section class="mt-40 pb-2">
+  <div class="preComponentLoader -productCarousel">
+    {{#with ProductCarousel2}}
+      <o-product-carousel script-id="dataTopProductsCarousel2" :products='{{toJson Localization.Data.Products}}'>
+
+        <!-- The title can be passed by slot. If the slot is empty will display the default markup that is inside the component -->
+        <template v-slot:title>
+          <h3 class="text-xl text-gray-150 font-bold uppercase px-0 md:text-2xl">
+            {{Localization.Labels.ProductCarousel.FallbackTitle}}
+          </h3>
+        </template>
+
+        <!-- Optional link -->
+        {{#if Localization.Labels.ProductCarousel.SeeAllLink}}
+          <template v-slot:link>
+            <p class="flex items-center tracking-wider text-green-100 text-md uppercase px-5 md:px-0">
+              <a href="{{Localization.Labels.ProductCarousel.SeeAllLink}}" title="{{Localization.Labels.ProductCarousel.SeeAllText}}">
+                {{Localization.Labels.ProductCarousel.SeeAllText}}
+                <span aria-hidden="true" class="a-arrow -sm -right -filled  ml-3">
+                  <span class="a-arrow__icon border-green-100"></span>
+                </span>
+              </a>
+            </p>
+          </template>
+        {{/if}}
+      </o-product-carousel>
+
+      <script type="application/json" id="dataTopProductsCarousel2">
+      {{toJson Localization}}
+      </script>
+    {{/with}}
+  </div>
+</section>
+
+<div class="o-widthControl mx-auto w-full md:max-w-contain">
+  {{#with SeasonalCarousel}}
+    <div class="preComponentLoader -seasonalCarousel">
+      {{> organisms-seasonal-carousel-vue }}
+    </div>
+  {{/with}}
+</div>
+
+{{#with LTEBanner}}
+  {{> molecules-lte-banner }}
+{{/with}}
+
+{{> molecules-cta-banner }}
+
+{{#if ShippingOnUs}}
+  {{#with ShippingOnUs}}
+    <o-shipping-on-us-toast script-id="sou-toast"></o-shipping-on-us-toast>
+
+    <script type="application/json" id="sou-toast">
+    {{ toJson Localization }}
+    </script>
+  {{/with}}
+{{/if}}
+
+{{#with ReActivationIncentive}}
+  {{> organisms-modal-link}}
+{{/with}}
+
+{{#with Footer}}
+  {{> organisms-site-footer }}
+{{/with}}
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson ShelfLocalization}}
+</script>

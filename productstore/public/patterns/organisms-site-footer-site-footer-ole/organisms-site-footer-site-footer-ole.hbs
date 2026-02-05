@@ -1,0 +1,25 @@
+{{#SiteFooterOle}}
+  <footer class="o-siteFooterOle">
+    <div class="o-siteFooterOle__bg">
+      <div class="o-siteFooterOle__bgImage -desktop" style="{{Images.Desktop}}" role="img"></div>
+      <div class="o-siteFooterOle__bgImage -mobile" style="{{Images.Mobile}}" role="img"></div>
+    </div>
+    <div class="o-siteFooterOle__content">
+      <nav>
+        <ul class="o-siteFooterOle__links">
+          {{#each NavLinks}}
+            <li>
+              <a class="o-siteFooterOle__link" href="{{Link.CTA}}" aria-label="{{{Link.AriaLabel}}}">
+                {{{Link.Title}}}
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+      <hr class="o-siteFooterOle__divider" />
+      <div class="o-siteFooterOle__copyright">
+        {{{CopyRightText}}}
+      </div>
+    </div>
+  </footer>
+{{/SiteFooterOle}}

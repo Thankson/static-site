@@ -1,0 +1,30 @@
+{{#with LTEAccordion}}
+  {{#each Items}}
+    <div class="o-LTEAccordion {{#if twoToneAccordionEnabled}}-twoTone{{/if}} {{#if ../BorderEnabled}} -borderFeature {{/if}}" {{#if Background}}style="background-color:{{Background}}" {{/if}}>
+      <div class="o-LTEAccordion__wrapper {{#if ../BorderEnabled}} {{Mod}} {{/if}} " style="{{#if BorderColor}} border-color:{{BorderColor}};{{/if}}">
+        <h3 data-accord="title" class="o-LTEAccordion__title {{#if TitlePaddingTop}}{{TitlePaddingTop}}{{/if}} {{#if TitlePaddingBottom}}{{TitlePaddingBottom}}{{/if}}">
+          <button data-accord="toggler" class="o-LTEAccordion__toggler" id="{{ToggleID}}" aria-controls="{{ContentID}}" aria-expanded="false" {{#if Gtm}} data-gtm-track='{
+                        "gtmId": {{Gtm.Id}},
+                        "gtmText": "{{TitleText}}"
+                    }' {{/if}}>
+            <span class="o-LTEAccordion__text -title">
+              {{TitleText}}
+            </span>
+            <span class="o-LTEAccordion__icon {{#if UsePlusIcon}}-plusIcon {{else}}{{#if UseArrowAnimation}}-animated{{else}}-expand{{/if}}{{/if}}" aria-hidden="true" {{#if UseCustomColor}}{{#if UsePlusIcon}}style="--bgColor: {{CustomIconColor}};" {{else}}style="color:{{CustomIconColor}};" {{/if}} {{else}}{{#if UsePlusIcon }}style="--bgColor: #252525;" {{else}}style="color: #252525;" {{/if}}{{/if}}></span>
+
+          </button>
+        </h3>
+
+        <div data-accord="content" class="o-LTEAccordion__content hidden {{#if ContentPaddingTop}}{{ContentPaddingTop}}{{/if}}" id="{{ContentID}}" aria-labelledby="{{ToggleID}}" role="region" {{#if ContentBGColor}}{{#if twoToneAccordionEnabled}}style="background-color:{{ContentBGColor}}; width: 100%;" {{/if}}{{/if}}>
+          {{#if ContentDynamic}}
+            {{#each ContentDynamic}}
+              {{> (lookup . 'DynamicPartial')}}
+            {{/each}}
+          {{else}}
+            {{{Content}}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+{{/with}}

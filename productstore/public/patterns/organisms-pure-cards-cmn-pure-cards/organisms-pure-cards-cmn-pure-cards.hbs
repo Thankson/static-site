@@ -1,0 +1,17 @@
+<div class="max-w-contain mx-auto">
+
+  {{!-- Component below --}}
+  <div class="o-pureCards">
+    {{#each PureCards}}
+      <div class="o-pureCards__item">
+        <m-pure-card script-id="{{Id}}"></m-pure-card>
+
+        <script type="application/json" id="{{Id}}">
+        {{toJson Localization}}
+        </script>
+      </div>
+    {{/each}}
+  </div>
+  {{!-- Component above --}}
+
+</div>

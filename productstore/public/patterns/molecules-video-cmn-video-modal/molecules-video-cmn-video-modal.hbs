@@ -1,0 +1,17 @@
+<!-- lightbox -->
+{{#with Video}}
+  <div tabindex="0" class="m-videoModal" aria-modal="true" role="dialog" data-js="videoModal" aria-describedby="title-{{mediaId}}">
+    <p class="sr-only" id="title-{{mediaId}}">{{title}}</p>
+    <div class="m-videoModal__lightbox" aria-hidden="true">
+      <nav class="m-videoModal__actions -lightbox">
+        <button class="m-videoModal__close">{{../CloseLighbox}}</button>
+      </nav>
+      <div class="m-videoModal__lightboxVideos">
+        <div class="m-videoModal__player">
+          {{> atoms-cmn-mela-player}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/with}}
+<!-- End lightbox -->

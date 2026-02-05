@@ -1,0 +1,21 @@
+{{> organisms-site-header-grow}}
+
+{{> organisms-top-navigation}}
+
+{{#with PageContent}}
+  <div class="mx-auto w-full max-w-full md:max-w-contain my-24">
+    <h2 class="font-bold text-2xl leading-base pb-20">{{Heading}}</h2>
+    <p class="pb-20">{{Description}}</p>
+    <hr>
+  </div>
+
+  <div class="mx-auto w-full max-w-full md:max-w-contain my-24">
+    <p class="text-gray-120">{{FooterNote}}</p>
+  </div>
+{{/with}}
+
+{{#with BadgeModal}}
+  {{> organisms-badge-modal}}
+{{/with}}
+
+{{> organisms-site-footer}}

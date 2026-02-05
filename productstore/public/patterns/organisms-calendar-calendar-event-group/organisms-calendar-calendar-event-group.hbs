@@ -1,0 +1,13 @@
+{{#CalendarEventGroup}}
+  <section class="o-calendarEventGroup o-widthControl mx-auto w-full max-w-full md:max-w-contain" data-testid="section-calendarEventGroup">
+    <p class="o-calendarEventGroup__title" data-testid="paragraph-calendarEventGroupTitle">{{Title}}</p>
+    <div class="o-calendarEventGroup__headerDash"></div>
+    <ul class="o-calendarEventGroup__eventsList">
+      {{#each Events}}
+        <li class="o-calendarEventGroup__eventItem" data-testid="listItem-calendarEventGroupEvent">
+          {{> molecules-calendar-event}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+{{/CalendarEventGroup}}

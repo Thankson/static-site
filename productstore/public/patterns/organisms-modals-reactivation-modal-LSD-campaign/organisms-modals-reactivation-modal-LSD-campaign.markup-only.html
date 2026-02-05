@@ -1,0 +1,49 @@
+<modal :visible="true">
+
+  <!-- START: .cshtml rendering starts here -->
+  <o-reactivation-modal script-id="ReactivationModalId"></o-reactivation-modal>
+
+  <script type="application/json" id="ReactivationModalId">
+    {
+      "Checkboxes": [{
+        "Checked": true,
+        "Name": "SendSms",
+        "Required": true,
+        "Text": "I authorize Melaleuca to send messages to me via automated text.  Consent is not required for purchase of goods or services.  I can text STOP to end text messages or HELP for added information.  Message and data rates may apply. <span class=\"text-green font-bold\">Terms of Use</span> & <span class=\"text-green font-bold\">Privacy Policy</span> at Melaleuca.com.*"
+      }, {
+        "Checked": false,
+        "Name": "Terms",
+        "Required": true,
+        "Text": "I agree to and acknowledge that I have read the terms & conditions outlined in the <span class=\"text-green font-bold\">Customer Agreement</span> and <span class=\"text-green font-bold\">Statement of Policies</span>. (A link to these terms & conditions will be emailed to you in your reactivation email.) I also agree to pay the Annual Membership fee when it is due."
+      }],
+      "Labels": {
+        "CardholderNameRequired": "Name is required",
+        "CardNumberMaxValue": 16,
+        "CardNumberMinValue": 15,
+        "Heading": "We are Glad to See You Again, Jennifer!",
+        "Description": "Reactivate your account to enjoy all the benefits of a Melaleuca Preferred Member.",
+        "Error": "Checkbox required to reactivate your account.",
+        "ReactivateAccountLabel": "Reactivate Account",
+        "NotNowLabel": "Not Now",
+        "AutomatedText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "TermsConditions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "Data": {
+        "Image": {
+          "Url": "//cdnsc1.melaleuca.com/na/images/product-store/reactivation-bg.png",
+          "Alt": "Background Image"
+        },
+        "ReactivateAccountButton": "/Reactivation-Account-Form",
+        "ShowImprovedCTACheckout": true,
+        "ReactivateIncentivePromo": {
+          "Description": "Reactivate your account to enjoy all the benefits of a Melaleuca Preferred Member and get $20 Loyalty Shopping Dollars",
+          "LsdAmount": "$20",
+          "Sku": ""
+        }
+      },
+      "HidePayMethod": true
+    }
+  </script>
+  <!-- END: .cshtml rendering -->
+
+</modal>

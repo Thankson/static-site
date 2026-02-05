@@ -1,0 +1,18 @@
+<modal alignment="bottom" width="440px" :visible="true">
+  <template #content>
+    <div class="o-rewardMod__modal">
+      <perfect-scrollbar class="o-rewardMod__ps pr-20">
+        <h2 id="global-modal-heading" class="text-gray-150 text-sm font-bold mb-20">{{ModalHeading}}</h2>
+
+        <p class="text-gray-150 text-sm mb-40">{{ModalBody.Description}}</p>
+      </perfect-scrollbar>
+
+      <div>
+        <button v-modal-hide class="a-button -outline -hemisphere font-medium px-15 py-10 leading-tight">
+
+          {{ModalFooter.LinkLabel}}
+        </button>
+      </div>
+    </div>
+  </template>
+</modal>

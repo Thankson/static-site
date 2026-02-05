@@ -1,0 +1,23 @@
+<div class="w-full max-w-xl px-8 mb-40 mx-auto md:mt-30 lg:px-20">
+  <div class="preComponentLoader -productDetails">
+    <o-product-details :is-try-on-tool="true" script-id="data-configurator-pdp" script-id-shelf-configurator="data-shelf-configurator-localization">
+      <div class="w-full mt-20 mb-15 md:block md:w-1_2 md:my-0 md:pr-20 lg:pr-40">
+        <product-dynamic-section section-name="media">
+          {{> molecules-product-media}}
+        </product-dynamic-section>
+      </div>
+    </o-product-details>
+  </div>
+</div>
+
+<script type="application/json" id="data-configurator-pdp">
+{{toJson PdpData}}
+</script>
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson ShelfData}}
+</script>
+
+<script id="data-try-on-tool" type="application/json">
+{{toJson TryOnToolData}}
+</script>

@@ -1,0 +1,16 @@
+{{#AnnouncementCard}}
+  <article class="m-announcementCard" style="background-color: {{Background.Color}}">
+    <a class="m-announcementCard__link" href="{{CTA.Url}}" {{#if CTA.Target}}target="{{CTA.Target}}" rel="noopener noreferrer" {{/if}} {{#if CTA.AriaLabel}}aria-label="{{CTA.AriaLabel}}" {{/if}}>
+      {{#if Background.Image.Url}}
+        <div class="m-announcementCard__bg" style="background-image:url('{{Background.Image.Url}}')" aria-hidden="true">
+        </div>
+      {{/if}}
+
+      <div class="m-announcementCard__content">
+        {{#if Content.RTE.Html}}
+          {{{Content.RTE.Html}}}
+        {{/if}}
+      </div>
+    </a>
+  </article>
+{{/AnnouncementCard}}

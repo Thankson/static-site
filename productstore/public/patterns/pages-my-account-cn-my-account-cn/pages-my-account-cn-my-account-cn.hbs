@@ -1,0 +1,26 @@
+{{> organisms-site-header }}
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson Localization }}
+</script>
+<section class="pt-10 pb-1 md:pt-75 md:pb-15 bg-gray-25">
+  <div class="mx-auto max-w-contain">
+    <h1 class="w-full text-2xl font-bold tracking-tight text-gray-150 font-global-sans hidden md:block md:text-3xl md:mb-40 to-md:px-10 u-printHidden">{{PageTitle}}</h1>
+    {{#with AccountMemberCn}}
+      {{> organisms-account-member-cn }}
+    {{/with}}
+    {{#with MyAccountMenuCn}}
+      {{> organisms-my-account-menu }}
+    {{/with}}
+    {{#with MyAccountMenuBenefits}}
+      {{> organisms-my-account-menu }}
+    {{/with}}
+    {{#with MyAccountRecentOrders}}
+      {{> organisms-recent-order }}
+    {{/with}}
+    {{#with DefaultAddress}}
+      {{> organisms-default-address }}
+    {{/with}}
+  </div>
+</section>
+
+{{> organisms-site-footer }}

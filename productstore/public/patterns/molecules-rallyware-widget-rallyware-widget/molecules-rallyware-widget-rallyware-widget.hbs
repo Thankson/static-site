@@ -1,0 +1,9 @@
+{{#> atoms-badge}}
+  {{> atoms-rallyware-widget }}
+{{/atoms-badge}}
+{{!-- This is for showing Premium Badge Modal --}}
+{{#if BadgeModal}}
+  {{#with BadgeModal}}
+    {{> organisms-badge-modal}}
+  {{/with}}
+{{/if}}

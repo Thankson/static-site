@@ -1,0 +1,15 @@
+{{> organisms-site-header }}
+
+<div class="bg-gray-25">
+  {{#Breadcrumb}}
+    {{> molecules-breadcrumb }}
+  {{/Breadcrumb}}
+
+  <p-gui-carrier-love-code script-id="{{Id}}"></p-gui-carrier-love-code>
+
+  <script type="application/json" id="{{Id}}">
+  {{toJson Localization}}
+  </script>
+</div>
+
+{{> organisms-site-footer }}

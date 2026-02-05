@@ -1,0 +1,16 @@
+<o-filter-mobile-shelf heading="Heading" :visible="true">
+  <template v-slot:controls>
+    <button type="button" class="o-catFacetModal__clear">CLEAR ALL</button>
+  </template>
+
+  <template v-slot:done>
+    <button type="button" class="a-button -catFacetModal">DONE</button>
+  </template>
+
+  <!-- Start: Default Slot Content -->
+  <o-facet-group-checks title="Surface" :selected='[]' :facets='[ { Name: "Clothes", Value: "Clothes" },  { Name: "Countertops", Value: "Countertops" }, ]'>
+  </o-facet-group-checks>
+  <o-facet-group-checks title="Room" :selected='[]' :facets='[ { Name: "Bathroom", Value: "Bathroom" },  { Name: "Dining Room", Value: "Dining Room" }, ]'>
+  </o-facet-group-checks>
+  <!-- End: Default Slot Content -->
+</o-filter-mobile-shelf>

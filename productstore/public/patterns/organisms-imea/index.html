@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770272894619" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-imea" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-imea\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-imea">Imea</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-imea-address-form" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-address-form\organisms-imea-imea-address-form.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-address-form" title="Link to Pattern">
+						Imea Address Form
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-address-form" data-patternpartial="organisms-imea-address-form" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-address-form">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-address-form script-id="addressFormData"></o-imea-address-form>
+
+<script type="application/json" id="addressFormData">
+    {"Data":{"AddressSuggestionMaxCount":24},"Labels":{"Address_1":{"Placeholder":"Street Address","Required":true,"RequiredErrorMessage":"Please enter your address.","Text":"Address 1"},"Address_2":{"Placeholder":"Apt / PO Box / Suite / Building","Required":false,"Text":"Address 2 (Optional)"},"City":{"Placeholder":"City","Required":true,"RequiredErrorMessage":"Please enter your city.","Text":"City"},"State":{"Placeholder":"Please Select","Required":true,"RequiredErrorMessage":"Please select a state.","Text":"State","States":[{"StateLongName":"District of Columbia","StateShortName":"DC"},{"StateLongName":"Nebraska","StateShortName":"NE"},{"StateLongName":"Kansas","StateShortName":"KS"},{"StateLongName":"Rhode Island","StateShortName":"RI"},{"StateLongName":"Florida","StateShortName":"FL"},{"StateLongName":"Alaska","StateShortName":"AK"},{"StateLongName":"Massachusetts","StateShortName":"MA"},{"StateLongName":"South Carolina","StateShortName":"SC"},{"StateLongName":"Colorado","StateShortName":"CO"},{"StateLongName":"Kentucky","StateShortName":"KY"},{"StateLongName":"Nevada","StateShortName":"NV"},{"StateLongName":"New Hampshire","StateShortName":"NH"},{"StateLongName":"Georgia","StateShortName":"GA"},{"StateLongName":"Maine","StateShortName":"ME"},{"StateLongName":"New Jersey","StateShortName":"NJ"},{"StateLongName":"South Dakota","StateShortName":"SD"},{"StateLongName":"Maryland","StateShortName":"MD"},{"StateLongName":"Hawaii","StateShortName":"HI"},{"StateLongName":"North Carolina","StateShortName":"NC"},{"StateLongName":"Oklahoma","StateShortName":"OK"},{"StateLongName":"Virginia","StateShortName":"VA"},{"StateLongName":"Delaware","StateShortName":"DE"},{"StateLongName":"Missouri","StateShortName":"MO"},{"StateLongName":"Pennsylvania","StateShortName":"PA"},{"StateLongName":"Wisconsin","StateShortName":"WI"},{"StateLongName":"Alabama","StateShortName":"AL"},{"StateLongName":"Connecticut","StateShortName":"CT"},{"StateLongName":"Louisiana","StateShortName":"LA"},{"StateLongName":"New Mexico","StateShortName":"NM"},{"StateLongName":"New York","StateShortName":"NY"},{"StateLongName":"Wyoming","StateShortName":"WY"},{"StateLongName":"Arizona","StateShortName":"AZ"},{"StateLongName":"Idaho","StateShortName":"ID"},{"StateLongName":"Minnesota","StateShortName":"MN"},{"StateLongName":"Mississippi","StateShortName":"MS"},{"StateLongName":"California","StateShortName":"CA"},{"StateLongName":"Iowa","StateShortName":"IA"},{"StateLongName":"North Dakota","StateShortName":"ND"},{"StateLongName":"Tennessee","StateShortName":"TN"},{"StateLongName":"Texas","StateShortName":"TX"},{"StateLongName":"Illinois","StateShortName":"IL"},{"StateLongName":"Michigan","StateShortName":"MI"},{"StateLongName":"Ohio","StateShortName":"OH"},{"StateLongName":"Utah","StateShortName":"UT"},{"StateLongName":"Vermont","StateShortName":"VT"},{"StateLongName":"Indiana","StateShortName":"IN"},{"StateLongName":"Montana","StateShortName":"MT"},{"StateLongName":"Oregon","StateShortName":"OR"},{"StateLongName":"Washington","StateShortName":"WA"},{"StateLongName":"West Virginia","StateShortName":"WV"},{"StateLongName":"Arkansas","StateShortName":"AR"}]},"PostalCode":{"Placeholder":"Zip Code","Required":true,"InvalidErrorMessage":"Invalid zip code.","RequiredErrorMessage":"Please enter a zip code.","Text":"Zip Code"},"AddressEntered":"Address You Entered:","AddressNotOnSystem":"This address is not currently in our system. Please review the address and make sure it is correct before continuing.","Back":"Back","ProblemWithAddress":"There was a problem with the address you entered. Please select from the list of Suggested Addresses, or try again. For further assistance, please contact Customer Service at 1 (800) 282-3000.","Suggested":"Suggested:","UseThisAddress":"Use this address","VerifyAddressModalTitle":"Verify Address","MaxCharacterLengthExceedError":"Maximum {0} characters ({1} too many)","Remove":"Remove","ClosedHeading":"Business/Permanent Address (Optional)","OpenHeading":"Add Business/Permanent Address (Optional)","Subheading":"Your business address will be used to send commission checks, awards, and invitations to events."}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-address-form" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Address Form","patternPartial":"organisms-imea-address-form","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-business-info-form" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-business-info-form\organisms-imea-imea-business-info-form.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-business-info-form" title="Link to Pattern">
+						Imea Business Info Form
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-business-info-form" data-patternpartial="organisms-imea-business-info-form" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-business-info-form">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-business-info-form script-id="businessInfoFormData"></o-imea-business-info-form>
+
+<script type="application/json" id="businessInfoFormData">
+    {"Data":null,"Labels":{"BusinessNumber":{"Placeholder":"Australian Business Number","Required":false,"RequiredErrorMessage":"Please enter a business number","Text":"Australian Business Number","Show":"Show","Hide":"Hide"},"GoodsAndServicesTaxCheckbox":{"Required":false,"RequiredErrorMessage":"Required","Text":"I am presently registered GST (Goods and Services Tax)"},"Remove":"Remove","ClosedHeading":"Business Information (Optional)","OpenHeading":"Add Business Information (Optional)"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-business-info-form" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Business Info Form","patternPartial":"organisms-imea-business-info-form","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-commissions-bonuses-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-commissions-bonuses-section\organisms-imea-imea-commissions-bonuses-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-commissions-bonuses-section" title="Link to Pattern">
+						Imea Commissions Bonuses Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-commissions-bonuses-section" data-patternpartial="organisms-imea-commissions-bonuses-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-commissions-bonuses-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-commissions-bonuses-section 
+    script-id="commissionsBonusesData" 
+>
+</o-imea-commissions-bonuses-section>
+<script type="application/json" id="commissionsBonusesData">
+    {"Data":{"ParticipationLevel":"3"},"Labels":{"CommissionsBonusesSubTitle":"Which Category Best Describes Your Goals as a Melaleuca Marketing Executive?","CommissionsBonusesTitle":"Earn Commissions & Bonuses","ParticipationLevels":[{"Description":"<span class=\"font-medium\">Category 1:</span><br/>I do not plan to refer many Customers, but would like to earn commissions if I ever refer a Customer.","Level":"1"},{"Description":"<span class=\"font-medium\">Category 2:</span><br/>Earn Supplemental Income","Level":"2"},{"Description":"<span class=\"font-medium\">Category 3:</span><br/>Earn Significant Income","Level":"3"}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-commissions-bonuses-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"organisms-imea-tax-information-form","lineagePath":"../../patterns/organisms-imea-imea-tax-information-form\\organisms-imea-imea-tax-information-form.rendered.html"}],"lineage":[{"lineagePattern":"organisms-imea-tax-information-form","lineagePath":"../../patterns/organisms-imea-imea-tax-information-form\\organisms-imea-imea-tax-information-form.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Commissions Bonuses Section","patternPartial":"organisms-imea-commissions-bonuses-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-commissions-bonuses-section-tax-information" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-commissions-bonuses-section-tax-information\organisms-imea-imea-commissions-bonuses-section-tax-information.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-commissions-bonuses-section-tax-information" title="Link to Pattern">
+						Imea Commissions Bonuses Section Tax Information
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-commissions-bonuses-section-tax-information" data-patternpartial="organisms-imea-commissions-bonuses-section-tax-information" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-commissions-bonuses-section-tax-information">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-commissions-bonuses-section 
+    script-id="commissionsBonusesData" 
+>
+        <template #tax-information-form>
+            <o-imea-tax-information-section 
+                script-id="taxInformationSection"
+            >
+            </o-imea-tax-information-section>
+            <script type="application/json" id="taxInformationSection">
+                {"Id":"44bd99c1-e7ce-434a-95fe-f546c7115899","Data":{"EnableCfdiEnhancement":true},"Labels":{"Heading":"Tax Information","SubHeading":"<span class='font-material pr-10' aria-hidden='true'>info</span> Use the information as it appears in your Constancia de Situacion Fiscal. Please check it at:  <a href='www.sat.gob.mx' class='underline pl-4' target='_blank'> www.sat.gob.mx </a>","Name":{"Placeholder":"Name(s)","Required":true,"RequiredErrorMessage":"Please Enter Name(s)","Text":"Name(s)"},"PaternalSurname":{"Placeholder":"Paternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Paternal Surname","Text":"Paternal Surname"},"MaternalSurname":{"Placeholder":"Maternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Maternal Surname","Text":"Maternal Surname"},"PostalCode":{"Placeholder":"i.e. 72000","Required":true,"RequiredErrorMessage":"Please Enter Valid Postal Code","LengthErrorMessage":"Postal Code must be five numbers","Text":"Código Postal"},"Rfc":{"Placeholder":"RFC Con Homoclave","Required":true,"RequiredErrorMessage":"Please Enter Valid Tax ID","Text":"RFC Con Homoclave"},"CurpNumber":{"Placeholder":"CURP Number","Required":true,"RequiredErrorMessage":"Please Enter CURP Number","Text":"Curp Number"},"LegalAcknowledgment":{"Required":true,"RequiredErrorMessage":"Required","EntrepreneurAcknowledgementLabel":"Entrepreneur legal acknowledgement","ResicoAcknowledgementLabel":"<span style=\"background-color: rgb(255, 255, 255);\">RESICO legal acknowledgement</span>"},"EntityType":{"Placeholder":"Select Entity Type","Required":true,"RequiredErrorMessage":"Please Enter Entity Type","Text":"Entity Type","Options":[{"Text":"Select Entity Type","Value":""},{"Text":"Assimilated Wages","Value":"assimilated_wages"},{"Text":"Entrepreneur","Value":"entrepreneur"},{"Text":"RESICO","Value":"resico"}]}},"IgnoreComponent":false}
+            </script>
+        </template>
+</o-imea-commissions-bonuses-section>
+<script type="application/json" id="commissionsBonusesData">
+    {"Data":{"ParticipationLevel":"3"},"Labels":{"CommissionsBonusesSubTitle":"Which Category Best Describes Your Goals as a Melaleuca Marketing Executive?","CommissionsBonusesTitle":"Earn Commissions & Bonuses","ParticipationLevels":[{"Description":"<span class=\"font-medium\">Category 1:</span><br/>I do not plan to refer many Customers, but would like to earn commissions if I ever refer a Customer.","Level":"1"},{"Description":"<span class=\"font-medium\">Category 2:</span><br/>Earn Supplemental Income","Level":"2"},{"Description":"<span class=\"font-medium\">Category 3:</span><br/>Earn Significant Income","Level":"3"}]}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-commissions-bonuses-section-tax-information" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"organisms-imea-tax-information-form","lineagePath":"../../patterns/organisms-imea-imea-tax-information-form\\organisms-imea-imea-tax-information-form.rendered.html"}],"lineage":[{"lineagePattern":"organisms-imea-tax-information-form","lineagePath":"../../patterns/organisms-imea-imea-tax-information-form\\organisms-imea-imea-tax-information-form.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"},{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"},{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Commissions Bonuses Section Tax Information","patternPartial":"organisms-imea-commissions-bonuses-section-tax-information","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-personal-info-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-personal-info-section\organisms-imea-imea-personal-info-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-personal-info-section" title="Link to Pattern">
+						Imea Personal Info Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-personal-info-section" data-patternpartial="organisms-imea-personal-info-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-personal-info-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-personal-info-section script-id="personalInfoForm"></o-imea-personal-info-section>
+<script type="application/json" id="personalInfoForm">
+    {"Data":{"PreFilledData":{"DOB":"","Email":"johndoe@gmail.com","FirstName":"John","LastName":"Doe","MiddleName":"","PhoneNumber":"208 208 1234","FormattedPhoneNumber":"(208) 208-1234","PhoneType":"MobilePhone","Username":"208 208 1234"}},"Labels":{"BirthDate":{"EighteenUnderAgeError":"You must be 18 years or older to sign up.","InvalidDateOfBirthError":"Please enter a valid date","Placeholder":"","Required":false,"Text":"Birth Date (Optional)"},"DOBFields":{"Day":"Day","Month":"Month","Year":"Year"},"Edit":"Edit","Email":{"DuplicateErrorMessage":"Email already exists","Placeholder":"Email","Required":true,"RequiredErrorMessage":"Please enter a valid email address","Text":"Email"},"FirstName":{"Placeholder":"Enter FirstName","Required":true,"RequiredErrorMessage":"Please enter your first name.","Text":"First name"},"Initial":{"Placeholder":"Initial","Required":false,"RequiredErrorMessage":"","Text":"Initial"},"LastName":{"Placeholder":"Last name","Required":true,"RequiredErrorMessage":"Please enter your first name.","Text":"Last Name"},"MonthOptions":["January","February","March","April","May","June","July","August","September","October","November","December"],"NoteText":"<span class=\"font-medium\">NOTE: </span>Your username is determined by your mobile number or email address. Changing that information here will also change your username.","PersonalInfoTitle":"Personal Information","Phone":{"DuplicateErrorMessage":"Phone number already exists","Placeholder":"Enter Phone Number","Required":true,"RequiredErrorMessage":"Please enter valid phone number","Text":"Phone Number","TextPhoneType":"Phone Type"},"PhoneType":"Phone Type","ValidPhoneTypes":[{"Text":"Mobile","Type":"MobilePhone"},{"Text":"Home","Type":"Home"},{"Text":"Business","Type":"Work"}]}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-personal-info-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Personal Info Section","patternPartial":"organisms-imea-personal-info-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-personal-info-section-eu" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-personal-info-section-eu\organisms-imea-imea-personal-info-section-eu.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-personal-info-section-eu" title="Link to Pattern">
+						Imea Personal Info Section Eu
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-personal-info-section-eu" data-patternpartial="organisms-imea-personal-info-section-eu" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-personal-info-section-eu">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-personal-info-section script-id="personalInfoForm"></o-imea-personal-info-section>
+<script type="application/json" id="personalInfoForm">
+    {"Data":{"PreFilledData":{"DOB":"","Email":"johndoe@gmail.com","FirstName":"John","LastName":"Doe","MiddleName":"","PhoneNumber":"208 208 1234","FormattedPhoneNumber":"(208) 208-1234","PhoneType":"MobilePhone","Username":"208 208 1234"}},"Labels":{"BirthDate":{"EighteenUnderAgeError":"You must be 18 years or older to sign up.","InvalidDateOfBirthError":"Please enter a valid date","Placeholder":"","Required":false,"Text":"Birth Date (Optional)"},"DOBFields":{"Day":"Day","Month":"Month","Year":"Year"},"Edit":"Edit","Email":{"DuplicateErrorMessage":"Email already exists","Placeholder":"Email","Required":true,"RequiredErrorMessage":"Please enter a valid email address","Text":"Email"},"FirstName":{"Placeholder":"Enter FirstName","Required":true,"RequiredErrorMessage":"Please enter your first name.","Text":"First name"},"Initial":{"Placeholder":"Initial","Required":false,"RequiredErrorMessage":"","Text":"Initial"},"LastName":{"Placeholder":"Last name","Required":true,"RequiredErrorMessage":"Please enter your first name.","Text":"Last Name"},"MonthOptions":["January","February","March","April","May","June","July","August","September","October","November","December"],"NoteText":"<span class=\"font-medium\">NOTE: </span>Your username is determined by your mobile number or email address. Changing that information here will also change your username.","PersonalInfoTitle":"Personal Information","Phone":{"DuplicateErrorMessage":"Phone number already exists","Placeholder":"Enter Phone Number","Required":true,"RequiredErrorMessage":"Please enter valid phone number","Text":"Phone Number","TextPhoneType":"Phone Type"},"PhoneType":"Phone Type","ValidPhoneTypes":[{"Text":"Mobile","Type":"MobilePhone"},{"Text":"Home","Type":"Home"},{"Text":"Business","Type":"Work"}]}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-personal-info-section-eu" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Personal Info Section Eu","patternPartial":"organisms-imea-personal-info-section-eu","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-personal-production-account-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-personal-production-account-section\organisms-imea-imea-personal-production-account-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-personal-production-account-section" title="Link to Pattern">
+						Imea Personal Production Account Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-personal-production-account-section" data-patternpartial="organisms-imea-personal-production-account-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-personal-production-account-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-personal-production-account-section
+    script-id="personalProductionAccountData"
+>
+</o-imea-personal-production-account-section>
+<script type="application/json" id="personalProductionAccountData">
+    {"Labels":{"AddAdditionalHousehold":"Add Additional Households","ClosedHeading":"Personal Production Account (Optional)","HouseholdFirstName":{"Placeholder":"Enter first name","Required":true,"RequiredErrorMessage":"Please enter household first name","Text":"First name"},"HouseholdLastName":{"Placeholder":"Enter last name","Required":true,"RequiredErrorMessage":"Please enter household LastName name","Text":"Last Name"},"HouseholdPhoneNumber":{"Placeholder":"Enter phone number","Required":true,"Text":"Phone Number","RequiredErrorMessage":"Please enter valid phone number"},"HouseholdPurchaseProductPointsCheckbox":{"Checked":false,"Text":"<span class=\"font-medium\">I would Like to designate other households</span> whose purchase will count toward satisfying my personal production account requirement."},"SelfPurchaseProductPointsCheckbox":{"Checked":false,"Text":"<span class=\"font-medium\">I would Like the Product Points from my personal purchases</span> to count towards my personal production account."},"Text":"To qualify for commissions, you are responsible to produce 29 Product Points each month in your Personal Production Account. If you are a Melaleuca customer and your household will be purchasing product for your own consumption, your households purchases can count toward the 29 Product Points. Additionally, you can list other household(s) whose purchases will contribute towards the 29 Product Point requirement. If you are a Preferred Member, your households purchases will more than satisfy your 29 Product Point requirement. If you are not a Preferred Member you should list other households to satisfy this requirement. You can add or change names at any time.","OpenHeading":"Add Personal Production Account (Optional)","Remove":"Remove"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-personal-production-account-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Personal Production Account Section","patternPartial":"organisms-imea-personal-production-account-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-social-security-form" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-social-security-form\organisms-imea-imea-social-security-form.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-social-security-form" title="Link to Pattern">
+						Imea Social Security Form
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-social-security-form" data-patternpartial="organisms-imea-social-security-form" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-social-security-form">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-social-security-form script-id="socialSecurityFormData"></o-imea-social-security-form>
+
+<script type="application/json" id="socialSecurityFormData">
+    {"Data":null,"Labels":{"SocialSecurityNumber":{"Placeholder":"Social Security Number","Required":true,"InvalidErrorMessage":"Invalid social security number.","RequiredErrorMessage":"Please enter your social security number.","Text":"Social Security Number","Show":"Show","Hide":"Hide"},"Remove":"Remove","ClosedHeading":"Social Security Number (Optional)","OpenHeading":"Add Social Security Number (Optional)","Subheading":"If you will be earning commissions & bonuses as part of Melaleuca’s revenue sharing program, we are required to collect your Social Security Number for reporting purposes."}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-social-security-form" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Social Security Form","patternPartial":"organisms-imea-social-security-form","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-spouse-info-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-spouse-info-section\organisms-imea-imea-spouse-info-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-spouse-info-section" title="Link to Pattern">
+						Imea Spouse Info Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-spouse-info-section" data-patternpartial="organisms-imea-spouse-info-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-spouse-info-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-spouse-info-section
+    script-id="spouseInfoForm"
+>
+</o-imea-spouse-info-section>
+<script type="application/json" id="spouseInfoForm">
+    {"Data":null,"Labels":{"ClosedHeading":"Spouse Info (Optional)","Email":{"DuplicateErrorMessage":"Email already exists","Placeholder":"Email","Required":true,"RequiredErrorMessage":"Please enter a valid email address","Text":"Email"},"FirstName":{"Placeholder":"Enter FirstName","Required":true,"RequiredErrorMessage":"Please enter your first name.","Text":"First name"},"Initial":{"Placeholder":"Initial","Required":false,"RequiredErrorMessage":"","Text":"Initial"},"LastName":{"Placeholder":"Last name","Required":true,"RequiredErrorMessage":"Please enter your last name.","Text":"Last Name"},"OpenHeading":"Add Spouse Info (Optional)","Phone":{"DuplicateErrorMessage":"Phone number already exists","Placeholder":"Enter Phone Number","Required":true,"RequiredErrorMessage":"Please enter valid phone number","Text":"Phone Number","TextPhoneType":"Phone Type"},"Remove":"Remove","ValidPhoneTypes":[{"Text":"Mobile","Type":"MobilePhone"},{"Text":"Home","Type":"Home"},{"Text":"Business","Type":"Work"}]}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-spouse-info-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"lineageR":[{"lineagePattern":"pages-imea-additional-checkboxes","lineagePath":"../../patterns/pages-imea-imea-additional-checkboxes\\pages-imea-imea-additional-checkboxes.rendered.html"},{"lineagePattern":"pages-imea-at","lineagePath":"../../patterns/pages-imea-imea-at\\pages-imea-imea-at.rendered.html"},{"lineagePattern":"pages-imea-au-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-au-account-info-prefilled\\pages-imea-imea-au-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-au","lineagePath":"../../patterns/pages-imea-imea-au\\pages-imea-imea-au.rendered.html"},{"lineagePattern":"pages-imea-ca","lineagePath":"../../patterns/pages-imea-imea-ca\\pages-imea-imea-ca.rendered.html"},{"lineagePattern":"pages-imea-de","lineagePath":"../../patterns/pages-imea-imea-de\\pages-imea-imea-de.rendered.html"},{"lineagePattern":"pages-imea-eu","lineagePath":"../../patterns/pages-imea-imea-eu\\pages-imea-imea-eu.rendered.html"},{"lineagePattern":"pages-imea-ie","lineagePath":"../../patterns/pages-imea-imea-ie\\pages-imea-imea-ie.rendered.html"},{"lineagePattern":"pages-imea-jp","lineagePath":"../../patterns/pages-imea-imea-jp\\pages-imea-imea-jp.rendered.html"},{"lineagePattern":"pages-imea-lt","lineagePath":"../../patterns/pages-imea-imea-lt\\pages-imea-imea-lt.rendered.html"},{"lineagePattern":"pages-imea-mx-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-account-info-prefilled\\pages-imea-imea-mx-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux-account-info-prefilled\\pages-imea-imea-mx-improved-ux-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-mx-improved-ux","lineagePath":"../../patterns/pages-imea-imea-mx-improved-ux\\pages-imea-imea-mx-improved-ux.rendered.html"},{"lineagePattern":"pages-imea-mx","lineagePath":"../../patterns/pages-imea-imea-mx\\pages-imea-imea-mx.rendered.html"},{"lineagePattern":"pages-imea-nl","lineagePath":"../../patterns/pages-imea-imea-nl\\pages-imea-imea-nl.rendered.html"},{"lineagePattern":"pages-imea-nz-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-nz-account-info-prefilled\\pages-imea-imea-nz-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-nz","lineagePath":"../../patterns/pages-imea-imea-nz\\pages-imea-imea-nz.rendered.html"},{"lineagePattern":"pages-imea-pl-account-info-prefilled","lineagePath":"../../patterns/pages-imea-imea-pl-account-info-prefilled\\pages-imea-imea-pl-account-info-prefilled.rendered.html"},{"lineagePattern":"pages-imea-pl","lineagePath":"../../patterns/pages-imea-imea-pl\\pages-imea-imea-pl.rendered.html"},{"lineagePattern":"pages-imea-uk","lineagePath":"../../patterns/pages-imea-imea-uk\\pages-imea-imea-uk.rendered.html"},{"lineagePattern":"pages-imea-us","lineagePath":"../../patterns/pages-imea-imea-us\\pages-imea-imea-us.rendered.html"},{"lineagePattern":"pages-imea","lineagePath":"../../patterns/pages-imea-imea\\pages-imea-imea.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Spouse Info Section","patternPartial":"organisms-imea-spouse-info-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-tax-information-form" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-tax-information-form\organisms-imea-imea-tax-information-form.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-tax-information-form" title="Link to Pattern">
+						Imea Tax Information Form
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-tax-information-form" data-patternpartial="organisms-imea-tax-information-form" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-tax-information-form">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-tax-information-section 
+    script-id="taxInformationSection"
+>
+</o-imea-tax-information-section>
+<script type="application/json" id="taxInformationSection">
+    {"Id":"44bd99c1-e7ce-434a-95fe-f546c7115899","Data":{"EnableCfdiEnhancement":true},"Labels":{"Heading":"Tax Information","SubHeading":"<span class='font-material pr-10' aria-hidden='true'>info</span> Use the information as it appears in your Constancia de Situacion Fiscal. Please check it at:  <a href='www.sat.gob.mx' class='underline pl-4' target='_blank'> www.sat.gob.mx </a>","Name":{"Placeholder":"Name(s)","Required":true,"RequiredErrorMessage":"Please Enter Name(s)","Text":"Name(s)"},"PaternalSurname":{"Placeholder":"Paternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Paternal Surname","Text":"Paternal Surname"},"MaternalSurname":{"Placeholder":"Maternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Maternal Surname","Text":"Maternal Surname"},"PostalCode":{"Placeholder":"i.e. 72000","Required":true,"RequiredErrorMessage":"Please Enter Valid Postal Code","LengthErrorMessage":"Postal Code must be five numbers","Text":"Código Postal"},"Rfc":{"Placeholder":"RFC Con Homoclave","Required":true,"RequiredErrorMessage":"Please Enter Valid Tax ID","Text":"RFC Con Homoclave"},"CurpNumber":{"Placeholder":"CURP Number","Required":true,"RequiredErrorMessage":"Please Enter CURP Number","Text":"Curp Number"},"LegalAcknowledgment":{"Required":true,"RequiredErrorMessage":"Required","EntrepreneurAcknowledgementLabel":"Entrepreneur legal acknowledgement","ResicoAcknowledgementLabel":"<span style=\"background-color: rgb(255, 255, 255);\">RESICO legal acknowledgement</span>"},"EntityType":{"Placeholder":"Select Entity Type","Required":true,"RequiredErrorMessage":"Please Enter Entity Type","Text":"Entity Type","Options":[{"Text":"Select Entity Type","Value":""},{"Text":"Assimilated Wages","Value":"individual"},{"Text":"Entrepreneur","Value":"entrepreneur"},{"Text":"RESICO","Value":"resico"}]}},"IgnoreComponent":false}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-tax-information-form" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-imea-commissions-bonuses-section-tax-information","lineagePath":"../../patterns/organisms-imea-imea-commissions-bonuses-section-tax-information\\organisms-imea-imea-commissions-bonuses-section-tax-information.rendered.html"},{"lineagePattern":"organisms-imea-commissions-bonuses-section","lineagePath":"../../patterns/organisms-imea-imea-commissions-bonuses-section\\organisms-imea-imea-commissions-bonuses-section.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-imea-commissions-bonuses-section-tax-information","lineagePath":"../../patterns/organisms-imea-imea-commissions-bonuses-section-tax-information\\organisms-imea-imea-commissions-bonuses-section-tax-information.rendered.html"},{"lineagePattern":"organisms-imea-commissions-bonuses-section","lineagePath":"../../patterns/organisms-imea-imea-commissions-bonuses-section\\organisms-imea-imea-commissions-bonuses-section.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Tax Information Form","patternPartial":"organisms-imea-tax-information-form","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-imea-tax-information-form-mexico" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-imea-imea-tax-information-form-mexico\organisms-imea-imea-tax-information-form-mexico.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-imea-tax-information-form-mexico" title="Link to Pattern">
+						Imea Tax Information Form Mexico
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-imea-tax-information-form-mexico" data-patternpartial="organisms-imea-tax-information-form-mexico" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-imea-tax-information-form-mexico">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-imea-tax-information-section 
+    script-id="taxInformationSection"
+>
+</o-imea-tax-information-section>
+<script type="application/json" id="taxInformationSection">
+    {"Id":"44bd99c1-e7ce-434a-95fe-f546c7115899","Data":null,"Labels":{"Heading":"Tax Information","SubHeading":"<span class='font-material pr-10' aria-hidden='true'>info</span> Use the information as it appears in your Constancia de Situacion Fiscal. Please check it at:  <a href='www.sat.gob.mx' class='underline pl-4' target='_blank'> www.sat.gob.mx </a>","Name":{"Placeholder":"Name(s)","Required":true,"RequiredErrorMessage":"Please Enter Name(s)","Text":"Name(s)"},"PaternalSurname":{"Placeholder":"Paternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Paternal Surname","Text":"Paternal Surname"},"MaternalSurname":{"Placeholder":"Maternal Surname","Required":true,"RequiredErrorMessage":"Please Enter Maternal Surname","Text":"Maternal Surname"},"PostalCode":{"Placeholder":"i.e. 72000","Required":true,"RequiredErrorMessage":"Please Enter Valid Postal Code","LengthErrorMessage":"Postal Code must be five numbers","Text":"Código Postal"},"Rfc":{"Placeholder":"RFC Con Homoclave","Required":true,"RequiredErrorMessage":"Please Enter Valid Tax ID","Text":"RFC Con Homoclave"},"CurpNumber":{"Placeholder":"CURP Number","Required":true,"RequiredErrorMessage":"Please Enter CURP Number","Text":"Curp Number"},"LegalAcknowledgment":{"Required":true,"RequiredErrorMessage":"Required","EntrepreneurAcknowledgementLabel":"Entrepreneur legal acknowledgement","ResicoAcknowledgementLabel":"<span style=\"background-color: rgb(255, 255, 255);\">RESICO legal acknowledgement</span>"},"EntityType":{"Placeholder":"Select Entity Type","Required":true,"RequiredErrorMessage":"Please Enter Entity Type","Text":"Entity Type","Options":[{"Text":"Select Entity Type","Value":""},{"Text":"Assimilated Wages","Value":"assimilated_wages"},{"Text":"Entrepreneur","Value":"entrepreneur"},{"Text":"RESICO","Value":"resico"}]}},"IgnoreComponent":false}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-imea-tax-information-form-mexico" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"imea"},"patternExtension":"hbs","patternName":"Imea Tax Information Form Mexico","patternPartial":"organisms-imea-tax-information-form-mexico","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-imea"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-imea"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770272894619">
+  (function() {
+    if (self != top) {
+      var cb = '1770272894619';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770272894619" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770272894619', function(){
+        loadJS('/js/vue-pci.js?1770272894619', function(){
+          loadJS('/js/vendor-pci.js?1770272894619', function(){
+            loadJS('/js/pci.js?1770272894619', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770272894619', function(){
+        loadJS('/js/vue-main.js?1770272894619', function(){
+          loadJS('/js/vendor.js?1770272894619', function(){
+            loadJS('/js/index.js?1770272894619', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

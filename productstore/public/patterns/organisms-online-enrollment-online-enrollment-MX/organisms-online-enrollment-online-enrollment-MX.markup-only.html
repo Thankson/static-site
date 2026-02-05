@@ -1,0 +1,789 @@
+<o-enrollment-form :is-guest-checkout="false" script-id="dataOnlineEnrollment" script-id-payment="dataPaymentForm" token="eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE2MjkyMjE5NDksImV4cCI6MTYyOTIyNTU0OSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YXVzLm1lbGFsZXVjYS5jb20iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiT3JkZXIuQVBJIiwiT3JnYW5pemF0aW9uLkFQSSIsIlBheU1ldGhvZC5BUEkiLCJQcm9kdWN0LkFQSSIsIlByb21vdGlvbi5BUEkiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJIl0sImNsaWVudF9pZCI6Im1lbGFsZXVjYS1zaXRlY29yZS1kZXYiLCJzY29wZSI6WyJBZGRyZXNzLkFQSS5GdWxsIiwiQmFja3VwT3JkZXIuQVBJLkZ1bGwiLCJDb21tdW5pY2F0aW9uLkFQSS5GdWxsIiwiQ3VzdG9tZXJBY2NvdW50LkFQSS5GdWxsIiwiREVQSW50ZXJmYWNlLkFQSS5GdWxsIiwiRG9jdW1lbnQuQVBJLkZ1bGwiLCJPcmRlci5BUEkuRnVsbCIsIk9yZ2FuaXphdGlvbi5BUEkuRnVsbCIsIlBheU1ldGhvZC5BUEkuRnVsbCIsIlByb2R1Y3QuQVBJLkZ1bGwiLCJQcm9tb3Rpb24uQVBJLkZ1bGwiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJLkZ1bGwiXX0.bNGE4iZ2xSYbyobnG2t6JCbXYSGBE5BMbJ3mvKxO0UpGVYOojPZwisMtn8Ts4FgK0AxTh03FbBEnVZlJTPxWFl6xr7GxfBHq-UxHyFvDODeG8LATVWRB8W06bOXDfKrU3Usu8acyQhWAQk31uFDux_bmCHsJdNjWWyVoklkJjKr3pJnItOiO2WDwsk8o94VpuG0gTFnN4PLRCXsW20aFy6f0mammWGfkF0WyZI1jdbrMzoxEWeVhpDPL4fhti2JYpQa4LGb4ORKsjprUpuHAdXmm6XGGPAmqtV_fzNlzWrrcBWUMIaDyqlh30phvfJI3oGKQMbSEWErt6HKHtHW0rw">
+</o-enrollment-form>
+
+<script type="application/json" id="dataOnlineEnrollment">
+  {
+    "Labels": {
+      "TitleEnrollment": "Create Your Membership Account",
+      "TitleGuest": "Guest Checkout",
+      "TitleGuestWeb": "Create Your Melaleuca Account",
+      "Steps": {
+        "Profile": "Profile",
+        "Shipping": "Shipping",
+        "Address": "Address",
+        "PaymentAgreement": "Payment & Agreement",
+        "Payment": "Payment",
+        "BackupOrder": "Backup Order",
+        "Verify": "Verify",
+        "Shopping": "Shop",
+        "Checkout": "Checkout"
+      },
+      "ProfileSection": {
+        "Title": "Profile Information",
+        "TitleAboutYou": "Tell us about you:",
+        "FirstName": "Nombre",
+        "LastName": "Apellido paterno",
+        "LastName2": "Apellido materno",
+        "Email": "E-mail",
+        "Phone": "Mobile number",
+        "Username": "Username",
+        "UsernamePlaceholder": "E-mail or 10 Digit Mobile Number",
+        "Password": "Password",
+        "PasswordPlaceholder": "Enter New Password",
+        "PasswordCriteria": {
+          "Case": "UPPER and lower case",
+          "Number": "At least one number",
+          "QtityChar": "8 or more characters",
+          "Title": "Your Password must include:"
+        },
+        "ShowPassword": "Show Password",
+        "HidePassword": "Hide Password",
+        "ConfirmPassword": "Confirm password",
+        "ConfirmPasswordPlaceholder": "Re-enter New Password"
+      },
+      "AboutMLCSection": {
+        "Title": "How did you hear about Melaleuca?",
+        "Optional": "Optional",
+        "Friend": "Friend/Referral",
+        "FriendName": "Name of Friend",
+        "FriendEmail": "E-mail or phone number",
+        "Web": "Web Search/Browsing",
+        "Other": "Other"
+      },
+      "ReferredSection": {
+        "Title": "Referred By:"
+      },
+      "PaymentSection": {
+        "Title": "Payment Method",
+        "MembershipFeeTitle": "Membership Fee",
+        "MembershipFeeText": "<p><span class=\"font-bold text-dark\">A {0} Membership Fee will be charged after your first order.</span> This provides access to all the benefits of your Membership.</p><p class=\"text-sm pt-20 italic\"><span class=\"uppercase font-bold not-italic\">Note:</span> Your {1} membership renewal fee will be charged annually. <span class=\"inline md:block\">You may cancel your membership at any time.</span></p>",
+        "FreeProductsTitle": "$100 in Free Products",
+        "FreeProductsText": "<p><span class=\"font-bold text-dark\">In the next five months, we’d like to give you $100 in free products.</span> If you opt in to receive text messages, we’ll use text to notify you monthly when we’ve placed $20 in your account and to send other shopping updates. We’ll do our best to only text relevant information that will help you. We care about your privacy. We will never sell your contact information. Thank you!</p>",
+        "MembershipAgreement": "Membership Agreement",
+        "TermsConditions": {
+          "CheckboxAuthorize": {
+            "AriaLabel": "I authorize Melaleuca or its Marketing Executives to contact using text or automated texting for efficiency. Consent is not required to purchase. Message & data rates may apply. Text STOP to end, HELP for info. Terms of Use & Privacy Policy at Melaleuca.com.",
+            "Text": "I authorize Melaleuca or its Marketing Executives to contact using text or automated texting for efficiency. Consent is not required to purchase. Message & data rates may apply. Text STOP to end, HELP for info. <a href=\"#\" class=\"text-green font-normal underline\">Terms of Use & Privacy Policy</a> at Melaleuca.com."
+          },
+          "CheckboxAgreement": {
+            "AriaLabel": "I agree to and acknowledge that I have read the terms & conditions outlined in the Customer Agreement",
+            "Text": "I agree to and acknowledge that I have read the terms & conditions outlined in the <a href=\"#\" class=\"text-green font-normal underline\">Customer Agreement</a>."
+          },
+          "Modal": {
+            "Heading": "Customer Membership Agreement Terms & Conditions",
+            "Body": "<ol><li class=\"pb-15\"><span class=\"font-bold\">1. Payment Authorization:</span> I authorize Melaleuca to charge my credit card or debit the bank account specified in this Agreement for orders I place directly and for any Backup Order. If Melaleuca is unable to collect payment in full from my credit card, I authorize Melaleuca to make multiple attempts to collect for up to 90 days. I agree to pay a $10.00 service fee if a check or charge is dishonored for any reason. I will hold Melaleuca harmless for all special or consequential damages, whether direct or indirect, resulting from any wrongful debit to my account.</li><li class=\"pb-15\"><span class=\"font-bold\">2. Convenience Certificate Redemption:</span> After I have been a Member for six months, I may select Convenience Certificates as my Backup Order and may receive Convenience Certificates as otherwise provided in this Agreement. If I do not redeem a Convenience Certificate within 12 months, the unredeemed balance will be converted to a credit on my account, subject to the terms in the Satisfaction Guarantee paragraph below. Convenience Certificates may be redeemed for product or credit on account, but may not be returned for cash except in certain states.</li><li class=\"pb-15\"><span class=\"font-bold\">3. Resale of Products:</span> I understand Melaleuca’s commitment to product freshness, product safety, and product quality; therefore, I agree that I will not offer Melaleuca products for sale or resale. This obligation will continue even after this Agreement is canceled. Melaleuca shall have the right to prevent any such offers by legal action and, to the extent permitted by law, I will be obligated to pay Melaleuca’s legal fees and costs in connection with any such legal action based upon my violation of this obligation.</li><li class=\"pb-15\"><span class=\"font-bold\">4. Term:</span> The term of this Agreement is one year. This Agreement automatically renews annually on each anniversary date and will remain in effect until: (1) I submit a new signed Customer Membership Agreement, (2) I cancel this Agreement pursuant to the cancellation rights notice herein, or (3) Melaleuca cancels this Agreement upon written notice to me at my address set forth herein, which I agree Melaleuca may do at any time in its sole discretion.</li><li class=\"pb-15\"><span class=\"font-bold\">5. Satisfaction Guarantee:</span> If I am not completely satisfied with any product I purchase from Melaleuca, I may return the unused portion of the product together with a copy of the purchase receipt to Melaleuca within 90 days of the date of purchase and Melaleuca will credit my customer account for the total purchase price of the product. If I have unredeemed credit on my customer account, Melaleuca may make efforts to locate me and advise me in writing of the credit. Melaleuca may continue to make such attempts on a monthly basis and will charge my customer account a $10 service fee for each month’s notification process for as long as I have a credit on account, unless otherwise restricted or prohibited by law.</li><li class=\"pb-15\"><span class=\"font-bold\">6. Refused Orders:</span> If I refuse to accept any products delivered to me in accordance with Melaleuca’s Customer Membership Agreement Terms and Conditions, any future Backup Order Melaleuca sends to me will be a Convenience Certificate of equal value that I can redeem within 12 months at my convenience.</li><li class=\"pb-15\"><span class=\"font-bold\">7. Dispute Resolution:</span> To the extent permitted by applicable law, and unless otherwise expressly agreed to in writing, all claims or disputes of any nature between one or more current or former Customers and Melaleuca (or its officers, shareholders, or employees), if not resolved by mutual agreement, shall be resolved by binding arbitration. Judgment on an award rendered by the arbitrator may be entered in any court having jurisdiction. All issues are for the arbitrator to decide consistent with this Agreement, including issues relating to the scope and enforceability of the arbitration provision, and the arbitrator shall have the power to award damages and injunctive relief. If the costs of arbitration will be prohibitive as compared to the costs of litigation, I agree that Melaleuca will be allowed to pay as much of the filing and hearing fees in connection with the arbitration as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. MELALEUCA AND I AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING OR IN ANY PROCEEDING THAT CONSOLIDATES MORE THAN ONE PERSON’S CLAIMS. MELALEUCA AND I ALSO AGREE THAT, BY ENTERING INTO THIS AGREEMENT, EACH PARTY IS WAIVING THE RIGHT TO A TRIAL BY JURY FOR ALL CLAIMS SUBJECT TO BINDING ARBITRATION. All arbitration hearings shall take place in the State of Idaho. This Agreement shall be governed by the laws of the State of Idaho and the Federal Arbitration Act (“FAA”). If any conflict exists between Idaho law and the FAA, the FAA will govern. This arbitration provision, in whole or in part, shall survive termination, cancellation, or suspension of this Agreement or any provision of this paragraph. In reaching its decision, the arbitrator or the court (a) shall not interpret the meaning of this Agreement or the intent of the parties with respect thereto by reference to any written or oral communications, course of dealing, or extraneous documents or information other than the express terms of this Agreement, as expressly and specifically amended or waived by Melaleuca in accordance with this Agreement; and (b) shall consider Melaleuca’s interpretations of the Melaleuca Agreements (including interpretations of any ambiguous provisions) as final and binding unless such interpretation is shown to be unreasonable by clear and convincing evidence.</li><li class=\"pb-15\"><span class=\"font-bold\">8. Personal Information:</span> I consent to the lawful use by Melaleuca of the personal information contained on this form and information regarding my purchases from Melaleuca, including the disclosure of such content and information to my enroller and his or her Support Team.</li><li class=\"pb-15\"><span class=\"font-bold\">9. Amendments:</span> Upon 30 days notice to Customers, Melaleuca may, at its sole discretion, amend this Customer Membership Agreement. By signing this Agreement, I agree to abide by any and all such amendments and that my only remedy for not accepting any such amendments is to cancel this Agreement prior to the conclusion of the 30-day notification period. My placing of an order 30 days after Melaleuca sends written notice of any amendment will constitute my acceptance of the amendment. I agree that Melaleuca’s interpretation of the Melaleuca Agreements will be final and binding.</li></ol>",
+            "ButtonText": "Close"
+          },
+          "Required": "Required",
+          "Error": "You must agree to the Terms and Conditions to proceed"
+        }
+      },
+      "VerifySection": {
+        "Title": "<span class=\"font-normal\">Almost Done! <span class=\"block\">We have sent a confirmation code to you at <span class=\"block font-bold text-xl pt-5\">{0}</span></span></span>",
+        "Subtitle": "<p>Enter the code to continue to Checkout. <span class=\"block italic\">Note: The code will expire 30 minutes after being sent.</span></p>",
+        "EnterCode": "Enter Code",
+        "SubmitCode": "Submit Code",
+        "Footnote": "If you do not receive a code, make sure you <span class=\"font-bold underline\">typed in your email</span> correctly, or call <a class=\"font-bold text-green\" href=\"https://www.melaleuca.com\">Customer Support</a> at 1-800-742-2444.",
+        "NotSent": "<span class=\"font-normal\">Please try again. <span class=\"block\">An error occurred when sending a confirmation code to you at <span class=\"block font-bold text-xl pt-5\">{0}</span></span></span>",
+        "TryAgain": "Try Again"
+      },
+      "ShippingSection": {
+        "Address1": "Address 1",
+        "Address1Error": "Address is required",
+        "Address1Placeholder": "Street Address",
+        "Address2": "Address 2 <span class=\"italic font-normal capitalize\">(Optional)</span>",
+        "Address2Placeholder": "Apt / PO Box / Suite / Building / Etc",
+        "Address3": "Address 3 <span class=\"italic font-normal capitalize\">(Optional)</span>",
+        "AddressEntered": "Address You Entered:",
+        "AddressNotOnSystem": "This address is not currently in our system. Please review the address and make sure it is correct before continuing.",
+        "Back": "Back",
+        "City": "City",
+        "CityError": "City is required",
+        "CityPlaceholder": "City",
+        "Country": "Country",
+        "PostalCode": "Postal Code",
+        "PostalCodeError": "Postal Code is required",
+        "Province": "Province",
+        "ProvinceError": "Province is required",
+        "SectionTitle": "Shipping Address",
+        "State": "State",
+        "StateError": "State is required",
+        "Suburb": "Suburb",
+        "SuburbError": "Suburb is required",
+        "Suggested": "Suggested",
+        "UseThisAddress": "Use This Address",
+        "VerifyAddressModalTitle": "Verify Address",
+        "ZipCode": "Zip Code",
+        "ZipCodeError": "Zip Code is required"
+      },
+      "CTA": {
+        "Continue": "Continue",
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "CreateAccount": "Create Account",
+        "Next": "Next"
+      },
+      "ErrorMessages": {
+        "Required": "{0} field is required",
+        "MaxLength": "Maximum character length reached for {0} field",
+        "MinLength": "Minimum character length not reached for {0} field",
+        "Invalid": "{0} field is not valid",
+        "AlreadyExists": "A Melaleuca.com account already exists for this {0}. Either try again, or if you believe you entered it correctly, try an <a href=\"https://www.melaleuca.com.br\" class=\"font-bold underline\">Account Access Request</a>. If you are still having trouble, please call Customer Support at 1-800-742-2444.",
+        "Username": {
+          "Invalid": "Username accepts E-mail or 10 Digit Mobile Number"
+        },
+        "Password": {
+          "Invalid": "Your new password does not meet the necessary criteria. Please try again."
+        },
+        "ConfirmPassword": {
+          "Invalid": "Both passwords must match."
+        },
+        "EnterCode": {
+          "Required": "Code field is required"
+        }
+      }
+    },
+    "Data": {
+      "Culture": "es-MX",
+      "CustomerId": "mexico",
+      "CheckoutPageLink": {
+        "Url": "https://localhost:3030/patterns/03-pages-checkout-checkout/03-pages-checkout-checkout.rendered.html",
+        "Text": "",
+        "Target": ""
+      },
+      "CongratsPageLink": {
+        "Url": "https://localhost:3030/patterns/03-pages-online-enrollment-congratulations/03-pages-online-enrollment-congratulations.rendered.html",
+        "Text": "",
+        "Target": ""
+      },
+      "BackupOrderSection": {
+        "Title": "Protect your Membership discount and benefits!<span class=\"block font-normal\">We've got you covered with a Backup Order.</span>",
+        "Subtitle": "As a Member, you agree to purchase {0} Product Points (about {1}) of a product every month in order to receive a 30-50% discount. On the rare occasion if you forget to shop, Melaleuca will protect your membership by sending a Backup Order that preserves your discount and benefits.",
+        "MembersChoiceOrderText": "Member's Choice Backup Order",
+        "MembersChoiceDetails": "Includes a rotating assortment of wellness products for only {0}* ({1} Points). You can customize your Backup Order anytime in My Account.",
+        "DisclaimerText": "<span class=\"font-bold uppercase text-gray-150\">Please note:</span> <span class=\"italic\">Your Backup Order is <strong>NOT</strong> your first shopping order. Shopping and placing your first order is the final step of the enrollment process.</span>",
+        "PriceDisclaimerText": "*Sales Tax and Shipping & Handling not included",
+        "CheckBoxText": "I acknowledge that a Member's Choice Backup Order will be sent if I forget to shop during any month. I have the option at anytime to customize my Backup Order products in \"My Account\".",
+        "ErrorMessage": "Checkbox required.",
+        "Image": {
+          "Url": "//placehold.co/500x260?text=Product",
+          "Alt": "Image of a product"
+        },
+        "Sku": "51012",
+        "PriceRange": {
+          "MinRegularPrice": "$36.00",
+          "RawMinRegularPrice": 36,
+          "MaxRegularPrice": "$36.00",
+          "RawMaxRegularPrice": 36,
+          "ShowRangeForRegularPrice": false,
+          "MinPreferredPrice": "$18.50",
+          "RawMinPreferredPrice": 18.5,
+          "MaxPreferredPrice": "$18.50",
+          "RawMaxPreferredPrice": 18.5,
+          "PrimaryMinRegularPrice": "$36.00",
+          "PrimaryRawMinRegularPrice": 36,
+          "PrimaryMaxRegularPrice": "$36.00",
+          "PrimaryRawMaxRegularPrice": 36,
+          "PrimaryMinPreferredPrice": "$18.50",
+          "PrimaryRawMinPreferredPrice": 18.5,
+          "PrimaryMaxPreferredPrice": "$18.50",
+          "PrimaryRawMaxPreferredPrice": 18.5,
+          "SecondaryMinRegularPrice": "$39.20",
+          "SecondaryRawMinRegularPrice": 39.2,
+          "SecondaryMaxRegularPrice": "$39.20",
+          "SecondaryRawMaxRegularPrice": 39.2,
+          "SecondaryMinPreferredPrice": "$20.19",
+          "SecondaryRawMinPreferredPrice": 20.19,
+          "SecondaryMaxPreferredPrice": "$20.19",
+          "SecondaryRawMaxPreferredPrice": 20.19,
+          "ShowRangeForPreferredPrice": false,
+          "MinPoints": "10",
+          "RawMinPoints": 10,
+          "MaxPoints": "10",
+          "RawMaxPoints": 10,
+          "ShowRangeForPoints": false,
+          "PreferredMemberSavings": "$17.50",
+          "RawPreferredMemberSavings": 17.5,
+          "PrimaryPreferredMemberSavings": "$17.50",
+          "PrimaryRawPreferredMemberSavings": 17.5,
+          "SecondaryPreferredMemberSavings": "$19.01",
+          "SecondaryRawPreferredMemberSavings": 19.01,
+          "PackSavings": "$0.00",
+          "HasPackSavings": false,
+          "HasMultiplePacks": false
+        }
+      },
+      "ShippingSection": {
+        "Address_1Value": "",
+        "Address_2Value": "",
+        "Address_3Value": "",
+        "CityValue": "",
+        "CountryValue": "",
+        "PostalCodeValue": "",
+        "ProvinceValue": "",
+        "StateMxValue": "",
+        "StateUsValue": "",
+        "SuburbValue": "",
+        "ZipCodeValue": "",
+        "CancelCta": {
+          "Url": "",
+          "Text": ""
+        },
+        "Provinces": [{
+          "RegionName": "United States",
+          "RegionKey": "us",
+          "ServiceName": "UnitedStates",
+          "Provinces": [{
+            "ProvinceName": "District of Columbia",
+            "ProvinceValue": "DC",
+            "ServiceName": "District of Columbia"
+          }, {
+            "ProvinceName": "Nebraska",
+            "ProvinceValue": "NE",
+            "ServiceName": "Nebraska"
+          }, {
+            "ProvinceName": "Kansas",
+            "ProvinceValue": "KS",
+            "ServiceName": "Kansas"
+          }, {
+            "ProvinceName": "Rhode Island",
+            "ProvinceValue": "RI",
+            "ServiceName": "Rhode Island"
+          }, {
+            "ProvinceName": "Florida",
+            "ProvinceValue": "FL",
+            "ServiceName": "Florida"
+          }, {
+            "ProvinceName": "Alaska",
+            "ProvinceValue": "AK",
+            "ServiceName": "Alaska"
+          }, {
+            "ProvinceName": "Massachusetts",
+            "ProvinceValue": "MA",
+            "ServiceName": "Massachusetts"
+          }, {
+            "ProvinceName": "South Carolina",
+            "ProvinceValue": "SC",
+            "ServiceName": "South Carolina"
+          }, {
+            "ProvinceName": "Colorado",
+            "ProvinceValue": "CO",
+            "ServiceName": "Colorado"
+          }, {
+            "ProvinceName": "Kentucky",
+            "ProvinceValue": "KY",
+            "ServiceName": "Kentucky"
+          }, {
+            "ProvinceName": "Nevada",
+            "ProvinceValue": "NV",
+            "ServiceName": "Nevada"
+          }, {
+            "ProvinceName": "New Hampshire",
+            "ProvinceValue": "NH",
+            "ServiceName": "New Hampshire"
+          }, {
+            "ProvinceName": "Georgia",
+            "ProvinceValue": "GA",
+            "ServiceName": "Georgia"
+          }, {
+            "ProvinceName": "Maine",
+            "ProvinceValue": "ME",
+            "ServiceName": "Maine"
+          }, {
+            "ProvinceName": "New Jersey",
+            "ProvinceValue": "NJ",
+            "ServiceName": "New Jersey"
+          }, {
+            "ProvinceName": "South Dakota",
+            "ProvinceValue": "SD",
+            "ServiceName": "South Dakota"
+          }, {
+            "ProvinceName": "Maryland",
+            "ProvinceValue": "MD",
+            "ServiceName": "Maryland"
+          }, {
+            "ProvinceName": "Hawaii",
+            "ProvinceValue": "HI",
+            "ServiceName": "Hawaii"
+          }, {
+            "ProvinceName": "North Carolina",
+            "ProvinceValue": "NC",
+            "ServiceName": "North Carolina"
+          }, {
+            "ProvinceName": "Oklahoma",
+            "ProvinceValue": "OK",
+            "ServiceName": "Oklahoma"
+          }, {
+            "ProvinceName": "Virginia",
+            "ProvinceValue": "VA",
+            "ServiceName": "Virginia"
+          }, {
+            "ProvinceName": "Delaware",
+            "ProvinceValue": "DE",
+            "ServiceName": "Delaware"
+          }, {
+            "ProvinceName": "Missouri",
+            "ProvinceValue": "MO",
+            "ServiceName": "Missouri"
+          }, {
+            "ProvinceName": "Pennsylvania",
+            "ProvinceValue": "PA",
+            "ServiceName": "Pennsylvania"
+          }, {
+            "ProvinceName": "Wisconsin",
+            "ProvinceValue": "WI",
+            "ServiceName": "Wisconsin"
+          }, {
+            "ProvinceName": "Alabama",
+            "ProvinceValue": "AL",
+            "ServiceName": "Alabama"
+          }, {
+            "ProvinceName": "Connecticut",
+            "ProvinceValue": "CT",
+            "ServiceName": "Connecticut"
+          }, {
+            "ProvinceName": "Louisiana",
+            "ProvinceValue": "LA",
+            "ServiceName": "Louisiana"
+          }, {
+            "ProvinceName": "New Mexico",
+            "ProvinceValue": "NM",
+            "ServiceName": "New Mexico"
+          }, {
+            "ProvinceName": "New York",
+            "ProvinceValue": "NY",
+            "ServiceName": "New York"
+          }, {
+            "ProvinceName": "Wyoming",
+            "ProvinceValue": "WY",
+            "ServiceName": "Wyoming"
+          }, {
+            "ProvinceName": "Arizona",
+            "ProvinceValue": "AZ",
+            "ServiceName": "Arizona"
+          }, {
+            "ProvinceName": "Idaho",
+            "ProvinceValue": "ID",
+            "ServiceName": "Idaho"
+          }, {
+            "ProvinceName": "Minnesota",
+            "ProvinceValue": "MN",
+            "ServiceName": "Minnesota"
+          }, {
+            "ProvinceName": "Mississippi",
+            "ProvinceValue": "MS",
+            "ServiceName": "Mississippi"
+          }, {
+            "ProvinceName": "California",
+            "ProvinceValue": "CA",
+            "ServiceName": "California"
+          }, {
+            "ProvinceName": "Iowa",
+            "ProvinceValue": "IA",
+            "ServiceName": "Iowa"
+          }, {
+            "ProvinceName": "North Dakota",
+            "ProvinceValue": "ND",
+            "ServiceName": "North Dakota"
+          }, {
+            "ProvinceName": "Tennessee",
+            "ProvinceValue": "TN",
+            "ServiceName": "Tennessee"
+          }, {
+            "ProvinceName": "Texas",
+            "ProvinceValue": "TX",
+            "ServiceName": "Texas"
+          }, {
+            "ProvinceName": "Illinois",
+            "ProvinceValue": "IL",
+            "ServiceName": "Illinois"
+          }, {
+            "ProvinceName": "Michigan",
+            "ProvinceValue": "MI",
+            "ServiceName": "Michigan"
+          }, {
+            "ProvinceName": "Ohio",
+            "ProvinceValue": "OH",
+            "ServiceName": "Ohio"
+          }, {
+            "ProvinceName": "Utah",
+            "ProvinceValue": "UT",
+            "ServiceName": "Utah"
+          }, {
+            "ProvinceName": "Vermont",
+            "ProvinceValue": "VT",
+            "ServiceName": "Vermont"
+          }, {
+            "ProvinceName": "Indiana",
+            "ProvinceValue": "IN",
+            "ServiceName": "Indiana"
+          }, {
+            "ProvinceName": "Montana",
+            "ProvinceValue": "MT",
+            "ServiceName": "Montana"
+          }, {
+            "ProvinceName": "Oregon",
+            "ProvinceValue": "OR",
+            "ServiceName": "Oregon"
+          }, {
+            "ProvinceName": "Washington",
+            "ProvinceValue": "WA",
+            "ServiceName": "Washington"
+          }, {
+            "ProvinceName": "West Virginia",
+            "ProvinceValue": "WV",
+            "ServiceName": "West Virginia"
+          }, {
+            "ProvinceName": "Arkansas",
+            "ProvinceValue": "AR",
+            "ServiceName": "Arkansas"
+          }]
+        }, {
+          "RegionName": "Canada",
+          "RegionKey": "can",
+          "ServiceName": "Canada",
+          "Provinces": [{
+            "ProvinceName": "Nunavut",
+            "ProvinceValue": "NU",
+            "ServiceName": "Nunavut"
+          }, {
+            "ProvinceName": "Manitoba",
+            "ProvinceValue": "MB",
+            "ServiceName": "Manitoba"
+          }, {
+            "ProvinceName": "Nova Scotia",
+            "ProvinceValue": "NS",
+            "ServiceName": "Nova Scotia"
+          }, {
+            "ProvinceName": "Prince Edward Island",
+            "ProvinceValue": "PE",
+            "ServiceName": "Prince Edward Island"
+          }, {
+            "ProvinceName": "Newfoundland and Labrador",
+            "ProvinceValue": "NL",
+            "ServiceName": "Newfoundland and Labrador"
+          }, {
+            "ProvinceName": "Northwest Territories",
+            "ProvinceValue": "NT",
+            "ServiceName": "Northwest Territories"
+          }, {
+            "ProvinceName": "British Columbia",
+            "ProvinceValue": "BC",
+            "ServiceName": "British Columbia"
+          }, {
+            "ProvinceName": "Quebec",
+            "ProvinceValue": "QC",
+            "ServiceName": "Quebec"
+          }, {
+            "ProvinceName": "Alberta",
+            "ProvinceValue": "AB",
+            "ServiceName": "Alberta"
+          }, {
+            "ProvinceName": "Saskatchewan",
+            "ProvinceValue": "SK",
+            "ServiceName": "Saskatchewan"
+          }, {
+            "ProvinceName": "Ontario",
+            "ProvinceValue": "ON",
+            "ServiceName": "Ontario"
+          }, {
+            "ProvinceName": "New Brunswick",
+            "ProvinceValue": "NB",
+            "ServiceName": "New Brunswick"
+          }, {
+            "ProvinceName": "Yukon",
+            "ProvinceValue": "YT",
+            "ServiceName": "Yukon"
+          }]
+        }, {
+          "RegionName": "Mexico",
+          "RegionKey": "mx",
+          "ServiceName": "Mexico",
+          "Provinces": [{
+            "ProvinceName": "Chiapas",
+            "ProvinceValue": "CS",
+            "ServiceName": "Chiapas"
+          }, {
+            "ProvinceName": "Michoacan",
+            "ProvinceValue": "MI",
+            "ServiceName": "Michoacan"
+          }, {
+            "ProvinceName": "Sonora",
+            "ProvinceValue": "SO",
+            "ServiceName": "Sonora"
+          }, {
+            "ProvinceName": "Aguascalientes",
+            "ProvinceValue": "AG",
+            "ServiceName": "Aguascalientes"
+          }, {
+            "ProvinceName": "Mexico City",
+            "ProvinceValue": "MX",
+            "ServiceName": "Mexico City"
+          }, {
+            "ProvinceName": "Durango",
+            "ProvinceValue": "DG",
+            "ServiceName": "Durango"
+          }, {
+            "ProvinceName": "Puebla",
+            "ProvinceValue": "PB",
+            "ServiceName": "Puebla"
+          }, {
+            "ProvinceName": "Veracruz",
+            "ProvinceValue": "VE",
+            "ServiceName": "Veracruz"
+          }, {
+            "ProvinceName": "Coahuila",
+            "ProvinceValue": "CO",
+            "ServiceName": "Coahuila"
+          }, {
+            "ProvinceName": "Mexico",
+            "ProvinceValue": "ME",
+            "ServiceName": "México"
+          }, {
+            "ProvinceName": "Sinaloa",
+            "ProvinceValue": "SI",
+            "ServiceName": "Sinaloa"
+          }, {
+            "ProvinceName": "Chihuahua",
+            "ProvinceValue": "CH",
+            "ServiceName": "Chihuahua"
+          }, {
+            "ProvinceName": "Morelos",
+            "ProvinceValue": "MO",
+            "ServiceName": "Morelos"
+          }, {
+            "ProvinceName": "Tabasco",
+            "ProvinceValue": "TB",
+            "ServiceName": "Tabasco"
+          }, {
+            "ProvinceName": "San Luis Potosi",
+            "ProvinceValue": "SL",
+            "ServiceName": "San Luis Potosi"
+          }, {
+            "ProvinceName": "Campeche",
+            "ProvinceValue": "CM",
+            "ServiceName": "Campeche"
+          }, {
+            "ProvinceName": "Hidalgo",
+            "ProvinceValue": "HG",
+            "ServiceName": "Hidalgo"
+          }, {
+            "ProvinceName": "Quintana Roo",
+            "ProvinceValue": "QR",
+            "ServiceName": "Quintana Roo"
+          }, {
+            "ProvinceName": "Baja California Sur",
+            "ProvinceValue": "BS",
+            "ServiceName": "Baja California Sur"
+          }, {
+            "ProvinceName": "Jalisco",
+            "ProvinceValue": "JA",
+            "ServiceName": "Jalisco"
+          }, {
+            "ProvinceName": "Nuevo Leon",
+            "ProvinceValue": "NL",
+            "ServiceName": "Nuevo Leon"
+          }, {
+            "ProvinceName": "Tlaxcala",
+            "ProvinceValue": "TL",
+            "ServiceName": "Tlaxcala"
+          }, {
+            "ProvinceName": "Baja California",
+            "ProvinceValue": "BC",
+            "ServiceName": "Baja California"
+          }, {
+            "ProvinceName": "Guanajuato",
+            "ProvinceValue": "GT",
+            "ServiceName": "Guanajuato"
+          }, {
+            "ProvinceName": "Oaxaca",
+            "ProvinceValue": "OA",
+            "ServiceName": "Oaxaca"
+          }, {
+            "ProvinceName": "Yucatan",
+            "ProvinceValue": "YU",
+            "ServiceName": "Yucatan"
+          }, {
+            "ProvinceName": "Guerrero",
+            "ProvinceValue": "GR",
+            "ServiceName": "Guerrero"
+          }, {
+            "ProvinceName": "Queretaro",
+            "ProvinceValue": "QE",
+            "ServiceName": "Queretaro"
+          }, {
+            "ProvinceName": "Zacatecas",
+            "ProvinceValue": "ZA",
+            "ServiceName": "Zacatecas"
+          }, {
+            "ProvinceName": "Colima",
+            "ProvinceValue": "CL",
+            "ServiceName": "Colima"
+          }, {
+            "ProvinceName": "Nayarit",
+            "ProvinceValue": "NA",
+            "ServiceName": "Nayarit"
+          }, {
+            "ProvinceName": "Tamaulipas",
+            "ProvinceValue": "TM",
+            "ServiceName": "Tamaulipas"
+          }]
+        }]
+      }
+    }
+  }
+</script>
+
+<script type="application/json" id="dataPaymentForm">
+  {
+    "Labels": {
+      "Culture": "es-MX",
+      "Header": {
+        "AddNew": "Agregar nueva forma de pago",
+        "Edit": "Editar forma de pago",
+        "PayMethodType": "FORMA DE PAGO",
+        "DebitOrCreditCard": "Tarjeta de débito/crédito",
+        "Checking": "Comprobando"
+      },
+      "Card": {
+        "Accepts": "Melaleuca acepta:",
+        "CardholderName": "NOMBRE (como aparece en la tarjeta)",
+        "CardNumber": "NÚMERO DE TARJETA",
+        "Expiration": "DE CADUCIDAD",
+        "Month": "Mes",
+        "Year": "Año",
+        "Cvc": "CVC/CVV",
+        "BillingZipCode": null,
+        "Nickname": "APODO (opcional)"
+      },
+      "Checking": {
+        "NameOnAccount": null,
+        "AccountType": null,
+        "Select": null,
+        "RoutingNumber": null,
+        "AccountNumber": null,
+        "AccountTypes": {
+          "Select": null,
+          "Checking": null,
+          "Savings": null
+        },
+        "DeleteTitle": null,
+        "DeleteText": null
+      },
+      "DirectDebit": {
+        "CopyFrom": "COPIAR DEL DEPÓSITO DIRECTO",
+        "DirectDebit": "Débite directo",
+        "FormAccess": null,
+        "NameOnAccount": "NOMBRE EN LA CUENTA",
+        "Bank": "Banco",
+        "AccountNumber": "CLABE O NÚMERO DE TARJETA DE DÉBITO"
+      },
+      "Frequency": {
+        "SaveAccount": "Save this Credit Card on my account.",
+        "OneTime": "Use this Credit Card for this order only. Do not save."
+      },
+      "Defaults": {
+        "MakeThisMyDefault": "Quiero que esta sea mi forma de pago por defecto para:",
+        "ProductPurchases": "Deseo que esta sea mi forma de pago predeterminada",
+        "MarketplaceServices": null,
+        "FutureCharges": "Su tarjeta de crédito podría utilizarse para pagar pedidos o servicios futuros, o para liquidar algún saldo pendiente en esta cuenta"
+      },
+      "FormSubmit": {
+        "Cancel": "Cancelar",
+        "Save": "Guardar",
+        "Confirm": null,
+        "Download": "Descargar"
+      },
+      "ErrorMessages": {
+        "FieldRequired": "This field is required",
+        "ErrorOccured": "An error occurred",
+        "CardholderName": {
+          "Required": "Cardholder Name field is required",
+          "MaxLength": "Maximum character length reached for Cardholder Name field",
+          "MinLength": "Minimum character length not reached for Cardholder Name field"
+        },
+        "CardNumber": {
+          "Required": "Card Number field is required",
+          "Integer": "Card Number field accepts integer numbers only",
+          "Invalid": "Card Number is invalid",
+          "MaxLength": "Maximum character length reached for Card Number field",
+          "MinLength": "Minimum character length not reached for Card Number field"
+        },
+        "ExpirationMonth": {
+          "Required": "Expiration Month field is required"
+        },
+        "ExpirationYear": {
+          "Required": "Expiration Year field is required"
+        },
+        "CVV": {
+          "Required": "CVC/CVV field is required",
+          "Integer": "CVC/CVV field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for CVC/CVV field",
+          "MinLength": "Minimum character length not reached for CVC/CVV field"
+        },
+        "BillingZipCode": {
+          "Required": "Billing Zip Code field is required",
+          "Integer": "Billing Zip Code field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Billing Zip Code field",
+          "MinLength": "Minimum character length not reached for Billing Zip Code field"
+        },
+        "NameOnAccount": {
+          "Required": "Name On Account field is required",
+          "MaxLength": "Maximum character length reached for Name On Account field",
+          "MinLength": "Minimum character length not reached for Name On Account field"
+        },
+        "AccountType": {
+          "Required": "Account Type field is required"
+        },
+        "RoutingNumber": {
+          "Required": "Routing Number field is required",
+          "Integer": "Routing Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Routing Number field",
+          "MinLength": "Minimum character length not reached for Routing Number field"
+        },
+        "AccountNumber": {
+          "Required": "Account Number field is required",
+          "Integer": "Account Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Account Number field",
+          "MinLength": "Minimum character length not reached for Account Number field"
+        },
+        "Bank": {
+          "Required": "Bank field is required"
+        }
+      },
+      "ServerErrorTranslation": [{
+        "Error": "PayMethodAlreadyExists",
+        "Translation": "An error has occurred, please try again"
+      }, {
+        "Error": "CVV Code is invalid.",
+        "Translation": "Please add a valid CVV code"
+      }, {
+        "Error": "Default",
+        "Translation": "An error has occurred, please try again"
+      }]
+    },
+    "Data": {
+      "Culture": "es-MX",
+      "IsEditing": false,
+      "PaymethodId": "",
+      "Username": "username",
+      "Country": "Mexico",
+      "CustomerId": 1019417106,
+      "CustomerName": "Customer Full Name",
+      "MyAccountPaymentAddressPage": {
+        "Url": "https://productstore-qaus.melaleuca.com/my-account/payments-and-addresses",
+        "Text": "",
+        "Target": ""
+      },
+      "DirectDebit": {
+        "FormAccess": "Si desea utilizar como forma de pago válida el débito directo a su cuenta, favor enviar el Formato para Solicitar la Domiciliación. Haga clic <a class=\"text-green font-medium\" href=\"http://cdnsc1.melaleuca.com/na/documents/business-center/direct-deposit-form--es-MX.pdf\" target=\"_blank\">aquí</a> para descargar el formato.",
+        "FormAccessLink": {
+          "Url": "http://cdnsc1.melaleuca.com/na/documents/business-center/direct-deposit-form--es-MX.pdf",
+          "Text": "aquí",
+          "Target": "_blank"
+        }
+      },
+      "PatternLabCountry": "MX"
+    }
+  }
+</script>

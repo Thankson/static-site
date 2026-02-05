@@ -1,0 +1,6 @@
+<o-enrollment-payment-section :extra-labels='{{toJson OnlineEnrollment.Localization.Labels.PaymentSection}}' :is-enrollment="{{OnlineEnrollment.IsOnlineEnrollment }}" :is-guest-checkout="{{OnlineEnrollment.IsGuestCheckout }}" script-id="dataPaymentForm" token="{{PaymentForm.Token }}">
+</o-enrollment-payment-section>
+
+<script type="application/json" id="dataPaymentForm">
+{{toJson PaymentForm.Localization}}
+</script>

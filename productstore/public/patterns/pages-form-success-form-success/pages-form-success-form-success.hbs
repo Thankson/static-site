@@ -1,0 +1,27 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+  <nav class="top-0 py-0 my-0 bg-white md:hidden">
+    {{#MobileAccordionNav}}
+      {{> organisms-cmn-accordion}}
+    {{/MobileAccordionNav}}
+  </nav>
+
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  <section class=" md:py-40">
+    <h1 class="w-full mx-auto text-2xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mb-18 md:text-3xl to-md:px-10 to-md:pt-20">{{PageTitle}}</h1>
+
+    <div class="w-full border border-gray-50 rounded md:border-none px-10 pt-10 pb-36 mx-auto mt-10 mb-10 bg-white max-w-contain text-gray-150 md:mb-40 md:px-40 md:pt-30 md:rounded">
+      <div class="md:w-1_2">
+        <p class="text-gray-120 pb-40">Thank you for contacting us. Our customer service representatives are working to get a response to you and will get back to you as quickly as possible.<br><br>Thank you and have a great day!</p>
+        <a class="bg-green uppercase font-light text-white text-md text-sm rounded px-50 py-8 inline-flex to-xs:flex to-xs:justify-center to-xs:w-full items-center hover:bg-green-120" href="{{{Attr.Href}}}" target="{{Target}}" {{{AriaProps}}}>{{CTA}}</a>
+      </div>
+    </div>
+  </section>
+  {{> molecules-cta-banner}}
+</div>
+{{> organisms-site-footer}}

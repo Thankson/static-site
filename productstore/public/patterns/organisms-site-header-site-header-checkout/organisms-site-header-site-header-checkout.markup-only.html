@@ -1,0 +1,99 @@
+<header class="o-siteHeader -checkout">
+  <div class="o-siteHeader__row -main">
+    <div class="o-siteHeader__col -nav">
+      <!-- START 11283, 19631 (refactoring) - Nav-menu -->
+      <nav class="m-navMenu" aria-labelledby="m-navMenu__toggle" data-testid="nav-menu">
+
+        <button id="m-navMenu__toggle" class="m-navMenu__toggle" aria-controls="m-navMenu" aria-expanded="false" aria-label="" data-label-escape-key="" data-testid="button-menu">
+          <span class="m-navMenu__toggleIcon" data-testid="span-iconMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
+            </svg>
+            <span class="m-navMenu__text">Menu</span>
+          </span>
+        </button>
+
+        <div class="m-navMenu__content-wrapper" aria-hidden="true" tabindex="-1">
+          <div class="m-navMenu__content -left" id="m-navMenu">
+            <div class="m-navMenu__inner">
+              <div class="m-navMenu__scroll">
+
+                <!-- Header -->
+                <div class="m-navMenu__header">
+                  <div class="m-navMenu__header-content">
+                  </div>
+                  <span class="divisor" aria-hidden="true"></span>
+                </div>
+                <!-- End Header -->
+
+                <!-- Mobile Only and Logged -->
+                <!-- End Mobile Only -->
+
+                <!-- MENU LEVEL 1 -->
+                <ul class="m-navMenu__list -lvl1" id="m-navMenu__lvl1" data-testid="unorderedList-menuTopList">
+
+
+                </ul>
+                <!-- End Categories (menu level 1) -->
+
+                <!-- Riverbend Link -->
+                <!-- End Riverbend Link -->
+
+                <!-- Footer -->
+                <span class="divisor -footer" aria-hidden="true"></span>
+                <div class="m-navMenu__footer" data-testid="container-menuFooter">
+                  <div class="m-navMenu__footer-content">
+                    <ul class="m-navMenu__list -lvl1">
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Footer -->
+
+                <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl1" aria-label="" tabindex="-1">
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Close Button -->
+          <div class="m-navMenu__close -root">
+            <button class="m-navMenu__close-btn" aria-label="" tabindex="-1">
+              <span aria-hidden="true" class="m-navMenu__close-icon" data-testid="span-navMenuClose">close</span>
+            </button>
+          </div>
+          <!-- End Close Button -->
+
+          <div class="m-navMenu__overlay"></div>
+        </div>
+      </nav>
+      <!-- END 11283, 19631 (refactoring) - Nav-menu -->
+    </div>
+
+    <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+      <a href="https://www.melaleuca.com/" class="block">
+        <img class="o-siteHeader__image" src="//cdnsc1.melaleuca.com/na/images/header/leaf-drop-logo2x.png" alt="Melaleuca Logo">
+      </a>
+    </div>
+
+    <div class="o-siteHeader__col -title">
+      <h1 class="font-bold text-center text-white text-2xl uppercase ">Checkout</h1>
+    </div>
+
+    <div class="o-siteHeader__col -actions" data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+      <m-cart-icon script-id="CartIconId" data-testid="icon-CartIcon"></m-cart-icon>
+      <script type="application/json" id="CartIconId">
+        {
+          "Labels": {
+            "CartLabel": "View My Cart"
+          },
+          "Data": {
+            "CartUrl": "/?p=pages-cart",
+            "CartTotalItems": "14"
+          }
+        }
+      </script>
+    </div>
+  </div>
+</header>

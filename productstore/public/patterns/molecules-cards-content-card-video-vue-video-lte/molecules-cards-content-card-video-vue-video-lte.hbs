@@ -1,0 +1,15 @@
+{{#ContentCard}}
+  <div class="m-contentCard {{TextAlignment}} {{#if IsPreferred}}-isPreferred{{/if}}">
+    <div class="m-contentCard__media">
+      <o-vid-curate-ctrl script-id="{{UniqueScriptID}}"></o-vid-curate-ctrl>
+    </div>
+
+    <p class="m-contentCard__description">
+      <em class="m-contentCard__title" {{#if TitleColor}}style="color: {{ TitleColor }};" {{/if}}>{{Title}}</em>
+      <span class="m-contentCard__subtitle" {{#if SubtitleColor}}style="color: {{ SubtitleColor }};" {{/if}}>{{Subtitle}}</span>
+    </p>
+  </div>
+  <script type="application/json" id="{{UniqueScriptID}}">
+  {{toJson Localization}}
+  </script>
+{{/ContentCard}}

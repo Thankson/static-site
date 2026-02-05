@@ -1,0 +1,18 @@
+<article class="m-featProds" style="background:{{BackgroundColor}};">
+  <header class="m-featProds__title">{{{ Title }}}</header>
+
+  <ul class="m-featProds__list">
+    {{#each Products}}
+      <li class="m-featProds__listItem">
+        <a class="m-featProds__link" href="{{ URL }}">
+          <img class="m-featProds__image" src="{{ Image }}" alt="{{ ImageAlt }}">
+          <p class="m-featProds__description" style="color: {{DescriptionColor}}; font-family: {{DescriptionFont}}">{{{ Description }}}</p>
+          <em class="m-featProds__cta" style="color: {{CTAColor}}; font-family: {{CTAFont}}">
+            {{{ CTA }}}
+            <span class="m-featProds__arrow"></span>
+          </em>
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</article>

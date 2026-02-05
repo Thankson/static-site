@@ -1,0 +1,58 @@
+{{#if showGrowHeader}}
+  {{> organisms-site-header-grow}}
+{{else}}
+  {{> organisms-site-header}}
+{{/if}}
+
+{{#if Breadcrumb}}
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+{{/if}}
+
+
+
+<div class="bg-gray-25 pb-40">
+  {{!-- Banner Ad --}}
+  <div class="mx-auto max-w-contain py-60 flex justify-center">
+    <m-cart-banner-ad :context='{{toJson Context}}'></m-cart-banner-ad>
+  </div>
+
+  {{!-- Search Result --}}
+  {{#if showGrowHeader}}
+    <p-grow-search-result script-id="{{DynamicScriptId}}">
+    </p-grow-search-result>
+  {{else}}
+    <p-search-result script-id="{{DynamicScriptId}}">
+      {{#with SearchBanner}}
+        <template v-slot:banner>
+          {{> snippets-riverbend}}
+        </template>
+      {{/with}}
+    </p-search-result>
+  {{/if}}
+
+
+  <hr class="my-40">
+  {{!-- Business Center Search --}}
+  {{> molecules-title-with-button titleWithButton }}
+
+  <hr class="mt-40">
+
+  <script type="application/json" id="{{DynamicScriptId}}">
+  {{toJson Localization}}
+  </script>
+
+  {{!-- Configurator Script --}}
+  <script id="data-shelf-configurator-localization" type="application/json">
+  {{toJson Localization}}
+  </script>
+
+
+</div>
+
+{{> organisms-site-footer}}
+
+<o-direct-to-preferred-modal></o-direct-to-preferred-modal>

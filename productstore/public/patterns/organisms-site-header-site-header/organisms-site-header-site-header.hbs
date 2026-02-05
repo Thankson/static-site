@@ -1,0 +1,125 @@
+<header class="o-siteHeader {{#if IsStopInternetAccess}}-stopInternetAccess{{/if}}">
+  {{#unless HideEyebrowNav}}
+    <div class="o-siteHeader__row -eyebrow">
+      {{#Eyebrow}}
+        {{> molecules-eyebrow-nav}}
+      {{/Eyebrow}}
+    </div>
+  {{/unless}}
+
+
+  <div class="o-siteHeader__row -main">
+    {{#unless HideNavMenu}}
+      <div class="o-siteHeader__col -nav">
+        <!--  -->
+      </div>
+      <div class="o-siteHeader__col -nav">
+        {{> molecules-nav-menu}}
+      </div>
+    {{/unless}}
+
+
+    <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+      {{#ifCond SiteTheme '===' '-riverbend'}}
+        {{#LogoRiverbend}}
+          <a href="{{Link}}" class="block">
+            <img class="lg:hidden" src="{{Img.Mobile}}" alt="{{Alt}}">
+            <img class="to-lg:hidden max-w-120" src="{{Img.Desktop}}" alt="{{Alt}}">
+          </a>
+        {{/LogoRiverbend}}
+      {{/ifCond}}
+
+      {{#ifCond SiteTheme '!==' '-riverbend'}}
+        {{#Logo}}
+          <a href="{{Link}}" class="block">
+            <img class="lg:hidden" src="{{Img.Mobile}}" alt="{{Alt}}">
+            <img class="to-lg:hidden max-w-120" src="{{Img.Desktop}}" alt="{{Alt}}">
+          </a>
+        {{/Logo}}
+      {{/ifCond}}
+    </div>
+
+    <!-- Search bar -->
+    {{#unless HideSearchBar}}
+      <div class="o-siteHeader__col -search">
+        {{#with Search}}
+          <script type="application/json" id="searchBar">
+          {{toJson Localization}}
+          </script>
+          <o-search-bar script-id="searchBar" />
+        {{/with}}
+      </div>
+    {{/unless}}
+
+    {{#unless HideActions}}
+      <div class="o-siteHeader__col -actions" {{#ifCond SiteTheme '!==' '-riverbend'}} data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" {{/ifCond}} {{#ifCond SiteTheme '===' '-riverbend'}} data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/riverbend-icon-account.png" {{/ifCond}} data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+        <!-- ORDERS -->
+        {{#with Actions.Orders}}
+          <div class="relative md:flex hidden">
+            <popup-orders label="{{Label}}" footer-link="{{Link}}" button-aria-label="{{ButtonAriaLabel}}" close-popup-alt="{{ClosePopup.Alt}}" />
+          </div>
+        {{/with}}
+
+        <!-- LISTS -->
+        {{#ifCond SiteTheme '!==' '-riverbend'}}
+          {{#with Actions.Lists}}
+            <div class="relative md:flex hidden">
+              <script type="application/json" id="popupListsLabels">
+              {{toJson Localization}}
+              </script>
+              <popup-lists script-id="popupListsLabels"></popup-lists>
+            </div>
+          {{/with}}
+        {{/ifCond}}
+        {{#ifCond SiteTheme '===' '-riverbend'}}
+
+          {{#with Actions.RiverbendFavorites}}
+            <div class="relative md:flex hidden">
+              <script type="application/json" id="riverbend-header-favorites">
+              {{toJson Localization}}
+              </script>
+              <popup-favs script-id="riverbend-header-favorites"></popup-favs>
+            </div>
+          {{/with}}
+        {{/ifCond}}
+        <!-- NOTIFICATIONS -->
+        {{#with Actions.NotificationsPopup}}
+          <div class="relative md:flex hidden">
+            <popup-notifications button-aria-label="{{Notifications.PageTitle}}" label="{{Notifications.PageTitle}}" icon="{{Notifications.Icon.Path}}" icon-class="{{Notifications.Icon.Classes}}" icon-alt="{{Notifications.Icon.Alt}}" footer-link="{{Notifications.Link}}" footer-title="{{Notifications.FooterTitle}}">
+
+              <template v-slot:notification-content>
+                <notifications action-btn-text="Close video modal" modifier-molecule="-popup" no-notification-image="//cdnsc1.melaleuca.com/na/images/common/no-notif-desktop.png" no-notification-text="Check back later for new notifications." no-notification-title="You're All Caught Up" remove-btn-text="Remove notification" remove-btn-icon="//cdnsc1.melaleuca.com/na/images/common/trash.png">
+                </notifications>
+              </template>
+
+            </popup-notifications>
+          </div>
+        {{/with}}
+
+        {{#with Actions.SignIn.Desktop}}
+          <div class="relative md:flex hidden">
+            {{>atoms-cmn-author-btn}}
+          </div>
+        {{/with}}
+
+        {{#Actions.MyAccount}}
+          {{> organisms-my-account-popup }}
+        {{/Actions.MyAccount}}
+
+        {{#Actions.Cart}}
+          {{> organisms-cart-icon }}
+        {{/Actions.Cart}}
+      </div>
+    {{/unless}}
+
+  </div>
+
+  {{#with Actions.SignIn.Mobile}}
+    <div class="flex items-start relative md:hidden px-8 py-20 bg-white">
+      {{#with PopupCulture}}
+        {{> molecules-popup-culture }}
+      {{/with}}
+      {{>atoms-cmn-author-btn}}
+    </div>
+  {{/with}}
+</header>

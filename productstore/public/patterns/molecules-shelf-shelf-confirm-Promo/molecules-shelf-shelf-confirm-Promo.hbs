@@ -1,0 +1,52 @@
+<div class="m-shelfConfirm">
+  <div class="m-shelfConfirm__summary">
+    <div class="m-shelfConfirm__imgWrapper">
+      <img class="m-shelfConfirm__img" src="{{Product.ImageSrc}}" alt="{{Product.ImageAlt}}" />
+    </div>
+    <div class="m-shelfConfirm__details">
+      {{#if Product.Href}}
+        <a id="cartProductName" class="m-shelfConfirm__product -link" href="{{Product.Href}}">{{{Product.Name}}}</a>
+      {{else}}
+        <p id="cartProductName" class="m-shelfConfirm__product">{{Product.Name}}</p>
+      {{/if}}
+      <dl class="m-shelfConfirm__list" aria-labelledby="cartProductName">
+        <dt class="m-shelfConfirm__title">{{Price.Translation}}</dt>
+        <dd class="m-shelfConfirm__desc">{{Price.Value}}</dd>
+        <dt class="m-shelfConfirm__title">{{Points.Translation}}</dt>
+        <dd class="m-shelfConfirm__desc">{{Points.Value}}</dd>
+        <dt class="m-shelfConfirm__title">{{Quantity.Translation}}</dt>
+        <dd class="m-shelfConfirm__desc">{{Quantity.Value}}</dd>
+      </dl>
+    </div>
+  </div>
+
+  <dl class="m-shelfConfirm__subtotal">
+    <dt class="m-shelfConfirm__title -subtotal">{{Subtotal.Translation}}</dt>
+    <dd class="m-shelfConfirm__total -price">{{Subtotal.Value}}</dd>
+    <dt class="m-shelfConfirm__title -subtotal">{{CartPoints.Translation}}</dt>
+    <dd class="m-shelfConfirm__total">{{CartPoints.Value}}</dd>
+  </dl>
+
+  <div class="m-shelfConfirm__actions -mx-5">
+    {{#if Buttons.Continue}}
+      <a class="a-button -white -center flex-1 mx-5" href="#">{{Buttons.Continue}}</a>
+    {{/if}}
+
+    {{#if Buttons.ViewCart}}
+      <a class="a-button -white -center flex-1 mx-5" href="#">{{Buttons.ViewCart}}</a>
+    {{/if}}
+
+    {{#if Buttons.KeepShopping}}
+      <a class="a-button -center flex-1 mx-5" href="#">{{Buttons.KeepShopping}}</a>
+    {{/if}}
+  </div>
+
+  {{#if Shipping}}
+    <h3 class="m-shelfConfirm__shipping">{{Shipping.Heading}}</h3>
+    <p class="m-shelfConfirm__note">{{Shipping.Description}} <a class="m-shelfConfirm__link" href="#">{{Shipping.Link}}</a></p>
+  {{/if}}
+
+  {{#if FreeShippingMessageRte}}
+    {{{FreeShippingMessageRte}}}
+  {{/if}}
+</div>

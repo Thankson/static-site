@@ -1,0 +1,54 @@
+{{> molecules-cmn-full-width-banner}}
+<p-rewards class="mx-auto max-w-contain justify-center" style="background-color: #F6F8F9;">
+  {{#with JourneyTracker}}
+    <template #header>
+      {{> organisms-journey-tracker}}
+    </template>
+  {{/with}}
+
+  <template #modules>
+    {{#with RewardIntroVideo}}
+      {{> organisms-reward-intro-video}}
+    {{/with}}
+
+    {{#with RewardQuarterlyRewards}}
+      {{> organisms-reward-quarterly-rewards}}
+    {{/with}}
+
+    {{#with RewardWelcomeGiftTracker}}
+      {{> organisms-reward-welcome-gift-tracker }}
+    {{/with}}
+
+    {{#with RewardBirthdayPromotion}}
+      {{> organisms-reward-birthday-promotion}}
+    {{/with}}
+
+    {{#with ShippingOnUs}}
+      {{> organisms-reward-shipping-on-us }}
+    {{/with}}
+
+    {{#with MelaleucaServices}}
+      {{> organisms-reward-melaleuca-services }}
+    {{/with}}
+
+    {{#with RewardLearningLibrary}}
+      {{> organisms-reward-learning-library}}
+    {{/with}}
+
+    {{#with RewardVipMembers}}
+      {{> organisms-reward-vip-members}}
+    {{/with}}
+
+    {{#with RewardFreeProducts}}
+      {{> organisms-reward-free-products}}
+    {{/with}}
+
+    {{#with RewardLoyaltyShoppingDollars}}
+      {{> organisms-reward-loyalty-shopping-dollars}}
+    {{/with}}
+
+    {{#with RewardVipMembers}}
+      {{> organisms-reward-vip-members}}
+    {{/with}}
+  </template>
+</p-rewards>

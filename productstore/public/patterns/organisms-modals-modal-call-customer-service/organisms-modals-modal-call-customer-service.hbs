@@ -1,0 +1,30 @@
+<modal :visible="true" heading-class="o-modalCallCustomerService__heading" class="o-modalCallCustomerService" width="530px" data-testid="modal-accountOnHold">
+  {{#if Heading}}
+    <template v-slot:heading>
+      {{Heading}}
+    </template>
+  {{/if}}
+
+  {{#if Description}}
+    <template v-slot:body>
+      <p class="o-modalCallCustomerService__description">{{{Description}}}</p>
+    </template>
+  {{/if}}
+
+  <template v-slot:footer>
+    <div class="o-modalCallCustomerService__footer">
+      {{#if BackButtonText}}
+        <v-button v-modal-hide class="o-modalCallCustomerService__backButton" data-testid="button-accountOnHoldBack">
+          {{BackButtonText}}
+        </v-button>
+      {{/if}}
+
+      {{#if CallCustomerServiceButtonText}}
+        <v-button href="{{#if CallCustomerServicePhoneNumber}}tel:{{CallCustomerServicePhoneNumber}}{{/if}}" target="_blank" :is-anchor="true" class="o-modalCallCustomerService__callCustomerServiceButton">
+          {{CallCustomerServiceButtonText}}
+        </v-button>
+      {{/if}}
+
+    </div>
+  </template>
+</modal>

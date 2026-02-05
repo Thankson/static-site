@@ -1,0 +1,25 @@
+<div class="m-eyebrowNav" style="background-color:'{{BackgroundColor}}';background-image: url('{{BackgroundUrl}}');">
+  <div class="max-w-contain mx-auto flex justify-between w-full">
+    <ul class="m-eyebrowNav__col -left">
+      {{#each LinkItems}}
+        <li class="m-eyebrowNav__item">
+          <a class="m-eyebrowNav__link {{LinkMod}}" href="{{LinkUrl}}">{{LinkTitle}}</a>
+        </li>
+      {{/each}}
+    </ul>
+    {{#if PopupCulture}}
+      <div class="m-eyebrowNav__col -right">
+        {{#with PopupCulture}}
+          {{> molecules-popup-culture }}
+        {{/with}}
+      </div>
+    {{else}}
+      <div class="m-eyebrowNav__col -right">
+        {{> atoms-cust-name-status }}
+        {{#if ShowMenuBalance}}
+          {{> organisms-menu-balance }}
+        {{/if}}
+      </div>
+    {{/if}}
+  </div>
+</div>

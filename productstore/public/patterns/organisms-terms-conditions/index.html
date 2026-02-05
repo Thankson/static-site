@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272894619" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770272894619" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770272894619" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-terms-conditions" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-terms-conditions\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-terms-conditions">Terms Conditions</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-terms-conditions" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-terms-conditions-terms-conditions\organisms-terms-conditions-terms-conditions.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-terms-conditions" title="Link to Pattern">
+						Terms Conditions
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-terms-conditions" data-patternpartial="organisms-terms-conditions" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-terms-conditions">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<h2 class="text-3xl font-bold">
+    Terms of Use
+</div>
+
+<p class="mb-25">
+    ATTENTION: Please read these terms carefully before using this web site. Using this web site indicates that you accept these terms. If you do not accept these terms ("terms"), do not use this web site.
+</p>
+
+    <h3 class="text-xl font-bold">
+        USE OF SITE
+    </h3>
+
+    <p class="mb-25">
+        Unless otherwise specified, Melaleuca and its affiliates and subsidiaries ("Melaleuca") Web Sites are for your personal use. You may not modify, copy, distribute, transmit, display, reproduce, publish, license, create derivative works from, transfer, or sell any information obtained from Melaleuca's Web Sites. Melaleuca authorizes you to view and download the materials at this Web Site only for your personal, non-commercial use, provided that you retain all copyright and other proprietary notices contained in the original materials on any copies of the materials. You may not modify the materials at this Site in any way or reproduce or publicly display, perform, or distribute or otherwise use them for any public or commercial purpose. For purposes of these Terms, any use of these materials on any other Web site or networked computer environment for any purpose is prohibited. The materials at this Site are copyrighted and any unauthorized use of any materials at this Site may violate copyright, trademark, and other laws. If you breach any of these Terms, your authorization to use this Site automatically terminates and you must immediately destroy any downloaded or printed materials.
+    </p>
+    <h3 class="text-xl font-bold">
+        USER SUBMISSIONS
+    </h3>
+
+    <p class="mb-25">
+        Other than personally identifiable information, which is covered under the Melaleuca Online Privacy Policy, any material, information or other communication you transmit or post to this Site will be considered non-confidential and non-proprietary ("Communications"). Melaleuca will have no obligations with respect to the Communications. Melaleuca and its designees will be free to copy, disclose, distribute, incorporate and otherwise use the Communications and all data, images, sounds, text, and other things embodied therein for any and all commercial or non-commercial purposes. You are prohibited from posting or transmitting to or from this Site any unlawful, threatening, libelous, defamatory, obscene, pornographic, or other material that would violate any law.<br /><br />The testimonials express the views of the author of the testimonial, not necessarily the views of Melaleuca. Message content has not been created by, verified by, or adopted by Melaleuca. Melaleuca does not vouch for or warrant the accuracy, completeness or usefulness of this message, and is not responsible for the contents of this message. This message does not constitute Melaleuca authorized literature. Only authorized literature produced and issued by Melaleuca represents the company's position. Comments posted have not been created by, verified by, or adopted by Melaleuca; only product labeling and promotional materials issued by Melaleuca represent the company's position on the benefits and permitted uses of the company's products. Information posted to this site is not to be copied, quoted or otherwise reproduced and is not to be used in promoting, nor should it be relied upon in using, Melaleuca products. The information posted here is not "Official Melaleuca Material."
+    </p>
+    <h3 class="text-xl font-bold">
+        NO UNLAWFUL OR PROHIBITED USE
+    </h3>
+
+    <p class="mb-25">
+        As a condition of your use of the this Web Site, you warrant to Melaleuca that you will not use the Web Site for any purpose that is unlawful or prohibited by these terms, conditions, and notices. You may not use the Web Site in any manner which could damage, disable, overburden, or impair the Web Site or interfere with any other party's use and enjoyment of the Web Site. You may not obtain or attempt to obtain any materials or information through any means not intentionally made available or provided for through the Web Site.
+    </p>
+    <h3 class="text-xl font-bold">
+        DISCLAIMER
+    </h3>
+
+    <p class="mb-25">
+        THE MATERIALS PROVIDED AT THIS SITE ARE PROVIDED "AS IS" WITHOUT ANY WARRANTIES OF ANY KIND INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF INTELLECTUAL PROPERTY. Melaleuca further does not warrant the accuracy and completeness of the materials at this Site. Melaleuca may make changes to the materials at this Site, or to the products and prices described in them, at any time without notice. The materials at this Site may be out of date, and Melaleuca makes no commitment to update the materials at this Site. Information published at this Site may refer to products, programs or services that are intended for use only in a specific country and may not be used or relied upon in any other country. Applicable law may not allow the exclusion of implied warranties, so the above exclusion may not apply to you.
+    </p>
+    <h3 class="text-xl font-bold">
+        LIMITATION OF LIABILITY
+    </h3>
+
+    <p class="mb-25">
+        IN NO EVENT WILL MELALEUCA, ITS SUPPLIERS, OR OTHER THIRD PARTIES MENTIONED AT THIS SITE BE LIABLE FOR ANY DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, THOSE RESULTING FROM LOST PROFITS, LOST DATA OR BUSINESS INTERRUPTION) ARISING OUT OF THE USE, INABILITY TO USE, OR THE RESULTS OF USE OF THIS SITE, ANY WEB SITES LINKED TO THIS SITE, OR THE MATERIALS OR INFORMATION CONTAINED AT ANY OR ALL SUCH SITES, WHETHER BASED ON WARRANTY, CONTRACT, TORT OR ANY OTHER LEGAL THEORY AND WHETHER OR NOT ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IF YOUR USE OF THE MATERIALS OR INFORMATION FROM THIS SITE RESULTS IN THE NEED FOR SERVICING, REPAIR OR CORRECTION OF EQUIPMENT OR DATA, YOU ASSUME ALL COSTS THEREOF. APPLICABLE LAW MAY NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+    </p>
+    <h3 class="text-xl font-bold">
+        TERMINATION/ACCESS RESTRICTION
+    </h3>
+
+    <p class="mb-25">
+        Melaleuca reserves the right, in its sole discretion, to terminate your access to any or all Melaleuca Web Sites and the related services or any portion thereof at any time, without notice.
+    </p>
+    <h3 class="text-xl font-bold">
+        MODIFICATION OF THESE TERMS OF USE
+    </h3>
+
+    <p class="mb-25">
+        Melaleuca may revise these Terms at any time by updating this posting. You should visit this page from time to time to review the then-current Terms because they are binding on you. Certain provisions of these Terms may be superseded by expressly designated legal notices or terms located on particular pages at this Site.
+    </p>
+    <h3 class="text-xl font-bold">
+        GENERAL
+    </h3>
+
+    <p class="mb-25">
+        This agreement is governed by the laws of the State of Idaho, U.S.A. You hereby consent to the exclusive jurisdiction and venue of courts in Bonneville County, Idaho, U.S.A. or the U.S. District Court for the District of Idaho, in all disputes arising out of or relating to the use of the Melaleuca Web Sites. Use of the Melaleuca Web Site is unauthorized in any jurisdiction that does not give effect to all provisions of these terms and conditions, including without limitation this paragraph. You agree that no joint venture, partnership, employment, or agency relationship exists between you and Melaleuca as a result of this agreement or use of the Melaleuca Web Site. Melaleuca's performance of this agreement is subject to existing laws and legal process, and nothing contained in this agreement is in derogation of Melaleuca's right to comply with governmental, court and law enforcement requests or requirements relating to your use of the Web Site or information provided to or gathered by Melaleuca with respect to such use. If any part of this agreement is determined to be invalid or unenforceable pursuant to applicable law including, but not limited to, the warranty disclaimers and liability limitations set forth above, then the invalid or unenforceable provisions will be deemed superseded by a valid, enforceable provision that most closely matches the intent of the original provision and the remainder of the agreement shall continue in effect. Unless otherwise specified herein, this agreement constitutes the entire agreement between the user and Melaleuca with respect to the Melaleuca Web Site and it supersedes all prior or contemporaneous communications and proposals, whether electronic, oral or written, between the user and Melaleuca with respect to the Web Site. A printed version of this agreement and any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to this agreement to the same extent and subject to he same condition as other business documents and records originally generated and maintained in printed form.
+    </p>
+    <h3 class="text-xl font-bold">
+        COPYRIGHT &amp; TRADEMARK NOTICES
+    </h3>
+
+    <p class="mb-25">
+        All contents of the Melaleuca Web Sites are: Copyright © 1990-2022 Melaleuca, Inc. 4609 West 65th South Idaho Falls, ID 83402 U.S. All rights reserved.
+    </p>
+    <h3 class="text-xl font-bold">
+        TRADEMARKS
+    </h3>
+
+    <p class="mb-25">
+        Melaleuca, the Leaf and Drop logo, and other names, logos, product and service names, designs, and slogans referenced on this website are trademarks of Melaleuca or its licensors. You must not use such marks without the prior written permission of Melaleuca. Other names, logos, product and service names, designs, and slogans on this website are the trademarks of their respective owners.
+    </p>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-terms-conditions" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-product-details-configurator-2-selected","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2-selected\\pages-product-details-product-details-configurator-2-selected.rendered.html"},{"lineagePattern":"pages-product-details-configurator-2","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2\\pages-product-details-product-details-configurator-2.rendered.html"},{"lineagePattern":"pages-product-details-configurator-3","lineagePath":"../../patterns/pages-product-details-product-details-configurator-3\\pages-product-details-product-details-configurator-3.rendered.html"},{"lineagePattern":"pages-product-details-configurator-4","lineagePath":"../../patterns/pages-product-details-product-details-configurator-4\\pages-product-details-product-details-configurator-4.rendered.html"},{"lineagePattern":"pages-product-details-configurator-5","lineagePath":"../../patterns/pages-product-details-product-details-configurator-5\\pages-product-details-product-details-configurator-5.rendered.html"},{"lineagePattern":"pages-product-details-configurator-6","lineagePath":"../../patterns/pages-product-details-product-details-configurator-6\\pages-product-details-product-details-configurator-6.rendered.html"},{"lineagePattern":"pages-product-details-configurator-cart-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-cart-service-failure\\pages-product-details-product-details-configurator-cart-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-configurator-pdp-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-pdp-service-failure\\pages-product-details-product-details-configurator-pdp-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-ingredients-error","lineagePath":"../../patterns/pages-product-details-product-details-ingredients-error\\pages-product-details-product-details-ingredients-error.rendered.html"},{"lineagePattern":"pages-product-details-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-ingredients\\pages-product-details-product-details-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-invite-a-friend","lineagePath":"../../patterns/pages-product-details-product-details-invite-a-friend\\pages-product-details-product-details-invite-a-friend.rendered.html"},{"lineagePattern":"pages-product-details-no-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-no-ingredients\\pages-product-details-product-details-no-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-concentrated-and-diluted","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-concentrated-and-diluted\\pages-product-details-product-details-price-per-unit-concentrated-and-diluted.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-original","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-original\\pages-product-details-product-details-price-per-unit-original.rendered.html"},{"lineagePattern":"pages-product-details-restricted-pack","lineagePath":"../../patterns/pages-product-details-product-details-restricted-pack\\pages-product-details-product-details-restricted-pack.rendered.html"},{"lineagePattern":"pages-product-details-signed-out","lineagePath":"../../patterns/pages-product-details-product-details-signed-out\\pages-product-details-product-details-signed-out.rendered.html"},{"lineagePattern":"pages-product-details-unique-price-block","lineagePath":"../../patterns/pages-product-details-product-details-unique-price-block\\pages-product-details-product-details-unique-price-block.rendered.html"},{"lineagePattern":"pages-product-details","lineagePath":"../../patterns/pages-product-details-product-details\\pages-product-details-product-details.rendered.html"}],"lineageR":[{"lineagePattern":"pages-product-details-configurator-2-selected","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2-selected\\pages-product-details-product-details-configurator-2-selected.rendered.html"},{"lineagePattern":"pages-product-details-configurator-2","lineagePath":"../../patterns/pages-product-details-product-details-configurator-2\\pages-product-details-product-details-configurator-2.rendered.html"},{"lineagePattern":"pages-product-details-configurator-3","lineagePath":"../../patterns/pages-product-details-product-details-configurator-3\\pages-product-details-product-details-configurator-3.rendered.html"},{"lineagePattern":"pages-product-details-configurator-4","lineagePath":"../../patterns/pages-product-details-product-details-configurator-4\\pages-product-details-product-details-configurator-4.rendered.html"},{"lineagePattern":"pages-product-details-configurator-5","lineagePath":"../../patterns/pages-product-details-product-details-configurator-5\\pages-product-details-product-details-configurator-5.rendered.html"},{"lineagePattern":"pages-product-details-configurator-6","lineagePath":"../../patterns/pages-product-details-product-details-configurator-6\\pages-product-details-product-details-configurator-6.rendered.html"},{"lineagePattern":"pages-product-details-configurator-cart-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-cart-service-failure\\pages-product-details-product-details-configurator-cart-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-configurator-pdp-service-failure","lineagePath":"../../patterns/pages-product-details-product-details-configurator-pdp-service-failure\\pages-product-details-product-details-configurator-pdp-service-failure.rendered.html"},{"lineagePattern":"pages-product-details-ingredients-error","lineagePath":"../../patterns/pages-product-details-product-details-ingredients-error\\pages-product-details-product-details-ingredients-error.rendered.html"},{"lineagePattern":"pages-product-details-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-ingredients\\pages-product-details-product-details-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-invite-a-friend","lineagePath":"../../patterns/pages-product-details-product-details-invite-a-friend\\pages-product-details-product-details-invite-a-friend.rendered.html"},{"lineagePattern":"pages-product-details-no-ingredients","lineagePath":"../../patterns/pages-product-details-product-details-no-ingredients\\pages-product-details-product-details-no-ingredients.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-concentrated-and-diluted","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-concentrated-and-diluted\\pages-product-details-product-details-price-per-unit-concentrated-and-diluted.rendered.html"},{"lineagePattern":"pages-product-details-price-per-unit-original","lineagePath":"../../patterns/pages-product-details-product-details-price-per-unit-original\\pages-product-details-product-details-price-per-unit-original.rendered.html"},{"lineagePattern":"pages-product-details-restricted-pack","lineagePath":"../../patterns/pages-product-details-product-details-restricted-pack\\pages-product-details-product-details-restricted-pack.rendered.html"},{"lineagePattern":"pages-product-details-signed-out","lineagePath":"../../patterns/pages-product-details-product-details-signed-out\\pages-product-details-product-details-signed-out.rendered.html"},{"lineagePattern":"pages-product-details-unique-price-block","lineagePath":"../../patterns/pages-product-details-product-details-unique-price-block\\pages-product-details-product-details-unique-price-block.rendered.html"},{"lineagePattern":"pages-product-details","lineagePath":"../../patterns/pages-product-details-product-details\\pages-product-details-product-details.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"terms-conditions"},"patternExtension":"hbs","patternName":"Terms Conditions","patternPartial":"organisms-terms-conditions","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-terms-conditions"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-terms-conditions"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770272894619">
+  (function() {
+    if (self != top) {
+      var cb = '1770272894619';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770272894619" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770272894619', function(){
+        loadJS('/js/vue-pci.js?1770272894619', function(){
+          loadJS('/js/vendor-pci.js?1770272894619', function(){
+            loadJS('/js/pci.js?1770272894619', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770272894619', function(){
+        loadJS('/js/vue-main.js?1770272894619', function(){
+          loadJS('/js/vendor.js?1770272894619', function(){
+            loadJS('/js/index.js?1770272894619', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

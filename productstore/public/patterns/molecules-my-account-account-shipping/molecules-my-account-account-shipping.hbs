@@ -1,0 +1,19 @@
+<div class="relative">
+  <h3 class="text-md md:text-lg  font-semibold uppercase mr-3 mb-10 mr-15 inline-block">{{Title}}<span class="to-md:hidden">:</span></h3>
+  {{#with Manage}}
+    <a href="{{Url}}" class="uppercase text-green-100 text-md mb-10 inline-block absolute left-0 bottom-0 md:relative" aria-label="{{AriaLabel}}" data-gtm-track='
+            {
+                "gtmId": "204",
+                "gtmText": "Become a Marketing Executive"
+            }
+        '>
+      {{Label}}
+    </a>
+  {{/with}}
+
+  <div class="pb-40 mb-20 text-gray-120 md:mb-10">
+    {{#each AddressLines}}
+      <p>{{this}}</p>
+    {{/each}}
+  </div>
+</div>

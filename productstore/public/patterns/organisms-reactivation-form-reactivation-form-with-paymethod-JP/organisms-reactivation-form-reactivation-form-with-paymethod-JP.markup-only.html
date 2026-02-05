@@ -1,0 +1,123 @@
+<o-reactivation-form-with-paymethod script-id="ReactivationModalId"></o-reactivation-form-with-paymethod>
+
+<script type="application/json" id="ReactivationModalId">
+  {
+    "Country": "Japan",
+    "Text": "Enjoy all the benefits of a Melaleuca Preferred Member.",
+    "Title": "Reactivate Your Account",
+    "SectionTitle": "Account Information",
+    "RedirectUrl": "#",
+    "HidePayMethod": false,
+    "Address": {
+      "CTAText": "Edit",
+      "CTALink": "#",
+      "IconUrl": " https://cdnsc1.melaleuca.com/na/images/common/icon-edit.png",
+      "IconAlt": "Edit Icon"
+    },
+    "CancelText": "Not now",
+    "CTAText": "Reactivate",
+    "CTAAriaLabel": "Reactivate Button",
+    "CancelAriaLabel": "Not now Button",
+    "Types": ["Mobile", "Home", "Work"],
+    "TypesValues": ["MobilePhone", "HomePhone", "BusinessPhone"],
+    "Checkboxes": [{
+      "Checked": true,
+      "Text": "I authorize Melaleuca to send messages to me via automated text. Consent is not required for purchase of goods or services. I can text STOP to end text messages or HELP for added information. Message and data rates may apply. <span class=\"text-green\">Terms of use</span> & <span class=\"text-green\">Privacy Polic</span> at Melaleuca.com.",
+      "Name": "SmsConsent",
+      "Required": true
+    }, {
+      "Checked": false,
+      "Text": "I agree to and acknowledge that I have read the terms & conditions outlined in the <span class=\"text-green\">Customer Agreement</span> and <span class=\"text-green\">Statement of Policies</span>. (A link to these terms & conditions will be emailed to you in your reactivation email.) I also agree to pay the Annual Membership fee when it is due</span>.",
+      "Name": "Terms",
+      "Required": true
+    }],
+    "Labels": {
+      "address": "Address",
+      "email": {
+        "title": "Email",
+        "updatedSuccess": "Email updated succesfully",
+        "edit": "Edit",
+        "editAriaLabel": "Edit Button",
+        "warning": "Please add a valid email address",
+        "cancel": "Cancel",
+        "cancelAriaLabel": "Cancel Button",
+        "save": "Save",
+        "saveAriaLabel": "Save Button",
+        "errors": {
+          "format": "Invalid email format"
+        }
+      },
+      "error": {
+        "requiredCheckbox": "You need to check the Terms and Conditions checkbox before reactivate your account"
+      },
+      "name": "Name",
+      "phone": {
+        "title": "Default Phone Number",
+        "phoneNumberLabel": "Phone Number",
+        "add": "Add new phone number",
+        "cancel": "Cancel",
+        "cancelAriaLabel": "Cancel Button",
+        "default": "Default",
+        "edit": "Edit",
+        "editAriaLabel": "Cancel Button",
+        "makeDefault": "Make Default",
+        "save": "Save",
+        "saveAriaLabel": "Save Button",
+        "type": "Phone Type",
+        "typeAria": "select phone type",
+        "delete": "Delete",
+        "deleteAriaLabel": "Delete phone number",
+        "errors": {
+          "format": "Invalid phone number format"
+        },
+        "warning": "Editing your phone number will affect your login credentials.",
+        "updated": "Phone number updated successfully.",
+        "deleted": "Phone number deleted successfully."
+      }
+    },
+    "AgreementTitle": "Customer Agreements",
+    "ConsentMessage": "<span class=\"font-bold uppercase\">I consent to all</span> the following Personal Use Agreement, E-Commerce Terms and Conditions, and CUstomer Membership Agreement items.",
+    "PaymentMethodType": "Payment Method Type",
+    "CardholderName": "Cardholder Name",
+    "CardNumber": "Card Number",
+    "CardNumberError": "Card Number field is required",
+    "Expiration": "Expiration",
+    "ExpirationMonthError": "Expiration Month field is required",
+    "ExpirationYearError": "Expiration Year field is required",
+    "Month": "Month",
+    "Year": "Year",
+    "CvvLabel": "CVC/CVV",
+    "CvvRequired": "CVC/CVV field is required",
+    "DebitCreditCard": "Debit/Credit Card",
+    "CardholderNameValues": ["진정희 KRTest"],
+    "CardNumberMaxValue": 16,
+    "CardNumberMinValue": 15,
+    "PhoneUsername": {
+      "PhoneModal": {
+        "Title": "Alert",
+        "Description": "Editing you Mobile or email will change your username.",
+        "EditPhoneNumber": "Edit Phone Number"
+      },
+      "EmailModal": {
+        "Title": "Alert",
+        "Description": "Editing you Mobile or email will change your username.",
+        "EditPhoneNumber": "Edit Phone Number"
+      },
+      "EmailAgreement": {
+        "CheckboxLabel": "I Agree <a>Electronic Notice and Consent Agreement.</a>",
+        "Title": "Consent to Collection of Email Addresses",
+        "AgreementMessagingEmail": "Melaleuca collects e-mail addresses in order to deliver notices, confirm personal intentions, secure a smooth communication path such as handling complaints, and provide up-to-date information such as new services, new products or event information, and the purpose of collecting or receiving personal information is achieved. When it does, it will be destroyed. However, if it is stored according to the relevant laws or internal policies as follows, it may be stored continuously for the relevant period.\r\n\r\n※ Matters related to consignment\r\n\r\ntrustee\r\n\r\nConsignment work\r\n\r\ninformation provided\r\n\r\nSeoul Credit Rating Information Co., Ltd.\r\n\r\nReal name verification of members and marketing executives through mobile phone verification\r\n\r\nName, mobile number, date of birth\r\n\r\nCJ Logistics Co., Ltd.\r\n\r\nProvision of goods delivery service\r\n\r\nName, phone number, address\r\n\r\nKT Co., \r\n\r\nLtd., Dow Technology Co. , Ltd.\r\n\r\ntext message service\r\n\r\nPhone number\r\n\r\n• Reasons for information retention according to internal policy\r\n\r\n- Records of illegal use: Until the end of business\r\n\r\n- Records to prevent re-registration and double registration: 2 years\r\n\r\n• Reasons for retention of information according to related laws:\r\n\r\n- Records related to identity verification and access records: June\r\n\r\n- Records related to display and advertisement: 5 years\r\n\r\n- Records related to contract or subscription withdrawal: 5 years\r\n\r\n- Payment and supply of goods Records related to: 5 years\r\n\r\n- Records regarding consumer complaints or dispute handling: 3 years\r\n\r\n- Records prescribed by other laws: In accordance with related laws\r\n\r\nFor more details, please refer to the Privacy Policy."
+      },
+      "PhoneAgreement": {
+        "CheckboxLabel": "I Agree <a>Electronic Notice and Consent Agreement.</a>",
+        "Title": "Consent to collection of phone numbers",
+        "AgreementMessagingPhone": "Melaleuca collects mobile phone numbers for global member management and service provision, and it is destroyed when the purpose of collecting or receiving personal information is achieved. However, if it is stored according to the relevant laws or internal policies as follows, it may be stored continuously for the relevant period.\r\n\r\n• Reasons for information retention according to internal policy\r\n\r\n- Records of illegal use: Until the end of business\r\n\r\n- Records to prevent re-registration and double registration: 2 years\r\n\r\n• Reasons for retention of information according to related laws:\r\n\r\n- Records related to identity verification and access records: June\r\n\r\n- Records related to display and advertisement: 5 years\r\n\r\n- Records related to contract or subscription withdrawal: 5 years\r\n\r\n- Payment and supply of goods Records related to: 5 years\r\n\r\n- Records regarding consumer complaints or dispute handling: 3 years\r\n\r\n- Records prescribed by other laws: In accordance with related laws\r\n\r\nFor more details, please refer to the Privacy Policy."
+      },
+      "EditMobileMessage": "Editing your mobile or email will change your username"
+    },
+    "TermsTitle": "Terms of Use Modal",
+    "TermsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "PrivacyTitle": "Privacy Agreement Modal",
+    "PrivacyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+</script>

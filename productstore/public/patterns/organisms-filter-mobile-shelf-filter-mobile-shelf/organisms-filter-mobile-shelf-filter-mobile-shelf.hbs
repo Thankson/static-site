@@ -1,0 +1,15 @@
+<o-filter-mobile-shelf heading="Heading" :visible="{{Visible}}">
+  <template v-slot:controls>
+    <button type="button" class="o-catFacetModal__clear">{{Controls}}</button>
+  </template>
+
+  <template v-slot:done>
+    <button type="button" class="a-button -catFacetModal">{{Done}}</button>
+  </template>
+
+  <!-- Start: Default Slot Content -->
+  {{#each Facets}}
+    {{> organisms-facet-group-checks}}
+  {{/each}}
+  <!-- End: Default Slot Content -->
+</o-filter-mobile-shelf>

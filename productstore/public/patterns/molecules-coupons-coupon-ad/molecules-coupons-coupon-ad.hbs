@@ -1,0 +1,24 @@
+<article class="m-couponAd">
+  <div class="m-couponAd__wrapper">
+    {{!-- BG Images --}}
+    <div class="m-couponAd__image -mobile" style="{{Images.Mobile}}"></div>
+    <div class="m-couponAd__image -desktop" style="{{Images.Desktop}}"></div>
+
+    {{!-- Content --}}
+    <div class="m-couponAd__col">
+      <div class="m-couponAd__content">
+        <div class="m-rte">
+          {{{RTEContent}}}
+        </div>
+      </div>
+
+      {{#if AuthorBtn}}
+        <div class="m-couponAd__cta">
+          {{#AuthorBtn}}
+            <a class="a-authorBtn {{#if Align}} {{Align}} {{else}} text-center {{/if}} {{Border}} {{BgColor}} {{CornerType}} {{Size}} {{Width}} {{XPadding}} {{Casing}}" style="color: {{TextColor}}" href="{{Url}}" {{#AriaLabel}}aria-label="{{AriaLabel}}" {{/AriaLabel}}>{{Text}}</a>
+          {{/AuthorBtn}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</article>

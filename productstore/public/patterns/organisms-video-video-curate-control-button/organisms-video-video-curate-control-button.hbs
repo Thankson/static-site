@@ -1,0 +1,23 @@
+<h2 class="text-center mb-40">This is only a working Example. Do not directly use this HBS file anywhere. Instead, use the vue compoent where necessary.</h2>
+
+{{#VideoCurateCtrl}}
+  {{#if IsButton}}
+    <o-vid-curate-ctrl script-id="ButtonWithNoLteData" :is-video-btn="true" class="flex w-full h-full justify-center items-center m-auto">
+      {{!-- Cant add custon classes directly to component example above --}}
+      {{!-- Can pass in Icon/text/content, example directly below --}}
+      <span class="a-playCircle -xxl material-icons">play_circle_outline</span>
+    </o-vid-curate-ctrl>
+  {{else}}
+    <o-vid-curate-ctrl script-id="CardWithLteData"></o-vid-curate-ctrl>
+  {{/if}}
+
+  {{!-- Card JSON --}}
+  <script type="application/json" id="CardWithLteData">
+  {{toJson Card.Localization}}
+  </script>
+
+  {{!-- Button JSON --}}
+  <script type="application/json" id="ButtonWithNoLteData">
+  {{toJson Button.Localization}}
+  </script>
+{{/VideoCurateCtrl}}

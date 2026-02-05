@@ -1,0 +1,139 @@
+{{#if Badge.Localization}}
+  <a-badge script-id="badgeLocalization">
+{{/if}}
+{{#FWBanner}}
+  {{#if HideMainCTA}}
+    <a href="{{CTA.AuthorBtn.Url}}" target="_blank" aria-label="{{CTA.AuthorBtn.AriaLabel}}" class="m-fwBanner {{BlockHeight}} {{#if IsSlide}}-slide{{/if}} {{#if StackAtMobile}}-stackMobile{{/if}} {{#if Has.VideoToggle}}-videoToggle{{/if}} {{#if Has.ImageGrid}}-imageGrid{{/if}} {{#if Has.Lsd}}-lsd{{/if}} {{#if IsCn}}-isCn{{/if}}" data-testid="article-fullWidthBanner">
+      {{> fwBannerContent}}
+    </a>
+  {{else}}
+    <article class="m-fwBanner {{BlockHeight}} {{#if IsSlide}}-slide{{/if}} {{#if StackAtMobile}}-stackMobile{{/if}} {{#if Has.VideoToggle}}-videoToggle{{/if}} {{#if Has.ImageGrid}}-imageGrid{{/if}} {{#if Has.Lsd}}-lsd{{/if}} {{#if IsCn}}-isCn{{/if}}" data-testid="article-fullWidthBanner">
+      {{> fwBannerContent}}
+    </article>
+  {{/if}}
+{{/FWBanner}}
+{{#if Badge.Localization}}</a-badge>{{/if}}
+
+{{!-- Start: Background Color --}}
+{{#*inline "BgColor"}}
+  <div class="m-fwBanner__bgColor" style="background: {{{BgColorCode}}};">
+  </div>
+{{/inline}}
+{{!-- End: Background Color --}}
+
+{{!-- Start: Background Video --}}
+{{#*inline "BgVideo"}}
+  <div class="m-fwBanner__bgVideo">
+    <video muted autoplay loop poster="{{BgVideo.Poster}}" aria-label="{{BgVideo.Description}}">
+      <source src="{{BgVideo.WebM}}" type="video/webm" />
+      <source src="{{BgVideo.Mp4}}" type="video/mp4" />
+    </video>
+    {{#with PlayPauseButton}}
+      {{> atoms-cmn-play-pause}}
+    {{/with}}
+  </div>
+{{/inline}}
+{{!-- End: Background Video --}}
+{{#if Badge.Localization}}
+  <script type="application/json" id="badgeLocalization">
+  {{toJson Badge.Localization}}
+  </script>
+{{/if}}
+
+{{#*inline "fwBannerContent"}}
+  <div class="m-fwBanner__row -media {{BgVideo.MobileVidBgClass}}">
+    <!-- Start: Media block1 -->
+    <!-- images -->
+    {{#if Has.BgColor}}
+      {{> BgColor}}
+    {{/if}}
+
+    {{#if Has.BgImages}}
+      {{>atoms-cmn-generic-img}}
+    {{/if}}
+
+    <!-- Video -->
+    {{#if Has.BgVideo}}
+      {{> BgVideo}}
+    {{/if}}
+    <!-- End: Media block -->
+  </div>
+  <div class="m-fwBanner__row -columns {{Content.Size}} {{Content.XAlign}} {{Content.YAlign}}">
+    <!-- Start: Content block -->
+    <div class="m-fwBanner__columns {{#if Has.AudioPLayer}}-audio{{/if}}">
+      <div class="m-fwBanner__col -content">
+        <div class="m-fwBanner__rte">
+          <div class="m-rte">
+            {{{RTE}}}
+          </div>
+        </div>
+
+        {{#if Has.CTAButton}}
+          {{#if ./HideMainCTA}}
+            {{#with CTA.AuthorBtn}}
+              <div class="m-fwBanner__cta {{ButtonXAlign}}">
+                <div class="a-authorBtn text-center {{Border}} {{BgColor}} {{CornerType}} {{Size}} {{XPadding}}" role="button" tabindex="0">
+                  {{Text}}
+                </div>
+              </div>
+            {{/with}}
+          {{else}}
+            {{!-- Case: <article> wrapper uses partial --}}
+            {{#with CTA}}
+              <div class="m-fwBanner__cta {{ButtonXAlign}}">
+                {{> atoms-cmn-author-btn}}
+              </div>
+            {{/with}}
+          {{/if}}
+        {{/if}}
+
+        {{#if Has.CalendarCTAButton}} {{#with CTA}}
+            <div class="m-fwBanner__cta {{ButtonXAlign}}">
+              {{> atoms-cmn-calendar-btn}}
+            </div>
+          {{/with}} {{/if}}
+
+        {{#if Has.Lsd}}
+          <div class="m-fwBanner__lsdContainer">
+            <div class="m-fwBanner__lsdText">
+              {{Lsd.Text}}
+            </div>
+            <div class="m-fwBanner__lsdAmount">
+              {{Lsd.AmountFormatted}}
+            </div>
+          </div>
+        {{/if}}
+
+      </div>
+
+      {{#if Has.VideoToggle}}
+        <div class="m-fwBanner__col -video">
+          {{#with ../ToggleVideo}}
+            {{> molecules-cmn-video-toggle-button}}
+          {{/with}}
+        </div>
+      {{/if}}
+
+      {{#if Has.AudioPLayer}}
+        <div class="m-fwBanner__col -audioPlayer">
+          {{#with ../AudioPlayer}}
+            {{> atoms-cmn-mela-audio-player}}
+          {{/with}}
+        </div>
+      {{/if}}
+
+      {{#if Has.ImageGrid}}
+        <div class="m-fwBanner__col -grid">
+          <div class="m-fwBanner__grid">
+            {{#each GridImages}}
+              <a class="m-fwBanner__link" href="{{Href}}">
+                <img class="m-fwBanner__image" src="{{ImgSrc}}" alt="ImgAlt">
+              </a>
+            {{/each}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    <!-- End: Content block -->
+  </div>
+{{/inline}}

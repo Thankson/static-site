@@ -1,0 +1,17 @@
+<!-- this outer div is only to help display this molecule in patterlab, it shouldn't be used outside this context  -->
+{{#if MoleculeView}}
+  <div style="position: relative; height: 100vh">
+{{/if}}
+
+
+<div class="m-scroll {{ScrollModifier}}">
+  <div class="m-scroll__container">
+    <img class="m-scroll__img noLazy" src="{{ScrollImage.Url}}" alt="{{ScrollImage.Alt}}">
+    <p class="m-scroll__text">{{Scroll}}</p>
+  </div>
+</div>
+
+
+{{#if MoleculeView}}
+  </div>
+{{/if}}
