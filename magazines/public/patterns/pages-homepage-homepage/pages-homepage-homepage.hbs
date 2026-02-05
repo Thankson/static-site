@@ -1,0 +1,50 @@
+{{> organisms-header}}
+
+<div class="flex flex-col lg:flex-row max-w-contain mx-auto space-x-reverse lg:space-x-80 space-y-40 lg:space-y-0 px-10 lg:px-0 mt-60">
+  <div class="flex-auto w-full lg:w-2_3">
+    <div class="mb-30">
+      {{> organisms-audio-player}}
+    </div>
+
+    {{#with CategoryCulture.CategoryInfo}}
+      {{> molecules-category-header}}
+    {{/with}}
+    {{#with CategoryCulture}}
+      {{> organisms-category-list-main}}
+    {{/with}}
+
+    {{#with CategoryBusinessBuilding.CategoryInfo}}
+      {{> molecules-category-header}}
+    {{/with}}
+    {{#with CategoryBusinessBuilding}}
+      {{> organisms-category-list-main}}
+    {{/with}}
+  </div>
+  <div class="flex-auto w-full lg:w-1_3">
+    {{#with CategoryRecognition.CategoryInfo}}
+      {{> molecules-category-header}}
+    {{/with}}
+    {{#with CategoryRecognition}}
+      {{> organisms-category-list-secondary}}
+    {{/with}}
+
+    {{#with CategoryTraining.CategoryInfo}}
+      {{> molecules-category-header}}
+    {{/with}}
+    {{#with CategoryTraining}}
+      {{> organisms-category-list-secondary}}
+    {{/with}}
+  </div>
+</div>
+
+<div class="max-w-contain px-10 lg:mx-auto">
+  {{> organisms-issue-carousel}}
+</div>
+
+<div class="max-w-contain mx-auto lg:px-10 my-30">
+  {{> organisms-sign-out-lia}}
+</div>
+
+{{> molecules-tool-box}}
+
+{{> organisms-footer}}

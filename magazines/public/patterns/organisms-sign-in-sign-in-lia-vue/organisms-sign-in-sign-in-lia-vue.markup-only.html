@@ -1,0 +1,26 @@
+<div class="bg-white border mb-10 lg:mb-0 px-8 lg:px-40 py-30 border-gray-50 lg:rounded w-full">
+  <o-sign-in-lia action="/identity-server" button-aria-label="Sign In" invalid-credential-text="&lt;span&gt;Invalid Username or Password. &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;font-bold underline&quot;&gt;Need Help? &lt;span class&#x3D;&quot;sr-only&quot;&gt;Click Here&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;" :agreement-terms='[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ErrorMessage":"请勾选以上隐私条款"},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":false,"Modals":[],"ErrorMessage":"请勾选以上隐私条款"}]' :hide-country-selector="false" :hide-keep-me-signed-in="true" :show-error-message="false" show-label="Show Password" hide-label="Hide Password">
+
+    <template v-slot:username-label>
+      Username
+    </template>
+
+    <template v-slot:password-label>
+      Password
+    </template>
+
+    <template v-slot:button-label>
+      SIGN IN
+    </template>
+
+    <template v-slot:signed-in-label>
+      Keep Me Signed In
+    </template>
+
+    <template v-slot:info>
+      <div class="leading-relaxed text-gray-120 my-5">If you forget password or need to create account, please enter NSE shopping Mini Program to operate.</div>
+      <a class="leading-relaxed text-sky my-5 underline cursor-pointer">Sign in later. Browse the site.</a>
+    </template>
+
+  </o-sign-in-lia>
+</div>

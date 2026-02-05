@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Material+Icons|Cormorant:700i|Cormorant+SC:600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/app.css?1770270993710" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770270993710" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+
+<body class="">
+  <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {}
+    </script>
+    <header class="o-header">
+      <div class="o-header__logo">
+        <a href="#" class="m-headerLogo">
+          <img class="m-headerLogo__pc" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/logo/logo-white-pc.png" alt="" />
+          <img class="m-headerLogo__mobile" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/logo/logo-white-m.png" alt="" />
+        </a>
+      </div>
+
+      <m-adaptive-navigation script-id="adaptiveNavigation"></m-adaptive-navigation>
+      <script type="application/json" id="adaptiveNavigation">
+        {
+          "Labels": {},
+          "Data": {
+            "Navs": [{
+              "Text": "首页",
+              "Link": "/202310",
+              "IsCurrent": false
+            }, {
+              "Text": "事业",
+              "Link": "/202310/business-building",
+              "IsCurrent": false
+            }, {
+              "Text": "事件",
+              "Link": "/202310/celebration-and-event",
+              "IsCurrent": false
+            }, {
+              "Text": "指导",
+              "Link": "/202310/coach",
+              "IsCurrent": false
+            }, {
+              "Text": "文化",
+              "Link": "/202310/culture",
+              "IsCurrent": false
+            }, {
+              "Text": "荣誉榜荣誉榜荣誉榜",
+              "Link": "/202310/recognition",
+              "IsCurrent": true
+            }, {
+              "Text": "培训",
+              "Link": "/202310/training",
+              "IsCurrent": false
+            }, {
+              "Text": "xxx",
+              "Link": "/202310/training",
+              "IsCurrent": false
+            }, {
+              "Text": "yyy",
+              "Link": "/202310/training",
+              "IsCurrent": false
+            }, {
+              "Text": "zzz",
+              "Link": "/202310/training",
+              "IsCurrent": false
+            }]
+          }
+        }
+      </script>
+
+      <div class="o-header__searchBar">
+        <m-search-bar script-id="searchBar"></m-search-bar>
+        <script type="application/json" id="searchBar">
+          {
+            "Labels": {
+              "Text": "搜索",
+              "AriaLabels": {
+                "SearchBtnAria": "Press enter to search"
+              }
+            },
+            "Data": {
+              "Icon": "https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/Lia/Lia Program Image/icon/i-search-white.png",
+              "ResultPage": "/search",
+              "ShowHistory": "1"
+            }
+          }
+        </script>
+      </div>
+
+      <div class="o-header__historyShelf">
+        <m-history-shelf script-id="historyShelfId"></m-history-shelf>
+        <script type="application/json" id="historyShelfId">
+          {
+            "Labels": {},
+            "Data": {
+              "IconSrc": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/icon/icon-history.svg",
+              "IconText": "往期回顾",
+              "Title": "历史期刊",
+              "Issues": [{
+                "Title": "2023年7月刊",
+                "Description": "",
+                "Cover": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/pic/cover/pic1.jpg",
+                "Link": ""
+              }, {
+                "Title": "2023年8月刊",
+                "Description": "",
+                "Cover": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/pic/cover/pic2.jpg",
+                "Link": ""
+              }, {
+                "Title": "2023年9月刊",
+                "Description": "",
+                "Cover": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/pic/cover/pic3.jpg",
+                "Link": "/202309"
+              }, {
+                "Title": "2023年10月刊",
+                "Description": "",
+                "Cover": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/pic/cover/pic5.jpg",
+                "Link": "/202310"
+              }, {
+                "Title": "2023年11月刊",
+                "Description": "",
+                "Cover": "https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/pic/cover/pic4.jpg",
+                "Link": ""
+              }]
+            }
+          }
+        </script>
+      </div>
+
+      <div class="o-header__signInLia">
+        <a class="a-authorBtn -bgWhite text-center bg-white rounded py-12 text-xs px-18" href="#">Login</a>
+      </div>
+    </header>
+
+    <div class="a-author-button md:hidden flex items-start relative px-8 py-20 bg-white">
+      <a href="/depaccount/singlesignon" class="a-authorBtn -bgSky text-center bg-sky rounded py-16 text-base w-full">
+        登录
+      </a>
+    </div>
+
+    <o-top-navigation-carousel class="md:hidden" script-id="adaptiveNavigation"></o-top-navigation-carousel>
+    <script type="application/json" id="adaptiveNavigation">
+      {
+        "Labels": {},
+        "Data": {
+          "Navs": [{
+            "Text": "首页",
+            "Link": "/202310",
+            "IsCurrent": false
+          }, {
+            "Text": "事业",
+            "Link": "/202310/business-building",
+            "IsCurrent": false
+          }, {
+            "Text": "事件",
+            "Link": "/202310/celebration-and-event",
+            "IsCurrent": false
+          }, {
+            "Text": "指导",
+            "Link": "/202310/coach",
+            "IsCurrent": false
+          }, {
+            "Text": "文化",
+            "Link": "/202310/culture",
+            "IsCurrent": false
+          }, {
+            "Text": "荣誉榜荣誉榜荣誉榜",
+            "Link": "/202310/recognition",
+            "IsCurrent": true
+          }, {
+            "Text": "培训",
+            "Link": "/202310/training",
+            "IsCurrent": false
+          }, {
+            "Text": "xxx",
+            "Link": "/202310/training",
+            "IsCurrent": false
+          }, {
+            "Text": "yyy",
+            "Link": "/202310/training",
+            "IsCurrent": false
+          }, {
+            "Text": "zzz",
+            "Link": "/202310/training",
+            "IsCurrent": false
+          }]
+        }
+      }
+    </script>
+
+
+    <div class="max-w-contain mx-auto px-10">
+      <nav class="m-breadcrumb " aria-label="Breadcrumb">
+        <ol class="m-breadcrumb__list">
+          <li class="m-breadcrumb__item">
+            <a class="m-breadcrumb__link" href="/">Home</a>
+            <span class="m-breadcrumb__separator" aria-hidden="true"> / </span>
+          </li>
+          <li class="m-breadcrumb__item">
+            <a class="m-breadcrumb__link" href="/Culture">Culture</a>
+            <span class="m-breadcrumb__separator" aria-hidden="true"> / </span>
+          </li>
+          <li class="m-breadcrumb__item">
+            <span class="m-breadcrumb__link" aria-current="page">If you can help people, what is this</span>
+            <span class="m-breadcrumb__separator" aria-hidden="true"> / </span>
+          </li>
+        </ol>
+      </nav>
+
+      <m-article-detail-header script-id="articleDetailHeader"></m-article-detail-header>
+      <script type="application/json" id="articleDetailHeader">
+        {
+          "Data": {
+            "ArticleReleaseDate": "2023.09.15"
+          },
+          "Labels": {}
+        }
+      </script>
+
+      <article class="o-articleContent">
+        <p style="text-align: center; font-size: 32px;">庆贺是成功的关键</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;写这篇文章的当下，我正坐在飞机上，从过去几周在世界各地参加的美乐家年会返回家中。当我回想这段旅程时，我意识到无论我身在何处、无论使用何种语言，大家所散发的活力和雀跃之情都一模一样，因为我们在年会中就是为了相互庆贺和鼓励。当肩负共同使命的人们聚集在一起、分享他们的目标和对未来的愿景，并相互庆祝时，不可思议的事情就发生了。这股氛围激发了在场每一个人的灵感和潜力。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;这就是为什么从一开始&ldquo;为伙伴的成功庆贺&rdquo;就是美乐家事业成功七要素之一。庆贺不仅仅是一项让人感觉良好的活动&mdash;&mdash;它还是一种带来真正改变的强大力量。这些年来，我学到了无论是微小的胜利，或者是重大的里程碑，只要是有意义的肯定或表扬，都有改变我们如何看待自己、看待自身能力的力量。当我们感受到被看到、被重视和被赞美时，我们就会建立了对自己的信念，成就自然也随之而来。当我们赞美他人的时候，我们也同时在建立自己的信念和能力，而且将会做得更多、更好。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;在美乐家，我们深知通过庆贺活动来建立信念的重要性。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;即使只是表扬微小的成就，不仅能激励个人向更大的目标迈进，还能培养一种支持和赋能的文化。当我看到市场领导人热情地为不属于自己组织的个人或团队庆祝时，总是令我印象深刻。真正伟大的领导人都明白，为他人的成就喝彩可以培养一种友爱和共享成功的精神，这种精神的影响范围远远超出了被喝彩者的本身。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;作为领导人和引领者，我们能做的最重要的事情就是帮助他人相信自己。要做到这一点的最有效方法，就是把握住他们做正确事情的时候，并庆祝他们的成就。不要等到某件事情做得完美无缺或达到一个重要的里程碑时才去庆祝。在人生的旅途中，寻找大量的机会来鼓励和影响那些正在做正确事情的人。想象一下，年轻的父母目睹孩子迈出蹒跚的第一步。即使孩子不可避免地摔倒了，他们也会为孩子迈出的脚步喝彩。因为他们知道，通过他们的积极鼓励和支持，孩子会感受到被赞美的感觉，并再次尝试，而且每次都想要比以前走得更远。</p>
+        <div style="text-align: center;"><img src="https://cdnsc1.melaleuca.com.cn/Lia/mj0514/jerry/2406JERRY2.jpg" width="500px" alt></div>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;我全心投入在帮助每个人明白表扬与肯定的重要性，并让你们更轻松且更频繁地举办更有意义的庆贺活动。上个月我们在犹他州盐湖城举行了北美年会，在年会现场您可以亲身了解到，我们是如何让这一关键活动变得充满能量！我们会让庆贺变得比以往任何时候都容易，这会给你的事业带来巨大的改变。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;2024年将会是不可思议的一年，我们已经有很多值得骄傲的事情了。我鼓励我们所有人都要寻找机会在周围人的生活中产生影响，发现他们做了正确的事情，然后为他们庆贺，庆贺，庆贺！同时帮你自己一个忙&mdash;&mdash;不要忘记每天回顾自己的成功，并为自己庆贺！</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;我期待着在不久的将来见到你，并为你庆贺。</p>
+        <p style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;到时候见！</p>
+        <div><img src="https://cdnsc1.melaleuca.com.cn/Lia/mj0514/jerry/2406JERRY3.jpg" alt></div>
+      </article>
+
+      <div class="m-detailFooter">
+        <div class="a-anchorButton">
+          <a class="a-anchorButton__link -disabled" href="#">
+            <div class="a-anchorButton__content">
+              <span class="a-anchorButton__leftIcon material-icons" aria-hidden="true">chevron_left</span>
+              <span class="a-anchorButton__text">上一篇</span>
+            </div>
+          </a>
+        </div>
+        <div class="a-anchorButton">
+          <a class="a-anchorButton__link " href="#">
+            <div class="a-anchorButton__content">
+              <span class="a-anchorButton__text">下一篇</span>
+              <span class="a-anchorButton__rightIcon material-icons" aria-hidden="true">chevron_right</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <m-sign-in-reminder script-id="signInReminder"></m-sign-in-reminder>
+      <script type="application/json" id="signInReminder">
+        {
+          "Labels": {},
+          "Data": {
+            "Icon": "https://cdnsc1.melaleuca.com.cn/image-resize/quality=85,format=auto/Lia/Lia Program Image/icon/i-top.png",
+            "IconAlt": "sign in icon",
+            "ReminderContent": "请进行{0}后查看更多",
+            "SignInLink": "/account/signin",
+            "SignInText": "登录"
+          }
+        }
+      </script>
+    </div>
+
+    <footer class="o-footer">
+      <div class="o-footer__content">
+        <div class="o-footer__row -brand">
+          <div class="o-footer__col">
+            <img class="o-footer__brandImg" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/logo/logo-white-pc.png" alt="" />
+          </div>
+          <div class="o-footer__col -nav">
+            <ul class="o-footer__navList">
+              <li class="o-footer__navItem">
+                <a href="javascript:void(0)">privacy policy</a>
+              </li>
+              <li class="o-footer__navItem">
+                <a href="javascript:void(0)">terms of use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="o-footer__row -social">
+          <div class="o-footer__col -copyright">
+            <span>Copyright © 2023 Melaleuca Inc.</span>
+          </div>
+          <hr class="o-footer__socialDivider" />
+          <div class="o-footer__social">
+            <p class="o-footer__socialTitle">
+              关注我们
+            </p>
+            <div class="o-footer__socialIcon">
+              <div class="o-footer__socialImg" data-js="socialPopup">
+                <div class="o-footer__triangle -social" data-target="socialPopup" aria-hidden="true"></div>
+                <img class="noLazy" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/icon/i-wechat.png" alt="">
+              </div>
+              <div class="o-footer__socialPopup" data-target="socialPopup">
+                <button aria-label="Close Popup" class="o-footer__socialPopupCloseBtn" data-js="socialPopupClose">
+                  <span class="o-footer__popupCloseImg material-icons" aria-hidden="true">close</span>
+                </button>
+
+                <div class="o-footer__socialPopupContent">
+                  <div class="o-footer__socialPopupTitle">请扫码关注</div>
+                  <ul class="o-footer__socialPopupItems">
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/yigou-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家易购小程序</div>
+                    </li>
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/yiruhui-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家易入会小程序</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="o-footer__socialText">小程序</div>
+            </div>
+            <div class="o-footer__socialIcon">
+              <div class="o-footer__socialImg" data-js="socialPopup">
+                <div class="o-footer__triangle -social" data-target="socialPopup" aria-hidden="true"></div>
+                <img class="noLazy" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/icon/i-official-account.png" alt="">
+              </div>
+              <div class="o-footer__socialPopup" data-target="socialPopup">
+                <button aria-label="Close Popup" class="o-footer__socialPopupCloseBtn" data-js="socialPopupClose">
+                  <span class="o-footer__popupCloseImg material-icons" aria-hidden="true">close</span>
+                </button>
+
+                <div class="o-footer__socialPopupContent">
+                  <div class="o-footer__socialPopupTitle">请扫码关注</div>
+                  <ul class="o-footer__socialPopupItems">
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/dingyuehao-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家中国</div>
+                    </li>
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/youzhishenghuo-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家会员中心</div>
+                    </li>
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/fuzuzhiye-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家富足志业</div>
+                    </li>
+                    <li class="o-footer__socialPopupItem">
+                      <img class="o-footer__socialPopupQr" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia%20Program%20Image/pic/footer/mela-china-video-qrcode.jpg" alt="">
+                      <div class="o-footer__socialPopupQrDesc">美乐家中国视频号</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="o-footer__socialText">公众号</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-breadcrumb",
+        "lineagePath": "../../patterns/molecules-breadcrumb-breadcrumb\\molecules-breadcrumb-breadcrumb.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-header",
+        "lineagePath": "../../patterns/molecules-detail-detail-header\\molecules-detail-detail-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-footer",
+        "lineagePath": "../../patterns/molecules-detail-detail-footer\\molecules-detail-detail-footer.rendered.html"
+      }, {
+        "lineagePattern": "molecules-sign-in-reminder",
+        "lineagePath": "../../patterns/molecules-sign-in-reminder-sign-in-reminder\\molecules-sign-in-reminder-sign-in-reminder.rendered.html"
+      }, {
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/organisms-footer-footer\\organisms-footer-footer.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-breadcrumb",
+        "lineagePath": "../../patterns/molecules-breadcrumb-breadcrumb\\molecules-breadcrumb-breadcrumb.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-header",
+        "lineagePath": "../../patterns/molecules-detail-detail-header\\molecules-detail-detail-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-footer",
+        "lineagePath": "../../patterns/molecules-detail-detail-footer\\molecules-detail-detail-footer.rendered.html"
+      }, {
+        "lineagePattern": "molecules-sign-in-reminder",
+        "lineagePath": "../../patterns/molecules-sign-in-reminder-sign-in-reminder\\molecules-sign-in-reminder-sign-in-reminder.rendered.html"
+      }, {
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/organisms-footer-footer\\organisms-footer-footer.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "detail"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Detail",
+      "patternPartial": "pages-detail",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-breadcrumb",
+        "lineagePath": "../../patterns/molecules-breadcrumb-breadcrumb\\molecules-breadcrumb-breadcrumb.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-header",
+        "lineagePath": "../../patterns/molecules-detail-detail-header\\molecules-detail-detail-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-footer",
+        "lineagePath": "../../patterns/molecules-detail-detail-footer\\molecules-detail-detail-footer.rendered.html"
+      }, {
+        "lineagePattern": "molecules-sign-in-reminder",
+        "lineagePath": "../../patterns/molecules-sign-in-reminder-sign-in-reminder\\molecules-sign-in-reminder-sign-in-reminder.rendered.html"
+      }, {
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/organisms-footer-footer\\organisms-footer-footer.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-breadcrumb",
+        "lineagePath": "../../patterns/molecules-breadcrumb-breadcrumb\\molecules-breadcrumb-breadcrumb.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-header",
+        "lineagePath": "../../patterns/molecules-detail-detail-header\\molecules-detail-detail-header.rendered.html"
+      }, {
+        "lineagePattern": "molecules-detail-footer",
+        "lineagePath": "../../patterns/molecules-detail-detail-footer\\molecules-detail-detail-footer.rendered.html"
+      }, {
+        "lineagePattern": "molecules-sign-in-reminder",
+        "lineagePath": "../../patterns/molecules-sign-in-reminder-sign-in-reminder\\molecules-sign-in-reminder-sign-in-reminder.rendered.html"
+      }, {
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/organisms-footer-footer\\organisms-footer-footer.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "detail"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Detail",
+      "patternPartial": "pages-detail",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770270993710">
+    (function() {
+      if (self != top) {
+        var cb = '1770270993710';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770270993710" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <!-- <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script> -->
+  <script src="https://cdnsc1.melaleuca.com.cn/global/js/jwplayer-8.13.3/jwplayer.js"></script>
+  <script src="../../js/vendor.js?1770270993710"></script>
+  <script src="../../js/index.js?1770270993710"></script>
+
+  <!--FOR BROWSERSYNC-->
+  <!-- <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script> -->
+</body>
+
+</html>
