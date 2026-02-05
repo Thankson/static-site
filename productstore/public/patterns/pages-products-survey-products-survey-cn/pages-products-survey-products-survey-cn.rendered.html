@@ -3446,10 +3446,10 @@
       if (isPciPage) {
         // PCI path - load CSP-compliant bundles
         console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
-        loadJS('/js/runtime-pci.js?1770272894619', function() {
-          loadJS('/js/vue-pci.js?1770272894619', function() {
-            loadJS('/js/vendor-pci.js?1770272894619', function() {
-              loadJS('/js/pci.js?1770272894619', function() {
+        loadJS('/static-site/productstore-2/public/js/runtime-pci.js?1770272894619', function() {
+          loadJS('/static-site/productstore-2/public/js/vue-pci.js?1770272894619', function() {
+            loadJS('/static-site/productstore-2/public/js/vendor-pci.js?1770272894619', function() {
+              loadJS('/static-site/productstore-2/public/js/pci.js?1770272894619', function() {
                 console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
               });
             });
@@ -3458,10 +3458,10 @@
       } else {
         // Non-PCI path - load full-featured bundles
         console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
-        loadJS('/js/runtime.js?1770272894619', function() {
-          loadJS('/js/vue-main.js?1770272894619', function() {
-            loadJS('/js/vendor.js?1770272894619', function() {
-              loadJS('/js/index.js?1770272894619', function() {
+        loadJS('/static-site/productstore-2/public/js/runtime.js?1770272894619', function() {
+          loadJS('/static-site/productstore-2/public/js/vue-main.js?1770272894619', function() {
+            loadJS('/static-site/productstore-2/public/js/vendor.js?1770272894619', function() {
+              loadJS('/static-site/productstore-2/public/js/index.js?1770272894619', function() {
                 console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
               });
             });
