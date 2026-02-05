@@ -1,0 +1,24 @@
+<div class="m-notification {{NotificationMods}}">
+  {{#with Badge}}
+    <div class="m-notification__badge">
+      {{> atoms-icon-badge}}
+    </div>
+  {{/with}}
+
+  <div class="m-notification__message">
+    <p>{{{Message}}}</p>
+    <p class="m-notification__time">{{{Time}}}</p>
+  </div>
+
+  {{#with Action}}
+    <div class="m-notification__action">
+      {{> atoms-action-icon}}
+    </div>
+  {{/with}}
+
+  {{#with RemoveNotification}}
+    <button class="m-notification__remove" aria-label="{{AriaLabel}}">
+      <img src="{{Icon}}" alt="{{Alt}}" class="m-notification__img -remove" aria-hidden="true">
+    </button>
+  {{/with}}
+</div>

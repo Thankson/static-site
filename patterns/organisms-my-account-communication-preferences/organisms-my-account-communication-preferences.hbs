@@ -1,0 +1,200 @@
+<!-- START 14786 - Coomunication Preferences -->
+<communication-preferences {{#if GtmIdAmPm}} :gtm-id-am-pm="{{ GtmIdAmPm }}" {{/if}} {{#if Culture}} culture="{{ Culture }}" {{/if}} {{#if GtmIdDayOfMonth}} :gtm-id-day-of-month="{{ GtmIdDayOfMonth }}" {{/if}} {{#if GtmIdTimeZone}} :gtm-id-time-zone="{{ GtmIdTimeZone }}" {{/if}} {{#if GtmIdToggle}} :gtm-id-toggle="{{ GtmIdToggle }}" {{/if}} {{#if HideMarketplaceOptin}} :hide-marketplace-optin="{{ HideMarketplaceOptin }}" {{/if}} {{#with EmailSection.Fields}} :product-promotion-initial-value="{{ ProductPromotion.InitialValue }}" :marketplace-partner-initial-value="{{ MarketplacePartner.InitialValue }}" :business-tips-initial-value="{{ BusinessTips.InitialValue }}" :coupons-initial-value="{{ Coupons.InitialValue }}" day-of-month-initial-value="{{DayOfMonth.InitialValue}}" {{/with}} :enable-cookies-option="{{ EnableCookiesOption }}" :enable-digital-optin="{{ EnableDigitalOptin }}" :enable-coupon-reminder="{{ EnableCouponReminder }}" :is-coupons-email-reminder-enabled="{{ IsCouponsEmailReminderEnabled }}" {{#with GoDigitalSection.Fields}} :go-digital-initial-value="{{ GoDigital.InitialValue }}" {{/with}} {{#with PrivacySettingSection.Fields}} :allow-helpful-cookies-initial-value="{{ AllowHelpfulCookies.InitialValue }}" {{/with}} {{#with PushNotificationSection.Fields}} :push-all-info-initial-value="{{ PushAllInformation.InitialValue }}" :push-coupons-initial-value="{{ PushCoupons.InitialValue }}" :order-reminders-initial-value="{{ OrderReminders.InitialValue }}" :new-products-initial-value="{{ NewProducts.InitialValue }}" :special-offers-initial-value="{{ SpecialOffers.InitialValue }}" :order-delivery-status-initial-value="{{ OrderDeliveryStatus.InitialValue }}" :account-notifications-initial-value="{{ AccountNotifications.InitialValue }}" {{/with}} {{!-- :show-push-notifications="{{ ShowPushNotifications }}" --}} {{#with PhoneSection.Fields}} :business-oportunities-initial-value="{{ BusinessOportunities.InitialValue }}" :text-reminder-initial-value="{{ TextReminder.InitialValue }}" timezone-initial-value="{{ Timezone.InitialValue }}" am-reminder-initial-value="{{ AMReminder.InitialValue }}" pm-reminder-initial-value="{{ PMReminder.InitialValue }}" {{/with}} :enable-peak-performance-pack="{{ EnablePeakPerformancePack }}" form-action-url="{{ FormActionUrl }}" submit-button-label="{{ PhoneSection.SubmitButtonLabel }}">
+  <!-- Static fields - TEXTS -->
+  <template slot="title-email">
+    {{ EmailSection.Title }}
+  </template>
+
+  <template slot="subtitle-email">
+    {{ EmailSection.Subtitle }}
+  </template>
+
+  {{#with EmailSection.Fields}}
+    <template slot="label-email-all-info">
+      {{ AllInformation.Label }}
+    </template>
+
+    <template slot="label-email-product">
+      {{ ProductPromotion.Label }}
+    </template>
+
+    <template slot="label-email-marketplace">
+      {{ MarketplacePartner.Label }}
+    </template>
+
+    <template slot="label-email-business-tips">
+      {{ BusinessTips.Label }}
+    </template>
+
+    <template slot="label-email-coupons">
+      {{ Coupons.Label }}
+    </template>
+
+    <template slot="label-email-day-of-month">
+      {{DayOfMonth.Label}}
+    </template>
+  {{/with}}
+
+  {{#with GoDigitalSection}}
+    <template slot="title-go-digital">
+      {{Title}}
+    </template>
+
+    {{#if Subtitle}}
+      <template slot="subtitle-go-digital">
+        {{Subtitle}}
+      </template>
+    {{/if}}
+
+    <template slot="label-go-digital">
+      {{Fields.GoDigital.Label}}
+    </template>
+  {{/with}}
+
+  {{#with PrivacySettingSection}}
+    <template slot="title-allow-cookie">
+      {{Title}}
+    </template>
+
+    {{#if Subtitle}}
+      <template slot="subtitle-allow-cookie">
+        {{Subtitle}}
+      </template>
+    {{/if}}
+
+    <template slot="label-allow-cookie">
+      {{Fields.AllowHelpfulCookies.Label}}
+    </template>
+  {{/with}}
+
+  <template slot="title-push-notifications">
+    {{ PushNotificationSection.Title }}
+  </template>
+
+  <template slot="subtitle-push-notifications">
+    {{ PushNotificationSection.Subtitle }}
+  </template>
+
+  {{!-- Push Notifications Sections --}}
+
+  {{#with PushNotificationSection.Fields}}
+    <template slot="label-push-notifications-all-info">
+      {{ PushAllInformation.Label }}
+    </template>
+
+    <template slot="label-push-notifications-coupons">
+      {{ PushCoupons.Label }}
+    </template>
+
+    <template slot="label-push-notifications-order-reminders">
+      {{ OrderReminders.Label }}
+    </template>
+
+    <template slot="label-push-notifications-new-products">
+      {{ NewProducts.Label }}
+    </template>
+
+    <template slot="label-push-notifications-special-offers">
+      {{ SpecialOffers.Label }}
+    </template>
+
+    <template slot="label-push-notifications-order-delivery-status">
+      {{ OrderDeliveryStatus.Label }}
+    </template>
+
+    <template slot="label-push-notifications-account-notifications">
+      {{ AccountNotifications.Label }}
+    </template>
+  {{/with}}
+
+  <template slot="title-phone">
+    {{ PhoneSection.Title }}
+  </template>
+
+  <template slot="subtitle-phone">
+    {{ PhoneSection.Subtitle }}
+  </template>
+
+  {{#with PhoneSection.Fields}}
+    <template slot="label-phone-business-oportunities">
+      {{ BusinessOportunities.Label }}
+    </template>
+
+    <template slot="label-phone-text-reminder">
+      {{ TextReminder.Label }}
+    </template>
+
+    <template slot="label-phone-timezone">
+      {{ Timezone.Label }}
+    </template>
+
+    <template slot="label-phone-am-reminder">
+      {{ AMReminder.Label }}
+    </template>
+
+    <template slot="label-phone-pm-reminder">
+      {{ PMReminder.Label }}
+    </template>
+  {{/with}}
+
+  <template slot="error-msg-timezone">
+    {{ PhoneSection.ErrorMessageTimezoneReminder }}
+  </template>
+
+  <template slot="error-msg-am-pm">
+    {{ PhoneSection.ErrorMessageAmPmReminder }}
+  </template>
+
+  <template slot="error-msg-no-change">
+    {{ PhoneSection.ErrorMessageNoChanges }}
+  </template>
+
+  <template slot="phone-disclaimer">
+    {{{ PhoneSection.Disclaimer }}}
+  </template>
+
+  <!-- Static fields - SELECTS -->
+  <!-- Day of month select/dropdown -->
+  <template slot="options-day-of-month">
+    {{#with EmailSection.Fields.DayOfMonth}}
+      {{#each Options}}
+        <option value="{{Value}}">{{Label}}</option>
+      {{/each}}
+    {{/with}}
+  </template>
+
+  <!-- timezone select/dropdown -->
+  <template slot="options-timezone">
+    {{#with PhoneSection.Fields.Timezone}}
+      {{#each Options}}
+        <option value="{{Value}}">{{Label}}</option>
+      {{/each}}
+    {{/with}}
+  </template>
+
+  <!-- AM reminder select/dropdown -->
+  <template slot="options-am-reminder">
+    {{#with PhoneSection.Fields.AMReminder}}
+      {{#each Options}}
+        <option value="{{Value}}">{{Label}}</option>
+      {{/each}}
+    {{/with}}
+  </template>
+
+  <!-- PM reminder select/dropdown -->
+  <template slot="options-pm-reminder">
+    {{#with PhoneSection.Fields.PMReminder}}
+      {{#each Options}}
+        <option value="{{Value}}">{{Label}}</option>
+      {{/each}}
+    {{/with}}
+  </template>
+
+  <!--App download Section-->
+  <template #app-download>
+    <div class="m-inputToggle -commPref mt-15">
+      {{> organisms-app-download-section }}
+    </div>
+  </template>
+</communication-preferences>
+<!-- END 14786 - Coomunication Preferences -->

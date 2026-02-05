@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="pageType" content="Home" />
+  <title>Melaleuca Pattern Lab</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+  <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+  <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+  <link rel="stylesheet" href="../../css/app.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/brand-peak.css?1770268190704" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SG/MY Noto Sans SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+  <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+  <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+  <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+  <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+  <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+  <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+  <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+  <script>
+    dataLayer = [{
+      'userLogged': true,
+      'warehouseGroup': 'IdahoFalls',
+      'uiCulture': 'en-us'
+    }];
+
+    customerData = [{
+      canPurchaseRestrictedPacks: false,
+      isAuthenticated: true,
+      isGuest: false,
+      isGuestShoppingEnabled: false,
+      lvipStatus: "",
+      viewLists: true,
+      viewMemberPricing: true,
+      viewPoints: false,
+      country: "UnitedStates",
+      culture: "en-US",
+      uiCulture: "en-US",
+      customerID: 1016042303,
+      customerName: "Direct Tester",
+      businessName: "Direct Tester",
+      customerFullName: "John Doe",
+      formattedName: "Direct Tester",
+      customerType: "Employee",
+      customerPriceType: "Regular",
+      status: "Customer",
+      hasIMEA: true
+    }];
+  </script>
+  <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+  <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't need conditional in prod
+      if (document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        // Reviews for the PDP
+        pwr("render", {
+          // For performance enhancement
+          enable_content_collection_modal: false,
+          api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+          locale: 'en_US',
+          merchant_group_id: '507179823',
+          merchant_id: '1561128198',
+          // Usually is the sku number
+          page_id: '650',
+          // Page to write reviews
+          review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+          'product': {
+            'name': 'Energy Shot 12–Pack',
+            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+            'description': 'Energy Shot 12–Pack',
+            'category_name': 'Healthy Foods and Drinks',
+            'variants': [{
+              'name': 'Energy Shot 12–Pack',
+              'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+              'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+              'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+              'category_name': 'Healthy Foods and Drinks',
+              'page_id_variant': '5859'
+            }]
+          },
+          on_render: function() {
+            if (window.PDPReviews) {
+              window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+            }
+          },
+          components: {
+            ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+            ReviewDisplay: 'pr-reviewdisplay'
+          }
+        });
+      } else if (document.getElementsByClassName('p-ratingReview').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        pwr("render", {
+          api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+          locale: 'en_us',
+          pr_locale: '.en_us',
+          merchant_group_id: '1968628287',
+          merchant_id: '1683664767',
+          appName: 'ryp',
+          emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+          components: {
+            ReviewYourPurchases: 'pr-write'
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+  </script>
+
+  <!-- Begin convertlab -->
+  <script>
+    enableConvertLabFeatureFlag = false;
+    if (window.enableConvertLabFeatureFlag) {
+      clDataLayer = {
+        'pageType': 'web'
+      };
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || {};
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+      window.addEventListener("load", (event) => {
+        if (window.clab_tracker) {
+          window.clab_tracker.ready(function() {
+            this.push(clDataLayer);
+          });
+          window.clab_tracker.setEnableAutoTrackExitPage(false);
+        }
+      });
+    }
+  </script>
+  <!-- End convertlab -->
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+<!-- n.b. <body> is intentionally not closed: -->
+
+<body class="pl-body relative ">
+  <script>
+    if (typeof _etmc !== 'undefined') {
+      window._etmc = _etmc;
+      _etmc.push(['setOrgId', '1036137']);
+      _etmc.push(['trackPageView']);
+    }
+  </script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+  <!-- n.b. <div> is intentionally not closed: -->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {
+        "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+        "Country": "UnitedStates",
+        "CurrencyCode": "USD",
+        "HidePoints": false,
+        "HideAllPowerReviews": false,
+        "IsCn": false,
+        "ProductPricing": {
+          "HideProductMemberPrice": false,
+          "HideProductNonMemberPrice": false
+        }
+      }
+    </script>
+    <div class="o-inviteFriendAdRte" style="background-color: ;">
+      <span class="o-inviteFriendAdRte__header">
+        <header class='text-left font-bold text-3xl text-green-100' style='line-height: 34px;'>Get $50 Loyalty Shopping Dollars</header>
+      </span>
+      <span class="o-inviteFriendAdRte__content">
+        <p class='text-left font-normal text-sm' style='color: #252525; line-height: 18px;'>Send an invite and have them place their first order by July 31 to get $50 Loyalty Shopping Dollars to spend next month.</p>
+      </span>
+    </div>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "molecules",
+        "patternSubgroup": "invite-friends-ads"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Invite Friend Ad Rte Lsd Offer",
+      "patternPartial": "molecules-invite-friend-ad-rte-lsd-offer",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "molecules",
+        "patternSubgroup": "invite-friends-ads"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Invite Friend Ad Rte Lsd Offer",
+      "patternPartial": "molecules-invite-friend-ad-rte-lsd-offer",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770268190704">
+    (function() {
+      if (self != top) {
+        var cb = '1770268190704';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770268190704" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    };
+  </script>
+  <!-- Check for PCI components on the page to determine which bundles to load -->
+  <script>
+    (function() {
+      // Detect if this page needs PCI bundles
+      var isPciPage = false;
+
+      // Check for PCI component tags
+      if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+        isPciPage = true;
+      }
+
+      // Check for PCI routes/patterns
+      var path = window.location.pathname.toLowerCase();
+      if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+        isPciPage = true;
+      }
+
+      // Check for explicit PciMode flag (from Pattern Lab JSON)
+      if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+        isPciPage = true;
+      }
+
+      function loadJS(src, cb) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        if (cb) s.onload = cb;
+        document.body.appendChild(s);
+      }
+
+      if (isPciPage) {
+        // PCI path - load CSP-compliant bundles
+        console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+        loadJS('/js/runtime-pci.js?1770268190704', function() {
+          loadJS('/js/vue-pci.js?1770268190704', function() {
+            loadJS('/js/vendor-pci.js?1770268190704', function() {
+              loadJS('/js/pci.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
+              });
+            });
+          });
+        });
+      } else {
+        // Non-PCI path - load full-featured bundles
+        console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+        loadJS('/js/runtime.js?1770268190704', function() {
+          loadJS('/js/vue-main.js?1770268190704', function() {
+            loadJS('/js/vendor.js?1770268190704', function() {
+              loadJS('/js/index.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+              });
+            });
+          });
+        });
+      }
+    }());
+  </script>
+  <script>
+    (function() {
+      var loadProfile = document.getElementsByClassName('o-loadProfile');
+      if (!loadProfile.length) return;
+      var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var r = document.getElementsByClassName('o-loadProfile__retry');
+
+      function show() {
+        f && f.classList.remove('-isHidden');
+      }
+      if (r.length) r[0].addEventListener('click', function() {
+        window.location.reload();
+      });
+      setTimeout(show, 10000);
+    }());
+  </script>
+
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    }
+  </script>
+  <!--For Ralleyware pages and widgets-->
+  <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+  <script>
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+    if (loadProfile.length) {
+      var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+      function showFooter() {
+        loadProfileFooter.classList.remove('-isHidden');
+      };
+
+      if (retryBtn.length) {
+        retryBtn[0].addEventListener('click', function(event) {
+          window.location.reload();
+        });
+      }
+
+      setTimeout(showFooter, 10000);
+    }
+  </script>
+</body>
+
+</html>

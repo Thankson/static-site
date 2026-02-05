@@ -1,0 +1,25 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+  <nav class="top-0 py-0 my-0 bg-white md:hidden">
+    {{#MobileAccordionNav}}
+      {{> organisms-cmn-accordion}}
+    {{/MobileAccordionNav}}
+  </nav>
+
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb}}
+    {{/Breadcrumb}}
+  </div>
+
+  <div class="pb-30 max-w-contain mx-auto w-full md:py-40 md:px-10 xl:px-0">
+    <script id="12456" type="application/json">
+    {{toJson CustomBackup}}
+    </script>
+    <script id="data-shelf-configurator-localization" type="application/json">
+    {{toJson Localization}}
+    </script>
+    <p-custom-backup-order script-id="12456"></p-custom-backup-order>
+  </div>
+</div>
+{{> organisms-site-footer}}

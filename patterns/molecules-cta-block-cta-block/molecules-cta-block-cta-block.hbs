@@ -1,0 +1,27 @@
+<div class="m-ctaBlock">
+  {{#each Blocks}}
+    <a class="m-ctaBlock__link {{Mods.ContentAlign}}" href="{{Link}}" aria-label="{{Title}} {{Subtitle}} {{CTA}}" {{#with Gtm}}data-gtm-promo='{ "id": "{{Id}}", "name": "{{Name}}", "creative": "{{Creative}}", "position": "{{Position}}" }' {{/with}}>
+      <div class="m-ctaBlock__wrapper" aria-hidden="true">
+        <div class="m-ctaBlock__bg -desktop {{#if Mods.NoOverlay}}-noOverlay{{/if}}" style="background-image:url('{{Images.BgDesktop}}')" role="img" data-testid="container-ctaBlock"></div>
+        <div class="m-ctaBlock__bg -mobile {{#if Mods.NoOverlay}}-noOverlay{{/if}}" style="background-image:url('{{Images.BgMobile}}')" role="img"></div>
+        <img class="m-ctaBlock__overlay -desktop" src="{{Images.OverlayDesktop}}" alt="{{AltText}}" />
+        {{# Images.OverlayMobile}}
+          <img class="m-ctaBlock__overlay -mobile" src="{{Images.OverlayMobile}}" alt="{{AltText}}" />
+          {{/ Images.OverlayMobile}}
+
+          <div class="m-ctaBlock__content" style="color: {{Mods.TextColor}}">
+            <div class="m-ctaBlock__header {{Mods.TitleAlign}}">
+              <h2 class="m-ctaBlock__title">{{{Title}}}</h2>
+              <p class="m-ctaBlock__title -sub">{{{Subtitle}}}</p>
+            </div>
+            <p class="m-ctaBlock__cta {{Mods.CtaAlign}}">
+              {{CTA}}
+              {{> atoms-arrow TailwindColor="white" Direction="-right" Size="-sm2" OtherMods="to-sm:hidden -filled ml-5" TextColor=Mods.TextColor}}
+
+              {{> atoms-arrow TailwindColor="white" Direction="-right" Size="-sm" OtherMods="sm:hidden -filled  ml-3" TextColor=Mods.TextColor}}
+            </p>
+          </div>
+      </div>
+    </a>
+  {{/each}}
+</div>

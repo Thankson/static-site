@@ -1,0 +1,130 @@
+{{#SiteFooterCn}}
+  <footer class="o-siteFooter -isCn disableFocus -isCnFocus">
+    <div class="o-siteFooter__section -bg">
+      <div class="o-siteFooter__bg -desktop" style="{{Images.Desktop}}" role="img"></div>
+      <div class="o-siteFooter__bg -mobile" style="{{Images.Mobile}}" role="img"></div>
+    </div>
+    <div class="o-siteFooter__section -content">
+      <div class="o-siteFooter__row -content {{#if UserSignedIn}}-signedIn{{/if}}">
+        <div class="o-siteFooter__col -details">
+          <div class="o-siteFooter__row -left">
+            <div class="o-siteFooter__col -brand">
+              <a href="{{MelaLogo.Link}}" class="o-siteFooter__link">
+                {{> atoms-mela-logo }}
+              </a>
+            </div>
+          </div>
+          <div class="o-siteFooter__row -left">
+            <div class="o-siteFooter__address">
+              <div class="o-siteFooter__contact">
+                <p aria-label="{{Text.AriaLabel.Address}}">
+                  {{{Text.Address}}}
+                </p>
+                <a href="tel:+1(208)522-0700" aria-label="{{Text.AriaLabel.Phone}}">{{Text.Phone}}</a><br />
+                <a href="mailto:info@melaleuca.com" aria-label="{{Text.AriaLabel.Email}}">{{Text.Email}}</a>
+              </div>
+            </div>
+            <div class="o-siteFooter__stamp">
+              <a href="{{GuaranteedLogo.Link}}" class="o-siteFooter__link">
+                {{> atoms-guaranteed-logo}}
+              </a>
+            </div>
+          </div>
+        </div>
+        {{#if UserSignedIn}}
+          <div class="o-siteFooter__row -quicklinks" data-culture-select>
+            {{#CultureSelect}}
+              {{> atoms-select}}
+            {{/CultureSelect}}
+          </div>
+        {{/if}}
+        <nav class="o-siteFooter__col -nav">
+          <div class="o-siteFooter__nav -left">
+            {{#if UserSignedIn}}
+              <!-- Start: SignedIn -->
+              <ul class="o-siteFooter__navList">
+                {{#each NavLinksLeftSignedIn}}
+                  <li class="o-siteFooter__item">
+                    <a class="o-siteFooter__link" href="{{Link.CTA}}" aria-label="{{{Link.AriaLabel}}}">{{{Link.Title}}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+              <!-- End SignedIn -->
+            {{else}}
+              <!-- Start: SignedOut -->
+              {{#each NavLinksLeftSignedOut}}
+                <ul class="o-siteFooter__navList">
+                  {{#each .}}
+                    <li class="o-siteFooter__item">
+                      <a class="o-siteFooter__link" href="{{Link.CTA}}" aria-label="{{{Link.AriaLabel}}}">{{{Link.Title}}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/each}}
+              <!-- End: SignedOut -->
+            {{/if}}
+          </div>
+
+          <div class="o-siteFooter__nav -right">
+            {{#if UserSignedIn}}
+              <!-- Start: SignedIn -->
+              {{#each NavLinksRight}}
+                <ul class="o-siteFooter__navList">
+                  {{#each .}}
+                    <li class="o-siteFooter__item">
+                      <a class="o-siteFooter__link" href="{{Link.CTA}}" aria-label="{{{Link.AriaLabel}}}">{{{Link.Title}}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/each}}
+              <!-- End SignedIn -->
+            {{else}}
+              <!-- Start: SignedOut -->
+              {{#with Text}}
+                <h2 class="o-siteFooter__heading">{{{FooterCopy.Title}}}</h2>
+                <p class="o-siteFooter__description">{{{FooterCopy.Desc}}}</p>
+              {{/with}}
+              <!-- End: SignedOut -->
+            {{/if}}
+          </div>
+        </nav>
+      </div>
+      <div class="o-siteFooter__actions">
+        <div class="o-siteFooter__copyright">
+          <p class="o-siteFooter__copyrightText">
+            {{{Text.Copyright}}}
+          </p>
+        </div>
+        <div class="o-siteFooter__social">
+          <p class="o-siteFooter__title">关注我们</p>
+          {{#each SocialIcons}}
+            {{#if SocialIcon.Url}}
+              <div class="o-siteFooter__socialIcon">
+                <a class="o-siteFooter__socialAnchor" href="{{SocialIcon.Url}}" aria-label="{{SocialIcon.AriaLabel}}">
+                  <img class="o-siteFooter__socialImg noLazy" src="{{SocialIcon.Src}}" alt="{{SocialIcon.Alt}}" aria-hidden="true">
+                </a>
+              </div>
+            {{else}}
+              <div class="o-siteFooter__socialIcon" data-js="socialPopup">
+                <img class="o-siteFooter__socialImg noLazy" src="{{SocialIcon.Src}}" alt="{{SocialIcon.Alt}}" aria-hidden="true">
+              </div>
+            {{/if}}
+          {{/each}}
+          <div class="o-siteFooter__popup" data-target="socialPopup">
+            <button aria-label="Close Popup" class="o-siteFooter__popupBtn -close" data-js="socialPopupClose">
+              <img src="//cdnsc1.melaleuca.com/na/images/header/clear2x.png" alt="Close Popup" aria-hidden="true" class="o-siteFooter__popupCloseImg">
+            </button>
+            <img class="o-siteFooter__qrcode" src="//cdncn.melaleuca.com.cn/Images/Welcome/wp_mini/wechat-QRcode.jpg" alt="qrcode" aria-hidden="true" />
+            <div class="o-siteFooter__caret"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pop-up messages -->
+    {{> molecules-popup-message }}
+
+    <!-- Modal -->
+    {{> molecules-cmn-modal }}
+
+  </footer>
+{{/SiteFooterCn}}

@@ -1,9 +1,9 @@
 import 'jquery'; // Comment out if JQuery is not required
-// import 'jquery-validation';
-// import 'slick-carousel';
+import 'jquery-validation';
+import 'slick-carousel';
 
 // Common Modules
-// import './../../../_common/source/js/module-imports';
+import './../../../_common/source/js/module-imports';
 
 // Site Specific Modules
 import './build/module-imports.js';
@@ -22,6 +22,6 @@ import './build/module-imports.js';
 *******************************************/
 
 console.log(
-    '%c -- loaded INIT dsibo -- ',
+    '%c -- loaded INIT PRODUCTSTORE -- ',
     'background-color:#3d9a4f; color:white; border-radius: 2px;'
 );

@@ -1,0 +1,859 @@
+<header class="o-siteHeader -checkout">
+  <div class="o-siteHeader__row -main">
+    <div class="o-siteHeader__col -nav">
+      <!-- START 11283, 19631 (refactoring) - Nav-menu -->
+      <nav class="m-navMenu" aria-labelledby="m-navMenu__toggle" data-testid="nav-menu">
+
+        <button id="m-navMenu__toggle" class="m-navMenu__toggle" aria-controls="m-navMenu" aria-expanded="false" aria-label="" data-label-escape-key="" data-testid="button-menu">
+          <span class="m-navMenu__toggleIcon" data-testid="span-iconMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
+            </svg>
+            <span class="m-navMenu__text">Menu</span>
+          </span>
+        </button>
+
+        <div class="m-navMenu__content-wrapper" aria-hidden="true" tabindex="-1">
+          <div class="m-navMenu__content -left" id="m-navMenu">
+            <div class="m-navMenu__inner">
+              <div class="m-navMenu__scroll">
+
+                <!-- Header -->
+                <div class="m-navMenu__header">
+                  <div class="m-navMenu__header-content">
+                  </div>
+                  <span class="divisor" aria-hidden="true"></span>
+                </div>
+                <!-- End Header -->
+
+                <!-- Mobile Only and Logged -->
+                <!-- End Mobile Only -->
+
+                <!-- MENU LEVEL 1 -->
+                <ul class="m-navMenu__list -lvl1" id="m-navMenu__lvl1" data-testid="unorderedList-menuTopList">
+
+
+                </ul>
+                <!-- End Categories (menu level 1) -->
+
+                <!-- Riverbend Link -->
+                <!-- End Riverbend Link -->
+
+                <!-- Footer -->
+                <span class="divisor -footer" aria-hidden="true"></span>
+                <div class="m-navMenu__footer" data-testid="container-menuFooter">
+                  <div class="m-navMenu__footer-content">
+                    <ul class="m-navMenu__list -lvl1">
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Footer -->
+
+                <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl1" aria-label="" tabindex="-1">
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Close Button -->
+          <div class="m-navMenu__close -root">
+            <button class="m-navMenu__close-btn" aria-label="" tabindex="-1">
+              <span aria-hidden="true" class="m-navMenu__close-icon" data-testid="span-navMenuClose">close</span>
+            </button>
+          </div>
+          <!-- End Close Button -->
+
+          <div class="m-navMenu__overlay"></div>
+        </div>
+      </nav>
+      <!-- END 11283, 19631 (refactoring) - Nav-menu -->
+    </div>
+
+    <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+      <a href="https://www.melaleuca.com/" class="block">
+        <img class="o-siteHeader__image" src="//cdnsc1.melaleuca.com/na/images/header/leaf-drop-logo2x.png" alt="Melaleuca Logo">
+      </a>
+    </div>
+
+    <div class="o-siteHeader__col -title">
+      <h1 class="font-bold text-center text-white text-2xl uppercase ">Checkout</h1>
+    </div>
+
+    <div class="o-siteHeader__col -actions" data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+      <m-cart-icon script-id="CartIconId" data-testid="icon-CartIcon"></m-cart-icon>
+      <script type="application/json" id="CartIconId">
+        {
+          "Labels": {
+            "CartLabel": "View My Cart"
+          },
+          "Data": {
+            "CartUrl": "/?p=pages-cart",
+            "CartTotalItems": "14"
+          }
+        }
+      </script>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="bg-gray-25">
+
+
+
+  <p-checkout script-id="CheckoutPage">
+
+
+
+
+
+  </p-checkout>
+
+
+
+
+  <script type="application/json" id="CheckoutPage">
+    {
+      "Labels": {
+        "Concentrated": "Concentrated",
+        "Diluted": "Diluted",
+        "IsCn": false,
+        "BecomeMember": {
+          "Link": {
+            "Target": "",
+            "Text": "Get Started",
+            "Url": "#"
+          },
+          "Title": "Become a Member <span class=\"block leading-tight uppercase font-normal text-3xl md:text-4xl\">and sabe 30-50% off this order!</span>",
+          "Text": "Enjoy all the benefits of being a Member including product discounts, exclusive coupons, a loyalty earning program, and much more."
+        },
+        "CheckoutItem": {
+          "Points": "Points",
+          "Qty": "Qty",
+          "OrderBackDateText": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> <span role=\"text\"><strong>NOTE:</strong> You are placing your order for {0}.</span> </span></p>",
+          "Size": "Size",
+          "ReadMoreLabel": "Read More",
+          "ReadLessLabel": "Read Less"
+        },
+        "CheckoutSummary": {
+          "Calculated": "(calculated at next step)",
+          "Pending": "(Pending)",
+          "CcTotal": "Convenience Certificates<br />used this order",
+          "Coa": "Credit on Account<br /> used this order",
+          "Heading": "ORDER SUMMARY",
+          "ItemTotal": "Item Total",
+          "LsdRedemptionFee": "LSD Redemption Fee",
+          "LsdTotal": "Loyalty Shopping Dollars<br />used this order",
+          "Total": "Total",
+          "SubTotal": "Subtotal",
+          "PlaceOrder": "Place Order",
+          "Points": "Points",
+          "SalesTax": "Sales Tax",
+          "ShippingTaxes": "Shipping & Handling",
+          "Shipping": "Shipping",
+          "ShowMore": "Show More",
+          "AsPreferred": "As a Preferred Member,",
+          "YouSaved": "You saved {0}",
+          "Commitment": "Commitment",
+          "Free": "FREE"
+        },
+        "Checkout": {
+          "OrderReview": "Order Review",
+          "YourItems": "Your Items",
+          "Edit": "Edit",
+          "GetBy": "Get it by",
+          "PayWith": "Pay With",
+          "Shipping": "Shipping",
+          "ShipTo": "Ship To",
+          "Expires": "Expires",
+          "Expired": "Expired",
+          "NeedInvoice": "发票",
+          "ErrorAriaLabel": {
+            "ShippingMethods": "Error attention required. Please revise your Shipping Option",
+            "ShippingAddresses": "Error attention required. Please revise your Shipping Addresses",
+            "PaymentMethods": "Error attention required. Please revise your Payment Method Option"
+          }
+        },
+        "Coa": {
+          "Apply": "Apply",
+          "ApplyAriaLabel": "Apply Balance",
+          "ErrorMessages": {
+            "Empty": "Please add some amount. E.g., 5.50",
+            "MoreThanHave": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>The value inserted is bigger than you have in Balance. </span></p>",
+            "MoreThanTotal": "The value inserted is bigger than the order total.",
+            "Invalid": "Something is wrong. Please, review the value. E.g., 5.50"
+          },
+          "Reset": "Reset",
+          "ResetAriaLabel": "Reset Balance",
+          "UseCreditAriaLabel": "Use Credit on Account",
+          "UseCreditOnAccount": "Use Credit on Account",
+          "YourBalance": "Your Balance"
+        },
+        "DeleteAddressModal": {
+          "DeleteAddressHeading": "Are you sure?",
+          "DeleteAddressDetails": "Deleting this saved address cannot be undone.",
+          "DeleteAddressDefaultHeading": "Sorry.",
+          "DeleteAddressDefaultDetails": "You cannot delete a Default Address. Edit another address and make it the default.",
+          "DeleteAddressSelectedHeading": "Sorry.",
+          "DeleteAddressSelectedDetails": "The selected shipping address can not be deleted. Please choose a different shipping address.",
+          "DeleteAddressSelectedAction": "Choose another address",
+          "Cancel": "cancel",
+          "Delete": "delete"
+        },
+        "DeletePayMethodModal": {
+          "DeletePayMethodHeading": "Are you sure?",
+          "DeletePayMethodDetails": "Deleting this credit card cannot be undone.",
+          "DeletePayMethodDefaultHeading": "Sorry.",
+          "DeletePayMethodDefaultDetails": "You cannot delete a Default Payment Method. Edit another payment method and make it the default.",
+          "DeletePayMethodSelectedHeading": "Sorry.",
+          "DeletePayMethodSelectedDetails": "The selected pay method can not be deleted. Please choose a different pay method.",
+          "DeletePayMethodSelectedAction": "Choose another pay method",
+          "Cancel": "cancel",
+          "Delete": "delete"
+        },
+        "Shipping": {
+          "ErrorMessages": {
+            "Empty": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>请选择一个地址. </span></p>"
+          }
+        },
+        "CcBalance": {
+          "ConvenienceCertificates": "Convenience Certificates",
+          "NewBalance": "New balance:"
+        },
+        "Cvv": {
+          "ErrorMessages": {
+            "Empty": "You must enter a CVC/CVV to continue.",
+            "Invalid": "Please, enter a valid CVC/CVV for the selected credit card"
+          },
+          "Label": "CVC/CVV",
+          "Title": "Enter Code"
+        },
+        "LsdBalance": {
+          "ConvenienceCertificates": "Convenience Certificates",
+          "Earned": "Earned this order:",
+          "LoyaltyShoppingDollars": "LOYALTY SHOPPING DOLLARS",
+          "NewBalance": "New balance:",
+          "AvailableToActivate": "Available to Activate:",
+          "AvailableToSpend": "Available to Spend:",
+          "ToSpend": "To Spend",
+          "EarnedThisOrder": "Earned On This Order",
+          "ExpiringThisMonth": "Expiring This Month"
+        },
+        "PaymentFailedModal": {
+          "Cta": "OK"
+        },
+        "Installments": {
+          "CardSelection": "Card Selection",
+          "InstallmentPeriod": "Installment Period",
+          "CardSelectionAriaLabel": "Choose a Card Company",
+          "InstallmentAriaLabel": "Choose an installment period",
+          "CreditCardInstallmentInfo": "Credit Card Installment Info",
+          "InstallmentError": "Please make a selection before submitting payment.",
+          "InterestFree": "{0} (Interest free)"
+        },
+        "VirtualPayment": {
+          "CardSelection": "Bank Choice",
+          "CardSelectionError": "Please select a bank.",
+          "SelectBank": "Select Bank",
+          "CashReceipt": "Cash Receipt",
+          "IssueNumber": "Issue Number",
+          "MobileNumber": "Mobile Number",
+          "MobileNumberError": "Please enter a valid mobile number.",
+          "BusinessRegistrationNumber": "Business Registration Number",
+          "BusinessRegistrationNumberError": "Please enter a valid business registration number.",
+          "NoticeMessageText": "Orders after depositing into virtual account can not be canceled, and please confirm the correct payment account before depositing"
+        },
+        "AccordionModal": {
+          "TermsandConditionsText": "View Terms & Conditions",
+          "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)"
+        },
+        "ServiceFailure": {
+          "GenericFailureMessage": "A critical part of the page had trouble loading. You can try refreshing the page, but if the problem persists, please call Customer Service.",
+          "RefreshPage": "Refresh Page",
+          "Title": "Looks like something went wrong."
+        },
+        "InvalidShipping": {
+          "Error": {
+            "ShippingUnavailable": "Unavailable",
+            "ShippingUnavailableLearnWhy": "Learn Why"
+          }
+        },
+        "TermsConditions": {
+          "Checkbox": {
+            "AriaLabel": "By placing this order, I agree to abide by Melaleuca's Terms and Conditions",
+            "Text": "By placing this order, I agree to abide by Melaleuca’s <span class=\"text-green font-bold\">Terms & Conditions.</span>"
+          },
+          "Modal": {
+            "Heading": "Customer Membership Agreement Terms & Conditions",
+            "Body": "<ol><li class=\"pb-15\"><span class=\"font-bold\">1. Payment Authorization:</span> I authorize Melaleuca to charge my credit card or debit the bank account specified in this Agreement for orders I place directly and for any Backup Order. If Melaleuca is unable to collect payment in full from my credit card, I authorize Melaleuca to make multiple attempts to collect for up to 90 days. I agree to pay a $10.00 service fee if a check or charge is dishonored for any reason. I will hold Melaleuca harmless for all special or consequential damages, whether direct or indirect, resulting from any wrongful debit to my account.</li><li class=\"pb-15\"><span class=\"font-bold\">2. Convenience Certificate Redemption:</span> After I have been a Member for six months, I may select Convenience Certificates as my Backup Order and may receive Convenience Certificates as otherwise provided in this Agreement. If I do not redeem a Convenience Certificate within 12 months, the unredeemed balance will be converted to a credit on my account, subject to the terms in the Satisfaction Guarantee paragraph below. Convenience Certificates may be redeemed for product or credit on account, but may not be returned for cash except in certain states.</li><li class=\"pb-15\"><span class=\"font-bold\">3. Resale of Products:</span> I understand Melaleuca’s commitment to product freshness, product safety, and product quality; therefore, I agree that I will not offer Melaleuca products for sale or resale. This obligation will continue even after this Agreement is canceled. Melaleuca shall have the right to prevent any such offers by legal action and, to the extent permitted by law, I will be obligated to pay Melaleuca’s legal fees and costs in connection with any such legal action based upon my violation of this obligation.</li><li class=\"pb-15\"><span class=\"font-bold\">4. Term:</span> The term of this Agreement is one year. This Agreement automatically renews annually on each anniversary date and will remain in effect until: (1) I submit a new signed Customer Membership Agreement, (2) I cancel this Agreement pursuant to the cancellation rights notice herein, or (3) Melaleuca cancels this Agreement upon written notice to me at my address set forth herein, which I agree Melaleuca may do at any time in its sole discretion.</li><li class=\"pb-15\"><span class=\"font-bold\">5. Satisfaction Guarantee:</span> If I am not completely satisfied with any product I purchase from Melaleuca, I may return the unused portion of the product together with a copy of the purchase receipt to Melaleuca within 90 days of the date of purchase and Melaleuca will credit my customer account for the total purchase price of the product. If I have unredeemed credit on my customer account, Melaleuca may make efforts to locate me and advise me in writing of the credit. Melaleuca may continue to make such attempts on a monthly basis and will charge my customer account a $10 service fee for each month’s notification process for as long as I have a credit on account, unless otherwise restricted or prohibited by law.</li><li class=\"pb-15\"><span class=\"font-bold\">6. Refused Orders:</span> If I refuse to accept any products delivered to me in accordance with Melaleuca’s Customer Membership Agreement Terms and Conditions, any future Backup Order Melaleuca sends to me will be a Convenience Certificate of equal value that I can redeem within 12 months at my convenience.</li><li class=\"pb-15\"><span class=\"font-bold\">7. Dispute Resolution:</span> To the extent permitted by applicable law, and unless otherwise expressly agreed to in writing, all claims or disputes of any nature between one or more current or former Customers and Melaleuca (or its officers, shareholders, or employees), if not resolved by mutual agreement, shall be resolved by binding arbitration. Judgment on an award rendered by the arbitrator may be entered in any court having jurisdiction. All issues are for the arbitrator to decide consistent with this Agreement, including issues relating to the scope and enforceability of the arbitration provision, and the arbitrator shall have the power to award damages and injunctive relief. If the costs of arbitration will be prohibitive as compared to the costs of litigation, I agree that Melaleuca will be allowed to pay as much of the filing and hearing fees in connection with the arbitration as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. MELALEUCA AND I AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING OR IN ANY PROCEEDING THAT CONSOLIDATES MORE THAN ONE PERSON’S CLAIMS. MELALEUCA AND I ALSO AGREE THAT, BY ENTERING INTO THIS AGREEMENT, EACH PARTY IS WAIVING THE RIGHT TO A TRIAL BY JURY FOR ALL CLAIMS SUBJECT TO BINDING ARBITRATION. All arbitration hearings shall take place in the State of Idaho. This Agreement shall be governed by the laws of the State of Idaho and the Federal Arbitration Act (“FAA”). If any conflict exists between Idaho law and the FAA, the FAA will govern. This arbitration provision, in whole or in part, shall survive termination, cancellation, or suspension of this Agreement or any provision of this paragraph. In reaching its decision, the arbitrator or the court (a) shall not interpret the meaning of this Agreement or the intent of the parties with respect thereto by reference to any written or oral communications, course of dealing, or extraneous documents or information other than the express terms of this Agreement, as expressly and specifically amended or waived by Melaleuca in accordance with this Agreement; and (b) shall consider Melaleuca’s interpretations of the Melaleuca Agreements (including interpretations of any ambiguous provisions) as final and binding unless such interpretation is shown to be unreasonable by clear and convincing evidence.</li><li class=\"pb-15\"><span class=\"font-bold\">8. Personal Information:</span> I consent to the lawful use by Melaleuca of the personal information contained on this form and information regarding my purchases from Melaleuca, including the disclosure of such content and information to my enroller and his or her Support Team.</li><li class=\"pb-15\"><span class=\"font-bold\">9. Amendments:</span> Upon 30 days notice to Customers, Melaleuca may, at its sole discretion, amend this Customer Membership Agreement. By signing this Agreement, I agree to abide by any and all such amendments and that my only remedy for not accepting any such amendments is to cancel this Agreement prior to the conclusion of the 30-day notification period. My placing of an order 30 days after Melaleuca sends written notice of any amendment will constitute my acceptance of the amendment. I agree that Melaleuca’s interpretation of the Melaleuca Agreements will be final and binding.</li></ol>",
+            "ButtonText": "Close"
+          },
+          "Required": "Required",
+          "Error": "You must agree to the Terms and Conditions to proceed"
+        },
+        "ShippingOnUs": {
+          "More": "More",
+          "Less": "Less",
+          "ShippingBack": "Shipping back in Loyalty Shopping Dollars",
+          "Variation1": {
+            "Title": "WANT SHIPPING ON US?",
+            "PointsAwayFlat": "You’re only {0} Product Points away from earning {1} of your flat rate shipping and handling back in Loyalty Shopping Dollars.",
+            "PointsAway": "You’re only {0} Product Points away from earning {1} back."
+          },
+          "Variation2": {
+            "Title": "Want 100% of your SHIPPING ON US?",
+            "PointsAwayFlat": "You’re only {0} Product Points away from earning {1} of your flat rate shipping and handling back in Loyalty Shopping Dollars.",
+            "ThresholdMessage": "You currently qualify for {0} Shipping on Us.",
+            "ThresholdMessageNotGround": "You currently qualify for {0} in Loyalty Shopping Dollars through Shipping on Us."
+          },
+          "Variation3": {
+            "Title": "Congratulations!",
+            "ThresholdMessage": "You have qualified for {0} Shipping On Us!",
+            "ThresholdMessageNotGround": "You have earned the maximum {0} in Loyalty Shopping Dollars through <strong>Shipping On Us</strong>"
+          }
+        },
+        "GSTLabel": "{0}% GST Inclusive",
+        "BankOffline": "{0} (Offline)",
+        "GUI": {
+          "CitizenDigitalCertification": "Citizen Digital Certification",
+          "DonationReminder": "捐贈提醒 : 發票一旦捐贈後無法更改發票類型 捐贈發票不影響退換貨權益 ",
+          "LoveCodeWarning": "原設定捐贈碼或受捐贈機關或團體已變更，請點選'設定載具條碼及捐贈碼 進行捐贈碼設定更新，或選擇美樂家會員載具，謝謝！",
+          "LoveCode": "Donation Code",
+          "MelaleucaMembership": "Melaleuca Carrier Number",
+          "MelaleucaCarrierType": "MelaleucaMembership",
+          "Mobile": "Mobile",
+          "Title": "發票資訊 "
+        }
+      },
+      "Data": {
+        "ShowImprovedCTACheckout": true,
+        "ShowPurchaseCommitment": true,
+        "ThreeDSDDCRequestUrl": "https://centinelapistag.cardinalcommerce.com/V1/Cruise/Collect",
+        "ThreeDSDDCListenUrl": "https://centinelapistag.cardinalcommerce.com",
+        "WholeNumbersOnly": false,
+        "RewardTrackerId": "585",
+        "ShippingOnUsTrackerId": "123",
+        "HideDollarsToActivate": true,
+        "BannerMessages": {
+          "PuertoRicoBannerMessage": "<span class=\"pr-2\">*</span><p>Due to the added expense of doing business in Puerto Rico product prices have increased. Please refer to your shopping cart, or the <a href=\"#somelink\" class=\"underline\">Puerto Rico Price List</a> for the most current prices.</p>"
+        },
+        "Invoice": {
+          "Name": "isInvoice",
+          "Label": "是否需要发票",
+          "Value": false,
+          "Attention": "<p class=\"flex text-green text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> 已经更新</span></p>"
+        },
+        "Checkout": {
+          "BackToCartLink": {
+            "Url": "#",
+            "Text": "Back to Cart",
+            "Target": ""
+          },
+          "ShippingOnUsKeepShoppingLink": {
+            "Url": "",
+            "Text": "Keep Shopping"
+          },
+          "AddPaymentLink": {
+            "Url": "https://localhost:3030/patterns/03-pages-my-account-payment-add/03-pages-my-account-payment-add.rendered.html",
+            "Text": "+ Add new payment method"
+          },
+          "GuestPaymentLink": "#",
+          "AddShippingAddressLink": {
+            "Url": "https://localhost:3030/patterns/03-pages-my-account-address-add/03-pages-my-account-address-add.rendered.html",
+            "Text": "+ Add new shipping Address"
+          },
+          "EditShippingAddressLink": {
+            "Url": "/patterns/pages-my-account-address-edit/pages-my-account-address-edit.rendered.html",
+            "Text": "Edit shipping Address"
+          },
+          "ManageShippingAddressLink": {
+            "Url": "https://localhost:3030/patterns/03-pages-my-account-my-account-payment-and-addresses/03-pages-my-account-my-account-payment-and-addresses.rendered.html",
+            "Text": "Manage addresses"
+          },
+          "ManagePayMethodsLink": {
+            "Url": "https://localhost:3030/patterns/03-pages-my-account-my-account-payment-and-addresses/03-pages-my-account-my-account-payment-and-addresses.rendered.html",
+            "Text": "Manage payment methods"
+          },
+          "EditPayMethodsLink": {
+            "Url": "/patterns/pages-my-account-payment-edit/pages-my-account-payment-edit.rendered.html",
+            "Text": "Edit payment methods"
+          },
+          "GuestShippingAddressLink": "#",
+          "ReceiptUrl": "#?orderid=",
+          "EditGUI": {
+            "Url": "/patterns/pages-my-account-address-edit/pages-my-account-address-edit.rendered.html",
+            "Text": "設定載具條碼及捐贈碼",
+            "Target": ""
+          }
+        },
+        "Cvv": {
+          "MinLength": 3,
+          "MaxLength": 4
+        },
+        "HideSalesTax": false,
+        "RAPDepositModal": {
+          "RAPDepositModalText": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-3 text-gray-150 font-bold md:mt-0\" style=\"color:#333333\">Thank you for selecting an Automated Payment Receipt Deposit for this order. You will need to go to an HSBC bank to make your deposit.</h2><p class=\"text-sm text-gray-100 leading-tight pb-2 mb-10\">Please do not forget to provide the bank with your service number and reference number. These numbers will be given to you at the end of your order. As soon as we receive confirmation of your deposit from HSBC, your order will be shipped.</p><p class=\"text-sm text-gray-100 leading-tight pb-2\">HSBC Bank will charge you $17 for automated receipt payment (RAP) deposits made at the teller window.</p>"
+        },
+        "ShippingAndHandling": "How are shipping and handling cost calculated? <br /> This is the content for Shipping and handling",
+        "OrderProcessing": {
+          "OrderProcessingPageLink": {
+            "Url": "#status=processing",
+            "Text": "Order Processing page"
+          }
+        },
+        "ConvenienceStore": {
+          "ConvenienceStoreLinkLabel": "Convenience Store Information",
+          "ConvenienceStoreInformation": "<div class=\"pay-portal-modal rte\"><h2 id=\"global-modal-heading\" class=\"text-xl-2 font-bold\">Convenience Store Information</h2></div>",
+          "ConvenienceStoreError": "Please select a convenience store",
+          "SelectConvenienceStore": "Select convenience store"
+        },
+        "Installments": {
+          "Modal": {
+            "RteContent": "<div class=\"pay-portal-modal rte\"><h2 class=\"pay-portal-modal__title\">Interest-free Installment Benefits</h2> <table class=\"pay-portal-modal__table\"><tbody><tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-6 months interest-free</td></tr> <tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-7 months interest-free</td></tr> <tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-6 months interest-free</td></tr></tbody></table> <div class=\"pt-20\"><ul><li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 1 Installment payments are applied for payments of KRW 50,000 or more, and the above card event may be changed or suspended depending on the circumstances of the card company.</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 2</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 3</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 4</span></li></ul></div></div>",
+            "RteHeading": ""
+          },
+          "List": [{
+            "Text": "Lump Sum",
+            "Value": "0"
+          }, {
+            "Text": "2 months ",
+            "Value": "1"
+          }, {
+            "Text": "3 months",
+            "Value": "2"
+          }, {
+            "Text": "4 months",
+            "Value": "3"
+          }, {
+            "Text": "5 months",
+            "Value": "4"
+          }, {
+            "Text": "6 months",
+            "Value": "5"
+          }]
+        },
+        "PayMethodExpired": {
+          "Snippets": {
+            "Parameters": null,
+            "Inline": {
+              "RteContent": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> Your default method of payment has expired. Please select another method of payment or <a href=\"#\" class=\"underline\">click here to update your default pay method.</a> </span></p>"
+            }
+          },
+          "Modal": {
+            "RteContent": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-8 leading-base font-bold text-gray-150 md:text-4xl md:font-normal md:leading-base md:mt-0\"> Your default method of payment has expired. </h2> <p class=\"text-sm text-gray-120 md:text-gray-100 leading-tight mb-20 pb-2 md:mb-20\"> Please select another method of payment or update your default pay method. </p> ",
+            "Data": {
+              "DifferentPayMethod": "Choose a different pay method",
+              "UpdatePayMethod": {
+                "Url": "http://productstore-qaus.melaleuca.com/cart-page",
+                "Text": "Update default pay method"
+              }
+            },
+            "Labels": null
+          }
+        },
+        "CrossCountryModal": {
+          "Cancel": "Cancel",
+          "ContinueToSite": "Continue to {0} site",
+          "RteDescription": "<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Looks Like You've Changed Your Shipping Country.</h2><p class=\"text-sm text-gray-120 leading-tight\">This may impact the product availability in your shopping cart or payment methods accepted. Click \"continue\" to go to the {0} site, or click \"cancel\" and select your {1} shipping address.</p>",
+          "UserCountry": "UnitedStates"
+        },
+        "Easypay": {
+          "Url": "https://localhost:3030/patterns/organisms-easy-pay-easy-pay/easy-pay.html"
+        },
+        "ShowGSTBelowTotal": false,
+        "IsCorporate": false,
+        "ShowGui": true
+      }
+    }
+  </script>
+
+
+
+
+  <script type="application/json" id="accordionModal">
+    {
+      "Labels": {
+        "TermsandConditionsText": "View Terms & Conditions",
+        "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)",
+        "CloseButtonText": "Close"
+      },
+      "Data": {
+        "Accordions": [{
+          "GtmId": "1234",
+          "Title": "Accordion 1 Title",
+          "Description": "Lorem ipsum dolor sit amet"
+        }, {
+          "GtmId": "12436",
+          "Title": "Accordion 2 Title",
+          "Description": "<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h2> accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<br/>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+        }, {
+          "GtmId": "12364",
+          "Title": "Accordion 3 Title",
+          "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }],
+        "AccordionTitle": "Terms and condition accordion title text here."
+      }
+    }
+  </script>
+
+
+
+</div>
+
+<script type="application/json" id="CheckoutPage">
+  {
+    "Labels": {
+      "Concentrated": "Concentrated",
+      "Diluted": "Diluted",
+      "IsCn": false,
+      "BecomeMember": {
+        "Link": {
+          "Target": "",
+          "Text": "Get Started",
+          "Url": "#"
+        },
+        "Title": "Become a Member <span class=\"block leading-tight uppercase font-normal text-3xl md:text-4xl\">and sabe 30-50% off this order!</span>",
+        "Text": "Enjoy all the benefits of being a Member including product discounts, exclusive coupons, a loyalty earning program, and much more."
+      },
+      "CheckoutItem": {
+        "Points": "Points",
+        "Qty": "Qty",
+        "OrderBackDateText": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> <span role=\"text\"><strong>NOTE:</strong> You are placing your order for {0}.</span> </span></p>",
+        "Size": "Size",
+        "ReadMoreLabel": "Read More",
+        "ReadLessLabel": "Read Less"
+      },
+      "CheckoutSummary": {
+        "Calculated": "(calculated at next step)",
+        "Pending": "(Pending)",
+        "CcTotal": "Convenience Certificates<br />used this order",
+        "Coa": "Credit on Account<br /> used this order",
+        "Heading": "ORDER SUMMARY",
+        "ItemTotal": "Item Total",
+        "LsdRedemptionFee": "LSD Redemption Fee",
+        "LsdTotal": "Loyalty Shopping Dollars<br />used this order",
+        "Total": "Total",
+        "SubTotal": "Subtotal",
+        "PlaceOrder": "Place Order",
+        "Points": "Points",
+        "SalesTax": "Sales Tax",
+        "ShippingTaxes": "Shipping & Handling",
+        "Shipping": "Shipping",
+        "ShowMore": "Show More",
+        "AsPreferred": "As a Preferred Member,",
+        "YouSaved": "You saved {0}",
+        "Commitment": "Commitment",
+        "Free": "FREE"
+      },
+      "Checkout": {
+        "OrderReview": "Order Review",
+        "YourItems": "Your Items",
+        "Edit": "Edit",
+        "GetBy": "Get it by",
+        "PayWith": "Pay With",
+        "Shipping": "Shipping",
+        "ShipTo": "Ship To",
+        "Expires": "Expires",
+        "Expired": "Expired",
+        "NeedInvoice": "发票",
+        "ErrorAriaLabel": {
+          "ShippingMethods": "Error attention required. Please revise your Shipping Option",
+          "ShippingAddresses": "Error attention required. Please revise your Shipping Addresses",
+          "PaymentMethods": "Error attention required. Please revise your Payment Method Option"
+        }
+      },
+      "Coa": {
+        "Apply": "Apply",
+        "ApplyAriaLabel": "Apply Balance",
+        "ErrorMessages": {
+          "Empty": "Please add some amount. E.g., 5.50",
+          "MoreThanHave": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>The value inserted is bigger than you have in Balance. </span></p>",
+          "MoreThanTotal": "The value inserted is bigger than the order total.",
+          "Invalid": "Something is wrong. Please, review the value. E.g., 5.50"
+        },
+        "Reset": "Reset",
+        "ResetAriaLabel": "Reset Balance",
+        "UseCreditAriaLabel": "Use Credit on Account",
+        "UseCreditOnAccount": "Use Credit on Account",
+        "YourBalance": "Your Balance"
+      },
+      "DeleteAddressModal": {
+        "DeleteAddressHeading": "Are you sure?",
+        "DeleteAddressDetails": "Deleting this saved address cannot be undone.",
+        "DeleteAddressDefaultHeading": "Sorry.",
+        "DeleteAddressDefaultDetails": "You cannot delete a Default Address. Edit another address and make it the default.",
+        "DeleteAddressSelectedHeading": "Sorry.",
+        "DeleteAddressSelectedDetails": "The selected shipping address can not be deleted. Please choose a different shipping address.",
+        "DeleteAddressSelectedAction": "Choose another address",
+        "Cancel": "cancel",
+        "Delete": "delete"
+      },
+      "DeletePayMethodModal": {
+        "DeletePayMethodHeading": "Are you sure?",
+        "DeletePayMethodDetails": "Deleting this credit card cannot be undone.",
+        "DeletePayMethodDefaultHeading": "Sorry.",
+        "DeletePayMethodDefaultDetails": "You cannot delete a Default Payment Method. Edit another payment method and make it the default.",
+        "DeletePayMethodSelectedHeading": "Sorry.",
+        "DeletePayMethodSelectedDetails": "The selected pay method can not be deleted. Please choose a different pay method.",
+        "DeletePayMethodSelectedAction": "Choose another pay method",
+        "Cancel": "cancel",
+        "Delete": "delete"
+      },
+      "Shipping": {
+        "ErrorMessages": {
+          "Empty": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>请选择一个地址. </span></p>"
+        }
+      },
+      "CcBalance": {
+        "ConvenienceCertificates": "Convenience Certificates",
+        "NewBalance": "New balance:"
+      },
+      "Cvv": {
+        "ErrorMessages": {
+          "Empty": "You must enter a CVC/CVV to continue.",
+          "Invalid": "Please, enter a valid CVC/CVV for the selected credit card"
+        },
+        "Label": "CVC/CVV",
+        "Title": "Enter Code"
+      },
+      "LsdBalance": {
+        "ConvenienceCertificates": "Convenience Certificates",
+        "Earned": "Earned this order:",
+        "LoyaltyShoppingDollars": "LOYALTY SHOPPING DOLLARS",
+        "NewBalance": "New balance:",
+        "AvailableToActivate": "Available to Activate:",
+        "AvailableToSpend": "Available to Spend:",
+        "ToSpend": "To Spend",
+        "EarnedThisOrder": "Earned On This Order",
+        "ExpiringThisMonth": "Expiring This Month"
+      },
+      "PaymentFailedModal": {
+        "Cta": "OK"
+      },
+      "Installments": {
+        "CardSelection": "Card Selection",
+        "InstallmentPeriod": "Installment Period",
+        "CardSelectionAriaLabel": "Choose a Card Company",
+        "InstallmentAriaLabel": "Choose an installment period",
+        "CreditCardInstallmentInfo": "Credit Card Installment Info",
+        "InstallmentError": "Please make a selection before submitting payment.",
+        "InterestFree": "{0} (Interest free)"
+      },
+      "VirtualPayment": {
+        "CardSelection": "Bank Choice",
+        "CardSelectionError": "Please select a bank.",
+        "SelectBank": "Select Bank",
+        "CashReceipt": "Cash Receipt",
+        "IssueNumber": "Issue Number",
+        "MobileNumber": "Mobile Number",
+        "MobileNumberError": "Please enter a valid mobile number.",
+        "BusinessRegistrationNumber": "Business Registration Number",
+        "BusinessRegistrationNumberError": "Please enter a valid business registration number.",
+        "NoticeMessageText": "Orders after depositing into virtual account can not be canceled, and please confirm the correct payment account before depositing"
+      },
+      "AccordionModal": {
+        "TermsandConditionsText": "View Terms & Conditions",
+        "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)"
+      },
+      "ServiceFailure": {
+        "GenericFailureMessage": "A critical part of the page had trouble loading. You can try refreshing the page, but if the problem persists, please call Customer Service.",
+        "RefreshPage": "Refresh Page",
+        "Title": "Looks like something went wrong."
+      },
+      "InvalidShipping": {
+        "Error": {
+          "ShippingUnavailable": "Unavailable",
+          "ShippingUnavailableLearnWhy": "Learn Why"
+        }
+      },
+      "TermsConditions": {
+        "Checkbox": {
+          "AriaLabel": "By placing this order, I agree to abide by Melaleuca's Terms and Conditions",
+          "Text": "By placing this order, I agree to abide by Melaleuca’s <span class=\"text-green font-bold\">Terms & Conditions.</span>"
+        },
+        "Modal": {
+          "Heading": "Customer Membership Agreement Terms & Conditions",
+          "Body": "<ol><li class=\"pb-15\"><span class=\"font-bold\">1. Payment Authorization:</span> I authorize Melaleuca to charge my credit card or debit the bank account specified in this Agreement for orders I place directly and for any Backup Order. If Melaleuca is unable to collect payment in full from my credit card, I authorize Melaleuca to make multiple attempts to collect for up to 90 days. I agree to pay a $10.00 service fee if a check or charge is dishonored for any reason. I will hold Melaleuca harmless for all special or consequential damages, whether direct or indirect, resulting from any wrongful debit to my account.</li><li class=\"pb-15\"><span class=\"font-bold\">2. Convenience Certificate Redemption:</span> After I have been a Member for six months, I may select Convenience Certificates as my Backup Order and may receive Convenience Certificates as otherwise provided in this Agreement. If I do not redeem a Convenience Certificate within 12 months, the unredeemed balance will be converted to a credit on my account, subject to the terms in the Satisfaction Guarantee paragraph below. Convenience Certificates may be redeemed for product or credit on account, but may not be returned for cash except in certain states.</li><li class=\"pb-15\"><span class=\"font-bold\">3. Resale of Products:</span> I understand Melaleuca’s commitment to product freshness, product safety, and product quality; therefore, I agree that I will not offer Melaleuca products for sale or resale. This obligation will continue even after this Agreement is canceled. Melaleuca shall have the right to prevent any such offers by legal action and, to the extent permitted by law, I will be obligated to pay Melaleuca’s legal fees and costs in connection with any such legal action based upon my violation of this obligation.</li><li class=\"pb-15\"><span class=\"font-bold\">4. Term:</span> The term of this Agreement is one year. This Agreement automatically renews annually on each anniversary date and will remain in effect until: (1) I submit a new signed Customer Membership Agreement, (2) I cancel this Agreement pursuant to the cancellation rights notice herein, or (3) Melaleuca cancels this Agreement upon written notice to me at my address set forth herein, which I agree Melaleuca may do at any time in its sole discretion.</li><li class=\"pb-15\"><span class=\"font-bold\">5. Satisfaction Guarantee:</span> If I am not completely satisfied with any product I purchase from Melaleuca, I may return the unused portion of the product together with a copy of the purchase receipt to Melaleuca within 90 days of the date of purchase and Melaleuca will credit my customer account for the total purchase price of the product. If I have unredeemed credit on my customer account, Melaleuca may make efforts to locate me and advise me in writing of the credit. Melaleuca may continue to make such attempts on a monthly basis and will charge my customer account a $10 service fee for each month’s notification process for as long as I have a credit on account, unless otherwise restricted or prohibited by law.</li><li class=\"pb-15\"><span class=\"font-bold\">6. Refused Orders:</span> If I refuse to accept any products delivered to me in accordance with Melaleuca’s Customer Membership Agreement Terms and Conditions, any future Backup Order Melaleuca sends to me will be a Convenience Certificate of equal value that I can redeem within 12 months at my convenience.</li><li class=\"pb-15\"><span class=\"font-bold\">7. Dispute Resolution:</span> To the extent permitted by applicable law, and unless otherwise expressly agreed to in writing, all claims or disputes of any nature between one or more current or former Customers and Melaleuca (or its officers, shareholders, or employees), if not resolved by mutual agreement, shall be resolved by binding arbitration. Judgment on an award rendered by the arbitrator may be entered in any court having jurisdiction. All issues are for the arbitrator to decide consistent with this Agreement, including issues relating to the scope and enforceability of the arbitration provision, and the arbitrator shall have the power to award damages and injunctive relief. If the costs of arbitration will be prohibitive as compared to the costs of litigation, I agree that Melaleuca will be allowed to pay as much of the filing and hearing fees in connection with the arbitration as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. MELALEUCA AND I AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING OR IN ANY PROCEEDING THAT CONSOLIDATES MORE THAN ONE PERSON’S CLAIMS. MELALEUCA AND I ALSO AGREE THAT, BY ENTERING INTO THIS AGREEMENT, EACH PARTY IS WAIVING THE RIGHT TO A TRIAL BY JURY FOR ALL CLAIMS SUBJECT TO BINDING ARBITRATION. All arbitration hearings shall take place in the State of Idaho. This Agreement shall be governed by the laws of the State of Idaho and the Federal Arbitration Act (“FAA”). If any conflict exists between Idaho law and the FAA, the FAA will govern. This arbitration provision, in whole or in part, shall survive termination, cancellation, or suspension of this Agreement or any provision of this paragraph. In reaching its decision, the arbitrator or the court (a) shall not interpret the meaning of this Agreement or the intent of the parties with respect thereto by reference to any written or oral communications, course of dealing, or extraneous documents or information other than the express terms of this Agreement, as expressly and specifically amended or waived by Melaleuca in accordance with this Agreement; and (b) shall consider Melaleuca’s interpretations of the Melaleuca Agreements (including interpretations of any ambiguous provisions) as final and binding unless such interpretation is shown to be unreasonable by clear and convincing evidence.</li><li class=\"pb-15\"><span class=\"font-bold\">8. Personal Information:</span> I consent to the lawful use by Melaleuca of the personal information contained on this form and information regarding my purchases from Melaleuca, including the disclosure of such content and information to my enroller and his or her Support Team.</li><li class=\"pb-15\"><span class=\"font-bold\">9. Amendments:</span> Upon 30 days notice to Customers, Melaleuca may, at its sole discretion, amend this Customer Membership Agreement. By signing this Agreement, I agree to abide by any and all such amendments and that my only remedy for not accepting any such amendments is to cancel this Agreement prior to the conclusion of the 30-day notification period. My placing of an order 30 days after Melaleuca sends written notice of any amendment will constitute my acceptance of the amendment. I agree that Melaleuca’s interpretation of the Melaleuca Agreements will be final and binding.</li></ol>",
+          "ButtonText": "Close"
+        },
+        "Required": "Required",
+        "Error": "You must agree to the Terms and Conditions to proceed"
+      },
+      "ShippingOnUs": {
+        "More": "More",
+        "Less": "Less",
+        "ShippingBack": "Shipping back in Loyalty Shopping Dollars",
+        "Variation1": {
+          "Title": "WANT SHIPPING ON US?",
+          "PointsAwayFlat": "You’re only {0} Product Points away from earning {1} of your flat rate shipping and handling back in Loyalty Shopping Dollars.",
+          "PointsAway": "You’re only {0} Product Points away from earning {1} back."
+        },
+        "Variation2": {
+          "Title": "Want 100% of your SHIPPING ON US?",
+          "PointsAwayFlat": "You’re only {0} Product Points away from earning {1} of your flat rate shipping and handling back in Loyalty Shopping Dollars.",
+          "ThresholdMessage": "You currently qualify for {0} Shipping on Us.",
+          "ThresholdMessageNotGround": "You currently qualify for {0} in Loyalty Shopping Dollars through Shipping on Us."
+        },
+        "Variation3": {
+          "Title": "Congratulations!",
+          "ThresholdMessage": "You have qualified for {0} Shipping On Us!",
+          "ThresholdMessageNotGround": "You have earned the maximum {0} in Loyalty Shopping Dollars through <strong>Shipping On Us</strong>"
+        }
+      },
+      "GSTLabel": "{0}% GST Inclusive",
+      "BankOffline": "{0} (Offline)",
+      "GUI": {
+        "CitizenDigitalCertification": "Citizen Digital Certification",
+        "DonationReminder": "捐贈提醒 : 發票一旦捐贈後無法更改發票類型 捐贈發票不影響退換貨權益 ",
+        "LoveCodeWarning": "原設定捐贈碼或受捐贈機關或團體已變更，請點選'設定載具條碼及捐贈碼 進行捐贈碼設定更新，或選擇美樂家會員載具，謝謝！",
+        "LoveCode": "Donation Code",
+        "MelaleucaMembership": "Melaleuca Carrier Number",
+        "MelaleucaCarrierType": "MelaleucaMembership",
+        "Mobile": "Mobile",
+        "Title": "發票資訊 "
+      }
+    },
+    "Data": {
+      "ShowImprovedCTACheckout": true,
+      "ShowPurchaseCommitment": true,
+      "ThreeDSDDCRequestUrl": "https://centinelapistag.cardinalcommerce.com/V1/Cruise/Collect",
+      "ThreeDSDDCListenUrl": "https://centinelapistag.cardinalcommerce.com",
+      "WholeNumbersOnly": false,
+      "RewardTrackerId": "585",
+      "ShippingOnUsTrackerId": "123",
+      "HideDollarsToActivate": true,
+      "BannerMessages": {
+        "PuertoRicoBannerMessage": "<span class=\"pr-2\">*</span><p>Due to the added expense of doing business in Puerto Rico product prices have increased. Please refer to your shopping cart, or the <a href=\"#somelink\" class=\"underline\">Puerto Rico Price List</a> for the most current prices.</p>"
+      },
+      "Invoice": {
+        "Name": "isInvoice",
+        "Label": "是否需要发票",
+        "Value": false,
+        "Attention": "<p class=\"flex text-green text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> 已经更新</span></p>"
+      },
+      "Checkout": {
+        "BackToCartLink": {
+          "Url": "#",
+          "Text": "Back to Cart",
+          "Target": ""
+        },
+        "ShippingOnUsKeepShoppingLink": {
+          "Url": "",
+          "Text": "Keep Shopping"
+        },
+        "AddPaymentLink": {
+          "Url": "https://localhost:3030/patterns/03-pages-my-account-payment-add/03-pages-my-account-payment-add.rendered.html",
+          "Text": "+ Add new payment method"
+        },
+        "GuestPaymentLink": "#",
+        "AddShippingAddressLink": {
+          "Url": "https://localhost:3030/patterns/03-pages-my-account-address-add/03-pages-my-account-address-add.rendered.html",
+          "Text": "+ Add new shipping Address"
+        },
+        "EditShippingAddressLink": {
+          "Url": "/patterns/pages-my-account-address-edit/pages-my-account-address-edit.rendered.html",
+          "Text": "Edit shipping Address"
+        },
+        "ManageShippingAddressLink": {
+          "Url": "https://localhost:3030/patterns/03-pages-my-account-my-account-payment-and-addresses/03-pages-my-account-my-account-payment-and-addresses.rendered.html",
+          "Text": "Manage addresses"
+        },
+        "ManagePayMethodsLink": {
+          "Url": "https://localhost:3030/patterns/03-pages-my-account-my-account-payment-and-addresses/03-pages-my-account-my-account-payment-and-addresses.rendered.html",
+          "Text": "Manage payment methods"
+        },
+        "EditPayMethodsLink": {
+          "Url": "/patterns/pages-my-account-payment-edit/pages-my-account-payment-edit.rendered.html",
+          "Text": "Edit payment methods"
+        },
+        "GuestShippingAddressLink": "#",
+        "ReceiptUrl": "#?orderid=",
+        "EditGUI": {
+          "Url": "/patterns/pages-my-account-address-edit/pages-my-account-address-edit.rendered.html",
+          "Text": "設定載具條碼及捐贈碼",
+          "Target": ""
+        }
+      },
+      "Cvv": {
+        "MinLength": 3,
+        "MaxLength": 4
+      },
+      "HideSalesTax": false,
+      "RAPDepositModal": {
+        "RAPDepositModalText": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-3 text-gray-150 font-bold md:mt-0\" style=\"color:#333333\">Thank you for selecting an Automated Payment Receipt Deposit for this order. You will need to go to an HSBC bank to make your deposit.</h2><p class=\"text-sm text-gray-100 leading-tight pb-2 mb-10\">Please do not forget to provide the bank with your service number and reference number. These numbers will be given to you at the end of your order. As soon as we receive confirmation of your deposit from HSBC, your order will be shipped.</p><p class=\"text-sm text-gray-100 leading-tight pb-2\">HSBC Bank will charge you $17 for automated receipt payment (RAP) deposits made at the teller window.</p>"
+      },
+      "ShippingAndHandling": "How are shipping and handling cost calculated? <br /> This is the content for Shipping and handling",
+      "OrderProcessing": {
+        "OrderProcessingPageLink": {
+          "Url": "#status=processing",
+          "Text": "Order Processing page"
+        }
+      },
+      "ConvenienceStore": {
+        "ConvenienceStoreLinkLabel": "Convenience Store Information",
+        "ConvenienceStoreInformation": "<div class=\"pay-portal-modal rte\"><h2 id=\"global-modal-heading\" class=\"text-xl-2 font-bold\">Convenience Store Information</h2></div>",
+        "ConvenienceStoreError": "Please select a convenience store",
+        "SelectConvenienceStore": "Select convenience store"
+      },
+      "Installments": {
+        "Modal": {
+          "RteContent": "<div class=\"pay-portal-modal rte\"><h2 class=\"pay-portal-modal__title\">Interest-free Installment Benefits</h2> <table class=\"pay-portal-modal__table\"><tbody><tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-6 months interest-free</td></tr> <tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-7 months interest-free</td></tr> <tr class=\"pay-portal-modal__row\"><td rowspan=\"2\" class=\"pay-portal-modal__cell\"><img src=\"https://placehold.co/300x100\" alt=\"user added\"></td> <td class=\"pay-portal-modal__cell\">Melafey</td> <td class=\"pay-portal-modal__cell\">Other card payment</td></tr> <tr class=\"pay-portal-modal__row\"><td class=\"pay-portal-modal__cell\">None</td> <td class=\"pay-portal-modal__cell\">2-6 months interest-free</td></tr></tbody></table> <div class=\"pt-20\"><ul><li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 1 Installment payments are applied for payments of KRW 50,000 or more, and the above card event may be changed or suspended depending on the circumstances of the card company.</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 2</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 3</span></li> <li><span aria-hidden=\"true\" class=\"material-icons\">emergency</span> <span>List Item 4</span></li></ul></div></div>",
+          "RteHeading": ""
+        },
+        "List": [{
+          "Text": "Lump Sum",
+          "Value": "0"
+        }, {
+          "Text": "2 months ",
+          "Value": "1"
+        }, {
+          "Text": "3 months",
+          "Value": "2"
+        }, {
+          "Text": "4 months",
+          "Value": "3"
+        }, {
+          "Text": "5 months",
+          "Value": "4"
+        }, {
+          "Text": "6 months",
+          "Value": "5"
+        }]
+      },
+      "PayMethodExpired": {
+        "Snippets": {
+          "Parameters": null,
+          "Inline": {
+            "RteContent": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span> Your default method of payment has expired. Please select another method of payment or <a href=\"#\" class=\"underline\">click here to update your default pay method.</a> </span></p>"
+          }
+        },
+        "Modal": {
+          "RteContent": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-8 leading-base font-bold text-gray-150 md:text-4xl md:font-normal md:leading-base md:mt-0\"> Your default method of payment has expired. </h2> <p class=\"text-sm text-gray-120 md:text-gray-100 leading-tight mb-20 pb-2 md:mb-20\"> Please select another method of payment or update your default pay method. </p> ",
+          "Data": {
+            "DifferentPayMethod": "Choose a different pay method",
+            "UpdatePayMethod": {
+              "Url": "http://productstore-qaus.melaleuca.com/cart-page",
+              "Text": "Update default pay method"
+            }
+          },
+          "Labels": null
+        }
+      },
+      "CrossCountryModal": {
+        "Cancel": "Cancel",
+        "ContinueToSite": "Continue to {0} site",
+        "RteDescription": "<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Looks Like You've Changed Your Shipping Country.</h2><p class=\"text-sm text-gray-120 leading-tight\">This may impact the product availability in your shopping cart or payment methods accepted. Click \"continue\" to go to the {0} site, or click \"cancel\" and select your {1} shipping address.</p>",
+        "UserCountry": "UnitedStates"
+      },
+      "Easypay": {
+        "Url": "https://localhost:3030/patterns/organisms-easy-pay-easy-pay/easy-pay.html"
+      },
+      "ShowGSTBelowTotal": false,
+      "IsCorporate": false,
+      "ShowGui": true
+    }
+  }
+</script>

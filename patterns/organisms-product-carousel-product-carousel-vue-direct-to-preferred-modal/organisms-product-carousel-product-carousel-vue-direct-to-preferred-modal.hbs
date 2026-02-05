@@ -1,0 +1,12 @@
+<o-product-carousel script-id="dataTopProductsCarousel" :settings='{{toJson Settings}}' :is-shelf="{{#if ProductCarousel.IsShelf}}true{{else}}false{{/if}}">
+</o-product-carousel>
+
+<o-direct-to-preferred-modal></o-direct-to-preferred-modal>
+
+<script type="application/json" id="dataTopProductsCarousel">
+{{toJson ProductCarousel}}
+</script>
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson Shelf}}
+</script>

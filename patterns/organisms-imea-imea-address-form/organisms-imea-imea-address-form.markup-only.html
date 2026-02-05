@@ -1,0 +1,207 @@
+<o-imea-address-form script-id="addressFormData"></o-imea-address-form>
+
+<script type="application/json" id="addressFormData">
+  {
+    "Data": {
+      "AddressSuggestionMaxCount": 24
+    },
+    "Labels": {
+      "Address_1": {
+        "Placeholder": "Street Address",
+        "Required": true,
+        "RequiredErrorMessage": "Please enter your address.",
+        "Text": "Address 1"
+      },
+      "Address_2": {
+        "Placeholder": "Apt / PO Box / Suite / Building",
+        "Required": false,
+        "Text": "Address 2 (Optional)"
+      },
+      "City": {
+        "Placeholder": "City",
+        "Required": true,
+        "RequiredErrorMessage": "Please enter your city.",
+        "Text": "City"
+      },
+      "State": {
+        "Placeholder": "Please Select",
+        "Required": true,
+        "RequiredErrorMessage": "Please select a state.",
+        "Text": "State",
+        "States": [{
+          "StateLongName": "District of Columbia",
+          "StateShortName": "DC"
+        }, {
+          "StateLongName": "Nebraska",
+          "StateShortName": "NE"
+        }, {
+          "StateLongName": "Kansas",
+          "StateShortName": "KS"
+        }, {
+          "StateLongName": "Rhode Island",
+          "StateShortName": "RI"
+        }, {
+          "StateLongName": "Florida",
+          "StateShortName": "FL"
+        }, {
+          "StateLongName": "Alaska",
+          "StateShortName": "AK"
+        }, {
+          "StateLongName": "Massachusetts",
+          "StateShortName": "MA"
+        }, {
+          "StateLongName": "South Carolina",
+          "StateShortName": "SC"
+        }, {
+          "StateLongName": "Colorado",
+          "StateShortName": "CO"
+        }, {
+          "StateLongName": "Kentucky",
+          "StateShortName": "KY"
+        }, {
+          "StateLongName": "Nevada",
+          "StateShortName": "NV"
+        }, {
+          "StateLongName": "New Hampshire",
+          "StateShortName": "NH"
+        }, {
+          "StateLongName": "Georgia",
+          "StateShortName": "GA"
+        }, {
+          "StateLongName": "Maine",
+          "StateShortName": "ME"
+        }, {
+          "StateLongName": "New Jersey",
+          "StateShortName": "NJ"
+        }, {
+          "StateLongName": "South Dakota",
+          "StateShortName": "SD"
+        }, {
+          "StateLongName": "Maryland",
+          "StateShortName": "MD"
+        }, {
+          "StateLongName": "Hawaii",
+          "StateShortName": "HI"
+        }, {
+          "StateLongName": "North Carolina",
+          "StateShortName": "NC"
+        }, {
+          "StateLongName": "Oklahoma",
+          "StateShortName": "OK"
+        }, {
+          "StateLongName": "Virginia",
+          "StateShortName": "VA"
+        }, {
+          "StateLongName": "Delaware",
+          "StateShortName": "DE"
+        }, {
+          "StateLongName": "Missouri",
+          "StateShortName": "MO"
+        }, {
+          "StateLongName": "Pennsylvania",
+          "StateShortName": "PA"
+        }, {
+          "StateLongName": "Wisconsin",
+          "StateShortName": "WI"
+        }, {
+          "StateLongName": "Alabama",
+          "StateShortName": "AL"
+        }, {
+          "StateLongName": "Connecticut",
+          "StateShortName": "CT"
+        }, {
+          "StateLongName": "Louisiana",
+          "StateShortName": "LA"
+        }, {
+          "StateLongName": "New Mexico",
+          "StateShortName": "NM"
+        }, {
+          "StateLongName": "New York",
+          "StateShortName": "NY"
+        }, {
+          "StateLongName": "Wyoming",
+          "StateShortName": "WY"
+        }, {
+          "StateLongName": "Arizona",
+          "StateShortName": "AZ"
+        }, {
+          "StateLongName": "Idaho",
+          "StateShortName": "ID"
+        }, {
+          "StateLongName": "Minnesota",
+          "StateShortName": "MN"
+        }, {
+          "StateLongName": "Mississippi",
+          "StateShortName": "MS"
+        }, {
+          "StateLongName": "California",
+          "StateShortName": "CA"
+        }, {
+          "StateLongName": "Iowa",
+          "StateShortName": "IA"
+        }, {
+          "StateLongName": "North Dakota",
+          "StateShortName": "ND"
+        }, {
+          "StateLongName": "Tennessee",
+          "StateShortName": "TN"
+        }, {
+          "StateLongName": "Texas",
+          "StateShortName": "TX"
+        }, {
+          "StateLongName": "Illinois",
+          "StateShortName": "IL"
+        }, {
+          "StateLongName": "Michigan",
+          "StateShortName": "MI"
+        }, {
+          "StateLongName": "Ohio",
+          "StateShortName": "OH"
+        }, {
+          "StateLongName": "Utah",
+          "StateShortName": "UT"
+        }, {
+          "StateLongName": "Vermont",
+          "StateShortName": "VT"
+        }, {
+          "StateLongName": "Indiana",
+          "StateShortName": "IN"
+        }, {
+          "StateLongName": "Montana",
+          "StateShortName": "MT"
+        }, {
+          "StateLongName": "Oregon",
+          "StateShortName": "OR"
+        }, {
+          "StateLongName": "Washington",
+          "StateShortName": "WA"
+        }, {
+          "StateLongName": "West Virginia",
+          "StateShortName": "WV"
+        }, {
+          "StateLongName": "Arkansas",
+          "StateShortName": "AR"
+        }]
+      },
+      "PostalCode": {
+        "Placeholder": "Zip Code",
+        "Required": true,
+        "InvalidErrorMessage": "Invalid zip code.",
+        "RequiredErrorMessage": "Please enter a zip code.",
+        "Text": "Zip Code"
+      },
+      "AddressEntered": "Address You Entered:",
+      "AddressNotOnSystem": "This address is not currently in our system. Please review the address and make sure it is correct before continuing.",
+      "Back": "Back",
+      "ProblemWithAddress": "There was a problem with the address you entered. Please select from the list of Suggested Addresses, or try again. For further assistance, please contact Customer Service at 1 (800) 282-3000.",
+      "Suggested": "Suggested:",
+      "UseThisAddress": "Use this address",
+      "VerifyAddressModalTitle": "Verify Address",
+      "MaxCharacterLengthExceedError": "Maximum {0} characters ({1} too many)",
+      "Remove": "Remove",
+      "ClosedHeading": "Business/Permanent Address (Optional)",
+      "OpenHeading": "Add Business/Permanent Address (Optional)",
+      "Subheading": "Your business address will be used to send commission checks, awards, and invitations to events."
+    }
+  }
+</script>

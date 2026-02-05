@@ -1,0 +1,24 @@
+<div class="m-expandList" style="{{#if BackgroundColor}}background-color: {{BackgroundColor}};{{/if}} 
+    {{#if BorderColor}}border-color: {{BorderColor}};{{/if}}">
+  <h3 data-accord="title" class="m-expandList__title">
+    <button data-accord="toggler" class="m-expandList__toggler" id="{{ToggleID}}" aria-controls="{{ContentID}}" aria-expanded="false">
+      <span class="m-expandList__image">
+        <img src="{{Image}}" alt="{{Alt}}">
+      </span>
+
+      <span class="m-expandList__text">
+        {{Title}}
+      </span>
+
+      <span class="m-expandList__icon" aria-hidden="true">
+        {{> atoms-arrow Size="-lg" TailwindColor="gray-120" Direction="-down" OtherMods="mt-6 md:right-0"}}
+      </span>
+    </button>
+  </h3>
+
+  <div data-accord="content" class="m-expandList__content hidden" id="{{ContentID}}">
+    <div class="m-rte">
+      {{{Content}}}
+    </div>
+  </div>
+</div>

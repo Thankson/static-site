@@ -1,0 +1,32 @@
+{{> organisms-site-header }}
+<div class="hidden mx-auto max-w-contain md:px-20 md:block">
+  {{#Breadcrumb}}
+    {{> molecules-breadcrumb }}
+  {{/Breadcrumb}}
+</div>
+
+<p-free-products script-id="FreeProducts">
+  {{#if FreeProductVideoBanner}}
+    <template v-slot:banner>
+      <o-free-product-video-banner script-id="free-product-video-banner"></o-free-product-video-banner>
+      <script type="application/json" id="free-product-video-banner">
+      {{ toJson FreeProductVideoBanner }}
+      </script>
+    </template>
+  {{/if}}
+  <template v-slot:toast>
+    <free-products-toast script-id="free-products-toast"></free-products-toast>
+    <script type="application/json" id="free-products-toast">
+    {{ toJson FreeProductsToast }}
+    </script>
+  </template>
+</p-free-products>
+<script type="application/json" id="FreeProducts">
+{{toJson FreeProducts}}
+</script>
+{{> molecules-cta-banner }}
+
+{{> organisms-site-footer }}
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson ShelfLocalization}}
+</script>

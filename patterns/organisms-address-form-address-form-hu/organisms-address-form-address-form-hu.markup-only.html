@@ -1,0 +1,524 @@
+<o-address-form script-id="addressForm"></o-address-form>
+
+<script type="application/json" id="addressForm">
+  {
+    "Labels": {
+      "CTA": {
+        "Continue": "Continue",
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "CreateAccount": "Create Account",
+        "Next": "Next"
+      },
+      "ShippingSection": {
+        "Address1": "ADDRESS 1",
+        "Address1Error": "Address is required",
+        "Address1Placeholder": "Address 1 placeholder",
+        "Address2": "ADDRESS 2",
+        "Address2Placeholder": "Address 2 placeholder",
+        "Address3": "ADDRESS 3",
+        "AddressEntered": "Address You Entered:",
+        "AddressNotOnSystem": "This address is not currently in our system. Please review the address and make sure it is correct before continuing.",
+        "Back": "Back",
+        "Cancel": "Cancel",
+        "City": "CITY",
+        "CityError": "City is required",
+        "CityPlaceholder": "City placeholder",
+        "CompanyName": "COMPANY NAME / ATTENTION",
+        "CompanyNamePlaceholder": "",
+        "CopyPasteError": "El sistema no permite copiar y pegar su dirección. Ni la funcionalidad de autocompletar.",
+        "Country": "COUNTRY",
+        "DefaultShipping": "Make this my Default Shipping Address",
+        "DeliveryInstructions": "DELIVERY INSTRUCTIONS",
+        "DeliveryInstructionsPlaceholder": "Delivery Instructions placeholder",
+        "Island": "Island",
+        "IslandError": "Island is required",
+        "IslandPlaceholder": "Island",
+        "MaxCharacterLengthExceedError": "Maximum {0} characters ({1} too many)",
+        "Name": "RECIPIENT NAME",
+        "NameError": "Name is required",
+        "NamePlaceholder": "Name placeholder",
+        "Optional": "{0} <span class=\"italic font-medium\">(Optional)</span>",
+        "PhoneNumber": "PHONE NUMBER",
+        "PhoneNumberError": "Phone Number invalid",
+        "PhoneNumberPlaceholder": "Phone number placeholder",
+        "PostalCode": "POSTAL CODE",
+        "PostalCodeError": "Invalid postal code",
+        "ProblemWithAddress": "There was a problem with the address you entered. Please select from the list of SUggested Addresses, or try again. For futher assistance, please contact Customer Service at 1 (800) 282-3000.",
+        "Province": "PROVINCE",
+        "ProvincePlaceholder": "Province",
+        "ProvinceError": "Province is required",
+        "SectionTitle": "Shipping Address",
+        "SpecialCharsError": "Su dirección no debe contener ningún carácter especial",
+        "State": "STATE",
+        "StatePlaceholder": "State",
+        "StateError": "State is required",
+        "Suburb": "SUBURB",
+        "SuburbError": "Suburb is required",
+        "Suggested": "Suggested",
+        "SuggestionsInTotal": "Suggestions in total",
+        "UseThisAddress": "Use This Address",
+        "VerifyAddressModalTitle": "Verify Address",
+        "ZipCode": "ZIP CODE",
+        "ZipCodeError": "Zip Code is required",
+        "PostalCodePlaceholder": "Postal code placeholder"
+      }
+    },
+    "Data": {
+      "AddressEntryEnhancementEnabled": false,
+      "ShowFullStateName": true,
+      "PrefilledFormValues": {
+        "Address_1Value": null,
+        "Address_2Value": null,
+        "Address_3Value": null,
+        "CityValue": null,
+        "IslandValue": null,
+        "NameValue": null,
+        "PostalCodeValue": null,
+        "ProvinceValue": null,
+        "StateMxValue": null,
+        "StateValue": null,
+        "StateFullName": null,
+        "SuburbValue": null,
+        "ZipCodeValue": null,
+        "PhoneNumberValue": null,
+        "CompanyNameValue": null,
+        "DeliveryInstructionsValue": null,
+        "CountryValue": null,
+        "IsDefault": null
+      },
+      "ShippingSection": {
+        "Regions": [{
+          "RegionName": "Ireland",
+          "RegionKey": "ie",
+          "ServiceName": "Ireland",
+          "provinces": [{
+            "ProvinceName": "District of Columbia",
+            "ProvinceValue": "DC",
+            "ServiceName": "District of Columbia"
+          }, {
+            "ProvinceName": "Nebraska",
+            "ProvinceValue": "NE",
+            "ServiceName": "Nebraska"
+          }, {
+            "ProvinceName": "Kansas",
+            "ProvinceValue": "KS",
+            "ServiceName": "Kansas"
+          }, {
+            "ProvinceName": "Rhode Island",
+            "ProvinceValue": "RI",
+            "ServiceName": "Rhode Island"
+          }, {
+            "ProvinceName": "Florida",
+            "ProvinceValue": "FL",
+            "ServiceName": "Florida"
+          }, {
+            "ProvinceName": "Alaska",
+            "ProvinceValue": "AK",
+            "ServiceName": "Alaska"
+          }, {
+            "ProvinceName": "Massachusetts",
+            "ProvinceValue": "MA",
+            "ServiceName": "Massachusetts"
+          }, {
+            "ProvinceName": "South Carolina",
+            "ProvinceValue": "SC",
+            "ServiceName": "South Carolina"
+          }, {
+            "ProvinceName": "Colorado",
+            "ProvinceValue": "CO",
+            "ServiceName": "Colorado"
+          }, {
+            "ProvinceName": "Kentucky",
+            "ProvinceValue": "KY",
+            "ServiceName": "Kentucky"
+          }, {
+            "ProvinceName": "Nevada",
+            "ProvinceValue": "NV",
+            "ServiceName": "Nevada"
+          }, {
+            "ProvinceName": "New Hampshire",
+            "ProvinceValue": "NH",
+            "ServiceName": "New Hampshire"
+          }, {
+            "ProvinceName": "Georgia",
+            "ProvinceValue": "GA",
+            "ServiceName": "Georgia"
+          }, {
+            "ProvinceName": "Maine",
+            "ProvinceValue": "ME",
+            "ServiceName": "Maine"
+          }, {
+            "ProvinceName": "New Jersey",
+            "ProvinceValue": "NJ",
+            "ServiceName": "New Jersey"
+          }, {
+            "ProvinceName": "South Dakota",
+            "ProvinceValue": "SD",
+            "ServiceName": "South Dakota"
+          }, {
+            "ProvinceName": "Maryland",
+            "ProvinceValue": "MD",
+            "ServiceName": "Maryland"
+          }, {
+            "ProvinceName": "Hawaii",
+            "ProvinceValue": "HI",
+            "ServiceName": "Hawaii"
+          }, {
+            "ProvinceName": "North Carolina",
+            "ProvinceValue": "NC",
+            "ServiceName": "North Carolina"
+          }, {
+            "ProvinceName": "Oklahoma",
+            "ProvinceValue": "OK",
+            "ServiceName": "Oklahoma"
+          }, {
+            "ProvinceName": "Virginia",
+            "ProvinceValue": "VA",
+            "ServiceName": "Virginia"
+          }, {
+            "ProvinceName": "Delaware",
+            "ProvinceValue": "DE",
+            "ServiceName": "Delaware"
+          }, {
+            "ProvinceName": "Missouri",
+            "ProvinceValue": "MO",
+            "ServiceName": "Missouri"
+          }, {
+            "ProvinceName": "Pennsylvania",
+            "ProvinceValue": "PA",
+            "ServiceName": "Pennsylvania"
+          }, {
+            "ProvinceName": "Wisconsin",
+            "ProvinceValue": "WI",
+            "ServiceName": "Wisconsin"
+          }, {
+            "ProvinceName": "Alabama",
+            "ProvinceValue": "AL",
+            "ServiceName": "Alabama"
+          }, {
+            "ProvinceName": "Connecticut",
+            "ProvinceValue": "CT",
+            "ServiceName": "Connecticut"
+          }, {
+            "ProvinceName": "Louisiana",
+            "ProvinceValue": "LA",
+            "ServiceName": "Louisiana"
+          }, {
+            "ProvinceName": "New Mexico",
+            "ProvinceValue": "NM",
+            "ServiceName": "New Mexico"
+          }, {
+            "ProvinceName": "New York",
+            "ProvinceValue": "NY",
+            "ServiceName": "New York"
+          }, {
+            "ProvinceName": "Wyoming",
+            "ProvinceValue": "WY",
+            "ServiceName": "Wyoming"
+          }, {
+            "ProvinceName": "Arizona",
+            "ProvinceValue": "AZ",
+            "ServiceName": "Arizona"
+          }, {
+            "ProvinceName": "Idaho",
+            "ProvinceValue": "ID",
+            "ServiceName": "Idaho"
+          }, {
+            "ProvinceName": "Minnesota",
+            "ProvinceValue": "MN",
+            "ServiceName": "Minnesota"
+          }, {
+            "ProvinceName": "Mississippi",
+            "ProvinceValue": "MS",
+            "ServiceName": "Mississippi"
+          }, {
+            "ProvinceName": "California",
+            "ProvinceValue": "CA",
+            "ServiceName": "California"
+          }, {
+            "ProvinceName": "Iowa",
+            "ProvinceValue": "IA",
+            "ServiceName": "Iowa"
+          }, {
+            "ProvinceName": "North Dakota",
+            "ProvinceValue": "ND",
+            "ServiceName": "North Dakota"
+          }, {
+            "ProvinceName": "Tennessee",
+            "ProvinceValue": "TN",
+            "ServiceName": "Tennessee"
+          }, {
+            "ProvinceName": "Texas",
+            "ProvinceValue": "TX",
+            "ServiceName": "Texas"
+          }, {
+            "ProvinceName": "Illinois",
+            "ProvinceValue": "IL",
+            "ServiceName": "Illinois"
+          }, {
+            "ProvinceName": "Michigan",
+            "ProvinceValue": "MI",
+            "ServiceName": "Michigan"
+          }, {
+            "ProvinceName": "Ohio",
+            "ProvinceValue": "OH",
+            "ServiceName": "Ohio"
+          }, {
+            "ProvinceName": "Utah",
+            "ProvinceValue": "UT",
+            "ServiceName": "Utah"
+          }, {
+            "ProvinceName": "Vermont",
+            "ProvinceValue": "VT",
+            "ServiceName": "Vermont"
+          }, {
+            "ProvinceName": "Indiana",
+            "ProvinceValue": "IN",
+            "ServiceName": "Indiana"
+          }, {
+            "ProvinceName": "Montana",
+            "ProvinceValue": "MT",
+            "ServiceName": "Montana"
+          }, {
+            "ProvinceName": "Oregon",
+            "ProvinceValue": "OR",
+            "ServiceName": "Oregon"
+          }, {
+            "ProvinceName": "Washington",
+            "ProvinceValue": "WA",
+            "ServiceName": "Washington"
+          }, {
+            "ProvinceName": "West Virginia",
+            "ProvinceValue": "WV",
+            "ServiceName": "West Virginia"
+          }, {
+            "ProvinceName": "Arkansas",
+            "ProvinceValue": "AR",
+            "ServiceName": "Arkansas"
+          }],
+          "Provinces": []
+        }, {
+          "RegionName": "Netherlands",
+          "RegionKey": "nl",
+          "ServiceName": "Netherlands",
+          "provinces": [{
+            "ProvinceName": "Nunavut",
+            "ProvinceValue": "NU",
+            "ServiceName": "Nunavut"
+          }, {
+            "ProvinceName": "Manitoba",
+            "ProvinceValue": "MB",
+            "ServiceName": "Manitoba"
+          }, {
+            "ProvinceName": "Nova Scotia",
+            "ProvinceValue": "NS",
+            "ServiceName": "Nova Scotia"
+          }, {
+            "ProvinceName": "Prince Edward Island",
+            "ProvinceValue": "PE",
+            "ServiceName": "Prince Edward Island"
+          }, {
+            "ProvinceName": "Newfoundland and Labrador",
+            "ProvinceValue": "NL",
+            "ServiceName": "Newfoundland and Labrador"
+          }, {
+            "ProvinceName": "Northwest Territories",
+            "ProvinceValue": "NT",
+            "ServiceName": "Northwest Territories"
+          }, {
+            "ProvinceName": "British Columbia",
+            "ProvinceValue": "BC",
+            "ServiceName": "British Columbia"
+          }, {
+            "ProvinceName": "Quebec",
+            "ProvinceValue": "QC",
+            "ServiceName": "Quebec"
+          }, {
+            "ProvinceName": "Alberta",
+            "ProvinceValue": "AB",
+            "ServiceName": "Alberta"
+          }, {
+            "ProvinceName": "Saskatchewan",
+            "ProvinceValue": "SK",
+            "ServiceName": "Saskatchewan"
+          }, {
+            "ProvinceName": "Ontario",
+            "ProvinceValue": "ON",
+            "ServiceName": "Ontario"
+          }, {
+            "ProvinceName": "New Brunswick",
+            "ProvinceValue": "NB",
+            "ServiceName": "New Brunswick"
+          }, {
+            "ProvinceName": "Yukon",
+            "ProvinceValue": "YT",
+            "ServiceName": "Yukon"
+          }],
+          "Provinces": []
+        }, {
+          "RegionName": "Latvia",
+          "RegionKey": "lv",
+          "ServiceName": "Latvia",
+          "provinces": [{
+            "ProvinceName": "Aguascalientes",
+            "ProvinceValue": "Aguascalientes",
+            "ServiceName": "Aguascalientes"
+          }, {
+            "ProvinceName": "Baja California",
+            "ProvinceValue": "Baja California",
+            "ServiceName": "Baja California"
+          }, {
+            "ProvinceName": "Baja California Sur",
+            "ProvinceValue": "Baja California Sur",
+            "ServiceName": "Baja California Sur"
+          }, {
+            "ProvinceName": "Campeche",
+            "ProvinceValue": "Campeche",
+            "ServiceName": "Campeche"
+          }, {
+            "ProvinceName": "Chiapas",
+            "ProvinceValue": "Chiapas",
+            "ServiceName": "Chiapas"
+          }, {
+            "ProvinceName": "Chihuahua",
+            "ProvinceValue": "Chihuahua",
+            "ServiceName": "Chihuahua"
+          }, {
+            "ProvinceName": "Coahuila de Zaragoza",
+            "ProvinceValue": "Coahuila",
+            "ServiceName": "Coahuila de Zaragoza"
+          }, {
+            "ProvinceName": "Colima",
+            "ProvinceValue": "Colima",
+            "ServiceName": "Colima"
+          }, {
+            "ProvinceName": "Durango",
+            "ProvinceValue": "Durango",
+            "ServiceName": "Durango"
+          }, {
+            "ProvinceName": "Guanajuato",
+            "ProvinceValue": "Guanajuato",
+            "ServiceName": "Guanajuato"
+          }, {
+            "ProvinceName": "Guerrero",
+            "ProvinceValue": "Guerrero",
+            "ServiceName": "Guerrero"
+          }, {
+            "ProvinceName": "Hidalgo",
+            "ProvinceValue": "Hidalgo",
+            "ServiceName": "Hidalgo"
+          }, {
+            "ProvinceName": "Jalisco",
+            "ProvinceValue": "Jalisco",
+            "ServiceName": "Jalisco"
+          }, {
+            "ProvinceName": "Estado de Mexico",
+            "ProvinceValue": "Estado de Mexico",
+            "ServiceName": "Estado de Mexico"
+          }, {
+            "ProvinceName": "Ciudad de México",
+            "ProvinceValue": "Ciudad de México",
+            "ServiceName": "Ciudad de México"
+          }, {
+            "ProvinceName": "Michoacan de Ocampo",
+            "ProvinceValue": "Michoacán",
+            "ServiceName": "Michoacan de Ocampo"
+          }, {
+            "ProvinceName": "Morelos",
+            "ProvinceValue": "Morelos",
+            "ServiceName": "Morelos"
+          }, {
+            "ProvinceName": "Nayarit",
+            "ProvinceValue": "Nayarit",
+            "ServiceName": "Nayarit"
+          }, {
+            "ProvinceName": "Nuevo León",
+            "ProvinceValue": "Nuevo León",
+            "ServiceName": "Nuevo Leon"
+          }, {
+            "ProvinceName": "Oaxaca",
+            "ProvinceValue": "Oaxaca",
+            "ServiceName": "Oaxaca"
+          }, {
+            "ProvinceName": "Puebla",
+            "ProvinceValue": "Puebla",
+            "ServiceName": "Puebla"
+          }, {
+            "ProvinceName": "Querétaro",
+            "ProvinceValue": "Querétaro",
+            "ServiceName": "Queretaro"
+          }, {
+            "ProvinceName": "Quintana Roo",
+            "ProvinceValue": "Quintana Roo",
+            "ServiceName": "Quintana Roo"
+          }, {
+            "ProvinceName": "San Luis Potosí",
+            "ProvinceValue": "San Luis Potosí",
+            "ServiceName": "San Luis Potosi"
+          }, {
+            "ProvinceName": "Sinaloa",
+            "ProvinceValue": "Sinaloa",
+            "ServiceName": "Sinaloa"
+          }, {
+            "ProvinceName": "Sonora",
+            "ProvinceValue": "Sonora",
+            "ServiceName": "Sonora"
+          }, {
+            "ProvinceName": "Tabasco",
+            "ProvinceValue": "Tabasco",
+            "ServiceName": "Tabasco"
+          }, {
+            "ProvinceName": "Tamaulipas",
+            "ProvinceValue": "Tamaulipas",
+            "ServiceName": "Tamaulipas"
+          }, {
+            "ProvinceName": "Tlaxcala",
+            "ProvinceValue": "Tlaxcala",
+            "ServiceName": "Tlaxcala"
+          }, {
+            "ProvinceName": "Veracruz",
+            "ProvinceValue": "Veracruz",
+            "ServiceName": "Veracruz"
+          }, {
+            "ProvinceName": "Yucatan",
+            "ProvinceValue": "Yucatán",
+            "ServiceName": "Yucatan"
+          }, {
+            "ProvinceName": "Zacatecas",
+            "ProvinceValue": "Zacatecas",
+            "ServiceName": "Zacatecas"
+          }],
+          "Provinces": []
+        }, {
+          "RegionName": "Spain",
+          "RegionKey": "es",
+          "ServiceName": "Spain",
+          "Provinces": []
+        }, {
+          "RegionName": "Hungary",
+          "RegionKey": "hu",
+          "ServiceName": "Hungary",
+          "Provinces": []
+        }, {
+          "RegionName": "Estonia",
+          "RegionKey": "ee",
+          "ServiceName": "Estonia",
+          "Provinces": []
+        }]
+      },
+      "IsCrossCountryEnabled": false,
+      "AddressSuggestionMaxCount": 20,
+      "CrossCountryModal": {
+        "Cancel": "Cancel",
+        "ContinueToSite": "Continue to {0} site",
+        "DefaultShippingCountry": "Hungary",
+        "ProfileCountry": "UnitedStates",
+        "RteDescription": "<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Looks Like You've Changed Your Shipping Country.</h2><p class=\"text-sm text-gray-120 leading-tight\">This may impact the product availability in your shopping cart or payment methods accepted. Click \"continue\" to go to the {0} site, or click \"cancel\" and select your {1} shipping address.</p>"
+      },
+      "PreventCopyPasteFeature": true,
+      "ValidateAddressFeatureFlag": true,
+      "ValidateMaxCharLength": true
+    }
+  }
+</script>

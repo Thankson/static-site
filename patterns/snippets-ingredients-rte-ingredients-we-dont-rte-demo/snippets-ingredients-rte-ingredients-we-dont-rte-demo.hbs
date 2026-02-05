@@ -1,0 +1,14 @@
+<div class="m-rte">
+  {{#with IngredientsWeDontContent}}
+    <div class="s-ingredientsDont">
+      <div class="s-ingredientsDont__description" role="text">{{{Description}}}</div>
+      <ul class="s-ingredientsDont__list">
+        {{#each List}}
+          <li class="s-ingredientsDont__item">
+            <span role="text" class="s-ingredientsDont__text">{{{Text}}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/with}}
+</div>

@@ -1,0 +1,10 @@
+<o-enrollment-form :is-guest-checkout="{{ IsGuestCheckout }}" script-id="dataOnlineEnrollment" script-id-payment="dataPaymentForm" token="{{ PaymentForm.Token }}">
+</o-enrollment-form>
+
+<script type="application/json" id="dataOnlineEnrollment">
+{{toJson OnlineEnrollment.Localization}}
+</script>
+
+<script type="application/json" id="dataPaymentForm">
+{{toJson PaymentForm.Localization}}
+</script>

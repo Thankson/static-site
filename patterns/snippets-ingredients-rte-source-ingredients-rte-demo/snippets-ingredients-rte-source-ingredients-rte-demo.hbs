@@ -1,0 +1,17 @@
+<div class="m-rte">
+  {{#with SourceIngredientsContent}}
+    <div class="s-sourceIngredients">
+      <h3 class="s-sourceIngredients__heading">{{{Heading}}}</h3>
+      <ul class="s-sourceIngredients__list">
+        {{#each List}}
+          <li class="s-sourceIngredients__item">
+            <span role="text" class="s-sourceIngredients__text">{{{Text}}}</span>
+            {{#with Img}}
+              <img src="{{Src}}" alt="" class="s-sourceIngredients__img">
+            {{/with}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/with}}
+</div>

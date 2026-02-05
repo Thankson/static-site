@@ -1,0 +1,18 @@
+<div class="m-ingredGloss">
+  <h3 data-accord="title" class="m-ingredGloss__title">
+    <button data-accord="toggler" class="m-ingredGloss__toggler" id="{{ToggleID}}" aria-controls="{{ContentID}}" aria-expanded="false">
+      <span class="m-ingredGloss__text -title">
+        {{TitleText}}
+        {{#each Image}}
+          <img src="{{Src}}" alt="{{Alt}}" class="m-ingredGloss__icon">
+        {{/each}}
+      </span>
+
+      <span class="m-ingredGloss__icon -plusMinus" aria-hidden="true"></span>
+    </button>
+  </h3>
+
+  <div data-accord="content" class="m-ingredGloss__content hidden" id="{{ContentID}}" aria-labelledby="{{ToggleID}}" role="region">
+    {{{Content}}}
+  </div>
+</div>

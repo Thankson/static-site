@@ -1,0 +1,41 @@
+{{> organisms-site-header-ole}}
+<div class="bg-gray-25">
+  <div class="o-widthControl mx-auto w-full max-w-full to-md:px-10 md:max-w-contain">
+    <p-imea script-id="dataImea">
+      <template #section-one>
+        {{#if PersonalInfoForm}}
+          {{> organisms-imea-personal-info-section}}
+        {{/if}}
+        {{#if AddressForm}}
+          {{> organisms-imea-address-form}}
+        {{/if}}
+        {{#if SpouseInfoForm}}
+          {{> organisms-imea-spouse-info-section}}
+        {{/if}}
+      </template>
+      <template #section-two>
+        {{#if CommissionsBonusesData}}
+          {{#if TaxInformationForm}}
+            {{> organisms-imea-commissions-bonuses-section-tax-information}}
+          {{else}}
+            {{> organisms-imea-commissions-bonuses-section}}
+          {{/if}}
+        {{/if}}
+        {{#if BusinessInfoForm}}
+          {{> organisms-imea-business-info-form}}
+        {{/if}}
+        {{#if SocialSecurity}}
+          {{> organisms-imea-social-security-form}}
+        {{/if}}
+        {{#if PersonalProductionAccountData}}
+          {{> organisms-imea-personal-production-account-section}}
+        {{/if}}
+      </template>
+    </p-imea>
+    <script type="application/json" id="dataImea">
+    {{toJson Imea}}
+    </script>
+  </div>
+</div>
+
+{{> organisms-site-footer-ole }}

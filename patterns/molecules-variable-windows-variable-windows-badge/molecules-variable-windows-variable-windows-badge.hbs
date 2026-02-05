@@ -1,0 +1,24 @@
+{{#if Badge.Localization.Data}}
+  <a-badge script-id="badgeLocalization" aria-label="{{Badge.Localization.Data.AriaLabel}}" background-color="{{Badge.Localization.Data.BackgroundColor}}" badge-position="{{Badge.Localization.Data.BadgePosition}}" is-grow-premium-popup="{{Badge.Localization.Data.IsGrowPremiumPopup}}" tailwind-classes="{{Badge.Localization.Data.TailwindClasses}}" text-color="{{Badge.Localization.Data.TextColor}}" title="{{Badge.Localization.Data.Title}}">
+{{/if}}
+<article class="m-varWindow {{Mod.Main}}" {{#with Gtm}}data-gtm-promo='{ "id": "{{Id}}", "name": "{{Name}}", "creative": "{{Creative}}", "position": "{{Position}}" }' {{/with}}>
+  {{#if CTA.Link}}
+    <a href="{{CTA.Link}}" class="m-varWindow__anchor" aria-label="{{Description}}">
+  {{/if}}
+  {{!-- BG Images --}}
+  <div class="m-varWindow__image -mobile {{Mod.BackgroundPosition}}" style="{{Images.Mobile}} {{BackgroundColor}}"></div>
+  <div class="m-varWindow__image -desktop {{Mod.BackgroundPosition}}" style="{{Images.Desktop}} {{BackgroundColor}}"></div>
+
+  {{!-- Content: Title and subtitle --}}
+  <div class="m-varWindow__content {{Mod.Content}}" aria-hidden="true">
+    <h1 class="text-xl z-1">Title Text Here</h1>
+    <p class="text-sm leading-initial mt-2 z-1">
+      Description Text Here
+      <span class="relative ml-5 text-xs right-0">&#10095;</span>
+    </p>
+  </div>
+  {{#if CTA.Link}}
+    </a>
+  {{/if}}
+</article>
+{{#if Badge.Localization.Data}}</a-badge>{{/if}}

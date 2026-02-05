@@ -1,0 +1,201 @@
+<div class="max-w-contain mx-auto pb-40">
+  <h1 class="w-full mx-auto text-2xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mt-40 mb-18 md:text-3xl">
+    Edit payment method
+  </h1>
+  <div class="bg-gray-25 p-10 rounded-lg">
+    <div data-vue-component="PaymentForm" data-vue-props='{"scriptId":"dataPaymentForm","token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE2MTAzNzYzNjMsImV4cCI6MTYxMDM3OTk2MywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YXVzLm1lbGFsZXVjYS5jb20iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiT3JkZXIuQVBJIiwiT3JnYW5pemF0aW9uLkFQSSIsIlBheU1ldGhvZC5BUEkiLCJQcm9kdWN0LkFQSSIsIlByb21vdGlvbi5BUEkiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJIl0sImNsaWVudF9pZCI6Im1lbGFsZXVjYS1zaXRlY29yZS1kZXYiLCJzY29wZSI6WyJBZGRyZXNzLkFQSS5GdWxsIiwiQmFja3VwT3JkZXIuQVBJLkZ1bGwiLCJDb21tdW5pY2F0aW9uLkFQSS5GdWxsIiwiQ3VzdG9tZXJBY2NvdW50LkFQSS5GdWxsIiwiREVQSW50ZXJmYWNlLkFQSS5GdWxsIiwiRG9jdW1lbnQuQVBJLkZ1bGwiLCJPcmRlci5BUEkuRnVsbCIsIk9yZ2FuaXphdGlvbi5BUEkuRnVsbCIsIlBheU1ldGhvZC5BUEkuRnVsbCIsIlByb2R1Y3QuQVBJLkZ1bGwiLCJQcm9tb3Rpb24uQVBJLkZ1bGwiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJLkZ1bGwiXX0.AcWwYRAqRiVGTsMXa6x7pLQw3C0DWDOyqRBllj7KKiMkKiv18C58qVK7wsEzJLZOuQ5dhjRZyS-yVcQy0MgJqhBVE6P5DMNJJyWdx0oDMdkicb2hJ7o7Kc2tD2qMZakHR_irXpV4StYjQv6mPtlsohUpP_O7kEM2PzoefeYqiwJmg6Ypy5of7dWKHaxXXMWKZIxsDJO_bal86FdfjRhAoM-z_-DTnyLZrIm4XaVysj5qdtNQP1LiGt7Hwtp88mJeGp2wS8Ynb0B0vLl_nZxfB0RzsaDCpvqBFEup0DM9jqKP45of8uu_KyuBkDEhGsV7Q5vN1yXmrW8mdcbHswD2RA"}'>
+    </div>
+  </div>
+
+  <script type="application/json" id="dataPaymentForm">
+    {
+      "Labels": {
+        "Culture": "zh-TW",
+        "Header": {
+          "AddNew": "Add a new payment method",
+          "Edit": "Edit payment method",
+          "PayMethodType": "Payment method type",
+          "DebitOrCreditCard": "Debit/Credit Card",
+          "Checking": "Checking",
+          "Credit": "credit card"
+        },
+        "Card": {
+          "Accepts": "",
+          "CardholderName": "Cardholder Name",
+          "CardNumber": "Card number",
+          "Expiration": "Expiration date",
+          "Month": "month",
+          "Year": "year",
+          "Cvc": "CVC/CVV",
+          "BillingZipCode": "BILLING ZIP CODE",
+          "Nickname": "NICKNAME (optional)",
+          "CreditAccepts": "",
+          "Footnotes": "*Melaleuca accepts all Visa, MasterCard, and JBC"
+        },
+        "Checking": {
+          "NameOnAccount": "NAME ON ACCOUNT",
+          "AccountType": "ACCOUNT TYPE",
+          "Select": "Select",
+          "RoutingNumber": "ROUTING NUMBER",
+          "AccountNumber": "ACCOUNT NUMBER",
+          "AccountTypes": {
+            "Select": "Select",
+            "Checking": "Checking",
+            "Savings": "Savings"
+          },
+          "DeleteTitle": "Are you sure?",
+          "DeleteText": "This will overwrite any existing checking account information and cannot be undone."
+        },
+        "DirectDebit": {
+          "CopyFrom": null,
+          "DirectDebit": null,
+          "FormAccess": null,
+          "NameOnAccount": null,
+          "Bank": null,
+          "AccountNumber": null
+        },
+        "Defaults": {
+          "MakeThisMyDefault": "Make this my Default Payment Method for:",
+          "ProductPurchases": "Product Purchases",
+          "MarketplaceServices": "Marketplace Services including Identity Protection, Health Care Savings, and Melaleuca Deals",
+          "FutureCharges": "Your method of payment may be charged for future orders, services, or to settle outstanding debt on this account."
+        },
+        "FormSubmit": {
+          "Cancel": "Cancel",
+          "Save": "Save",
+          "Confirm": "Confirm",
+          "Download": "download"
+        },
+        "ErrorMessages": {
+          "FieldRequired": "This field is required",
+          "ErrorOccured": "An error has occurred",
+          "CardholderName": {
+            "Required": "Cardholder Name field is required",
+            "MaxLength": "Exceeded the maximum number of characters",
+            "MinLength": "The minimum character length has not been reached"
+          },
+          "CardNumber": {
+            "Required": "Card Number field is required",
+            "Integer": "Card numbers can only be entered as numbers",
+            "Invalid": "Please enter a valid card number",
+            "MaxLength": "Exceeded the maximum number of characters",
+            "MinLength": "The minimum character length has not been reached"
+          },
+          "ExpirationMonth": {
+            "Required": "Expiration Month field is required",
+            "Invalid": "The validity period must be later than the current date"
+          },
+          "ExpirationYear": {
+            "Required": "Experiation Year field is required",
+            "Invalid": "The validity period must be later than the current date"
+          },
+          "CVV": {
+            "Required": "CVC/CVV field is required",
+            "Integer": "CVC/CVV field accepts integer numbers only",
+            "MaxLength": "Maximum character length reached for CVC/CVV field",
+            "MinLength": "Minimum character length not reached for CVC/CVV field"
+          },
+          "BillingZipCode": {
+            "Required": "Billing Zip Code field is required",
+            "Integer": "Billing Zip Code field accepts integer numbers only",
+            "MaxLength": "Maximum character length reached for Billing Zip Code field",
+            "MinLength": "Minimum character length not reached for Billing Zip Code field"
+          },
+          "NameOnAccount": {
+            "Required": "Name On Account field is required",
+            "MaxLength": "Maximum character length reached for Name On Account field",
+            "MinLength": "Minimum character length not reached for Name On Account field"
+          },
+          "AccountType": {
+            "Required": "Account Type field is required"
+          },
+          "RoutingNumber": {
+            "Required": "Routing Number field is required",
+            "Integer": "Routing Number field accepts integer numbers only",
+            "MaxLength": "Maximum character length reached for Routing Number field",
+            "MinLength": "Minimum character length not reached for Routing Number field"
+          },
+          "AccountNumber": {
+            "Required": "Account Number field is required",
+            "Integer": "Account Number field accepts integer numbers only",
+            "MaxLength": "Maximum character length reached for Account Number field",
+            "MinLength": "Minimum character length not reached for Account Number field"
+          },
+          "Bank": {
+            "Required": "Bank field is required"
+          },
+          "ShouldBeDefault": {
+            "Required": "This is your Default Payment Method and must be selected. To change your method, add or edit another payment method and make it default."
+          }
+        },
+        "ServerErrorTranslation": [{
+          "Error": "PayMethodAlreadyExists",
+          "Translation": "This card has already been registered. If you have any questions, please contact customer service at 1544-3600."
+        }, {
+          "Error": "Default",
+          "Translation": "An error has occurred. Please try again later."
+        }, {
+          "Error": "Default",
+          "Translation": "An error has occurred, please try again"
+        }],
+        "ConfirmationLabel": {
+          "Confirm": "I confirm that I have carefully read, understood, and agreed to all of {0} and {1}. ",
+          "PaymentServiceDescription": "Payment Service Description",
+          "PrivacyTerms": "Privacy Policy"
+        },
+        "Frequency": {
+          "SaveAccount": "Add this credit card to my payment methods list",
+          "OneTime": "I will only use this credit card for this order. I will not add it to my payment method."
+        }
+      },
+      "Data": {
+        "Culture": "zh-TW",
+        "IsEditing": true,
+        "IsOneTimeCard": true,
+        "PaymethodId": "165500234",
+        "Username": "fangchiaying@melaleuca.com",
+        "Country": "Taiwan",
+        "CustomerId": 1150366247,
+        "CustomerName": "Chiaying Fang",
+        "DirectDebit": {
+          "FormAccess": "",
+          "FormAccessLink": {
+            "Url": "",
+            "Text": "",
+            "Target": ""
+          }
+        },
+        "CustomerBirthDate": "1989-10-02",
+        "CardHoldersNames": "Chiaying Fang, Ping Fang",
+        "HideCvv": true,
+        "HideDefaultPayMethodCheckBoxes": true,
+        "HideNickName": true,
+        "HideZipCode": true,
+        "Modal": {
+          "PaymentService": {
+            "Title": null,
+            "Rte": null
+          },
+          "PrivacyTerms": {
+            "Title": null,
+            "Rte": null
+          },
+          "PaymentSuccessCredit": {
+            "Title": null,
+            "Rte": null
+          },
+          "PaymentSuccessDebit": {
+            "Title": null,
+            "Rte": null
+          }
+        },
+        "MyAccountPaymentAddressPage": {
+          "Url": "https://productstore-qaus.melaleuca.com/my-account/payments-and-addresses",
+          "Text": "",
+          "Target": ""
+        },
+        "SpouseBirthDate": null
+      },
+      "Id": "468a7630-3667-4fb3-8a81-b09eddd836e6"
+    }
+  </script>

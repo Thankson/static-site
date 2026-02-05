@@ -1,0 +1,15 @@
+{{> organisms-site-header }}
+{{!-- This modal Id is the same that needs to be provided in Localization.Labels.ModalId --}}
+<modal :visible="true" id="LteEnrollmentModalIdTest">
+
+  <!-- START: .cshtml rendering starts here -->
+  <o-lte-enrollment-modal script-id="lteEnrollmentModalId"></o-lte-enrollment-modal>
+
+  <script type="application/json" id="lteEnrollmentModalId">
+  {{toJson Localization}}
+  </script>
+  <!-- END: .cshtml rendering -->
+
+</modal>
+
+{{> organisms-site-footer }}

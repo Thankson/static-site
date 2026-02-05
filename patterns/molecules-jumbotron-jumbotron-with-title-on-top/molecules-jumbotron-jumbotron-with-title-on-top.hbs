@@ -1,0 +1,41 @@
+{{#Jumbotron}}
+  <article class="m-jumbotron">
+    <div class="m-jumbotron__wrapper {{#if IsOnGrid}}-grid{{/if}}">
+      {{#if RTETop}}
+        <div class="m-jumbotron__rte">
+          <!-- Start: RTE -->
+          <div class="m-rte">
+            {{{RTETop}}}
+          </div>
+          <!-- End: RTE -->
+        </div>
+      {{/if}}
+
+      <picture class="m-jumbotron__picture">
+        {{#if ImageMobile.Src}}
+          <source srcset="{{ImageMobile.Src}}" media="(max-width: 767px)" class="m-jumbotron__srcset">
+        {{/if}}
+
+        {{#if ImageTablet.Src}}
+          <source srcset="{{ImageTablet.Src}}" media="(max-width: 991px)" class="m-jumbotron__srcset">
+        {{/if}}
+
+        {{#if ImageDesktop.Src}}
+          <source srcset="{{ImageDesktop.Src}}" media="(min-width: 992px)" class="m-jumbotron__srcset">
+        {{/if}}
+
+        <img src="{{ImageDesktop.Src}}" alt="{{ImageDesktop.Alt}}" class="m-jumbotron__image">
+      </picture>
+
+      {{#if RTEBottom}}
+        <div class="m-jumbotron__rte">
+          <!-- Start: RTE -->
+          <div class="m-rte">
+            {{{RTEBottom}}}
+          </div>
+          <!-- End: RTE -->
+        </div>
+      {{/if}}
+    </div>
+  </article>
+{{/Jumbotron}}

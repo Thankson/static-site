@@ -1,0 +1,2560 @@
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="pageType" content="Home" />
+  <title>Melaleuca Pattern Lab</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+  <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+  <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+  <link rel="stylesheet" href="../../css/app.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/brand-peak.css?1770268190704" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SG/MY Noto Sans SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+  <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+  <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+  <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+  <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+  <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+  <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+  <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+  <script>
+    dataLayer = [{
+      'userLogged': true,
+      'warehouseGroup': 'IdahoFalls',
+      'uiCulture': 'en-us'
+    }];
+
+    customerData = [{
+      canPurchaseRestrictedPacks: false,
+      isAuthenticated: true,
+      isGuest: false,
+      isGuestShoppingEnabled: false,
+      lvipStatus: "",
+      viewLists: true,
+      viewMemberPricing: true,
+      viewPoints: false,
+      country: "UnitedStates",
+      culture: "en-US",
+      uiCulture: "en-US",
+      customerID: 1016042303,
+      customerName: "Direct Tester",
+      businessName: "Direct Tester",
+      customerFullName: "John Doe",
+      formattedName: "Direct Tester",
+      customerType: "Employee",
+      customerPriceType: "Regular",
+      status: "Customer",
+      hasIMEA: true
+    }];
+  </script>
+  <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+  <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't need conditional in prod
+      if (document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        // Reviews for the PDP
+        pwr("render", {
+          // For performance enhancement
+          enable_content_collection_modal: false,
+          api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+          locale: 'en_US',
+          merchant_group_id: '507179823',
+          merchant_id: '1561128198',
+          // Usually is the sku number
+          page_id: '650',
+          // Page to write reviews
+          review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+          'product': {
+            'name': 'Energy Shot 12–Pack',
+            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+            'description': 'Energy Shot 12–Pack',
+            'category_name': 'Healthy Foods and Drinks',
+            'variants': [{
+              'name': 'Energy Shot 12–Pack',
+              'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+              'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+              'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+              'category_name': 'Healthy Foods and Drinks',
+              'page_id_variant': '5859'
+            }]
+          },
+          on_render: function() {
+            if (window.PDPReviews) {
+              window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+            }
+          },
+          components: {
+            ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+            ReviewDisplay: 'pr-reviewdisplay'
+          }
+        });
+      } else if (document.getElementsByClassName('p-ratingReview').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        pwr("render", {
+          api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+          locale: 'en_us',
+          pr_locale: '.en_us',
+          merchant_group_id: '1968628287',
+          merchant_id: '1683664767',
+          appName: 'ryp',
+          emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+          components: {
+            ReviewYourPurchases: 'pr-write'
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+  </script>
+
+  <!-- Begin convertlab -->
+  <script>
+    enableConvertLabFeatureFlag = false;
+    if (window.enableConvertLabFeatureFlag) {
+      clDataLayer = {
+        'pageType': 'web'
+      };
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || {};
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+      window.addEventListener("load", (event) => {
+        if (window.clab_tracker) {
+          window.clab_tracker.ready(function() {
+            this.push(clDataLayer);
+          });
+          window.clab_tracker.setEnableAutoTrackExitPage(false);
+        }
+      });
+    }
+  </script>
+  <!-- End convertlab -->
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+<!-- n.b. <body> is intentionally not closed: -->
+
+<body class="pl-body relative ">
+  <script>
+    if (typeof _etmc !== 'undefined') {
+      window._etmc = _etmc;
+      _etmc.push(['setOrgId', '1036137']);
+      _etmc.push(['trackPageView']);
+    }
+  </script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+  <!-- n.b. <div> is intentionally not closed: -->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {
+        "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+        "Country": "UnitedStates",
+        "CurrencyCode": "USD",
+        "HidePoints": false,
+        "HideAllPowerReviews": false,
+        "IsCn": false,
+        "ProductPricing": {
+          "HideProductMemberPrice": false,
+          "HideProductNonMemberPrice": false
+        }
+      }
+    </script>
+    <header class="o-siteHeader -checkout">
+      <div class="o-siteHeader__row -main">
+        <div class="o-siteHeader__col -nav">
+          <!-- START 11283, 19631 (refactoring) - Nav-menu -->
+          <nav class="m-navMenu" aria-labelledby="m-navMenu__toggle" data-testid="nav-menu">
+
+            <button id="m-navMenu__toggle" class="m-navMenu__toggle" aria-controls="m-navMenu" aria-expanded="false" aria-label="" data-label-escape-key="" data-testid="button-menu">
+              <span class="m-navMenu__toggleIcon" data-testid="span-iconMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
+                </svg>
+                <span class="m-navMenu__text">Menu</span>
+              </span>
+            </button>
+
+            <div class="m-navMenu__content-wrapper" aria-hidden="true" tabindex="-1">
+              <div class="m-navMenu__content -left" id="m-navMenu">
+                <div class="m-navMenu__inner">
+                  <div class="m-navMenu__scroll">
+
+                    <!-- Header -->
+                    <div class="m-navMenu__header">
+                      <div class="m-navMenu__header-content">
+                      </div>
+                      <span class="divisor" aria-hidden="true"></span>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Mobile Only and Logged -->
+                    <!-- End Mobile Only -->
+
+                    <!-- MENU LEVEL 1 -->
+                    <ul class="m-navMenu__list -lvl1" id="m-navMenu__lvl1" data-testid="unorderedList-menuTopList">
+
+
+                    </ul>
+                    <!-- End Categories (menu level 1) -->
+
+                    <!-- Riverbend Link -->
+                    <!-- End Riverbend Link -->
+
+                    <!-- Footer -->
+                    <span class="divisor -footer" aria-hidden="true"></span>
+                    <div class="m-navMenu__footer" data-testid="container-menuFooter">
+                      <div class="m-navMenu__footer-content">
+                        <ul class="m-navMenu__list -lvl1">
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- End Footer -->
+
+                    <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl1" aria-label="" tabindex="-1">
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Close Button -->
+              <div class="m-navMenu__close -root">
+                <button class="m-navMenu__close-btn" aria-label="" tabindex="-1">
+                  <span aria-hidden="true" class="m-navMenu__close-icon" data-testid="span-navMenuClose">close</span>
+                </button>
+              </div>
+              <!-- End Close Button -->
+
+              <div class="m-navMenu__overlay"></div>
+            </div>
+          </nav>
+          <!-- END 11283, 19631 (refactoring) - Nav-menu -->
+        </div>
+
+        <div class="o-siteHeader__col -logo" data-testid="container-logoWrapper">
+          <a href="https://www.melaleuca.com/" class="block">
+            <img class="o-siteHeader__image" src="//cdnsc1.melaleuca.com/na/images/header/leaf-drop-logo2x.png" alt="Melaleuca Logo">
+          </a>
+        </div>
+
+        <div class="o-siteHeader__col -title">
+          <h1 class="font-bold text-center text-white text-2xl uppercase ">Checkout</h1>
+        </div>
+
+        <div class="o-siteHeader__col -actions" data-myaccount-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-account-2.png" data-notification-icon="https://cdnsc1.melaleuca.com/na/images/header/icon-notifications2x.png" data-testid="container-siteHeaderActions">
+          <m-cart-icon script-id="CartIconId" data-testid="icon-CartIcon"></m-cart-icon>
+          <script type="application/json" id="CartIconId">
+            {
+              "Labels": {
+                "CartLabel": "View My Cart"
+              },
+              "Data": {
+                "CartUrl": "/?p=pages-cart",
+                "CartTotalItems": "14"
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </header>
+
+
+
+    <div class="bg-gray-25">
+
+
+
+      <p-checkout script-id="CheckoutPage">
+
+
+
+
+
+      </p-checkout>
+
+
+
+
+      <script type="application/json" id="CheckoutPage">
+        {
+          "Labels": {
+            "Concentrated": "Concentrated",
+            "Diluted": "Diluted",
+            "IsCn": true,
+            "BecomeMember": {
+              "Link": {
+                "Target": "",
+                "Text": "Get Started",
+                "Url": "#"
+              },
+              "Title": "Become a Member <span class=\"block leading-tight uppercase font-normal text-3xl md:text-4xl\">and sabe 30-50% off this order!</span>",
+              "Text": "Enjoy all the benefits of being a Member including product discounts, exclusive coupons, a loyalty earning program, and much more."
+            },
+            "CheckoutItem": {
+              "Points": "积分",
+              "Qty": "数量",
+              "OrderBackDateText": "<p class=\"flex text-red text-sm leading-tight my-10\">\r\n  <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\">\r\n    error_outline\r\n  </span>\r\n  <span>\r\n    <span role=\"text\"><strong>注：</strong>您正在订购<span class=\"capitalize\"> {0} </span> 订单.</span>\r\n  </span>\r\n</p>",
+              "Size": "规格",
+              "ReadMoreLabel": "更多",
+              "ReadLessLabel": "收起",
+              "LsdUsedLabel": "已使用消费回馈"
+            },
+            "CheckoutSummary": {
+              "Calculated": "(calculated at next step)",
+              "Pending": "(Pending)",
+              "CcTotal": "便利证书<br />用于此订单",
+              "Coa": "已使用账户余额",
+              "Heading": "订单合计",
+              "ItemTotal": "产品总计",
+              "LsdRedemptionFee": "消费回馈兑换手续费",
+              "LsdTotal": "本单使用消费回馈",
+              "Total": "总计",
+              "SubTotal": "小计",
+              "PlaceOrder": "提交订单",
+              "Points": "积分",
+              "SalesTax": "销售税",
+              "ShippingTaxes": "运费",
+              "Shipping": "Shipping",
+              "ShowMore": "Show More",
+              "AsPreferred": "作为一个优惠顾客，",
+              "YouSaved": "你节省了{0}",
+              "Commitment": "消费承诺",
+              "Free": "",
+              "ProductDiscount": "产品折扣",
+              "FpxTerms": null,
+              "Included": "",
+              "SurchargeMessage": "",
+              "SurchargeAmountFormatted": "$44.50",
+              "WelcomeFreeProductsUsedInThisOrder": null
+            },
+            "Checkout": {
+              "OrderReview": "订单确认",
+              "YourItems": "您的产品",
+              "Edit": "编辑",
+              "GetBy": "得到它",
+              "PayWith": "支付方式",
+              "Shipping": "发货",
+              "ShipTo": "寄送至",
+              "Expires": "过期",
+              "Expired": "已经过期",
+              "NeedInvoice": "默认发票抬头",
+              "ErrorAriaLabel": {
+                "ShippingMethods": "",
+                "ShippingAddresses": "",
+                "PaymentMethods": ""
+              },
+              "PayMethod": "",
+              "ShipMethod": "",
+              "ShippingAddress": "收货地址",
+              "Free": "",
+              "Ok": "确认",
+              "Cancel": "",
+              "DaysOfTheWeek": ["日", "一", "二", "三", "四", "五", "六"],
+              "GetIt": "",
+              "ScheduleDelivery": "",
+              "SelectDeliveryDate": "",
+              "SelectDeliveryMethod": "",
+              "ShippingMethodError": {
+                "ErrorMessage": "",
+                "ModalText": "",
+                "ModalButton": ""
+              },
+              "SelectAddress": "请选择一个地址。",
+              "TermsandConditionsText": "",
+              "TermsandConditionsDetails": "",
+              "Close": "关闭",
+              "Delete": "删除",
+              "SetDefault": "设为默认",
+              "ReimbursedInLsd": "",
+              "NoShippingAddress": "No Shipping address has been selected. Please select a shipping address."
+            },
+            "Coa": {
+              "Apply": "使用",
+              "ApplyAriaLabel": "",
+              "ErrorMessages": {
+                "Empty": "请加一些金额。例如5.50",
+                "MoreThanHave": "使用的金额不得超过您的余额",
+                "MoreThanTotal": "使用的金额不得超过订单总额",
+                "Invalid": "出了点问题。请检查该值。例如5.50"
+              },
+              "Reset": "清零",
+              "ResetAriaLabel": "",
+              "UseCreditAriaLabel": "",
+              "UseCreditOnAccount": "使用账户余额",
+              "YourBalance": "您的余额"
+            },
+            "DeleteAddressModal": {
+              "DeleteAddressHeading": "您确认吗？",
+              "DeleteAddressDetails": "删除该地址将无法撤销。",
+              "DeleteAddressDefaultHeading": "删除默认收货地址",
+              "DeleteAddressDefaultDetails": "您无法删除默认地址",
+              "DeleteAddressSelectedHeading": "删除地址",
+              "DeleteAddressSelectedDetails": "请取消左侧的勾选按钮后，再进行删除操作。",
+              "DeleteAddressSelectedAction": "确认",
+              "Cancel": "取消",
+              "Delete": "删除"
+            },
+            "DeletePayMethodModal": {
+              "DeletePayMethodHeading": "",
+              "DeletePayMethodDetails": "",
+              "DeletePayMethodDefaultHeading": "",
+              "DeletePayMethodDefaultDetails": "",
+              "DeletePayMethodSelectedHeading": "",
+              "DeletePayMethodSelectedDetails": "",
+              "DeletePayMethodSelectedAction": "",
+              "Cancel": "",
+              "Delete": ""
+            },
+            "Shipping": {
+              "ErrorMessages": {
+                "Empty": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>请选择一个地址. </span></p>"
+              }
+            },
+            "CcBalance": {
+              "ConvenienceCertificates": "便利证书",
+              "NewBalance": "新余额"
+            },
+            "Cvv": {
+              "ErrorMessages": {
+                "Empty": "您必须输入CVV/CVV才能继续。",
+                "Invalid": "请输入所选信用卡的有效CVC/CVV"
+              },
+              "Label": "CVV/CVV",
+              "Title": "输入代码",
+              "CvvModal": {
+                "WhatIsThisTitle": "",
+                "CvvModalContent": ""
+              }
+            },
+            "LsdBalance": {
+              "ConvenienceCertificates": "便利证书",
+              "Earned": "本单获得：",
+              "LoyaltyShoppingDollars": "消费回馈",
+              "NewBalance": "消费回馈余额：",
+              "AvailableToActivate": "",
+              "AvailableToSpend": "",
+              "ToSpend": "",
+              "EarnedThisOrder": "",
+              "ExpiringThisMonth": "Expiring This Month:",
+              "Available": "Available:",
+              "Remaining": "Remaining:",
+              "UsedThisOrder": "Used This Order:",
+              "TitleToolTip": "消费回馈提示"
+            },
+            "PaymentFailedModal": {
+              "Cta": "Ok"
+            },
+            "Installments": {
+              "CardSelection": "",
+              "InstallmentPeriod": "",
+              "CardSelectionAriaLabel": "",
+              "InstallmentAriaLabel": "",
+              "CreditCardInstallmentInfo": "",
+              "InstallmentError": "Please make a selection before submitting payment.",
+              "InterestFree": ""
+            },
+            "VirtualPayment": {
+              "CardSelection": "",
+              "CardSelectionError": "",
+              "SelectBank": "",
+              "CashReceipt": "",
+              "IssueNumber": "",
+              "MobileNumber": "",
+              "MobileNumberError": "",
+              "BusinessRegistrationNumber": "",
+              "BusinessRegistrationNumberError": "",
+              "NoticeMessageText": ""
+            },
+            "AccordionModal": {
+              "TermsandConditionsText": "View Terms & Conditions",
+              "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)"
+            },
+            "ServiceFailure": {
+              "GenericFailureMessage": "",
+              "RefreshPage": "",
+              "Title": ""
+            },
+            "InvalidShipping": {
+              "Error": {
+                "ShippingUnavailable": "Unavailable",
+                "ShippingUnavailableLearnWhy": "Learn Why"
+              }
+            },
+            "TermsConditions": {
+              "Checkbox": {
+                "AriaLabel": "By placing this order, I agree to abide by Melaleuca's Terms and Conditions",
+                "Text": "By placing this order, I agree to abide by Melaleuca’s <span class=\"text-green font-bold\">Terms & Conditions.</span>"
+              },
+              "Modal": {
+                "Heading": "Customer Membership Agreement Terms & Conditions",
+                "Body": "<ol><li class=\"pb-15\"><span class=\"font-bold\">1. Payment Authorization:</span> I authorize Melaleuca to charge my credit card or debit the bank account specified in this Agreement for orders I place directly and for any Backup Order. If Melaleuca is unable to collect payment in full from my credit card, I authorize Melaleuca to make multiple attempts to collect for up to 90 days. I agree to pay a $10.00 service fee if a check or charge is dishonored for any reason. I will hold Melaleuca harmless for all special or consequential damages, whether direct or indirect, resulting from any wrongful debit to my account.</li><li class=\"pb-15\"><span class=\"font-bold\">2. Convenience Certificate Redemption:</span> After I have been a Member for six months, I may select Convenience Certificates as my Backup Order and may receive Convenience Certificates as otherwise provided in this Agreement. If I do not redeem a Convenience Certificate within 12 months, the unredeemed balance will be converted to a credit on my account, subject to the terms in the Satisfaction Guarantee paragraph below. Convenience Certificates may be redeemed for product or credit on account, but may not be returned for cash except in certain states.</li><li class=\"pb-15\"><span class=\"font-bold\">3. Resale of Products:</span> I understand Melaleuca’s commitment to product freshness, product safety, and product quality; therefore, I agree that I will not offer Melaleuca products for sale or resale. This obligation will continue even after this Agreement is canceled. Melaleuca shall have the right to prevent any such offers by legal action and, to the extent permitted by law, I will be obligated to pay Melaleuca’s legal fees and costs in connection with any such legal action based upon my violation of this obligation.</li><li class=\"pb-15\"><span class=\"font-bold\">4. Term:</span> The term of this Agreement is one year. This Agreement automatically renews annually on each anniversary date and will remain in effect until: (1) I submit a new signed Customer Membership Agreement, (2) I cancel this Agreement pursuant to the cancellation rights notice herein, or (3) Melaleuca cancels this Agreement upon written notice to me at my address set forth herein, which I agree Melaleuca may do at any time in its sole discretion.</li><li class=\"pb-15\"><span class=\"font-bold\">5. Satisfaction Guarantee:</span> If I am not completely satisfied with any product I purchase from Melaleuca, I may return the unused portion of the product together with a copy of the purchase receipt to Melaleuca within 90 days of the date of purchase and Melaleuca will credit my customer account for the total purchase price of the product. If I have unredeemed credit on my customer account, Melaleuca may make efforts to locate me and advise me in writing of the credit. Melaleuca may continue to make such attempts on a monthly basis and will charge my customer account a $10 service fee for each month’s notification process for as long as I have a credit on account, unless otherwise restricted or prohibited by law.</li><li class=\"pb-15\"><span class=\"font-bold\">6. Refused Orders:</span> If I refuse to accept any products delivered to me in accordance with Melaleuca’s Customer Membership Agreement Terms and Conditions, any future Backup Order Melaleuca sends to me will be a Convenience Certificate of equal value that I can redeem within 12 months at my convenience.</li><li class=\"pb-15\"><span class=\"font-bold\">7. Dispute Resolution:</span> To the extent permitted by applicable law, and unless otherwise expressly agreed to in writing, all claims or disputes of any nature between one or more current or former Customers and Melaleuca (or its officers, shareholders, or employees), if not resolved by mutual agreement, shall be resolved by binding arbitration. Judgment on an award rendered by the arbitrator may be entered in any court having jurisdiction. All issues are for the arbitrator to decide consistent with this Agreement, including issues relating to the scope and enforceability of the arbitration provision, and the arbitrator shall have the power to award damages and injunctive relief. If the costs of arbitration will be prohibitive as compared to the costs of litigation, I agree that Melaleuca will be allowed to pay as much of the filing and hearing fees in connection with the arbitration as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. MELALEUCA AND I AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING OR IN ANY PROCEEDING THAT CONSOLIDATES MORE THAN ONE PERSON’S CLAIMS. MELALEUCA AND I ALSO AGREE THAT, BY ENTERING INTO THIS AGREEMENT, EACH PARTY IS WAIVING THE RIGHT TO A TRIAL BY JURY FOR ALL CLAIMS SUBJECT TO BINDING ARBITRATION. All arbitration hearings shall take place in the State of Idaho. This Agreement shall be governed by the laws of the State of Idaho and the Federal Arbitration Act (“FAA”). If any conflict exists between Idaho law and the FAA, the FAA will govern. This arbitration provision, in whole or in part, shall survive termination, cancellation, or suspension of this Agreement or any provision of this paragraph. In reaching its decision, the arbitrator or the court (a) shall not interpret the meaning of this Agreement or the intent of the parties with respect thereto by reference to any written or oral communications, course of dealing, or extraneous documents or information other than the express terms of this Agreement, as expressly and specifically amended or waived by Melaleuca in accordance with this Agreement; and (b) shall consider Melaleuca’s interpretations of the Melaleuca Agreements (including interpretations of any ambiguous provisions) as final and binding unless such interpretation is shown to be unreasonable by clear and convincing evidence.</li><li class=\"pb-15\"><span class=\"font-bold\">8. Personal Information:</span> I consent to the lawful use by Melaleuca of the personal information contained on this form and information regarding my purchases from Melaleuca, including the disclosure of such content and information to my enroller and his or her Support Team.</li><li class=\"pb-15\"><span class=\"font-bold\">9. Amendments:</span> Upon 30 days notice to Customers, Melaleuca may, at its sole discretion, amend this Customer Membership Agreement. By signing this Agreement, I agree to abide by any and all such amendments and that my only remedy for not accepting any such amendments is to cancel this Agreement prior to the conclusion of the 30-day notification period. My placing of an order 30 days after Melaleuca sends written notice of any amendment will constitute my acceptance of the amendment. I agree that Melaleuca’s interpretation of the Melaleuca Agreements will be final and binding.</li></ol>",
+                "ButtonText": "Close"
+              },
+              "Required": "Required",
+              "Error": "You must agree to the Terms and Conditions to proceed"
+            },
+            "ShippingOnUs": {
+              "More": "More",
+              "Less": "Less",
+              "ShippingBack": "",
+              "Variation1": {
+                "Title": "",
+                "PointsAwayFlat": "",
+                "PointsAway": ""
+              },
+              "Variation2": {
+                "Title": "",
+                "PointsAwayFlat": "",
+                "ThresholdMessage": "",
+                "ThresholdMessageNotGround": ""
+              },
+              "Variation3": {
+                "Title": "",
+                "ThresholdMessage": "",
+                "ThresholdMessageNotGround": ""
+              },
+              "Close": "Close",
+              "CollapsedMessage": ""
+            },
+            "GSTLabel": "",
+            "BankOffline": "{0} (Offline)",
+            "Delivery": {
+              "Delivery": "Delivery",
+              "EstimatedDelivery": "Estimated Delivery",
+              "Explanation": "Orders typically ship the Monday following payment and are delivered that week. Note that your shipping location, payment timing, and holidays may result in a delay that would cause your order ro be delivered the following week."
+            },
+            "ShippingAddress": {
+              "Name": "寄送至："
+            },
+            "PromotionTypes": {
+              "CouponReminder": "",
+              "WebCheckout": "",
+              "Default": ""
+            },
+            "TermsandConditionsText": "",
+            "TermsandConditionsDetails": "",
+            "PayMethodSection": {
+              "Change": "更换",
+              "Close": "关闭",
+              "Continue": "取消",
+              "Delete": "删除",
+              "Edit": "编辑",
+              "NewPayMethod": "",
+              "SetAsDefault": "设为默认",
+              "SavePayMethodNotice": "",
+              "SavePayMethodMoreNotice": "",
+              "CheckingPaperworkError": "<p>To continue using electronic checking, please upload a voided check to our <a href='#' class='underline'>secure server</a>. Checks will be processed within 24-48 hours. To complete your purchase today, please change your method of payment.</p>"
+            },
+            "PaymentForm": {
+              "Culture": "zh-CN",
+              "Header": {
+                "AddNew": "添加新的付款方式",
+                "Edit": "编辑付款方式",
+                "PayMethodType": "银行卡类型",
+                "DebitOrCreditCard": "借记卡/信用卡",
+                "Checking": "检查"
+              },
+              "Card": {
+                "Accepts": "借记卡支持的发卡银行有：支持以下发卡银行：建设银行、工商银行、浦发银行、中国银行、中国邮政储蓄银行、光大银行、中信银行、华夏银行、民生银行。\r\n信用卡支持的发卡银行有：支持以下发卡银行：建设银行、工商银行、浦发银行、中国银行、中国邮政储蓄银行、光大银行、中信银行、华夏银行、民生银行、交通银行、招商银行。",
+                "CardholderName": "姓名",
+                "CardNumber": "卡号",
+                "Expiration": "有效期",
+                "Month": "月",
+                "Year": "年",
+                "Cvc": "CVC/CVV",
+                "BillingZipCode": "账单邮编",
+                "Nickname": "昵称（可选）"
+              },
+              "Checking": {
+                "NameOnAccount": "帐户名称",
+                "AccountType": "帐户类型",
+                "Select": "选择",
+                "RoutingNumber": "路由号码",
+                "AccountNumber": "帐号",
+                "DeleteText": "这将覆盖任何现有的支票帐户信息，并且无法撤消。",
+                "DeleteTitle": "您确定吗？",
+                "AccountTypes": {
+                  "Select": "选择",
+                  "Checking": "检查",
+                  "Savings": "节省款项"
+                }
+              },
+              "DirectDebit": {
+                "CopyFrom": "直接存款副本",
+                "AccountNumber": "帐号",
+                "Bank": "银行",
+                "DirectDebit": "直接借记",
+                "FormAccess": "表单访问",
+                "NameOnAccount": "帐户名称",
+                "Modal": {
+                  "Cancel": "",
+                  "Confirm": ""
+                }
+              },
+              "Frequency": {
+                "SaveAccount": "",
+                "OneTime": ""
+              },
+              "Defaults": {
+                "MakeThisMyDefault": "我同意将以上账户设置为美乐家默认支付账户，在我需使用此默认账户支付备用订单、电话订单和邮购订单的款项时，授权美乐家从该默认支付账户中自动扣除相应货款。",
+                "ProductPurchases": "产品购买",
+                "MarketplaceServices": "市场服务包括身份保护、医疗保健储蓄和美乐家交易",
+                "FutureCharges": "您的付款方式可能会因以后的订单、服务或解决此帐户上的未偿债务而收取。",
+                "RiverbendRanch": "Riverbend Ranch"
+              },
+              "FormSubmit": {
+                "Cancel": "取消",
+                "Save": "保存",
+                "Confirm": "确认",
+                "Download": "下载"
+              },
+              "ErrorMessages": {
+                "ErrorOccured": "发生错误",
+                "FieldRequired": "必填项",
+                "CardholderName": {
+                  "Required": "请输入持卡人姓名",
+                  "Invalid": "Cardholder is invalid",
+                  "MaxLength": "持卡人姓名字段已达到最大字符长度",
+                  "MinLength": "持卡人姓名字段未达到最小字符长度"
+                },
+                "CardNumber": {
+                  "Required": "请输入卡号",
+                  "Integer": "卡号字段仅接受整数",
+                  "Invalid": "您输入的卡号无效",
+                  "MaxLength": "卡号字段已达到最大字符长度",
+                  "MinLength": "卡号字段未达到最小字符长度"
+                },
+                "ExpirationMonth": {
+                  "Required": "请输入有效月份"
+                },
+                "ExpirationYear": {
+                  "Required": "请输入有效年份"
+                },
+                "CVV": {
+                  "Required": "CVC/CVV字段为必填项",
+                  "Integer": "CVC/CVV字段仅接受整数",
+                  "MaxLength": "CVC/CVV字段已达到最大字符长度",
+                  "MinLength": "CVC/CVV字段未达到最小字符长度"
+                },
+                "BillingZipCode": {
+                  "Required": "账单邮编字段为必填项",
+                  "Integer": "账单邮编字段仅接受整数",
+                  "MaxLength": "账单邮编字段已达到最大字符长度",
+                  "MinLength": "账单邮编字段未达到最小字符长度",
+                  "Invalid": ""
+                },
+                "NameOnAccount": {
+                  "Required": "帐户名称字段为必填项",
+                  "Invalid": "Name On Account is inavlid",
+                  "MaxLength": "帐户名称字段已达到最大字符长度",
+                  "MinLength": "帐户名称字段未达到最小字符长度"
+                },
+                "AccountType": {
+                  "Required": "帐户类型字段为必填项"
+                },
+                "RoutingNumber": {
+                  "Required": "路由号码字段为必填项",
+                  "Integer": "路由号码字段仅接受整数",
+                  "MaxLength": "路由号码字段已达到最大字符长度",
+                  "MinLength": "路由号码字段未达到最小字符长度"
+                },
+                "AccountNumber": {
+                  "Required": "帐号字段为必填项",
+                  "Integer": "帐号字段仅接受整数",
+                  "MaxLength": "帐号字段已达到最大字符长度",
+                  "MinLength": "帐号字段未达到最小字符长度"
+                },
+                "Bank": {
+                  "Required": "银行字段为必填项"
+                },
+                "ShouldBeDefault": {
+                  "Required": ""
+                }
+              },
+              "ServerErrorTranslation": [{
+                "Error": "CVVCode",
+                "Translation": "CVV"
+              }, {
+                "Error": "AccountNumberIsNotAMEXCreditCard",
+                "Translation": "卡号不是AMEX信用卡"
+              }, {
+                "Error": "AccountNumberIsNotDiscoverCardCreditCard",
+                "Translation": "卡号不是Discover信用卡"
+              }, {
+                "Error": "AccountNumberIsNotMasterCardCreditCard",
+                "Translation": "卡号不是MasterCard信用卡"
+              }, {
+                "Error": "AccountNumberIsNotVisaCreditCard",
+                "Translation": "卡号不是Visa信用卡"
+              }, {
+                "Error": "AccountNumberMustBeEmpty",
+                "Translation": "卡号必须为空"
+              }, {
+                "Error": "BackupOrderCannotBeInactive",
+                "Translation": "备用订单不能为待激活状态"
+              }, {
+                "Error": "BackupOrderCannotBeOneTimeUse",
+                "Translation": "备用订单不能为一次性使用"
+              }, {
+                "Error": "CannotDeleteDefaultPayMethod",
+                "Translation": "不能删除默认支付方式"
+              }, {
+                "Error": "CustomerCountryNotValidForPayMethod",
+                "Translation": "顾客所在国家对此支付方式无效"
+              }, {
+                "Error": "CustomerIdMustBeGreaterThanZero",
+                "Translation": "顾客ID必须大于零"
+              }, {
+                "Error": "InvalidAccountNumber",
+                "Translation": "Account Number is invalid."
+              }, {
+                "Error": "InValidAccountNumberForACH",
+                "Translation": "ACH无效卡号"
+              }, {
+                "Error": "InValidAccountNumberForCreditCard",
+                "Translation": "无效信用卡号"
+              }, {
+                "Error": "InValidAccountNumberForDirectDebit",
+                "Translation": "无效借记卡号"
+              }, {
+                "Error": "InvalidAchAccountNumberForCanada",
+                "Translation": ""
+              }, {
+                "Error": "InvalidAchAccountNumberForUnitedStates",
+                "Translation": ""
+              }, {
+                "Error": "InvalidAchRoutingNumberForCanada",
+                "Translation": ""
+              }, {
+                "Error": "InvalidAchRoutingNumberForUnitedStates",
+                "Translation": ""
+              }, {
+                "Error": "InvalidCreditCardNumber",
+                "Translation": "Credit Card Number is invalid."
+              }, {
+                "Error": "InvalidCountry",
+                "Translation": ""
+              }, {
+                "Error": "InvalidCustomerNumber",
+                "Translation": "无效客户号"
+              }, {
+                "Error": "InvalidCVV",
+                "Translation": "无效CVV"
+              }, {
+                "Error": "InvalidExpirationDate",
+                "Translation": "无效到期日期"
+              }, {
+                "Error": "InvalidPayMethodDefault",
+                "Translation": "无效默认支付方式"
+              }, {
+                "Error": "InvalidPayMethodDirection",
+                "Translation": "无效支付方式Direction"
+              }, {
+                "Error": "InvalidPayType",
+                "Translation": "无效支付类型"
+              }, {
+                "Error": "InvalidRoutingNumber",
+                "Translation": ""
+              }, {
+                "Error": "MissingAccountNumber",
+                "Translation": "缺少卡号"
+              }, {
+                "Error": "MissingAccountNumberOrRoutingNumberForACH",
+                "Translation": ""
+              }, {
+                "Error": "MissingCVV",
+                "Translation": "缺少CVV"
+              }, {
+                "Error": "PayMethodExpiredCannotbeDefault",
+                "Translation": "无法将过期的支付方式设为默认"
+              }, {
+                "Error": "MissingPayMethodIdForSecure",
+                "Translation": "缺少安全支付方式"
+              }, {
+                "Error": "NoMatchingPayMethodToUpdate",
+                "Translation": "没有匹配的支付方式更新"
+              }, {
+                "Error": "PayMethodACHCheckingCannotbeDefaultForMexico",
+                "Translation": ""
+              }, {
+                "Error": "PayMethodAlreadyExists",
+                "Translation": "您输入的银行卡卡号已存在。"
+              }, {
+                "Error": "PayMethodAlreadyExistsInDifferentAccount",
+                "Translation": "该银行卡已被设置为默认卡，请删除该卡后再重新添加。"
+              }, {
+                "Error": "PayMethodDefaultTypeNotValid",
+                "Translation": "默认支付方式无效"
+              }, {
+                "Error": "PayMethodDirectDebitCannotbeDefaultForUnitedStates",
+                "Translation": ""
+              }, {
+                "Error": "PayMethodDiscoverCardCannotbeDefaultForCanada",
+                "Translation": ""
+              }, {
+                "Error": "PayMethodDiscoverCardCannotbeDefaultForMexico",
+                "Translation": ""
+              }, {
+                "Error": "PayMethodIdMustBeGreaterThanZero",
+                "Translation": "支付方式ID必须大于零"
+              }, {
+                "Error": "PayMethodIdMustBeZero",
+                "Translation": "支付方式必须为零"
+              }, {
+                "Error": "PayMethodIdNotValidForCustomer",
+                "Translation": "顾客的支付方式无效"
+              }, {
+                "Error": "PayMethodIsNotACH",
+                "Translation": "支付方式不是ACH"
+              }, {
+                "Error": "PayMethodIsNotCreditCard",
+                "Translation": "支付方式不是信用卡"
+              }, {
+                "Error": "PayMethodIsNotValidForCountry",
+                "Translation": "支付方式对该国家无效"
+              }, {
+                "Error": "PayMethodOneTimeUseCardsCannotbeDefault",
+                "Translation": "一次性支付方式无法设为默认"
+              }, {
+                "Error": "PayMethodPrePaidCardCannotbeDefault",
+                "Translation": "预付费支付方式无法设为默认"
+              }, {
+                "Error": "Default",
+                "Translation": "服务器错误，请稍后再试。"
+              }]
+            },
+            "Gift": {
+              "GitTitle": "",
+              "GiftCheckbox": "",
+              "GiftMessage": "",
+              "GiftSaveCTA": "",
+              "GiftOptionDescription": "",
+              "GiftMessagePlaceholder": "",
+              "Required": "",
+              "Optional": "",
+              "OptionalDescription": "",
+              "GiftRecipientEmail": "",
+              "GiftRecipientEmailError": "",
+              "GiftRecipientEmailPlaceholder": "",
+              "RecipientNameLabel": "",
+              "RecipientNamePlaceholder": "",
+              "PurchaserNameLabel": "",
+              "PurchaserNamePlaceholder": ""
+            },
+            "CTA": {
+              "Continue": "继续",
+              "Save": "保存",
+              "Cancel": "取消",
+              "CreateAccount": "",
+              "Next": ""
+            },
+            "ShippingSection": {
+              "RecipientName": "收件人姓名",
+              "RecipientNamePlaceholder": "请输入收货人姓名",
+              "RecipientNameRequired": "请填写收货人姓名",
+              "PhonePlaceholder": "请输入收货人手机号",
+              "PhoneNumberInvalidFormat": "手机号码格式无效",
+              "Area": "所在地区",
+              "AreaInvalidFormat": "请输入完整的省，市，区。",
+              "AreaPlaceholder": "请选择所在地区",
+              "AreaRequired": "省-市-区格式错误，请调整。",
+              "StreetAddress": "请填写街道、小区、楼栋号、单元室、门牌号等",
+              "Address1Required": "请填写详细地址",
+              "Zip": "邮政编码",
+              "ZipCodeAlert": "邮政编码需要6位数字",
+              "DefaultShippingAddress": "设为默认收货地址",
+              "Save": "保存",
+              "AddressInvalidFormatDescription": "由于地址系统更新，请调整区域和详细地址的格式。",
+              "ContinueEdit": "继续",
+              "MapCancel": "取消",
+              "MapConfirm": "完成",
+              "LocationSetting": "无法获取您的位置",
+              "LocationConfirm": "完成",
+              "LocationAuthorizationTitle": "授权获取您的位置",
+              "LocationAuthorizationDescription": "您允许美乐家获得您的地址吗？",
+              "LocationAuthorizationCancel": "取消",
+              "LocationAuthorizationConfirm": "允许",
+              "Address1": "详细地址",
+              "Address1Error": "详细地址格式错误",
+              "Address1Placeholder": "请填写街道、小区、楼栋号、单元室、门牌号等",
+              "Address2": "地址2",
+              "Address2Placeholder": "公寓/邮政信箱/房间号/楼号/等",
+              "Address2Error": "地址2为必填项",
+              "Address3": "地址3",
+              "Address3Error": "地址3为必填项",
+              "AddressEntered": "您输入的地址",
+              "AddressNotOnSystem": "此地址目前不在我们的系统中。请先检查地址，并确保地址正确无误，然后再继续。",
+              "ConfirmAddressNotice": "请先检查地址，并确保地址正确无误，然后再继续。",
+              "Back": "返回",
+              "City": "城市",
+              "CityError": "城市为必填项",
+              "CityPlaceholder": "城市名称",
+              "CompanyName": "收件人",
+              "CompanyNamePlaceholder": "",
+              "Country": "国家",
+              "DefaultShipping": "设为默认收货地址",
+              "DeliveryInstructions": "交货说明",
+              "DeliveryInstructionsPlaceholder": "",
+              "Island": "",
+              "IslandError": "",
+              "IslandPlaceholder": "",
+              "Name": "收件人姓名",
+              "NameError": "请填写收货人姓名",
+              "NamePlaceholder": "请输入收货人姓名",
+              "PhoneNumber": "手机号码",
+              "PhoneNumberError": "手机号码格式无效",
+              "PhoneNumberPlaceholder": "请输入收货人手机号",
+              "PhoneNumberAuPlaceholder": "",
+              "PhoneNumberNzPlaceholder": "",
+              "POBoxError": "No PO boxes allowed",
+              "PostalCode": "邮政编码",
+              "PostalCodePlaceholder": "请输入邮编",
+              "PostalCodeError": "邮政编码为必填项",
+              "ProblemWithAddress": "",
+              "Province": "省份",
+              "ProvincePlaceholder": "",
+              "ProvinceError": "省份为必填项",
+              "SectionTitle": "",
+              "State": "州",
+              "StatePlaceholder": "",
+              "StateError": "州为必填项",
+              "Suburb": "郊区",
+              "SuburbError": "郊区为必填项",
+              "SuburbPlaceholder": "",
+              "Suggested": "建议",
+              "SuggestionsInTotal": "",
+              "UseThisAddress": "使用此地址",
+              "VerifyAddressModalTitle": "验证地址",
+              "ZipCode": "邮政编码",
+              "ZipCodeError": "邮政编码为必填项",
+              "Cancel": "取消",
+              "Optional": "{0}（选填）",
+              "MaxCharacterLengthExceedError": "",
+              "ZipCodePlaceholder": "",
+              "NameDisclaimer": "",
+              "DisclaimerDetails": "",
+              "BusinessAddressCheckbox": "",
+              "BusinessAddressCheckboxDisclaimer": "",
+              "AddBusinessAddresss": "",
+              "BusinessPermanentAddress": "",
+              "Change": "更换",
+              "NewDeliveryAddress": "新增收货地址",
+              "FullName": "收件人姓名",
+              "FullNameError": "请填写收件人姓名",
+              "SpecialCharsError": "Address field(s) should not contain multiple special characters.",
+              "CopyPasteError": "Address field(s) do not allow copy and paste nor autofill functionality.",
+              "SelectShippingAddress": "Select a Saved Address",
+              "EnterNewDeliveryAddress": "Enter New Delivery Address"
+            },
+            "AdditionalTaxSummary": {
+              "AdditionalTaxSummaryTitle": "",
+              "IndicateTax": "",
+              "Tax": "",
+              "Tax10": "",
+              "Tax8": "",
+              "TaxTotal": "",
+              "AsteriskSymbol": "",
+              "AdditionalTaxSummaryText": ""
+            },
+            "PackageInformation": {
+              "NoShipMethod": ""
+            },
+            "TaxTotal": "",
+            "ServiceTaxLabel": "{0}% Service Tax",
+            "GUI": {
+              "Title": "GUITitle",
+              "CitizenDigitalCertification": "CitizenDigitalCertification",
+              "Mobile": "Mobile",
+              "MelaleucaMembership": "MelaleucaMembership",
+              "LoveCode": "LoveCode",
+              "LoveCodeWarning": "LoveCodeWarning",
+              "DonationReminder": "DonationReminder"
+            },
+            "AddressPaymethodPromptModel": {
+              "RBPrompt": {
+                "Title": "",
+                "Description": "",
+                "ChangeBoth": "",
+                "ChangeOne": "",
+                "Updated": ""
+              },
+              "NSEPrompt": {
+                "Title": "",
+                "Description": "",
+                "ChangeBoth": "",
+                "ChangeOne": "",
+                "Updated": ""
+              }
+            }
+          },
+          "Data": {
+            "ShowImprovedCTACheckout": true,
+            "ShowPurchaseCommitment": true,
+            "ThreeDSDDCRequestUrl": "https://centinelapistag.cardinalcommerce.com/V1/Cruise/Collect",
+            "ThreeDSDDCListenUrl": "https://centinelapistag.cardinalcommerce.com",
+            "WholeNumbersOnly": false,
+            "RewardTrackerId": "",
+            "ShippingOnUsTrackerId": "",
+            "HideDollarsToActivate": false,
+            "BannerMessages": {
+              "PuertoRicoBannerMessage": ""
+            },
+            "Invoice": {
+              "Name": "isInvoice",
+              "Label": "我需要发票",
+              "Value": false,
+              "Attention": "<span style=\"color: rgb(48, 134, 45);line-height:2\" ><span aria-hidden=\"true\" class=\"material-icons text-sm\">error_outline</span>发票抬头已更改</span>"
+            },
+            "Checkout": {
+              "BackToCartLink": {
+                "Url": "/cart",
+                "Text": " 返回购物车",
+                "Target": ""
+              },
+              "ShippingOnUsKeepShoppingLink": {
+                "Url": "",
+                "Text": "",
+                "Target": ""
+              },
+              "AddPaymentLink": {
+                "Url": "/payment",
+                "Text": "",
+                "Target": ""
+              },
+              "GuestPaymentLink": "#",
+              "AddShippingAddressLink": {
+                "Url": "/my-account/addresses/add-new-shipping-address",
+                "Text": "新增收货地址",
+                "Target": ""
+              },
+              "EditShippingAddressLink": {
+                "Url": "/my-account/addresses/edit-shipping-address",
+                "Text": "",
+                "Target": ""
+              },
+              "ManageShippingAddressLink": {
+                "Url": "/my-account/addresses",
+                "Text": "管理收货地址",
+                "Target": ""
+              },
+              "ManagePayMethodsLink": {
+                "Url": "",
+                "Text": "",
+                "Target": ""
+              },
+              "EditPayMethodsLink": {
+                "Url": "",
+                "Text": "",
+                "Target": ""
+              },
+              "GuestShippingAddressLink": "#",
+              "ReceiptUrl": "/receipt?trackConversion=true&showorderfeedback=true&orderid=",
+              "PageTitle": "结账",
+              "TermsandConditions": "",
+              "EditGUI": {
+                "Url": "",
+                "Text": "",
+                "Target": ""
+              }
+            },
+            "Cvv": {
+              "MinLength": "3",
+              "MaxLength": "4"
+            },
+            "HideSalesTax": false,
+            "RAPDepositModal": {
+              "RAPDepositModalText": ""
+            },
+            "ShippingAndHandling": "",
+            "OrderProcessing": {
+              "OrderProcessingPageLink": {
+                "Url": "/checkout/order-processing-page",
+                "Text": "process",
+                "Target": ""
+              }
+            },
+            "ConvenienceStore": {
+              "ConvenienceStoreLinkLabel": "",
+              "ConvenienceStoreInformation": "",
+              "ConvenienceStoreError": "",
+              "SelectConvenienceStore": ""
+            },
+            "Installments": {
+              "Modal": {
+                "RteContent": "",
+                "RteHeading": ""
+              },
+              "List": [{
+                "Text": "Lump Sum",
+                "Value": "0"
+              }, {
+                "Text": "2 months ",
+                "Value": "1"
+              }, {
+                "Text": "3 months",
+                "Value": "2"
+              }, {
+                "Text": "4 months",
+                "Value": "3"
+              }, {
+                "Text": "5 months",
+                "Value": "4"
+              }, {
+                "Text": "6 months",
+                "Value": "5"
+              }]
+            },
+            "PayMethodExpired": {
+              "Snippets": {
+                "Parameters": null,
+                "Inline": {
+                  "RteContent": "<p class=\"flex text-red text-sm leading-tight my-10\"><span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\">error_outline</span><span>您的默认付款方式已过期。请选择其他付款方式，或 <a href=\"#\" class=\"underline\">单击此处更新默认付款方式。</a></span></p>"
+                }
+              },
+              "Modal": {
+                "RteContent": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-8 leading-base font-bold text-gray-150 md:text-4xl md:font-normal md:leading-base md:mt-0\">您的默认付款方式已过期。</h2><p class=\"text-sm text-gray-120 md:text-gray-100 leading-tight mb-20 pb-2 md:mb-20\">请选择其他付款方式或更新您的默认付款方式。</p>\n",
+                "Data": {
+                  "DifferentPayMethod": "选择不同付款方式",
+                  "UpdatePayMethod": {
+                    "Url": "",
+                    "Text": "更新默认付款方式",
+                    "Arealable": "更新默认付款方式区域标签"
+                  },
+                  "ChoosePayMethod": {
+                    "Url": "",
+                    "Text": "选择不同付款方式",
+                    "Arealable": "选择不同付款方式区域标签"
+                  }
+                },
+                "Labels": null
+              }
+            },
+            "CrossCountryModal": {
+              "Cancel": "",
+              "ContinueToSite": "",
+              "RteDescription": "",
+              "UserCountry": "UnitedStates",
+              "DefaultShippingCountry": "China"
+            },
+            "Easypay": {
+              "Url": "https://productstore2-uatcn.melaleuca.com.cn/mela-service/VirtualCreditCard/GetVirtualCreditCardDetails"
+            },
+            "ShowGSTBelowTotal": false,
+            "UseOrderData": false,
+            "EnableLSDSummaryEnhancement": true,
+            "ShippingSection": {
+              "CurrentCountry": "China",
+              "Regions": []
+            },
+            "PaymentForm": {
+              "Culture": "zh-CN",
+              "CustomerId": 616640603,
+              "Token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE3MTY0NDQwNDUsImV4cCI6MTcxNjQ0NzY0NSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YWNuLm1lbGFsZXVjYS5jb20uY24iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiTFNELkFQSSIsIk9yZGVyLkFQSSIsIk9yZ2FuaXphdGlvbi5BUEkiLCJQYXlNZXRob2QuQVBJIiwiUHJvZHVjdC5BUEkiLCJQcm9tb3Rpb24uQVBJIiwiU3Vic2NyaWJlZFNlcnZpY2VzLkFQSSJdLCJjbGllbnRfaWQiOiJtZWxhbGV1Y2Etc2l0ZWNvcmUtZGV2IiwianRpIjoiRDNFMUQ0N0Q5QkRFRjBEMDI0NzI2N0FCNUY4RkY3OTMiLCJpYXQiOjE3MTY0NDQwNDUsInNjb3BlIjpbIkFkZHJlc3MuQVBJLkZ1bGwiLCJCYWNrdXBPcmRlci5BUEkuRnVsbCIsIkNvbW11bmljYXRpb24uQVBJLkZ1bGwiLCJDdXN0b21lckFjY291bnQuQVBJLkZ1bGwiLCJERVBJbnRlcmZhY2UuQVBJLkZ1bGwiLCJEb2N1bWVudC5BUEkuRnVsbCIsIkxTRC5BUEkuRnVsbCIsIk9yZGVyLkFQSS5GdWxsIiwiT3JnYW5pemF0aW9uLkFQSS5GdWxsIiwiUGF5TWV0aG9kLkFQSS5GdWxsIiwiUHJvZHVjdC5BUEkuRnVsbCIsIlByb21vdGlvbi5BUEkuRnVsbCIsIlN1YnNjcmliZWRTZXJ2aWNlcy5BUEkuRnVsbCJdfQ.IoBTQHxE7tfewkSTKLG9mjGRxtR0hKrA11NqaoEoV9FSfb_h4Z9pD5pFd99fCiaAkjfTOOKhTTiEJ-a8KoHaWJq3BPLWNpJQANW5wxU6mObpIib3ImeLwf-unEEwhW1DeyOau_-BcYYkvzNBMIMJbmhmpzvmD4HUp6PmZKrwHXj2BI9xlBxfMv4hCXQCjejgfceJRllD4WmsplBzuweufCeorPvvaYru0_Y0Mq9i0fTBGcz6qFRoOFa2uYaxnYdraMaQeYI5CSobSA8VgExYCn8bx7wR6rv91sB9EwjJazZNEC9J4n0OKYPK5vP1iZ_jJ0MV8CMwMtvA_deJS8C_ug",
+              "Username": null,
+              "CustomerName": "stevenuatest ",
+              "Country": "China",
+              "DirectDebit": {
+                "FormAccess": "",
+                "FormAccessLink": {
+                  "Url": "",
+                  "Text": "",
+                  "Target": ""
+                },
+                "Modal": {
+                  "RTE": ""
+                }
+              },
+              "CustomerConnectingIP": "27.115.54.74"
+            },
+            "PolandWireTransfer": {
+              "PolandWireTransferMessage": ""
+            },
+            "ExternalPayment": {
+              "ExternalPaymentPageLink": {
+                "Url": "/payment",
+                "Text": "",
+                "Target": ""
+              }
+            },
+            "IsCrossCountryEnabled": false,
+            "RiverbendEnableGift": false,
+            "RiverbendPaymethodAddressPrompt": false,
+            "NoticeAndBanner": {
+              "NotReachedCommitment": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "NotQualifiedLvip": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您未达到升级LVIP金卡条件。</div>\n<a class=\"block  text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "NotMaintainLvip": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到尊荣金卡消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "NRCAndNQL": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到消费承诺和升级LVIP条件。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "NRCAndNML": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到优惠顾客和LVIP银/金/白金卡消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "NotQualifiedShippingFee": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您未达到运费返还条件。</div>\n<a class=\"block  text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+              },
+              "ShippingFeeRefund": {
+                "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您的运费可返还。</div>\n</div>\n</div>"
+              }
+            },
+            "ShippingFee": {
+              "Value": 390
+            },
+            "ShowGSTInOrderSummary": false,
+            "HideExpiringThisMonth": false,
+            "HideShipMethod": false,
+            "Coa": {
+              "ShowCurrency": false
+            },
+            "VAT": {
+              "VATInlineSummaryLabel": "",
+              "VATSubText": "",
+              "VATLinkText": "",
+              "VATDescription": "",
+              "VATPopupModal": {
+                "HeaderText": "",
+                "Close": "",
+                "GrandTotal": "",
+                "VATPopupSubTotal": "",
+                "VATPopupTaxTotal": ""
+              },
+              "ShowVATPopup": false,
+              "ShowVATInOrderSummary": false
+            },
+            "IsCorporate": false,
+            "ShowGui": false,
+            "ValidateMaxCharLength": false,
+            "PreventCopyPasteFeature": false,
+            "ValidateAddressFeatureFlag": false,
+            "UseOleShippingAddressFeatureFlag": true,
+            "UpdateShippingOptionFeatureFlag": true,
+            "NotAutoFillRecipientNameFeatureFlag": true,
+            "NotCopyBusinessAddressFeatureFlag": true,
+            "IsDirectDebitAForm": false,
+            "ShowVatBelowTotal": false
+          }
+        }
+      </script>
+
+
+
+
+      <script type="application/json" id="accordionModal">
+        {
+          "Labels": {
+            "TermsandConditionsText": "View Terms & Conditions",
+            "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)",
+            "CloseButtonText": "Close"
+          },
+          "Data": {
+            "Accordions": [{
+              "GtmId": "1234",
+              "Title": "Accordion 1 Title",
+              "Description": "Lorem ipsum dolor sit amet"
+            }, {
+              "GtmId": "12436",
+              "Title": "Accordion 2 Title",
+              "Description": "<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h2> accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.<br/>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+            }, {
+              "GtmId": "12364",
+              "Title": "Accordion 3 Title",
+              "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            }],
+            "AccordionTitle": "Terms and condition accordion title text here."
+          }
+        }
+      </script>
+
+
+
+    </div>
+
+    <script type="application/json" id="CheckoutPage">
+      {
+        "Labels": {
+          "Concentrated": "Concentrated",
+          "Diluted": "Diluted",
+          "IsCn": true,
+          "BecomeMember": {
+            "Link": {
+              "Target": "",
+              "Text": "Get Started",
+              "Url": "#"
+            },
+            "Title": "Become a Member <span class=\"block leading-tight uppercase font-normal text-3xl md:text-4xl\">and sabe 30-50% off this order!</span>",
+            "Text": "Enjoy all the benefits of being a Member including product discounts, exclusive coupons, a loyalty earning program, and much more."
+          },
+          "CheckoutItem": {
+            "Points": "积分",
+            "Qty": "数量",
+            "OrderBackDateText": "<p class=\"flex text-red text-sm leading-tight my-10\">\r\n  <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\">\r\n    error_outline\r\n  </span>\r\n  <span>\r\n    <span role=\"text\"><strong>注：</strong>您正在订购<span class=\"capitalize\"> {0} </span> 订单.</span>\r\n  </span>\r\n</p>",
+            "Size": "规格",
+            "ReadMoreLabel": "更多",
+            "ReadLessLabel": "收起",
+            "LsdUsedLabel": "已使用消费回馈"
+          },
+          "CheckoutSummary": {
+            "Calculated": "(calculated at next step)",
+            "Pending": "(Pending)",
+            "CcTotal": "便利证书<br />用于此订单",
+            "Coa": "已使用账户余额",
+            "Heading": "订单合计",
+            "ItemTotal": "产品总计",
+            "LsdRedemptionFee": "消费回馈兑换手续费",
+            "LsdTotal": "本单使用消费回馈",
+            "Total": "总计",
+            "SubTotal": "小计",
+            "PlaceOrder": "提交订单",
+            "Points": "积分",
+            "SalesTax": "销售税",
+            "ShippingTaxes": "运费",
+            "Shipping": "Shipping",
+            "ShowMore": "Show More",
+            "AsPreferred": "作为一个优惠顾客，",
+            "YouSaved": "你节省了{0}",
+            "Commitment": "消费承诺",
+            "Free": "",
+            "ProductDiscount": "产品折扣",
+            "FpxTerms": null,
+            "Included": "",
+            "SurchargeMessage": "",
+            "SurchargeAmountFormatted": "$44.50",
+            "WelcomeFreeProductsUsedInThisOrder": null
+          },
+          "Checkout": {
+            "OrderReview": "订单确认",
+            "YourItems": "您的产品",
+            "Edit": "编辑",
+            "GetBy": "得到它",
+            "PayWith": "支付方式",
+            "Shipping": "发货",
+            "ShipTo": "寄送至",
+            "Expires": "过期",
+            "Expired": "已经过期",
+            "NeedInvoice": "默认发票抬头",
+            "ErrorAriaLabel": {
+              "ShippingMethods": "",
+              "ShippingAddresses": "",
+              "PaymentMethods": ""
+            },
+            "PayMethod": "",
+            "ShipMethod": "",
+            "ShippingAddress": "收货地址",
+            "Free": "",
+            "Ok": "确认",
+            "Cancel": "",
+            "DaysOfTheWeek": ["日", "一", "二", "三", "四", "五", "六"],
+            "GetIt": "",
+            "ScheduleDelivery": "",
+            "SelectDeliveryDate": "",
+            "SelectDeliveryMethod": "",
+            "ShippingMethodError": {
+              "ErrorMessage": "",
+              "ModalText": "",
+              "ModalButton": ""
+            },
+            "SelectAddress": "请选择一个地址。",
+            "TermsandConditionsText": "",
+            "TermsandConditionsDetails": "",
+            "Close": "关闭",
+            "Delete": "删除",
+            "SetDefault": "设为默认",
+            "ReimbursedInLsd": "",
+            "NoShippingAddress": "No Shipping address has been selected. Please select a shipping address."
+          },
+          "Coa": {
+            "Apply": "使用",
+            "ApplyAriaLabel": "",
+            "ErrorMessages": {
+              "Empty": "请加一些金额。例如5.50",
+              "MoreThanHave": "使用的金额不得超过您的余额",
+              "MoreThanTotal": "使用的金额不得超过订单总额",
+              "Invalid": "出了点问题。请检查该值。例如5.50"
+            },
+            "Reset": "清零",
+            "ResetAriaLabel": "",
+            "UseCreditAriaLabel": "",
+            "UseCreditOnAccount": "使用账户余额",
+            "YourBalance": "您的余额"
+          },
+          "DeleteAddressModal": {
+            "DeleteAddressHeading": "您确认吗？",
+            "DeleteAddressDetails": "删除该地址将无法撤销。",
+            "DeleteAddressDefaultHeading": "删除默认收货地址",
+            "DeleteAddressDefaultDetails": "您无法删除默认地址",
+            "DeleteAddressSelectedHeading": "删除地址",
+            "DeleteAddressSelectedDetails": "请取消左侧的勾选按钮后，再进行删除操作。",
+            "DeleteAddressSelectedAction": "确认",
+            "Cancel": "取消",
+            "Delete": "删除"
+          },
+          "DeletePayMethodModal": {
+            "DeletePayMethodHeading": "",
+            "DeletePayMethodDetails": "",
+            "DeletePayMethodDefaultHeading": "",
+            "DeletePayMethodDefaultDetails": "",
+            "DeletePayMethodSelectedHeading": "",
+            "DeletePayMethodSelectedDetails": "",
+            "DeletePayMethodSelectedAction": "",
+            "Cancel": "",
+            "Delete": ""
+          },
+          "Shipping": {
+            "ErrorMessages": {
+              "Empty": "<p class=\"flex text-red text-sm leading-tight my-10\"> <span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\"> error_outline </span> <span>请选择一个地址. </span></p>"
+            }
+          },
+          "CcBalance": {
+            "ConvenienceCertificates": "便利证书",
+            "NewBalance": "新余额"
+          },
+          "Cvv": {
+            "ErrorMessages": {
+              "Empty": "您必须输入CVV/CVV才能继续。",
+              "Invalid": "请输入所选信用卡的有效CVC/CVV"
+            },
+            "Label": "CVV/CVV",
+            "Title": "输入代码",
+            "CvvModal": {
+              "WhatIsThisTitle": "",
+              "CvvModalContent": ""
+            }
+          },
+          "LsdBalance": {
+            "ConvenienceCertificates": "便利证书",
+            "Earned": "本单获得：",
+            "LoyaltyShoppingDollars": "消费回馈",
+            "NewBalance": "消费回馈余额：",
+            "AvailableToActivate": "",
+            "AvailableToSpend": "",
+            "ToSpend": "",
+            "EarnedThisOrder": "",
+            "ExpiringThisMonth": "Expiring This Month:",
+            "Available": "Available:",
+            "Remaining": "Remaining:",
+            "UsedThisOrder": "Used This Order:",
+            "TitleToolTip": "消费回馈提示"
+          },
+          "PaymentFailedModal": {
+            "Cta": "Ok"
+          },
+          "Installments": {
+            "CardSelection": "",
+            "InstallmentPeriod": "",
+            "CardSelectionAriaLabel": "",
+            "InstallmentAriaLabel": "",
+            "CreditCardInstallmentInfo": "",
+            "InstallmentError": "Please make a selection before submitting payment.",
+            "InterestFree": ""
+          },
+          "VirtualPayment": {
+            "CardSelection": "",
+            "CardSelectionError": "",
+            "SelectBank": "",
+            "CashReceipt": "",
+            "IssueNumber": "",
+            "MobileNumber": "",
+            "MobileNumberError": "",
+            "BusinessRegistrationNumber": "",
+            "BusinessRegistrationNumberError": "",
+            "NoticeMessageText": ""
+          },
+          "AccordionModal": {
+            "TermsandConditionsText": "View Terms & Conditions",
+            "TermsandConditionsDetails": "I have checked all other items, prices, shipping information and discount information and agree purchase.(E-commerce Act Article 8, Pragraph 2)"
+          },
+          "ServiceFailure": {
+            "GenericFailureMessage": "",
+            "RefreshPage": "",
+            "Title": ""
+          },
+          "InvalidShipping": {
+            "Error": {
+              "ShippingUnavailable": "Unavailable",
+              "ShippingUnavailableLearnWhy": "Learn Why"
+            }
+          },
+          "TermsConditions": {
+            "Checkbox": {
+              "AriaLabel": "By placing this order, I agree to abide by Melaleuca's Terms and Conditions",
+              "Text": "By placing this order, I agree to abide by Melaleuca’s <span class=\"text-green font-bold\">Terms & Conditions.</span>"
+            },
+            "Modal": {
+              "Heading": "Customer Membership Agreement Terms & Conditions",
+              "Body": "<ol><li class=\"pb-15\"><span class=\"font-bold\">1. Payment Authorization:</span> I authorize Melaleuca to charge my credit card or debit the bank account specified in this Agreement for orders I place directly and for any Backup Order. If Melaleuca is unable to collect payment in full from my credit card, I authorize Melaleuca to make multiple attempts to collect for up to 90 days. I agree to pay a $10.00 service fee if a check or charge is dishonored for any reason. I will hold Melaleuca harmless for all special or consequential damages, whether direct or indirect, resulting from any wrongful debit to my account.</li><li class=\"pb-15\"><span class=\"font-bold\">2. Convenience Certificate Redemption:</span> After I have been a Member for six months, I may select Convenience Certificates as my Backup Order and may receive Convenience Certificates as otherwise provided in this Agreement. If I do not redeem a Convenience Certificate within 12 months, the unredeemed balance will be converted to a credit on my account, subject to the terms in the Satisfaction Guarantee paragraph below. Convenience Certificates may be redeemed for product or credit on account, but may not be returned for cash except in certain states.</li><li class=\"pb-15\"><span class=\"font-bold\">3. Resale of Products:</span> I understand Melaleuca’s commitment to product freshness, product safety, and product quality; therefore, I agree that I will not offer Melaleuca products for sale or resale. This obligation will continue even after this Agreement is canceled. Melaleuca shall have the right to prevent any such offers by legal action and, to the extent permitted by law, I will be obligated to pay Melaleuca’s legal fees and costs in connection with any such legal action based upon my violation of this obligation.</li><li class=\"pb-15\"><span class=\"font-bold\">4. Term:</span> The term of this Agreement is one year. This Agreement automatically renews annually on each anniversary date and will remain in effect until: (1) I submit a new signed Customer Membership Agreement, (2) I cancel this Agreement pursuant to the cancellation rights notice herein, or (3) Melaleuca cancels this Agreement upon written notice to me at my address set forth herein, which I agree Melaleuca may do at any time in its sole discretion.</li><li class=\"pb-15\"><span class=\"font-bold\">5. Satisfaction Guarantee:</span> If I am not completely satisfied with any product I purchase from Melaleuca, I may return the unused portion of the product together with a copy of the purchase receipt to Melaleuca within 90 days of the date of purchase and Melaleuca will credit my customer account for the total purchase price of the product. If I have unredeemed credit on my customer account, Melaleuca may make efforts to locate me and advise me in writing of the credit. Melaleuca may continue to make such attempts on a monthly basis and will charge my customer account a $10 service fee for each month’s notification process for as long as I have a credit on account, unless otherwise restricted or prohibited by law.</li><li class=\"pb-15\"><span class=\"font-bold\">6. Refused Orders:</span> If I refuse to accept any products delivered to me in accordance with Melaleuca’s Customer Membership Agreement Terms and Conditions, any future Backup Order Melaleuca sends to me will be a Convenience Certificate of equal value that I can redeem within 12 months at my convenience.</li><li class=\"pb-15\"><span class=\"font-bold\">7. Dispute Resolution:</span> To the extent permitted by applicable law, and unless otherwise expressly agreed to in writing, all claims or disputes of any nature between one or more current or former Customers and Melaleuca (or its officers, shareholders, or employees), if not resolved by mutual agreement, shall be resolved by binding arbitration. Judgment on an award rendered by the arbitrator may be entered in any court having jurisdiction. All issues are for the arbitrator to decide consistent with this Agreement, including issues relating to the scope and enforceability of the arbitration provision, and the arbitrator shall have the power to award damages and injunctive relief. If the costs of arbitration will be prohibitive as compared to the costs of litigation, I agree that Melaleuca will be allowed to pay as much of the filing and hearing fees in connection with the arbitration as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive. MELALEUCA AND I AGREE THAT EACH PARTY MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING OR IN ANY PROCEEDING THAT CONSOLIDATES MORE THAN ONE PERSON’S CLAIMS. MELALEUCA AND I ALSO AGREE THAT, BY ENTERING INTO THIS AGREEMENT, EACH PARTY IS WAIVING THE RIGHT TO A TRIAL BY JURY FOR ALL CLAIMS SUBJECT TO BINDING ARBITRATION. All arbitration hearings shall take place in the State of Idaho. This Agreement shall be governed by the laws of the State of Idaho and the Federal Arbitration Act (“FAA”). If any conflict exists between Idaho law and the FAA, the FAA will govern. This arbitration provision, in whole or in part, shall survive termination, cancellation, or suspension of this Agreement or any provision of this paragraph. In reaching its decision, the arbitrator or the court (a) shall not interpret the meaning of this Agreement or the intent of the parties with respect thereto by reference to any written or oral communications, course of dealing, or extraneous documents or information other than the express terms of this Agreement, as expressly and specifically amended or waived by Melaleuca in accordance with this Agreement; and (b) shall consider Melaleuca’s interpretations of the Melaleuca Agreements (including interpretations of any ambiguous provisions) as final and binding unless such interpretation is shown to be unreasonable by clear and convincing evidence.</li><li class=\"pb-15\"><span class=\"font-bold\">8. Personal Information:</span> I consent to the lawful use by Melaleuca of the personal information contained on this form and information regarding my purchases from Melaleuca, including the disclosure of such content and information to my enroller and his or her Support Team.</li><li class=\"pb-15\"><span class=\"font-bold\">9. Amendments:</span> Upon 30 days notice to Customers, Melaleuca may, at its sole discretion, amend this Customer Membership Agreement. By signing this Agreement, I agree to abide by any and all such amendments and that my only remedy for not accepting any such amendments is to cancel this Agreement prior to the conclusion of the 30-day notification period. My placing of an order 30 days after Melaleuca sends written notice of any amendment will constitute my acceptance of the amendment. I agree that Melaleuca’s interpretation of the Melaleuca Agreements will be final and binding.</li></ol>",
+              "ButtonText": "Close"
+            },
+            "Required": "Required",
+            "Error": "You must agree to the Terms and Conditions to proceed"
+          },
+          "ShippingOnUs": {
+            "More": "More",
+            "Less": "Less",
+            "ShippingBack": "",
+            "Variation1": {
+              "Title": "",
+              "PointsAwayFlat": "",
+              "PointsAway": ""
+            },
+            "Variation2": {
+              "Title": "",
+              "PointsAwayFlat": "",
+              "ThresholdMessage": "",
+              "ThresholdMessageNotGround": ""
+            },
+            "Variation3": {
+              "Title": "",
+              "ThresholdMessage": "",
+              "ThresholdMessageNotGround": ""
+            },
+            "Close": "Close",
+            "CollapsedMessage": ""
+          },
+          "GSTLabel": "",
+          "BankOffline": "{0} (Offline)",
+          "Delivery": {
+            "Delivery": "Delivery",
+            "EstimatedDelivery": "Estimated Delivery",
+            "Explanation": "Orders typically ship the Monday following payment and are delivered that week. Note that your shipping location, payment timing, and holidays may result in a delay that would cause your order ro be delivered the following week."
+          },
+          "ShippingAddress": {
+            "Name": "寄送至："
+          },
+          "PromotionTypes": {
+            "CouponReminder": "",
+            "WebCheckout": "",
+            "Default": ""
+          },
+          "TermsandConditionsText": "",
+          "TermsandConditionsDetails": "",
+          "PayMethodSection": {
+            "Change": "更换",
+            "Close": "关闭",
+            "Continue": "取消",
+            "Delete": "删除",
+            "Edit": "编辑",
+            "NewPayMethod": "",
+            "SetAsDefault": "设为默认",
+            "SavePayMethodNotice": "",
+            "SavePayMethodMoreNotice": "",
+            "CheckingPaperworkError": "<p>To continue using electronic checking, please upload a voided check to our <a href='#' class='underline'>secure server</a>. Checks will be processed within 24-48 hours. To complete your purchase today, please change your method of payment.</p>"
+          },
+          "PaymentForm": {
+            "Culture": "zh-CN",
+            "Header": {
+              "AddNew": "添加新的付款方式",
+              "Edit": "编辑付款方式",
+              "PayMethodType": "银行卡类型",
+              "DebitOrCreditCard": "借记卡/信用卡",
+              "Checking": "检查"
+            },
+            "Card": {
+              "Accepts": "借记卡支持的发卡银行有：支持以下发卡银行：建设银行、工商银行、浦发银行、中国银行、中国邮政储蓄银行、光大银行、中信银行、华夏银行、民生银行。\r\n信用卡支持的发卡银行有：支持以下发卡银行：建设银行、工商银行、浦发银行、中国银行、中国邮政储蓄银行、光大银行、中信银行、华夏银行、民生银行、交通银行、招商银行。",
+              "CardholderName": "姓名",
+              "CardNumber": "卡号",
+              "Expiration": "有效期",
+              "Month": "月",
+              "Year": "年",
+              "Cvc": "CVC/CVV",
+              "BillingZipCode": "账单邮编",
+              "Nickname": "昵称（可选）"
+            },
+            "Checking": {
+              "NameOnAccount": "帐户名称",
+              "AccountType": "帐户类型",
+              "Select": "选择",
+              "RoutingNumber": "路由号码",
+              "AccountNumber": "帐号",
+              "DeleteText": "这将覆盖任何现有的支票帐户信息，并且无法撤消。",
+              "DeleteTitle": "您确定吗？",
+              "AccountTypes": {
+                "Select": "选择",
+                "Checking": "检查",
+                "Savings": "节省款项"
+              }
+            },
+            "DirectDebit": {
+              "CopyFrom": "直接存款副本",
+              "AccountNumber": "帐号",
+              "Bank": "银行",
+              "DirectDebit": "直接借记",
+              "FormAccess": "表单访问",
+              "NameOnAccount": "帐户名称",
+              "Modal": {
+                "Cancel": "",
+                "Confirm": ""
+              }
+            },
+            "Frequency": {
+              "SaveAccount": "",
+              "OneTime": ""
+            },
+            "Defaults": {
+              "MakeThisMyDefault": "我同意将以上账户设置为美乐家默认支付账户，在我需使用此默认账户支付备用订单、电话订单和邮购订单的款项时，授权美乐家从该默认支付账户中自动扣除相应货款。",
+              "ProductPurchases": "产品购买",
+              "MarketplaceServices": "市场服务包括身份保护、医疗保健储蓄和美乐家交易",
+              "FutureCharges": "您的付款方式可能会因以后的订单、服务或解决此帐户上的未偿债务而收取。",
+              "RiverbendRanch": "Riverbend Ranch"
+            },
+            "FormSubmit": {
+              "Cancel": "取消",
+              "Save": "保存",
+              "Confirm": "确认",
+              "Download": "下载"
+            },
+            "ErrorMessages": {
+              "ErrorOccured": "发生错误",
+              "FieldRequired": "必填项",
+              "CardholderName": {
+                "Required": "请输入持卡人姓名",
+                "Invalid": "Cardholder is invalid",
+                "MaxLength": "持卡人姓名字段已达到最大字符长度",
+                "MinLength": "持卡人姓名字段未达到最小字符长度"
+              },
+              "CardNumber": {
+                "Required": "请输入卡号",
+                "Integer": "卡号字段仅接受整数",
+                "Invalid": "您输入的卡号无效",
+                "MaxLength": "卡号字段已达到最大字符长度",
+                "MinLength": "卡号字段未达到最小字符长度"
+              },
+              "ExpirationMonth": {
+                "Required": "请输入有效月份"
+              },
+              "ExpirationYear": {
+                "Required": "请输入有效年份"
+              },
+              "CVV": {
+                "Required": "CVC/CVV字段为必填项",
+                "Integer": "CVC/CVV字段仅接受整数",
+                "MaxLength": "CVC/CVV字段已达到最大字符长度",
+                "MinLength": "CVC/CVV字段未达到最小字符长度"
+              },
+              "BillingZipCode": {
+                "Required": "账单邮编字段为必填项",
+                "Integer": "账单邮编字段仅接受整数",
+                "MaxLength": "账单邮编字段已达到最大字符长度",
+                "MinLength": "账单邮编字段未达到最小字符长度",
+                "Invalid": ""
+              },
+              "NameOnAccount": {
+                "Required": "帐户名称字段为必填项",
+                "Invalid": "Name On Account is inavlid",
+                "MaxLength": "帐户名称字段已达到最大字符长度",
+                "MinLength": "帐户名称字段未达到最小字符长度"
+              },
+              "AccountType": {
+                "Required": "帐户类型字段为必填项"
+              },
+              "RoutingNumber": {
+                "Required": "路由号码字段为必填项",
+                "Integer": "路由号码字段仅接受整数",
+                "MaxLength": "路由号码字段已达到最大字符长度",
+                "MinLength": "路由号码字段未达到最小字符长度"
+              },
+              "AccountNumber": {
+                "Required": "帐号字段为必填项",
+                "Integer": "帐号字段仅接受整数",
+                "MaxLength": "帐号字段已达到最大字符长度",
+                "MinLength": "帐号字段未达到最小字符长度"
+              },
+              "Bank": {
+                "Required": "银行字段为必填项"
+              },
+              "ShouldBeDefault": {
+                "Required": ""
+              }
+            },
+            "ServerErrorTranslation": [{
+              "Error": "CVVCode",
+              "Translation": "CVV"
+            }, {
+              "Error": "AccountNumberIsNotAMEXCreditCard",
+              "Translation": "卡号不是AMEX信用卡"
+            }, {
+              "Error": "AccountNumberIsNotDiscoverCardCreditCard",
+              "Translation": "卡号不是Discover信用卡"
+            }, {
+              "Error": "AccountNumberIsNotMasterCardCreditCard",
+              "Translation": "卡号不是MasterCard信用卡"
+            }, {
+              "Error": "AccountNumberIsNotVisaCreditCard",
+              "Translation": "卡号不是Visa信用卡"
+            }, {
+              "Error": "AccountNumberMustBeEmpty",
+              "Translation": "卡号必须为空"
+            }, {
+              "Error": "BackupOrderCannotBeInactive",
+              "Translation": "备用订单不能为待激活状态"
+            }, {
+              "Error": "BackupOrderCannotBeOneTimeUse",
+              "Translation": "备用订单不能为一次性使用"
+            }, {
+              "Error": "CannotDeleteDefaultPayMethod",
+              "Translation": "不能删除默认支付方式"
+            }, {
+              "Error": "CustomerCountryNotValidForPayMethod",
+              "Translation": "顾客所在国家对此支付方式无效"
+            }, {
+              "Error": "CustomerIdMustBeGreaterThanZero",
+              "Translation": "顾客ID必须大于零"
+            }, {
+              "Error": "InvalidAccountNumber",
+              "Translation": "Account Number is invalid."
+            }, {
+              "Error": "InValidAccountNumberForACH",
+              "Translation": "ACH无效卡号"
+            }, {
+              "Error": "InValidAccountNumberForCreditCard",
+              "Translation": "无效信用卡号"
+            }, {
+              "Error": "InValidAccountNumberForDirectDebit",
+              "Translation": "无效借记卡号"
+            }, {
+              "Error": "InvalidAchAccountNumberForCanada",
+              "Translation": ""
+            }, {
+              "Error": "InvalidAchAccountNumberForUnitedStates",
+              "Translation": ""
+            }, {
+              "Error": "InvalidAchRoutingNumberForCanada",
+              "Translation": ""
+            }, {
+              "Error": "InvalidAchRoutingNumberForUnitedStates",
+              "Translation": ""
+            }, {
+              "Error": "InvalidCreditCardNumber",
+              "Translation": "Credit Card Number is invalid."
+            }, {
+              "Error": "InvalidCountry",
+              "Translation": ""
+            }, {
+              "Error": "InvalidCustomerNumber",
+              "Translation": "无效客户号"
+            }, {
+              "Error": "InvalidCVV",
+              "Translation": "无效CVV"
+            }, {
+              "Error": "InvalidExpirationDate",
+              "Translation": "无效到期日期"
+            }, {
+              "Error": "InvalidPayMethodDefault",
+              "Translation": "无效默认支付方式"
+            }, {
+              "Error": "InvalidPayMethodDirection",
+              "Translation": "无效支付方式Direction"
+            }, {
+              "Error": "InvalidPayType",
+              "Translation": "无效支付类型"
+            }, {
+              "Error": "InvalidRoutingNumber",
+              "Translation": ""
+            }, {
+              "Error": "MissingAccountNumber",
+              "Translation": "缺少卡号"
+            }, {
+              "Error": "MissingAccountNumberOrRoutingNumberForACH",
+              "Translation": ""
+            }, {
+              "Error": "MissingCVV",
+              "Translation": "缺少CVV"
+            }, {
+              "Error": "PayMethodExpiredCannotbeDefault",
+              "Translation": "无法将过期的支付方式设为默认"
+            }, {
+              "Error": "MissingPayMethodIdForSecure",
+              "Translation": "缺少安全支付方式"
+            }, {
+              "Error": "NoMatchingPayMethodToUpdate",
+              "Translation": "没有匹配的支付方式更新"
+            }, {
+              "Error": "PayMethodACHCheckingCannotbeDefaultForMexico",
+              "Translation": ""
+            }, {
+              "Error": "PayMethodAlreadyExists",
+              "Translation": "您输入的银行卡卡号已存在。"
+            }, {
+              "Error": "PayMethodAlreadyExistsInDifferentAccount",
+              "Translation": "该银行卡已被设置为默认卡，请删除该卡后再重新添加。"
+            }, {
+              "Error": "PayMethodDefaultTypeNotValid",
+              "Translation": "默认支付方式无效"
+            }, {
+              "Error": "PayMethodDirectDebitCannotbeDefaultForUnitedStates",
+              "Translation": ""
+            }, {
+              "Error": "PayMethodDiscoverCardCannotbeDefaultForCanada",
+              "Translation": ""
+            }, {
+              "Error": "PayMethodDiscoverCardCannotbeDefaultForMexico",
+              "Translation": ""
+            }, {
+              "Error": "PayMethodIdMustBeGreaterThanZero",
+              "Translation": "支付方式ID必须大于零"
+            }, {
+              "Error": "PayMethodIdMustBeZero",
+              "Translation": "支付方式必须为零"
+            }, {
+              "Error": "PayMethodIdNotValidForCustomer",
+              "Translation": "顾客的支付方式无效"
+            }, {
+              "Error": "PayMethodIsNotACH",
+              "Translation": "支付方式不是ACH"
+            }, {
+              "Error": "PayMethodIsNotCreditCard",
+              "Translation": "支付方式不是信用卡"
+            }, {
+              "Error": "PayMethodIsNotValidForCountry",
+              "Translation": "支付方式对该国家无效"
+            }, {
+              "Error": "PayMethodOneTimeUseCardsCannotbeDefault",
+              "Translation": "一次性支付方式无法设为默认"
+            }, {
+              "Error": "PayMethodPrePaidCardCannotbeDefault",
+              "Translation": "预付费支付方式无法设为默认"
+            }, {
+              "Error": "Default",
+              "Translation": "服务器错误，请稍后再试。"
+            }]
+          },
+          "Gift": {
+            "GitTitle": "",
+            "GiftCheckbox": "",
+            "GiftMessage": "",
+            "GiftSaveCTA": "",
+            "GiftOptionDescription": "",
+            "GiftMessagePlaceholder": "",
+            "Required": "",
+            "Optional": "",
+            "OptionalDescription": "",
+            "GiftRecipientEmail": "",
+            "GiftRecipientEmailError": "",
+            "GiftRecipientEmailPlaceholder": "",
+            "RecipientNameLabel": "",
+            "RecipientNamePlaceholder": "",
+            "PurchaserNameLabel": "",
+            "PurchaserNamePlaceholder": ""
+          },
+          "CTA": {
+            "Continue": "继续",
+            "Save": "保存",
+            "Cancel": "取消",
+            "CreateAccount": "",
+            "Next": ""
+          },
+          "ShippingSection": {
+            "RecipientName": "收件人姓名",
+            "RecipientNamePlaceholder": "请输入收货人姓名",
+            "RecipientNameRequired": "请填写收货人姓名",
+            "PhonePlaceholder": "请输入收货人手机号",
+            "PhoneNumberInvalidFormat": "手机号码格式无效",
+            "Area": "所在地区",
+            "AreaInvalidFormat": "请输入完整的省，市，区。",
+            "AreaPlaceholder": "请选择所在地区",
+            "AreaRequired": "省-市-区格式错误，请调整。",
+            "StreetAddress": "请填写街道、小区、楼栋号、单元室、门牌号等",
+            "Address1Required": "请填写详细地址",
+            "Zip": "邮政编码",
+            "ZipCodeAlert": "邮政编码需要6位数字",
+            "DefaultShippingAddress": "设为默认收货地址",
+            "Save": "保存",
+            "AddressInvalidFormatDescription": "由于地址系统更新，请调整区域和详细地址的格式。",
+            "ContinueEdit": "继续",
+            "MapCancel": "取消",
+            "MapConfirm": "完成",
+            "LocationSetting": "无法获取您的位置",
+            "LocationConfirm": "完成",
+            "LocationAuthorizationTitle": "授权获取您的位置",
+            "LocationAuthorizationDescription": "您允许美乐家获得您的地址吗？",
+            "LocationAuthorizationCancel": "取消",
+            "LocationAuthorizationConfirm": "允许",
+            "Address1": "详细地址",
+            "Address1Error": "详细地址格式错误",
+            "Address1Placeholder": "请填写街道、小区、楼栋号、单元室、门牌号等",
+            "Address2": "地址2",
+            "Address2Placeholder": "公寓/邮政信箱/房间号/楼号/等",
+            "Address2Error": "地址2为必填项",
+            "Address3": "地址3",
+            "Address3Error": "地址3为必填项",
+            "AddressEntered": "您输入的地址",
+            "AddressNotOnSystem": "此地址目前不在我们的系统中。请先检查地址，并确保地址正确无误，然后再继续。",
+            "ConfirmAddressNotice": "请先检查地址，并确保地址正确无误，然后再继续。",
+            "Back": "返回",
+            "City": "城市",
+            "CityError": "城市为必填项",
+            "CityPlaceholder": "城市名称",
+            "CompanyName": "收件人",
+            "CompanyNamePlaceholder": "",
+            "Country": "国家",
+            "DefaultShipping": "设为默认收货地址",
+            "DeliveryInstructions": "交货说明",
+            "DeliveryInstructionsPlaceholder": "",
+            "Island": "",
+            "IslandError": "",
+            "IslandPlaceholder": "",
+            "Name": "收件人姓名",
+            "NameError": "请填写收货人姓名",
+            "NamePlaceholder": "请输入收货人姓名",
+            "PhoneNumber": "手机号码",
+            "PhoneNumberError": "手机号码格式无效",
+            "PhoneNumberPlaceholder": "请输入收货人手机号",
+            "PhoneNumberAuPlaceholder": "",
+            "PhoneNumberNzPlaceholder": "",
+            "POBoxError": "No PO boxes allowed",
+            "PostalCode": "邮政编码",
+            "PostalCodePlaceholder": "请输入邮编",
+            "PostalCodeError": "邮政编码为必填项",
+            "ProblemWithAddress": "",
+            "Province": "省份",
+            "ProvincePlaceholder": "",
+            "ProvinceError": "省份为必填项",
+            "SectionTitle": "",
+            "State": "州",
+            "StatePlaceholder": "",
+            "StateError": "州为必填项",
+            "Suburb": "郊区",
+            "SuburbError": "郊区为必填项",
+            "SuburbPlaceholder": "",
+            "Suggested": "建议",
+            "SuggestionsInTotal": "",
+            "UseThisAddress": "使用此地址",
+            "VerifyAddressModalTitle": "验证地址",
+            "ZipCode": "邮政编码",
+            "ZipCodeError": "邮政编码为必填项",
+            "Cancel": "取消",
+            "Optional": "{0}（选填）",
+            "MaxCharacterLengthExceedError": "",
+            "ZipCodePlaceholder": "",
+            "NameDisclaimer": "",
+            "DisclaimerDetails": "",
+            "BusinessAddressCheckbox": "",
+            "BusinessAddressCheckboxDisclaimer": "",
+            "AddBusinessAddresss": "",
+            "BusinessPermanentAddress": "",
+            "Change": "更换",
+            "NewDeliveryAddress": "新增收货地址",
+            "FullName": "收件人姓名",
+            "FullNameError": "请填写收件人姓名",
+            "SpecialCharsError": "Address field(s) should not contain multiple special characters.",
+            "CopyPasteError": "Address field(s) do not allow copy and paste nor autofill functionality.",
+            "SelectShippingAddress": "Select a Saved Address",
+            "EnterNewDeliveryAddress": "Enter New Delivery Address"
+          },
+          "AdditionalTaxSummary": {
+            "AdditionalTaxSummaryTitle": "",
+            "IndicateTax": "",
+            "Tax": "",
+            "Tax10": "",
+            "Tax8": "",
+            "TaxTotal": "",
+            "AsteriskSymbol": "",
+            "AdditionalTaxSummaryText": ""
+          },
+          "PackageInformation": {
+            "NoShipMethod": ""
+          },
+          "TaxTotal": "",
+          "ServiceTaxLabel": "{0}% Service Tax",
+          "GUI": {
+            "Title": "GUITitle",
+            "CitizenDigitalCertification": "CitizenDigitalCertification",
+            "Mobile": "Mobile",
+            "MelaleucaMembership": "MelaleucaMembership",
+            "LoveCode": "LoveCode",
+            "LoveCodeWarning": "LoveCodeWarning",
+            "DonationReminder": "DonationReminder"
+          },
+          "AddressPaymethodPromptModel": {
+            "RBPrompt": {
+              "Title": "",
+              "Description": "",
+              "ChangeBoth": "",
+              "ChangeOne": "",
+              "Updated": ""
+            },
+            "NSEPrompt": {
+              "Title": "",
+              "Description": "",
+              "ChangeBoth": "",
+              "ChangeOne": "",
+              "Updated": ""
+            }
+          }
+        },
+        "Data": {
+          "ShowImprovedCTACheckout": true,
+          "ShowPurchaseCommitment": true,
+          "ThreeDSDDCRequestUrl": "https://centinelapistag.cardinalcommerce.com/V1/Cruise/Collect",
+          "ThreeDSDDCListenUrl": "https://centinelapistag.cardinalcommerce.com",
+          "WholeNumbersOnly": false,
+          "RewardTrackerId": "",
+          "ShippingOnUsTrackerId": "",
+          "HideDollarsToActivate": false,
+          "BannerMessages": {
+            "PuertoRicoBannerMessage": ""
+          },
+          "Invoice": {
+            "Name": "isInvoice",
+            "Label": "我需要发票",
+            "Value": false,
+            "Attention": "<span style=\"color: rgb(48, 134, 45);line-height:2\" ><span aria-hidden=\"true\" class=\"material-icons text-sm\">error_outline</span>发票抬头已更改</span>"
+          },
+          "Checkout": {
+            "BackToCartLink": {
+              "Url": "/cart",
+              "Text": " 返回购物车",
+              "Target": ""
+            },
+            "ShippingOnUsKeepShoppingLink": {
+              "Url": "",
+              "Text": "",
+              "Target": ""
+            },
+            "AddPaymentLink": {
+              "Url": "/payment",
+              "Text": "",
+              "Target": ""
+            },
+            "GuestPaymentLink": "#",
+            "AddShippingAddressLink": {
+              "Url": "/my-account/addresses/add-new-shipping-address",
+              "Text": "新增收货地址",
+              "Target": ""
+            },
+            "EditShippingAddressLink": {
+              "Url": "/my-account/addresses/edit-shipping-address",
+              "Text": "",
+              "Target": ""
+            },
+            "ManageShippingAddressLink": {
+              "Url": "/my-account/addresses",
+              "Text": "管理收货地址",
+              "Target": ""
+            },
+            "ManagePayMethodsLink": {
+              "Url": "",
+              "Text": "",
+              "Target": ""
+            },
+            "EditPayMethodsLink": {
+              "Url": "",
+              "Text": "",
+              "Target": ""
+            },
+            "GuestShippingAddressLink": "#",
+            "ReceiptUrl": "/receipt?trackConversion=true&showorderfeedback=true&orderid=",
+            "PageTitle": "结账",
+            "TermsandConditions": "",
+            "EditGUI": {
+              "Url": "",
+              "Text": "",
+              "Target": ""
+            }
+          },
+          "Cvv": {
+            "MinLength": "3",
+            "MaxLength": "4"
+          },
+          "HideSalesTax": false,
+          "RAPDepositModal": {
+            "RAPDepositModalText": ""
+          },
+          "ShippingAndHandling": "",
+          "OrderProcessing": {
+            "OrderProcessingPageLink": {
+              "Url": "/checkout/order-processing-page",
+              "Text": "process",
+              "Target": ""
+            }
+          },
+          "ConvenienceStore": {
+            "ConvenienceStoreLinkLabel": "",
+            "ConvenienceStoreInformation": "",
+            "ConvenienceStoreError": "",
+            "SelectConvenienceStore": ""
+          },
+          "Installments": {
+            "Modal": {
+              "RteContent": "",
+              "RteHeading": ""
+            },
+            "List": [{
+              "Text": "Lump Sum",
+              "Value": "0"
+            }, {
+              "Text": "2 months ",
+              "Value": "1"
+            }, {
+              "Text": "3 months",
+              "Value": "2"
+            }, {
+              "Text": "4 months",
+              "Value": "3"
+            }, {
+              "Text": "5 months",
+              "Value": "4"
+            }, {
+              "Text": "6 months",
+              "Value": "5"
+            }]
+          },
+          "PayMethodExpired": {
+            "Snippets": {
+              "Parameters": null,
+              "Inline": {
+                "RteContent": "<p class=\"flex text-red text-sm leading-tight my-10\"><span class=\"font-material text-xs mr-3 mt-2 leading-base\" aria-hidden=\"true\">error_outline</span><span>您的默认付款方式已过期。请选择其他付款方式，或 <a href=\"#\" class=\"underline\">单击此处更新默认付款方式。</a></span></p>"
+              }
+            },
+            "Modal": {
+              "RteContent": "<h2 id=\"global-modal-heading\" class=\"text-2xl leading-tight -mt-10 md:mb-8 leading-base font-bold text-gray-150 md:text-4xl md:font-normal md:leading-base md:mt-0\">您的默认付款方式已过期。</h2><p class=\"text-sm text-gray-120 md:text-gray-100 leading-tight mb-20 pb-2 md:mb-20\">请选择其他付款方式或更新您的默认付款方式。</p>\n",
+              "Data": {
+                "DifferentPayMethod": "选择不同付款方式",
+                "UpdatePayMethod": {
+                  "Url": "",
+                  "Text": "更新默认付款方式",
+                  "Arealable": "更新默认付款方式区域标签"
+                },
+                "ChoosePayMethod": {
+                  "Url": "",
+                  "Text": "选择不同付款方式",
+                  "Arealable": "选择不同付款方式区域标签"
+                }
+              },
+              "Labels": null
+            }
+          },
+          "CrossCountryModal": {
+            "Cancel": "",
+            "ContinueToSite": "",
+            "RteDescription": "",
+            "UserCountry": "UnitedStates",
+            "DefaultShippingCountry": "China"
+          },
+          "Easypay": {
+            "Url": "https://productstore2-uatcn.melaleuca.com.cn/mela-service/VirtualCreditCard/GetVirtualCreditCardDetails"
+          },
+          "ShowGSTBelowTotal": false,
+          "UseOrderData": false,
+          "EnableLSDSummaryEnhancement": true,
+          "ShippingSection": {
+            "CurrentCountry": "China",
+            "Regions": []
+          },
+          "PaymentForm": {
+            "Culture": "zh-CN",
+            "CustomerId": 616640603,
+            "Token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE3MTY0NDQwNDUsImV4cCI6MTcxNjQ0NzY0NSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YWNuLm1lbGFsZXVjYS5jb20uY24iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiTFNELkFQSSIsIk9yZGVyLkFQSSIsIk9yZ2FuaXphdGlvbi5BUEkiLCJQYXlNZXRob2QuQVBJIiwiUHJvZHVjdC5BUEkiLCJQcm9tb3Rpb24uQVBJIiwiU3Vic2NyaWJlZFNlcnZpY2VzLkFQSSJdLCJjbGllbnRfaWQiOiJtZWxhbGV1Y2Etc2l0ZWNvcmUtZGV2IiwianRpIjoiRDNFMUQ0N0Q5QkRFRjBEMDI0NzI2N0FCNUY4RkY3OTMiLCJpYXQiOjE3MTY0NDQwNDUsInNjb3BlIjpbIkFkZHJlc3MuQVBJLkZ1bGwiLCJCYWNrdXBPcmRlci5BUEkuRnVsbCIsIkNvbW11bmljYXRpb24uQVBJLkZ1bGwiLCJDdXN0b21lckFjY291bnQuQVBJLkZ1bGwiLCJERVBJbnRlcmZhY2UuQVBJLkZ1bGwiLCJEb2N1bWVudC5BUEkuRnVsbCIsIkxTRC5BUEkuRnVsbCIsIk9yZGVyLkFQSS5GdWxsIiwiT3JnYW5pemF0aW9uLkFQSS5GdWxsIiwiUGF5TWV0aG9kLkFQSS5GdWxsIiwiUHJvZHVjdC5BUEkuRnVsbCIsIlByb21vdGlvbi5BUEkuRnVsbCIsIlN1YnNjcmliZWRTZXJ2aWNlcy5BUEkuRnVsbCJdfQ.IoBTQHxE7tfewkSTKLG9mjGRxtR0hKrA11NqaoEoV9FSfb_h4Z9pD5pFd99fCiaAkjfTOOKhTTiEJ-a8KoHaWJq3BPLWNpJQANW5wxU6mObpIib3ImeLwf-unEEwhW1DeyOau_-BcYYkvzNBMIMJbmhmpzvmD4HUp6PmZKrwHXj2BI9xlBxfMv4hCXQCjejgfceJRllD4WmsplBzuweufCeorPvvaYru0_Y0Mq9i0fTBGcz6qFRoOFa2uYaxnYdraMaQeYI5CSobSA8VgExYCn8bx7wR6rv91sB9EwjJazZNEC9J4n0OKYPK5vP1iZ_jJ0MV8CMwMtvA_deJS8C_ug",
+            "Username": null,
+            "CustomerName": "stevenuatest ",
+            "Country": "China",
+            "DirectDebit": {
+              "FormAccess": "",
+              "FormAccessLink": {
+                "Url": "",
+                "Text": "",
+                "Target": ""
+              },
+              "Modal": {
+                "RTE": ""
+              }
+            },
+            "CustomerConnectingIP": "27.115.54.74"
+          },
+          "PolandWireTransfer": {
+            "PolandWireTransferMessage": ""
+          },
+          "ExternalPayment": {
+            "ExternalPaymentPageLink": {
+              "Url": "/payment",
+              "Text": "",
+              "Target": ""
+            }
+          },
+          "IsCrossCountryEnabled": false,
+          "RiverbendEnableGift": false,
+          "RiverbendPaymethodAddressPrompt": false,
+          "NoticeAndBanner": {
+            "NotReachedCommitment": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "NotQualifiedLvip": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您未达到升级LVIP金卡条件。</div>\n<a class=\"block  text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "NotMaintainLvip": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到尊荣金卡消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "NRCAndNQL": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到消费承诺和升级LVIP条件。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "NRCAndNML": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs\" style=\"color: rgb(224, 16, 16);\">info_outline</span>\n<div class=\"text-red text-sm pl-5\">\n<div class=\"inline\">您未达到优惠顾客和LVIP银/金/白金卡消费承诺。</div>\n<a class=\"block text-red text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "NotQualifiedShippingFee": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您未达到运费返还条件。</div>\n<a class=\"block  text-xs uppercase underline font-semibold cursor-pointer inline\" href=\"/RecommendProducts\">获取更多推荐产品</a></div>\n</div>"
+            },
+            "ShippingFeeRefund": {
+              "RTEContent": "<div class=\"flex p-9 w-full\" style=\"background: #FEFCED;line-height: 18px;\"><span aria-hidden=\"true\" class=\"a-icon m-tooltip__icon block material-icons -xs -green\">info_outline</span>\n<div class=\"text-green text-sm pl-5\">\n<div class=\"inline\">您的运费可返还。</div>\n</div>\n</div>"
+            }
+          },
+          "ShippingFee": {
+            "Value": 390
+          },
+          "ShowGSTInOrderSummary": false,
+          "HideExpiringThisMonth": false,
+          "HideShipMethod": false,
+          "Coa": {
+            "ShowCurrency": false
+          },
+          "VAT": {
+            "VATInlineSummaryLabel": "",
+            "VATSubText": "",
+            "VATLinkText": "",
+            "VATDescription": "",
+            "VATPopupModal": {
+              "HeaderText": "",
+              "Close": "",
+              "GrandTotal": "",
+              "VATPopupSubTotal": "",
+              "VATPopupTaxTotal": ""
+            },
+            "ShowVATPopup": false,
+            "ShowVATInOrderSummary": false
+          },
+          "IsCorporate": false,
+          "ShowGui": false,
+          "ValidateMaxCharLength": false,
+          "PreventCopyPasteFeature": false,
+          "ValidateAddressFeatureFlag": false,
+          "UseOleShippingAddressFeatureFlag": true,
+          "UpdateShippingOptionFeatureFlag": true,
+          "NotAutoFillRecipientNameFeatureFlag": true,
+          "NotCopyBusinessAddressFeatureFlag": true,
+          "IsDirectDebitAForm": false,
+          "ShowVatBelowTotal": false
+        }
+      }
+    </script>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "checkout"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Checkout Cn",
+      "patternPartial": "pages-checkout-cn",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": true,
+      "patternLineages": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "lineage": [{
+        "lineagePattern": "organisms-site-header-checkout",
+        "lineagePath": "../../patterns/organisms-site-header-site-header-checkout\\organisms-site-header-site-header-checkout.rendered.html"
+      }, {
+        "lineagePattern": "molecules-adapt-notice-banner",
+        "lineagePath": "../../patterns/molecules-adapt-notice-banner-adapt-notice-banner\\molecules-adapt-notice-banner-adapt-notice-banner.rendered.html"
+      }],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "pages",
+        "patternSubgroup": "checkout"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Checkout Cn",
+      "patternPartial": "pages-checkout-cn",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770268190704">
+    (function() {
+      if (self != top) {
+        var cb = '1770268190704';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770268190704" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    };
+  </script>
+  <!-- Check for PCI components on the page to determine which bundles to load -->
+  <script>
+    (function() {
+      // Detect if this page needs PCI bundles
+      var isPciPage = false;
+
+      // Check for PCI component tags
+      if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+        isPciPage = true;
+      }
+
+      // Check for PCI routes/patterns
+      var path = window.location.pathname.toLowerCase();
+      if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+        isPciPage = true;
+      }
+
+      // Check for explicit PciMode flag (from Pattern Lab JSON)
+      if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+        isPciPage = true;
+      }
+
+      function loadJS(src, cb) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        if (cb) s.onload = cb;
+        document.body.appendChild(s);
+      }
+
+      if (isPciPage) {
+        // PCI path - load CSP-compliant bundles
+        console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+        loadJS('/js/runtime-pci.js?1770268190704', function() {
+          loadJS('/js/vue-pci.js?1770268190704', function() {
+            loadJS('/js/vendor-pci.js?1770268190704', function() {
+              loadJS('/js/pci.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
+              });
+            });
+          });
+        });
+      } else {
+        // Non-PCI path - load full-featured bundles
+        console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+        loadJS('/js/runtime.js?1770268190704', function() {
+          loadJS('/js/vue-main.js?1770268190704', function() {
+            loadJS('/js/vendor.js?1770268190704', function() {
+              loadJS('/js/index.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+              });
+            });
+          });
+        });
+      }
+    }());
+  </script>
+  <script>
+    (function() {
+      var loadProfile = document.getElementsByClassName('o-loadProfile');
+      if (!loadProfile.length) return;
+      var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var r = document.getElementsByClassName('o-loadProfile__retry');
+
+      function show() {
+        f && f.classList.remove('-isHidden');
+      }
+      if (r.length) r[0].addEventListener('click', function() {
+        window.location.reload();
+      });
+      setTimeout(show, 10000);
+    }());
+  </script>
+
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    }
+  </script>
+  <!--For Ralleyware pages and widgets-->
+  <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+  <script>
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+    if (loadProfile.length) {
+      var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+      function showFooter() {
+        loadProfileFooter.classList.remove('-isHidden');
+      };
+
+      if (retryBtn.length) {
+        retryBtn[0].addEventListener('click', function(event) {
+          window.location.reload();
+        });
+      }
+
+      setTimeout(showFooter, 10000);
+    }
+  </script>
+</body>
+
+</html>

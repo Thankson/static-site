@@ -1,0 +1,130 @@
+<form action="" method="post" name="edit-address-cn" id="edit-address-cn" class="o-addressCn -edit w-full px-10 pt-30 pb-36 mx-auto mt-10 mb-0 bg-white border max-w-contain border-gray-50 text-gray-150 md:mb-40 md:px-40 md:rounded">
+
+  <div class="w-full flex flex-col lg:flex-row">
+    <div class="w-full lg:w-1_2 lg:pr-20">
+
+      <input type="hidden" id="addressid" name="addressid" value="123123">
+      <input type="hidden" id="country" name="country" value="China">
+
+      <div class="lg:pb-7 relative">
+        <div class="m-formField -text">
+          <label class="m-formField__label" for="recipientname">RECIPIENT NAME</label>
+          <input type="text" class="a-input -text " id="recipientname" name="recipientname" value="" minlength="1" maxlength="100" placeholder="Full Name" data-rule-required="true" data-msg-required="Recipient Name is required." aria-required="true">
+        </div>
+      </div>
+
+      <div class="lg:pb-7 relative">
+        <div class="m-formField -tel">
+          <label class="m-formField__label" for="phonenumbercn">PHONE NUMBER </label>
+          <input type="tel" class="a-input -tel -md" id="phonenumbercn" name="phonenumbercn" value="" placeholder="请输入收货人手机号" data-rule-required="true" data-msg-required="Phone Number: invalid format." aria-required="true" data-rule-pattern="^1[3456789]\d{9}$|^\d{3}-\d{7,8}|\d{4}-\d{7,8}$">
+        </div>
+      </div>
+
+      <div class="lg:pb-7 relative">
+        <div class="m-formField -areaSelect">
+          <label class="m-formField__label text-base" for="">Address</label>
+          <m-area-select save-province="山东" save-province-id="370000" save-city="青岛市" save-city-id="370200" save-region="市北区" save-region-id="370212" script-id="prohibit" placeholder='Enter Single-Line Text' validation-alert='请输入完整的省，市，区.' validation-required=''></m-area-select>
+        </div>
+        <script type="application/json" id="prohibit">
+          {
+            "Labels": {
+              "ErrorMessage": "当前地区不支持邮寄请重新选择",
+              "AddressInvalidFormatDescription": "Due to the update of the address system, please adjust the format off the area and detailed address",
+              "ContinueEdit": "Continue"
+            },
+            "Data": {
+              "Prohibit": [{
+                "StateProvinceId": 216,
+                "StateProvinceShortName": "新疆",
+                "StateProvinceName": "新疆维吾尔自治区",
+                "ProhibitCityList": [{
+                  "Id": 132,
+                  "StateProvinceId": 216,
+                  "CityName": null,
+                  "BeginDate": "2015-02-26T00:00:00Z",
+                  "EndDate": "2055-12-31T00:00:00Z",
+                  "Comment": "禁止入会",
+                  "ProhibitType": "Enrollment",
+                  "Country": "China"
+                }]
+              }, {
+                "StateProvinceId": 215,
+                "StateProvinceShortName": "西藏",
+                "StateProvinceName": "西藏自治区",
+                "ProhibitCityList": [{
+                  "Id": 133,
+                  "StateProvinceId": 215,
+                  "CityName": null,
+                  "BeginDate": "2015-02-26T00:00:00Z",
+                  "EndDate": "2055-12-31T00:00:00Z",
+                  "Comment": "禁止入会",
+                  "ProhibitType": "Enrollment",
+                  "Country": "China"
+                }]
+              }]
+            }
+          }
+        </script>
+      </div>
+
+      <div class="lg:pb-7 relative">
+        <div class="m-formField -text">
+          <label class="m-formField__label" for="street">street</label>
+          <input type="text" class="a-input -text " id="street" name="street" value="" minlength="1" maxlength="100" placeholder="Street Address" data-rule-required="true" data-msg-required="Address 1 is required." aria-required="true">
+        </div>
+      </div>
+
+      <div class="lg:pb-7 relative">
+        <div class="m-formField -text">
+          <label class="m-formField__label" for="zipcode">ZIP CODE<span class="italic font-medium">(Optional)</span></label>
+          <input type="text" class="a-input -text " id="zipcode" name="zipcode" value="" minlength="6" maxlength="6" placeholder="" data-rule-pattern="^[0-9]\d{5}(?!\d)$">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full pb-24">
+    <div class="m-formField -checkbox -center -padding-xs">
+      <input type="checkbox" class="a-input -checkbox" id="defaultShip" name="defaultShip" value="" data-rule-required="false" data-msg-required=""> <label class="m-formField__label -checkbox" for="defaultShip">Make this my Default Shipping Address</label>
+    </div>
+  </div>
+
+  <div class="w-full">
+    <div class="flex pb-30 to-xs:justify-between">
+      <div class="xs:mr-30 text-center to-xs:w-1_2 to-xs:mr-10">
+        <button class="a-button -cancel" type="" aria-label="Cancel" style="" data-cancel="addressCn">
+          CANCEL
+        </button>
+      </div>
+      <div class="text-center to-xs:w-1_2">
+        <button class="a-button -save" type="submit" aria-label="Save" style="">
+          SAVE
+        </button>
+      </div>
+    </div>
+    <div data-loading="address__loading" class="hidden">
+      <span class="w-10 block">
+        <div class="a-loadingSpinner" aria-atomic="true" aria-live="assertive">
+          <div class="a-loadingSpinner__inner">
+            <div class="sr-only">[object Object]</div>
+
+            <div class="a-loadingSpinner__item"></div>
+            <div class="a-loadingSpinner__item"></div>
+            <div class="a-loadingSpinner__item"></div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div data-answer="address__answer" class="hidden"></div>
+    <div data-target-error-cn="edit-address-cn"></div>
+  </div>
+
+  <div class="hidden-answers hidden">
+    <div class="address-entered">Address You Entered:</div>
+    <div class="address-not-availabe">This address is not currently in our system. Please review the address and make sure it is correct before continuing.</div>
+    <div class="address-sugested">Suggested:</div>
+    <div class="modal-title">Verify Address</div>
+    <div class="problem-with-address">There was a problem with the address you entered. Please select from the list of SUggested Addresses, or try again. For futher assistance, please contact Customer Service at 1 (800) 282-3000.</div>
+  </div>
+
+</form>

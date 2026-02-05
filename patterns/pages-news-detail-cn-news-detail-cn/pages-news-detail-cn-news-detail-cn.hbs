@@ -1,0 +1,24 @@
+{{> organisms-site-header }}
+
+<div class="w-full md:pb-10 bg-gray-25">
+  <div class="mx-auto max-w-contain md:px-10 xl:px-0">
+    {{#with Breadcrumb}}
+      <div class="md:pt-15 md:mb-30">
+        {{> molecules-breadcrumb }}
+      </div>
+    {{/with}}
+    <article class="relative z-0 w-full md:px-80 py-10 bg-white md:border md:rounded-md md:py-30 pb-30 md:pb-100 md:mb-60 md:border-gray-50 lg:max-w-contain">
+      <header class="md:max-w-2_3 text-center">
+        <div class="py-20 flex justify-center">
+          <img class="max-w-200" src="//cdnus.melaleuca.com/Images/about/home-page/desktop/melaleuca-logo.svg" alt="Melaleuca Logo">
+        </div>
+        <h2 class="mb-20 text-xl font-light text-gray-150">{{PageTitle}}</h2>
+      </header>
+      <div class="relative md:px-40 md:py-30">
+        {{{RichText}}}
+      </div>
+    </article>
+  </div>
+</div>
+
+{{> organisms-site-footer }}

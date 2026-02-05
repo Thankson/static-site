@@ -1,0 +1,17 @@
+<m-product-card :is-cn="{{IsCn}}" :is-preferred="{{IsPreferred}}" :is-restricted-pack="{{IsRestrictedPack}}" concentrated-label="{{{Localization.Labels.Concentrated}}}" diluted-label="{{{Localization.Labels.Diluted}}}" :is-signed-in="{{IsSignedIn}}" :is-carousel="{{IsCarousel}}" card-version="{{CardVersion}}" points-label='{{{Localization.Labels.Points}}}' points-label-singular='{{{Localization.Labels.PointsSingular}}}' :product='{{toJson Product}}' range-sr-text='{{{Localization.Labels.RangeSrText}}}' save-label='{{Localization.Labels.Save}}' tooltip-text="{{TooltipText}}" :user-flags='{{toJson UserFlags}}'>
+
+  <template v-slot:regular-price-label>
+    {{{Localization.Labels.Regular}}}
+  </template>
+
+  <template v-slot:preferred-price-label>
+    {{{Localization.Labels.Preferred}}}
+  </template>
+
+  <template v-slot:learn-more-link>
+    <a href="{{Localization.Data.PreferredMemberLearnMoreLink.Url}}" target="{{Localization.Data.PreferredMemberLearnMoreLink.Target}}">
+
+      {{{Localization.Data.PreferredMemberLearnMoreLink.Text}}}
+    </a>
+  </template>
+</m-product-card>

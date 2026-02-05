@@ -1,0 +1,61 @@
+<div {{#if IsIsolated}}class="m-10" {{/if}}>
+
+  <o-cart-item sku="{{Sku}}" title="{{FamilyTitle}}" img-src="{{Image}}" pdp-url="{{PdpPageLink}}" :quantity="{{Quantity.Value}}" line-id="{{LineId}}" :position="{{Position}}" :user-flags='{{toJson UserFlags}}'>
+
+    <template v-slot:info>
+      {{Localization.Item}} {{ Sku }} |
+      {{PreferredPrice}} {{Localization.Preferred}} | {{Points}} {{Localization.Points}}<br />
+      {{RegularPrice}} {{Localization.Regular}} | {{PreferredSavings}} {{Localization.Savings}}
+    </template>
+
+    <template v-slot:configurations>
+      {{Options}}
+    </template>
+
+    <template v-slot:options="$options">
+      {{#if Options}}
+        {{#each Options}}
+          {{this}} <button type="button" class="o-cartItem__link -inline" @click="$options.edit">{{../Localization.Edit}}</button>
+        {{/each}}
+      {{/if}}
+    </template>
+
+    <template v-slot:price>
+      {{Price}}
+    </template>
+
+    <template v-slot:points>
+      {{Points}} {{Localization.Points}}
+    </template>
+
+    <template v-slot:remove>
+      {{Localization.Remove}}
+    </template>
+
+    <template v-slot:save>
+      {{Localization.Save}}
+    </template>
+
+    <template v-slot:accessories>
+      <!-- Start: Will eventually be hooked up as "add to cart" buttons -->
+      {{#each Accessories}}
+        <button type="button" class="o-cartItem__btn">{{ Text }}</button>
+      {{/each}}
+      <!-- End: Will eventually be hooked up as "add to cart" buttons -->
+    </template>
+
+    <template v-slot:payment="$payment">
+      {{#if LsdEligible}}
+        <m-checkbox class="-cartItem" name="BuyWithLsd" label="{{LsdEligible.Label.Text}}" @input="$payment.lsdPayment">
+        </m-checkbox>
+      {{/if}}
+
+      {{#if CcEligible}}
+        <m-checkbox class="-cartItem" name="BuyWithCc" label="{{CcEligible.Label.Text}}" @input="$payment.ccPayment">
+        </m-checkbox>
+      {{/if}}
+    </template>
+
+  </o-cart-item>
+
+</div>

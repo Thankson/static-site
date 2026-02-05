@@ -1,0 +1,225 @@
+<o-sign-in-card action="/identity-server" button-aria-label="Sign In" invalid-credential-text="&lt;span&gt;Invalid Username or Password. &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;font-bold underline&quot;&gt;Need Help? &lt;span class&#x3D;&quot;sr-only&quot;&gt;Click Here&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;" :agreement-terms='[{"Name":"Agreement","Content":"xxxxxx{0}XXXX{1}xxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[{"Name":"PrivacyPolicy","Text":"《美乐家隐私政策》","ModalTitle":"美乐家隐私政策","ModalContent":"<div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div><div>1. xxxxx</div>\n<div>2. xxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"},{"Name":"UseTerms","Text":"《使用条款》","ModalTitle":"使用条款","ModalContent":"<div>1. xxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>\n<div>4. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>"}],"ErrorMessage":"请勾选以上隐私条款"},{"Name":"Agreement2","Content":"xxxxxxXXXXxxxxxxxxxxxxxxxxxxxxxx","Required":true,"Modals":[],"ErrorMessage":"请勾选以上隐私条款"}]' :hide-country-selector="false" :hide-keep-me-signed-in="false" :show-error-message="false" :show-sign-in-greetings="true" :is-mobile-app="true" :is-grow-app="true" greetings-text="Hi, {0}" show-label="Show Password" hide-label="Hide Password">
+
+  <template v-slot:sign-in-text>
+    Please sign in again
+  </template>
+
+  <template v-slot:select-sign-in-text>
+    To protect your account information, we do not keep you signed in unless you select “Keep Me Signed In” below.
+  </template>
+
+  <template v-slot:username-label>
+    Username
+  </template>
+
+  <template v-slot:password-label>
+    Password
+  </template>
+
+  <template v-slot:popup-culture>
+    <popup-culture script-id="popupCultures">
+    </popup-culture>
+
+    <script type="application/json" id="popupCultures">
+      {
+        "Labels": {
+          "HeaderText": "Region & Language"
+        },
+        "Data": {
+          "Cultures": [{
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "United States - English",
+            "IsSelected": true,
+            "CultureAbbrv": "US-EN",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "EE.UU. - Espanol",
+            "IsSelected": false,
+            "CultureAbbrv": "US-ES",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Canada - English",
+            "IsSelected": false,
+            "CultureAbbrv": "CA-EN",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Canada - Francais",
+            "IsSelected": false,
+            "CultureAbbrv": "CA-FR",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Mexico",
+            "IsSelected": false,
+            "CultureAbbrv": "MX",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Australia",
+            "IsSelected": false,
+            "CultureAbbrv": "AU",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "New Zealand",
+            "IsSelected": false,
+            "CultureAbbrv": "NZ",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "United Kingdom",
+            "IsSelected": false,
+            "CultureAbbrv": "UK",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Ireland",
+            "IsSelected": false,
+            "CultureAbbrv": "IR",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Scotland",
+            "IsSelected": false,
+            "CultureAbbrv": "SC",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "China",
+            "IsSelected": false,
+            "CultureAbbrv": "CH",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Japan",
+            "IsSelected": false,
+            "CultureAbbrv": "JP",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }, {
+            "Img": {
+              "Url": "https://placehold.co/20x15.png",
+              "Alt": "Content Defined"
+            },
+            "Text": "Taiwan",
+            "IsSelected": false,
+            "CultureAbbrv": "TW",
+            "Link": {
+              "Url": "",
+              "Target": ""
+            }
+          }]
+        }
+      }
+    </script>
+  </template>
+
+  <template v-slot:signed-in-label>
+    Keep Me Signed In
+  </template>
+
+  <template v-slot:what-does-mean-text>
+    What does this mean?
+  </template>
+
+  <template v-slot:additional-text>
+    This means that you will be able to access your account without having to sign in again for 30 days. To keep your account secure, we recommend that you sign out after each session.
+  </template>
+
+  <template v-slot:button-label>
+    SIGN IN
+  </template>
+
+  <template v-slot:info>
+    <a href="#" class="text-green font-medium mb-30 md:mb-0" data-gtm-track='
+            {
+                "gtmId": "182",
+                "gtmText": "Forgot Username or Password?"
+            }' data-testid="forgotCredential-link">
+      Forgot Username or Password?
+    </a>
+    <span class="font-medium inline-block px-15 to-md:hidden" aria-hidden="true">|</span>
+    <a href="#" class="text-green font-medium" data-gtm-track='
+            {
+                "gtmId": "182",
+                "gtmText": "Create Account"
+            }' data-testid="createAccount-link">
+      Create Account
+    </a>
+  </template>
+
+</o-sign-in-card>

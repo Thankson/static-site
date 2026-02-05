@@ -1,0 +1,32 @@
+{{> organisms-site-header }}
+
+<div class="hidden md:block mb-10 md:mb-50 mt-15 md:px-10 xl:px-0">
+  {{#Breadcrumb}}
+    {{> molecules-breadcrumb }}
+  {{/Breadcrumb}}
+</div>
+
+<!-- Start Content Layouts -->
+<section class="font-global-sans text-gray-150 text-base mb-10">
+
+  <!-- Title (obligatory) -->
+  <h1 class="w-full max-w-contain mx-auto text-2xl md:text-3xl font-bold tracking-tight text-gray-150 mt-20 md:mt-30 md:mb-18  mb-18 md:text-3xl px-10 xl:px-0">{{PageTitle}}</h1>
+  <!-- End Title -->
+
+  {{#if MainPlaceholder}}
+    <!-- this is where the content will add their fullWidthBanner or any full width component -->
+    {{> molecules-cmn-full-width-banner MainPlaceholder}}
+  {{/if}}
+
+  {{!-- TODO Here a new spacing component will be added --}}
+
+  <!-- 2 grids (optional)-->
+  {{> organisms-cmn-grid-layout-2-column GridContainer}}
+  <!-- End 2 grids -->
+
+</section>
+<!-- End Content Layouts -->
+
+{{> molecules-cta-banner CTA="We'd love to hear"}}
+
+{{> organisms-site-footer }}

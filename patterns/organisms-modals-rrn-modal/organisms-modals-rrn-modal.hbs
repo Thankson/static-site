@@ -1,0 +1,17 @@
+<modal :visible="true" width="540px">
+  <template v-slot:heading>
+    {{Heading}}
+  </template>
+
+  <template v-slot:body>
+    <p class="text-sm -mt-10">{{Description}}</p>
+  </template>
+
+  <template v-slot:footer>
+    {{#with Cta}}
+      <a class="a-button -modal" href="{{Url}}">
+        {{Text}}
+      </a>
+    {{/with}}
+  </template>
+</modal>

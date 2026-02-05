@@ -1,0 +1,22 @@
+{{#if Badge.Localization}}
+  <a-badge script-id="badgeLocalization">
+{{/if}}
+{{#with Banner}}
+  <article class="font-global-sans {{Mod.Main}}">
+    <div class="md:flex">
+      <div class="md:w-1_2">
+        <h1 class="{{Mod.Title}}">{{{Text.Title}}}</h1>
+        <p class="{{Mod.Subtitle}}">{{{Text.Subtitle}}}</p>
+        {{> atoms-button Mods=Mod.CTA CTA=Text.CTA}}
+      </div>
+      <div class="md:w-1_2 to-md:mx-40">
+        <a class="w-full h-full" href="#">
+          <img src="{{Image.Src}}" alt="{{Image.Alt}}" class="{{Mod.Image}}">
+        </a>
+      </div>
+    </div>
+    <div class="{{Mod.Footnote}}">
+      <div class="m-rte">{{{Text.Footnote}}}</div>
+    </div>
+  </article>
+{{/with}}

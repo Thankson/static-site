@@ -1,0 +1,19 @@
+{{> organisms-site-header }}
+
+<div class="bg-gray-25">
+  <section class="mx-auto max-w-xl w-full md:px-10 md:py-40 md:pb-100 lg:px-20">
+    {{#with Breadcrumb}}
+      <div class="pt-15 md:mb-30">
+        {{> molecules-breadcrumb }}
+      </div>
+    {{/with}}
+
+    <h1 class="font-global-sans font-bold leading-tight text-2xl-2 text-gray-150 mx-10 md:mx-0">{{PageTitle}}</h1>
+
+    <div class="bg-white mt-20 px-8 py-30 w-full to-md:pt-20 to-md:border to-md:border-gray-50 md:mt-25 md:p-40 md:rounded">
+      {{> organisms-register-ssn RegisterSsn}}
+    </div>
+  </section>
+</div>
+
+{{> organisms-site-footer }}

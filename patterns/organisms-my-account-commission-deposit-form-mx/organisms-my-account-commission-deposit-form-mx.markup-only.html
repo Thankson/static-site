@@ -1,0 +1,149 @@
+<commission-deposit-form script-id="dataCommissionForm" token="eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE2MjAzMTIyNDUsImV4cCI6MTYyMDMxNTg0NSwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YXVzLm1lbGFsZXVjYS5jb20iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiT3JkZXIuQVBJIiwiT3JnYW5pemF0aW9uLkFQSSIsIlBheU1ldGhvZC5BUEkiLCJQcm9kdWN0LkFQSSIsIlByb21vdGlvbi5BUEkiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJIl0sImNsaWVudF9pZCI6Im1lbGFsZXVjYS1zaXRlY29yZS1kZXYiLCJzY29wZSI6WyJBZGRyZXNzLkFQSS5GdWxsIiwiQmFja3VwT3JkZXIuQVBJLkZ1bGwiLCJDb21tdW5pY2F0aW9uLkFQSS5GdWxsIiwiQ3VzdG9tZXJBY2NvdW50LkFQSS5GdWxsIiwiREVQSW50ZXJmYWNlLkFQSS5GdWxsIiwiRG9jdW1lbnQuQVBJLkZ1bGwiLCJPcmRlci5BUEkuRnVsbCIsIk9yZ2FuaXphdGlvbi5BUEkuRnVsbCIsIlBheU1ldGhvZC5BUEkuRnVsbCIsIlByb2R1Y3QuQVBJLkZ1bGwiLCJQcm9tb3Rpb24uQVBJLkZ1bGwiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJLkZ1bGwiXX0.dEpkW_6C_wS94muMivckxt5R6SZvhkJpbdYA0icXitJcqQSsNRntPfrLk2j-aDULE75G0j1kVDLjlWOFYUX-qY94knC-7BuUQmfjMG9DtHsyPg8tn2SlImqavDEr1NpRK_YxSv9pBf5QIfAxorPbKhXCr3SbTFOWQ6IYoMEidsjPFIlGCeZW8FcOEwQgNbseFYb2jBcwoOnYV4GXJHZ1EanwrKqiA64S8NSVI1fu6PVPLZOA1uozHQSYvzyjWvcEKczAF8GyjzUsA-wcYYcvhZpF2hD3udnnTjZEHvGzZ0XQxVOaFgKFsG8PC7roHbX6Pu7_RCViRlgcNwe_UrDBKQ" country="MX">
+</commission-deposit-form>
+
+<script type="application/json" id="dataCommissionForm">
+  {
+    "Labels": {
+      "Culture": "es-MX",
+      "Header": {
+        "AddNew": "Añadir una nueva opción",
+        "Edit": "Editar forma de pago",
+        "PayMethodType": "FORMA DE PAGO",
+        "DebitOrCreditCard": "Tarjeta de débito/crédito",
+        "Checking": "Comprobando"
+      },
+      "Card": {
+        "Accepts": "Melaleuca acepta:",
+        "CardholderName": "NOMBRE (como aparece en la tarjeta)",
+        "CardNumber": "NÚMERO DE TARJETA",
+        "Expiration": "DE CADUCIDAD",
+        "Month": "Mes",
+        "Year": "Año",
+        "Cvc": "CVC/CVV",
+        "BillingZipCode": null,
+        "Nickname": "APODO (opcional)"
+      },
+      "Checking": {
+        "NameOnAccount": null,
+        "AccountType": null,
+        "Select": null,
+        "RoutingNumber": null,
+        "AccountNumber": null,
+        "AccountTypes": {
+          "Select": null,
+          "Checking": null,
+          "Savings": null
+        },
+        "DeleteTitle": null,
+        "DeleteText": null
+      },
+      "DirectDebit": {
+        "CopyFrom": "COPIAR DEL DEPÓSITO DIRECTO",
+        "DirectDebit": "Débite directo",
+        "NameOnAccount": "NOMBRE EN LA CUENTA",
+        "Bank": "Banco",
+        "AccountNumber": "CLABE O NÚMERO DE TARJETA DE DÉBITO",
+        "Select": "Seleccione",
+        "EnterNameOnAccount": "Ingrese el nombre en la cuenta",
+        "EnterAccountNumber": "Ingrese el clabe o el número de tarjeta de débito",
+        "InvalidErrorMessage": "Clabe o número de tarjeta de débito inválido"
+      },
+      "Defaults": {
+        "MakeThisMyDefault": "Quiero que esta sea mi forma de pago por defecto para:",
+        "ProductPurchases": "Deseo que esta sea mi forma de pago predeterminada",
+        "MarketplaceServices": null,
+        "FutureCharges": "Su tarjeta de crédito podría utilizarse para pagar pedidos o servicios futuros, o para liquidar algún saldo pendiente en esta cuenta"
+      },
+      "FormSubmit": {
+        "Cancel": "Cancelar",
+        "CancelAriaLabel": "Cancelar form",
+        "Save": "Guardar",
+        "SaveAriaLabel": "Guardar info",
+        "Confirm": null,
+        "Download": "Descargar"
+      },
+      "ErrorMessages": {
+        "FieldRequired": "This field is required",
+        "ErrorOccured": "An error occurred",
+        "CardholderName": {
+          "Required": "Cardholder Name field is required",
+          "MaxLength": "Maximum character length reached for Cardholder Name field",
+          "MinLength": "Minimum character length not reached for Cardholder Name field"
+        },
+        "CardNumber": {
+          "Required": "Card Number field is required",
+          "Integer": "Card Number field accepts integer numbers only",
+          "Invalid": "Card Number is invalid",
+          "MaxLength": "Maximum character length reached for Card Number field",
+          "MinLength": "Minimum character length not reached for Card Number field"
+        },
+        "ExpirationMonth": {
+          "Required": "Expiration Month field is required"
+        },
+        "ExpirationYear": {
+          "Required": "Expiration Year field is required"
+        },
+        "CVV": {
+          "Required": "CVC/CVV field is required",
+          "Integer": "CVC/CVV field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for CVC/CVV field",
+          "MinLength": "Minimum character length not reached for CVC/CVV field"
+        },
+        "BillingZipCode": {
+          "Required": "Billing Zip Code field is required",
+          "Integer": "Billing Zip Code field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Billing Zip Code field",
+          "MinLength": "Minimum character length not reached for Billing Zip Code field"
+        },
+        "NameOnAccount": {
+          "Required": "Name On Account field is required",
+          "MaxLength": "Maximum character length reached for Name On Account field",
+          "MinLength": "Minimum character length not reached for Name On Account field"
+        },
+        "AccountType": {
+          "Required": "Account Type field is required"
+        },
+        "RoutingNumber": {
+          "Required": "Routing Number field is required",
+          "Integer": "Routing Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Routing Number field",
+          "MinLength": "Minimum character length not reached for Routing Number field"
+        },
+        "AccountNumber": {
+          "Required": "Account Number field is required",
+          "Integer": "Account Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Account Number field",
+          "MinLength": "Minimum character length not reached for Account Number field"
+        },
+        "Bank": {
+          "Required": "Bank field is required"
+        }
+      }
+    },
+    "Data": {
+      "Culture": "es-MX",
+      "IsEditing": false,
+      "PaymethodId": "",
+      "Username": "username",
+      "Country": "Mexico",
+      "CustomerId": 1019417106,
+      "MyAccountPageAddress": {
+        "Url": "https://productstore-qaus.melaleuca.com/my-account/payments-and-addresses",
+        "Text": "",
+        "Target": ""
+      },
+      "DirectDebit": {
+        "FormAccess": "Si desea utilizar como forma de pago válida el débito directo a su cuenta, favor enviar el Formato para Solicitar la Domiciliación. Haga clic <a class=\"text-green font-medium\" href=\"http://cdnsc1.melaleuca.com/na/documents/business-center/direct-deposit-form--es-MX.pdf\" target=\"_blank\">aquí</a> para descargar el formato.",
+        "FormAccessLink": {
+          "Url": "http://cdnsc1.melaleuca.com/na/documents/business-center/direct-deposit-form--es-MX.pdf",
+          "Text": "aquí",
+          "Target": "_blank"
+        }
+      },
+      "Image": {
+        "Url": "https://placehold.co/240x60.jpg",
+        "Alt": "Image description text"
+      }
+    }
+  }
+</script>

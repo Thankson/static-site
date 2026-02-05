@@ -1,0 +1,15 @@
+<section class="o-backupOrder">
+  <header class="o-backupOrder__header">
+    <h1 class="o-backupOrder__title">{{Title}}</h1>
+    <div class="o-backupOrder__subTitle">{{Text}}</div>
+  </header>
+
+  <o-backup-order script-id="bab87559-79ce-4ddf-83d3-parent">
+    {{#each BuoCards}}
+      <backup-order-card script-id="{{Id}}"></backup-order-card>
+      <script id="{{Id}}" type="application/json">{{toJson this}}</script>
+    {{/each}}
+  </o-backup-order>
+</section>
+
+<script type="application/json" id="bab87559-79ce-4ddf-83d3-parent">{{toJson Localization}}</script>

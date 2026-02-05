@@ -1,0 +1,20 @@
+<div class="o-LTEHeader">
+  <div class="o-LTEHeader__row">
+    <div class="o-LTEHeader__col -first">
+      {{> molecules-lte-hero}}
+    </div>
+    <div class="o-LTEHeader__col -second">
+      <div class="preComponentLoader -lteHeader">
+        {{#with LTELpCol}}
+          {{> organisms-lte-lp-vid}}
+        {{/with}}
+        {{#with EnrollmentCard}}
+          {{> molecules-lte-enrollment-card}}
+        {{/with}}
+        {{#with LSDDetails}}
+          {{> molecules-lte-lsd-panels}}
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</div>

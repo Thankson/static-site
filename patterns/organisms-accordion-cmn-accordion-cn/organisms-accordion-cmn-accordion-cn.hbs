@@ -1,0 +1,21 @@
+{{#Accordion}}
+  <div class="o-accordion {{WrapperMods}}">
+    {{#each Rows}}
+      <h2 class="o-accordion__title {{Mods.Title}}" {{#if HeaderBackground}} style="background-color:{{HeaderBackground}};" {{/if}}>
+        <button class="o-accordion__toggler {{Mods.Toggler}}" id="{{ToggleID}}" aria-controls="{{ContentID}}" v-on:click='gtmTrackAction({"id": "458", "text": "{{Title}}"}, $event)' aria-expanded="false">
+          {{Title}}{{> atoms-arrow Size=../ArrowSize TailwindColor="gray-120" Direction="-down" OtherMods="mt-6 md:right-0"}}
+        </button>
+      </h2>
+
+      <div class="o-accordion__content hidden {{Mods.Content}}" {{#if HeaderBackground}} style="background-color:{{ContentBackground}};" {{/if}} id="{{ContentID}}" aria-labelledby="{{ToggleID}}" role="region">
+        {{#if ContentDynamic}}
+          {{#each ContentDynamic}}
+            {{> (lookup . 'DynamicPartial')}}
+          {{/each}}
+        {{else}}
+          {{{ContentStatic}}}
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+{{/Accordion}}

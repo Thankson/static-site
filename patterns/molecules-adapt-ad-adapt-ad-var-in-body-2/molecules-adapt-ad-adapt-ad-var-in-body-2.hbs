@@ -1,0 +1,31 @@
+<article class="m-adaptAd {{AdVariation}}">
+  <div class="m-adaptAd__wrapper">
+    <div class="m-adaptAd__col -header">
+      <header class="m-adaptAd__header">
+        <!-- Start: RTE -->
+        <div class="m-rte">
+          {{{RTEHeader}}}
+        </div>
+        <!-- End: RTE -->
+      </header>
+    </div>
+    <div class="m-adaptAd__col -image">
+      <img class="m-adaptAd__img -mobile" src="{{Img.Mobile.Src}}" alt="{{Img.Mobile.Alt}}">
+      <img class="m-adaptAd__img -desktop" src="{{Img.Desktop.Src}}" alt="{{Img.Desktop.Alt}}">
+    </div>
+    <div class="m-adaptAd__col -descr">
+      <div class="m-adaptAd__descr">
+        <!-- Start: RTE -->
+        <div class="m-rte">
+          {{{RTEDescr}}}
+        </div>
+        <!-- End: RTE -->
+      </div>
+    </div>
+    {{#if CTA}}
+      <div class="m-adaptAd__col -cta">
+        <a class="m-adaptAd__cta" href="{{Href}}">{{CTA}}</a>
+      </div>
+    {{/if}}
+  </div>
+</article>

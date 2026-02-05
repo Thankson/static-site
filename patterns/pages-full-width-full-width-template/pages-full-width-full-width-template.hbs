@@ -1,0 +1,29 @@
+{{> organisms-site-header }}
+
+
+<div id="fwPageContent" class="relative {{Mods.Page}}">
+  {{# Breadcrumb}}
+    <div class="mb-10 mt-15 md:mb-40">
+      {{> molecules-breadcrumb }}
+    </div>
+    {{/ Breadcrumb}}
+
+    <section class="relative">
+      <h1 class=" text-2xl md:text-3xl text-gray-150 font-bold font-global-sans tracking-tight w-full px-10 mx-auto mb-5 md:mb-18 {{Mods.Title}}">{{PageTitle}}</h1>
+
+      <div class="{{Mods.Text}}">
+        {{#if RichText}}
+          {{! User Created Rich Text content }}
+          {{{RichText}}}
+        {{else}}
+          {{! User Selected Predefined Components }}
+          {{#each DynamicComponents}}
+            {{> (lookup . 'Pattern')}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </section>
+</div>
+
+
+{{> organisms-site-footer }}

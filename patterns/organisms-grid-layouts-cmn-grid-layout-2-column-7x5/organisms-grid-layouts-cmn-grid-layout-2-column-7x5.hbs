@@ -1,0 +1,27 @@
+<div class="flex mx-auto to-md:flex-col {{ContainerWidth}}">
+  <div class="to-md:mt-10 md:pr-15 {{Content.FirstArea.Width}}">
+
+    <!-- this is where the content will add their richText or any components-->
+    {{#if Content.FirstArea.ContentDynamic}}
+      {{#each Content.FirstArea.ContentDynamic}}
+        {{> (lookup . 'DynamicPartial')}}
+      {{/each}}
+    {{else}}
+      {{{Content.FirstArea.ContentStatic}}}
+    {{/if}}
+
+  </div>
+
+  <div class="to-md:mt-10 md:pl-15 {{Content.SecondArea.Width}}">
+
+    <!-- this is where the content will add their richText or any components-->
+    {{#if Content.SecondArea.ContentDynamic}}
+      {{#each Content.SecondArea.ContentDynamic}}
+        {{> (lookup . 'DynamicPartial')}}
+      {{/each}}
+    {{else}}
+      {{{Content.SecondArea.ContentStatic}}}
+    {{/if}}
+
+  </div>
+</div>

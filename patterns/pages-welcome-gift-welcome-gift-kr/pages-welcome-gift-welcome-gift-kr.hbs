@@ -1,0 +1,60 @@
+{{> organisms-site-header}}
+
+<div class="bg-gray-25">
+  <section class="mx-auto max-w-contain pt-20 pb-100 md:pt-80">
+
+    {{!-- Banner --}}
+    {{> molecules-cmn-full-width-banner }}
+
+    {{!-- Bogo component --}}
+    <div class="mt-40">
+      <ul class="o-cardGrid -isWelcomeGrid">
+        {{#each WelcomeGiftCards}}
+          <li class="o-cardGrid__listItem">
+            {{#ifvalue ../PinCards.ChanceCard equals=@index}}
+              {{#with ../PinLabel.Chance}}
+                {{> molecules-pin}}
+              {{/with}}
+            {{/ifvalue}}
+
+            {{#ifvalue ../PinCards.HereCard equals=@index}}
+              {{#with ../PinLabel.Here}}
+                {{> molecules-pin}}
+              {{/with}}
+            {{/ifvalue}}
+            {{#ContentCard}}
+
+              <div class="m-contentCard {{TextAlignment}} {{#if IsPreferred}}-isPreferred{{/if}} {{#if IsWelcomeCard}}-isWelcomeCard{{/if}}">
+                <div class="m-contentCard__media">
+                  {{#if IsVideo}}
+                    <o-vid-curate-ctrl script-id="{{UniqueScriptID}}"></o-vid-curate-ctrl>
+                  {{else}}
+                    <img class="mb-8" src="{{Image.src}}" alt="{{Image.alt}}">
+                  {{/if}}
+                  {{#with Tags}}
+                    <div class="m-contentCard__mediaTag">
+                      {{> atoms-product-tag}}
+                    </div>
+                  {{/with}}
+                </div>
+                <p class="m-contentCard__description">
+                  <em class="m-contentCard__title" {{#if TitleColor}}style="color: {{ TitleColor }};" {{/if}}>{{Title}}</em>
+                  <span class="m-contentCard__subtitle" {{#if SubtitleColor}}style="color: {{ SubtitleColor }};" {{/if}}>{{Subtitle}}</span>
+                </p>
+              </div>
+              <script type="application/json" id="{{UniqueScriptID}}">
+              {{toJson Localization}}
+              </script>
+            {{/ContentCard}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+  </section>
+</div>
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson Localization}}
+</script>
+
+{{> organisms-site-footer}}

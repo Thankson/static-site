@@ -1,0 +1,15 @@
+<a href="{{URL}}" class="m-searchLink" {{#if IsNewTab}} target="_blank" rel="noreferrer noopener" {{/if}}>
+  <div class="m-searchLink__heading">
+    <h3 class="m-searchLink__title">{{Title}}</h3>
+    {{#if IsNewTab}}
+      <span class="m-searchLink__icon -newTab" aria-label="Opens {{Title}} a new window">launch</span>
+    {{else if IsPDF}}
+      <div class="m-searchLink__pdf">
+        <span class="m-searchLink__icon -pdf" aria-hidden="true">description</span>
+        <span class="m-searchLink__details"> {{IconText}} - {{Size}}</span>
+      </div>
+    {{/if}}
+  </div>
+  <p class="m-searchLink__url" aria-hidden="true">{{URL}}</p>
+  <p class="m-searchLink__text">{{Description}}</p>
+</a>

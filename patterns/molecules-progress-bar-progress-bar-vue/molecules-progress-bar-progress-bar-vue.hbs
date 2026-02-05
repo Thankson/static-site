@@ -1,0 +1,20 @@
+<m-progress-bar :active-step="{{ActiveStep}}" active-text="{{ActiveText}}" complete-text="{{CompleteText}}" :disable-bullets="[{{DisableBullets}}]" :step-links="{
+        {{#each Steps}}
+            {{@index}}: { href: '{{Link.Href}}', target: '{{Link.Target}}' },
+        {{/each}}
+    }">
+
+  {{#each Steps}}
+    {{#if Icon}}
+
+      <template v-slot:step-{{@index}}-decorator>
+        {{> atoms-icon-vue Icon}}
+      </template>
+    {{/if}}
+
+    <template v-slot:step-{{@index}}>
+      {{Title}}
+    </template>
+  {{/each}}
+
+</m-progress-bar>

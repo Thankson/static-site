@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="pageType" content="Home" />
+  <title>Melaleuca Pattern Lab</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+  <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+  <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+  <link rel="stylesheet" href="../../css/app.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/brand-peak.css?1770268190704" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SG/MY Noto Sans SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+  <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+  <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+  <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+  <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+  <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+  <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+  <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+  <script>
+    dataLayer = [{
+      'userLogged': true,
+      'warehouseGroup': 'IdahoFalls',
+      'uiCulture': 'en-us'
+    }];
+
+    customerData = [{
+      canPurchaseRestrictedPacks: false,
+      isAuthenticated: true,
+      isGuest: false,
+      isGuestShoppingEnabled: false,
+      lvipStatus: "",
+      viewLists: true,
+      viewMemberPricing: true,
+      viewPoints: false,
+      country: "UnitedStates",
+      culture: "en-US",
+      uiCulture: "en-US",
+      customerID: 1016042303,
+      customerName: "Direct Tester",
+      businessName: "Direct Tester",
+      customerFullName: "John Doe",
+      formattedName: "Direct Tester",
+      customerType: "Employee",
+      customerPriceType: "Regular",
+      status: "Customer",
+      hasIMEA: true
+    }];
+  </script>
+  <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+  <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't need conditional in prod
+      if (document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        // Reviews for the PDP
+        pwr("render", {
+          // For performance enhancement
+          enable_content_collection_modal: false,
+          api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+          locale: 'en_US',
+          merchant_group_id: '507179823',
+          merchant_id: '1561128198',
+          // Usually is the sku number
+          page_id: '650',
+          // Page to write reviews
+          review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+          'product': {
+            'name': 'Energy Shot 12–Pack',
+            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+            'description': 'Energy Shot 12–Pack',
+            'category_name': 'Healthy Foods and Drinks',
+            'variants': [{
+              'name': 'Energy Shot 12–Pack',
+              'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+              'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+              'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+              'category_name': 'Healthy Foods and Drinks',
+              'page_id_variant': '5859'
+            }]
+          },
+          on_render: function() {
+            if (window.PDPReviews) {
+              window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+            }
+          },
+          components: {
+            ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+            ReviewDisplay: 'pr-reviewdisplay'
+          }
+        });
+      } else if (document.getElementsByClassName('p-ratingReview').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        pwr("render", {
+          api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+          locale: 'en_us',
+          pr_locale: '.en_us',
+          merchant_group_id: '1968628287',
+          merchant_id: '1683664767',
+          appName: 'ryp',
+          emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+          components: {
+            ReviewYourPurchases: 'pr-write'
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+  </script>
+
+  <!-- Begin convertlab -->
+  <script>
+    enableConvertLabFeatureFlag = false;
+    if (window.enableConvertLabFeatureFlag) {
+      clDataLayer = {
+        'pageType': 'web'
+      };
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || {};
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+      window.addEventListener("load", (event) => {
+        if (window.clab_tracker) {
+          window.clab_tracker.ready(function() {
+            this.push(clDataLayer);
+          });
+          window.clab_tracker.setEnableAutoTrackExitPage(false);
+        }
+      });
+    }
+  </script>
+  <!-- End convertlab -->
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+<!-- n.b. <body> is intentionally not closed: -->
+
+<body class="pl-body relative ">
+  <script>
+    if (typeof _etmc !== 'undefined') {
+      window._etmc = _etmc;
+      _etmc.push(['setOrgId', '1036137']);
+      _etmc.push(['trackPageView']);
+    }
+  </script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+  <!-- n.b. <div> is intentionally not closed: -->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {
+        "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+        "Country": "UnitedStates",
+        "CurrencyCode": "USD",
+        "HidePoints": false,
+        "HideAllPowerReviews": false,
+        "IsCn": false,
+        "ProductPricing": {
+          "HideProductMemberPrice": false,
+          "HideProductNonMemberPrice": false
+        }
+      }
+    </script>
+    <o-shipp-address-form script-id="data-shipp-address-localization">
+    </o-shipp-address-form>
+
+    <script id="data-shipp-address-localization" type="application/json">
+      {
+        "Data": {
+          "Title": "Create Your Preferred Membership  Account",
+          "ShippingSection": {
+            "Address_1Value": "",
+            "Address_2Value": "",
+            "Address_3Value": "",
+            "CityValue": "",
+            "PostalCodeValue": "",
+            "ProvinceValue": "",
+            "StateMxValue": "",
+            "StateUsValue": "",
+            "SuburbValue": "",
+            "ZipCodeValue": "",
+            "CancelCta": {
+              "Url": "",
+              "Text": ""
+            },
+            "Provinces": [{
+              "RegionName": "United States",
+              "RegionKey": "us",
+              "ServiceName": "UnitedStates",
+              "Provinces": [{
+                "ProvinceName": "District of Columbia",
+                "ProvinceValue": "DC",
+                "ServiceName": "District of Columbia"
+              }, {
+                "ProvinceName": "Nebraska",
+                "ProvinceValue": "NE",
+                "ServiceName": "Nebraska"
+              }, {
+                "ProvinceName": "Kansas",
+                "ProvinceValue": "KS",
+                "ServiceName": "Kansas"
+              }, {
+                "ProvinceName": "Rhode Island",
+                "ProvinceValue": "RI",
+                "ServiceName": "Rhode Island"
+              }, {
+                "ProvinceName": "Florida",
+                "ProvinceValue": "FL",
+                "ServiceName": "Florida"
+              }, {
+                "ProvinceName": "Alaska",
+                "ProvinceValue": "AK",
+                "ServiceName": "Alaska"
+              }, {
+                "ProvinceName": "Massachusetts",
+                "ProvinceValue": "MA",
+                "ServiceName": "Massachusetts"
+              }, {
+                "ProvinceName": "South Carolina",
+                "ProvinceValue": "SC",
+                "ServiceName": "South Carolina"
+              }, {
+                "ProvinceName": "Colorado",
+                "ProvinceValue": "CO",
+                "ServiceName": "Colorado"
+              }, {
+                "ProvinceName": "Kentucky",
+                "ProvinceValue": "KY",
+                "ServiceName": "Kentucky"
+              }, {
+                "ProvinceName": "Nevada",
+                "ProvinceValue": "NV",
+                "ServiceName": "Nevada"
+              }, {
+                "ProvinceName": "New Hampshire",
+                "ProvinceValue": "NH",
+                "ServiceName": "New Hampshire"
+              }, {
+                "ProvinceName": "Georgia",
+                "ProvinceValue": "GA",
+                "ServiceName": "Georgia"
+              }, {
+                "ProvinceName": "Maine",
+                "ProvinceValue": "ME",
+                "ServiceName": "Maine"
+              }, {
+                "ProvinceName": "New Jersey",
+                "ProvinceValue": "NJ",
+                "ServiceName": "New Jersey"
+              }, {
+                "ProvinceName": "South Dakota",
+                "ProvinceValue": "SD",
+                "ServiceName": "South Dakota"
+              }, {
+                "ProvinceName": "Maryland",
+                "ProvinceValue": "MD",
+                "ServiceName": "Maryland"
+              }, {
+                "ProvinceName": "Hawaii",
+                "ProvinceValue": "HI",
+                "ServiceName": "Hawaii"
+              }, {
+                "ProvinceName": "North Carolina",
+                "ProvinceValue": "NC",
+                "ServiceName": "North Carolina"
+              }, {
+                "ProvinceName": "Oklahoma",
+                "ProvinceValue": "OK",
+                "ServiceName": "Oklahoma"
+              }, {
+                "ProvinceName": "Virginia",
+                "ProvinceValue": "VA",
+                "ServiceName": "Virginia"
+              }, {
+                "ProvinceName": "Delaware",
+                "ProvinceValue": "DE",
+                "ServiceName": "Delaware"
+              }, {
+                "ProvinceName": "Missouri",
+                "ProvinceValue": "MO",
+                "ServiceName": "Missouri"
+              }, {
+                "ProvinceName": "Pennsylvania",
+                "ProvinceValue": "PA",
+                "ServiceName": "Pennsylvania"
+              }, {
+                "ProvinceName": "Wisconsin",
+                "ProvinceValue": "WI",
+                "ServiceName": "Wisconsin"
+              }, {
+                "ProvinceName": "Alabama",
+                "ProvinceValue": "AL",
+                "ServiceName": "Alabama"
+              }, {
+                "ProvinceName": "Connecticut",
+                "ProvinceValue": "CT",
+                "ServiceName": "Connecticut"
+              }, {
+                "ProvinceName": "Louisiana",
+                "ProvinceValue": "LA",
+                "ServiceName": "Louisiana"
+              }, {
+                "ProvinceName": "New Mexico",
+                "ProvinceValue": "NM",
+                "ServiceName": "New Mexico"
+              }, {
+                "ProvinceName": "New York",
+                "ProvinceValue": "NY",
+                "ServiceName": "New York"
+              }, {
+                "ProvinceName": "Wyoming",
+                "ProvinceValue": "WY",
+                "ServiceName": "Wyoming"
+              }, {
+                "ProvinceName": "Arizona",
+                "ProvinceValue": "AZ",
+                "ServiceName": "Arizona"
+              }, {
+                "ProvinceName": "Idaho",
+                "ProvinceValue": "ID",
+                "ServiceName": "Idaho"
+              }, {
+                "ProvinceName": "Minnesota",
+                "ProvinceValue": "MN",
+                "ServiceName": "Minnesota"
+              }, {
+                "ProvinceName": "Mississippi",
+                "ProvinceValue": "MS",
+                "ServiceName": "Mississippi"
+              }, {
+                "ProvinceName": "California",
+                "ProvinceValue": "CA",
+                "ServiceName": "California"
+              }, {
+                "ProvinceName": "Iowa",
+                "ProvinceValue": "IA",
+                "ServiceName": "Iowa"
+              }, {
+                "ProvinceName": "North Dakota",
+                "ProvinceValue": "ND",
+                "ServiceName": "North Dakota"
+              }, {
+                "ProvinceName": "Tennessee",
+                "ProvinceValue": "TN",
+                "ServiceName": "Tennessee"
+              }, {
+                "ProvinceName": "Texas",
+                "ProvinceValue": "TX",
+                "ServiceName": "Texas"
+              }, {
+                "ProvinceName": "Illinois",
+                "ProvinceValue": "IL",
+                "ServiceName": "Illinois"
+              }, {
+                "ProvinceName": "Michigan",
+                "ProvinceValue": "MI",
+                "ServiceName": "Michigan"
+              }, {
+                "ProvinceName": "Ohio",
+                "ProvinceValue": "OH",
+                "ServiceName": "Ohio"
+              }, {
+                "ProvinceName": "Utah",
+                "ProvinceValue": "UT",
+                "ServiceName": "Utah"
+              }, {
+                "ProvinceName": "Vermont",
+                "ProvinceValue": "VT",
+                "ServiceName": "Vermont"
+              }, {
+                "ProvinceName": "Indiana",
+                "ProvinceValue": "IN",
+                "ServiceName": "Indiana"
+              }, {
+                "ProvinceName": "Montana",
+                "ProvinceValue": "MT",
+                "ServiceName": "Montana"
+              }, {
+                "ProvinceName": "Oregon",
+                "ProvinceValue": "OR",
+                "ServiceName": "Oregon"
+              }, {
+                "ProvinceName": "Washington",
+                "ProvinceValue": "WA",
+                "ServiceName": "Washington"
+              }, {
+                "ProvinceName": "West Virginia",
+                "ProvinceValue": "WV",
+                "ServiceName": "West Virginia"
+              }, {
+                "ProvinceName": "Arkansas",
+                "ProvinceValue": "AR",
+                "ServiceName": "Arkansas"
+              }]
+            }, {
+              "RegionName": "Canada",
+              "RegionKey": "can",
+              "ServiceName": "Canada",
+              "Provinces": [{
+                "ProvinceName": "Nunavut",
+                "ProvinceValue": "NU",
+                "ServiceName": "Nunavut"
+              }, {
+                "ProvinceName": "Manitoba",
+                "ProvinceValue": "MB",
+                "ServiceName": "Manitoba"
+              }, {
+                "ProvinceName": "Nova Scotia",
+                "ProvinceValue": "NS",
+                "ServiceName": "Nova Scotia"
+              }, {
+                "ProvinceName": "Prince Edward Island",
+                "ProvinceValue": "PE",
+                "ServiceName": "Prince Edward Island"
+              }, {
+                "ProvinceName": "Newfoundland and Labrador",
+                "ProvinceValue": "NL",
+                "ServiceName": "Newfoundland and Labrador"
+              }, {
+                "ProvinceName": "Northwest Territories",
+                "ProvinceValue": "NT",
+                "ServiceName": "Northwest Territories"
+              }, {
+                "ProvinceName": "British Columbia",
+                "ProvinceValue": "BC",
+                "ServiceName": "British Columbia"
+              }, {
+                "ProvinceName": "Quebec",
+                "ProvinceValue": "QC",
+                "ServiceName": "Quebec"
+              }, {
+                "ProvinceName": "Alberta",
+                "ProvinceValue": "AB",
+                "ServiceName": "Alberta"
+              }, {
+                "ProvinceName": "Saskatchewan",
+                "ProvinceValue": "SK",
+                "ServiceName": "Saskatchewan"
+              }, {
+                "ProvinceName": "Ontario",
+                "ProvinceValue": "ON",
+                "ServiceName": "Ontario"
+              }, {
+                "ProvinceName": "New Brunswick",
+                "ProvinceValue": "NB",
+                "ServiceName": "New Brunswick"
+              }, {
+                "ProvinceName": "Yukon",
+                "ProvinceValue": "YT",
+                "ServiceName": "Yukon"
+              }]
+            }, {
+              "RegionName": "Mexico",
+              "RegionKey": "mx",
+              "ServiceName": "Mexico",
+              "Provinces": [{
+                "ProvinceName": "Chiapas",
+                "ProvinceValue": "CS",
+                "ServiceName": "Chiapas"
+              }, {
+                "ProvinceName": "Michoacan",
+                "ProvinceValue": "MI",
+                "ServiceName": "Michoacan"
+              }, {
+                "ProvinceName": "Sonora",
+                "ProvinceValue": "SO",
+                "ServiceName": "Sonora"
+              }, {
+                "ProvinceName": "Aguascalientes",
+                "ProvinceValue": "AG",
+                "ServiceName": "Aguascalientes"
+              }, {
+                "ProvinceName": "Mexico City",
+                "ProvinceValue": "MX",
+                "ServiceName": "Mexico City"
+              }, {
+                "ProvinceName": "Durango",
+                "ProvinceValue": "DG",
+                "ServiceName": "Durango"
+              }, {
+                "ProvinceName": "Puebla",
+                "ProvinceValue": "PB",
+                "ServiceName": "Puebla"
+              }, {
+                "ProvinceName": "Veracruz",
+                "ProvinceValue": "VE",
+                "ServiceName": "Veracruz"
+              }, {
+                "ProvinceName": "Coahuila",
+                "ProvinceValue": "CO",
+                "ServiceName": "Coahuila"
+              }, {
+                "ProvinceName": "Mexico",
+                "ProvinceValue": "ME",
+                "ServiceName": "México"
+              }, {
+                "ProvinceName": "Sinaloa",
+                "ProvinceValue": "SI",
+                "ServiceName": "Sinaloa"
+              }, {
+                "ProvinceName": "Chihuahua",
+                "ProvinceValue": "CH",
+                "ServiceName": "Chihuahua"
+              }, {
+                "ProvinceName": "Morelos",
+                "ProvinceValue": "MO",
+                "ServiceName": "Morelos"
+              }, {
+                "ProvinceName": "Tabasco",
+                "ProvinceValue": "TB",
+                "ServiceName": "Tabasco"
+              }, {
+                "ProvinceName": "San Luis Potosi",
+                "ProvinceValue": "SL",
+                "ServiceName": "San Luis Potosi"
+              }, {
+                "ProvinceName": "Campeche",
+                "ProvinceValue": "CM",
+                "ServiceName": "Campeche"
+              }, {
+                "ProvinceName": "Hidalgo",
+                "ProvinceValue": "HG",
+                "ServiceName": "Hidalgo"
+              }, {
+                "ProvinceName": "Quintana Roo",
+                "ProvinceValue": "QR",
+                "ServiceName": "Quintana Roo"
+              }, {
+                "ProvinceName": "Baja California Sur",
+                "ProvinceValue": "BS",
+                "ServiceName": "Baja California Sur"
+              }, {
+                "ProvinceName": "Jalisco",
+                "ProvinceValue": "JA",
+                "ServiceName": "Jalisco"
+              }, {
+                "ProvinceName": "Nuevo Leon",
+                "ProvinceValue": "NL",
+                "ServiceName": "Nuevo Leon"
+              }, {
+                "ProvinceName": "Tlaxcala",
+                "ProvinceValue": "TL",
+                "ServiceName": "Tlaxcala"
+              }, {
+                "ProvinceName": "Baja California",
+                "ProvinceValue": "BC",
+                "ServiceName": "Baja California"
+              }, {
+                "ProvinceName": "Guanajuato",
+                "ProvinceValue": "GT",
+                "ServiceName": "Guanajuato"
+              }, {
+                "ProvinceName": "Oaxaca",
+                "ProvinceValue": "OA",
+                "ServiceName": "Oaxaca"
+              }, {
+                "ProvinceName": "Yucatan",
+                "ProvinceValue": "YU",
+                "ServiceName": "Yucatan"
+              }, {
+                "ProvinceName": "Guerrero",
+                "ProvinceValue": "GR",
+                "ServiceName": "Guerrero"
+              }, {
+                "ProvinceName": "Queretaro",
+                "ProvinceValue": "QE",
+                "ServiceName": "Queretaro"
+              }, {
+                "ProvinceName": "Zacatecas",
+                "ProvinceValue": "ZA",
+                "ServiceName": "Zacatecas"
+              }, {
+                "ProvinceName": "Colima",
+                "ProvinceValue": "CL",
+                "ServiceName": "Colima"
+              }, {
+                "ProvinceName": "Nayarit",
+                "ProvinceValue": "NA",
+                "ServiceName": "Nayarit"
+              }, {
+                "ProvinceName": "Tamaulipas",
+                "ProvinceValue": "TM",
+                "ServiceName": "Tamaulipas"
+              }]
+            }]
+          }
+        },
+        "Labels": {
+          "CTA": {
+            "Continue": "Continue",
+            "Next": "Next"
+          },
+          "Select": "Select",
+          "ShippingSection": {
+            "Address1": "Address 1",
+            "Address1Error": "Address is required",
+            "Address1Placeholder": "Street Address",
+            "Address2": "Address 2 <span class=\"italic font-normal capitalize\">(Optional)</span>",
+            "Address2Placeholder": "Apt / PO Box / Suite / Building / Etc",
+            "Address3": "Address 3 <span class=\"italic font-normal capitalize\">(Optional)</span>",
+            "AddressEntered": "Address You Entered:",
+            "AddressNotOnSystem": "This address is not currently in our system. Please review the address and make sure it is correct before continuing.",
+            "Back": "Back",
+            "City": "City",
+            "CityError": "City is required",
+            "CityPlaceholder": "City",
+            "Country": "Country",
+            "PostalCode": "Postal Code",
+            "PostalCodeError": "Postal Code is required",
+            "Province": "Province",
+            "ProvinceError": "Province is required",
+            "SectionTitle": "Shipping Address",
+            "State": "State",
+            "StateError": "State is required",
+            "Suburb": "Suburb",
+            "SuburbError": "Suburb is required",
+            "Suggested": "Suggested",
+            "UseThisAddress": "Use This Address",
+            "VerifyAddressModalTitle": "Verify Address",
+            "ZipCode": "Zip Code",
+            "ZipCodeError": "Zip Code is required"
+          }
+        }
+      }
+    </script>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "<h2>General</h2>\n<ul>\n<li>This is a Vue component is located here: <code>productstore\\source\\js\\vue\\components\\02-organisms\\shipping-address-form\\shipping-address-form.vue</code></li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>This component uses data-driven.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The next/continue CTA emits an object with all the data.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The values of the country field can't be changed, only the labels.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The keys below are select (dropdown) fields, so they need to be a string.\n<ul>\n<li>StatesUs</li>\n<li>StateMx</li>\n<li>ProvinceLabels</li>\n</ul>\n</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>If the values are passed in the keys below, the form will auto-fulfill.</li>\n</ul>\n<h3>Values Keys for each field:</h3>\n<pre><code>`\n&quot;Address_1Value&quot;\n&quot;Address_2Value&quot;\n&quot;Address_3Value&quot;\n&quot;CityValue&quot;\n&quot;PostalCodeValue&quot;\n&quot;ProvinceValue&quot;\n&quot;StateMxValue&quot;\n&quot;StateUsValue&quot;\n&quot;SuburbValue&quot;\n&quot;ZipCodeValue&quot;\n`\n</code></pre>\n<ul>\n<li>For the focus loop to work properly, it needs to be set the following data():</li>\n</ul>\n<pre><code>mainExperianFields: {\n    inputId: 'address_1', // input where experian get the proper data to search\n    resultsCtaClass: '.o-shippAddressForm__cta', // all the address results\n    wrapper: '.o-shippAddressForm__field.-address1' // the wrapper of the input\n}\n</code></pre>\n<ul>\n<li>This component uses <strong>Experian API</strong> to check the address.\n<ul>\n<li>Documentation: https://docs.experianaperture.io/address-validation/experian-address-validation/\n<ul>\n<li>V1: https://docs.experianaperture.io/address-validation/experian-address-validation/api-reference/api-specification/</li>\n<li>V2: https://www.edq.com/documentation/apis-r/address-validate/global-intuitive/</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n",
+      "patternBreadcrumb": {
+        "patternGroup": "organisms",
+        "patternSubgroup": "shipping-address-form"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Shipping Address Form",
+      "patternPartial": "organisms-shipping-address-form",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "<h2>General</h2>\n<ul>\n<li>This is a Vue component is located here: <code>productstore\\source\\js\\vue\\components\\02-organisms\\shipping-address-form\\shipping-address-form.vue</code></li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>This component uses data-driven.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The next/continue CTA emits an object with all the data.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The values of the country field can't be changed, only the labels.</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>The keys below are select (dropdown) fields, so they need to be a string.\n<ul>\n<li>StatesUs</li>\n<li>StateMx</li>\n<li>ProvinceLabels</li>\n</ul>\n</li>\n</ul>\n<p>&lt;br&gt;</p>\n<ul>\n<li>If the values are passed in the keys below, the form will auto-fulfill.</li>\n</ul>\n<h3>Values Keys for each field:</h3>\n<pre><code>`\n&quot;Address_1Value&quot;\n&quot;Address_2Value&quot;\n&quot;Address_3Value&quot;\n&quot;CityValue&quot;\n&quot;PostalCodeValue&quot;\n&quot;ProvinceValue&quot;\n&quot;StateMxValue&quot;\n&quot;StateUsValue&quot;\n&quot;SuburbValue&quot;\n&quot;ZipCodeValue&quot;\n`\n</code></pre>\n<ul>\n<li>For the focus loop to work properly, it needs to be set the following data():</li>\n</ul>\n<pre><code>mainExperianFields: {\n    inputId: 'address_1', // input where experian get the proper data to search\n    resultsCtaClass: '.o-shippAddressForm__cta', // all the address results\n    wrapper: '.o-shippAddressForm__field.-address1' // the wrapper of the input\n}\n</code></pre>\n<ul>\n<li>This component uses <strong>Experian API</strong> to check the address.\n<ul>\n<li>Documentation: https://docs.experianaperture.io/address-validation/experian-address-validation/\n<ul>\n<li>V1: https://docs.experianaperture.io/address-validation/experian-address-validation/api-reference/api-specification/</li>\n<li>V2: https://www.edq.com/documentation/apis-r/address-validate/global-intuitive/</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n",
+      "patternBreadcrumb": {
+        "patternGroup": "organisms",
+        "patternSubgroup": "shipping-address-form"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Shipping Address Form",
+      "patternPartial": "organisms-shipping-address-form",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770268190704">
+    (function() {
+      if (self != top) {
+        var cb = '1770268190704';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770268190704" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    };
+  </script>
+  <!-- Check for PCI components on the page to determine which bundles to load -->
+  <script>
+    (function() {
+      // Detect if this page needs PCI bundles
+      var isPciPage = false;
+
+      // Check for PCI component tags
+      if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+        isPciPage = true;
+      }
+
+      // Check for PCI routes/patterns
+      var path = window.location.pathname.toLowerCase();
+      if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+        isPciPage = true;
+      }
+
+      // Check for explicit PciMode flag (from Pattern Lab JSON)
+      if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+        isPciPage = true;
+      }
+
+      function loadJS(src, cb) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        if (cb) s.onload = cb;
+        document.body.appendChild(s);
+      }
+
+      if (isPciPage) {
+        // PCI path - load CSP-compliant bundles
+        console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+        loadJS('/js/runtime-pci.js?1770268190704', function() {
+          loadJS('/js/vue-pci.js?1770268190704', function() {
+            loadJS('/js/vendor-pci.js?1770268190704', function() {
+              loadJS('/js/pci.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
+              });
+            });
+          });
+        });
+      } else {
+        // Non-PCI path - load full-featured bundles
+        console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+        loadJS('/js/runtime.js?1770268190704', function() {
+          loadJS('/js/vue-main.js?1770268190704', function() {
+            loadJS('/js/vendor.js?1770268190704', function() {
+              loadJS('/js/index.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+              });
+            });
+          });
+        });
+      }
+    }());
+  </script>
+  <script>
+    (function() {
+      var loadProfile = document.getElementsByClassName('o-loadProfile');
+      if (!loadProfile.length) return;
+      var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var r = document.getElementsByClassName('o-loadProfile__retry');
+
+      function show() {
+        f && f.classList.remove('-isHidden');
+      }
+      if (r.length) r[0].addEventListener('click', function() {
+        window.location.reload();
+      });
+      setTimeout(show, 10000);
+    }());
+  </script>
+
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    }
+  </script>
+  <!--For Ralleyware pages and widgets-->
+  <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+  <script>
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+    if (loadProfile.length) {
+      var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+      function showFooter() {
+        loadProfileFooter.classList.remove('-isHidden');
+      };
+
+      if (retryBtn.length) {
+        retryBtn[0].addEventListener('click', function(event) {
+          window.location.reload();
+        });
+      }
+
+      setTimeout(showFooter, 10000);
+    }
+  </script>
+</body>
+
+</html>

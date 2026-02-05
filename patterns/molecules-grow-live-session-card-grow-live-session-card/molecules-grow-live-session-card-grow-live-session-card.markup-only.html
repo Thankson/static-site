@@ -1,0 +1,100 @@
+<m-grow-live-session-card script-id="liveSessionCard"></m-grow-live-session-card>
+
+<script type="application/json" id="liveSessionCard">
+  {
+    "Labels": {},
+    "Data": {
+      "LiveSession": {
+        "ApiInterval": 10000,
+        "LambdaUrl": "https://api.example.com/livestream",
+        "EventTime": "10:00 AM - 12:30 PM",
+        "ButtonStates": [{
+          "Type": "ComingSoon",
+          "Title": "GENERAL SESSION COMING SOON",
+          "Description": "(Virtual doors open at 9:30 AM)",
+          "Button": {
+            "ButtonText": "COMING SOON",
+            "TextColor": "#eaefc9",
+            "BackgroundColor": "#9b9980",
+            "HoverColor": "blue-150",
+            "BorderColor": "#151e3a"
+          },
+          "Link": "https://example.com/event-page",
+          "BackgroundColor": "#f5f5f5",
+          "BorderColor": "#ffab53",
+          "TextColor": "#914bbc",
+          "SubTextColor": "#5b1ae1",
+          "EventTimeColor": "#8d748b"
+        }, {
+          "Type": "WatchNow",
+          "Title": "GENERAL SESSION WATCH NOW",
+          "Description": "(Virtual doors open at 10:30 AM)",
+          "Button": {
+            "ButtonText": "WATCH NOW",
+            "TextColor": "#ffffff",
+            "BackgroundColor": "#CB3C12",
+            "HoverColor": "red",
+            "BorderColor": "#CB3C12"
+          },
+          "Link": "https://example.com/more-info",
+          "BackgroundColor": "#ffffff",
+          "BorderColor": "#0897A8",
+          "TextColor": "#0D97A8",
+          "SubTextColor": "#555555",
+          "EventTimeColor": "#555555"
+        }, {
+          "Type": "WalkIn",
+          "Title": "GENERAL SESSION WALK IN",
+          "Description": "(Virtual doors open at 11:30 AM)",
+          "Button": {
+            "ButtonText": "",
+            "TextColor": "",
+            "BackgroundColor": "",
+            "HoverColor": "",
+            "BorderColor": ""
+          },
+          "Link": "https://example.com/more-info",
+          "BackgroundColor": "#ffffff",
+          "BorderColor": "#0897A8",
+          "TextColor": "#0D97A8",
+          "SubTextColor": "#555555",
+          "EventTimeColor": "#555555"
+        }, {
+          "Type": "Ended",
+          "Title": "GENERAL SESSION ENDED",
+          "Description": "(Virtual doors open at 11:45 AM)",
+          "Button": {
+            "ButtonText": "BROADCAST HAS ENDED",
+            "TextColor": "#0D97A8",
+            "BackgroundColor": "#ffffff",
+            "HoverColor": "white",
+            "BorderColor": "#DDDDDD"
+          },
+          "Link": "",
+          "BackgroundColor": "#ffffff",
+          "BorderColor": "#0897A8",
+          "TextColor": "#0D97A8",
+          "SubTextColor": "#555555",
+          "EventTimeColor": "#555555"
+        }, {
+          "Type": "Replay",
+          "Title": "GENERAL SESSION REPLAY",
+          "Description": "(Virtual doors open at 12:00 PM)",
+          "Button": {
+            "ButtonText": "<p>REPLAY</p><img alt=\"alternative image text\" src=\"https://placehold.co/16x16\"/>",
+            "TextColor": "#ffffff",
+            "BackgroundColor": "#CB3C12",
+            "HoverColor": "red-150",
+            "BorderColor": "#CB3C12"
+          },
+          "Link": "https://example.com/more-info",
+          "BackgroundColor": "#ffffff",
+          "BorderColor": "#0897A8",
+          "TextColor": "#0D97A8",
+          "SubTextColor": "#555555",
+          "EventTimeColor": "#555555"
+        }]
+      }
+    }
+  }
+</script>

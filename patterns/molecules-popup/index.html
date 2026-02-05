@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770268190704" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770268190704" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770268190704" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770268190704" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-molecules-popup" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/molecules-popup\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-molecules-popup">Popup</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="molecules-popup" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/molecules-popup-popup\molecules-popup-popup.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="molecules-popup" title="Link to Pattern">
+						Popup
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-molecules-popup" data-patternpartial="molecules-popup" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-molecules-popup">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- START 10761 - Pop-up -->
+<div class="m-popUp hidden  ">
+  <div class="m-popUp__content" aria-hidden="true">
+        <span class="a-arrow -lg -up -filled -shadow absolute -top-13 right-8" aria-hidden="true">
+            <span class="a-arrow__icon border-white text-white " style="border-color:"></span>
+        </span>
+
+    <div class="m-popUp__header ">
+      <h2 class="m-popUp__headerTitle ">Processing</h2>
+    </div>
+
+    <div class="m-popUp__body">
+            <div class="p-20">When your package arrives at UPS, tracking info will be available. Please check back soon!</div>
+    </div>
+
+    <div class="m-popUp__footer ">
+      <a href=# class="m-popUp__footerCTA " data-testid="link-footerCTA">Order history</a>
+    </div>
+
+    <button class="m-popUp__close" tabindex="0" aria-label="TEST POP Close Pop-up" data-testid="button-popUpClose">
+      <img src="https://cdnsc1.melaleuca.com/na/images/header/clear2x.png" alt="Close Pop-up" class="m-popUp__closeImg" aria-hidden="true">
+    </button>
+
+  </div>
+</div>
+<!-- END 10761 - Pop-up -->
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-molecules-popup" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"atoms-arrow","lineagePath":"../../patterns/atoms-arrows-arrow\\atoms-arrows-arrow.rendered.html"}],"lineage":[{"lineagePattern":"atoms-arrow","lineagePath":"../../patterns/atoms-arrows-arrow\\atoms-arrows-arrow.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"molecules-popup-orders-backup-order-sent","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-backup-order-sent\\molecules-popup-orders-popup-orders-backup-order-sent.rendered.html"},{"lineagePattern":"molecules-popup-orders-multiple-orders-different-states","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-multiple-orders-different-states\\molecules-popup-orders-popup-orders-multiple-orders-different-states.rendered.html"},{"lineagePattern":"molecules-popup-orders-order-delivered","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-order-delivered\\molecules-popup-orders-popup-orders-order-delivered.rendered.html"},{"lineagePattern":"molecules-popup-orders-order-placed-no-label","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-order-placed-no-label\\molecules-popup-orders-popup-orders-order-placed-no-label.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-2-packages","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-2-packages\\molecules-popup-orders-popup-orders-shipped-with-2-packages.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-3-packages-different-dates","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-3-packages-different-dates\\molecules-popup-orders-popup-orders-shipped-with-3-packages-different-dates.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-3-packages-same-dates","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-3-packages-same-dates\\molecules-popup-orders-popup-orders-shipped-with-3-packages-same-dates.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-delivery-estimate","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-delivery-estimate\\molecules-popup-orders-popup-orders-shipped-with-delivery-estimate.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-no-delivery-date","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-no-delivery-date\\molecules-popup-orders-popup-orders-shipped-with-no-delivery-date.rendered.html"},{"lineagePattern":"molecules-popup-accessories","lineagePath":"../../patterns/molecules-popup-accessories-popup-accessories\\molecules-popup-accessories-popup-accessories.rendered.html"},{"lineagePattern":"molecules-popup-orders","lineagePath":"../../patterns/molecules-popup-orders-popup-orders\\molecules-popup-orders-popup-orders.rendered.html"}],"lineageR":[{"lineagePattern":"molecules-popup-orders-backup-order-sent","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-backup-order-sent\\molecules-popup-orders-popup-orders-backup-order-sent.rendered.html"},{"lineagePattern":"molecules-popup-orders-multiple-orders-different-states","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-multiple-orders-different-states\\molecules-popup-orders-popup-orders-multiple-orders-different-states.rendered.html"},{"lineagePattern":"molecules-popup-orders-order-delivered","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-order-delivered\\molecules-popup-orders-popup-orders-order-delivered.rendered.html"},{"lineagePattern":"molecules-popup-orders-order-placed-no-label","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-order-placed-no-label\\molecules-popup-orders-popup-orders-order-placed-no-label.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-2-packages","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-2-packages\\molecules-popup-orders-popup-orders-shipped-with-2-packages.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-3-packages-different-dates","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-3-packages-different-dates\\molecules-popup-orders-popup-orders-shipped-with-3-packages-different-dates.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-3-packages-same-dates","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-3-packages-same-dates\\molecules-popup-orders-popup-orders-shipped-with-3-packages-same-dates.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-delivery-estimate","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-delivery-estimate\\molecules-popup-orders-popup-orders-shipped-with-delivery-estimate.rendered.html"},{"lineagePattern":"molecules-popup-orders-shipped-with-no-delivery-date","lineagePath":"../../patterns/molecules-popup-orders-popup-orders-shipped-with-no-delivery-date\\molecules-popup-orders-popup-orders-shipped-with-no-delivery-date.rendered.html"},{"lineagePattern":"molecules-popup-accessories","lineagePath":"../../patterns/molecules-popup-accessories-popup-accessories\\molecules-popup-accessories-popup-accessories.rendered.html"},{"lineagePattern":"molecules-popup-orders","lineagePath":"../../patterns/molecules-popup-orders-popup-orders\\molecules-popup-orders-popup-orders.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<h2>Markup Structure</h2>\n<ul>\n<li>This pop-up component require to be <strong>inside</strong> a wrapper div with the button toggler.</li>\n<li>The markup for this pop-up on any CTA is:\n<ul>\n<li>&lt;div class=&quot;relative&quot;&gt;\n<ul>\n<li>button toggler pop-up (CTA with class: <strong>popUp-toggler</strong>)</li>\n<li>this pop-up component</li>\n</ul>\n</li>\n<li>&lt;/div&gt;</li>\n</ul>\n</li>\n<li>The <strong>wrapper div</strong> requires the class: <strong>relative</strong>.</li>\n<li>The <strong>button toggler</strong> requires the class: <strong>popUp-toggler</strong>.</li>\n<li>Please look at <strong>Orders</strong> button on the <strong>Pages -&gt; Product Landing</strong> for a real example on how this component works.</li>\n</ul>\n<h2>ADA</h2>\n<ul>\n<li>The <strong>__close</strong> element requires an <strong>aria-label</strong> description.</li>\n</ul>\n<h2>Other Notes</h2>\n<ul>\n<li>The <strong>content</strong> of the message body is a <strong>rich text/multiline</strong>.</li>\n<li>This component is visible only on <strong>Desktop</strong>.</li>\n</ul>\n<h2>Pattern Lab Structures</h2>\n<p>The pop-up molecule itself should not contain the numerous variations of pop-up content.</p>\n<p>Instead, a new molecule/organism/page should reference the pop-up and leverage the <code>BodyDynamic</code> variable.</p>\n<p>This will allow the FE dev to call any folder of pop-up content.</p>\n<p>Visit &quot;popup-orders&quot; under the molecule folder for an example of this.</p>\n","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"popup"},"patternExtension":"hbs","patternName":"Popup","patternPartial":"molecules-popup","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="molecules-popup-notifications" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/molecules-popup-popup-notifications\molecules-popup-popup-notifications.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="molecules-popup-notifications" title="Link to Pattern">
+						Popup Notifications
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-molecules-popup-notifications" data-patternpartial="molecules-popup-notifications" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-molecules-popup-notifications">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- START 10761 - Pop-up -->
+<div class="m-popUp hidden -sm md:right-6 md:top-36">
+  <div class="m-popUp__content" aria-hidden="true">
+        <span class="a-arrow -md -up -filled -shadow absolute -top-10 right-25" aria-hidden="true">
+            <span class="a-arrow__icon border-white text-white " style="border-color:"></span>
+        </span>
+
+    <div class="m-popUp__header ">
+      <h2 class="m-popUp__headerTitle md:text-xl mx-5 md:py-8">Notifications</h2>
+    </div>
+
+    <div class="m-popUp__body">
+            <div class="m-notification ">
+            
+                <div class="m-notification__message">
+                    <p></p>
+                    <p class="m-notification__time"></p>
+                </div>
+            
+            
+            </div>
+    </div>
+
+    <div class="m-popUp__footer md:h-auto block">
+      <a href=# class="m-popUp__footerCTA mx-5 pb-3 md:py-10 md:h-40 block" data-testid="link-footerCTA">See All</a>
+    </div>
+
+    <button class="m-popUp__close" tabindex="0" aria-label="Close Pop-up" data-testid="button-popUpClose">
+      <img src="https://cdnsc1.melaleuca.com/na/images/header/clear2x.png" alt="Close Pop-up" class="m-popUp__closeImg" aria-hidden="true">
+    </button>
+
+  </div>
+</div>
+<!-- END 10761 - Pop-up -->
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-molecules-popup-notifications" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"atoms-arrow","lineagePath":"../../patterns/atoms-arrows-arrow\\atoms-arrows-arrow.rendered.html"}],"lineage":[{"lineagePattern":"atoms-arrow","lineagePath":"../../patterns/atoms-arrows-arrow\\atoms-arrows-arrow.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"<h2>Markup Structure</h2>\n<ul>\n<li>This notifications pop-up component has the same requirements as the default popup. It is indeed the same component, only with a custom Dynamic Body.</li>\n<li>The dynamic body is the <code>molecules-notification-group</code>, the same used in the notifications page.</li>\n<li>The notification-group must have the <code>-popup</code> modifier and not have a title for it to fit inside the popup component.</li>\n<li>The Modifiers on the Header and Footer of this component must be applyed for it to match the design.</li>\n<li>This component handles only the popup. The notification component lives on <code>organisms &gt; notifications</code></li>\n</ul>\n<h3>Modifiers</h3>\n<pre><code>&quot;Mod&quot;: {\n  &quot;Notification&quot;: &quot;-popup&quot;,\n  &quot;HeaderTitle&quot;: &quot;md:text-xl mx-5 md:py-8&quot;,\n  &quot;FooterCTA&quot;: &quot;mx-5 pb-3 md:py-10 md:h-40 block&quot;,\n  &quot;Footer&quot;: &quot;md:h-auto block&quot;\n}\n</code></pre>\n<h3>Props</h3>\n<p>label =&gt; Page title\nicon =&gt; path to the icon image\nicon-class =&gt; Icon classes\nicon-alt =&gt; Alternative text for the icon\nfooter-link =&gt; CTA link\nfooter-title =&gt; Title of the CTA</p>\n<h2>ADA</h2>\n<ul>\n<li>Same requirements as the default popup.</li>\n<li>The <code>__actionIcon</code> and <code>__remove</code> elements requires <strong>aria-label</strong> descriptions.</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"popup"},"patternExtension":"hbs","patternName":"Popup Notifications","patternPartial":"molecules-popup-notifications","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="molecules-popup-vue" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/molecules-popup-popup-vue\molecules-popup-popup-vue.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="molecules-popup-vue" title="Link to Pattern">
+						Popup Vue
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-molecules-popup-vue" data-patternpartial="molecules-popup-vue" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-molecules-popup-vue">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<popup-component 
+    :visible="visible ? visible : true"
+
+    size=""
+    mods=""
+    
+    arrow-size="-lg"
+    arrow-direction="-up"
+    arrow-mods="-filled -shadow absolute -top-13 right-8"
+    arrow-color="white"
+
+    :header-visible="true" 
+    header-title="Processing" 
+
+    :footer-visible="true" 
+    footer-title="Order history"
+    footer-link="#"
+    
+    close-icon="//cdnsc1.melaleuca.com/na/images/header/clear2x.png"
+    close-alt="Close Pop-up"
+    close-aria-label="Close Pop-up"> 
+
+    <template>
+        <!-- All the content inside this tag is a slot, popup-component has no control over it -->
+            <div class="p-20">When your package arrives at UPS, tracking info will be available. Please check back soon!</div>
+    </template>
+</popup-component>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-molecules-popup-vue" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h2>General notes</h2>\n<ul>\n<li>\n<p>This pop-up component require:</p>\n<ul>\n<li>A button who will trigger the pop-up to open/close</li>\n<li>This pop-up component</li>\n<li>The content of the pop (as a SLOT)</li>\n</ul>\n</li>\n<li>\n<p>On the popup component add a ref with a <strong>unique id</strong>.</p>\n</li>\n<li>\n<p>On the button, add this function on click event:</p>\n<ul>\n<li><strong>v-on:click.stop.prevent=&quot;togglePopUp('yourIdHere')&quot;</strong></li>\n</ul>\n</li>\n<li>\n<p>Example code:</p>\n</li>\n</ul>\n<p>&lt;button class=&quot;your-class&quot;\n:aria-label=&quot;ariaLabelHere&quot;\nv-on:click.stop.prevent=&quot;togglePopUp('menu')&quot;&gt;</p>\n<pre><code>Click\n</code></pre>\n<p>&lt;/button&gt;</p>\n<p>&lt;popup\nref=&quot;menu&quot;\nmods=&quot;right-8 top-60&quot;\narrowMods=&quot;-filled -shadow absolute -top-13 right-2 md:right-10&quot;\nmodContent=&quot;px-15 py-12&quot;\n:headerVisible=&quot;false&quot;\n:footerVisible=&quot;false&quot;</p>\n<blockquote></blockquote>\n<pre><code>Your content here\n</code></pre>\n<p>&lt;/popup&gt;</p>\n<ul>\n<li>Please look at demo on the <strong>Pages -&gt; My-Account -&gt; My Account Order History</strong> or <a href=\"/?p=pages-my-account-order-history\">Click here</a> for a real example on how this component works.</li>\n</ul>\n<h2>ADA</h2>\n<ul>\n<li>The <strong>__close</strong> element requires an <strong>aria-label</strong> description.</li>\n</ul>\n","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"popup"},"patternExtension":"hbs","patternName":"Popup Vue","patternPartial":"molecules-popup-vue","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-molecules-popup"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-molecules-popup"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770268190704">
+  (function() {
+    if (self != top) {
+      var cb = '1770268190704';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770268190704" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770268190704', function(){
+        loadJS('/js/vue-pci.js?1770268190704', function(){
+          loadJS('/js/vendor-pci.js?1770268190704', function(){
+            loadJS('/js/pci.js?1770268190704', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770268190704', function(){
+        loadJS('/js/vue-main.js?1770268190704', function(){
+          loadJS('/js/vendor.js?1770268190704', function(){
+            loadJS('/js/index.js?1770268190704', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

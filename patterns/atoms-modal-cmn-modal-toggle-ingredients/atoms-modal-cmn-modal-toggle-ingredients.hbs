@@ -1,0 +1,17 @@
+<a-modal-toggle class="a-button">
+  {{ButtonLabel}}
+
+  <template v-slot:heading>
+    {{ModalHeading}}
+  </template>
+
+  <template v-slot:body>
+    {{ModalBody}}
+  </template>
+
+  {{#if LinkUrl}}
+    <template v-slot:footer>
+      <a href="{{LinkUrl}}" class="underline">{{LinkText}}</a>
+    </template>
+  {{/if}}
+</a-modal-toggle>

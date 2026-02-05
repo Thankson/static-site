@@ -1,0 +1,13 @@
+{{#AnchorBtn}}
+  <div class="a-anchorBtn">
+    <a id="{{DestinationID}}" class="a-anchorBtn__link {{BorderFontColor}}" href="{{DestinationLink}}" {{#AriaLabel}}aria-label="{{.}}" {{/AriaLabel}} style="background-color: {{BgColor}}; color: {{TextColor}}; border: {{OriginalBorder}}" data-js="hoverBg" data-bg-overlay="{{HoverBgColor}}" data-hover-text="{{HoverTextColor}}" data-hover-border="{{HoverBorder}}" data-orig-border="{{OriginalBorder}}" data-smooth-scroll="{{SmoothScrollSpeed}}">
+
+      <div class="flex justify-center items-center">
+        <span class="mr-6"> {{Text}} </span>
+        <span aria-hidden="true" class="material-icons">{{ArrowDirection}}</span>
+      </div>
+
+    </a>
+  </div>
+
+{{/AnchorBtn}}

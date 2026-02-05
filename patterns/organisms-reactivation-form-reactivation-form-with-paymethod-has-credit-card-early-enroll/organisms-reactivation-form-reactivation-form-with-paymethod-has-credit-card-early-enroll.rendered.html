@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="pageType" content="Home" />
+  <title>Melaleuca Pattern Lab</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+  <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+  <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+  <link rel="stylesheet" href="../../css/app.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770268190704" media="all" />
+  <link rel="stylesheet" href="../../css/brand-peak.css?1770268190704" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- SG/MY Noto Sans SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+  <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+  <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+  <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+  <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+  <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+  <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+  <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+  <script>
+    dataLayer = [{
+      'userLogged': true,
+      'warehouseGroup': 'IdahoFalls',
+      'uiCulture': 'en-us'
+    }];
+
+    customerData = [{
+      canPurchaseRestrictedPacks: false,
+      isAuthenticated: true,
+      isGuest: false,
+      isGuestShoppingEnabled: false,
+      lvipStatus: "",
+      viewLists: true,
+      viewMemberPricing: true,
+      viewPoints: false,
+      country: "UnitedStates",
+      culture: "en-US",
+      uiCulture: "en-US",
+      customerID: 1016042303,
+      customerName: "Direct Tester",
+      businessName: "Direct Tester",
+      customerFullName: "John Doe",
+      formattedName: "Direct Tester",
+      customerType: "Employee",
+      customerPriceType: "Regular",
+      status: "Customer",
+      hasIMEA: true
+    }];
+  </script>
+  <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+  <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't need conditional in prod
+      if (document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        // Reviews for the PDP
+        pwr("render", {
+          // For performance enhancement
+          enable_content_collection_modal: false,
+          api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+          locale: 'en_US',
+          merchant_group_id: '507179823',
+          merchant_id: '1561128198',
+          // Usually is the sku number
+          page_id: '650',
+          // Page to write reviews
+          review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+          'product': {
+            'name': 'Energy Shot 12–Pack',
+            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+            'description': 'Energy Shot 12–Pack',
+            'category_name': 'Healthy Foods and Drinks',
+            'variants': [{
+              'name': 'Energy Shot 12–Pack',
+              'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+              'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+              'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+              'category_name': 'Healthy Foods and Drinks',
+              'page_id_variant': '5859'
+            }]
+          },
+          on_render: function() {
+            if (window.PDPReviews) {
+              window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+            }
+          },
+          components: {
+            ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+            ReviewDisplay: 'pr-reviewdisplay'
+          }
+        });
+      } else if (document.getElementsByClassName('p-ratingReview').length > 0) {
+        window.pwr = window.pwr || function() {
+          (pwr.q = pwr.q || []).push(arguments);
+        };
+        pwr("render", {
+          api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+          locale: 'en_us',
+          pr_locale: '.en_us',
+          merchant_group_id: '1968628287',
+          merchant_id: '1683664767',
+          appName: 'ryp',
+          emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+          components: {
+            ReviewYourPurchases: 'pr-write'
+          }
+        });
+      }
+    });
+  </script>
+
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+  </script>
+
+  <!-- Begin convertlab -->
+  <script>
+    enableConvertLabFeatureFlag = false;
+    if (window.enableConvertLabFeatureFlag) {
+      clDataLayer = {
+        'pageType': 'web'
+      };
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || {};
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+      window.addEventListener("load", (event) => {
+        if (window.clab_tracker) {
+          window.clab_tracker.ready(function() {
+            this.push(clDataLayer);
+          });
+          window.clab_tracker.setEnableAutoTrackExitPage(false);
+        }
+      });
+    }
+  </script>
+  <!-- End convertlab -->
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+<!-- n.b. <body> is intentionally not closed: -->
+
+<body class="pl-body relative ">
+  <script>
+    if (typeof _etmc !== 'undefined') {
+      window._etmc = _etmc;
+      _etmc.push(['setOrgId', '1036137']);
+      _etmc.push(['trackPageView']);
+    }
+  </script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+  <!-- n.b. <div> is intentionally not closed: -->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {
+        "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+        "Country": "Korea",
+        "CurrencyCode": "USD",
+        "HidePoints": false,
+        "HideAllPowerReviews": false,
+        "IsCn": false,
+        "ProductPricing": {
+          "HideProductMemberPrice": false,
+          "HideProductNonMemberPrice": false
+        }
+      }
+    </script>
+    <o-reactivation-form-with-paymethod script-id="ReactivationModalId"></o-reactivation-form-with-paymethod>
+
+    <script type="application/json" id="ReactivationModalId">
+      {
+        "Title": "Reactivate Your Account",
+        "Text": "Enjoy all the benefits of a Melaleuca Preferred Member.",
+        "RedirectUrl": "#",
+        "SectionTitle": "Account Information",
+        "HidePayMethod": false,
+        "RemoveValidationFromCC": true,
+        "showVirtualAccount": false,
+        "DefaultCreditCard": {
+          "PaymethodNameDisplay": "MC Paymethod",
+          "ExpirationDisplay": "3/25",
+          "ExpiresSoon": false,
+          "PayMethodImage": {
+            "Url": "https://cdnsc1.melaleuca.com/au-nz/images/atoms/card-icon-mastercard.svg",
+            "Alt": ""
+          },
+          "Expired": false,
+          "RoutingNumber": null,
+          "CustomerId": 1510212572,
+          "PayMethodId": 15572109,
+          "PayMethodType": "MasterCard",
+          "NameOnAccount": "Test",
+          "LastFourDigitsOfAccount": "3885",
+          "AccountNickName": null,
+          "PayMethodDefaults": ["Products", "BackupOrder", "Riverbend"],
+          "PayMethodDirection": "Inbound",
+          "ExpirationDate": "2025-03-31T00:00:00Z",
+          "IsMelaleucaCard": false,
+          "IsOneTimeCard": false,
+          "CanBeDefault": true,
+          "ShA1Hash": "\u0010QïõaJü¹/U%Ð\u0010’<®\\þ|á",
+          "BankName": "",
+          "BinNumber": "548297",
+          "IsEditable": true,
+          "VirtualAccountNumber": null,
+          "VirtualAccountExpirationDate": null,
+          "VirtualAccountBankName": null,
+          "CollectionsProcessorType": null,
+          "IsServicesDefault": false,
+          "CanBeUsedForRiverbendRanchOrders": false,
+          "Masking": "<span>&middot;&middot;&middot;&middot;</span><text>&nbsp;</text>&middot;&middot;&middot;&middot;</span><text>&nbsp;</text>&middot;&middot;&middot;&middot;</span><text>&nbsp;</text>",
+          "MaskingCondensed": "<span>&middot;&middot;&middot;&middot;</span><text>&nbsp;</text>",
+          "CanBeUsedForOwingBalance": true,
+          "PersonalIncomeIssueNumber": "0754553559",
+          "CashReceipt": null,
+          "CreditCardDescription": "MC Paymethod",
+          "AllowedForInstallment": false,
+          "CardId": null,
+          "Installment": null,
+          "InterestFreePeriod": 0,
+          "CanUseOnMultipleOrders": true,
+          "MinimumInstallmentAmount": 50000,
+          "PartnerPaymentReferenceUrl": null,
+          "PartnerPaymentReferenceUrlText": null,
+          "CardIssuerDescription": null,
+          "PreAuthStatus": true,
+          "PartnerCompanyCode": null,
+          "CanBeDeleted": false,
+          "Timestamp": "2023-08-22T23:28:02.96Z"
+        },
+        "Address": {
+          "CTAText": "Edit",
+          "CTALink": "#",
+          "IconUrl": " https://cdnsc1.melaleuca.com/na/images/common/icon-edit.png",
+          "IconAlt": "Edit Icon"
+        },
+        "CancelText": "Not now",
+        "CTAText": "Reactivate",
+        "CTAAriaLabel": "Reactivate Button",
+        "CancelAriaLabel": "Not now Button",
+        "Types": ["Mobile", "Home", "Work"],
+        "TypesValues": ["MobilePhone", "HomePhone", "BusinessPhone"],
+        "Checkboxes": [{
+          "CategoryName": "회원가입 계약 내용회원가입에 관한 동의 및 유의사항",
+          "Checkboxes": [{
+            "Checked": false,
+            "Text": "<div>멜라루카 <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/termsofuse#section2\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>회원가입에 관한 동의 및 유의사항</strong></a> 에 동의 합니다.</span>",
+            "Name": "MembershipAgreement",
+            "Required": true
+          }],
+          "Checked": true,
+          "Text": "I authorize Melaleuca to send messages to me via automated text. Consent is not required for purchase of goods or services. I can text STOP to end text messages or HELP for added information. Message and data rates may apply. <span class=\"text-green\">Terms of use</span> & <span class=\"text-green\">Privacy Polic</span> at Melaleuca.com.",
+          "Name": "SmsConsent",
+          "Required": true
+        }, {
+          "CategoryName": "전자상거래 이용약관",
+          "Checkboxes": [{
+            "Checked": false,
+            "Text": "<div> <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/termsofuse#section1\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>전자상거래 이용약관</strong></a>에 관한 동의 사항에 동의 합니다.</span>",
+            "Name": "EcommAgreement",
+            "Required": true
+          }],
+          "Checked": false,
+          "Text": "I agree to and acknowledge that I have read the terms & conditions outlined in the <span class=\"text-green\">Customer Agreement</span> and <span class=\"text-green\">Statement of Policies</span>. (A link to these terms & conditions will be emailed to you in your reactivation email.) I also agree to pay the Annual Membership fee when it is due</span>.",
+          "Name": "Terms",
+          "Required": true
+        }, {
+          "CategoryName": "개인정보방침",
+          "Checkboxes": [{
+            "Checked": false,
+            "Text": "<div> <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/privacypolicy#Collection\n\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>개인정보 수집 및 이용</strong></a> 에 관한 동의 사항에 동의 합니다.</span>",
+            "Name": "PersonalInfoAgreement",
+            "Required": true
+          }, {
+            "Checked": false,
+            "Text": "<div> <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/privacypolicy#ThirdParties\n\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>개인정보 제 3자 제공</strong></a>에 관한 동의 사항에 동의 합니다..</span>",
+            "Name": "ThirdPartyAgreement",
+            "Required": true
+          }, {
+            "Checked": false,
+            "Text": "<div> <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/privacypolicy#Handling\n\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>개인정보 취급 위탁</strong></a>에 관한 동의 사항에 동의 합니다.</span>",
+            "Name": "AccessHandlingAgreement",
+            "Required": true
+          }, {
+            "Checked": false,
+            "Text": "<div> <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/help-center/privacypolicy#Transfer\n\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>\t개인정보 국외 이전</strong></a>에 관한 동의 사항에 동의 합니다.</span>",
+            "Name": "OverseasAgreement",
+            "Required": true
+          }]
+        }],
+        "Labels": {
+          "address": "Address",
+          "email": {
+            "title": "Email",
+            "updatedSuccess": "Email updated succesfully",
+            "edit": "Edit",
+            "editAriaLabel": "Edit Button",
+            "warning": "Please add a valid email address",
+            "cancel": "Cancel",
+            "cancelAriaLabel": "Cancel Button",
+            "save": "Save",
+            "saveAriaLabel": "Save Button",
+            "errors": {
+              "format": "Invalid email format"
+            }
+          },
+          "error": {
+            "requiredCheckbox": "You need to check the Terms and Conditions checkbox before reactivate your account"
+          },
+          "name": "Name",
+          "phone": {
+            "title": "Default Phone Number",
+            "phoneNumberLabel": "Phone Number",
+            "add": "Add new phone number",
+            "cancel": "Cancel",
+            "cancelAriaLabel": "Cancel Button",
+            "save": "Save",
+            "saveAriaLabel": "Save Button",
+            "Default": "Default",
+            "edit": "Edit",
+            "editAriaLabel": "Cancel Button",
+            "makeDefault": "Make Default",
+            "type": "Phone Type",
+            "typeAria": "select phone type",
+            "delete": "Delete",
+            "deleteAriaLabel": "Delete phone number",
+            "updated": "Phone number updated successfully.",
+            "deleted": "Phone number deleted successfully.",
+            "errors": {
+              "format": "Invalid phone number format"
+            },
+            "warning": "Editing your phone number will affect your login credentials.",
+            "default": "Default"
+          },
+          "AgreementTitle": "Customer Agreements",
+          "ConsentMessage": "<span class=\"font-bold uppercase\">I consent to all</span> the following Personal Use Agreement, E-Commerce Terms and Conditions, and CUstomer Membership Agreement items.",
+          "PaymentMethodType": "Payment Method Type",
+          "CardholderName": "Cardholder Name",
+          "CardNumber": "Card Number",
+          "CardNumberError": "Card Number field is required",
+          "Expiration": "Expiration",
+          "ExpirationMonthError": "Expiration Month field is required",
+          "ExpirationYearError": "Expiration Year field is required",
+          "Month": "Month",
+          "Year": "Year",
+          "CvvLabel": "CVC/CVV",
+          "CvvRequired": "CVC/CVV field is required",
+          "DebitCreditCard": "Debit/Credit Card",
+          "VirtualAccount": "Virtual Account",
+          "CardholderNameValues": ["진정희 KRTest"],
+          "CardNumberMaxValue": 16,
+          "CardNumberMinValue": 15,
+          "PhoneUsername": {
+            "PhoneModal": {
+              "Title": "Alert",
+              "Description": "Editing you Mobile or email will change your username.",
+              "EditPhoneNumber": "Edit Phone Number"
+            },
+            "EmailModal": {
+              "Title": "Alert",
+              "Description": "Editing you Mobile or email will change your username.",
+              "EditPhoneNumber": "Edit Phone Number"
+            },
+            "EmailAgreement": {
+              "CheckboxLabel": "I Agree <a>Electronic Notice and Consent Agreement.</a>",
+              "Title": "Consent to Collection of Email Addresses",
+              "AgreementMessagingEmail": "Melaleuca collects e-mail addresses in order to deliver notices, confirm personal intentions, secure a smooth communication path such as handling complaints, and provide up-to-date information such as new services, new products or event information, and the purpose of collecting or receiving personal information is achieved. When it does, it will be destroyed. However, if it is stored according to the relevant laws or internal policies as follows, it may be stored continuously for the relevant period.\r\n\r\n※ Matters related to consignment\r\n\r\ntrustee\r\n\r\nConsignment work\r\n\r\ninformation provided\r\n\r\nSeoul Credit Rating Information Co., Ltd.\r\n\r\nReal name verification of members and marketing executives through mobile phone verification\r\n\r\nName, mobile number, date of birth\r\n\r\nCJ Logistics Co., Ltd.\r\n\r\nProvision of goods delivery service\r\n\r\nName, phone number, address\r\n\r\nKT Co., \r\n\r\nLtd., Dow Technology Co. , Ltd.\r\n\r\ntext message service\r\n\r\nPhone number\r\n\r\n• Reasons for information retention according to internal policy\r\n\r\n- Records of illegal use: Until the end of business\r\n\r\n- Records to prevent re-registration and double registration: 2 years\r\n\r\n• Reasons for retention of information according to related laws:\r\n\r\n- Records related to identity verification and access records: June\r\n\r\n- Records related to display and advertisement: 5 years\r\n\r\n- Records related to contract or subscription withdrawal: 5 years\r\n\r\n- Payment and supply of goods Records related to: 5 years\r\n\r\n- Records regarding consumer complaints or dispute handling: 3 years\r\n\r\n- Records prescribed by other laws: In accordance with related laws\r\n\r\nFor more details, please refer to the Privacy Policy."
+            },
+            "PhoneAgreement": {
+              "CheckboxLabel": "I Agree <a>Electronic Notice and Consent Agreement.</a>",
+              "Title": "Consent to collection of phone numbers",
+              "AgreementMessagingPhone": "Melaleuca collects mobile phone numbers for global member management and service provision, and it is destroyed when the purpose of collecting or receiving personal information is achieved. However, if it is stored according to the relevant laws or internal policies as follows, it may be stored continuously for the relevant period.\r\n\r\n• Reasons for information retention according to internal policy\r\n\r\n- Records of illegal use: Until the end of business\r\n\r\n- Records to prevent re-registration and double registration: 2 years\r\n\r\n• Reasons for retention of information according to related laws:\r\n\r\n- Records related to identity verification and access records: June\r\n\r\n- Records related to display and advertisement: 5 years\r\n\r\n- Records related to contract or subscription withdrawal: 5 years\r\n\r\n- Payment and supply of goods Records related to: 5 years\r\n\r\n- Records regarding consumer complaints or dispute handling: 3 years\r\n\r\n- Records prescribed by other laws: In accordance with related laws\r\n\r\nFor more details, please refer to the Privacy Policy."
+            },
+            "EditMobileMessage": "Editing your mobile or email will change your username"
+          },
+          "TermsTitle": "Terms of Use Modal",
+          "TermsDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "PrivacyTitle": "Privacy Agreement Modal",
+          "PrivacyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "AgreementTitle": "동의",
+        "ConsentMessage": "<strong>다음의 모든 약관 및 동의 사항</strong>에 동의 합니다.\n- 개인정보방침,전자상거래 이용약관, 회원 가입에 관한 동의 및 유의사항",
+        "PaymentMethodType": "결제 수단 종류",
+        "CardholderName": "카드이름",
+        "CardNumber": "카드번호",
+        "CardNumberError": "Card Number Error",
+        "Expiration": "유효기간",
+        "ExpirationMonthError": "Expiration Month Error",
+        "ExpirationYearError": "Expiration Year Error",
+        "Month": "월",
+        "Year": "년",
+        "DebitCreditCard": "신용카드",
+        "CardholderNameValues": ["uatkrtest01 Test Test"],
+        "CardNumberMaxValue": "19",
+        "CardNumberMinValue": "13",
+        "ShowImprovedCTACheckout": false,
+        "TermsTitle": "Terms Title:",
+        "TermsDescription": "<div>I authorize Melaleuca or its Marketing Executives to contact me periodically and to use an automated telephone dialing system for efficiency. Consent is not required to purchase. Message &amp; data rates may apply. Text STOP to end, HELP for info. <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/sitecore/content/Melaleuca/ProductStore/North America/US/Home/Help Center/TermsOfUse\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>Terms of Use</strong></a> &amp; <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"/sitecore/content/Melaleuca/ProductStore/North America/US/Home/Help Center/PrivacyPolicy\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>Privacy Policy</strong></a> at Melaleuca.com.</span>",
+        "PrivacyTitle": "Privacy Title:",
+        "PrivacyDescription": "<div>I agree to and acknowledge that I have read the terms & conditions outlined in the <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"https://cdnus.melaleuca.com/PDF/BusinessCenter/enus/cma-enus.pdf\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>Customer Agreement</strong></span></a> and <a rel=\"noopener noreferrer\" target=\"_blank\" href=\"https://www.melaleuca.com/BusinessCenter/Content.aspx?page=Melaleuca_Policies\" class=\"copy-link\"><span style=\"color: rgb(48, 134, 45);\"><strong>Statement of Policies</strong></span></a>. (A link to these terms & conditions will be emailed to you in your reactivation email.)</div>",
+        "VirtualAccount": "Virtual Account",
+        "PhoneUsername": {
+          "PhoneModal": {
+            "Title": "알림",
+            "Description": "휴대전화번호 또는 이메일 주소를 수정할 경우 웹계정 아이디가 변경됩니다.",
+            "EditPhoneNumber": "휴대전화번호 수정"
+          },
+          "EmailModal": {
+            "Title": "알림",
+            "Description": "휴대전화번호 또는 이메일 주소를 수정할 경우 웹계정 아이디가 변경됩니다.",
+            "EditPhoneNumber": "이메일 주소 수정"
+          },
+          "EmailAgreement": {
+            "CheckboxLabel": " <a>광고성 정보 수신</a>에 동의합니다.",
+            "Title": "이메일 주소 수집 동의",
+            "AgreementMessagingEmail": "\"멜라루카는 고지사항 전달, 본인 의사 확인, 불만 처리 등 원활한 의사소통 경로의 확보, 새로운 서비스, 신상품이나 이벤트 정보 등 최신 정보 제공 제공을 위하여 이메일 주소를 수집하며 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 다만, 아래와 같이 관계 법령이나 내부 방침에 의하여 보관되는 경우에는 해당 기간 동안 계속하여 보관할 수 있습니다.\r\n<br><br>\r\n※ 위탁에 관한 사항\r\n<br><br>\r\n수탁 업체\r\n<br><br>\r\n위탁 업무 내용\r\n<br><br>\r\n제공 정보\r\n<br><br>\r\n서울신용평가정보(주)\t\r\n<br><br>\r\n휴대폰 인증을 통한 회원 및 마케팅 이그제큐티브의 실명 확인\t\r\n<br><br>\r\n이름, 휴대폰 번호, 생년월일\r\n<br><br>\r\n씨제이대한통운(주)\t\r\n<br><br>\r\n물품배송 서비스의 제공\t\r\n<br><br>\r\n이름, 전화번호, 주소\r\n<br><br>\r\n(주)케이티\r\n<br><br>\r\n(주)다우기술\t\r\n<br><br>\r\n문자 메세지 서비스\t\r\n<br><br>\r\n전화번호\r\n<br><br>\r\n• 내부 방침에 의한 정보 보유 사유\r\n<br><br>\r\n- 부정이용기록: 사업 종료 시까지\r\n<br><br>\r\n- 재등록 및 이중등록의 방지를 위한 기록: 2년\r\n<br><br>\r\n• 관련 법령에 의한 정보보유 사유:\r\n<br><br>\r\n- 본인 확인에 관한 기록 및 접속기록: 6월\r\n<br><br>\r\n- 표시∙광고에 관한 기록: 5년\r\n<br><br>\r\n- 계약 또는 청약철회 등에 관한 기록: 5년\r\n<br><br>\r\n- 대금결제 및 재화 등의 공급에 관한 기록: 5년\r\n<br><br>\r\n- 소비자의 불만 또는 분쟁처리에 관한 기록: 3년\r\n<br><br>\r\n- 기타 법령이 정한 기록: 관계 법령에 따름\r\n<br><br>\r\n보다 자세한 내용은 개인정보취급/처리방침를 참고하시기 바랍니다\"\r\n"
+          },
+          "PhoneAgreement": {
+            "CheckboxLabel": " <a>광고성 정보 수신</a>에 동의합니다.",
+            "Title": "휴대전화번호 수집 동의",
+            "AgreementMessagingPhone": "\"멜라루카는글로벌 회원 관리 및 서비스 제공을 위해 휴대전화 번호를 수집하며 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 다만, 아래와 같이 관계 법령이나 내부 방침에 의하여 보관되는 경우에는 해당 기간 동안 계속하여 보관할 수 있습니다.\r\n<br><br>\r\n• 내부 방침에 의한 정보 보유 사유\r\n<br><br>\r\n- 부정이용기록: 사업 종료 시까지\r\n<br><br>\r\n- 재등록 및 이중등록의 방지를 위한 기록: 2년\r\n<br><br>\r\n• 관련 법령에 의한 정보보유 사유:\r\n<br><br>\r\n- 본인 확인에 관한 기록 및 접속기록: 6월\r\n<br><br>\r\n- 표시∙광고에 관한 기록: 5년\r\n<br><br>\r\n- 계약 또는 청약철회 등에 관한 기록: 5년\r\n<br><br>\r\n- 대금결제 및 재화 등의 공급에 관한 기록: 5년\r\n<br><br>\r\n- 소비자의 불만 또는 분쟁처리에 관한 기록: 3년\r\n<br><br>\r\n- 기타 법령이 정한 기록: 관계 법령에 따름\r\n<br><br>\r\n보다 자세한 내용은 개인정보취급/처리방침를 참고하시기 바랍니다.\""
+          },
+          "EditMobileMessage": "휴대전화번호 또는 이메일 주소를 수정할 경우 웹계정 아이디가 변경됩니다."
+        },
+        "Country": "Korea"
+      }
+    </script>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "organisms",
+        "patternSubgroup": "reactivation-form"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Reactivation Form With Paymethod Has Credit Card Early Enroll",
+      "patternPartial": "organisms-reactivation-form-with-paymethod-has-credit-card-early-enroll",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "organisms",
+        "patternSubgroup": "reactivation-form"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Reactivation Form With Paymethod Has Credit Card Early Enroll",
+      "patternPartial": "organisms-reactivation-form-with-paymethod-has-credit-card-early-enroll",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770268190704">
+    (function() {
+      if (self != top) {
+        var cb = '1770268190704';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770268190704" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]>
+  </script>
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    };
+  </script>
+  <!-- Check for PCI components on the page to determine which bundles to load -->
+  <script>
+    (function() {
+      // Detect if this page needs PCI bundles
+      var isPciPage = false;
+
+      // Check for PCI component tags
+      if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+        isPciPage = true;
+      }
+
+      // Check for PCI routes/patterns
+      var path = window.location.pathname.toLowerCase();
+      if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+        isPciPage = true;
+      }
+
+      // Check for explicit PciMode flag (from Pattern Lab JSON)
+      if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+        isPciPage = true;
+      }
+
+      function loadJS(src, cb) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.defer = true;
+        if (cb) s.onload = cb;
+        document.body.appendChild(s);
+      }
+
+      if (isPciPage) {
+        // PCI path - load CSP-compliant bundles
+        console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+        loadJS('/js/runtime-pci.js?1770268190704', function() {
+          loadJS('/js/vue-pci.js?1770268190704', function() {
+            loadJS('/js/vendor-pci.js?1770268190704', function() {
+              loadJS('/js/pci.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ PCI bundles loaded successfully');
+              });
+            });
+          });
+        });
+      } else {
+        // Non-PCI path - load full-featured bundles
+        console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+        loadJS('/js/runtime.js?1770268190704', function() {
+          loadJS('/js/vue-main.js?1770268190704', function() {
+            loadJS('/js/vendor.js?1770268190704', function() {
+              loadJS('/js/index.js?1770268190704', function() {
+                console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+              });
+            });
+          });
+        });
+      }
+    }());
+  </script>
+  <script>
+    (function() {
+      var loadProfile = document.getElementsByClassName('o-loadProfile');
+      if (!loadProfile.length) return;
+      var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var r = document.getElementsByClassName('o-loadProfile__retry');
+
+      function show() {
+        f && f.classList.remove('-isHidden');
+      }
+      if (r.length) r[0].addEventListener('click', function() {
+        window.location.reload();
+      });
+      setTimeout(show, 10000);
+    }());
+  </script>
+
+  <script>
+    window.globalUrlQueryParams = {
+      "sc_itemid": "{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}",
+      "sc_lang": "en-US",
+      "sc_site": "productstoreUs"
+    }
+  </script>
+  <!--For Ralleyware pages and widgets-->
+  <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+  <script>
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+    if (loadProfile.length) {
+      var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+      var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+      function showFooter() {
+        loadProfileFooter.classList.remove('-isHidden');
+      };
+
+      if (retryBtn.length) {
+        retryBtn[0].addEventListener('click', function(event) {
+          window.location.reload();
+        });
+      }
+
+      setTimeout(showFooter, 10000);
+    }
+  </script>
+</body>
+
+</html>
