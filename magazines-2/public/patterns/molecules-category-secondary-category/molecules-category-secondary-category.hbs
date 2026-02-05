@@ -1,0 +1,13 @@
+<li class="m-secondaryCategory">
+  <div class="m-secondaryCategory__left {{#unless Img}}-noImg{{/unless}}">
+    <a class="m-secondaryCategory__title" href="{{DetailUrl}}">
+      {{{Title}}}
+    </a>
+  </div>
+
+  {{#if Img}}
+    <div class="m-secondaryCategory__right">
+      <img class="m-secondaryCategory__img" src="{{Img.Url}}" alt="{{Img.Alt}}">
+    </div>
+  {{/if}}
+</li>

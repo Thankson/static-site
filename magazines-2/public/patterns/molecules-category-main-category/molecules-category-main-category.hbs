@@ -1,0 +1,29 @@
+<li class="m-mainCategory">
+  <div class="m-mainCategory__left">
+    <div class="m-mainCategory__wrapper">
+      <p class="m-mainCategory__word">{{{Word}}}</p>
+      <h2 class="m-mainCategory__title">{{{Title}}}</h2>
+      <div class="m-mainCategory__desc">{{{Desc}}}</div>
+    </div>
+    <div class="m-mainCategory__infos">
+      <div class="m-mainCategory__publishDate">
+        <span class="m-mainCategory__iconDate material-icons" aria-hidden="true">schedule</span>
+        <span class="m-mainCategory__textDate">
+          {{PublishDate}}
+        </span>
+      </div>
+      <a class="m-mainCategory__learnMore" href="{{Link.Url}}">
+        <span class="m-mainCategory__textMore" aria-label="{{Title}}">
+          {{LearnMore}}
+        </span>
+        <span class="m-mainCategory__iconMore material-icons" aria-hidden="true">arrow_forward_ios</span>
+      </a>
+    </div>
+  </div>
+
+  {{#if Img}}
+    <div class="m-mainCategory__right">
+      <img src="{{Img.Url}}" alt="{{Img.Alt}}">
+    </div>
+  {{/if}}
+</li>

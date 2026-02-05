@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Material+Icons|Cormorant:700i|Cormorant+SC:600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/app.css?1770272312858" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770272312858" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+</head>
+
+<body class="">
+  <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+  <div id="vApp">
+    <script type="application/json" id="environment-variables">
+      {}
+    </script>
+    <a href="#" class="m-headerLogo">
+      <img class="m-headerLogo__pc" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/logo/logo-white-pc.png" alt="" />
+      <img class="m-headerLogo__mobile" src="https://cdnsc1.melaleuca.com.cn/Lia/Lia Program Image/logo/logo-white-m.png" alt="" />
+    </a>
+  </div>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": true,
+      "patternLineagesR": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }],
+      "lineageR": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "molecules",
+        "patternSubgroup": "header"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Header Logo",
+      "patternPartial": "molecules-header-logo",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    window.patternData = {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": true,
+      "patternLineagesR": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }],
+      "lineageR": [{
+        "lineagePattern": "organisms-header",
+        "lineagePath": "../../patterns/organisms-header-header\\organisms-header-header.rendered.html"
+      }],
+      "patternLineageEExists": true,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternGroup": "molecules",
+        "patternSubgroup": "header"
+      },
+      "patternExtension": "hbs",
+      "patternName": "Header Logo",
+      "patternPartial": "molecules-header-logo",
+      "patternState": "",
+      "patternEngineName": "handlebars",
+      "extraOutput": {}
+    };
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1770272312858">
+    (function() {
+      if (self != top) {
+        var cb = '1770272312858';
+        var js = [];
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+
+  <script type="module">
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    import('../../styleguide/js/patternlab-pattern.modern.js');
+  </script>
+
+  <script id="pl-js-insert-1770272312858" nomodule>
+    /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */ ! function(e) {
+      var t = function(t, n) {
+        "use strict";
+        var o = e.document.getElementsByTagName("script")[0],
+          r = e.document.createElement("script");
+        return r.src = t, r.async = !0, o.parentNode.insertBefore(r, o), n && "function" == typeof n && (r.onload = n), r
+      };
+      "undefined" != typeof module ? module.exports = t : e.loadJS = t
+    }("undefined" != typeof global ? global : this);
+
+    // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+    loadJS('../../styleguide/js/patternlab-pattern.js');
+  </script>
+
+  <!-- <script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script> -->
+  <script src="https://cdnsc1.melaleuca.com.cn/global/js/jwplayer-8.13.3/jwplayer.js"></script>
+  <script src="../../js/vendor.js?1770272312858"></script>
+  <script src="../../js/index.js?1770272312858"></script>
+
+  <!--FOR BROWSERSYNC-->
+  <!-- <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script> -->
+</body>
+
+</html>

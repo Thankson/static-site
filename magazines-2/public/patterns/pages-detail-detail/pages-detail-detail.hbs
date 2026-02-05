@@ -1,0 +1,21 @@
+{{> organisms-header}}
+
+<div class="max-w-contain mx-auto px-10">
+  {{#with Breadcrumbs}}
+    {{> molecules-breadcrumb}}
+  {{/with}}
+
+  {{> molecules-detail-header}}
+
+  <article class="o-articleContent">
+    {{{RichText}}}
+  </article>
+
+  {{#with PageButtons}}
+    {{> molecules-detail-footer}}
+  {{/with}}
+
+  {{> molecules-sign-in-reminder}}
+</div>
+
+{{> organisms-footer}}

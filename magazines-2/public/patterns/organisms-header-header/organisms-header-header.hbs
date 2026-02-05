@@ -1,0 +1,27 @@
+<header class="o-header">
+  <div class="o-header__logo">
+    {{> molecules-header-logo}}
+  </div>
+
+  {{> molecules-adaptive-navigation}}
+
+  <div class="o-header__searchBar">
+    {{> molecules-search-bar}}
+  </div>
+
+  <div class="o-header__historyShelf">
+    {{> molecules-history-shelf}}
+  </div>
+
+  <div class="o-header__signInLia">
+    {{> atoms-author-button}}
+  </div>
+</header>
+
+<div class="a-author-button md:hidden flex items-start relative px-8 py-20 bg-white">
+  <a href="/depaccount/singlesignon" class="a-authorBtn -bgSky text-center bg-sky rounded py-16 text-base w-full">
+    登录
+  </a>
+</div>
+
+{{> organisms-top-navigation}}

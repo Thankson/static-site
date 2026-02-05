@@ -1,0 +1,36 @@
+<div class="bg-white border mb-10 lg:mb-0 px-8 lg:px-40 py-30 border-gray-50 lg:rounded w-full">
+  {{#with SignInForm}}
+    <o-sign-in-lia action="/identity-server" button-aria-label="{{SignInButton.AriaLabel}}" invalid-credential-text="{{InvalidCredentialText}}" :agreement-terms='{{toJson Agreements}}' :hide-country-selector="{{HideCountrySelector}}" :hide-keep-me-signed-in="{{HideKeepMeSignedIn}}" :show-error-message="{{ShowErrorMessage}}" show-label="{{Field.Password.ShowLabel}}" hide-label="{{Field.Password.HideLabel}}">
+
+      {{#with Field.UserName}}
+        <template v-slot:username-label>
+          {{Label.Text}}
+        </template>
+      {{/with}}
+
+      {{#with Field.Password}}
+        <template v-slot:password-label>
+          {{Label.Text}}
+        </template>
+      {{/with}}
+
+      {{#with SignInButton}}
+        <template v-slot:button-label>
+          {{CTA}}
+        </template>
+      {{/with}}
+
+      {{#with Field.SignedIn}}
+        <template v-slot:signed-in-label>
+          {{Label.Text}}
+        </template>
+      {{/with}}
+
+      <template v-slot:info>
+        <div class="leading-relaxed text-gray-120 my-5">If you forget password or need to create account, please enter NSE shopping Mini Program to operate.</div>
+        <a class="leading-relaxed text-sky my-5 underline cursor-pointer">Sign in later. Browse the site.</a>
+      </template>
+
+    </o-sign-in-lia>
+  {{/with}}
+</div>
