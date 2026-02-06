@@ -1,0 +1,1155 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770360532645" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770360532645" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770360532645" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770360532645" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-my-account-cn" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-my-account-cn\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-my-account-cn">My Account Cn</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-account-member-cn" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-account-member-cn\organisms-my-account-cn-account-member-cn.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-account-member-cn" title="Link to Pattern">
+						Account Member Cn
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-account-member-cn" data-patternpartial="organisms-account-member-cn" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-account-member-cn">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-accountMember -isCn">
+    <div class="o-accountMember__info">
+        <h2 class="o-accountMember__name">Bill Larson</h2>
+        <p class="o-accountMember__intro">Preferred Member
+        </p>
+        <span class="o-accountMember__lvip">
+            Preferre<img alt="Lvip" class="o-accountMember__img -small" src=https://cdnsc1.melaleuca.com/na/images/header/icon-notification.png /></span>
+    </div>
+    <div class="o-accountMember__count">
+        <div class="o-accountMember__box">
+            <p class="o-accountMember__item">
+                Number:
+                <span class="o-accountMember__number -black">58397040</span>
+            </p>
+
+            <p class="o-accountMember__item">
+                LSD Balance:
+                <span class="o-accountMember__number ">58397040</span>
+            </p>
+        </div>
+        <div class="o-accountMember__box">
+            <p class="o-accountMember__item">
+                Longevity:
+                <span class="o-accountMember__number -black">1y3m</span>
+            </p>
+            <p class="o-accountMember__item">
+                Number:
+                <span class="o-accountMember__number ">￥340</span>
+            </p>
+        </div>
+    </div>
+    <div class="o-accountMember__btn">
+        <a class="o-accountMember__cta  -cnNotReactivation "
+            href="#"  data-gtm-track='
+            {
+                "gtmId": 23,
+                "gtmText": "Become a Marketing Executive"
+            }
+        ' >
+        <img alt="Lvip" class="o-accountMember__img" src=https://cdnsc1.melaleuca.com/na/images/header/icon-notification.png />
+        Become a Marketing Executive
+        </a>
+    </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-account-member-cn" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Account Member Cn","patternPartial":"organisms-account-member-cn","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-account-member-cn-reactivate" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-account-member-cn-reactivate\organisms-my-account-cn-account-member-cn-reactivate.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-account-member-cn-reactivate" title="Link to Pattern">
+						Account Member Cn Reactivate
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-account-member-cn-reactivate" data-patternpartial="organisms-account-member-cn-reactivate" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-account-member-cn-reactivate">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-accountMember -isCn">
+    <div class="o-accountMember__info">
+        <h2 class="o-accountMember__name">Bill Larson</h2>
+        <p class="o-accountMember__intro">Preferred Member
+        </p>
+        <span class="o-accountMember__lvip">
+            Preferre<img alt="Lvip" class="o-accountMember__img -small" src=https://cdnsc1.melaleuca.com/na/images/header/icon-notification.png /></span>
+    </div>
+    <div class="o-accountMember__count">
+        <div class="o-accountMember__box">
+            <p class="o-accountMember__item">
+                Number:
+                <span class="o-accountMember__number -black">58397040</span>
+            </p>
+
+            <p class="o-accountMember__item">
+                LSD Balance:
+                <span class="o-accountMember__number -black">58397040</span>
+            </p>
+        </div>
+        <div class="o-accountMember__box">
+            <p class="o-accountMember__item">
+                Longevity:
+                <span class="o-accountMember__number -black">1y3m</span>
+            </p>
+            <p class="o-accountMember__item">
+                Number:
+                <span class="o-accountMember__number -black">￥340</span>
+            </p>
+        </div>
+    </div>
+    <div class="o-accountMember__btn">
+        <a class="o-accountMember__cta  -cnReactivation "
+            href="#"  data-gtm-track='
+            {
+                "gtmId": 23,
+                "gtmText": "Reactivate"
+            }
+        ' >
+        Reactivate
+        </a>
+    </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-account-member-cn-reactivate" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Account Member Cn Reactivate","patternPartial":"organisms-account-member-cn-reactivate","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-default-address" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-default-address\organisms-my-account-cn-default-address.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-default-address" title="Link to Pattern">
+						Default Address
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-default-address" data-patternpartial="organisms-default-address" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-default-address">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-myAccountDfAdd">
+    <h2 class="o-myAccountDfAdd__title -mobile">My Account Default Address</h2>
+    <div class="o-myAccountDfAdd__container">
+        <h2 class="o-myAccountDfAdd__title -pc">My Account Default Address</h2>
+        <div class="o-myAccountDfAdd__content">
+            <div class="o-myAccountDfAdd__rteContent"><p><b>Millie Grant</b> <span class="block md:inline-block">166782919239<span></p><p>4609 West 65th South Idaho Falls, ID 83402 U.S.</p></div>
+            <div class="o-myAccountDfAdd__link">
+                <a class="a-authorBtn text-center bg-white rounded py-10 px-36 text-sm font-semibold md:px-48" href="#">
+                    MANAGE
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-default-address" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Default Address","patternPartial":"organisms-default-address","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-my-account-menu" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-my-account-menu\organisms-my-account-cn-my-account-menu.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-my-account-menu" title="Link to Pattern">
+						My Account Menu
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-my-account-menu" data-patternpartial="organisms-my-account-menu" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-my-account-menu">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-myAccountMenu ">
+<nav class="o-myAccountMenu__nav">
+    <ul class="o-myAccountMenu__list">
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Order History</span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">My List</span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Address</span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Payment</span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Account Setting</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-my-account-menu" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"patternLineageEExists":true,"patternDesc":"<h2>Overview</h2>\n<p>This component is primarily used for the CN instance.</p>\n<h2>Exhibition</h2>\n<p>The style of this component is different on PC and mobile.</p>\n","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"My Account Menu","patternPartial":"organisms-my-account-menu","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-my-account-menu-benefits" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-my-account-menu-benefits\organisms-my-account-cn-my-account-menu-benefits.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-my-account-menu-benefits" title="Link to Pattern">
+						My Account Menu Benefits
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-my-account-menu-benefits" data-patternpartial="organisms-my-account-menu-benefits" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-my-account-menu-benefits">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-myAccountMenu -benefits">
+<h2 class="o-myAccountMenu__title -mobile">My Benefits</h2>
+<nav class="o-myAccountMenu__nav">
+    <h2 class="o-myAccountMenu__title -pc">My Benefits</h2>
+    <ul class="o-myAccountMenu__list">
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Order History</span>
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                    <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">My List</span>
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                    <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Address</span>
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                    <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Payment</span>
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                    <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+            </a>
+        </li>
+        <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="#">
+                <img src="https://placehold.co/144x144" alt="123" class="o-myAccountMenu__img" />
+                <span class="o-myAccountMenu__name">Account Setting</span>
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                    <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-my-account-menu-benefits" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"My Account Menu Benefits","patternPartial":"organisms-my-account-menu-benefits","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-payment-address-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-payment-address-section\organisms-my-account-cn-payment-address-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-payment-address-section" title="Link to Pattern">
+						Payment Address Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-payment-address-section" data-patternpartial="organisms-payment-address-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-payment-address-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<script id="d4b1f6ce-712e-4e9c-976d-eff296c4f1ac" type="application/json">
+    {"Labels":{"AddNewLabel":"Add New Payment Method","Default":"Default","DeleteDefaultError":"You cannot delete a Default payment method. Edit another method and make default.","DefaultForBackupOrder":"Default For Backup Order","DefaultForHomeSecurity":"Default For Home Security","DefaultForProducts":"Default For Products","DefaultForServices":"for Marketplace Services","DefaultPaymentMethod":"Default Payment Method","Delete":"Delete","DeleteAriaLabel":"Delete payment method {0}","Edit":"Edit","EditAriaLabel":"Edit payment method {0}","Expired":"Expired","ExpiredAlert":"Expired Alert","Expires":"Expires","GenericFailureMessage":"<strong>Looks like something went wrong.</strong> This part of the page had trouble loading.","MakeDefault":"Make Default","MakeDefaultAriaLabel":"Make {0} default payment method","PaymentMethods":"Payment Methods","RefreshPage":"Refresh Page","SectionTitle":"Payment Methods","ModalDetails":"Deleting this saved credit card cannot be undone.","ModalTitle":"Are you sure?","Cancel":"Cancel","AccountNumber":"Account Number","AccountType":"Account Type","RoutingNumber":"Routing Number","PaymentTypes":[{"PaymentType":"DebitCard","Label":"Debit Card"},{"PaymentType":"CreditCard","Label":"Credit Card"}],"DeleteDefaultCard":"Delete default card?","CannotDeletePayment":"You cannot delete default payment method","CannotSetDefaultCard":"Cannot be set as default card.","BankCardCannotBeSet":"<span>The bank card cannot be set as default card due to the card owner name is different from the customers name. Please add a new card.</span>","Continue":"Continue"},"Data":{"PaymethodIdQueryParamName":"pmid","EditLink":{"Url":"http://www.melaleuca.com","Text":"Edit","Target":"_blank"},"AddNewLink":{"Url":"http://www.melaleuca.com","Text":"Add New","Target":"_blank"}},"Id":"6a977f36-4b92-4400-8482-2359306c4475"}
+</script>
+
+<payment-address-section script-id="d4b1f6ce-712e-4e9c-976d-eff296c4f1ac">
+</payment-address-section>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-payment-address-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-gui","lineagePath":"../../patterns/pages-my-account-my-account-gui\\pages-my-account-my-account-gui.rendered.html"},{"lineagePattern":"pages-my-account-invite-a-friend","lineagePath":"../../patterns/pages-my-account-my-account-invite-a-friend\\pages-my-account-my-account-invite-a-friend.rendered.html"},{"lineagePattern":"pages-my-account-multiple-packages","lineagePath":"../../patterns/pages-my-account-my-account-multiple-packages\\pages-my-account-my-account-multiple-packages.rendered.html"},{"lineagePattern":"pages-my-account-order-history-nz","lineagePath":"../../patterns/pages-my-account-my-account-order-history-nz\\pages-my-account-my-account-order-history-nz.rendered.html"},{"lineagePattern":"pages-my-account-order-history-tw","lineagePath":"../../patterns/pages-my-account-my-account-order-history-tw\\pages-my-account-my-account-order-history-tw.rendered.html"},{"lineagePattern":"pages-my-account-order-history","lineagePath":"../../patterns/pages-my-account-my-account-order-history\\pages-my-account-my-account-order-history.rendered.html"},{"lineagePattern":"pages-my-account-payment-and-addresses","lineagePath":"../../patterns/pages-my-account-my-account-payment-and-addresses\\pages-my-account-my-account-payment-and-addresses.rendered.html"},{"lineagePattern":"pages-my-account-shopping-lists","lineagePath":"../../patterns/pages-my-account-my-account-shopping-lists\\pages-my-account-my-account-shopping-lists.rendered.html"},{"lineagePattern":"pages-payment-methods-cn","lineagePath":"../../patterns/pages-my-account-cn-payment-methods-cn\\pages-my-account-cn-payment-methods-cn.rendered.html"},{"lineagePattern":"pages-my-account-business-preferences","lineagePath":"../../patterns/pages-my-account-my-account-business-preferences\\pages-my-account-my-account-business-preferences.rendered.html"},{"lineagePattern":"pages-my-account-commission-deposit-no-account","lineagePath":"../../patterns/pages-my-account-my-account-commission-deposit-no-account\\pages-my-account-my-account-commission-deposit-no-account.rendered.html"},{"lineagePattern":"pages-my-account","lineagePath":"../../patterns/pages-my-account-my-account\\pages-my-account-my-account.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-gui","lineagePath":"../../patterns/pages-my-account-my-account-gui\\pages-my-account-my-account-gui.rendered.html"},{"lineagePattern":"pages-my-account-invite-a-friend","lineagePath":"../../patterns/pages-my-account-my-account-invite-a-friend\\pages-my-account-my-account-invite-a-friend.rendered.html"},{"lineagePattern":"pages-my-account-multiple-packages","lineagePath":"../../patterns/pages-my-account-my-account-multiple-packages\\pages-my-account-my-account-multiple-packages.rendered.html"},{"lineagePattern":"pages-my-account-order-history-nz","lineagePath":"../../patterns/pages-my-account-my-account-order-history-nz\\pages-my-account-my-account-order-history-nz.rendered.html"},{"lineagePattern":"pages-my-account-order-history-tw","lineagePath":"../../patterns/pages-my-account-my-account-order-history-tw\\pages-my-account-my-account-order-history-tw.rendered.html"},{"lineagePattern":"pages-my-account-order-history","lineagePath":"../../patterns/pages-my-account-my-account-order-history\\pages-my-account-my-account-order-history.rendered.html"},{"lineagePattern":"pages-my-account-payment-and-addresses","lineagePath":"../../patterns/pages-my-account-my-account-payment-and-addresses\\pages-my-account-my-account-payment-and-addresses.rendered.html"},{"lineagePattern":"pages-my-account-shopping-lists","lineagePath":"../../patterns/pages-my-account-my-account-shopping-lists\\pages-my-account-my-account-shopping-lists.rendered.html"},{"lineagePattern":"pages-payment-methods-cn","lineagePath":"../../patterns/pages-my-account-cn-payment-methods-cn\\pages-my-account-cn-payment-methods-cn.rendered.html"},{"lineagePattern":"pages-my-account-business-preferences","lineagePath":"../../patterns/pages-my-account-my-account-business-preferences\\pages-my-account-my-account-business-preferences.rendered.html"},{"lineagePattern":"pages-my-account-commission-deposit-no-account","lineagePath":"../../patterns/pages-my-account-my-account-commission-deposit-no-account\\pages-my-account-my-account-commission-deposit-no-account.rendered.html"},{"lineagePattern":"pages-my-account","lineagePath":"../../patterns/pages-my-account-my-account\\pages-my-account-my-account.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Payment Address Section","patternPartial":"organisms-payment-address-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-recent-order" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-recent-order\organisms-my-account-cn-recent-order.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-recent-order" title="Link to Pattern">
+						Recent Order
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-recent-order" data-patternpartial="organisms-recent-order" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-recent-order">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-recentOrders">
+    <h2 class="o-recentOrders__title -mobile">Recent Orders</h2>
+    <nav class="o-recentOrders__container">
+        <h2 class="o-recentOrders__title -pc">Recent Orders</h2>
+        <ul>
+            <li class="o-recentOrders__item">
+                <div class="o-recentOrders__content -above">
+                    <p class="o-recentOrders__date">
+                        Order Date: <span class="text-green-100">Sep 02, 2019</span>
+                    </p>
+                    <p class="o-recentOrders__status">
+                        Processing
+                    </p>
+                </div>
+                <div class="o-recentOrders__content -below">
+                    <ul class="o-recentOrders__images">
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem -more">
+                            <p>···</p>
+                        </li>
+                    </ul>
+                   <p>
+                         Total: <span aria-label="$105.77 spent">$105.77</span>
+                        <span class="text-sm mx-4" aria-hidden="true">|</span>
+                         <span aria-label="10 items purchased">10 Items</span>
+                        
+                    </p>
+                    <div class="o-recentOrders__action">
+                            <a class="o-recentOrders__link a-authorBtn text-center bg-green -skipLink rounded -sm px-40" href="#">TRACK</a>
+                            <a href="#" class="o-recentOrders__link  -centerAlign">See Detail</a>
+                    </div>
+                </div>
+            </li>
+                        <li class="o-recentOrders__item">
+                <div class="o-recentOrders__content -above">
+                    <p class="o-recentOrders__date">
+                        Order Date: <span class="text-green-100">Aug 27, 2019</span>
+                    </p>
+                    <p class="o-recentOrders__status">
+                        Processing
+                    </p>
+                </div>
+                <div class="o-recentOrders__content -below">
+                    <ul class="o-recentOrders__images">
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem">
+                            <img class="o-recentOrders__image" src="https://placehold.co/70x70.jpg" alt="Author Defined">
+                        </li>
+                        <li class="o-recentOrders__imageItem -more">
+                            <p>···</p>
+                        </li>
+                    </ul>
+                   <p>
+                         Total: <span aria-label="$75.77 spent">$75.77</span>
+                        <span class="text-sm mx-4" aria-hidden="true">|</span>
+                         <span aria-label="3 items purchased">3 Items</span>
+                        
+                    </p>
+                    <div class="o-recentOrders__action">
+                            <a class="o-recentOrders__link a-authorBtn text-center bg-yellow -skipLink rounded -sm px-40" href="#">PAY</a>
+                            <a href="#" class="o-recentOrders__link -centerAlign ">See Detail</a>
+                    </div>
+                </div>
+            </li>
+                    </ul>
+    </nav>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-recent-order" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-cn","lineagePath":"../../patterns/pages-my-account-cn-my-account-cn\\pages-my-account-cn-my-account-cn.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Recent Order","patternPartial":"organisms-recent-order","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-shipping-address-section" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-shipping-address-section\organisms-my-account-cn-shipping-address-section.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-shipping-address-section" title="Link to Pattern">
+						Shipping Address Section
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-shipping-address-section" data-patternpartial="organisms-shipping-address-section" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-shipping-address-section">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<script id="6963708a-a933-4d8e-9b00-18f4230c79c2" type="application/json">
+    undefined
+</script>
+<shipping-address-section script-id="6963708a-a933-4d8e-9b00-18f4230c79c2">
+</shipping-address-section>
+
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-shipping-address-section" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-my-account-gui","lineagePath":"../../patterns/pages-my-account-my-account-gui\\pages-my-account-my-account-gui.rendered.html"},{"lineagePattern":"pages-my-account-invite-a-friend","lineagePath":"../../patterns/pages-my-account-my-account-invite-a-friend\\pages-my-account-my-account-invite-a-friend.rendered.html"},{"lineagePattern":"pages-my-account-multiple-packages","lineagePath":"../../patterns/pages-my-account-my-account-multiple-packages\\pages-my-account-my-account-multiple-packages.rendered.html"},{"lineagePattern":"pages-my-account-order-history-nz","lineagePath":"../../patterns/pages-my-account-my-account-order-history-nz\\pages-my-account-my-account-order-history-nz.rendered.html"},{"lineagePattern":"pages-my-account-order-history-tw","lineagePath":"../../patterns/pages-my-account-my-account-order-history-tw\\pages-my-account-my-account-order-history-tw.rendered.html"},{"lineagePattern":"pages-my-account-order-history","lineagePath":"../../patterns/pages-my-account-my-account-order-history\\pages-my-account-my-account-order-history.rendered.html"},{"lineagePattern":"pages-my-account-payment-and-addresses","lineagePath":"../../patterns/pages-my-account-my-account-payment-and-addresses\\pages-my-account-my-account-payment-and-addresses.rendered.html"},{"lineagePattern":"pages-my-account-shopping-lists","lineagePath":"../../patterns/pages-my-account-my-account-shopping-lists\\pages-my-account-my-account-shopping-lists.rendered.html"},{"lineagePattern":"pages-my-account-business-preferences","lineagePath":"../../patterns/pages-my-account-my-account-business-preferences\\pages-my-account-my-account-business-preferences.rendered.html"},{"lineagePattern":"pages-my-account-commission-deposit-no-account","lineagePath":"../../patterns/pages-my-account-my-account-commission-deposit-no-account\\pages-my-account-my-account-commission-deposit-no-account.rendered.html"},{"lineagePattern":"pages-my-account","lineagePath":"../../patterns/pages-my-account-my-account\\pages-my-account-my-account.rendered.html"}],"lineageR":[{"lineagePattern":"pages-my-account-gui","lineagePath":"../../patterns/pages-my-account-my-account-gui\\pages-my-account-my-account-gui.rendered.html"},{"lineagePattern":"pages-my-account-invite-a-friend","lineagePath":"../../patterns/pages-my-account-my-account-invite-a-friend\\pages-my-account-my-account-invite-a-friend.rendered.html"},{"lineagePattern":"pages-my-account-multiple-packages","lineagePath":"../../patterns/pages-my-account-my-account-multiple-packages\\pages-my-account-my-account-multiple-packages.rendered.html"},{"lineagePattern":"pages-my-account-order-history-nz","lineagePath":"../../patterns/pages-my-account-my-account-order-history-nz\\pages-my-account-my-account-order-history-nz.rendered.html"},{"lineagePattern":"pages-my-account-order-history-tw","lineagePath":"../../patterns/pages-my-account-my-account-order-history-tw\\pages-my-account-my-account-order-history-tw.rendered.html"},{"lineagePattern":"pages-my-account-order-history","lineagePath":"../../patterns/pages-my-account-my-account-order-history\\pages-my-account-my-account-order-history.rendered.html"},{"lineagePattern":"pages-my-account-payment-and-addresses","lineagePath":"../../patterns/pages-my-account-my-account-payment-and-addresses\\pages-my-account-my-account-payment-and-addresses.rendered.html"},{"lineagePattern":"pages-my-account-shopping-lists","lineagePath":"../../patterns/pages-my-account-my-account-shopping-lists\\pages-my-account-my-account-shopping-lists.rendered.html"},{"lineagePattern":"pages-my-account-business-preferences","lineagePath":"../../patterns/pages-my-account-my-account-business-preferences\\pages-my-account-my-account-business-preferences.rendered.html"},{"lineagePattern":"pages-my-account-commission-deposit-no-account","lineagePath":"../../patterns/pages-my-account-my-account-commission-deposit-no-account\\pages-my-account-my-account-commission-deposit-no-account.rendered.html"},{"lineagePattern":"pages-my-account","lineagePath":"../../patterns/pages-my-account-my-account\\pages-my-account-my-account.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Shipping Address Section","patternPartial":"organisms-shipping-address-section","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-shipping-address-section-business" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-shipping-address-section-business\organisms-my-account-cn-shipping-address-section-business.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-shipping-address-section-business" title="Link to Pattern">
+						Shipping Address Section Business
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-shipping-address-section-business" data-patternpartial="organisms-shipping-address-section-business" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-shipping-address-section-business">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<script id="6963708a-a933-4d8e-9b00-18f4230c79c2" type="application/json">
+    {"Labels":{"SectionTitle":"Business Addresses","SubTitle":"<p>Shipping Addresses</p>","Default":"Default","DefaultShippingAddress":"Default Shipping Address","Delete":"Delete","DeleteAriaLabel":"Delete {0} shipping address","DeleteDefaultError":"You cannot delete a Default Address. Edit another address and make default.","DeliveryInstructions":"Delivery Instructions","Edit":"Edit","EditAriaLabel":"Edit {0} shipping address","EditBusinessAddress":"Edit Business Address","MakeDefault":"Make Default","MakeDefaultAriaLabel":"Make {0} default shipping address","MakeThisDefaultShipping":"Make This Default Shipping","AddNewLabel":"Add New Shipping Address","ModalDetails":"Deleting this saved address cannot be undone.","ModalTitle":"Are you sure?","Cancel":"Cancel"},"Data":{"IsBusiness":true,"EditLink":{"Url":"http://www.melaleuca.com","Text":"","Target":"_blank"},"AddNewLink":{"Url":"/?p=organisms-payment-add","Text":"","Target":"_self"},"AddressIdQueryParamName":"addressid","CrossCountryModal":{"Cancel":"Cancel","ContinueToSite":"Continue to {0} site","RteDescription":"<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Looks Like You've Changed Your Shipping Country.</h2><p class=\"text-sm text-gray-120 leading-tight\">This may impact the product availability in your shopping cart or payment methods accepted. Click \"continue\" to go to the {0} site, or click \"cancel\" and select your {1} shipping address.</p>","UserCountry":"UnitedStates"}},"Id":"60c955cc-4281-47d6-9170-7bc30a394e70"}
+</script>
+<shipping-address-section script-id="6963708a-a933-4d8e-9b00-18f4230c79c2">
+</shipping-address-section>
+
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-shipping-address-section-business" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Shipping Address Section Business","patternPartial":"organisms-shipping-address-section-business","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-shipping-address-section-cn" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-my-account-cn-shipping-address-section-cn\organisms-my-account-cn-shipping-address-section-cn.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-shipping-address-section-cn" title="Link to Pattern">
+						Shipping Address Section Cn
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-shipping-address-section-cn" data-patternpartial="organisms-shipping-address-section-cn" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-shipping-address-section-cn">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<script id="6963708a-a933-4d8e-9b00-18f4230c79c2" type="application/json">
+    {"Labels":{"SectionTitle":"Shipping Addresses Cn","Default":"Default","DefaultShippingAddress":"Default Shipping Address","Delete":"Delete","DeleteAriaLabel":"Delete {0} shipping address","DeleteDefaultError":"You cannot delete a Default Address. Edit another address and make default.","DeleteDefaultErrorTitle":"Delete Default Address","DeliveryInstructions":"Delivery Instructions","Edit":"Edit","EditAriaLabel":"Edit {0} shipping address","EditBusinessAddress":"Edit Business Address","MakeDefault":"Make Default","MakeDefaultAriaLabel":"Make {0} default shipping address","MakeThisDefaultShipping":"Make This Default Shipping","AddNewLabel":"Add New Shipping Address","ModalDetails":"Deleting this saved address cannot be undone.","ModalTitle":"Are you sure?","Cancel":"Cancel"},"Data":{"IsBusiness":false,"EditLink":{"Url":"http://www.melaleuca.com","Text":"","Target":"_blank"},"AddNewLink":{"Url":"/?p=organisms-payment-add","Text":"","Target":"_self"},"AddressIdQueryParamName":"addressid","CrossCountryModal":{"Cancel":"Cancel","ContinueToSite":"Continue to {0} site","RteDescription":"<h2 class=\"text-dark text-2xl md:text-4xl font-bold md:font-normal\">Looks Like You've Changed Your Shipping Country.</h2><p class=\"text-sm text-gray-120 leading-tight\">This may impact the product availability in your shopping cart or payment methods accepted. Click \"continue\" to go to the {0} site, or click \"cancel\" and select your {1} shipping address.</p>","UserCountry":"UnitedStates"}},"Id":"60c955cc-4281-47d6-9170-7bc30a394e70"}
+</script>
+<shipping-address-section script-id="6963708a-a933-4d8e-9b00-18f4230c79c2">
+</shipping-address-section>
+
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-shipping-address-section-cn" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"my-account-cn"},"patternExtension":"hbs","patternName":"Shipping Address Section Cn","patternPartial":"organisms-shipping-address-section-cn","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-my-account-cn"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-my-account-cn"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770360532645">
+  (function() {
+    if (self != top) {
+      var cb = '1770360532645';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770360532645" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770360532645', function(){
+        loadJS('/js/vue-pci.js?1770360532645', function(){
+          loadJS('/js/vendor-pci.js?1770360532645', function(){
+            loadJS('/js/pci.js?1770360532645', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770360532645', function(){
+        loadJS('/js/vue-main.js?1770360532645', function(){
+          loadJS('/js/vendor.js?1770360532645', function(){
+            loadJS('/js/index.js?1770360532645', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script src="/static-site/productstore-2/public/js/runtime.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/vue-main.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/vendor.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/index.js?1770360532645"></script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

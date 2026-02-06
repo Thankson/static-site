@@ -1,0 +1,27 @@
+{{#MyAccountMenu}}
+  <div class="o-myAccountMenu {{#if IsBenefits}}-benefits{{/if}}">
+    {{#if IsBenefits}}
+      <h2 class="o-myAccountMenu__title -mobile">{{Title}}</h2>
+    {{/if}}
+    <nav class="o-myAccountMenu__nav">
+      {{#if IsBenefits}}
+        <h2 class="o-myAccountMenu__title -pc">{{Title}}</h2>
+      {{/if}}
+      <ul class="o-myAccountMenu__list">
+        {{#each MenuList}}
+          <li class="o-myAccountMenu__item">
+            <a class="o-myAccountMenu__link" href="{{IconLink}}">
+              <img src="{{IconImage}}" alt="{{AltText}}" class="o-myAccountMenu__img" />
+              <span class="o-myAccountMenu__name">{{Title}}</span>
+              {{#if ../IsBenefits}}
+                <span aria-hidden="true" class="a-arrow -sm2 -right ml-3 my-4 right-15 top-8 absolute md:hidden">
+                  <span class="a-arrow__icon border-green-100 text-green-100"></span>
+                </span>
+              {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+{{/MyAccountMenu}}

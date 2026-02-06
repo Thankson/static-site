@@ -1,0 +1,57 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+
+  <div class="mb-10 pt-15 {{#if IsCn}}hidden md:block{{/if}}">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+  {{!-- Banner --}}
+
+  <section class="md:py-40">
+    <div class="w-full max-w-contain mx-auto md:mb-50">
+      {{> molecules-cmn-inline-player}}
+    </div>
+
+    <div class="w-full max-w-contain mx-auto mb-40 px-10 md:mb-50 md:px-0">
+      <h1 class="text-left text-3xl font-medium tracking-tight text-gray-150 font-global-sans my-20 md:my-30 md:text-4xl">
+        {{PageTitle}}
+      </h1>
+      <div class="m-rte" role="text">
+        {{{TextRTE}}}
+      </div>
+    </div>
+
+    <div class="w-full md:mb-50 mx-auto max-w-contain">
+      {{> organisms-csr-chunxiao-section}}
+    </div>
+
+    <div class="w-full py-20 mb-20 bg-gray-35 md:mb-100 md:py-80">
+      {{#PublicList}}
+        <div class="w-full max-w-contain mx-auto px-15 md:px-0">
+          <a href="{{Link}}" class="text-left text-xl font-medium tracking-tight text-gray-150 font-global-sans leading-tight my-20 md:leading-base md:my-30 md:text-4xl">
+            {{LinkTitle}}
+            <span aria-hidden="true" class="a-arrow -md  -filled align-middle">
+              <span class="a-arrow__icon border-black text-black"></span>
+            </span>
+          </a>
+          <div class="m-rte" role="text">
+            {{{LinkSubTitle}}}
+          </div>
+        </div>
+      {{/PublicList}}
+    </div>
+
+    <div class="w-full max-w-contain mx-auto pb-30 md:pb-50">
+      <div class="block justify-center px-10 py-20 md:py-30 md:px-0 md:flex md:items-center">
+        <div class="mb-10 md:mb-0 md:border-r-1 md:pr-100 md:border-gray-50">
+          <img class="mx-auto" src="{{Logos.NatureImg.Src}}" alt="{{Logos.NatureImg.AltText}}">
+        </div>
+        <div class="md:pl-100">
+          <img class="mx-auto" src="{{Logos.QRcodeImg.Src}}" alt="{{Logos.QRcodeImg.AltText}}">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{> organisms-site-footer}}

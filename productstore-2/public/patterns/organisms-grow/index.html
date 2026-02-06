@@ -1,0 +1,2427 @@
+
+<!DOCTYPE html>
+<!-- n.b. <html> is intentionally not closed: -->
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="pageType" content="Home"/>
+    <title>Melaleuca Pattern Lab</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Material+Icons&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+    <!-- For certain EU markets, google fonts is illegal and hence self-hosting of the required fonts has been done -->
+    <!-- See OFL.txt & LICENSE for License for the Roboto and Material Icons fonts -->
+    <link rel="stylesheet" href="../../css/app.css?1770360532645" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1770360532645" media="all"/>
+    <link rel="stylesheet" href="../../css/brand-peak.css?1770360532645" media="all"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SG/MY Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://use.typekit.net/rvl0oiq.css" rel="stylesheet"> <!-- Foco -->
+    <link href="https://use.typekit.net/kwr5xtp.css" rel="stylesheet"> <!-- Proxima Nova -->
+    <link href="https://use.typekit.net/tbg2rge.css" rel="stylesheet"> <!-- Crete -->
+    <link href="https://use.typekit.net/maw4ggk.css" rel="stylesheet"> <!-- Tachyon & Prenton Pro Black Italic -->
+    <link rel="stylesheet" href="https://use.typekit.net/ufx5fft.css"> <!-- FF Ernestine Pro -->
+    <link rel="stylesheet" href="https://use.typekit.net/maw4ggk.css"> <!-- Factoria-->
+    <link rel="stylesheet" href="https://use.typekit.net/rft8kwo.css"> <!-- Neue Aachen Pro and Bree Serif -->
+    <script type="text/javascript" src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+    <!-- For Korea need to add SiteTheme: 'kr-nototsans' on the component json -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Load the PayPal JS SDK with your PayPal Client ID-->
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.102.0/js/paypal-checkout.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.min.js"></script>
+    <script>
+        dataLayer = [
+            {
+                'userLogged': true,
+                'warehouseGroup': 'IdahoFalls',
+                'uiCulture': 'en-us'
+            }
+        ];
+
+        customerData = [
+            {
+                canPurchaseRestrictedPacks: false,
+                isAuthenticated: true,
+                isGuest: false,
+                isGuestShoppingEnabled: false,
+                lvipStatus: "",
+                viewLists: true,
+                viewMemberPricing: true,
+                viewPoints: false,
+                country: "UnitedStates",
+                culture: "en-US",
+                uiCulture: "en-US",
+                customerID: 1016042303,
+                customerName: "Direct Tester",
+                businessName: "Direct Tester",
+                customerFullName: "John Doe",
+                formattedName: "Direct Tester",
+                customerType: "Employee",
+                customerPriceType: "Regular",
+                status: "Customer", 
+                hasIMEA: true
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="//1036137.collect.igodigital.com/collect.js"></script>
+    <script type="text/javascript" src="//ui.powerreviews.com/stable/4.1/ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Don't need conditional in prod
+            if(document.getElementsByClassName('o-reviewSection').length > 0 || document.getElementsByClassName('a-reviewSnippet').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                // Reviews for the PDP
+                pwr("render", {
+                    // For performance enhancement
+                    enable_content_collection_modal: false,
+                    api_key: '18e4daf3-98d5-4483-95ef-5e6c25c5a029',
+                    locale: 'en_US',
+                    merchant_group_id: '507179823',
+                    merchant_id: '1561128198',
+                    // Usually is the sku number
+                    page_id: '650',
+                    // Page to write reviews
+                    review_wrapper_url: 'https://www.melaleuca.com/BusinessCenter/securecontent/ratings-and-reviews?',
+                    'product': {
+                        'name': 'Energy Shot 12–Pack',
+                        'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                        'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                        'description': 'Energy Shot 12–Pack',
+                        'category_name': 'Healthy Foods and Drinks',
+                        'variants': [{
+                            'name': 'Energy Shot 12–Pack',
+                            'url': 'https://productstore-qaus.melaleuca.com/productstore/healthy-foods-and-drinks/energy-shot-12pack',
+                            'image_url': 'https://cdnsc1test.melaleuca.com/cdn-cgi/image/width=500height=500,quality=85,format=auto/global/products/5341538619.png',
+                            'description': 'Energy Kick delivers energy, focus, and endurance with 150mg of caffeine, including naturally from yerba mate and guarana without artificial colors, flavors, sugar, or calories. Save $6.00 ',
+                            'category_name': 'Healthy Foods and Drinks',
+                            'page_id_variant': '5859'
+                        }]
+                    },
+                    on_render: function () {
+                        if(window.PDPReviews) {
+                            window.PDPReviews.onReady('ME', 'Member', 'Yes', 'Melaleuca Customer Experience Team', false);
+                        }
+                    },
+                    components: {
+                        ReviewSnippet: window.innerWidth >= 768 ? 'pr-reviewSnippetDesktop' : 'pr-reviewSnippetMobile',
+                        ReviewDisplay: 'pr-reviewdisplay'
+                    }
+                });
+            } else if(document.getElementsByClassName('p-ratingReview').length > 0) {
+                window.pwr = window.pwr || function () {
+                    (pwr.q = pwr.q || []).push(arguments);
+                };
+                pwr("render", {
+                    api_key: '9d9ef917-2870-4262-b2c5-cf3df74d694c',
+                    locale: 'en_us',
+                    pr_locale: '.en_us',
+                    merchant_group_id: '1968628287',
+                    merchant_id: '1683664767',
+                    appName: 'ryp',
+                    emuid: '4asCDRtANMsdp217iO0tPTT9QMeG',
+                    components: {
+                        ReviewYourPurchases: 'pr-write'
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTXVXPV');
+    </script>
+
+    <!-- Begin convertlab -->
+    <script>
+      enableConvertLabFeatureFlag = false;
+      if(window.enableConvertLabFeatureFlag) {
+        clDataLayer = {
+            'pageType': 'web'
+        };
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || {};
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://cbe.convertlab.com/cbe/collect?tid=' + i + '&at=0&h=web';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'clDataLayer', '1607381519064095424');
+
+        window.addEventListener("load", (event) => {
+          if(window.clab_tracker) {
+            window.clab_tracker.ready(function(){
+                this.push(clDataLayer);
+            });
+            window.clab_tracker.setEnableAutoTrackExitPage(false);
+          }
+        });
+      }
+    </script>
+    <!-- End convertlab -->
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1770360532645" media="all">
+    <!-- End Pattern Lab -->
+</head>
+    <!-- n.b. <body> is intentionally not closed: -->
+    <body class="pl-body relative ">
+        <script>
+            if(typeof _etmc !== 'undefined') {
+                window._etmc = _etmc;
+                _etmc.push(['setOrgId', '1036137']);
+                _etmc.push(['trackPageView']);
+            }
+        </script>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KTXVXPV&gtm_auth=JSw_1LWkBBArrnFYtpeuww&gtm_preview=env-5&gtm_cookies_win=x"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!--[if IE]>
+            <p class="browserupgrade">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+                your experience and security.
+            </p>
+        <![endif]-->
+        <!-- n.b. <div> is intentionally not closed: -->
+        <div id="vApp">
+            <script type="application/json" id="environment-variables">
+                {
+                    "ServiceBaseUrl": "https://depus-uaapi.melaleuca.com",
+                    "Country": "UnitedStates",
+                    "CurrencyCode": "USD",
+                    "HidePoints": false,
+                    "HideAllPowerReviews": false,
+                    "IsCn": false,
+                    "ProductPricing": {
+                        "HideProductMemberPrice": false,
+                        "HideProductNonMemberPrice": false
+                    }
+                }
+            </script>
+<!-- View All Patterns in a Pattern Sub-Type -->
+<div class="pl-c-main">
+
+	<!-- Index of Patterns -->
+	<div class="pl-c-pattern-index">
+
+		<div id="viewall-organisms-grow" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/organisms-grow\index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-organisms-grow">Grow</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="organisms-director-list" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-director-list\organisms-grow-director-list.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-director-list" title="Link to Pattern">
+						Director List
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-director-list" data-patternpartial="organisms-director-list" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-director-list">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-directorList">
+  <ul class="o-directorList__list" style="--items-per-column: 15;">
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Madison Acker
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2019</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jackson Ackerman
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2020</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Taylor Benson
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2018</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Morgan Carter
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2017</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jordan Davis
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2021</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Alexis Evans
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2016</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Riley Foster
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2015</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Casey Graham
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2022</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jamie Harper
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2019</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Drew Ingram
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2018</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Morgan Johnson
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2017</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Taylor King
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2020</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jordan Lee
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2016</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Alexis Martinez
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2015</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item -firstColEnd ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Riley Nelson
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2022</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  -secondColStart">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Casey Owens
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2019</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jamie Parker
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2018</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Drew Quinn
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2017</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Morgan Reed
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2021</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Taylor Smith
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2016</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jordan Taylor
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2015</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Alexis Underwood
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2022</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Riley Vaughn
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2019</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Casey Walker
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2018</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jamie Xander
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2017</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Drew Young
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2021</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Morgan Zimmerman
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2016</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Taylor Brooks
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2015</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jordan Carter
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2022</p>
+              </div>
+          </div>        </div>
+      </li>
+      <li class="o-directorList__item  ">
+        <div class="o-directorList__cardContainer">
+          <div class="m-directorCard">
+              <img
+                  class="m-directorCard__image"
+                  src="data:image/gif;base64,R0lGODdhMgAyANUAAKqqqgAAAO7u7uXl5bu7u93d3cPDw7KystTU1MzMzBUVFX9/f6urqy4uLqWlpR0dHRcXFyoqKmpqapSUlEJCQnJycnd3d0ZGRhoaGpubm4WFhVVVVV1dXVlZWZ+fnxkZGbm5uT8/PywsLMHBwYqKimFhYUlJSTMzM4+PjwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAMgAyAAAG/kCAcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zV4G3u/hQhFQSKjwuJxuHwYEgAJCExAMAgwBC1N/gUOEhoiKAAFGFBUEAAQWF4tHlpianJNGGAdDBxhGIZIACyFGlKSmQqhCbwqsAbMAGbFECA0TABMNCLB1rJO7vUKADA2SvgAH0kMOIhMiI0fO0H5E1EQEDg22wt9GBCQBJLvp5H7ntkUEsQ8ajg9IJR0mS/VD7uUrskAfgA0chnTYcGTBCQQSkhkpOAShQoZyCgnxkKjVBxBGCG1LEAzJAo0bOy74CCDCmwYMMGUiFKCQOyEUUMxyQKGIOssAMGXOhFCTgakCgAoIBWBggIABS4cgMDCEgDEiSAUoLdL0adQ2YMOKHUu2rNmzaNOqXcu2rdu1QQAAOw&#x3D;&#x3D;"
+                  alt="Director Image"
+              />
+              <div class="m-directorCard__info">
+                  <p class="m-directorCard__name">
+                      Jackson Ackerman
+                  </p>
+                  <p class="m-directorCard__yearEnrolled">Enrolled 2020</p>
+              </div>
+          </div>        </div>
+      </li>
+  </ul>
+   <!-- Pagination Section -->
+  <div class="o-profilelist__pagination mt-30">
+      <m-pagination
+          ref="pagination"
+          :tabs-in-view="4"
+          :items-per-page="30"
+          :total-items="60"
+          script-id="GrowPagination">
+      </m-pagination>
+  </div>
+  <script type="application/json" id="GrowPagination">
+      {"Labels":{"Go":"Go","Previous":"Previous","Next":"Next","GoToPage":"Go to page","ShowingOf":"Showing {0}-{1} of {2}"},"Data":{}}
+  </script>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-director-list" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-director-card","lineagePath":"../../patterns/molecules-grow-director-card\\molecules-grow-director-card.rendered.html"}],"lineage":[{"lineagePattern":"molecules-director-card","lineagePath":"../../patterns/molecules-grow-director-card\\molecules-grow-director-card.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-grow-director-list","lineagePath":"../../patterns/pages-grow-grow-director-list\\pages-grow-grow-director-list.rendered.html"}],"lineageR":[{"lineagePattern":"pages-grow-director-list","lineagePath":"../../patterns/pages-grow-grow-director-list\\pages-grow-grow-director-list.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Director List","patternPartial":"organisms-director-list","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-accordion" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-accordion\organisms-grow-grow-accordion.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-accordion" title="Link to Pattern">
+						Grow Accordion
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-accordion" data-patternpartial="organisms-grow-accordion" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-accordion">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-accordion script-id="accordion1"></o-grow-accordion>
+<script type="application/json" id="accordion1">
+  {"Labels":{"Heading":"Earn Riverbend Commissions!","Subheading":"<div>Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</div>","Body":"<div>I am a collapse description</div>"},"Data":{"BackgroundColor":"#808080FF"}}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-accordion" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-grow-accordion-multiples","lineagePath":"../../patterns/organisms-grow-grow-accordion-multiples\\organisms-grow-grow-accordion-multiples.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-grow-accordion-multiples","lineagePath":"../../patterns/organisms-grow-grow-accordion-multiples\\organisms-grow-grow-accordion-multiples.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Accordion","patternPartial":"organisms-grow-accordion","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-accordion-multiples" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-accordion-multiples\organisms-grow-grow-accordion-multiples.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-accordion-multiples" title="Link to Pattern">
+						Grow Accordion Multiples
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-accordion-multiples" data-patternpartial="organisms-grow-accordion-multiples" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-accordion-multiples">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="bg-gray-25">
+    <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+        <h2 id="" class="uppercase font-bold text-2xl leading-base pb-20">Promotions</h2>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion1"></o-grow-accordion>
+                <script type="application/json" id="accordion1">
+                  {"Labels":{"Heading":"This is a basic accordion without image or video","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"},"Data":null}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion2"></o-grow-accordion>
+                <script type="application/json" id="accordion2">
+                  {"Labels":{"Heading":"This accordion has an image and some longer, more complicated RTE in the body","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Get paid your monthly commission and bonuses 3+ days sooner…</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion3"></o-grow-accordion>
+                <script type="application/json" id="accordion3">
+                  {"Labels":{"Heading":"This accordion has an image and complicated RTE, but it also has a read more button","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Exciting Enhancements to the New Customer Welcome Program! Listen to Chief Marketing Officer Isaac Bottelberghe share the details of the New Customer $100 Welcome Program.</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>","ButtonText":"Read More"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion4"></o-grow-accordion>
+                <script type="application/json" id="accordion4">
+                  {"Labels":{"Heading":"This accordion has an image and complicated RTE, but it also has a read more button AND a close button","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Exciting Enhancements to the New Customer Welcome Program! Listen to Chief Marketing Officer Isaac Bottelberghe share the details of the New Customer $100 Welcome Program.</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>","ButtonText":"Read More","CloseButtonText":"Close"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion5"></o-grow-accordion>
+                <script type="application/json" id="accordion5">
+                  {"Labels":{"Heading":"Video accordion with green play button bottom right","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Enroll 2 new Members December 1-21 to get the most comfortable Melaleuca hoodie ever!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>","ButtonText":"Play Video","Video":{"ClickToWatch":"Click to watch","New":"New","PlayTime":"Play time","Video":"video","Watched":"Watched"}},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"},"Video":{"Id":"F348C2A0-73B8-4AF4-BD9E-2C5901908369","PlayIcon":{"Color":"text-green","Position":"bottom-right"},"VirtualVideo":{"Culture":"en-US","Description":"Twelve months of data. Astounding results. The fourth study to validate the life-changing power of the Peak Performance Pack.","ImageUrl":"","MediaId":"c9YHfVAv","MediaItemName":"L2E_Infoguard_2","RuntimeSeconds":"333","SubtitlePath":"","Title":"The Heart Health Study","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/product-store/Image-Coming-Soon-Placeholder.jpg","VideoFolderPath":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/","Hls":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/hls/hls_2019_05_infoguard_introduction_v7_enUS.m3u8","Dash":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/dash/dash_2019_05_infoguard_introduction_v7_enUS.mpd","Progressive1080":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_1080p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive720":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_720p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive360":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_360p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive270":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_270p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive144":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_144p/2019_05_infoguard_introduction_v7_enUS.mp4"}}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion6"></o-grow-accordion>
+                <script type="application/json" id="accordion6">
+                  {"Labels":{"Heading":"Video accordion with red play button bottom left","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Enroll 2 new Members December 1-21 to get the most comfortable Melaleuca hoodie ever!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>","ButtonText":"Play Video","Video":{"ClickToWatch":"Click to watch","New":"New","PlayTime":"Play time","Video":"video","Watched":"Watched"}},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"},"Video":{"Id":"F348C2A0-73B8-4AF4-BD9E-2C5901908369","PlayIcon":{"Color":"text-red","Position":"bottom-left"},"VirtualVideo":{"Culture":"en-US","Description":"Twelve months of data. Astounding results. The fourth study to validate the life-changing power of the Peak Performance Pack.","ImageUrl":"","MediaId":"c9YHfVAv","MediaItemName":"L2E_Infoguard_2","RuntimeSeconds":"333","SubtitlePath":"","Title":"The Heart Health Study","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/product-store/Image-Coming-Soon-Placeholder.jpg","VideoFolderPath":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/","Hls":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/hls/hls_2019_05_infoguard_introduction_v7_enUS.m3u8","Dash":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/dash/dash_2019_05_infoguard_introduction_v7_enUS.mpd","Progressive1080":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_1080p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive720":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_720p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive360":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_360p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive270":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_270p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive144":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_144p/2019_05_infoguard_introduction_v7_enUS.mp4"}}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion7"></o-grow-accordion>
+                <script type="application/json" id="accordion7">
+                  {"Labels":{"Heading":"Video accordion with blue play button top left","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Enroll 2 new Members December 1-21 to get the most comfortable Melaleuca hoodie ever!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>","ButtonText":"Play Video","Video":{"ClickToWatch":"Click to watch","New":"New","PlayTime":"Play time","Video":"video","Watched":"Watched"}},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"},"Video":{"Id":"F348C2A0-73B8-4AF4-BD9E-2C5901908369","PlayIcon":{"Color":"text-blue","Position":"top-left"},"VirtualVideo":{"Culture":"en-US","Description":"Twelve months of data. Astounding results. The fourth study to validate the life-changing power of the Peak Performance Pack.","ImageUrl":"","MediaId":"c9YHfVAv","MediaItemName":"L2E_Infoguard_2","RuntimeSeconds":"333","SubtitlePath":"","Title":"The Heart Health Study","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/product-store/Image-Coming-Soon-Placeholder.jpg","VideoFolderPath":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/","Hls":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/hls/hls_2019_05_infoguard_introduction_v7_enUS.m3u8","Dash":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/dash/dash_2019_05_infoguard_introduction_v7_enUS.mpd","Progressive1080":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_1080p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive720":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_720p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive360":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_360p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive270":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_270p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive144":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_144p/2019_05_infoguard_introduction_v7_enUS.mp4"}}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion8"></o-grow-accordion>
+                <script type="application/json" id="accordion8">
+                  {"Labels":{"Heading":"Video accordion with white play button top right","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Enroll 2 new Members December 1-21 to get the most comfortable Melaleuca hoodie ever!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>","ButtonText":"Play Video","Video":{"ClickToWatch":"Click to watch","New":"New","PlayTime":"Play time","Video":"video","Watched":"Watched"}},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"},"Video":{"Id":"F348C2A0-73B8-4AF4-BD9E-2C5901908369","PlayIcon":{"Color":"text-white","Position":"top-right"},"VirtualVideo":{"Culture":"en-US","Description":"Twelve months of data. Astounding results. The fourth study to validate the life-changing power of the Peak Performance Pack.","ImageUrl":"","MediaId":"c9YHfVAv","MediaItemName":"L2E_Infoguard_2","RuntimeSeconds":"333","SubtitlePath":"","Title":"The Heart Health Study","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/product-store/Image-Coming-Soon-Placeholder.jpg","VideoFolderPath":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/","Hls":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/hls/hls_2019_05_infoguard_introduction_v7_enUS.m3u8","Dash":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/dash/dash_2019_05_infoguard_introduction_v7_enUS.mpd","Progressive1080":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_1080p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive720":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_720p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive360":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_360p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive270":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_270p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive144":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_144p/2019_05_infoguard_introduction_v7_enUS.mp4"}}}}
+                </script>
+            </div>
+            <div class="pb-20">
+                <o-grow-accordion script-id="accordion9"></o-grow-accordion>
+                <script type="application/json" id="accordion9">
+                  {"Labels":{"Heading":"Video accordion with orange play button centered","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Enroll 2 new Members December 1-21 to get the most comfortable Melaleuca hoodie ever!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>","ButtonText":"Play Video","Video":{"ClickToWatch":"Click to watch","New":"New","PlayTime":"Play time","Video":"video","Watched":"Watched"}},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"},"Video":{"Id":"F348C2A0-73B8-4AF4-BD9E-2C5901908369","PlayIcon":{"Color":"text-orange","Position":"center"},"VirtualVideo":{"Culture":"en-US","Description":"Twelve months of data. Astounding results. The fourth study to validate the life-changing power of the Peak Performance Pack.","ImageUrl":"","MediaId":"c9YHfVAv","MediaItemName":"L2E_Infoguard_2","RuntimeSeconds":"333","SubtitlePath":"","Title":"The Heart Health Study","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/product-store/Image-Coming-Soon-Placeholder.jpg","VideoFolderPath":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/","Hls":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/hls/hls_2019_05_infoguard_introduction_v7_enUS.m3u8","Dash":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/dash/dash_2019_05_infoguard_introduction_v7_enUS.mpd","Progressive1080":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_1080p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive720":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_720p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive360":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_360p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive270":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_270p/2019_05_infoguard_introduction_v7_enUS.mp4","Progressive144":"//video-us.melaleuca.com/LearnToEarn/2019_05_infoguard_introduction_v7_enUS/mp4/g_144p/2019_05_infoguard_introduction_v7_enUS.mp4"}}}}
+                </script>
+            </div>
+    </div>
+</div>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-accordion-multiples" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"organisms-grow-accordion","lineagePath":"../../patterns/organisms-grow-grow-accordion\\organisms-grow-grow-accordion.rendered.html"}],"lineage":[{"lineagePattern":"organisms-grow-accordion","lineagePath":"../../patterns/organisms-grow-grow-accordion\\organisms-grow-grow-accordion.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-grow-buttonlist-with-accordion","lineagePath":"../../patterns/organisms-grow-grow-buttonlist-with-accordion\\organisms-grow-grow-buttonlist-with-accordion.rendered.html"},{"lineagePattern":"pages-update-center","lineagePath":"../../patterns/pages-update-center-update-center\\pages-update-center-update-center.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-grow-buttonlist-with-accordion","lineagePath":"../../patterns/organisms-grow-grow-buttonlist-with-accordion\\organisms-grow-grow-buttonlist-with-accordion.rendered.html"},{"lineagePattern":"pages-update-center","lineagePath":"../../patterns/pages-update-center-update-center\\pages-update-center-update-center.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Accordion Multiples","patternPartial":"organisms-grow-accordion-multiples","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-accordion-with-audio-player" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-accordion-with-audio-player\organisms-grow-grow-accordion-with-audio-player.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-accordion-with-audio-player" title="Link to Pattern">
+						Grow Accordion With Audio Player
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-accordion-with-audio-player" data-patternpartial="organisms-grow-accordion-with-audio-player" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-accordion-with-audio-player">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-accordion script-id="accordion-audio-1"></o-grow-accordion>
+<script type="application/json" id="accordion-audio-1">
+  {"Labels":{"Heading":"Accordion with Audio Player","Subheading":"<div>This Demonstrate the audio player in accordion!</div>","ButtonText":"Play Audio"},"Data":{"Image":{"Url":"https://picsum.photos/100/100.jpg","Alt":"Alt description text here"},"Audio":{"Fallbacks":{"mp3":"https://cdnsc1.melaleuca.com.cn/Audio/BusinessCenter/Leadercast/BC_newstart_2021_03_zhCN.mp3","aac":"","ogg":""},"MediaId":"c9YHfVAv","ImageUrl":"//cdnus.melaleuca.com/Images/Media_Manager/Thumbnail/128_72/infoguard_EN_L2E_128_72.jpg","ThumbnailImageUrl":null,"AudioPath":"https://cdnsc1.melaleuca.com.cn/Audio/BusinessCenter/Leadercast/","IsAudio":true}}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-accordion-with-audio-player" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Accordion With Audio Player","patternPartial":"organisms-grow-accordion-with-audio-player","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-accordion-with-child-component" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-accordion-with-child-component\organisms-grow-grow-accordion-with-child-component.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-accordion-with-child-component" title="Link to Pattern">
+						Grow Accordion With Child Component
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-accordion-with-child-component" data-patternpartial="organisms-grow-accordion-with-child-component" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-accordion-with-child-component">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-accordion script-id="accordion1">
+    
+    <article class="m-fwBanner -h-lg  -stackMobile    " data-testid="article-fullWidthBanner">
+            <div class="m-fwBanner__row -media ">
+                <!-- Start: Media block1 -->
+                <!-- images -->
+        
+                    <picture class="a-genImg">
+                        <source srcset="https://placehold.co/1440x380.jpg" media="(min-width: 1024px)">
+                    
+                    
+                    
+                        <source srcset="https://placehold.co/768x550.jpg" media="(max-width: 575px)">
+                    
+                        <!-- Default/Fallback image Should be the desktop image -->
+                        <img src="https://placehold.co/1440x380.jpg" alt="Alternative text for image on desktop" class="a-genImg__img object-top" fetchpriority="high">
+                    </picture>
+        
+                <!-- Video -->
+                <!-- End: Media block -->
+            </div>
+            <div class="m-fwBanner__row -columns -w-lg -left -top">
+                <!-- Start: Content block -->
+                <div class="m-fwBanner__columns ">
+                    <div class="m-fwBanner__col -content">
+                        <div class="m-fwBanner__rte">
+                            <div class="m-rte">
+                                <h2 class="text-3xl leading-base"><span> Concentrated</span> for the environment.</h2> <p>Est officia cupidatat commodo eu enim dolore veniam adipisicing sit id ea sunt do eu. Sunt voluptate occaecat commodo nisi Lorem dolore. Et eu cillum nisi elit aute duis eu pariatur sint.</p> <ul><li>test</li><li>test</li><li>test</li></ul>
+                            </div>
+                        </div>
+        
+                                    <div class="m-fwBanner__cta -left">
+                                        <a class="a-authorBtn  text-center   bg-green rounded -default  px-40 " style="color: "  href="#" >Learn More</a>
+                                    </div>
+        
+                        
+        
+        
+                    </div>
+        
+                    
+        
+                </div>
+                <!-- End: Content block -->
+            </div>
+    </article>
+    
+    
+    
+    
+    
+</o-grow-accordion>
+<script type="application/json" id="accordion1">
+  {"Labels":{"Heading":"Earn Riverbend Commissions!","Subheading":"<div>Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</div>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"},"Data":null}
+</script>
+
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-accordion-with-child-component" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-cmn-full-width-banner","lineagePath":"../../patterns/molecules-banners-cmn-full-width-banner\\molecules-banners-cmn-full-width-banner.rendered.html"}],"lineage":[{"lineagePattern":"molecules-cmn-full-width-banner","lineagePath":"../../patterns/molecules-banners-cmn-full-width-banner\\molecules-banners-cmn-full-width-banner.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Accordion With Child Component","patternPartial":"organisms-grow-accordion-with-child-component","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-buttonlist-with-accordion" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-buttonlist-with-accordion\organisms-grow-grow-buttonlist-with-accordion.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-buttonlist-with-accordion" title="Link to Pattern">
+						Grow Buttonlist With Accordion
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-buttonlist-with-accordion" data-patternpartial="organisms-grow-buttonlist-with-accordion" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-buttonlist-with-accordion">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="bg-gray-25 pb-60">
+    <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain to-md:px-10 mb-30">
+        <h2 class="uppercase font-bold text-2xl text-gray-150 leading-tight pb-20 mt-32">Update Center</h2>
+        <div class="m-buttonlist">
+              <a class="a-authorBtn  text-center  border-1 border-white bg-green rounded -default  px-40 " style="color: "  data-smooth-scroll=""  href="#Promotions" >Promotions</a>
+              <a class="a-authorBtn  text-center  border-1 border-white bg-white rounded-full -default  px-40 " style="color: "  data-smooth-scroll=""  href="#BusinessUpdates" >Business Updates</a>
+              <a class="a-authorBtn  text-center  border-1 border-white bg-green rounded-full -default  px-40 " style="color: "  href="#ProductUpdates" >Product Updates</a>
+        </div>
+        
+    </div>
+
+    <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain to-md:px-10 mb-30" id="section-1">
+        <div class="bg-gray-25">
+            <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+                <h2 id="Promotions" class="uppercase font-bold text-2xl leading-base pb-20">Promotions</h2>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion1"></o-grow-accordion>
+                        <script type="application/json" id="accordion1">
+                          {"Labels":{"Heading":"This is a basic accordion without image or video","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"},"Data":null}
+                        </script>
+                    </div>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion2"></o-grow-accordion>
+                        <script type="application/json" id="accordion2">
+                          {"Labels":{"Heading":"This accordion has an image and some longer, more complicated RTE in the body","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Get paid your monthly commission and bonuses 3+ days sooner…</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                        </script>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain to-md:px-10 mb-30" id="section-2">
+        <div class="bg-gray-25">
+            <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+                <h2 id="BusinessUpdates" class="uppercase font-bold text-2xl leading-base pb-20">Business Updates</h2>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion1"></o-grow-accordion>
+                        <script type="application/json" id="accordion1">
+                          {"Labels":{"Heading":"This is a basic accordion without image or video","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"},"Data":null}
+                        </script>
+                    </div>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion2"></o-grow-accordion>
+                        <script type="application/json" id="accordion2">
+                          {"Labels":{"Heading":"This accordion has an image and some longer, more complicated RTE in the body","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Get paid your monthly commission and bonuses 3+ days sooner…</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                        </script>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain to-md:px-10 mb-30" id="section-3">
+        <div class="bg-gray-25">
+            <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+                <h2 id="ProductUpdates" class="uppercase font-bold text-2xl leading-base pb-20">Product Updates</h2>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion1"></o-grow-accordion>
+                        <script type="application/json" id="accordion1">
+                          {"Labels":{"Heading":"This is a basic accordion without image or video","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Discover the benefits of building a business on top of a business and increasing your monthly Repeat Income!</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"},"Data":null}
+                        </script>
+                    </div>
+                    <div class="pb-20">
+                        <o-grow-accordion script-id="accordion2"></o-grow-accordion>
+                        <script type="application/json" id="accordion2">
+                          {"Labels":{"Heading":"This accordion has an image and some longer, more complicated RTE in the body","Subheading":"<p class=\"text-sm leading-tight md:text-base\">Get paid your monthly commission and bonuses 3+ days sooner…</p>","Body":"<p class=\"text-sm leading-tight md:text-base\">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p></br><ul class=\"pl-16 list-disc text-sm leading-tight md:text-base\"><li>Et harum quidem rerum facilis</li><li>Nam libero tempore, cum soluta nobis</li><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae </li></ul></br><p class=\"text-sm font-medium leading-tight md:text-base\">Quis autem vel</p></br><p class=\"text-xs italic leading-tight md:text-base\">*Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>"},"Data":{"Image":{"Url":"https://picsum.photos/400/400.jpg","Alt":"Alt description text here"}}}
+                        </script>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-buttonlist-with-accordion" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-button-list","lineagePath":"../../patterns/molecules-button-list-button-list\\molecules-button-list-button-list.rendered.html"},{"lineagePattern":"organisms-grow-accordion-multiples","lineagePath":"../../patterns/organisms-grow-grow-accordion-multiples\\organisms-grow-grow-accordion-multiples.rendered.html"}],"lineage":[{"lineagePattern":"molecules-button-list","lineagePath":"../../patterns/molecules-button-list-button-list\\molecules-button-list-button-list.rendered.html"},{"lineagePattern":"organisms-grow-accordion-multiples","lineagePath":"../../patterns/organisms-grow-grow-accordion-multiples\\organisms-grow-grow-accordion-multiples.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Buttonlist With Accordion","patternPartial":"organisms-grow-buttonlist-with-accordion","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-session" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-session\organisms-grow-grow-live-session.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-session" title="Link to Pattern">
+						Grow Live Session
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-session" data-patternpartial="organisms-grow-live-session" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-session">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="o-growLiveSession">
+    <h2 class="o-growLiveSession__heading" style="color: #0D97A8;">
+        THURSDAY, MAY 16
+    </h2>
+
+    <ul class="o-growLiveSession__list">
+            <m-grow-live-session-card script-id="liveSessionCard"></m-grow-live-session-card>
+            
+            <script type="application/json" id="liveSessionCard">
+                 {"Labels":{},"Data":{"LiveSession":{"ApiInterval":10000,"LambdaUrl":"https://api.example.com/livestream","EventTime":"3:00 PM - 5:00 PM","EventTitle":"GENERAL SESSION 1","EventDescription":"(Virtual doors open at 3:00 PM)","ButtonStates":[{"Type":"ComingSoon","Title":"GENERAL SESSION COMING SOON","Description":"(Virtual doors open at 9:30 AM)","Button":{"ButtonText":"COMING SOON","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/event-page","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"WatchNow","Title":"GENERAL SESSION WATCH NOW","Description":"(Virtual doors open at 10:30 AM)","Button":{"ButtonText":"WATCH NOW","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"WalkIn","Title":"GENERAL SESSION WALK IN","Description":"(Virtual doors open at 11:30 AM)","Button":{"ButtonText":"","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"Ended","Title":"GENERAL SESSION ENDED","Description":"(Virtual doors open at 11:45 AM)","Button":{"ButtonText":"BROADCAST HAS ENDED","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"Replay","Title":"GENERAL SESSION REPLAY","Description":"(Virtual doors open at 12:00 PM)","Button":{"ButtonText":"<p>REPLAY</p><img alt=\"alternative image text\" src=\"https://placehold.co/16x16\"/>","TextColor":"#ffffff","BackgroundColor":"#CB3C12","HoverColor":"green","BorderColor":"#CB3C12"},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""}]}}}
+             </script>            <m-grow-live-session-card script-id="liveSessionCard"></m-grow-live-session-card>
+            
+            <script type="application/json" id="liveSessionCard">
+                 {"Labels":{},"Data":{"LiveSession":{"ApiInterval":10000,"LambdaUrl":"https://api.example.com/livestream","EventTime":"7:15 PM - 8:30 PM","EventTitle":"GENERAL SESSION 2","EventDescription":"(Virtual doors open at 7:00 PM)","ButtonStates":[{"Type":"ComingSoon","Title":"GENERAL SESSION COMING SOON","Description":"(Virtual doors open at 9:30 AM)","Button":{"ButtonText":"COMING SOON","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/event-page","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"WatchNow","Title":"GENERAL SESSION WATCH NOW","Description":"(Virtual doors open at 10:30 AM)","Button":{"ButtonText":"WATCH NOW","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"WalkIn","Title":"GENERAL SESSION WALK IN","Description":"(Virtual doors open at 11:30 AM)","Button":{"ButtonText":"","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"Ended","Title":"GENERAL SESSION ENDED","Description":"(Virtual doors open at 11:45 AM)","Button":{"ButtonText":"BROADCAST HAS ENDED","TextColor":"","BackgroundColor":"","HoverColor":"","BorderColor":""},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""},{"Type":"Replay","Title":"GENERAL SESSION REPLAY","Description":"(Virtual doors open at 12:00 PM)","Button":{"ButtonText":"REPLAY","TextColor":"#ffffff","BackgroundColor":"#CB3C12","HoverColor":"green","BorderColor":"#CB3C12"},"Link":"https://example.com/more-info","BackgroundColor":"","BorderColor":"","TextColor":"","SubTextColor":"","EventTimeColor":""}]}}}
+             </script>    </ul>
+
+    <p class="o-growLiveSession__scheduleNote">*Schedule and events are subject to change. All times posted in Mountain Time.</p>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-session" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-grow-live-session-card","lineagePath":"../../patterns/molecules-grow-live-session-card-grow-live-session-card\\molecules-grow-live-session-card-grow-live-session-card.rendered.html"}],"lineage":[{"lineagePattern":"molecules-grow-live-session-card","lineagePath":"../../patterns/molecules-grow-live-session-card-grow-live-session-card\\molecules-grow-live-session-card-grow-live-session-card.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-grow-live-session","lineagePath":"../../patterns/pages-grow-grow-live-session\\pages-grow-grow-live-session.rendered.html"}],"lineageR":[{"lineagePattern":"pages-grow-live-session","lineagePath":"../../patterns/pages-grow-grow-live-session\\pages-grow-grow-live-session.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Session","patternPartial":"organisms-grow-live-session","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player\organisms-grow-grow-live-stream-player.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player" title="Link to Pattern">
+						Grow Live Stream Player
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player" data-patternpartial="organisms-grow-live-stream-player" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":"<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-grow-live-stream-pre-recorded","lineagePath":"../../patterns/pages-grow-grow-live-stream-pre-recorded\\pages-grow-grow-live-stream-pre-recorded.rendered.html"},{"lineagePattern":"pages-grow-live-stream","lineagePath":"../../patterns/pages-grow-grow-live-stream\\pages-grow-grow-live-stream.rendered.html"}],"lineageR":[{"lineagePattern":"pages-grow-live-stream-pre-recorded","lineagePath":"../../patterns/pages-grow-grow-live-stream-pre-recorded\\pages-grow-grow-live-stream-pre-recorded.rendered.html"},{"lineagePattern":"pages-grow-live-stream","lineagePath":"../../patterns/pages-grow-grow-live-stream\\pages-grow-grow-live-stream.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player","patternPartial":"organisms-grow-live-stream-player","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player-during-event" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player-during-event\organisms-grow-grow-live-stream-player-during-event.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player-during-event" title="Link to Pattern">
+						Grow Live Stream Player During Event
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player-during-event" data-patternpartial="organisms-grow-live-stream-player-during-event" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player-during-event">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":"<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player-during-event" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player During Event","patternPartial":"organisms-grow-live-stream-player-during-event","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player-during-event-pre-recorded" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player-during-event-pre-recorded\organisms-grow-grow-live-stream-player-during-event-pre-recorded.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player-during-event-pre-recorded" title="Link to Pattern">
+						Grow Live Stream Player During Event Pre Recorded
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player-during-event-pre-recorded" data-patternpartial="organisms-grow-live-stream-player-during-event-pre-recorded" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player-during-event-pre-recorded">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/398x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":""},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/398x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player-during-event-pre-recorded" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player During Event Pre Recorded","patternPartial":"organisms-grow-live-stream-player-during-event-pre-recorded","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player-event-end" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player-event-end\organisms-grow-grow-live-stream-player-event-end.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player-event-end" title="Link to Pattern">
+						Grow Live Stream Player Event End
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player-event-end" data-patternpartial="organisms-grow-live-stream-player-event-end" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player-event-end">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":"<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player-event-end" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player Event End","patternPartial":"organisms-grow-live-stream-player-event-end","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player-event-start" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player-event-start\organisms-grow-grow-live-stream-player-event-start.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player-event-start" title="Link to Pattern">
+						Grow Live Stream Player Event Start
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player-event-start" data-patternpartial="organisms-grow-live-stream-player-event-start" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player-event-start">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":"<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player-event-start" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player Event Start","patternPartial":"organisms-grow-live-stream-player-event-start","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-live-stream-player-technical-difficulties-message" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-live-stream-player-technical-difficulties-message\organisms-grow-grow-live-stream-player-technical-difficulties-message.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-live-stream-player-technical-difficulties-message" title="Link to Pattern">
+						Grow Live Stream Player Technical Difficulties Message
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-live-stream-player-technical-difficulties-message" data-patternpartial="organisms-grow-live-stream-player-technical-difficulties-message" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-live-stream-player-technical-difficulties-message">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {"Labels":{},"Data":{"ApiInterval":"10000","LambdaUrl":"https://api.example.com/livestream","BackgroundImage":"https://placehold.co/600x400","LaunchLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"launch logo"},"BroadcastLogo":{"Url":"https://placehold.co/264x74/999999/dddddd/png","Alt":"broadcast logo"},"EventStates":[{"Type":"ComingSoon","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"},{"Type":"WatchNow","Video":{"VirtualVideo":{"IsNew":false,"IsWatched":false,"HasReset":false,"HideAllStamps":false,"PreventSeek":false,"Culture":"en-US","Description":"","ImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","MediaId":"c9YHfVAv","MediaItemName":"2023-usda-beef-grading-primer-v6","RuntimeSeconds":"253","SubtitlePath":"//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt","Title":"Flavor","ThumbnailImageAlt":"","ThumbnailImageUrl":"https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png","AltImage":"","VideoFolderPath":"","Hls":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8","Dash":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd","Progressive1080":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive720":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive360":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive270":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4","Progressive144":"https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4","PageUrl":null}},"LiveEvent":"<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"},{"Type":"Ended","RTE":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"}],"MutedIconUrl":"https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png","PreventRewind":false,"PostLiveWatchDuration":"15000","AriaLabel":"Current Time","Text":"<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>","FailSafeMessage":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-2xl\">We are experiencing technical difficulties.</p><p class=\"text-white text-4xl font-bold\">Please stand by.</p>","TechnicalFailureMessage":"<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-2xl\">Due to technical difficulties,</p><p class=\"text-white text-4xl font-bold\">this broadcast has ended.</p><p class=\"text-white text-base p-5 mt-20\">Please look for an mail and/or text from Melaleuca with instructions on<br />when the broadcast will resume.</p>"}}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-live-stream-player-technical-difficulties-message" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Live Stream Player Technical Difficulties Message","patternPartial":"organisms-grow-live-stream-player-technical-difficulties-message","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-profile-cards" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-profile-cards\organisms-grow-grow-profile-cards.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-profile-cards" title="Link to Pattern">
+						Grow Profile Cards
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-profile-cards" data-patternpartial="organisms-grow-profile-cards" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-profile-cards">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<ul class="o-profileCardsGrow">
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Title That Is Exceptionally Long With No Spaces May Run Off The Edge Of The Card
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        YEAR is super long here as well... does it fall off the world, does it extend the length of the overall card... how do we deal with such outlyers that any normal human would never in their wildest fantasies assign to a field
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        In the realm of digital systems, programming, and application development, the term &#x27;Date From&#x27; often serves as a critical part of managing and processing time-related data. It is typically used.
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00001-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"8X WINNER","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00002-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"2X WINNER","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00003-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"1","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00004-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"2","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00005-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"3","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="00006-badge">
+                {"Labels":{},"Data":{"AriaLabel":"Premium badge","BadgePosition":"top-left","BackgroundColor":"#0076df","IsGrowPremiumPopup":false,"Title":"4","TailwindClasses":"font-medium","TextColor":"#ffffff"}}
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+        <li class="o-profileCardsGrow__listItem">
+            <a-badge
+                aria-label="" 
+                background-color="" 
+                badge-position="" 
+                tailwind-classes="" 
+                text-color=""
+                title="" 
+                is-grow-premium-popup="false"
+            >
+                <div class="m-profileCardGrow">
+                    <object data="https://placehold.co/150x145.png" type="image/jpg" class="m-profileCardGrow__image">
+                        <img src="" alt="Image Alt" />
+                    </object>
+            
+                    <h3 class="m-profileCardGrow__title">
+                        Marketing Executive Name(s) here and longer ones here.
+                    </h3>
+            
+                    <p class="m-profileCardGrow__status">
+                        Marketing Executive Title
+                    </p>
+            
+                        <p class="m-profileCardGrow__enrolled">
+                            Enrolled ####
+                        </p>
+            
+                    <p class="m-profileCardGrow__from">
+                        FROM (OPT)
+                    </p>
+                </div>
+            </a-badge>
+            
+            <script type="application/json" id="">
+                undefined
+            </script>        </li>
+</ul>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-profile-cards" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-profile-card-grow","lineagePath":"../../patterns/molecules-cards-profile-card-grow\\molecules-cards-profile-card-grow.rendered.html"}],"lineage":[{"lineagePattern":"molecules-profile-card-grow","lineagePath":"../../patterns/molecules-cards-profile-card-grow\\molecules-cards-profile-card-grow.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-grow-founders-club","lineagePath":"../../patterns/pages-grow-grow-founders-club\\pages-grow-grow-founders-club.rendered.html"},{"lineagePattern":"pages-grow-president-club","lineagePath":"../../patterns/pages-grow-grow-president-club\\pages-grow-grow-president-club.rendered.html"},{"lineagePattern":"pages-grow-profile","lineagePath":"../../patterns/pages-grow-grow-profile\\pages-grow-grow-profile.rendered.html"},{"lineagePattern":"pages-marketing-executive-leadership","lineagePath":"../../patterns/pages-grow-marketing-executive-leadership\\pages-grow-marketing-executive-leadership.rendered.html"}],"lineageR":[{"lineagePattern":"pages-grow-founders-club","lineagePath":"../../patterns/pages-grow-grow-founders-club\\pages-grow-grow-founders-club.rendered.html"},{"lineagePattern":"pages-grow-president-club","lineagePath":"../../patterns/pages-grow-grow-president-club\\pages-grow-grow-president-club.rendered.html"},{"lineagePattern":"pages-grow-profile","lineagePath":"../../patterns/pages-grow-grow-profile\\pages-grow-grow-profile.rendered.html"},{"lineagePattern":"pages-marketing-executive-leadership","lineagePath":"../../patterns/pages-grow-marketing-executive-leadership\\pages-grow-marketing-executive-leadership.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Profile Cards","patternPartial":"organisms-grow-profile-cards","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-grow-upcoming-events" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-grow-upcoming-events\organisms-grow-grow-upcoming-events.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-grow-upcoming-events" title="Link to Pattern">
+						Grow Upcoming Events
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-grow-upcoming-events" data-patternpartial="organisms-grow-upcoming-events" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-grow-upcoming-events">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div 
+    class="o-growUpcomingEvents p-6 border px-10 md:px-30 pt-12 md:pt-32 pb-20 bg-cover bg-center"
+    style="
+        background-color: #FFFFFF;
+        border-color: #BBBBBB;
+        
+        
+    "
+>
+    <h2 class="o-growUpcomingEvents__heading text-2xl font-bold text-dark border-b-2 pb-10 mb-8 md:mb-4" style="color: #333333;">
+        Upcoming Events
+    </h2>
+
+    <ul role="list" class="o-growUpcomingEvents__list pl-2 pr-10 md:px-0">
+            <li role="listitem" class="o-growUpcomingEvents__listItem flex justify-between items-center">
+                <div class="md:grid grid-cols-3 w-full py-9 md:py-12">
+                    <p class="o-growUpcomingEvents__date text-sm font-bold text-gray" style="color: #757575;">
+                        2025-07-30T15:55:00Z
+                    </p>
+                    <p class="o-growUpcomingEvents__title text-sm text-gray uppercase" style="color: #757575;">
+                        Advanced *
+                    </p>
+                    <p class="o-growUpcomingEvents__location text-sm text-gray" style="color: #757575;">
+                        Philadelphia PA
+                    </p>
+                </div>
+                <a 
+                    href="http://msn.com" 
+                    target=""
+                    class="o-growUpcomingEvents__link text-sm font-bold text-green"
+                    style="color: #30862D;"
+                >
+                    link
+                </a>
+            </li>
+            <li role="listitem" class="o-growUpcomingEvents__listItem flex justify-between items-center">
+                <div class="md:grid grid-cols-3 w-full py-9 md:py-12">
+                    <p class="o-growUpcomingEvents__date text-sm font-bold text-gray" style="color: #757575;">
+                        2025-08-08T15:44:00Z
+                    </p>
+                    <p class="o-growUpcomingEvents__title text-sm text-gray uppercase" style="color: #757575;">
+                        Convention
+                    </p>
+                    <p class="o-growUpcomingEvents__location text-sm text-gray" style="color: #757575;">
+                        Salt Lake City, UT
+                    </p>
+                </div>
+                <a 
+                    href="http://google.com" 
+                    target=""
+                    class="o-growUpcomingEvents__link text-sm font-bold text-green"
+                    style="color: #30862D;"
+                >
+                    link
+                </a>
+            </li>
+            <li role="listitem" class="o-growUpcomingEvents__listItem flex justify-between items-center">
+                <div class="md:grid grid-cols-3 w-full py-9 md:py-12">
+                    <p class="o-growUpcomingEvents__date text-sm font-bold text-gray" style="color: #757575;">
+                        2025-08-06T15:52:00Z
+                    </p>
+                    <p class="o-growUpcomingEvents__title text-sm text-gray uppercase" style="color: #757575;">
+                        January Launch
+                    </p>
+                    <p class="o-growUpcomingEvents__location text-sm text-gray" style="color: #757575;">
+                        Virtual Event
+                    </p>
+                </div>
+                <a 
+                    href="http://msn.com" 
+                    target=""
+                    class="o-growUpcomingEvents__link text-sm font-bold text-green"
+                    style="color: #30862D;"
+                >
+                    link
+                </a>
+            </li>
+            <li role="listitem" class="o-growUpcomingEvents__listItem flex justify-between items-center">
+                <div class="md:grid grid-cols-3 w-full py-9 md:py-12">
+                    <p class="o-growUpcomingEvents__date text-sm font-bold text-gray" style="color: #757575;">
+                        2025-06-09T15:54:00Z
+                    </p>
+                    <p class="o-growUpcomingEvents__title text-sm text-gray uppercase" style="color: #757575;">
+                        Leadership Quest
+                    </p>
+                    <p class="o-growUpcomingEvents__location text-sm text-gray" style="color: #757575;">
+                        Cancun MX
+                    </p>
+                </div>
+                <a 
+                    href="http://google.com" 
+                    target=""
+                    class="o-growUpcomingEvents__link text-sm font-bold text-green"
+                    style="color: #30862D;"
+                >
+                    link
+                </a>
+            </li>
+    </ul>
+
+    <div class="o-growUpcomingEvents__seeAllEvents text-center mt-12 md:mt-20">
+        <a 
+            href="/" 
+            target=""
+            class="o-growUpcomingEvents__seeAllEventsLink a-button border md:text-xs font-medium px-16 py-8 md:py-6"
+            style="
+                --buttonTextColor: #30862D;
+                --buttonBackgroundColor: #ffffff;
+                --buttonBorderColor: #30862D;
+                --buttonHoverTextColor: #ffffff;
+                --buttonHoverBackgroundColor: #30862D;
+                --buttonHoverBorderColor: #30862D;
+            "
+        >
+            See All Events
+        </a>
+    </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-grow-upcoming-events" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Grow Upcoming Events","patternPartial":"organisms-grow-upcoming-events","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-search-result-list" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-grow-search-result-list\organisms-grow-search-result-list.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-search-result-list" title="Link to Pattern">
+						Search Result List
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-search-result-list" data-patternpartial="organisms-search-result-list" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-search-result-list">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<ul class="o-searchResultList">
+    <li class="o-searchResultList__listItem">
+      
+        <a href="/" class="m-searchResultItem">
+            <img src="https://placehold.co/86x86" alt="Item 1" class="m-searchResultItem__img" />
+          <div class="m-searchResultItem__content">
+            <h3 class="m-searchResultItem__title">Result Heading Goes Here</h3>
+            <p class="m-searchResultItem__description">Short description will go here, similar to as it appears in the GROW app with a character limit at xx then followed by…</p>
+          </div>
+        </a>
+      
+    </li>
+    <li class="o-searchResultList__listItem">
+      
+        <a href="/" class="m-searchResultItem">
+          <div class="m-searchResultItem__content">
+            <h3 class="m-searchResultItem__title">Result Heading Goes Here</h3>
+            <p class="m-searchResultItem__description">Short description will go here, similar to as it appears in the GROW app with a character limit at xx then followed by…</p>
+          </div>
+        </a>
+      
+    </li>
+    <li class="o-searchResultList__listItem">
+      
+          <a-badge
+            aria-label="Premium badge"
+            background-color="" 
+            badge-position="top-right" 
+            tailwind-classes="italic text-tiny" 
+            text-color=""
+            title="PREMIUM" 
+            is-grow-premium-popup="true"
+          >
+        <a href="/" class="m-searchResultItem">
+            <img src="https://placehold.co/86x86" alt="Item 3" class="m-searchResultItem__img" />
+          <div class="m-searchResultItem__content">
+            <h3 class="m-searchResultItem__title">Result Heading Goes Here</h3>
+            <p class="m-searchResultItem__description">Short description will go here, similar to as it appears in the GROW app with a character limit at xx then followed by…</p>
+          </div>
+        </a>
+          </a-badge>
+      
+    </li>
+</ul>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-search-result-list" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"molecules-search-result-item-with-image","lineagePath":"../../patterns/molecules-search-result-item-with-image-search-result-item-with-image\\molecules-search-result-item-with-image-search-result-item-with-image.rendered.html"}],"lineage":[{"lineagePattern":"molecules-search-result-item-with-image","lineagePath":"../../patterns/molecules-search-result-item-with-image-search-result-item-with-image\\molecules-search-result-item-with-image-search-result-item-with-image.rendered.html"}],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"grow"},"patternExtension":"hbs","patternName":"Search Result List","patternPartial":"organisms-search-result-list","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+
+	</div>
+	<!--end pl-c-pattern-index-->
+
+</div>
+<!--end pl-c-main--></div>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"patternPartial":"viewall-organisms-grow"}
+</script>
+
+<script>
+  window.patternData = {"patternPartial":"viewall-organisms-grow"};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1770360532645">
+  (function() {
+    if (self != top) {
+      var cb = '1770360532645';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1770360532645" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+<script src="https://cdnctus.melaleuca.com/JS/jwplayer-8.0.12/jwplayer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js"></script>
+<script id="__bs_script__">//<![CDATA[
+  document.write("<script async src='//HOST:3031/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script>
+  window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"};
+</script>
+<!-- Check for PCI components on the page to determine which bundles to load -->
+<script>
+  (function () {
+    // Detect if this page needs PCI bundles
+    var isPciPage = false;
+    
+    // Check for PCI component tags
+    if (document.querySelector('payment-form, p-checkout, owing-balance, reenrollment-owing-balance [data-vue-component*="Payment"], [data-vue-component*="Checkout"]')) {
+      isPciPage = true;
+    }
+    
+    // Check for PCI routes/patterns
+    var path = window.location.pathname.toLowerCase();
+    if (path.includes('checkout') || path.includes('payment') || path.includes('billing')) {
+      isPciPage = true;
+    }
+    
+    // Check for explicit PciMode flag (from Pattern Lab JSON)
+    if (typeof window.PciMode !== 'undefined' && window.PciMode) {
+      isPciPage = true;
+    }
+    
+    function loadJS(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      if(cb) s.onload = cb;
+      document.body.appendChild(s);
+    }
+    
+    if (isPciPage) {
+      // PCI path - load CSP-compliant bundles
+      console.log('[Bundle Loader] Loading PCI bundles (CSP compliant, Vue runtime-only)');
+      loadJS('/js/runtime-pci.js?1770360532645', function(){
+        loadJS('/js/vue-pci.js?1770360532645', function(){
+          loadJS('/js/vendor-pci.js?1770360532645', function(){
+            loadJS('/js/pci.js?1770360532645', function(){ 
+              console.log('[Bundle Loader] ✅ PCI bundles loaded successfully'); 
+            });
+          });
+        });
+      });
+    } else {
+      // Non-PCI path - load full-featured bundles
+      console.log('[Bundle Loader] Loading standard bundles (Vue with compiler)');
+      loadJS('/js/runtime.js?1770360532645', function(){
+        loadJS('/js/vue-main.js?1770360532645', function(){
+          loadJS('/js/vendor.js?1770360532645', function(){
+            loadJS('/js/index.js?1770360532645', function(){
+              console.log('[Bundle Loader] ✅ Standard bundles loaded successfully');
+            });
+          });
+        });
+      });
+    }
+  }());
+</script>
+<script src="/static-site/productstore-2/public/js/runtime.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/vue-main.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/vendor.js?1770360532645"></script>
+<script src="/static-site/productstore-2/public/js/index.js?1770360532645"></script>
+<script>
+  (function () {
+    var loadProfile = document.getElementsByClassName('o-loadProfile');
+    if (!loadProfile.length) return;
+    var f = document.getElementsByClassName('o-loadProfile__footer')[0];
+    var r = document.getElementsByClassName('o-loadProfile__retry');
+    function show(){ f && f.classList.remove('-isHidden'); }
+    if (r.length) r[0].addEventListener('click', function(){ window.location.reload(); });
+    setTimeout(show, 10000);
+  }());
+</script>
+
+    <script>
+        window.globalUrlQueryParams = {"sc_itemid":"{A2A6AFD4-30C3-499C-8005-F0A6F16FD6C4}","sc_lang":"en-US","sc_site":"productstoreUs"}
+    </script>
+    <!--For Ralleyware pages and widgets-->
+    <script src="https://melaleuca-sandbox-desktop2.rallyware.com/grow-api/grow.js" type="text/javascript"></script>
+    <script>
+        var loadProfile = document.getElementsByClassName('o-loadProfile');
+
+        if(loadProfile.length) {
+            var loadProfileFooter = document.getElementsByClassName('o-loadProfile__footer')[0];
+            var retryBtn = document.getElementsByClassName('o-loadProfile__retry');
+
+            function showFooter() {
+                loadProfileFooter.classList.remove('-isHidden');
+            };
+
+            if(retryBtn.length) {
+                retryBtn[0].addEventListener('click', function(event) {
+                    window.location.reload();
+                });
+            }
+
+            setTimeout(showFooter, 10000);
+        }
+    </script>
+</body>
+</html>

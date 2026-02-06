@@ -1,0 +1,13 @@
+{{#if Video}}
+  <button class="m-videoToggle" data-js="videoModal-open" data-video="{{Video.mediaId}}">
+    <span class="sr-only">Watch Video {{Video.title}}</span>
+    {{#Icon}}
+      <div class="m-videoToggle__button {{VerticalAlignment}} {{HorizontalAlignment}}" aria-hidden="true">
+        {{> atoms-cmn-play-circle-icon}}
+      </div>
+    {{/Icon}}
+  </button>
+
+  <!-- Modal can be placed anywhere on the page -->
+  {{> molecules-cmn-video-modal }}
+{{/if}}

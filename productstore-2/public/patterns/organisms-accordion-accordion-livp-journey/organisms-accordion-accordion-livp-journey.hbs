@@ -1,0 +1,26 @@
+{{#AccordionTwoCol}}
+  <div class="o-accordion {{WrapperMods}}">
+    {{#each Rows}}
+      <h2 class="o-accordion__title {{Mods.Title}}">
+        <button class="o-accordion__toggler {{Mods.Toggler}}" id="{{ToggleID}}" aria-controls="{{ContentID}}" aria-expanded="false">{{Title}} <span class="{{Mods.SecondTitle}}">{{{SecondTitle}}}</span> {{> atoms-arrow Size=../ArrowSize TailwindColor="gray-120" Direction="-down" OtherMods="mt-6 absolute right-10 md:right-0 md:static"}}</button>
+      </h2>
+
+      <div class="o-accordion__content hidden {{Mods.Content}}" id="{{ContentID}}" aria-labelledby="{{ToggleID}}" aria-hidden="true" tabindex="-1" role="region">
+        {{#if ContentDynamic}}
+          {{#each ContentDynamic}}
+            {{> (lookup . 'PartialName')}}
+          {{/each}}
+        {{else}}
+          {{{ContentStatic}}}
+        {{/if}}
+      </div>
+    {{/each}}
+    {{#each Contents}}
+      <div class="o-accordion__title {{Mods.Title}}">
+        <div class="o-accordion__toggler {{Mods.Toggler}}">{{Title}}
+          <span class="{{Mods.SecondTitle}}">{{{SecondTitle}}} {{#if Link}}<a class="{{Mods.Link}}" href="{{Link.Url}}">{{Link.Text}}<span aria-hidden="true" class="a-arrow -sm -filled"><span class="a-arrow__icon border-green text-green"></span></span></a>{{/if}}</span>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/AccordionTwoCol}}

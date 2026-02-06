@@ -1,0 +1,22 @@
+{{#GenericImg}}
+  <picture class="a-genImg">
+    {{#if Src.Desktop}}
+      <source srcset="{{Src.Desktop}}" media="(min-width: 1024px)">
+    {{/if}}
+
+    {{#if Src.Tablet}}
+      <source srcset="{{Src.Tablet}}" media="(min-width: 768px)">
+    {{/if}}
+
+    {{#if Src.SmallTablet}}
+      <source srcset="{{Src.SmallTablet}}" media="(min-width: 576px)">
+    {{/if}}
+
+    {{#if Src.Mobile}}
+      <source srcset="{{Src.Mobile}}" media="(max-width: 575px)">
+    {{/if}}
+
+    <!-- Default/Fallback image Should be the desktop image -->
+    <img src="{{Src.Desktop}}" alt="{{AltText}}" class="a-genImg__img {{AlignmentOverrides}}" fetchpriority="high">
+  </picture>
+{{/GenericImg}}

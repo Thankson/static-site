@@ -1,0 +1,7 @@
+<div class="m-formField -{{InputType}}">
+  <label class="m-formField__label" for="{{Attributes.Id}}">{{{Label.Text}}}</label>
+  {{> atoms-input-glimpse }}
+  {{#if HasError}}
+    <em id="{{Attributes.Id}}-error" class="formError">{{ErrorMessage}}</em>
+  {{/if}}
+</div>

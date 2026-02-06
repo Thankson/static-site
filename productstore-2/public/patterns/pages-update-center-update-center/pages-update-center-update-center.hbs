@@ -1,0 +1,29 @@
+{{> organisms-site-header-grow}}
+
+<div class="bg-gray-25">
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  {{> organisms-cmn-grid-layout-2-column CustomLayoutData}}
+
+
+  {{> molecules-cmn-full-width-banner-with-video }}
+
+  <div class="o-widthControl py-30 mx-auto w-full max-w-full md:max-w-contain">
+    {{> molecules-button-list }}
+  </div>
+
+  <div class="mx-auto py-25">
+    {{#each Sections}}
+      <div class="mt-20">
+        {{> organisms-grow-accordion-multiples this}}
+      </div>
+    {{/each}}
+  </div>
+
+</div>
+
+{{> organisms-site-footer}}

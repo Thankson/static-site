@@ -1,0 +1,13 @@
+{{#AnnouncementCardGroup}}
+  <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+    <section class="o-announcementCardGroup ">
+      <ul class="o-announcementCardGroup__cardsList">
+        {{#each Cards}}
+          <li class="o-announcementCardGroup__cardItem">
+            {{> molecules-announcement-card}}
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  </div>
+{{/AnnouncementCardGroup}}

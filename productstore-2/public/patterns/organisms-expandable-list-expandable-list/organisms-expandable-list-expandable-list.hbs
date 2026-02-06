@@ -1,0 +1,13 @@
+<article class="o-expandList">
+  <header class="o-expandList__header">
+    <h2 class="o-expandList__heading">{{{Heading}}}</h2>
+  </header>
+
+  <div class="o-expandList__list">
+    {{#each List}}
+      <div class="o-expandList__item">
+        {{> molecules-expandable-list}}
+      </div>
+    {{/each}}
+  </div>
+</article>

@@ -1,0 +1,10 @@
+<div class="bg-gray-25">
+  <div class="o-widthControl mx-auto w-full max-w-full md:max-w-contain">
+    <h2 id="{{SectionId}}" class="uppercase font-bold text-2xl leading-base {{Spacing}}">{{SectionHeading}}</h2>
+    {{#each Accordions}}
+      <div class="{{../Spacing}}">
+        {{> organisms-grow-accordion}}
+      </div>
+    {{/each}}
+  </div>
+</div>

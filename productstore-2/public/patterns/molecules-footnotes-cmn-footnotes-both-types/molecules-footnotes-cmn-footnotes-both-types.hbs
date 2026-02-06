@@ -1,0 +1,9 @@
+{{#each Footnotes}}
+  <div class="m-footnotes" style="background-color: {{BgColor}};">
+    <div class="m-footnotes__wrapper {{#if HasBorder}} -border {{/if}} m-rte" style="{{#if BorderColor}} border-color: {{BorderColor}} {{/if}}">
+      {{!-- Start RTE --}}
+      {{{Footnote}}}
+      {{!-- End RTE --}}
+    </div>
+  </div>
+{{/each}}

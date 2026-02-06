@@ -1,0 +1,87 @@
+{{#ContentBlock}}
+  <article class="m-contentBlock {{MobileSwap}} {{WidthControl}} {{MobileContain}}">
+    <div class="m-contentBlock__backgrounds" style="background-color: {{Background.Color}}">
+      {{#if Background.Desktop}}
+        <div class="m-contentBlock__bg -desktop" style="background-image: url({{Background.Desktop}});"></div>
+      {{/if}}
+
+      {{#if Background.Mobile}}
+        <div class="m-contentBlock__bg -mobile" style="background-image: url({{Background.Mobile}});"></div>
+      {{/if}}
+    </div>
+
+    <div class="m-contentBlock__columns {{ColumnsModifier}}">
+      <div class="m-contentBlock__col {{Modifier}} {{#if ContentLeft.TailWindMod}} {{ContentLeft.TailWindMod}} {{/if}}">
+        {{#with ContentLeft}}
+          {{> RTEorImg}}
+        {{/with}}
+
+        {{#if ContentLeft.HasVideo}}
+          <!-- Start: Left Video Content -->
+          <div class="m-contentBlock__video">
+
+            {{!-- Use screensize specific images if available --}}
+            {{#if ../VideoImage.GenericImg}}
+              {{#with ../VideoImage}}
+                {{>atoms-cmn-generic-img}}
+              {{/with}}
+            {{else}}
+              <img src="{{../VideoImage.src}}" alt="{{../VideoImage.alt}}" class="m-contentBlock__img" />
+            {{/if}}
+
+            {{#with ../ToggleVideo}}
+              {{> molecules-cmn-video-toggle-button}}
+            {{/with}}
+
+          </div>
+          <!-- End: Left Video Content -->
+        {{/if}}
+      </div>
+
+      <div class="m-contentBlock__col {{Modifier}} {{#if ContentRight.TailWindMod}} {{ContentRight.TailWindMod}} {{/if}}">
+        {{#with ContentRight}}
+          {{> RTEorImg}}
+        {{/with}}
+
+        {{#if ContentRight.HasVideo}}
+          <!-- Start: Right Video Content -->
+          <div class="m-contentBlock__media">
+            {{!-- Use screensize specific images if available --}}
+            {{#if ../VideoImage.GenericImg}}
+              {{#with ../VideoImage}}
+                {{>atoms-cmn-generic-img}}
+              {{/with}}
+            {{else}}
+              <img src="{{../VideoImage.src}}" alt="{{../VideoImage.alt}}" class="m-contentBlock__img" />
+            {{/if}}
+
+            {{#with ../ToggleVideo}}
+              {{> molecules-cmn-video-toggle-button}}
+            {{/with}}
+          </div>
+          <!-- End: Right Video Content -->
+        {{/if}}
+
+      </div>
+    </div>
+  </article>
+{{/ContentBlock}}
+
+
+{{#*inline "RTEorImg"}}
+  {{#if RTE}}
+    <!-- Start: RTE Content -->
+    <div class="m-contentBlock__rte">
+      {{> molecules-cmn-rte}}
+    </div>
+    <!-- End: RTE Content -->
+  {{/if}}
+
+  {{#if GenericImg}}
+    <!-- Start: Image Content -->
+    <div class="m-contentBlock__media">
+      {{> atoms-cmn-generic-img}}
+    </div>
+    <!-- End: Image Content -->
+  {{/if}}
+{{/inline}}

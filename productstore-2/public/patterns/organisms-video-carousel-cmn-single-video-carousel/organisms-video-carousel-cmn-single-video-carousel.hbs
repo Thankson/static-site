@@ -1,0 +1,23 @@
+<article class="o-SVidCarousel" style="background-color: {{SingleVideoCarousel.BgColor}}">
+  <div class="o-SVidCarousel__carousel" aria-label="{{SingleVideoCarousel.CarouselDescription}}">
+    <div class="o-SVidCarousel__slider" id="carousel-count-{{UniqueID}}">
+      {{#with SingleToggleVideo}}
+        {{#each VideoThumbList}}
+          <figure class="o-SVidCarousel__slide">
+            <figcaption class="o-SVidCarousel__title">{{{Item.ThumbTitle}}}</figcaption>
+            <img class="o-SVidCarousel__thumb" src="{{Item.ThumbImage}}" aria-hidden="true">
+            <div class="o-SVidCarousel__video">
+              {{> molecules-cmn-video-toggle-button}}
+            </div>
+            <p class="o-SVidCarousel__subtitle" aria-label="{{Item.DescriptiveSubtitle}}">{{Item.ThumbSubtitle}}</p>
+          </figure>
+        {{/each}}
+      {{/with}}
+    </div>
+    <nav class="o-SVidCarousel__actions">
+      <div class="o-SVidCarousel__arrows" style="color: {{SingleVideoCarousel.ArrowColor}}"></div>
+      <div class="o-SVidCarousel__dots"></div>
+      <div class="o-SVidCarousel__description" data-label-of="of" data-slick-description></div>
+    </nav>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+{{#with RoadblockScreen}}
+  <article class="m-roadblockScreen relative w-full">
+    <div class="m-roadblockScreen__wrapper bg-white border border-gray-50 px-10 pb-100 pt-40 max-w-contain mx-auto relative rounded z-0 w-full md:p-100 xl:p-150">
+      <div class="m-roadblockScreen__rte m-rte">
+        {{{Text}}}
+      </div>
+      {{#with CtaButton}}
+        <div class="m-roadblockScreen__cta flex justify-center items-center w-full">
+          {{#if IsButton}}
+            {{> atoms-button}}
+          {{else}}
+            <a href="{{Link.Url}}" class="absolute bottom-30 font-medium left-10 text-green text-sm underline lg:left-30" target="_blank">{{Link.Cta}}</a>
+          {{/if}}
+        </div>
+      {{/with}}
+      {{#with BackgroundImage}}
+        {{> atoms-corner-imagery}}
+      {{/with}}
+    </div>
+  </article>
+{{/with}}

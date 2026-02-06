@@ -1,0 +1,70 @@
+<div class="m-rte">
+  {{#with AffordableContent}}
+    <div class="mx-auto w-full" style="max-width:930px">
+      <h3 class="block leading-tight text-gray-150 text-xl w-full">{{Heading}}</h3>
+      <div class="mt-40 lg:flex">
+        <div class="border-t border-gray-150 pt-20 w-full lg:max-w-260">
+          {{{Text}}}
+        </div>
+        {{> MelaPowerTable}}
+      </div>
+    </div>
+  {{/with}}
+</div>
+
+{{#*inline "MelaPowerTable"}}
+  {{#with Table}}
+    <div class="flex flex-col items-center justify-center mt-30 w-full md:justify-between md:ml-50 lg:mt-0" style="max-width: 595px;">
+      <table class="max-w-full mb-20 text-center w-full md:mx-auto md:w-auto" aria-describedby="melapowerComparisonChartSummary" cellspacing="0" style="border-spacing: 0;border-collapse: separate;">
+        <caption class="sr-only">{{Caption}}</caption>
+        <thead>
+          <tr>
+            <th class="sr-only"></th>
+            {{#each ColumnHeaders}}
+              <th class="font-medium pb-15 text-sm" scope="col" style="color:#002883;">
+                <img class="mx-auto" src="{{Image}}" alt="{{{Header}}}" />
+                {{{Header}}}
+              </th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each Rows}}
+            {{#if @last}}
+              <tr class="mb-0">
+                <th class="sr-only" scope="row">{{Header}}</th>
+                {{#each Columns}}
+                  <td class="italic leading-base mb-0 p-0 relative text-sm" style="color:#777777;">
+                    <div class="border mb-0 mx-5 px-10 py-15 sm:mx-15" style="border-color:#707070;">
+                      {{#if Accent}}
+                        <span class="font-bold italic text-2xl" style="color:#0DBBF0;">{{{Accent}}}</span><br />
+                      {{/if}}
+
+                      {{Text}}
+                    </div>
+                  </td>
+                {{/each}}
+              </tr>
+            {{else}}
+              <tr class="mb-0">
+                <th class="sr-only" scope="row">{{Header}}</th>
+                {{#each Columns}}
+                  <td class="italic leading-base mb-0 p-0 relative text-sm" style="color:#777777;">
+                    <div class="border border-b-0 mb-0 mx-5 px-10 py-15 sm:mx-15" style="border-color:#707070;">
+                      {{#if Accent}}
+                        <span class="font-bold italic text-2xl" style="color:#0DBBF0;">{{{Accent}}}</span><br />
+                      {{/if}}
+
+                      {{Text}}
+                    </div>
+                  </td>
+                {{/each}}
+              </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+      </table>
+      <p id="melapowerComparisonChartSummary" class="italic text-center text-gray-120 text-xs md:font-light md:text-sm md:not-italic">{{{Note}}}</p>
+    </div>
+  {{/with}}
+{{/inline}}

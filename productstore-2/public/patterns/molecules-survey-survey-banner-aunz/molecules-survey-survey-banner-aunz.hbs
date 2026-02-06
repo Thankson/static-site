@@ -1,0 +1,7 @@
+<!-- Start: Survey Banner -->
+<m-survey-banner survey-status="{{SurveyStatus}}" survey-id="{{SurveyId}}" :is-authenticated="{{Localization.Data.UserFlags.IsAuthenticated}}" :localization='{{toJson Localization}}' products-total="{{ProductsTotal}}" products-points="{{ProductsPoints}}"></m-survey-banner>
+
+<script id="share-page-survey-localization" type="application/json">
+{{toJson SharePageShelf.Localization}}
+</script>
+<!-- End: Survey Banner -->

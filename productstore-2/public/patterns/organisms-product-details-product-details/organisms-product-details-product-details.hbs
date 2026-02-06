@@ -1,0 +1,28 @@
+<div class="w-full max-w-xl px-8 mb-40 mx-auto md:mt-30 lg:px-20">
+  <div class="preComponentLoader -productDetails">
+    <o-product-details script-id="data-configurator-pdp" script-id-shelf-configurator="data-shelf-configurator-localization" script-id-services-error="service-failure-configurator-pdp">
+      <div class="w-full mt-20 mb-15 md:block md:w-1_2 md:my-0 md:pr-20 lg:pr-40">
+        <product-dynamic-section section-name="media">
+          {{> molecules-product-media}}
+        </product-dynamic-section>
+      </div>
+      <template v-slot:short-description>
+        <product-dynamic-section section-name="rte">
+          {{{ShortDescription}}}
+        </product-dynamic-section>
+      </template>
+    </o-product-details>
+  </div>
+</div>
+
+<script type="application/json" id="data-configurator-pdp">
+{{toJson PdpData}}
+</script>
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson ShelfData}}
+</script>
+
+<script type="application/json" id="service-failure-configurator-pdp">
+{{toJson ServicesFailureConfiguratorAccordion}}
+</script>

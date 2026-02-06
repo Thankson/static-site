@@ -1,0 +1,17 @@
+<div class="melaAudioPlayer__wrapper">
+  <div id="{{mediaId}}" class="{{#if IsAudio}}melaaudioplayer{{else}}melaplayer{{/if}}" aria-hidden="false" aria-label="{{description}}" tabindex="0" data-culture="{{culture}}" data-description="{{description}}" data-imageUrl="{{imageUrl}}" data-mediaid="{{mediaId}}" data-mediaitemname="{{mediaItemName}}" data-runtimeseconds="{{runTimeSeconds}}" data-subtitlepath="{{subtitlePath}}" data-title="{{title}}" data-thumbnailimageurl="{{thumbnailImageUrl}}" {{#unless IsAudio}} data-videofolderpath="{{videoFolderPath}}" data-hls="{{fallbacks.hls}}" data-dash="{{fallbacks.dash}}" data-progressive1080="{{fallbacks.progressive1080}}" data-progressive720="{{fallbacks.progressive720}}" data-progressive360="{{fallbacks.progressive360}}" data-progressive270="{{fallbacks.progressive270}}" data-progressive144="{{fallbacks.progressive144}}" {{/unless}} {{#if IsAudio}} data-audiopath="{{audioPath}}" data-mp3="{{fallbacks.mp3}}" data-aac="{{fallbacks.aac}}" data-ogg="{{fallbacks.ogg}}" data-width="{{width}}" {{/if}} {{#if ShowAudioPlayer}} data-height="{{Height}}" data-showAudioPlayer="{{ShowAudioPlayer}}" {{/if}}>
+    <div id="posterImageContainer">
+      <div id="posterImageOverlay"></div>
+      <img id="posterImage" />
+    </div>
+    <div class="mediaPlayer" data-id="{{mediaId}}"></div>
+  </div>
+  <div class="melaAudioPlayer__links">
+    <a href="{{audioPath}}" target="_blank" class="melaAudioPlayer__link">
+      <img class="melaAudioPlayer__image" src="{{audioDownloadIcon.Url}}" alt="{{audioDownloadIcon.AltText}}" />
+    </a>
+    <a href="{{audioTranscriptPath}}" target="_blank" class="melaAudioPlayer__link">
+      <img class="melaAudioPlayer__image" src="{{audioTranscriptIcon.Url}}" alt="{{audioTranscriptIcon.AltText}}" />
+    </a>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<o-grow-live-stream-player script-id="grow-live-stream-player"></o-grow-live-stream-player>
+
+<script type="application/json" id="grow-live-stream-player">
+  {
+    "Labels": {},
+    "Data": {
+      "ApiInterval": "10000",
+      "LambdaUrl": "https://api.example.com/livestream",
+      "BackgroundImage": "https://placehold.co/600x400",
+      "LaunchLogo": {
+        "Url": "https://placehold.co/264x74/999999/dddddd/png",
+        "Alt": "launch logo"
+      },
+      "BroadcastLogo": {
+        "Url": "https://placehold.co/264x74/999999/dddddd/png",
+        "Alt": "broadcast logo"
+      },
+      "EventStates": [{
+        "Type": "ComingSoon",
+        "RTE": "<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white text-lg md:text-2xl\">The event will start here at</p><p class=\"text-white text-2xl md:text-4xl font-bold\">10:00 AM Mountain Time</p>"
+      }, {
+        "Type": "WatchNow",
+        "Video": {
+          "VirtualVideo": {
+            "IsNew": false,
+            "IsWatched": false,
+            "HasReset": false,
+            "HideAllStamps": false,
+            "PreventSeek": false,
+            "Culture": "en-US",
+            "Description": "",
+            "ImageUrl": "https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png",
+            "MediaId": "c9YHfVAv",
+            "MediaItemName": "2023-usda-beef-grading-primer-v6",
+            "RuntimeSeconds": "253",
+            "SubtitlePath": "//cdnus.melaleuca.com/video_captions/riverbend/2023-usda-beef-grading-primer-v6-enus.srt",
+            "Title": "Flavor",
+            "ThumbnailImageAlt": "",
+            "ThumbnailImageUrl": "https://cdnsc1.melaleuca.com/na/images/video-thumbnails/riverbend-about-flavor.png",
+            "AltImage": "",
+            "VideoFolderPath": "",
+            "Hls": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/hls/hls_2023-usda-beef-grading-primer-v6-enus.m3u8",
+            "Dash": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/dash/dash_2023-usda-beef-grading-primer-v6-enus.mpd",
+            "Progressive1080": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_1080p/2023-usda-beef-grading-primer-v6-enus.mp4",
+            "Progressive720": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_720p/2023-usda-beef-grading-primer-v6-enus.mp4",
+            "Progressive360": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_360p/2023-usda-beef-grading-primer-v6-enus.mp4",
+            "Progressive270": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_270p/2023-usda-beef-grading-primer-v6-enus.mp4",
+            "Progressive144": "https://video-us.melaleuca.com/converted-videos/2023-usda-beef-grading-primer-v6-enus/mp4/g_144p/2023-usda-beef-grading-primer-v6-enus.mp4",
+            "PageUrl": null
+          }
+        },
+        "LiveEvent": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://vimeo.com/event/4237094/embed/f3e31ee249/interaction\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen class=\"absolute top-0 left-0 w-full h-full\"/></div>"
+      }, {
+        "Type": "Ended",
+        "RTE": "<img class=\"mx-auto mb-8 md:mb-24 w-150 md:w-auto\" src=\"https://placehold.co/264x74/999999/dddddd/png\" alt=\"logo\"><p class=\"text-white font-bold text-lg md:text-2xl\">Thank you for watching</p><p class=\"text-white font-light text-xl md:text-3xl-2\">The broadcast has ended.</p>"
+      }],
+      "MutedIconUrl": "https://cdnsc1.melaleuca.com/global/images/muted_player_icon--en-us.png",
+      "PreventRewind": false,
+      "PostLiveWatchDuration": "15000",
+      "AriaLabel": "Current Time",
+      "Text": "<img class=\"inline\" src=\"https://placehold.co/25x21/999999/dddddd/png\" alt=\"logo\"><span class=\"text-tiny uppercase font-medium ml-4\">CURRENT TIME</span>"
+    }
+  }
+</script>

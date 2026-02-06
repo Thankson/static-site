@@ -1,0 +1,55 @@
+{{> organisms-site-header}}
+
+<div class="bg-gray-25">
+  <div class="p-newCustomer -lp">
+    <div class="p-newCustomer__container">
+      <!-- Header -->
+      <header class="p-newCustomer__header m-rte">
+        <!-- Start RTE -->
+        {{{Header}}}
+        <!-- End RTE -->
+      </header>
+
+      <!-- List of cards -->
+      <div class="p-newCustomer__list">
+        {{#each Cards}}
+          <div class="p-newCustomer__card">
+            <!-- Card -->
+            <m-savings-pack-product-card script-id="{{Id}}"></m-savings-pack-product-card>
+
+            <!-- Script tag for Card -->
+            <script id="{{Id}}" type="application/json">
+            {{toJson this}}
+            </script>
+          </div>
+        {{/each}}
+      </div>
+
+      <!-- Actions buttons -->
+      <div class="p-newCustomer__actions">
+        <!-- See All Button -->
+        <a href="{{Buttons.SeeAll.Url}}" class="p-newCustomer__button a-button -white -center" data-gtm-track='{"gtmId":"190"}'>
+          {{Buttons.SeeAll.Text}}
+        </a>
+
+        <!-- Continue Shopping Button -->
+        <a href="{{Buttons.Continue.Url}}" class="p-newCustomer__button a-button -center" data-gtm-track='{"gtmId":"190"}'>
+          {{Buttons.Continue.Text}}
+        </a>
+      </div>
+
+      <!-- Footnote -->
+      <div class="p-newCustomer__footnote m-rte">
+        <!-- Start RTE -->
+        {{{Footnote}}}
+        <!-- End RTE -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="data-shelf-configurator-localization" type="application/json">
+{{toJson LocalizationShelf}}
+</script>
+
+{{> organisms-site-footer}}

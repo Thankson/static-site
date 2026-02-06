@@ -1,0 +1,15 @@
+<modal :visible="true" :prevent-close="true">
+  <template v-slot:heading>
+    It&#x27;s not too late!
+  </template>
+
+  <template v-slot:body>
+    You may have forgotten to shop last month. Good news!...
+  </template>
+
+  <template v-slot:footer>
+    <button v-modal-hide type="button" class="a-button -medium" v-on:click="gtmTrackAction({ id:'123x' }, $event)">
+      Start December Order
+    </button>
+  </template>
+</modal>

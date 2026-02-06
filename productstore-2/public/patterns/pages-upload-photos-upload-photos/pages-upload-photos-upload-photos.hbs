@@ -1,0 +1,25 @@
+{{> organisms-site-header }}
+
+<section class="bg-gray-25">
+  <div class="mx-auto max-w-contain pb-80">
+    <div class="mb-10 pt-15">
+      {{#Breadcrumb}}
+        {{> molecules-breadcrumb }}
+      {{/Breadcrumb}}
+    </div>
+
+    <h1 class="w-full text-2xl-2 font-bold tracking-tight text-gray-150 font-global-sans md:mb-18 to-md:px-10">{{PageTitle}}</h1>
+
+    <p-upload-photos script-id="UploadPhotosId">
+      {{!-- PhotoExamples --}}
+      <template v-slot:photo-examples>{{{PhotoExamples}}}</template>
+    </p-upload-photos>
+
+    <script type="application/json" id="UploadPhotosId">
+    {{toJson Localization}}
+    </script>
+
+  </div>
+</section>
+
+{{> organisms-site-footer }}

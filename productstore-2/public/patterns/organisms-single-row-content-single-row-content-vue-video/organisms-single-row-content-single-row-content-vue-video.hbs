@@ -1,0 +1,90 @@
+<div class="o-singleRowContent" {{#if BgColor}}style="background-color: {{ BgColor }};" {{/if}}>
+  <ul class="o-singleRowContent__list">
+    {{#if OneItem}} {{> One}} {{/if}}
+    {{#if TwoItem}} {{> Two}} {{/if}}
+    {{#if ThreeItem}} {{> Three}} {{/if}}
+    {{#if FourItem}} {{> Four}} {{/if}}
+  </ul>
+</div>
+
+{{#*inline "One"}}
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+{{/inline}}
+
+{{#*inline "Two"}}
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+{{/inline}}
+
+{{#*inline "Three"}}
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+{{/inline}}
+
+{{#*inline "Four"}}
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+  <li class="o-singleRowContent__item">
+    {{#if IsVideo}}
+      {{> molecules-content-card-video-vue-video }}
+    {{else}}
+      {{> molecules-cmn-content-card }}
+    {{/if}}
+  </li>
+{{/inline}}

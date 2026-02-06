@@ -1,0 +1,14 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+  <nav class="top-0 py-0 my-0 bg-white md:hidden">
+    {{#MobileAccordionNav}}
+      {{> organisms-cmn-accordion}}
+    {{/MobileAccordionNav}}
+  </nav>
+  <section class="max-w-contain mx-auto pb-10 md:pt-40 md:pb-80">
+    {{#Localization}}
+      {{> molecules-congratulations-card}}
+    {{/Localization}}
+  </section>
+</div>
+{{> organisms-site-footer}}

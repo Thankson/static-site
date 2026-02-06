@@ -1,0 +1,351 @@
+<div class="max-w-contain mx-auto pb-40">
+  <h1 class="w-full mx-auto text-2xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mt-40 mb-18 md:text-3xl">
+    새 결제 수단 추가
+  </h1>
+
+  <payment-form script-id="dataPaymentForm" token="eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE2MTAzNzYzNjMsImV4cCI6MTYxMDM3OTk2MywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YXVzLm1lbGFsZXVjYS5jb20iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiT3JkZXIuQVBJIiwiT3JnYW5pemF0aW9uLkFQSSIsIlBheU1ldGhvZC5BUEkiLCJQcm9kdWN0LkFQSSIsIlByb21vdGlvbi5BUEkiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJIl0sImNsaWVudF9pZCI6Im1lbGFsZXVjYS1zaXRlY29yZS1kZXYiLCJzY29wZSI6WyJBZGRyZXNzLkFQSS5GdWxsIiwiQmFja3VwT3JkZXIuQVBJLkZ1bGwiLCJDb21tdW5pY2F0aW9uLkFQSS5GdWxsIiwiQ3VzdG9tZXJBY2NvdW50LkFQSS5GdWxsIiwiREVQSW50ZXJmYWNlLkFQSS5GdWxsIiwiRG9jdW1lbnQuQVBJLkZ1bGwiLCJPcmRlci5BUEkuRnVsbCIsIk9yZ2FuaXphdGlvbi5BUEkuRnVsbCIsIlBheU1ldGhvZC5BUEkuRnVsbCIsIlByb2R1Y3QuQVBJLkZ1bGwiLCJQcm9tb3Rpb24uQVBJLkZ1bGwiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJLkZ1bGwiXX0.AcWwYRAqRiVGTsMXa6x7pLQw3C0DWDOyqRBllj7KKiMkKiv18C58qVK7wsEzJLZOuQ5dhjRZyS-yVcQy0MgJqhBVE6P5DMNJJyWdx0oDMdkicb2hJ7o7Kc2tD2qMZakHR_irXpV4StYjQv6mPtlsohUpP_O7kEM2PzoefeYqiwJmg6Ypy5of7dWKHaxXXMWKZIxsDJO_bal86FdfjRhAoM-z_-DTnyLZrIm4XaVysj5qdtNQP1LiGt7Hwtp88mJeGp2wS8Ynb0B0vLl_nZxfB0RzsaDCpvqBFEup0DM9jqKP45of8uu_KyuBkDEhGsV7Q5vN1yXmrW8mdcbHswD2RA"></payment-form>
+</div>
+
+<script type="application/json" id="dataPaymentForm">
+  {
+    "Labels": {
+      "Culture": "ko-KR",
+      "Header": {
+        "AddNew": "새 결제 수단 추가",
+        "Edit": "결제 수단 수정",
+        "PayMethodType": "결제 수단 종류",
+        "DebitOrCreditCard": "체크/신용카드",
+        "Checking": "확인 중",
+        "Credit": "신용카드",
+        "Debit": "체크카드"
+      },
+      "Card": {
+        "Accepts": "멜라루카 승인:",
+        "CardholderName": "카드주 이름",
+        "CardNumber": "카드번호",
+        "Expiration": "유효기간",
+        "LastName": "LAST NAME",
+        "Month": "월",
+        "Year": "년",
+        "Cvc": "CVC/CVV",
+        "BillingZipCode": "Billing Zip Code",
+        "Nickname": "카드 별명(선택 사항)",
+        "CreditAccepts": "Melaleuca accepts:",
+        "DebitAccepts": "Melaleuca accepts:"
+      },
+      "Checking": {
+        "NameOnAccount": "계좌주 이름",
+        "AccountType": "계좌 종류",
+        "Select": "선택",
+        "RoutingNumber": "Routing Number",
+        "AccountNumber": "계좌 번호",
+        "AccountTypes": {
+          "Select": "선택",
+          "Checking": "확인 중",
+          "Savings": "할인"
+        },
+        "DeleteTitle": "계속하시겠습니까?",
+        "DeleteText": "기존의 계좌 정보도 모두 변경되며, 이 경우 취소 할 수 없습니다."
+      },
+      "DirectDebit": {
+        "CopyFrom": "입금 계좌에서 복사",
+        "DirectDebit": "자동 이체",
+        "FormAccess": "신청 양식",
+        "NameOnAccount": "계좌주 이름",
+        "Bank": "은행",
+        "AccountNumber": "계좌 번호"
+      },
+      "Frequency": {
+        "SaveAccount": "이 신용카드를 내 결제 수단 목록에 추가",
+        "OneTime": "이 신용카드를 이 주문에만 사용합니다. 내 결제 수단에 추가하지 않습니다."
+      },
+      "Defaults": {
+        "MakeThisMyDefault": "기본 결제 수단으로 등록",
+        "ProductPurchases": "제품 구매",
+        "MarketplaceServices": "Marketplace Services including Identity Protection, Health Care Savings, and Melaleuca Deals",
+        "FutureCharges": "이 결제 수단으로 추후 이 계정의 미결제 잔액이 청구될 수 있습니다."
+      },
+      "FormSubmit": {
+        "Cancel": "취소",
+        "Save": "저장",
+        "Confirm": "확인",
+        "Download": "다운로드"
+      },
+      "ErrorMessages": {
+        "FieldRequired": "필수 입력 항목입니다.",
+        "ErrorOccured": "오류가 발생했습니다.",
+        "CardholderName": {
+          "Required": "필수 입력 항목입니다.",
+          "Invalid": "Cardholder is invalid",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "CardNumber": {
+          "Required": "카드번호는 필수 입력 항목입니다.",
+          "Integer": "카드번호는 숫자로만 입력이 가능합니다.",
+          "Invalid": "유효한 카드번호를 입력하십시오.",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "ExpirationMonth": {
+          "Required": "카드 유효기간의 월은 필수 입력 항목입니다.",
+          "Invalid": "유효 기간은 현재 날짜보다 이후여야 합니다."
+        },
+        "ExpirationYear": {
+          "Required": "카드 유효기간의 년은 필수 입력 항목입니다.",
+          "Invalid": "유효 기간은 현재 날짜보다 이후여야 합니다."
+        },
+        "LastName": {
+          "Required": "Last Name field is required",
+          "Invalid": "Last Name is invalid",
+          "MaxLength": "Maximum character length reached for Last Name field",
+          "MinLength": "Minimum character length not reached for Last Name field"
+        },
+        "CVV": {
+          "Required": "필수 입력 항목입니다.",
+          "Integer": "CVC/CVV는 숫자로만 입력이 가능합니다.",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "BillingZipCode": {
+          "Required": "Billing Zip Code field is required",
+          "Integer": "Billing Zip Code field accepts integer numbers only",
+          "Invalid": "Billing Zip Code is invalid",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "NameOnAccount": {
+          "Required": "필수 입력 항목입니다.",
+          "Invalid": "Name On Account is invalid",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "AccountType": {
+          "Required": "필수 입력 항목입니다."
+        },
+        "RoutingNumber": {
+          "Required": "Routing Number field is required",
+          "Integer": "Routing Number field accepts integer numbers only",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "AccountNumber": {
+          "Required": "필수 입력 항목입니다.",
+          "Integer": "계좌 번호는 숫자로만 입력이 가능합니다.",
+          "MaxLength": "작성 가능한 글자수를 초과했습니다.",
+          "MinLength": "최소 문자 길이에 도달하지 않았습니다."
+        },
+        "Bank": {
+          "Required": "Bank field is required",
+          "Require": "필수 입력 항목입니다."
+        },
+        "ShouldBeDefault": {
+          "Required": "기본 결제 수단 1가지는 꼭 설정해야 합니다. "
+        },
+        "SetAsDefault": {
+          "Required": "기본 결제 수단으로 하나 이상의 카드를 등록해야합니다."
+        },
+        "Terms": {
+          "Required": "请您详细阅读并勾选以上条款。"
+        }
+      },
+      "ServerErrorTranslation": [{
+        "Error": "PayMethodAlreadyExists",
+        "Translation": "이 카드는 이미 등록되어 있습니다. 관련해 궁금하신 사항은 고객센터 1544-3600으로 문의하시기 바랍니다."
+      }, {
+        "Error": "PayMethodAlreadyExistsInDifferentAccount",
+        "Translation": "An error has occurred, please try again"
+      }, {
+        "Error": "CVVCode",
+        "Translation": "유효한 CVV 번호를 입력하십시오."
+      }, {
+        "Error": "AccountNumberIsNotAMEXCreditCard",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "AccountNumberIsNotDiscoverCardCreditCard",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "AccountNumberIsNotMasterCardCreditCard",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "AccountNumberIsNotVisaCreditCard",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "AccountNumberMustBeEmpty",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "BackupOrderCannotBeInactive",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "BackupOrderCannotBeOneTimeUse",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "CannotDeleteDefaultPayMethod",
+        "Translation": "기본 결제 수단은 삭제가 불가합니다. 다른 결제 수단을 수정한 뒤, 기본 결제 수단으로 설정하십시오."
+      }, {
+        "Error": "CustomerCountryNotValidForPayMethod",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "CustomerIdMustBeGreaterThanZero",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InValidAccountNumberForACH",
+        "Translation": "유효하지 않은 계좌 번호입니다."
+      }, {
+        "Error": "InValidAccountNumberForCreditCard",
+        "Translation": "유효하지 않은 계좌 번호입니다."
+      }, {
+        "Error": "InValidAccountNumberForDirectDebit",
+        "Translation": "유효하지 않은 계좌 번호입니다."
+      }, {
+        "Error": "InvalidAchAccountNumberForCanada",
+        "Translation": "유효하지 않은 계좌 번호입니다."
+      }, {
+        "Error": "InvalidAchAccountNumberForUnitedStates",
+        "Translation": "유효하지 않은 계좌 번호입니다."
+      }, {
+        "Error": "InvalidAchRoutingNumberForCanada",
+        "Translation": "Routing Number is invalid"
+      }, {
+        "Error": "InvalidAchRoutingNumberForUnitedStates",
+        "Translation": "Routing Number is invalid"
+      }, {
+        "Error": "InvalidCountry",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InvalidCustomerNumber",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InvalidCVV",
+        "Translation": "유효하지 않은 CVC/CVV 입니다."
+      }, {
+        "Error": "InvalidExpirationDate",
+        "Translation": "유효기간이 잘못 입력되었습니다."
+      }, {
+        "Error": "InvalidPayMethodDefault",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InvalidPayMethodDirection",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InvalidPayType",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "InvalidRoutingNumber",
+        "Translation": "Routing Number is invalid."
+      }, {
+        "Error": "MissingAccountNumber",
+        "Translation": "유효한 계좌 번호를 입력하십시오."
+      }, {
+        "Error": "MissingAccountNumberOrRoutingNumberForACH",
+        "Translation": "유효한 계좌 번호를 입력하십시오."
+      }, {
+        "Error": "MissingCVV",
+        "Translation": "유효한 CVV 번호를 입력하십시오."
+      }, {
+        "Error": "PayMethodExpiredCannotbeDefault",
+        "Translation": "이 결제 수단은 곧 만료됩니다. 결제 수단 수정 후 다시 시도하십시오."
+      }, {
+        "Error": "MissingPayMethodIdForSecure",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "NoMatchingPayMethodToUpdate",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodACHCheckingCannotbeDefaultForMexico",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodAlreadyExists",
+        "Translation": "이 카드는 이미 등록되어 있습니다. 관련해 궁금하신 사항은 고객센터 1544-3600으로 문의하시기 바랍니다."
+      }, {
+        "Error": "PayMethodDefaultTypeNotValid",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodDirectDebitCannotbeDefaultForUnitedStates",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodDiscoverCardCannotbeDefaultForCanada",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodDiscoverCardCannotbeDefaultForMexico",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIdMustBeGreaterThanZero",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIdMustBeZero",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIdNotValidForCustomer",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIsNotACH",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIsNotCreditCard",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodIsNotValidForCountry",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodOneTimeUseCardsCannotbeDefault",
+        "Translation": "오류가 발생했습니다. 다시 시도해 보시고 문제가 지속되면 고객센터 1544-3600으로 연락주시기 바랍니다."
+      }, {
+        "Error": "PayMethodPrePaidCardCannotbeDefault",
+        "Translation": "선불카드는 기본 결제 수단으로 등록이 불가합니다."
+      }, {
+        "Error": "Default",
+        "Translation": "오류가 발생했습니다. 잠시후 다시 시도해주세요."
+      }],
+      "ConfirmationLabel": {
+        "Confirm": "본인은 {0} 및 {1}의 모든 내용을 주의 깊게 읽고 이해했으며 동의 했음을 확인했습니다. ",
+        "PaymentServiceDescription": "결제 서비스 안내",
+        "PrivacyTerms": "개인정보취급방침"
+      }
+    },
+    "Data": {
+      "Culture": "ko-KR",
+      "IsEditing": false,
+      "PaymethodId": "",
+      "Username": "Leona.Lee@melaleuca.com",
+      "Country": "Korea",
+      "CustomerId": 1610782935,
+      "CustomerName": "권명아",
+      "DirectDebit": {
+        "FormAccess": "If you wish to use direct debit to your account as a valid form of payment, please send the Direct Debit Request Form. Click <a rel=\"noopener noreferrer\" class=\"text-green font-medium\" href=\"https://cdnsc1.melaleuca.com/au-nz/documents/business-center/Direct+Debit+Request+form.pdf\" target=\"_blank\">here</a> to download the format.",
+        "FormAccessLink": {
+          "Url": "",
+          "Text": "",
+          "Target": ""
+        }
+      },
+      "CustomerFirstName": "권명",
+      "SpouseFirstName": "채",
+      "CardHoldersNames": "권명아 , 채원 ",
+      "MyAccountPaymentAddressPage": {
+        "Url": "/my-account",
+        "Text": "",
+        "Target": "|Custom"
+      },
+      "Modal": {
+        "PaymentService": {
+          "Title": null,
+          "Rte": null
+        },
+        "PrivacyTerms": {
+          "Title": null,
+          "Rte": null
+        },
+        "PaymentSuccessCredit": {
+          "Title": null,
+          "Rte": null
+        },
+        "PaymentSuccessDebit": {
+          "Title": null,
+          "Rte": null
+        }
+      }
+    },
+    "Id": "468a7630-3667-4fb3-8a81-b09eddd836e6"
+  }
+</script>

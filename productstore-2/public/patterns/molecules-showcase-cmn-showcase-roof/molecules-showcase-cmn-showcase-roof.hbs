@@ -1,0 +1,74 @@
+{{#with Showcase}}
+  <article class="m-showcase" style="background: {{BgColor}}">
+    {{#Roof}}
+      <!--  OPTIONAL: This is for optional ornamental separators at the top of the component such as swooshes -->
+      <div class="m-showcase__row -roof">
+        {{#if ImageMobile}}
+          <div class="m-showcase__roof -mobile" style="background-image: url('{{ImageMobile}}');">
+            <!-- Mobile: is optional if no mobile exists then desktop will desplay at all breakpoints -->
+          </div>
+        {{/if}}
+        <div class="m-showcase__roof -desktop" style="background-image: url('{{ImageDesktop}}');">
+          <!-- Desktop: is for required if the roof exists. It will display automatically at all breakpoints if no mobile is chosen -->
+        </div>
+      </div>
+    {{/Roof}}
+
+    <header class="m-showcase__row -header">
+      {{#with BadgesList}}
+        <ul class="m-showcase__list -badge">
+          {{#each Badge}}
+            <li class="m-showcase__item -badge">
+              <a class="m-showcase__link -badge" href="/">
+                <img class="m-showcase__img -badge" alt="{{Img.Description}}" src="{{Img.Src}}">
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      {{/with}}
+
+      <div class="m-rte">
+        <!-- Start DEMO RTE Content -->
+        {{{HeaderRTE}}}
+        <!-- End DEMO RTE Content -->
+      </div>
+    </header>
+
+    <div class="m-showcase__row -list">
+      <ul class="m-showcase__list -product">
+        {{#each Products}}
+          <li class="m-showcase__item -product">
+            <a href="{{PageUrl}}" class="m-showcase__link -product">
+              <img class="m-showcase__img -product" src="{{Img.Src}}" alt="{{Img.Description}}">
+              <div class="m-showcase__description">
+                {{{DescriptionRTE}}}
+              </div>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <!-- Start: Optional Features -->
+    {{#with CTA}}
+      <div class="m-showcase__row -cta m-rte">
+        {{{RTE}}}
+      </div>
+    {{/with}}
+
+    {{#with Footer}}
+      <div class="m-showcase__row -footer" style="color: {{TextColor}}">
+        <footer class="m-showcase__footer">
+          {{#if FDAStatement}}
+            <p class="m-showcase__fda" style="border-color: {{FDABorderColor}}">{{{FDAStatement}}}</p>
+          {{/if}}
+
+          {{#if Footnote}}
+            <p class="m-showcase__footnote">{{{Footnote}}}</p>
+          {{/if}}
+        </footer>
+      </div>
+    {{/with}}
+    <!-- End: Optional Features -->
+  </article>
+{{/with}}

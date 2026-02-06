@@ -1,0 +1,43 @@
+{{> organisms-site-header}}
+<div class="bg-gray-25">
+
+  <div class="mb-10 pt-15 {{#if IsCn}}hidden md:block{{/if}}">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  <section class="p-csrLanding md:py-40">
+    <div class="w-full mb-40 px-10 md:mb-50 md:px-0">
+      <h1 class="w-full mx-auto text-left text-3xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mb-20 md:text-center md:mb-30 md:text-4xl">
+        {{PageTitle}}
+      </h1>
+      <div class="m-rte w-full max-w-contain mx-auto" role="text">
+        {{{TextRTE}}}
+      </div>
+    </div>
+
+    <div class="w-full md:mb-100">
+      {{> molecules-content-quotation-block}}
+    </div>
+
+    <div class="w-full md:mb-100">
+      {{#CtaCsrBlock}}
+        <h2 class="p-csrLanding__sectionTitle">
+          {{Title}}
+        </h2>
+        {{> molecules-cta-csr-block}}
+      {{/CtaCsrBlock}}
+    </div>
+
+    <div class="w-full md:mb-100">
+      {{#CsrContentCardGrid}}
+        <h2 class="p-csrLanding__sectionTitle">
+          {{Title}}
+        </h2>
+        {{> organisms-csr-content-card-grid}}
+      {{/CsrContentCardGrid}}
+    </div>
+  </section>
+</div>
+{{> organisms-site-footer}}

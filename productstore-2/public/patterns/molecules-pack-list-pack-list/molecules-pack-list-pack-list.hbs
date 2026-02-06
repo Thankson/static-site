@@ -1,0 +1,12 @@
+{{#PackList}}
+  <nav class="m-packList">
+    <p class="m-packList__description">{{Description}}</p>
+    <ul class="m-packList__list">
+      {{#each ListItem}}
+        <li class="m-packList__item">
+          <a class="m-packList__link" href="{{Item.Link}}" target="_blank">{{Item.Text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </nav>
+{{/PackList}}

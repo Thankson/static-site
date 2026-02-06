@@ -1,0 +1,13 @@
+{{#with ProductHighlight}}
+  <article class="m-productHighlight" style="background: {{BgColor}}">
+    <a href="{{Link}}" class="m-productHighlight__link">
+      <img class="m-productHighlight__image" src="{{Img.Src}}" alt="{{Img.Alt}}">
+      <div class="m-productHighlight__cta">
+        <span class="m-productHighlight__text" style="color: {{TextColor}}">
+          {{CTA}}
+          <span class="m-productHighlight__icon material-icons" aria-hidden="true">chevron_right</span>
+        </span>
+      </div>
+    </a>
+  </article>
+{{/with}}

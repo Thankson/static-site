@@ -1,0 +1,9 @@
+<div class="mx-auto {{ ContainerWidth }}">
+  {{#if ContentDynamic}}
+    {{#each ContentDynamic}}
+      {{> (lookup . 'DynamicPartial')}}
+    {{/each}}
+  {{else}}
+    {{{ContentStatic}}}
+  {{/if}}
+</div>

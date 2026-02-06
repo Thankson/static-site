@@ -1,0 +1,13 @@
+{{#PopUp}}
+  <popup-component :visible="visible ? visible : true" size="{{PopUpSize}}" mods="{{PopUpMods}}" arrow-size="{{Arrow.Size}}" arrow-direction="{{Arrow.Direction}}" arrow-mods="{{Arrow.OtherMods}}" arrow-color="{{Arrow.TailwindColor}}" :header-visible="{{Show.Header}}" header-title="{{Header}}" :footer-visible="{{Show.Footer}}" footer-title="{{CTA.Text}}" footer-link="{{CTA.Link}}" close-icon="{{ClosePopup.Icon}}" close-alt="{{ClosePopup.Alt}}" close-aria-label="{{ClosePopup.AriaLabel}}">
+
+    <template>
+      <!-- All the content inside this tag is a slot, popup-component has no control over it -->
+      {{#if BodyDynamic}}
+        {{> (lookup . 'BodyDynamic')}}
+      {{else}}
+        {{{Body}}}
+      {{/if}}
+    </template>
+  </popup-component>
+{{/PopUp}}

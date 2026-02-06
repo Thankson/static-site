@@ -1,0 +1,34 @@
+<!-- START 10761 - Pop-up -->
+{{#PopUp}}
+  <div class="m-popUp hidden {{PopUpSize}} {{PopUpMods}}">
+    <div class="m-popUp__content" aria-hidden="true">
+      {{> atoms-arrow  Arrow}}
+
+      {{#if Show.Header}}
+        <div class="m-popUp__header {{Mod.Header}}">
+          <h2 class="m-popUp__headerTitle {{Mod.HeaderTitle}}">{{Header}}</h2>
+        </div>
+      {{/if}}
+
+      <div class="m-popUp__body">
+        {{#if BodyDynamic}}
+          {{> (lookup . 'BodyDynamic')}}
+        {{else}}
+          {{{Body}}}
+        {{/if}}
+      </div>
+
+      {{#if Show.Footer}}
+        <div class="m-popUp__footer {{Mod.Footer}}">
+          <a href={{CTA.Link}} class="m-popUp__footerCTA {{Mod.FooterCTA}}" data-testid="link-footerCTA">{{CTA.Text}}</a>
+        </div>
+      {{/if}}
+
+      <button class="m-popUp__close" tabindex="0" aria-label="{{ClosePopup.AriaLabel}}" data-testid="button-popUpClose">
+        <img src="{{ClosePopup.Icon}}" alt="{{ClosePopup.Alt}}" class="m-popUp__closeImg" aria-hidden="true">
+      </button>
+
+    </div>
+  </div>
+{{/PopUp}}
+<!-- END 10761 - Pop-up -->

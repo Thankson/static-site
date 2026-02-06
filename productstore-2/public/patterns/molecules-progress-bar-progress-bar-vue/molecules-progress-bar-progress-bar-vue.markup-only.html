@@ -1,0 +1,31 @@
+<m-progress-bar :active-step="2" active-text="Current:" complete-text="Complete:" :disable-bullets="[3]" :step-links="{
+            0: { href: '#', target: '_self' },
+            1: { href: '#', target: '_blank' },
+            2: { href: '', target: '' },
+            3: { href: '', target: '' },
+    }">
+
+
+  <template v-slot:step-0>
+    Enter Email or Mobile
+  </template>
+
+  <template v-slot:step-1>
+    Receive and Enter Code
+  </template>
+
+  <template v-slot:step-2>
+    Update Password
+  </template>
+
+  <template v-slot:step-3-decorator>
+    <a-icon size="inherit">
+      shopping_cart
+    </a-icon>
+  </template>
+
+  <template v-slot:step-3>
+    Start Shopping
+  </template>
+
+</m-progress-bar>

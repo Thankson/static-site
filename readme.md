@@ -13,7 +13,13 @@ if productstore
 2. 执行 npx webpack --mode=production --env mockserver --env production --env cimode=deploy   （OR： npm run build:mockserver）
 3. cp fe-library/productstore/public static-site/productstore-2
 4. visit: https://thankson.github.io/static-site/productstore-2/public/index.html
+```
+https://thankson.github.io/static-site/productstore/public/index.html
+https://thankson.github.io/static-site/productstore/public/patterns/pages-products-survey-products-survey-cn/pages-products-survey-products-survey-cn.rendered.html
 
+https://thankson.github.io/static-site/productstore-2/public/index.html
+https://thankson.github.io/static-site/productstore-2/public/patterns/pages-products-survey-products-survey-cn/pages-products-survey-products-survey-cn.rendered.html
+```
 
 https://thankson.github.io/static-site/public/patterns/pages-form-ibo-form-ibo/pages-form-ibo-form-ibo.rendered.html
 

@@ -1,0 +1,18 @@
+{{#with LvipModal}}
+  <modal :visible="true">
+    <template v-slot:content>
+      <div class="px-30 pb-30 md:px-0 md:pb-0">
+        <img src="{{Data.Image.Url}}" alt="{{Data.Image.Alt}}">
+        <div class="flex text-2xl items-center mt-10 leading-tight" role="text">
+          <img class="mr-16 w-70" src="{{Data.Icon.Url}}" alt="{{Data.Icon.Alt}}">{{Data.Title}}
+        </div>
+        <p class="text-base mt-8">
+          {{Data.Description}}
+        </p>
+        <a class="a-button -green inline-block px-40 py-12 mt-30" href="{{ Data.CartPageUrl }}">
+          {{ Labels.CartPageUrl }}
+        </a>
+      </div>
+    </template>
+  </modal>
+{{/with}}

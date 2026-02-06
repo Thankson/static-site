@@ -1,0 +1,38 @@
+{{> organisms-site-header}}
+
+<div class="bg-gray-25">
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  <!-- Invite a Friend -->
+  {{#if InviteAFriend}}
+    {{> organisms-invite-a-friend}}
+  {{/if}}
+
+
+  <category-listing id="CategoryListingComponent" script-id="{{CategoryListing.DynamicId}}">
+    <template v-slot:menu>
+      {{> molecules-cat-list-menu}}
+    </template>
+
+    <template v-slot:banner>
+      <div class="bg-no-repeat bg-cover bg-center py-110" style="background-image: url('https://placehold.co/970x220');height:220px;">&nbsp;</div>
+    </template>
+  </category-listing>
+
+  {{#with CategoryListing}}
+    <script type="application/json" id="{{DynamicId}}">
+    {{toJson Localization}}
+    </script>
+    <script id="data-shelf-configurator-localization" type="application/json">
+    {{toJson Localization-Shelf}}
+    </script>
+  {{/with}}
+</div>
+
+{{> organisms-site-footer}}
+
+<o-direct-to-preferred-modal></o-direct-to-preferred-modal>

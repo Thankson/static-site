@@ -1,0 +1,18 @@
+{{> organisms-site-header-ole}}
+
+<p-customer-management-agreement script-id="dataCustomerManagementAgreement">
+  <template v-slot:banner-form>
+    {{> molecules-cmn-content-block}}
+  </template>
+  <template #banner-backup-order>
+    {{> molecules-cmn-full-width-banner}}
+  </template>
+</p-customer-management-agreement>
+<script type="application/json" id="dataCustomerManagementAgreement">
+{{toJson CustomerManagementAgreement}}
+</script>
+<script type="application/json" id="dataCustomerManagementAgreementPaymentForm">
+{{toJson CustomerManagementAgreementPaymentForm}}
+</script>
+
+{{> organisms-site-footer-ole }}

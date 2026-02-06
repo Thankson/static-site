@@ -1,0 +1,23 @@
+{{#ContactSummary}}
+  <ul class="m-contactSummary">
+    <li class="pb-20 xl:pb-10">
+      <img src="{{Address.Icon}}" aria-hidden="true" class="inline-block w-12 mr-5 align-baseline">
+      {{#if Address.IsCn}}
+        <a href="{{Address.Link}}" target="_blank">
+          <span class="text-base text-green-100">{{Address.Text}}</span>
+        </a>
+      {{else}}
+        <span class="text-base text-green-100">{{Address.Text}}</span>
+      {{/if}}
+
+    </li>
+    <li class="pb-20 xl:pb-10">
+      <img src="{{WebAddress.Icon}}" aria-hidden="true" class="inline-block w-12 mr-5 align-baseline">
+      <a class="text-base text-green-100 no-underline" href="{{WebAddress.Link}}">{{WebAddress.Text}}</a>
+    </li>
+    <li class="pb-20 xl:pb-10">
+      <img src="{{Email.Icon}}" aria-hidden="true" class="inline-block w-12 mr-5 align-baseline">
+      <a href="mailto:{{Email.Text}}" class="text-base text-green-100 no-underline">{{Email.Text}}</a>
+    </li>
+  </ul>
+{{/ContactSummary}}

@@ -1,0 +1,412 @@
+<o-site-header-ole script-id="dataSiteHeaderOle"></o-site-header-ole>
+<script type="application/json" id="dataSiteHeaderOle">
+  {
+    "Data": {
+      "CloseImg": {
+        "Alt": "Close",
+        "Url": "//cdnsc1.melaleuca.com/na/images/header/clear2x.png"
+      },
+      "DesktopLogoImg": {
+        "Alt": "Melaleuca",
+        "Url": "https://cdnsc1.melaleuca.com/na/images/footer/melaleuca-logo-white-full.png"
+      },
+      "MobileLogoImg": {
+        "Alt": "Melaleuca",
+        "Url": "https://cdnsc1.melaleuca.com/na/images/header/leaf-drop-logo2x.png"
+      }
+    },
+    "Labels": {
+      "Body": "We are here to help! Call our experts at 1-208-534-3600 or contact your enroller, {0} at {1}.",
+      "CloseAriaLabel": "Close popup",
+      "EnrollerName": "Jeet Madson",
+      "EnrollerPhoneNumber": "1-208-584-2771",
+      "HaveAQuestion": "HAVE A QUESTION",
+      "Heading": "Have a question?",
+      "OpenAriaLabel": "Open popup"
+    }
+  }
+</script>
+<div class="bg-gray-25">
+  <div class="o-widthControl mx-auto w-full max-w-full to-md:px-10 md:max-w-contain">
+    <p-imea script-id="dataImea">
+      <template #section-one>
+        <o-imea-personal-info-section script-id="personalInfoForm"></o-imea-personal-info-section>
+        <script type="application/json" id="personalInfoForm">
+          {
+            "Data": {
+              "PreFilledData": {
+                "DOB": {
+                  "Format": "{0} {1}, {2}",
+                  "Month": "January",
+                  "Day": "22",
+                  "Year": "1964"
+                },
+                "Email": "john_mortonaterski_doe_the_second_is_awesome@gmail.com",
+                "FirstName": "John",
+                "LastName": "Doe",
+                "MiddleName": "M",
+                "SecondLastName": "",
+                "PhoneNumber": "2084321234",
+                "FormattedPhoneNumber": "(208) 208-1234",
+                "PhoneType": "MobilePhone",
+                "Username": "2084321234"
+              }
+            },
+            "Labels": {
+              "BirthDate": {
+                "Required": false,
+                "RequiredErrorMessage": "Required",
+                "EighteenUnderAgeError": "You must be 18 years or older to sign up.",
+                "InvalidDateOfBirthError": "Please enter a valid date",
+                "Text": "Birth Date (Optional)"
+              },
+              "DOBFields": {
+                "Day": "Day",
+                "Month": "Month",
+                "Year": "Year"
+              },
+              "Edit": "Edit",
+              "Email": {
+                "Placeholder": "Email",
+                "Required": true,
+                "DuplicateErrorMessage": "Email already exists",
+                "RequiredErrorMessage": "Required",
+                "InvalidErrorMessage": "Invalid email address",
+                "Text": "Email"
+              },
+              "FirstName": {
+                "Placeholder": "Enter FirstName",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your first name.",
+                "Text": "First name"
+              },
+              "Initial": {
+                "Placeholder": "Initial",
+                "Required": false,
+                "RequiredErrorMessage": "",
+                "Text": "Initial"
+              },
+              "LastName": {
+                "Placeholder": "Last name",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your last name.",
+                "Text": "Last Name"
+              },
+              "MonthOptions": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+              "NoteText": "<span class=\"font-medium\">NOTE: </span>Your username is determined by your mobile number or email address. Changing that information here will also change your username.",
+              "PersonalInfoTitle": "Personal Information",
+              "Phone": {
+                "Placeholder": "Enter Phone Number",
+                "Required": true,
+                "DuplicateErrorMessage": "Phone number already exists",
+                "RequiredErrorMessage": "Required",
+                "InvalidErrorMessage": "Invalid phone number",
+                "Text": "Phone Number",
+                "TextPhoneType": "Phone Type"
+              },
+              "Remove": "Remove",
+              "ValidPhoneTypes": [{
+                "Text": "Mobile",
+                "Type": "MobilePhone"
+              }, {
+                "Text": "Home",
+                "Type": "Home"
+              }, {
+                "Text": "Business",
+                "Type": "Work"
+              }]
+            }
+          }
+        </script>
+        <o-imea-address-form script-id="addressFormData"></o-imea-address-form>
+
+        <script type="application/json" id="addressFormData">
+          {
+            "Data": {
+              "AddressEntryEnhancementEnabled": false,
+              "AddressSuggestionMaxCount": 24
+            },
+            "Labels": {
+              "Address_1": {
+                "Placeholder": "Address",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your address.",
+                "Text": "Address"
+              },
+              "Address_2": {
+                "Placeholder": "Apt / PO Box / Suite / Building",
+                "Required": false,
+                "Text": "Address 2 (Optional)"
+              },
+              "City": {
+                "Placeholder": "Municipality",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your Municipality.",
+                "Text": "Municipality"
+              },
+              "State": {
+                "Placeholder": "Please Select",
+                "Required": true,
+                "RequiredErrorMessage": "Please select a state.",
+                "Text": "State",
+                "StatesArrayLeftIntentionallyBlankForAddressFormVariantRenderInPatternlab": "",
+                "States": []
+              },
+              "PostalCode": {
+                "Placeholder": "Postal Code",
+                "Required": true,
+                "InvalidErrorMessage": "Invalid zip code.",
+                "RequiredErrorMessage": "Please enter a zip code.",
+                "Text": "Postal code (enter without hyphens and select from the suggestions) </br> *For the web version, click on Postal Code Search"
+              },
+              "AddressEntered": "Address You Entered:",
+              "AddressNotOnSystem": "This address is not currently in our system. Please review the address and make sure it is correct before continuing.",
+              "Back": "Back",
+              "ProblemWithAddress": "There was a problem with the address you entered. Please select from the list of Suggested Addresses, or try again. For further assistance, please contact Customer Service at 1 (800) 282-3000.",
+              "Suggested": "Suggested:",
+              "UseThisAddress": "Use this address",
+              "VerifyAddressModalTitle": "Verify Address",
+              "MaxCharacterLengthExceedError": "Maximum {0} characters ({1} too many)",
+              "AllowedCharacterLengthExceeded": "Oops, It Appears the number of allowed characters has been exceeded",
+              "SpecialCharactersError": "Special characters such as {0} are not allowed.",
+              "Remove": "Remove",
+              "ClosedHeading": "Business/Permanent Address (Optional)",
+              "OpenHeading": "Add Business/Permanent Address (Optional)",
+              "Subheading": "Your business address will be used to send commission checks, awards, and invitations to events.",
+              "Province": {
+                "Placeholder": "Prefectures",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter prefectures.",
+                "Text": "Prefectures"
+              },
+              "Suburb": {
+                "Placeholder": "Town",
+                "Required": false,
+                "RequiredErrorMessage": "Please enter your Town.",
+                "Text": "Town"
+              },
+              "AddressSearch": {
+                "PostCodeSearchModal": {
+                  "Title": "Postal Code Search",
+                  "Description": "You can search by postal code (no hyphen) or address (e.g. Nibancho). Select the address and press the confirm button.",
+                  "Placeholder": "Postal Code",
+                  "SearchButtonText": "Search",
+                  "InvalidErrorMessage": "Invalid Postal Code",
+                  "ConfirmButtonText": "Confirm",
+                  "CancelButtonText": "Cancel"
+                }
+              },
+              "AddressSearchButtonText": "Postal Code Search"
+            }
+          }
+        </script>
+        <o-imea-spouse-info-section script-id="spouseInfoForm">
+        </o-imea-spouse-info-section>
+        <script type="application/json" id="spouseInfoForm">
+          {
+            "Data": null,
+            "Labels": {
+              "ClosedHeading": "Spouse Info (Optional)",
+              "Email": {
+                "Placeholder": "Email",
+                "Required": false,
+                "DuplicateErrorMessage": "Email already exists",
+                "RequiredErrorMessage": "Required",
+                "InvalidErrorMessage": "Invalid email address",
+                "Text": "Email"
+              },
+              "FirstName": {
+                "Placeholder": "Enter FirstName",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your first name.",
+                "Text": "First name"
+              },
+              "Initial": {
+                "Placeholder": "Initial",
+                "Required": false,
+                "RequiredErrorMessage": "",
+                "Text": "Initial"
+              },
+              "LastName": {
+                "Placeholder": "Last name",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter your last name.",
+                "Text": "Last Name"
+              },
+              "OpenHeading": "Add Spouse Info (Optional)",
+              "Phone": {
+                "Placeholder": "Enter Phone Number",
+                "Required": true,
+                "DuplicateErrorMessage": "Phone number already exists",
+                "RequiredErrorMessage": "Required",
+                "InvalidErrorMessage": "Invalid phone number",
+                "Text": "Phone Number",
+                "TextPhoneType": "Phone Type"
+              },
+              "Remove": "Remove",
+              "ValidPhoneTypes": [{
+                "Text": "Mobile",
+                "Type": "MobilePhone"
+              }, {
+                "Text": "Home",
+                "Type": "Home"
+              }, {
+                "Text": "Business",
+                "Type": "Work"
+              }]
+            }
+          }
+        </script>
+      </template>
+      <template #section-two>
+        <o-imea-commissions-bonuses-section script-id="commissionsBonusesData">
+        </o-imea-commissions-bonuses-section>
+        <script type="application/json" id="commissionsBonusesData">
+          {
+            "Data": {
+              "ParticipationLevel": "3"
+            },
+            "Labels": {
+              "AccountHolderName": null,
+              "BankName": null,
+              "CardNumber": null,
+              "CommissionsBonusesSubTitle": "Which Category Best Describes Your Goals as a Melaleuca Marketing Executive?",
+              "CommissionsBonusesTitle": "Earn Commissions & Bonuses",
+              "CURP": null,
+              "CommissionBonusesErrorMessage": "Please select a participation level",
+              "ParticipationLevels": [{
+                "Description": "<span class=\"font-medium\">Category 1:</span><br/>I do not plan to refer many Customers, but would like to earn commissions if I ever refer a Customer.",
+                "Level": "1"
+              }, {
+                "Description": "<span class=\"font-medium\">Category 2:</span><br/>Earn Supplemental Income",
+                "Level": "2"
+              }, {
+                "Description": "<span class=\"font-medium\">Category 3:</span><br/>Earn Significant Income",
+                "Level": "3"
+              }],
+              "RFC": null,
+              "ReportingText": null
+            }
+          }
+        </script>
+        <o-imea-social-security-form script-id="socialSecurityFormData"></o-imea-social-security-form>
+
+        <script type="application/json" id="socialSecurityFormData">
+          {
+            "Data": null,
+            "Labels": {
+              "SocialSecurityNumber": {
+                "Placeholder": "Social Security Number",
+                "InvalidErrorMessage": "Invalid social security number.",
+                "Text": "Social Security Number",
+                "Show": "Show",
+                "Hide": "Hide"
+              },
+              "Remove": "Remove",
+              "ClosedHeading": "Social Security Number (Optional)",
+              "OpenHeading": "Add Social Security Number (Optional)",
+              "Subheading": "If you will be earning commissions & bonuses as part of Melaleuca’s revenue sharing program, we are required to collect your Social Security Number for reporting purposes."
+            }
+          }
+        </script>
+        <o-imea-personal-production-account-section script-id="personalProductionAccountData">
+        </o-imea-personal-production-account-section>
+        <script type="application/json" id="personalProductionAccountData">
+          {
+            "Labels": {
+              "AddAdditionalHousehold": "Add Additional Households",
+              "ClosedHeading": "Personal Production Account (Optional)",
+              "HouseholdFirstName": {
+                "Placeholder": "Enter first name",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter household first name",
+                "Text": "First name"
+              },
+              "HouseholdLastName": {
+                "Placeholder": "Enter last name",
+                "Required": true,
+                "RequiredErrorMessage": "Please enter household LastName name",
+                "Text": "Last Name"
+              },
+              "HouseholdPhoneNumber": {
+                "Placeholder": "Enter phone number",
+                "Required": true,
+                "Text": "Phone Number",
+                "RequiredErrorMessage": "Please enter valid phone number"
+              },
+              "HouseholdPurchaseProductPointsCheckbox": {
+                "Checked": false,
+                "Text": "<span class=\"font-medium\">I would Like to designate other households</span> whose purchase will count toward satisfying my personal production account requirement."
+              },
+              "SelfPurchaseProductPointsCheckbox": {
+                "Checked": false,
+                "Text": "<span class=\"font-medium\">I would Like the Product Points from my personal purchases</span> to count towards my personal production account."
+              },
+              "Text": "To qualify for commissions, you are responsible to produce 29 Product Points each month in your Personal Production Account. If you are a Melaleuca customer and your household will be purchasing product for your own consumption, your households purchases can count toward the 29 Product Points. Additionally, you can list other household(s) whose purchases will contribute towards the 29 Product Point requirement. If you are a Preferred Member, your households purchases will more than satisfy your 29 Product Point requirement. If you are not a Preferred Member you should list other households to satisfy this requirement. You can add or change names at any time.",
+              "OpenHeading": "Add Personal Production Account (Optional)",
+              "Remove": "Remove"
+            }
+          }
+        </script>
+      </template>
+    </p-imea>
+    <script type="application/json" id="dataImea">
+      {
+        "Data": {
+          "RedirectUrl": "https://www.melaleuca.com"
+        },
+        "Labels": {
+          "DigitalSignTitle": "Please digitally sign below:",
+          "IndicatesRequiredFields": "* Indicates Required Fields",
+          "SignMatchText": "Digital Signature must exactly match name above* (Case Sensitive)",
+          "Submit": "Submit",
+          "ModalSubmitFailed": {
+            "Ok": "Ok",
+            "Text": "Please contact Melaleuca at 1-800-742-2444 for assistance.",
+            "Title": "Your Independent Marketing Executive Agreement could not be saved"
+          },
+          "Checkboxes": [{
+            "Checked": false,
+            "Text": "<p class=\"mb-10 leading-tight\">I agree to and acknowledge that I have read the terms & conditions outlined in the <a href=\"#\" class=\"text-green underline\">Independent Marketing Executive Agreement, Statement of Policies</a> and <a href=\"#\" class=\"text-green underline\">Compensation Plan</a>, all of which are included in this Agreement and can be amended from time to time.*</p><p class=\"mb-10 leading-tight\">† You do not have to purchase Melaleuca products to earn commissions. For information on how to build a Melaleuca Business without purchasing product individually, please see terms and conditions above.</p><p class=\"leading-tight\">†† Melaleuca does not guarantee the success of my business or the income, if any, that I might earn. I understand that my success will depend on my own efforts, skills, and productivity.</p>",
+            "Name": "TermsAndConditionsAgreement",
+            "Required": true,
+            "RequiredErrorMessage": "Please agree to the terms and conditions to proceed."
+          }],
+          "Undertaking": "I understand that this document is an application to become a Melaleuca Independent Marketing Executive and that I am not a Melaleuca Independent Marketing Executive until: <br/><br/><ol><li>1) Melaleuca has received and accepted this Agreement,</li><li>2) I have at least one Customer in my Marketing Organization, and </li><li>3) I receive my first commission check.</li></ol>"
+        }
+      }
+    </script>
+  </div>
+</div>
+
+<footer class="o-siteFooterOle">
+  <div class="o-siteFooterOle__bg">
+    <div class="o-siteFooterOle__bgImage -desktop" style="background-image:url(&#x27;https://cdnsc1.melaleuca.com/na/images/footer/site-footer-background-desktop.jpg&#x27;)" role="img"></div>
+    <div class="o-siteFooterOle__bgImage -mobile" style="background-image:url(&#x27;https://cdnsc1.melaleuca.com/na/images/footer/site-footer-background-mobile.jpg&#x27;)" role="img"></div>
+  </div>
+  <div class="o-siteFooterOle__content">
+    <nav>
+      <ul class="o-siteFooterOle__links">
+        <li>
+          <a class="o-siteFooterOle__link" href="#" aria-label="Privacy Policy">
+            Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a class="o-siteFooterOle__link" href="#" aria-label="Income Statistics">
+            Income Statistics
+          </a>
+        </li>
+        <li>
+          <a class="o-siteFooterOle__link" href="#" aria-label="Income Statistics">
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <hr class="o-siteFooterOle__divider" />
+    <div class="o-siteFooterOle__copyright">
+      © 2024 Melaleuca, Inc. All Rights Reserved.
+    </div>
+  </div>
+</footer>

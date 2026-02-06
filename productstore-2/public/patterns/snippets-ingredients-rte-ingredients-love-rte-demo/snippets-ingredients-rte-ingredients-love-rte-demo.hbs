@@ -1,0 +1,15 @@
+<div class="m-rte">
+  {{#with IngredientsLoveContent}}
+    <div class="s-ingredientsLove">
+      <h3 class="s-ingredientsLove__heading">{{Heading}}</h3>
+      <ul class="s-ingredientsLove__list">
+        {{#each List}}
+          <li class="s-ingredientsLove__item">
+            <img src="{{ImgSrc}}" alt="" class="s-ingredientsLove__img">
+            <span class="s-ingredientsLove__text" role="text">{{{Text}}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/with}}
+</div>

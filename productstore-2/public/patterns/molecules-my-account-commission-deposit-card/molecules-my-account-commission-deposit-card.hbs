@@ -1,0 +1,11 @@
+<div class="m-acctCard {{#if IsCn}}-isCn -isCommission{{/if}}">
+  <div class="m-acctCard__card">
+    <ul class="m-acctCard__list">
+      {{#each CommissionDepositCard.ItemList}}
+        <li class="m-acctCard__item font-bold">{{Item}}
+          <span class="m-acctCard__itemDetail">{{ItemDetails}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

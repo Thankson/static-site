@@ -1,0 +1,414 @@
+<div class="max-w-contain mx-auto pb-40">
+  <h1 class="w-full mx-auto text-2xl font-medium tracking-tight text-gray-150 max-w-contain font-global-sans mt-40 mb-18 md:text-3xl">
+    新增付款方式
+  </h1>
+
+  <payment-form script-id="dataPaymentForm" token="eyJhbGciOiJSUzI1NiIsImtpZCI6IkRDQzk5MEU4QTgzMTNENTQwOTAzOTNCQTVDMjFBMjNGQTE5ODlBQjEiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiIzTW1RNktneFBWUUpBNU82WENHaVA2R1ltckUifQ.eyJuYmYiOjE2MTAzNzYzNjMsImV4cCI6MTYxMDM3OTk2MywiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS11YXVzLm1lbGFsZXVjYS5jb20iLCJhdWQiOlsiQWRkcmVzcy5BUEkiLCJCYWNrdXBPcmRlci5BUEkiLCJDb21tdW5pY2F0aW9uLkFQSSIsIkN1c3RvbWVyQWNjb3VudC5BUEkiLCJERVBJbnRlcmZhY2UuQVBJIiwiRG9jdW1lbnQuQVBJIiwiT3JkZXIuQVBJIiwiT3JnYW5pemF0aW9uLkFQSSIsIlBheU1ldGhvZC5BUEkiLCJQcm9kdWN0LkFQSSIsIlByb21vdGlvbi5BUEkiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJIl0sImNsaWVudF9pZCI6Im1lbGFsZXVjYS1zaXRlY29yZS1kZXYiLCJzY29wZSI6WyJBZGRyZXNzLkFQSS5GdWxsIiwiQmFja3VwT3JkZXIuQVBJLkZ1bGwiLCJDb21tdW5pY2F0aW9uLkFQSS5GdWxsIiwiQ3VzdG9tZXJBY2NvdW50LkFQSS5GdWxsIiwiREVQSW50ZXJmYWNlLkFQSS5GdWxsIiwiRG9jdW1lbnQuQVBJLkZ1bGwiLCJPcmRlci5BUEkuRnVsbCIsIk9yZ2FuaXphdGlvbi5BUEkuRnVsbCIsIlBheU1ldGhvZC5BUEkuRnVsbCIsIlByb2R1Y3QuQVBJLkZ1bGwiLCJQcm9tb3Rpb24uQVBJLkZ1bGwiLCJTdWJzY3JpYmVkU2VydmljZXMuQVBJLkZ1bGwiXX0.AcWwYRAqRiVGTsMXa6x7pLQw3C0DWDOyqRBllj7KKiMkKiv18C58qVK7wsEzJLZOuQ5dhjRZyS-yVcQy0MgJqhBVE6P5DMNJJyWdx0oDMdkicb2hJ7o7Kc2tD2qMZakHR_irXpV4StYjQv6mPtlsohUpP_O7kEM2PzoefeYqiwJmg6Ypy5of7dWKHaxXXMWKZIxsDJO_bal86FdfjRhAoM-z_-DTnyLZrIm4XaVysj5qdtNQP1LiGt7Hwtp88mJeGp2wS8Ynb0B0vLl_nZxfB0RzsaDCpvqBFEup0DM9jqKP45of8uu_KyuBkDEhGsV7Q5vN1yXmrW8mdcbHswD2RA"></payment-form>
+</div>
+
+<script type="application/json" id="dataPaymentForm">
+  {
+    "Labels": {
+      "Culture": "zh-TW",
+      "Header": {
+        "AddNew": "新增付款方式",
+        "Edit": "編輯付款方式",
+        "PayMethodType": "付款資料類別",
+        "DebitOrCreditCard": "信用卡",
+        "Checking": "Checking",
+        "Credit": "信用卡",
+        "Debit": "簽帳金融卡",
+        "PayPal": ""
+      },
+      "Card": {
+        "Accepts": "我們接受的信用卡別:",
+        "CardholderName": "姓名(持卡人姓名/限本人信用卡)",
+        "CardNumber": "信用卡",
+        "Expiration": "信用卡有效期限",
+        "LastName": "",
+        "Month": "月",
+        "Year": "年",
+        "Cvc": "安全碼",
+        "BillingZipCode": "Billing Zip Code",
+        "Nickname": "暱稱 (非必填)",
+        "CardholderNamePattern": "/^(?=.*[a-zA-Z])[a-zA-Z\\s,\\-.]*$/",
+        "CardholderNamePlaceholder": "例如：王大明，卡片印字上為WANG, DA-MING",
+        "CreditAccepts": "Melaleuca accepts:",
+        "DebitAccepts": "Melaleuca accepts:",
+        "Footnotes": "*美樂家接受Visa, MasterCard 及 JCB 信用卡",
+        "Name": "",
+        "UseMultipleNameFields": false
+      },
+      "Checking": {
+        "NameOnAccount": "Name on Account",
+        "AccountType": "Account Type",
+        "Select": "Select",
+        "RoutingNumber": "Routing Number",
+        "AccountNumber": "Account Number",
+        "AccountTypes": {
+          "Select": "Select",
+          "Checking": "Checking",
+          "Savings": "Savings"
+        },
+        "DeleteTitle": "Are you sure?",
+        "DeleteText": "This will overwrite any existing checking account information and cannot be undone."
+      },
+      "DirectDebit": {
+        "CopyFrom": "Copy from direct deposit",
+        "DirectDebit": "Direct Debit",
+        "FormAccess": "Form Access",
+        "NameOnAccount": "Name On Account",
+        "Bank": "Bank",
+        "AccountNumber": "Account Number",
+        "RoutingNumber": "Routing Number",
+        "Modal": {
+          "Cancel": "",
+          "Confirm": ""
+        }
+      },
+      "Frequency": {
+        "SaveAccount": "將信用卡資料儲存",
+        "OneTime": "此信用卡只用於目前訂單付款使用，不要儲存在我的帳戶資料中"
+      },
+      "Defaults": {
+        "MakeThisMyDefault": "將此付款方式用於 : ",
+        "ProductPurchases": "產品購買",
+        "MarketplaceServices": "Marketplace Services including Identity Protection, Health Care Savings, and Melaleuca Deals",
+        "FutureCharges": "您的預設付款方式將用於訂單結帳貨其他未付款訂單",
+        "MandateAgreement": "By signing this mandate form, I(a) authorize Melaleuca of Europe(Germany) GmbH to send instructions to my back to debit my account and(b) my bank to debit my account in accordance with the instructions of Melaleuca of Europe(Germany) GmbH.As part of my rights under SEPA, I am entitled to a refund from my bank under the terms and conditions of my agreement with my bank.A refund must be claimed within 8 weeks starting from the date on which my account was debited."
+      },
+      "FormSubmit": {
+        "Cancel": "取消",
+        "Save": "儲存",
+        "Confirm": "確認",
+        "Download": "下載",
+        "SavePayMethod": "Save Pay Method",
+        "UseThisPaymethod": "Use This Pay Method",
+        "Close": "關閉"
+      },
+      "ErrorMessages": {
+        "FieldRequired": "*此為必填欄位",
+        "ErrorOccured": "資料填寫錯誤",
+        "CardholderName": {
+          "Required": "*持卡人姓名為必填欄位",
+          "Invalid": "*持卡人英文姓名錯誤",
+          "MaxLength": "Maximum character length reached for Cardholder Name field",
+          "MinLength": "Minimum character length not reached for Cardholder Name field"
+        },
+        "CardNumber": {
+          "Required": "*信用卡卡號為必填欄位",
+          "Integer": "信用卡號碼不正確",
+          "Invalid": "信用卡號碼不正確",
+          "MaxLength": "請輸入正確卡號碼",
+          "MinLength": "請輸入正確卡號碼"
+        },
+        "ExpirationMonth": {
+          "Required": "*請輸入信用卡有效月份",
+          "Invalid": "有效期限必須多於1天"
+        },
+        "ExpirationYear": {
+          "Required": "*請輸入信用卡有效年份",
+          "Invalid": "有效期限必須多於1天"
+        },
+        "LastName": {
+          "Required": "",
+          "Invalid": "",
+          "MaxLength": "",
+          "MinLength": ""
+        },
+        "CVV": {
+          "Required": "請輸入安全碼",
+          "Integer": "請輸入正確安全碼",
+          "MaxLength": "請輸入正確安全碼",
+          "MinLength": "請輸入正確安全碼"
+        },
+        "BillingZipCode": {
+          "Required": "Billing Zip Code field is required",
+          "Integer": "Billing Zip Code field accepts integer numbers only",
+          "Invalid": "Billing Zip Code is invalid",
+          "MaxLength": "Maximum character length reached for Billing Zip Code field",
+          "MinLength": "Minimum character length not reached for Billing Zip Code field"
+        },
+        "NameOnAccount": {
+          "Required": "Name On Account field is required",
+          "Invalid": "",
+          "MaxLength": "Maximum character length reached for Name On Account field",
+          "MinLength": "Minimum character length not reached for Name On Account field"
+        },
+        "AccountType": {
+          "Required": "Account Type field is required"
+        },
+        "RoutingNumber": {
+          "Required": "Routing Number field is required",
+          "Integer": "Routing Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Routing Number field",
+          "MinLength": "Minimum character length not reached for Routing Number field"
+        },
+        "AccountNumber": {
+          "Required": "Account Number field is required",
+          "Integer": "Account Number field accepts integer numbers only",
+          "MaxLength": "Maximum character length reached for Account Number field",
+          "MinLength": "Minimum character length not reached for Account Number field"
+        },
+        "Bank": {
+          "Required": "Bank field is required"
+        },
+        "ShouldBeDefault": {
+          "Required": "不能刪除預設付款方式，請先新增其他付款方式並設為預設。"
+        },
+        "MandateAgreement": {
+          "Required": "Mandate is required"
+        },
+        "SetAsDefault": {
+          "Required": "不能刪除預設付款方式，請先新增其他付款方式並設為預設。"
+        },
+        "Terms": {
+          "Required": "请您详细阅读并勾选以上条款。"
+        }
+      },
+      "ServerErrorTranslation": [{
+        "Error": "CVVCode",
+        "Translation": "請輸入正確安全碼"
+      }, {
+        "Error": "AccountNumberIsNotAMEXCreditCard",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "AccountNumberIsNotDiscoverCardCreditCard",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "AccountNumberIsNotMasterCardCreditCard",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "AccountNumberIsNotVisaCreditCard",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "AccountNumberMustBeEmpty",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "BackupOrderCannotBeInactive",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "BackupOrderCannotBeOneTimeUse",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "CannotDeleteDefaultPayMethod",
+        "Translation": "不能刪除預設付款方式，請先新增其他付款方式並設為預設。"
+      }, {
+        "Error": "CustomerCountryNotValidForPayMethod",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "CustomerIdMustBeGreaterThanZero",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidAccountNumber",
+        "Translation": "Account Number is invalid."
+      }, {
+        "Error": "InValidAccountNumberForACH",
+        "Translation": "Account Number is invalid."
+      }, {
+        "Error": "InValidAccountNumberForCreditCard",
+        "Translation": "Account Number is invalid"
+      }, {
+        "Error": "InValidAccountNumberForDirectDebit",
+        "Translation": "Account Number is invalid"
+      }, {
+        "Error": "InvalidAchAccountNumberForCanada",
+        "Translation": "Account Number is invalid."
+      }, {
+        "Error": "InvalidAchAccountNumberForUnitedStates",
+        "Translation": "Account Number is invalid"
+      }, {
+        "Error": "InvalidAchRoutingNumberForCanada",
+        "Translation": "Routing Number is invalid"
+      }, {
+        "Error": "InvalidAchRoutingNumberForUnitedStates",
+        "Translation": "Routing Number is invalid"
+      }, {
+        "Error": "InvalidCreditCardNumber",
+        "Translation": "信用卡號碼不正確"
+      }, {
+        "Error": "InvalidCountry",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidCustomerNumber",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidCVV",
+        "Translation": "請輸入正確安全碼"
+      }, {
+        "Error": "InvalidExpirationDate",
+        "Translation": "到期日不正確"
+      }, {
+        "Error": "InvalidExpireDate",
+        "Translation": "到期日不正確"
+      }, {
+        "Error": "InvalidPayMethodDefault",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidPayMethodDirection",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidPayType",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "InvalidRoutingNumber",
+        "Translation": "Routing Number is invalid."
+      }, {
+        "Error": "MissingAccountNumber",
+        "Translation": "Please enter a valid Account Number."
+      }, {
+        "Error": "MissingAccountNumberOrRoutingNumberForACH",
+        "Translation": "Please enter a valid Account or Routing Number."
+      }, {
+        "Error": "MissingCVV",
+        "Translation": "請輸入安全碼"
+      }, {
+        "Error": "PayMethodExpiredCannotbeDefault",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "MissingPayMethodIdForSecure",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "NoMatchingPayMethodToUpdate",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodACHCheckingCannotbeDefaultForMexico",
+        "Translation": "An error has occurred, please try again. If the problem persists, please call Customer Service."
+      }, {
+        "Error": "PayMethodAlreadyExists",
+        "Translation": "此信用卡已儲存於美樂家，請撥打業務諮詢專線 (02)-8787-5442"
+      }, {
+        "Error": "PayMethodAlreadyExistsInDifferentAccount",
+        "Translation": "An error has occurred, please try again"
+      }, {
+        "Error": "PayMethodDefaultTypeNotValid",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodDirectDebitCannotbeDefaultForUnitedStates",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodDiscoverCardCannotbeDefaultForCanada",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodDiscoverCardCannotbeDefaultForMexico",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIdMustBeGreaterThanZero",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIdMustBeZero",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIdNotValidForCustomer",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIsNotACH",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIsNotCreditCard",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodIsNotValidForCountry",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodOneTimeUseCardsCannotbeDefault",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }, {
+        "Error": "PayMethodPrePaidCardCannotbeDefault",
+        "Translation": "預付信用卡無法設為預設或主要扣款方式"
+      }, {
+        "Error": "Default",
+        "Translation": "發生不明錯誤，請稍後再試。如錯誤持續發生，請撥打業務諮詢專線 (02)8787-5442 "
+      }],
+      "PayPal": {
+        "Setup": "",
+        "CheckoutButton": "",
+        "BillingAgreementDescription": "",
+        "PaymethodNameDisplay": "",
+        "PayMethodImage": null
+      },
+      "ConfirmationLabel": {
+        "Confirm": "I confirm that I have carefully read, understood and agree to all the content in the {0} and {1} before clicking \"SUBMIT\".",
+        "PaymentServiceDescription": "Payment Service Description",
+        "PrivacyTerms": "隱私權聲明"
+      },
+      "NonPersonalCardCanNotSetDefault": {
+        "BankCardNotSaveasDefaultDescription": "",
+        "BankCardNotSaveasDefaultAlertButtonText": "",
+        "BankCardNotSaveasDefaultTitle": ""
+      },
+      "PaymethodPromptModel": {
+        "Title": "Notice",
+        "Description": "Your information has been updated for Melaleuca. Would you like us to make these changes on your Riverbend Ranch Black Label account as well?",
+        "ChangeBoth": "Change on Melaleuca and Riverbend ",
+        "ChangeOne": "Change on Melaleuca Only",
+        "Updated": "Your information has been updated on your Riverbend Ranch Black Label account."
+      }
+    },
+    "Data": {
+      "Culture": "zh-TW",
+      "IsEditing": false,
+      "PaymethodId": "",
+      "Username": "0754130804",
+      "Country": "Taiwan",
+      "CustomerId": 1212214056,
+      "CustomerName": "陳偉22",
+      "DirectDebit": {
+        "FormAccess": "",
+        "FormAccessLink": {
+          "Url": "",
+          "Text": "",
+          "Target": ""
+        },
+        "Modal": {
+          "RTE": ""
+        }
+      },
+      "RenderValidationsBelowInputs": false,
+      "CustomerFirstName": "陳偉11",
+      "SpouseFirstName": null,
+      "CardHoldersNames": "陳偉 Wei 2, ",
+      "CustomerBirthDate": "1980-01-01",
+      "SpouseBirthDate": null,
+      "MyAccountPaymentAddressPage": {
+        "Url": "/my-account/payments-and-addresses",
+        "Text": "",
+        "Target": "|Custom"
+      },
+      "AddNewPaymethod": "",
+      "EnablePreAuth": false,
+      "PreAuthPageUrl": null,
+      "Modal": {
+        "PaymentService": {
+          "Title": null,
+          "Rte": null
+        },
+        "PrivacyTerms": {
+          "Title": null,
+          "Rte": null
+        },
+        "PaymentSuccessCredit": {
+          "Title": null,
+          "Rte": null
+        },
+        "PaymentSuccessDebit": {
+          "Title": null,
+          "Rte": null
+        }
+      },
+      "EnableCardholderNameValidation": true,
+      "HideCvv": true,
+      "HideZipCode": true,
+      "HideNickName": true,
+      "HideDefaultPayMethodCheckBoxes": true,
+      "HideDirectDebit": true,
+      "ShowCvvIcon": false,
+      "IsDirectDebitAForm": false,
+      "CustomerConnectingIP": null,
+      "RiverbendPaymethodAddressPrompt": false,
+      "ShowImprovedCTACheckout": false
+    },
+    "IgnoreComponent": false,
+    "Id": "15d7029e-ac56-47ce-82c3-f25c1020eb7b"
+  }
+</script>

@@ -1,0 +1,9 @@
+<div class="{{PaddingTop}} {{PaddingBottom}} {{MarginTop}} {{MarginBottom}}" style="background-color: {{BgColor}}">
+  {{#if ContentDynamic}}
+    {{#each ContentDynamic}}
+      {{> (lookup . 'DynamicPartial')}}
+    {{/each}}
+  {{else}}
+    {{{ContentStatic}}}
+  {{/if}}
+</div>

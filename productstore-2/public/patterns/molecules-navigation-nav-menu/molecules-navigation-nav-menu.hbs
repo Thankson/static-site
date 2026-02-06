@@ -1,0 +1,330 @@
+<!-- START 11283, 19631 (refactoring) - Nav-menu -->
+<nav class="m-navMenu" aria-labelledby="m-navMenu__toggle" data-testid="nav-menu">
+
+  <button id="m-navMenu__toggle" class="m-navMenu__toggle" aria-controls="m-navMenu" aria-expanded="false" aria-label="{{Text.ToggleButtonAriaLabel}}" data-label-escape-key="{{Text.PressEscapeKeyToExit}}" data-testid="button-menu">
+    <span class="m-navMenu__toggleIcon" data-testid="span-iconMenu">
+      <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
+      </svg>
+      <span class="m-navMenu__text">Menu</span>
+    </span>
+  </button>
+
+  <div class="m-navMenu__content-wrapper" aria-hidden="true" tabindex="-1">
+    <div class="m-navMenu__content -left" id="m-navMenu">
+      <div class="m-navMenu__inner">
+        <div class="m-navMenu__scroll">
+
+          <!-- Header -->
+          <div class="m-navMenu__header">
+            <div class="m-navMenu__header-content">
+              {{#Header}}
+
+                {{!-- Not Logged --}}
+                {{#unless Logged}}
+                  <div class="m-navMenu__header-signin">
+                    <a class="m-navMenu__header -btn" href="{{SignInLink}}">
+                      <img src="{{SignInIcon}}" alt="">
+                      {{SignIn}}
+                    </a>
+                  </div>
+                {{/unless}}
+                {{!-- End Not Logged --}}
+
+                {{!-- Logged --}}
+                {{#if Logged}}
+                  {{> molecules-nav-menu-user}}
+                {{/if}}
+                {{!-- End Logged --}}
+
+              {{/Header}}
+            </div>
+            <span class="divisor" aria-hidden="true"></span>
+          </div>
+          <!-- End Header -->
+
+          <!-- Mobile Only and Logged -->
+          {{#if Header.Logged}}
+            <div class="m-navMenu__mobile">
+              <ul class="m-navMenu__list -mobile">
+                {{#ifCond SiteTheme '===' '-riverbend' }}
+                  {{#each MobileRiverbend}}
+                    <li class="m-navMenu__item -mobile">
+                      <a class="m-navMenu__item-btn" href="{{Link}}">
+                        {{> atoms-icon-badge}}
+                        {{Title}}
+                      </a>
+                    </li>
+                  {{/each}}
+          {{else}}
+            {{#each Mobile}}
+              <li class="m-navMenu__item -mobile">
+                {{#if IsNotificationBell}}
+                  <o-grow-notification-bell script-id="growNotificationBellData" class="m-navMenu__item-btn flex">
+                    {{> atoms-icon-badge}}
+                    {{Title}}
+                  </o-grow-notification-bell>
+                {{else}}
+                  <a class="m-navMenu__item-btn" href="{{Link}}">
+                    {{> atoms-icon-badge}}
+                    {{Title}}
+                  </a>
+                {{/if}}
+              </li>
+            {{/each}}
+                {{/ifCond}}
+              </ul>
+              <span class="divisor" aria-hidden="true"></span>
+            </div>
+          {{/if}}
+          <!-- End Mobile Only -->
+
+          <!-- MENU LEVEL 1 -->
+          <ul class="m-navMenu__list -lvl1" id="m-navMenu__lvl1" data-testid="unorderedList-menuTopList">
+            {{#if Text.CategoriesTitle}}
+              <li class="m-navMenu__list -title">{{Text.CategoriesTitle}}</li>
+            {{/if}}
+
+            {{#each NavCategories}}
+              <li class="m-navMenu__item -lvl1">
+
+                {{#if Badge}}
+                  <a-badge class="justify-start" aria-label="{{Badge.AriaLabel}}" background-color="{{Badge.BackgroundColor}}" badge-position="{{Badge.BadgePosition}}" tailwind-classes="{{Badge.TailwindClasses}}" text-color="{{Badge.TextColor}}" title="{{Badge.Title}}" is-grow-premium-popup="{{Badge.IsGrowPremiumPopup}}">
+                {{/if}}
+                <!-- href: If there is link, use it. If not, use the title -->
+                <a class="m-navMenu__item-btn" href="{{#if Items}}#{{Title}}{{else}}{{Link}}{{/if}}" tabindex="-1" {{#if Items}} aria-controls="#{{Title}}" aria-expanded="false" {{/if}}>
+
+                  {{Title}}
+                  {{#if Items}}
+                    {{> atoms-arrow Direction="-right" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none" }}
+                  {{/if}}
+                </a>
+
+                {{#if Badge}}
+                  </a-badge>
+                {{/if}}
+
+                <!-- MENU LEVEL 2 -->
+                <div class="m-navMenu__item-inner">
+                  {{#if Items.length}}
+                    <ul id="{{#if Items}}#{{Title}}{{else}}{{Link}}{{/if}}" class="m-navMenu__list -lvl2" aria-hidden="true">
+                      <!-- Back to Main Menu Button -->
+                      <li class="m-navMenu__back">
+                        <button class="m-navMenu__back-btn -lvl2" data-testid="button-navMenuBack">
+                          {{> atoms-arrow Direction="-left" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none"}}
+                          {{../Text.BackToMainBTN}}
+                        </button>
+                        <span class="divisor -item" aria-hidden="true"></span>
+                      </li>
+                      <!-- End back to Main Menu Button -->
+
+                      <!-- title -->
+                      <li class="m-navMenu__list -title">
+                        <a href="/category-page-link" class="block">{{MenuLevelTitle}}</a>
+                      </li>
+
+                      <!-- items -->
+                      {{#each Items}}
+                        <li class="m-navMenu__item -lvl2">
+                          {{#if Badge}}
+                            <a-badge class="justify-start" aria-label="{{Badge.AriaLabel}}" background-color="{{Badge.BackgroundColor}}" badge-position="{{Badge.BadgePosition}}" tailwind-classes="{{Badge.TailwindClasses}}" text-color="{{Badge.TextColor}}" title="{{Badge.Title}}" is-grow-premium-popup="{{Badge.IsGrowPremiumPopup}}">
+                          {{/if}}
+                          <a class="m-navMenu__item-btn" href="{{#if SubItems}}#{{Title}}{{else}}{{Link}}{{/if}}" tabindex="-1" {{#if SubItems}} aria-controls="#{{SubItems}}" aria-expanded="false" {{/if}}>
+
+                            {{Title}}
+                            {{#if SubItems}}
+                              {{> atoms-arrow Direction="-right" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none" }}
+                            {{/if}}
+                          </a>
+                          {{#if Badge}}
+                            </a-badge>
+                          {{/if}}
+
+                          <!-- MENU LEVEL 3 -->
+                          {{#if SubItems}}
+                            <ul id="{{#if SubItems}}#{{Title}}{{else}}{{Link}}{{/if}}" class="m-navMenu__list -lvl3" aria-hidden="true">
+                              <!-- Back to Category Menu -->
+                              <li class="m-navMenu__back">
+                                <button class="m-navMenu__back-btn -lvl3" tabindex="0">
+                                  {{> atoms-arrow Direction="-left" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none"}}
+                                  {{../../Text.BackToCategoryBTN}}
+                                </button>
+                                <span class="divisor -item" aria-hidden="true"></span>
+                              </li>
+                              <!-- End back to Category Menu -->
+
+                              <!-- title -->
+                              <li class="m-navMenu__list -title">{{MenuLevelTitle}}</li>
+
+                              <!-- SubItems -->
+                              {{#each SubItems}}
+                                <li class="m-navMenu__item -lvl3">
+                                  {{#if Badge}}
+                                    <a-badge class="justify-start" aria-label="{{Badge.AriaLabel}}" background-color="{{Badge.BackgroundColor}}" badge-position="{{Badge.BadgePosition}}" tailwind-classes="{{Badge.TailwindClasses}}" text-color="{{Badge.TextColor}}" title="{{Badge.Title}}" is-grow-premium-popup="{{Badge.IsGrowPremiumPopup}}">
+                                  {{/if}}
+                                  <a class="m-navMenu__item-btn" href="{{Link}}">{{Title}}</a>
+                                  {{#if Badge}}
+                                    </a-badge>
+                                  {{/if}}
+                                </li>
+                              {{/each}}
+
+                              <!-- close button -->
+                              <li class="m-navMenu__item -lvl3 -closeButton" aria-hidden="false">
+                                <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl3" aria-label="{{../../Text.CloseNavMenuBTN}}" tabindex="-1">
+                                </button>
+                              </li>
+                            </ul>
+                          {{/if}}
+
+                        </li>
+                      {{/each}}
+
+                      <!-- close button -->
+                      <li class="m-navMenu__item -lvl2 -closeButton" aria-hidden="false">
+                        <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl2" aria-label="{{../Text.CloseNavMenuBTN}}" tabindex="-1">
+                        </button>
+                      </li>
+                    </ul>
+                  {{/if}}
+                </div>
+                <!-- End category items (menu level 2) -->
+
+              </li>
+            {{/each}}
+          </ul>
+          <!-- End Categories (menu level 1) -->
+
+          <!-- Riverbend Link -->
+          {{#Riverbend}}
+            <span class="divisor -footer" aria-hidden="true"></span>
+            <ul class="m-navMenu__list -verticalSpace">
+              {{#each Items}}
+                <li class="m-navMenu__item" aria-hidden="false">
+                  <a href="{{Link}}" tabindex="0" class="m-navMenu__item-btn">
+                    {{Title}}
+                  </a>
+                  <div class="m-navMenu__item-inner" aria-hidden="true"></div>
+                </li>
+              {{/each}}
+            </ul>
+          {{/Riverbend}}
+          <!-- End Riverbend Link -->
+
+          <!-- Footer -->
+          <span class="divisor -footer" aria-hidden="true"></span>
+          <div class="m-navMenu__footer" data-testid="container-menuFooter">
+            <div class="m-navMenu__footer-content">
+              <ul class="m-navMenu__list -lvl1">
+                {{#each Footer}}
+                  <li class="m-navMenu__item -lvl1 {{Mods}}">
+                    <!-- href: If there is link, use it. If not, use the title -->
+                    <a class="m-navMenu__item-btn" href="{{#if Items}}#{{Title}}{{else}}{{Link}}{{/if}}" tabindex="-1" {{#if Items}}aria-expanded="false" {{/if}}>
+                      {{Title}}
+                      {{#if Items}}
+                        {{> atoms-arrow Direction="-right" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none"}}
+                      {{/if}}
+                      {{#if Icon}}
+                        <span><img src="{{Icon}}" alt="" aria-hidden="true"></span>
+                      {{/if}}
+                    </a>
+
+                    <!-- MENU LEVEL 2 -->
+                    <div class="m-navMenu__item-inner">
+                      {{#if Items.length}}
+                        <ul id="{{#if Items}}#{{Title}}{{else}}{{Link}}{{/if}}" class="m-navMenu__list -lvl2" aria-hidden="true">
+
+                          <!-- Back to Main Menu Button -->
+                          <li class="m-navMenu__back">
+                            <button class="m-navMenu__back-btn -lvl2" data-testid="button-navMenuBack">
+                              {{> atoms-arrow Direction="-left" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none"}}
+                              {{../Text.BackToMainBTN}}
+                            </button>
+                            <span class="divisor -item" aria-hidden="true"></span>
+                          </li>
+                          <!-- End back to Main Menu Button -->
+
+                          <!-- title -->
+                          <li class="m-navMenu__list -title">{{Title}}</li>
+
+                          <!-- items -->
+                          {{#each Items}}
+                            <li class="m-navMenu__item -lvl2">
+                              <a class="m-navMenu__item-btn" href="{{#if SubItems}}#{{Title}}{{else}}{{Link}}{{/if}}" tabindex="-1" {{#if SubItems}} aria-controls="#{{SubItems}}" aria-expanded="false" {{/if}}>
+
+                                {{Title}}
+                                {{#if SubItems}}
+                                  {{> atoms-arrow Direction="-right" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none" }}
+                                {{/if}}
+                              </a>
+
+                              <!-- MENU LEVEL 3 -->
+                              {{#if SubItems}}
+                                <ul id="{{#if SubItems}}#{{Title}}{{else}}{{Link}}{{/if}}" class="m-navMenu__list -lvl3" id="m-navMenu__lvl3" aria-hidden="true">
+                                  <!-- Back to Category Menu -->
+                                  <li class="m-navMenu__back">
+                                    <button class="m-navMenu__back-btn -lvl3" tabindex="0">
+                                      {{> atoms-arrow Direction="-left" Size="-sm2" TailwindColor="gray" OtherMods="pointer-events-none"}}
+                                      {{../../Text.BackToCategoryBTN}}
+                                    </button>
+                                    <span class="divisor -item" aria-hidden="true"></span>
+                                  </li>
+                                  <!-- End back to Category Menu -->
+
+                                  <!-- title -->
+                                  <li class="m-navMenu__list -title">{{Title}}</li>
+
+                                  <!-- SubItems -->
+                                  {{#each SubItems}}
+                                    <li class="m-navMenu__item -lvl3">
+                                      <a class="m-navMenu__item-btn" href="{{Link}}">{{Title}}</a>
+                                    </li>
+                                  {{/each}}
+
+                                  <!-- close button -->
+                                  <li class="m-navMenu__item -lvl3 -closeButton" aria-hidden="false">
+                                    <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl3" aria-label="{{../../Text.CloseNavMenuBTN}}" tabindex="-1">
+                                    </button>
+                                  </li>
+                                </ul>
+                              {{/if}}
+
+                            </li>
+                          {{/each}}
+
+                          <!-- close button -->
+                          <li class="m-navMenu__item -lvl2 -closeButton" aria-hidden="false">
+                            <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl2" aria-label="{{../Text.CloseNavMenuBTN}}" tabindex="-1">
+                            </button>
+                          </li>
+                        </ul>
+                      {{/if}}
+                    </div>
+                    <!-- End category items (menu level 2) -->
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          <!-- End Footer -->
+
+          <button class="m-navMenu__item-btn m-navMenu__close-btn -lvls -lvl1" aria-label="{{Text.CloseNavMenuBTN}}" tabindex="-1">
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Close Button -->
+    <div class="m-navMenu__close -root">
+      <button class="m-navMenu__close-btn" aria-label="{{Text.CloseNavMenuBTN}}" tabindex="-1">
+        <span aria-hidden="true" class="m-navMenu__close-icon" data-testid="span-navMenuClose">close</span>
+      </button>
+    </div>
+    <!-- End Close Button -->
+
+    <div class="m-navMenu__overlay"></div>
+  </div>
+</nav>
+<!-- END 11283, 19631 (refactoring) - Nav-menu -->

@@ -1,0 +1,19 @@
+{{> organisms-site-header}}
+
+<div class="bg-gray-25">
+  <div class="mb-10 pt-15">
+    {{#Breadcrumb}}
+      {{> molecules-breadcrumb }}
+    {{/Breadcrumb}}
+  </div>
+
+  <owing-balance script-id="data-owing-balance-localization">
+  </owing-balance>
+
+</div>
+
+<script id="data-owing-balance-localization" type="application/json">
+{{toJson BalanceData}}
+</script>
+
+{{> organisms-site-footer}}
