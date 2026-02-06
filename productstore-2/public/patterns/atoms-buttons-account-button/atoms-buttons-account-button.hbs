@@ -1,9 +1,0 @@
-{{#if Attr.IsButton}}
-  <button class="a-accountButton {{Mods}}" type="{{Attr.Type}}" {{{AriaProps}}} {{#with Gtm}} {{> gtmTrack}} {{/with}}>{{CTA}}</button>
-{{else}}
-  <a class="a-accountButton {{Mods}}" href="{{{Attr.Href}}}" target="{{Target}}" {{{AriaProps}}} {{#with Gtm}} {{> gtmTrack}} {{/with}}>{{CTA}}</a>
-{{/if}}
-
-{{#*inline "gtmTrack"}}
-  v-on:click="gtmTrackAction({ id:'{{Id}}'{{#if Text}}, text:'{{Text}}'{{/if}} }, $event)"
-{{/inline}}

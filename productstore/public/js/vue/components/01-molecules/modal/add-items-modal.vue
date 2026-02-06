@@ -31,7 +31,7 @@
             </h2>
 
             <!-- Description -->
-            <div v-if="modalLabels.description" class="text-sm text-gray-150 italic md:text-xl mb-30">
+            <div v-if="modalLabels.description" class="text-sm text-gray-150 italic md:text-xl mb-30" :class="{'not-italic': isCn}">
                 {{ modalLabels.description }}
             </div>
 

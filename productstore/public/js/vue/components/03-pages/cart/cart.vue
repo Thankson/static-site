@@ -110,14 +110,14 @@
                         ></m-cart-shipping-on-us-banner>
                     </div>
 
-                    <div v-if="!enableLSDSummaryEnhancement &&isCn && totalLsdBalance && !loading" class="text-xl text-green font-bold block relative -mt-30 md:hidden">
+                    <div v-if="!enableLSDSummaryEnhancement && isCn && totalLsdBalance && !loading" class="text-xl text-green font-bold block relative md:hidden">
                         <p role="text">
-                            <span v-if="totalLsdBalance" class="block mb-10" v-html="totalLsdDollars"></span>
+                            <span v-if="totalLsdBalance" class="block my-10" v-html="totalLsdDollars"></span>
                         </p>
                     </div>
-                    <div v-if="enableLSDSummaryEnhancement && isCn && lsdAvailableToSpend && !loading" class="text-xl text-green font-bold block relative -mt-30 md:hidden">
+                    <div v-if="enableLSDSummaryEnhancement && isCn && lsdAvailableToSpend && !loading" class="text-xl text-green font-bold block relative md:hidden">
                         <p role="text">
-                            <span v-if="lsdAvailableToSpend" class="block mb-10" v-html="totalLsdDollars"></span>
+                            <span v-if="lsdAvailableToSpend" class="block my-10" v-html="totalLsdDollars"></span>
                         </p>
                     </div>
 
@@ -566,12 +566,12 @@
 
                         <div v-if="!enableLSDSummaryEnhancement && isCn && totalLsdBalance && !loading" class="text-xl text-green font-bold block relative hidden md:block">
                             <p role="text">
-                                <span v-if="totalLsdBalance" class="block mb-10" v-html="totalLsdDollars"></span>
+                                <span v-if="totalLsdBalance" class="block my-10" v-html="totalLsdDollars"></span>
                             </p>
                         </div>
                         <div v-if="enableLSDSummaryEnhancement && isCn && lsdAvailableToSpend && !loading" class="text-xl text-green font-bold block relative hidden md:block">
                             <p role="text">
-                                <span v-if="lsdAvailableToSpend" class="block mb-10" v-html="totalLsdDollars"></span>
+                                <span v-if="lsdAvailableToSpend" class="block my-10" v-html="totalLsdDollars"></span>
                             </p>
                         </div>
 

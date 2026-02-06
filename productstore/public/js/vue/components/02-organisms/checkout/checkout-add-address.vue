@@ -5,7 +5,7 @@
         </div>
 
         <!-- #region address-form-->
-        <form class="o-checkoutAddAddress__grid relative" @submit.prevent>
+        <form class="o-checkoutAddAddress__grid relative" novalidate @submit.prevent>
             <!-- Show spinner while /searchAddress API is being loaded -->
             <div
                 v-if="showLoading && showMxAddressEntryEnhancementFields"

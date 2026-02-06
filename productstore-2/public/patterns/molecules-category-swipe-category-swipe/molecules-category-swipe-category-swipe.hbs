@@ -1,8 +1,0 @@
-{{#with Classification}}
-  <m-category-swipe script-id="data-classification-localization" :current={{Data.SideNav.CurrentCategory}} :category='{{toJson Data.SideNav.ListItem}}'>
-  </m-category-swipe>
-{{/with}}
-
-<script id="data-classification-localization" type="application/json">
-{{toJson Classification}}
-</script>

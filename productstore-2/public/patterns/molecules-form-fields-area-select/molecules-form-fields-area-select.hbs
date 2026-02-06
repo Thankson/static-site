@@ -1,9 +1,0 @@
-<div class="m-formField -{{InputType}}{{#if Modifiers}} {{Modifiers}}{{/if}}">
-  <label class="m-formField__label{{#if Label.Modifiers}} {{Label.Modifiers}}{{/if}}" for="{{Id}}">{{{Label.Text}}}</label>
-  {{#UserAddress}}
-    <m-area-select save-province="{{SaveProvince}}" save-province-id="{{SaveProvinceId}}" save-city="{{SaveCity}}" save-city-id="{{SaveCityId}}" save-region="{{SaveRegion}}" save-region-id="{{SaveRegionId}}" script-id="prohibit" placeholder='{{../InputSetting.Placeholder}}' validation-alert='{{../InputSetting.ValidationAlert}}' validation-required='{{../InputSetting.ValidationRequired}}'></m-area-select>
-  {{/UserAddress}}
-</div>
-<script type="application/json" id="prohibit">
-{{toJson Localization}}
-</script>

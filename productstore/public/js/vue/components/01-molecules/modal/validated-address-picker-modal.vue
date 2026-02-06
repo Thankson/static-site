@@ -9,7 +9,7 @@
         <template v-slot:body>
             <div v-if="hasMoreAvailableSuggestions">
                 <!-- Address entered -->
-                <p class="text-base text-gray-120 font-bold pl-40">{{ labels.ValidationAddressEntered }}</p>
+                <p class="text-base text-gray-120 font-bold pl-40 pt-15">{{ labels.ValidationAddressEntered }}</p>
                 <m-radio
                     v-model="radioSelectedIndex"
                     name="verifyAddress"
@@ -41,7 +41,7 @@
 
             <!-- No-suggestions variant: text only -->
             <div v-else>
-                <p class="text-base text-gray-120 font-bold mt-15">{{ labels.ValidationAddressEntered }}</p>
+                <p class="text-base text-gray-120 font-bold mt-15 pt-15">{{ labels.ValidationAddressEntered }}</p>
                 <span class="text-sm text-dark" v-html="formattedUserEnteredAddressForModal" />
                 <div v-if="deliveryInstructionsData" class="mt-15 text-gray-120">
                     <p class="text-sm">{{ labels.ValidationDeliveryInstructions }}</p>
@@ -52,16 +52,16 @@
 
         <template v-slot:footer>
             <!-- Suggestions: Use / Cancel -->
-            <div v-if="hasMoreAvailableSuggestions" class="flex flex-col md:flex-row">
+            <div v-if="hasMoreAvailableSuggestions" class="flex flex-col md:flex-row flex-wrap">
                 <v-button
-                    class="a-button justify-center text-base font-medium py-12 mb-20 md:mb-0 mr-0 md:mr-20 w-full"
+                    class="a-button justify-center text-base font-medium py-12 mb-20 mr-0 md:mr-20 px-32"
                     data-testid="button-chooseValidateAddressModal"
                     @click="handleChooseAddress"
                 >
                     {{ labels.ValidationUseThisAddress }}
                 </v-button>
                 <v-button
-                    class="a-button justify-center text-base font-medium py-12 w-full -white"
+                    class="a-button justify-center text-base font-medium py-12 mb-0 md:mb-20 -white px-32"
                     data-testid="button-cancelValidateAddressModal"
                     @click="handleCancel"
                 >
@@ -70,16 +70,16 @@
             </div>
 
             <!-- No suggestions: Back / Use -->
-            <div v-else class="flex flex-col md:flex-row">
+            <div v-else class="flex flex-col md:flex-row flex-wrap">
                 <v-button
-                    class="a-button justify-center text-base font-medium py-12 mb-20 md:mb-0 mr-0 md:mr-20 w-full -white -experianModal"
+                    class="a-button justify-center text-base font-medium py-12 px-32 mr-0 md:mr-20 mb-20 -white"
                     data-testid="button-cancelValidateAddressModal"
                     @click="handleCancel"
                 >
                     {{ labels.ValidationBack }}
                 </v-button>
                 <v-button
-                    class="a-button justify-center text-base font-medium py-12 w-full"
+                    class="a-button justify-center text-base font-medium py-12 px-32 mb-0 md:mb-20"
                     data-testid="button-chooseValidateAddressModal"
                     @click="handleChooseAddress"
                 >

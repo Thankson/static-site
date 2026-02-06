@@ -671,7 +671,6 @@
                         <p v-if="!!preferredSavings && isPreferred && isCn" class="m-cartSavings">
                             <span class="m-cartSavings__heading">
                                 <span v-html="getLocalizationProp('Labels.CheckoutSummary.AsPreferred', 'As a Preferred Member,')"></span>
-                                <br />
                             </span>
                             <span v-html="preferredSavings"></span>
                         </p>
@@ -1027,6 +1026,7 @@
         <MStickyToast
             v-if="showImprovedCTACheckout"
             :loading="loading"
+            leave-space
             class="lg:hidden px-10">
             <template v-slot:default>
                 <div

@@ -1,5 +1,5 @@
 <template>
-    <article v-if="souFeatureOn && foundMatches" data-component-name-is="MCartShippingOnUsBanner" class="m-cartShippingOnUsBanner bg-orange mx-0 p-10 mb-40 rounded-md relative md:w-full md:px-24 md:py-12 cursor-pointer" @click="toggleExpand">
+    <article v-if="souFeatureOn && foundMatches" data-component-name-is="MCartShippingOnUsBanner" class="m-cartShippingOnUsBanner bg-orange mx-0 p-10 lg:mb-40 mb-12 rounded-md relative md:w-full md:px-24 md:py-12 cursor-pointer" @click="toggleExpand">
         <div v-if="expanded" class="material-icons absolute top-10 right-10" aria-hidden>close</div>
         <div class="md:flex md:justify-between md:items-end">
             <div class="md:w-3_4">

@@ -83,7 +83,7 @@
                 return (this.isCustomer
                     ? this.getLocalizationProp('Data.TitleForCustomer')
                     : this.getLocalizationProp('Data.TitleForNonCustomer'))
-                    .replace('{0}', this.isCustomer ? (this.recipientInformation?.Name || '') : (this.recipientInformation?.Email || this.recipientInformation?.PhoneNumber || ''))
+                    .replace('{0}', this.isCustomer ? (this.recipientInformation?.Name || '') : (this.recipientInformation?.Email || this.recipientInformation?.PhoneNumber || this.recipientInformation?.Name || ''))
                     .replace('{1}', `${this.totalWithSymbol}${this.type}`);
             },
             type() {
