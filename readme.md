@@ -24,3 +24,6 @@ https://thankson.github.io/static-site/productstore-2/public/patterns/pages-prod
 https://thankson.github.io/static-site/public/patterns/pages-form-ibo-form-ibo/pages-form-ibo-form-ibo.rendered.html
 
 https://thankson.github.io/static-site/public/index.html
+
+test-pages\checkMultiTabSupport.html
+https://thankson.github.io/static-site/test-pages/checkMultiTabSupport.html

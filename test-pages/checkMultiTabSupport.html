@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>checkMultiTabSupport</div>
+
+  <script>
+    // Your JavaScript code here
+    function checkMultiTabSupport() {
+      if (typeof window.open !== 'function') return false;
+
+      const ua = navigator.userAgent.toLowerCase();
+      // 1. PWA desktop shortcut detection
+      const isIosHomeScreen = !!navigator.standalone;
+      const displayModes = ['standalone', 'fullscreen', 'minimal-ui'];
+      const isAndroidPwa = displayModes.some(mode => 
+        window.matchMedia(`(display-mode: ${mode})`).matches
+      );
+      const isWebApk = /org\.chromium\.webapk/.test(ua);
+
+      // 2. Built-in WebView blacklist
+      const isInnerWebview = /micromessenger|alipay|line\/|liaf|wv|electron/.test(ua);
+
+      if (isIosHomeScreen || isAndroidPwa || isWebApk || isInnerWebview) {
+        return false;
+      }
+
+      return true;
+    }
+
+    const multiTabSupport = checkMultiTabSupport();
+    alert(`Multi-tab support: ${multiTabSupport}`);
+  </script>
+</body>
+</html>
