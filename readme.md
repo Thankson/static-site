@@ -27,3 +27,7 @@ https://thankson.github.io/static-site/public/index.html
 
 test-pages\checkMultiTabSupport.html
 https://thankson.github.io/static-site/test-pages/checkMultiTabSupport.html
+
+
+aaa/
+https://thankson.github.io/static-site/aaa/dist/index.html
